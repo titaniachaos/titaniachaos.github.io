@@ -1,0 +1,8 @@
+:root { --vp-c-brand-1:#d62246; --vp-c-brand-2:#b91839; --vp-c-brand-3:#98102d; --vp-c-brand-soft:rgba(214,34,70,.14); }
+.VPHomeHero .name { letter-spacing:-.04em; }
+.VPHomeHero .image-bg { background:rgba(214,34,70,.2); filter:blur(48px); }
+.VPHomeHero .image-src { border-radius:48% 48% 42% 42%; object-fit:cover; max-height:420px; }
+.vp-doc img { border-radius:18px; max-height:680px; object-fit:cover; }
+.vp-doc blockquote { border-left-color:var(--vp-c-brand-1); color:var(--vp-c-text-1); }
+.contact-button { display:inline-block; margin:8px 8px 8px 0; padding:10px 18px; border-radius:999px; background:var(--vp-c-brand-1); color:#fff!important; font-weight:600; text-decoration:none!important; }
+.contact-button.secondary { background:var(--vp-c-bg-soft); color:var(--vp-c-text-1)!important; }

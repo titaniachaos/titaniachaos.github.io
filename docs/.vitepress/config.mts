@@ -28,6 +28,12 @@ export default defineConfig({
           text: 'Solo Titania Chaos 2026',
           items: [
             { text: 'Project Home', link: '/clown/' },
+            { text: 'Artistic Concept', link: '/clown/concept' },
+            { text: 'Audience Relationship', link: '/clown/audience' },
+            { text: 'Dramaturgy', link: '/clown/dramaturgy' },
+            { text: 'Studio Process', link: '/clown/studio-process' },
+            { text: 'Material Research', link: '/clown/material-research' },
+            { text: 'Production', link: '/clown/production' },
             { text: 'About the Project', link: '/clown/about' }
           ]
         }

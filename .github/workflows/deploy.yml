@@ -18,6 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Enforce VitePress-only sources
+        run: |
+          if find . -path './.git' -prune -o -type f \( -name '*.html' -o -name '*.htm' \) -print | grep -q .; then
+            echo 'Legacy HTML files are not allowed; author pages in VitePress Markdown.'
+            exit 1
+          fi
       - uses: actions/setup-node@v4
         with:
           node-version: 22

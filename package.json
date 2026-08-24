@@ -2,6 +2,9 @@
   "name": "titania-chaos",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "26.x"
+  },
   "scripts": {
     "docs": "vitepress dev docs",
     "docs:dev": "vitepress dev docs",

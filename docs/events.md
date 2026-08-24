@@ -26,3 +26,5 @@ Meine Spiele stammen aus dem sozialen Zirkus. Wir jonglieren, erfinden Figuren u
 ## Preis & Bedingungen
 
 Bis zu 10 Kinder, etwa 2–3 Stunden: **€290 plus Taxi** in Wien. Bei Absage weniger als zwei Tage vorher fällt eine Stornogebühr von €100 an; eine Verschiebung ist jederzeit möglich.
+
+[Termin und Verfügbarkeit anfragen](mailto:agent@tatianapetkova.com?subject=Anfrage%20Kindergeburtstag){.contact-button}

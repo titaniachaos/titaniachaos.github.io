@@ -1,16 +1,18 @@
 # Titania Chaos
 
-Single VitePress site for Titania Chaos, including the Clown project at `/clown/`.
+The VitePress source for [titaniachaos.github.io](https://titaniachaos.github.io), with the Clown project as a subsite at `/clown/`.
 
-Run `npm install` once, then `npm run docs` for local development. Use `npm run docs:build` for a production build. GitHub Actions deploys `main`.
+## Development
 
-## Releases
+Requires Node.js 26.
 
-Releases are automated with Release Please. Use Conventional Commit prefixes:
+```sh
+npm ci
+npm run docs
+```
 
-- `feat:` for a minor release
-- `fix:` for a patch release
-- `feat!:` or a `BREAKING CHANGE:` footer for a major release
-- `docs:`, `chore:`, `refactor:` and similar prefixes for non-release maintenance
+Create a production build with `npm run docs:build` and preview it with `npm run docs:preview`.
 
-After qualifying commits reach `main`, the release workflow opens or updates a release PR. Merging that PR updates `version.txt` and `CHANGELOG.md`, creates the version tag, and publishes the GitHub Release. The normal Pages workflow deploys the merged site automatically.
+## Deployment
+
+The single GitHub Actions workflow builds the VitePress site from `main` with Node.js 26 and deploys only `docs/.vitepress/dist` to GitHub Pages. Hand-written HTML source files are rejected.

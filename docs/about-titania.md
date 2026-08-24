@@ -3,7 +3,7 @@ title: About Titania
 ---
 # About Titania
 
-![Titania Chaos](/wp-content/uploads/go-x/u/0e219e01-3a63-4883-87a6-fa0661f44941/image-384x684.jpg)
+![Titania Chaos](/images/titania-portrait.jpg)
 
 > I pursue a passion for contact through humour, languages, poetry and emotion.
 

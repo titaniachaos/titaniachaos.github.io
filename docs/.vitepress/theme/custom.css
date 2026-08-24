@@ -1,8 +1,33 @@
-:root { --vp-c-brand-1:#d62246; --vp-c-brand-2:#b91839; --vp-c-brand-3:#98102d; --vp-c-brand-soft:rgba(214,34,70,.14); }
-.VPHomeHero .name { letter-spacing:-.04em; }
-.VPHomeHero .image-bg { background:rgba(214,34,70,.2); filter:blur(48px); }
-.VPHomeHero .image-src { border-radius:48% 48% 42% 42%; object-fit:cover; max-height:420px; }
-.vp-doc img { border-radius:18px; max-height:680px; object-fit:cover; }
-.vp-doc blockquote { border-left-color:var(--vp-c-brand-1); color:var(--vp-c-text-1); }
-.contact-button { display:inline-block; margin:8px 8px 8px 0; padding:10px 18px; border-radius:999px; background:var(--vp-c-brand-1); color:#fff!important; font-weight:600; text-decoration:none!important; }
-.contact-button.secondary { background:var(--vp-c-bg-soft); color:var(--vp-c-text-1)!important; }
+:root {
+  --vp-c-brand-1: #d62246;
+  --vp-c-brand-2: #b91839;
+  --vp-c-brand-3: #98102d;
+  --vp-c-brand-soft: rgba(214, 34, 70, 0.14);
+}
+
+.VPHomeHero .name { letter-spacing: -0.04em; }
+.VPHomeHero .image-bg { background: rgba(214, 34, 70, 0.2); filter: blur(48px); }
+.VPHomeHero .image-src { border-radius: 48% 48% 42% 42%; object-fit: cover; max-height: 420px; }
+.VPFeature { border-color: var(--vp-c-brand-soft); transition: border-color 0.2s, transform 0.2s; }
+.VPFeature:hover { border-color: var(--vp-c-brand-1); transform: translateY(-2px); }
+.vp-doc img { border-radius: 18px; max-height: 680px; object-fit: cover; }
+.vp-doc blockquote { border-left-color: var(--vp-c-brand-1); color: var(--vp-c-text-1); }
+.vp-doc h2 { border-top: 0; margin-top: 2.5rem; }
+.contact-button {
+  display: inline-block;
+  margin: 8px 8px 8px 0;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--vp-c-brand-1);
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background 0.2s, transform 0.2s;
+}
+.contact-button:hover { background: var(--vp-c-brand-2); transform: translateY(-1px); }
+.contact-button.secondary { background: var(--vp-c-bg-soft); color: var(--vp-c-text-1) !important; }
+
+@media (max-width: 640px) {
+  .VPHomeHero .image-src { max-height: 320px; }
+  .contact-button { width: 100%; text-align: center; }
+}

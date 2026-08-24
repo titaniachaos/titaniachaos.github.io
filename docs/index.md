@@ -6,7 +6,7 @@ hero:
   text: Clown workshops, events and parties
   tagline: Let’s be human together. Humour and laughter are serious matters—and worth spreading with dedication.
   image:
-    src: /wp-content/uploads/go-x/u/4ba0b2ce-9361-4ebf-9f23-d63794d01ca9/image.webp
+    src: /images/titania-chaos.webp
     alt: Titania Chaos
   actions:
     - theme: brand
@@ -51,6 +51,8 @@ The workshops welcome anyone ready for an adventure with their own humanity, peo
 Give someone a workshop—or come with a friend and share moments of lightness and joy.
 
 [Email Titania](mailto:agent@tatianapetkova.com){.contact-button}
+
+Prefer a performance or a playful photo experience for your event? [Explore ways to work with Titania](/work-with-titania){.contact-button.secondary}
 
 ## Mini Art Foundation
 

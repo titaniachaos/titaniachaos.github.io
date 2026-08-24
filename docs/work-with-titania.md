@@ -3,7 +3,7 @@ title: Work with Titania
 ---
 # Titania Chaos and her time-travelling camera
 
-![Titania's time-travelling camera](/wp-content/uploads/go-x/u/1ab6fca2-bdd3-4eec-9465-55ad9df63d33/l334,t0,w1333,h1333/image-768x768.jpg)
+![Titania's time-travelling camera](/images/time-travelling-camera.jpg)
 
 Equipped with an old-fashioned camera able to travel in time, Titania dresses willing photo models and creates a picture for them to take home immediately.
 
@@ -16,3 +16,5 @@ Titania’s photo booth is ideal for weddings, corporate parties, street festiva
 For ages 5–12, up to 10 children and approximately 2–3 hours: **€290**. [See the full birthday package](/events).
 
 > “Titania took a six-year-old party to another level. Her spontaneity worked wonders with the children, and her old-school camera is spellbinding.” — Helena Soares
+
+[Ask about a birthday](/events){.contact-button.secondary}

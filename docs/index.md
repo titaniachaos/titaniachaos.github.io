@@ -15,7 +15,7 @@ hero:
       link: '#join-in'
     - theme: alt
       text: Work with Titania
-      link: /work-with-titania/
+      link: /work-with-titania
 features:
   - title: Play
     details: Discover your comic presence through movement, improvisation and physical comedy.
@@ -47,7 +47,7 @@ The workshops welcome anyone ready for an adventure with their own humanity, peo
 - Body work and pantomime inspired by Jacques Lecoq, Marcel Marceau and Charlie Chaplin
 - Improvisation that helps you explore your own clown figure
 
-## Give a clown workshop as a gift
+## Give a clown workshop as a gift {#join-in}
 
 Give someone a workshop—or come with a friend and share moments of lightness and joy.
 

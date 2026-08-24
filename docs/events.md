@@ -1,7 +1,8 @@
 ---
 title: Kindergeburtstag mit Titania Chaos
 description: Spielerische Kindergeburtstage in Wien mit Zirkusspielen, Kostümen und Titania Chaos' magischer Zeitreisekamera.
-lang: de-AT
+head:
+  - ['meta', { property: 'og:locale', content: 'de_AT' }]
 ---
 # Geburtstag mit Titania Chaos
 

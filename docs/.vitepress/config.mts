@@ -17,9 +17,9 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Workshops', link: '/' },
-      { text: 'Birthdays', link: '/events/' },
-      { text: 'Work with Titania', link: '/work-with-titania/' },
-      { text: 'About', link: '/about-titania/' },
+      { text: 'Birthdays', link: '/events' },
+      { text: 'Work with Titania', link: '/work-with-titania' },
+      { text: 'About', link: '/about-titania' },
       { text: 'Clown Project', link: '/clown/' }
     ],
     sidebar: {

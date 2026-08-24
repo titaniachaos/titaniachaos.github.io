@@ -5,7 +5,7 @@ description: Discover clown workshops, physical comedy, playful events and creat
 hero:
   name: Titania Chaos
   text: Clown workshops, events and parties
-  tagline: Let’s be human together. Humour and laughter are serious matters—and worth spreading with dedication.
+  tagline: "<strong>LET'S BE HUMAN TOGETHER!</strong><br>Humour and laughter are serious matters that need to be examined and spread around the world with utmost dedication."
   image:
     src: /images/titania-chaos.webp
     alt: Titania Chaos

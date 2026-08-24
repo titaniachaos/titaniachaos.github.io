@@ -34,6 +34,7 @@ export default defineConfig({
             { text: 'Studio Process', link: '/clown/studio-process' },
             { text: 'Rehearsal Toolkit', link: '/clown/rehearsal-toolkit' },
             { text: 'Material Research', link: '/clown/material-research' },
+            { text: 'Decision Gates', link: '/clown/decisions' },
             { text: 'Production', link: '/clown/production' },
             { text: 'About the Project', link: '/clown/about' }
           ]

@@ -7,8 +7,7 @@ import {
   LOCALES,
   buildHead,
   localeAlternateTags,
-  splitLocale,
-  toUrlPath
+  splitLocale
 } from './seo.ts'
 
 /** The Clown project is a separate VitePress site built from the `clown` repository. */
@@ -61,11 +60,14 @@ export default defineConfig({
   },
 
   async buildEnd(siteConfig) {
+    // Crawlers read robots.txt only at the domain root, so the Clown site's
+    // own /clown/robots.txt is never fetched. Announce its sitemap from here.
     const robots = [
       'User-agent: *',
       'Allow: /',
       '',
       `Sitemap: ${HOSTNAME}/sitemap.xml`,
+      `Sitemap: ${CLOWN_SITE}sitemap.xml`,
       ''
     ].join('\n')
     await writeFile(join(siteConfig.outDir, 'robots.txt'), robots, 'utf-8')

@@ -84,7 +84,12 @@ const SITE_DESCRIPTION =
 const PERSON_ID = `${HOSTNAME}/#titania`
 const WEBSITE_ID = `${HOSTNAME}/#website`
 
-function personNode() {
+/**
+ * The postal address is the § 5 ECG Impressum datum. It is carried by the
+ * legal notice page -- which states it in prose in every locale -- and not
+ * repeated in the structured data of every other page.
+ */
+function personNode(slug: string) {
   return {
     '@type': 'Person',
     '@id': PERSON_ID,
@@ -93,17 +98,21 @@ function personNode() {
     jobTitle: 'Clown, psychologist and language coach',
     description:
       'Vienna-based clown artist offering clown workshops, physical comedy, performances and playful photo experiences.',
-    email: 'mailto:agent@tatianapetkova.com',
+    email: 'agent@tatianapetkova.com',
     url: `${HOSTNAME}/`,
     image: `${HOSTNAME}/images/titania-portrait.jpg`,
     knowsLanguage: ['en', 'de', 'fr', 'ru', 'bg'],
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Diehlgasse 6/10',
-      postalCode: '1050',
-      addressLocality: 'Vienna',
-      addressCountry: 'AT'
-    },
+    ...(slug === '/legal-data'
+      ? {
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Diehlgasse 6/10',
+            postalCode: '1050',
+            addressLocality: 'Vienna',
+            addressCountry: 'AT'
+          }
+        }
+      : {}),
     sameAs: [
       'https://www.instagram.com/titaniachaos',
       'https://www.facebook.com/titaniachaos'
@@ -215,7 +224,7 @@ export function buildHead(ctx: TransformContext, siteConfig: SiteConfig): HeadCo
     jsonLd({
       '@context': 'https://schema.org',
       '@graph': [
-        personNode(),
+        personNode(slug),
         {
           '@type': 'WebSite',
           '@id': WEBSITE_ID,

@@ -26,7 +26,12 @@ jobs:
 
       - name: Enforce VitePress-only sources
         run: |
-          if find . -path './.git' -prune -o -type f \( -name '*.html' -o -name '*.htm' \) -print | grep -q .; then
+          # Scoped to the Markdown sources: docs/public holds static assets a
+          # page may legitimately need, and dist is build output.
+          if find docs \
+               -path docs/public -prune -o \
+               -path docs/.vitepress/dist -prune -o \
+               -type f \( -name '*.html' -o -name '*.htm' \) -print | grep -q .; then
             echo 'Legacy HTML files are not allowed; author pages in VitePress Markdown.'
             exit 1
           fi

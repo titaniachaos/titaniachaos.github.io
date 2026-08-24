@@ -1,55 +1,228 @@
+import { writeFile } from 'node:fs/promises'
+import { join } from 'node:path'
 import { defineConfig } from 'vitepress'
+import {
+  GOOGLE_SITE_VERIFICATION,
+  HOSTNAME,
+  LOCALES,
+  buildHead,
+  localeAlternateTags,
+  splitLocale,
+  toUrlPath
+} from './seo.ts'
+
+/** The Clown project is a separate VitePress site built from the `clown` repository. */
+const CLOWN_SITE = `${HOSTNAME}/clown/`
+
+const PHOTOGRAPHERS =
+  'Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, ' +
+  'Konstantin Oberlik, Tatiana Petkova, Marion Scholz and Laurent Ziegler'
+
+const PHOTOGRAPHERS_BG =
+  'Велико Балабанов, Марин Хинк, Хайди Холтл, Гео Калев, Таня Мацкевич, ' +
+  'Константин Оберлик, Татяна Петкова, Марион Шолц и Лоран Циглер'
 
 export default defineConfig({
-  lang: 'en',
   title: 'Titania Chaos',
   titleTemplate: ':title | Titania Chaos',
   description: 'Clown workshops, physical comedy, events and parties in Vienna.',
   cleanUrls: true,
-  sitemap: { hostname: 'https://titaniachaos.github.io' },
+  sitemap: {
+    hostname: HOSTNAME,
+    // Declare every translation of a URL as an alternate, which is what
+    // Search Console reads to group a page's language versions.
+    transformItems: (items) =>
+      items.map((item) => {
+        const urlPath = item.url.startsWith('/') ? item.url : `/${item.url}`
+        const { slug } = splitLocale(urlPath)
+        const known = new Set(items.map((i) => (i.url.startsWith('/') ? i.url : `/${i.url}`)))
+        const links = LOCALES.flatMap((locale) => {
+          const alt = slug === '/' ? `${locale.prefix}/` : `${locale.prefix}${slug}`
+          return known.has(alt) ? [{ lang: locale.hreflang, url: `${HOSTNAME}${alt}` }] : []
+        })
+        return { ...item, links, changefreq: 'monthly' as const, priority: slug === '/' ? 1.0 : 0.7 }
+      })
+  },
+
+  // Per-page Open Graph, Twitter, canonical, hreflang and JSON-LD are emitted
+  // by transformHead below, so they stay a single source of truth.
   head: [
     ['meta', { name: 'theme-color', content: '#d62246' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:site_name', content: 'Titania Chaos' }],
-    ['meta', { property: 'og:image', content: 'https://titaniachaos.github.io/images/titania-chaos.webp' }],
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }]
+    ...(GOOGLE_SITE_VERIFICATION
+      ? [['meta', { name: 'google-site-verification', content: GOOGLE_SITE_VERIFICATION }] as const]
+      : [])
   ],
+
+  transformHead: (ctx) => buildHead(ctx, ctx.siteConfig),
+
+  transformHtml: (code, _id, ctx) => {
+    const tags = localeAlternateTags(ctx.page)
+    return tags ? code.replace('</head>', `${tags}</head>`) : code
+  },
+
+  async buildEnd(siteConfig) {
+    const robots = [
+      'User-agent: *',
+      'Allow: /',
+      '',
+      `Sitemap: ${HOSTNAME}/sitemap.xml`,
+      ''
+    ].join('\n')
+    await writeFile(join(siteConfig.outDir, 'robots.txt'), robots, 'utf-8')
+  },
+
+  // Shallow-merged into every locale. Anything a locale redefines must be
+  // complete there -- `outline` included, since the merge is not deep.
   themeConfig: {
-    nav: [
-      { text: 'Workshops', link: '/' },
-      { text: 'Birthdays', link: '/events' },
-      { text: 'Work with Titania', link: '/work-with-titania' },
-      { text: 'About', link: '/about-titania' },
-      { text: 'Clown Project', link: '/clown/' }
-    ],
-    sidebar: {
-      '/clown/': [
-        {
-          text: 'Solo Titania Chaos 2026',
-          items: [
-            { text: 'Project Home', link: '/clown/' },
-            { text: 'Artistic Concept', link: '/clown/concept' },
-            { text: 'Audience Relationship', link: '/clown/audience' },
-            { text: 'Dramaturgy', link: '/clown/dramaturgy' },
-            { text: 'Studio Process', link: '/clown/studio-process' },
-            { text: 'Rehearsal Toolkit', link: '/clown/rehearsal-toolkit' },
-            { text: 'Material Research', link: '/clown/material-research' },
-            { text: 'Decision Gates', link: '/clown/decisions' },
-            { text: 'Production', link: '/clown/production' },
-            { text: 'About the Project', link: '/clown/about' }
-          ]
-        }
-      ]
-    },
-    search: { provider: 'local' },
-    footer: {
-      message: 'Photos by Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, Konstantin Oberlik, Tatiana Petkova, Marion Scholz and Laurent Ziegler. · <a href="/legal-data">Legal notice & privacy</a>',
-      copyright: '© 2022–2026 Titania Chaos'
-    },
     socialLinks: [
       { icon: 'instagram', link: 'https://www.instagram.com/titaniachaos' },
       { icon: 'facebook', link: 'https://www.facebook.com/titaniachaos' }
     ],
-    outline: { level: [2, 3] }
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          bg: {
+            translations: {
+              button: { buttonText: 'Търсене', buttonAriaLabel: 'Търсене' },
+              modal: {
+                displayDetails: 'Подробен изглед',
+                resetButtonTitle: 'Изчисти търсенето',
+                backButtonTitle: 'Затвори търсенето',
+                noResultsText: 'Няма резултати за',
+                footer: {
+                  selectText: 'избор',
+                  selectKeyAriaLabel: 'enter',
+                  navigateText: 'навигация',
+                  navigateUpKeyAriaLabel: 'стрелка нагоре',
+                  navigateDownKeyAriaLabel: 'стрелка надолу',
+                  closeText: 'затваряне',
+                  closeKeyAriaLabel: 'esc'
+                }
+              }
+            }
+          },
+          de: {
+            translations: {
+              button: { buttonText: 'Suchen', buttonAriaLabel: 'Suchen' },
+              modal: {
+                displayDetails: 'Detailansicht anzeigen',
+                resetButtonTitle: 'Suche zurücksetzen',
+                backButtonTitle: 'Suche schließen',
+                noResultsText: 'Keine Ergebnisse für',
+                footer: {
+                  selectText: 'auswählen',
+                  selectKeyAriaLabel: 'Eingabetaste',
+                  navigateText: 'navigieren',
+                  navigateUpKeyAriaLabel: 'Pfeil nach oben',
+                  navigateDownKeyAriaLabel: 'Pfeil nach unten',
+                  closeText: 'schließen',
+                  closeKeyAriaLabel: 'esc'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  locales: {
+    root: {
+      label: 'English',
+      lang: 'en',
+      themeConfig: {
+        nav: [
+          { text: 'Workshops', link: '/' },
+          { text: 'Birthdays', link: '/events' },
+          { text: 'Work with Titania', link: '/work-with-titania' },
+          { text: 'About', link: '/about-titania' },
+          { text: 'Clown Project', link: CLOWN_SITE }
+        ],
+        outline: { level: [2, 3], label: 'On this page' },
+        docFooter: { prev: 'Previous page', next: 'Next page' },
+        footer: {
+          message: `Photos by ${PHOTOGRAPHERS}. · <a href="/legal-data">Legal notice &amp; privacy</a>`,
+          copyright: '© 2022–2026 Titania Chaos'
+        },
+        notFound: {
+          title: 'PAGE NOT FOUND',
+          quote: 'The clown looked everywhere. This page is not here.',
+          linkLabel: 'go to home',
+          linkText: 'Take me home'
+        }
+      }
+    },
+
+    bg: {
+      label: 'Български',
+      lang: 'bg',
+      title: 'Титания Хаос',
+      titleTemplate: ':title | Титания Хаос',
+      description: 'Клоунски работилници, физическа комедия, събития и празненства във Виена.',
+      themeConfig: {
+        nav: [
+          { text: 'Работилници', link: '/bg/' },
+          { text: 'Рождени дни', link: '/bg/events' },
+          { text: 'Работа с Титания', link: '/bg/work-with-titania' },
+          { text: 'За Титания', link: '/bg/about-titania' },
+          { text: 'Проект „Клоун“', link: CLOWN_SITE }
+        ],
+        outline: { level: [2, 3], label: 'На тази страница' },
+        docFooter: { prev: 'Предишна страница', next: 'Следваща страница' },
+        footer: {
+          message: `Снимки от ${PHOTOGRAPHERS_BG}. · <a href="/bg/legal-data">Правна информация и поверителност</a>`,
+          copyright: '© 2022–2026 Титания Хаос'
+        },
+        darkModeSwitchLabel: 'Изглед',
+        lightModeSwitchTitle: 'Към светлата тема',
+        darkModeSwitchTitle: 'Към тъмната тема',
+        sidebarMenuLabel: 'Меню',
+        returnToTopLabel: 'Към началото',
+        langMenuLabel: 'Смяна на езика',
+        skipToContentLabel: 'Към съдържанието',
+        notFound: {
+          title: 'СТРАНИЦАТА НЕ Е НАМЕРЕНА',
+          quote: 'Клоунът търси навсякъде. Тази страница я няма.',
+          linkLabel: 'към началната страница',
+          linkText: 'Към началото'
+        }
+      }
+    },
+
+    de: {
+      label: 'Deutsch',
+      lang: 'de-AT',
+      titleTemplate: ':title | Titania Chaos',
+      description: 'Clown-Workshops, physische Komik, Veranstaltungen und Feste in Wien.',
+      themeConfig: {
+        nav: [
+          { text: 'Workshops', link: '/de/' },
+          { text: 'Kindergeburtstage', link: '/de/events' },
+          { text: 'Mit Titania arbeiten', link: '/de/work-with-titania' },
+          { text: 'Über Titania', link: '/de/about-titania' },
+          { text: 'Clown-Projekt', link: CLOWN_SITE }
+        ],
+        outline: { level: [2, 3], label: 'Auf dieser Seite' },
+        docFooter: { prev: 'Vorherige Seite', next: 'Nächste Seite' },
+        footer: {
+          message: `Fotos von ${PHOTOGRAPHERS}. · <a href="/de/legal-data">Impressum &amp; Datenschutz</a>`,
+          copyright: '© 2022–2026 Titania Chaos'
+        },
+        darkModeSwitchLabel: 'Darstellung',
+        lightModeSwitchTitle: 'Zum hellen Design wechseln',
+        darkModeSwitchTitle: 'Zum dunklen Design wechseln',
+        sidebarMenuLabel: 'Menü',
+        returnToTopLabel: 'Nach oben',
+        langMenuLabel: 'Sprache wechseln',
+        skipToContentLabel: 'Zum Inhalt springen',
+        notFound: {
+          title: 'SEITE NICHT GEFUNDEN',
+          quote: 'Der Clown hat überall gesucht. Diese Seite ist nicht hier.',
+          linkLabel: 'zur Startseite',
+          linkText: 'Zur Startseite'
+        }
+      }
+    }
   }
 })

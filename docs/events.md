@@ -1,33 +1,31 @@
 ---
-title: Kindergeburtstag mit Titania Chaos
-description: Spielerische Kindergeburtstage in Wien mit Zirkusspielen, Kostümen und Titania Chaos' magischer Zeitreisekamera.
-head:
-  - ['meta', { property: 'og:locale', content: 'de_AT' }]
+title: Children's birthday parties with Titania Chaos
+description: Playful children's birthday parties in Vienna with circus games, costumes and Titania Chaos' magical time-travelling camera.
 ---
-# Geburtstag mit Titania Chaos
+# Birthdays with Titania Chaos
 
-## Magische Momente, Lachen und Erinnerungen, die bleiben
+## Magical moments, laughter and memories that last
 
-Geburtstagsfeiern für Kinder von **5 bis 12 Jahren** – mit Spiel, Fantasie, Kostümen und meiner magischen Zeitreisekamera.
+Birthday parties for children aged **5 to 12** — with play, imagination, costumes and my magical time-travelling camera.
 
-[Jetzt anfragen](mailto:agent@tatianapetkova.com?subject=Anfrage%20Kindergeburtstag){.contact-button}
+[Enquire now](mailto:agent@tatianapetkova.com?subject=Birthday%20party%20enquiry){.contact-button}
 
-## Wie läuft eine Feier ab?
+## How does a party work?
 
-Ich komme etwa 30 Minuten vor Beginn. Dann lernen wir uns kennen, spielen und tauchen gemeinsam in die Atmosphäre des Tages ein. Nach einer Kuchenpause beginnt das große Verkleiden und Fotoshooting. Jedes Kind bekommt ein gedrucktes Foto; auf Wunsch gibt es auch Gruppenbilder.
+I arrive about 30 minutes before we begin. Then we get to know each other, play, and step together into the atmosphere of the day. After a cake break, the great dressing-up and photo shoot starts. Every child receives a printed photo, and group pictures are available on request.
 
-## Sozialer Zirkus
+## Social circus
 
-Meine Spiele stammen aus dem sozialen Zirkus. Wir jonglieren, erfinden Figuren und spielen mit Balance und Körpersprache – mit Leichtigkeit, Humor und Raum für jedes Kind. Das fördert Empathie, Kommunikation, Körperbewusstsein und Selbstvertrauen.
+My games come from social circus. We juggle, invent characters and play with balance and body language — with lightness, humour and room for every child. It builds empathy, communication, body awareness and self-confidence.
 
-## Was ich mitbringe
+## What I bring
 
-- Zeitreisekamera, Kostüme und Accessoires
-- Zirkusspiele mit Bewegung, Improvisation und Zusammenarbeit
-- Musik und eine fröhliche Atmosphäre
+- The time-travelling camera, costumes and accessories
+- Circus games with movement, improvisation and teamwork
+- Music and a cheerful atmosphere
 
-## Preis & Bedingungen
+## Price & conditions
 
-Bis zu 10 Kinder, etwa 2–3 Stunden: **€290 plus Taxi** in Wien. Bei Absage weniger als zwei Tage vorher fällt eine Stornogebühr von €100 an; eine Verschiebung ist jederzeit möglich.
+Up to 10 children, approximately 2–3 hours: **€290 plus taxi** within Vienna. Cancellation less than two days in advance incurs a €100 fee; rescheduling is always possible.
 
-[Termin und Verfügbarkeit anfragen](mailto:agent@tatianapetkova.com?subject=Anfrage%20Kindergeburtstag){.contact-button}
+[Ask about a date and availability](mailto:agent@tatianapetkova.com?subject=Birthday%20party%20enquiry){.contact-button}

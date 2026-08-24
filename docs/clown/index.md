@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Clown — Solo Titania Chaos 2026
+description: The living research, rehearsal, dramaturgy and production workspace for Solo Titania Chaos 2026.
 hero:
   name: Clown
   text: Solo Titania Chaos 2026

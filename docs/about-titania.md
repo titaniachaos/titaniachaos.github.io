@@ -1,5 +1,6 @@
 ---
 title: About Titania
+description: Meet Tatiana Petkova, the Vienna-based clown artist, psychologist and language coach behind Titania Chaos.
 ---
 # About Titania
 

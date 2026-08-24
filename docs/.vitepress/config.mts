@@ -3,13 +3,16 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'en',
   title: 'Titania Chaos',
+  titleTemplate: ':title | Titania Chaos',
   description: 'Clown workshops, physical comedy, events and parties in Vienna.',
   cleanUrls: true,
   sitemap: { hostname: 'https://titaniachaos.github.io' },
   head: [
     ['meta', { name: 'theme-color', content: '#d62246' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:site_name', content: 'Titania Chaos' }]
+    ['meta', { property: 'og:site_name', content: 'Titania Chaos' }],
+    ['meta', { property: 'og:image', content: 'https://titaniachaos.github.io/images/titania-chaos.webp' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }]
   ],
   themeConfig: {
     nav: [

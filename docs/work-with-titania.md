@@ -1,5 +1,6 @@
 ---
 title: Work with Titania
+description: Book Titania Chaos for weddings, company parties, festivals, family events and playful portraits with her time-travelling camera.
 ---
 # Titania Chaos and her time-travelling camera
 

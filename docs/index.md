@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Clown workshops and physical comedy
+description: Discover clown workshops, physical comedy, playful events and creative experiences with Vienna-based artist Titania Chaos.
 hero:
   name: Titania Chaos
   text: Clown workshops, events and parties
@@ -24,7 +25,7 @@ features:
     details: Leave everyday pressure behind and rediscover lightness, energy and joy.
 ---
 
-## What participants say
+## Clown workshop experiences
 
 > “Everything was fluid, subtle and fun. Her great finesse and kindness enabled her to accompany each person personally.” — Juliette, philosophy teacher
 
@@ -32,13 +33,13 @@ features:
 
 > “I learned that clown is not just a word. It is a verb: contact and sharing key moments with the audience.” — Philipp, architect
 
-## Join in
+## Who the workshops are for
 
 You might be an IT specialist, teacher, lawyer, social worker, nurse, translator, cook, dancer, librarian, musician, firefighter, doctor, shop owner, artist or hairdresser. You are someone who wants to discover more about yourself and have fun doing so.
 
 The workshops welcome anyone ready for an adventure with their own humanity, people seeking joyful release from everyday life, theatre enthusiasts, clown beginners and introverts who want to perform in a safe, playful setting.
 
-## What to expect
+## What to expect from a clown workshop
 
 - Playfulness, laughter, lightness and joy
 - Insights into clowning and humour
@@ -46,7 +47,7 @@ The workshops welcome anyone ready for an adventure with their own humanity, peo
 - Body work and pantomime inspired by Jacques Lecoq, Marcel Marceau and Charlie Chaplin
 - Improvisation that helps you explore your own clown figure
 
-## Make a gift
+## Give a clown workshop as a gift
 
 Give someone a workshop—or come with a friend and share moments of lightness and joy.
 

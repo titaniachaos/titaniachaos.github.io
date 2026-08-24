@@ -1,5 +1,6 @@
 ---
 title: Legal notice and privacy policy
+description: Legal notice and privacy information for the Titania Chaos website.
 ---
 # Legal notice & privacy policy
 

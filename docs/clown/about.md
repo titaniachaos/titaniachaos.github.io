@@ -1,3 +1,8 @@
+---
+title: About Solo Titania Chaos 2026
+description: Purpose and working areas for the Solo Titania Chaos 2026 clown project.
+---
+
 # About Clown
 
 Clown is the documentation home for **Solo Titania Chaos 2026**: a structured knowledge base for research, material generation, dramaturgy, rehearsal planning and production.

@@ -32,6 +32,7 @@ export default defineConfig({
             { text: 'Audience Relationship', link: '/clown/audience' },
             { text: 'Dramaturgy', link: '/clown/dramaturgy' },
             { text: 'Studio Process', link: '/clown/studio-process' },
+            { text: 'Rehearsal Toolkit', link: '/clown/rehearsal-toolkit' },
             { text: 'Material Research', link: '/clown/material-research' },
             { text: 'Production', link: '/clown/production' },
             { text: 'About the Project', link: '/clown/about' }

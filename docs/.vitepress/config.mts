@@ -71,6 +71,8 @@ export default defineConfig({
   // Per-page Open Graph, Twitter, canonical, hreflang and JSON-LD are emitted
   // by transformHead below, so they stay a single source of truth.
   head: [
+    ['link', { rel: 'icon', type: 'image/png', sizes: '256x256', href: '/favicon.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicon.png' }],
     ['meta', { name: 'theme-color', content: '#d62246' }],
     ...(GOOGLE_SITE_VERIFICATION
       ? [['meta', { name: 'google-site-verification', content: GOOGLE_SITE_VERIFICATION }] as const]

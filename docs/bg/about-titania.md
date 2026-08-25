@@ -41,6 +41,8 @@ outline: [1, 2]
 - [Lila Monti](https://www.lilamonti.com/?lang=en){.no-icon} (AR)
 {.teacher-list}
 
+<VideoFacade id="oh8HroecvrA" thumb="/images/yt-oh8HroecvrA.jpg" title="Клоунска работилница с Титания Хаос в Мини Арт Център, София, октомври 2023" />
+
 ## В медиите
 
 Титания Хаос е представяна в български телевизионни, радио и печатни медии, където говори за клоунадата, смеха и пътя, отвел Татяна до Титания.

@@ -35,6 +35,8 @@ features:
 
 > “I learned that clown is not just a word. It is a verb: contact and sharing key moments with the audience.” — Philipp, architect
 
+<VideoFacade id="JG4Iar3Ax7k" thumb="/images/yt-JG4Iar3Ax7k.jpg" title="Clown workshop with Titania Chaos, Mini Art Foundation, January 2024" />
+
 ## Who the workshops are for
 
 You do not need a theatre background or previous clown experience. You might work in an office, a school, a hospital, a kitchen or on a stage—or simply want to discover more about yourself and have fun doing so.

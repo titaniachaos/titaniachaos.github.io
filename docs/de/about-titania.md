@@ -41,6 +41,8 @@ Ich hatte das Privileg, unter anderem von folgenden Künstlerinnen, Künstlern u
 - [Lila Monti](https://www.lilamonti.com/?lang=en){.no-icon} (AR)
 {.teacher-list}
 
+<VideoFacade id="oh8HroecvrA" thumb="/images/yt-oh8HroecvrA.jpg" title="Clown-Workshop mit Titania Chaos im Mini Art Centre, Sofia, Oktober 2023" />
+
 ## In den Medien
 
 Titania Chaos war im bulgarischen Fernsehen, Radio und in Printmedien zu sehen und zu hören und sprach dort über Clownerie, Lachen und den Weg, der Tatiana zu Titania führte.

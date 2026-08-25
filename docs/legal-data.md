@@ -12,6 +12,8 @@ This website presents the artistic work of an individual artist: clown workshops
 
 ## Privacy policy
 
+**Video.** Films are hosted on YouTube. Nothing is requested from YouTube while you read: the preview image is served from this site, and no player is loaded. If you press play, the video is loaded from youtube-nocookie.com — from that moment Google receives your IP address and may set cookies under its own privacy policy, which this site does not control. Not pressing play means no contact with Google at all.
+
 **Controller.** Tatiana Petkova, at the address above.
 
 **Email enquiries.** If you contact me by email, your name, your address and the content of your message are processed solely in order to answer you and to prepare or carry out a booking (Art. 6(1)(b) and (f) GDPR). They are not shared with third parties and not used for advertising. Correspondence is kept for as long as it may still be needed for the booking and for statutory record-keeping, and is deleted afterwards.

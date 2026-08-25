@@ -35,6 +35,8 @@ features:
 
 > „Ich habe gelernt, dass Clown nicht nur ein Wort ist. Es ist ein Tätigkeitswort: Kontakt und das Teilen entscheidender Momente mit dem Publikum.“ — Philipp, Architekt
 
+<VideoFacade id="JG4Iar3Ax7k" thumb="/images/yt-JG4Iar3Ax7k.jpg" title="Clown-Workshop mit Titania Chaos, Mini Art Foundation, Jänner 2024" />
+
 ## Für wen die Workshops sind
 
 Sie können IT-Fachkraft, Lehrerin, Jurist, Sozialarbeiterin, Krankenpfleger, Übersetzerin, Koch, Tänzerin, Bibliothekar, Musikerin, Feuerwehrmann, Ärztin, Geschäftsinhaber, Künstlerin oder Friseur sein. Sie sind jemand, der mehr über sich selbst entdecken und dabei Freude haben möchte.

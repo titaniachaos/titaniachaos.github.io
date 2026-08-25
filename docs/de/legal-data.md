@@ -12,6 +12,8 @@ Diese Website stellt die künstlerische Arbeit einer einzelnen Künstlerin dar: 
 
 ## Datenschutzerklärung
 
+**Video.** Filme liegen auf YouTube. Beim Lesen wird nichts von YouTube angefordert: Das Vorschaubild kommt von dieser Website, ein Player wird nicht geladen. Wenn Sie auf Abspielen klicken, wird das Video von youtube-nocookie.com geladen — ab diesem Moment erhält Google Ihre IP-Adresse und kann Cookies nach seiner eigenen Datenschutzerklärung setzen, auf die diese Website keinen Einfluss hat. Ohne Klick besteht kein Kontakt zu Google.
+
 **Verantwortliche.** Tatiana Petkova, Anschrift wie oben.
 
 **E-Mail-Anfragen.** Wenn Sie mich per E-Mail kontaktieren, werden Ihr Name, Ihre Adresse und der Inhalt Ihrer Nachricht ausschließlich verarbeitet, um Ihnen zu antworten und eine Buchung anzubahnen oder durchzuführen (Art. 6 Abs. 1 lit. b und f DSGVO). Sie werden nicht an Dritte weitergegeben und nicht für Werbung verwendet. Die Korrespondenz wird so lange aufbewahrt, wie sie für die Buchung und für gesetzliche Aufbewahrungspflichten erforderlich sein kann, und danach gelöscht.

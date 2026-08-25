@@ -41,6 +41,8 @@ I have had the privilege of learning from artists and teachers including:
 - [Lila Monti](https://www.lilamonti.com/?lang=en){.no-icon} (AR)
 {.teacher-list}
 
+<VideoFacade id="oh8HroecvrA" thumb="/images/yt-oh8HroecvrA.jpg" title="Clown workshop with Titania Chaos at Mini Art Centre, Sofia, October 2023" />
+
 ## In the press
 
 Titania Chaos has been featured in Bulgarian television, radio and print media, talking about clowning, laughter and the path that led Tatiana to Titania.

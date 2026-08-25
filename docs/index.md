@@ -70,3 +70,5 @@ Prefer a performance or a playful photo experience for your event? [Explore ways
 Invite Titania to an event or ask about a workshop, performance or playful photo experience.
 
 [Contact Titania](mailto:agent@tatianapetkova.com){.contact-button}
+
+<SocialWall />

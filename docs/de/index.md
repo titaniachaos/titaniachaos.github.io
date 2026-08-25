@@ -70,3 +70,5 @@ Lieber eine Vorstellung oder ein spielerisches Fotoerlebnis für Ihre Veranstalt
 Laden Sie Titania zu einer Veranstaltung ein oder fragen Sie nach einem Workshop, einer Performance oder einem spielerischen Fotoerlebnis.
 
 [Titania kontaktieren](mailto:agent@tatianapetkova.com){.contact-button}
+
+<SocialWall />

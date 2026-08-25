@@ -70,3 +70,5 @@ features:
 Поканете Титания на събитие или попитайте за работилница, представление или забавно фотопреживяване.
 
 [Пишете на Титания](mailto:agent@tatianapetkova.com){.contact-button}
+
+<SocialWall />

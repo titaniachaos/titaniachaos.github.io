@@ -1,0 +1,55 @@
+name: Sync the social wall
+
+# Instagram long-lived tokens last 60 days and are refreshed by using them, so
+# this runs often enough to keep the token alive as well as the wall current.
+# Without the IG_TOKEN secret every step no-ops and the job passes: a fork must
+# not fail on a secret it cannot have.
+on:
+  schedule:
+    - cron: '17 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 26
+          cache: npm
+
+      - run: npm ci
+
+      - name: Refresh the long-lived token
+        id: refresh
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: node scripts/social-token.mjs
+
+      - name: Pull the latest posts
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: node scripts/social-sync.mjs 4
+
+      - name: Verify the site still builds and stays within budget
+        run: npm run check
+
+      - name: Commit only if something changed
+        run: |
+          if [ -z "$(git status --porcelain docs/public/social docs/.vitepress/social-manifest.json)" ]; then
+            echo "nothing changed"; exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/public/social docs/.vitepress/social-manifest.json
+          git commit -m "chore: sync the social wall"
+          git push

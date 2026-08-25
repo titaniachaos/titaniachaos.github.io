@@ -2,12 +2,14 @@ import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import SupportCard from './SupportCard.vue'
 import WorkshopDates from './WorkshopDates.vue'
+import SocialWall from './SocialWall.vue'
 import './custom.css'
 
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
     app.component('WorkshopDates', WorkshopDates)
+    app.component('SocialWall', SocialWall)
   },
   Layout: () =>
     // Rendered after the page content rather than in the aside: the aside is

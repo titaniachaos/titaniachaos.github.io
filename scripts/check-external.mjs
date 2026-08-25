@@ -20,6 +20,14 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) titaniachaos-link-ch
 // meant to be fetched.
 const NAMESPACES = [/^https?:\/\/schema\.org/, /^https?:\/\/www\.w3\.org/, /^https?:\/\/purl\.org/]
 
+// Not links, though they read as ones. This scans source, but what it is for is
+// what the site publishes -- so a URL that never reaches a page is noise, and a
+// checker that cries wolf every Monday is worse than no checker.
+//   ${...}  a template literal, still holding its placeholder
+//   …       an elided example in a comment
+//   example.*  documentation stand-ins, in the spirit of RFC 2606
+const NOT_DESTINATIONS = [/\$\{/, /[…]|\.\.\./, /^https?:\/\/example\./]
+
 async function sources(dir) {
   const out = []
   for (const entry of await readdir(dir, { withFileTypes: true })) {
@@ -39,6 +47,7 @@ for (const file of await sources(root)) {
   for (const match of text.matchAll(/https?:\/\/[^\s"'`)\]<>]+/g)) {
     const clean = match[0].replace(/[.,;:]+$/, '')
     if (NAMESPACES.some((n) => n.test(clean))) continue
+    if (NOT_DESTINATIONS.some((n) => n.test(clean))) continue
     if (!found.has(clean)) found.set(clean, new Set())
     found.get(clean).add(relative(process.cwd(), file))
   }

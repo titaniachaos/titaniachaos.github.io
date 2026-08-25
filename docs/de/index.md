@@ -39,7 +39,7 @@ features:
 
 ## Für wen die Workshops sind
 
-Sie können IT-Fachkraft, Lehrerin, Jurist, Sozialarbeiterin, Krankenpfleger, Übersetzerin, Koch, Tänzerin, Bibliothekar, Musikerin, Feuerwehrmann, Ärztin, Geschäftsinhaber, Künstlerin oder Friseur sein. Sie sind jemand, der mehr über sich selbst entdecken und dabei Freude haben möchte.
+Sie brauchen keine Theatererfahrung und keine Vorerfahrung mit Clownerie. Sie können IT-Fachkraft, Lehrerin, Jurist, Sozialarbeiterin, Krankenpfleger, Übersetzerin, Koch, Tänzerin, Bibliothekar, Musikerin, Feuerwehrmann, Ärztin, Geschäftsinhaber, Künstlerin oder Friseur sein. Sie können in einem Büro, in einer Schule, in einem Krankenhaus, in einer Küche oder auf einer Bühne arbeiten. Sie sind jemand, der mehr über sich selbst entdecken und dabei Freude haben möchte.
 
 Die Workshops stehen allen offen, die bereit für ein Abenteuer mit ihrer eigenen Menschlichkeit sind: Menschen auf der Suche nach freudvoller Entlastung vom Alltag, Theaterbegeisterte, Clown-Anfängerinnen und Introvertierte, die in einem sicheren, spielerischen Rahmen auftreten möchten.
 

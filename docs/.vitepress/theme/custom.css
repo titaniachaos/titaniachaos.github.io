@@ -106,6 +106,20 @@
    keep the light-mode red as their ground in dark mode. */
 .dark .contact-button:not(.secondary) { background: #d62246; }
 .dark .contact-button:not(.secondary):hover { background: #b91839; }
+/* The sponsorship card is mounted twice: in the slot the default theme keeps
+   for Carbon ads, and after the content. Exactly one is ever shown — the aside
+   itself appears only at 1280px and up, so the inline copy stands down there. */
+.support-card--aside { margin-bottom: 24px; }
+.support-card--inline { display: block; }
+
+@media (min-width: 1280px) {
+  .support-card--inline { display: none; }
+}
+
+@media (max-width: 1279px) {
+  .support-card--aside { display: none; }
+}
+
 .support-card {
   margin: 48px 0 8px;
   padding: 22px 24px;

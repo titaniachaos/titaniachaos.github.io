@@ -14,10 +14,13 @@ export default {
     app.component('SocialWall', SocialWall)
   },
   Layout: () =>
-    // Rendered after the page content rather than in the aside: the aside is
-    // display:none below 1280px, which hid the only support CTA from every
-    // phone, tablet and small laptop.
+    // The sponsorship card fills the slot the default theme reserves for Carbon
+    // ads -- our own message, no third-party script -- and repeats after the
+    // content, because that aside is display:none below 1280px and would hide
+    // the only support CTA from every phone, tablet and small laptop. The CSS
+    // shows exactly one of the two.
     h(DefaultTheme.Layout, null, {
-      'doc-after': () => h(SupportCard)
+      'aside-ads-before': () => h(SupportCard, { place: 'aside' }),
+      'doc-after': () => h(SupportCard, { place: 'inline' })
     })
 }

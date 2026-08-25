@@ -39,7 +39,7 @@ features:
 
 ## Who the workshops are for
 
-You do not need a theatre background or previous clown experience. You might work in an office, a school, a hospital, a kitchen or on a stage—or simply want to discover more about yourself and have fun doing so.
+You do not need a theatre background or previous clown experience. You might be an IT specialist, a teacher, a lawyer, a social worker, a nurse, a translator, a cook, a dancer, a librarian, a musician, a firefighter, a doctor, a shop owner, an artist or a hairdresser. You might work in an office, a school, a hospital, a kitchen or on a stage. You are someone who wants to discover more about yourself and have fun doing so.
 
 The workshops welcome anyone ready for an adventure with their own humanity, people seeking joyful release from everyday life, theatre enthusiasts, clown beginners and introverts who want to perform in a safe, playful setting.
 

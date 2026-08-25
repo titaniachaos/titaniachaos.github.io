@@ -43,8 +43,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # The build is itself the dead-link checker: VitePress fails on a dead
+      # internal link. These add what it does not check -- section ids, locale
+      # parity, ledger integrity -- and they gate the deploy, so a change that
+      # breaks them is never published.
+      - name: Check the sources
+        run: npm run check:sources
+
       - name: Build VitePress
         run: npm run docs:build
+
+      - name: Check the built site
+        run: npm run check:build
 
       - name: Configure Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6

@@ -4,7 +4,7 @@ description: Meet Tatiana Petkova, the Vienna-based clown artist, psychologist a
 ---
 # About Titania
 
-![Titania Chaos](/images/titania-portrait.jpg)
+![Titania Chaos in a red dress and red nose, a juggling club spinning above her open hands](/images/titania-juggling.jpg)
 
 > I pursue a passion for contact through humour, languages, poetry and emotion.
 

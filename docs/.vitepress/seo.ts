@@ -36,7 +36,7 @@ const IMAGES = {
   'titania-chaos-card.jpg': { w: 1200, h: 630, alt: 'Titania Chaos' },
   'titania-chaos.webp': { w: 1452, h: 1800, alt: 'Titania Chaos' },
   'titania-chaos-hero.webp': { w: 800, h: 992, alt: 'Titania Chaos' },
-  'titania-portrait.jpg': { w: 384, h: 684, alt: 'Tatiana Petkova as Titania Chaos' },
+  'titania-juggling.jpg': { w: 960, h: 1200, alt: 'Tatiana Petkova as Titania Chaos, catching a juggling club' },
   'time-travelling-camera.jpg': { w: 768, h: 768, alt: "Titania's time-travelling camera" }
 } as const
 
@@ -140,7 +140,7 @@ function personNode(slug: string) {
       'Vienna-based clown artist offering clown workshops, physical comedy, performances and playful photo experiences.',
     email: 'agent@tatianapetkova.com',
     url: `${HOSTNAME}/`,
-    image: `${HOSTNAME}/images/titania-portrait.jpg`,
+    image: `${HOSTNAME}/images/titania-juggling.jpg`,
     knowsLanguage: ['en', 'de', 'fr', 'ru', 'bg'],
     ...(slug === '/about-titania' ? { subjectOf: PRESS } : {}),
     ...(slug === '/legal-data'

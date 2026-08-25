@@ -4,7 +4,7 @@ description: Lernen Sie Tatiana Petkova kennen – die Wiener Clownkünstlerin, 
 ---
 # Über Titania
 
-![Titania Chaos](/images/titania-portrait.jpg)
+![Titania Chaos im roten Kleid mit roter Nase, eine Jonglierkeule über den offenen Händen](/images/titania-juggling.jpg)
 
 > Ich folge einer Leidenschaft für Kontakt durch Humor, Sprachen, Poesie und Emotion.
 

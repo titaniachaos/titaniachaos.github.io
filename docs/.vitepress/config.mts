@@ -1,14 +1,11 @@
-import { writeFile } from 'node:fs/promises'
-import { join } from 'node:path'
 import { defineConfig } from 'vitepress'
 import {
   GOOGLE_SITE_VERIFICATION,
   HOSTNAME,
-  LOCALES,
   buildHead,
-  localeAlternateTags,
-  splitLocale
+  localeAlternateTags
 } from './seo.ts'
+import { runBuildHooks, runSitemapHooks } from './generators.ts'
 
 /**
  * The Clown project is a separate VitePress site built from the `clown`
@@ -66,22 +63,9 @@ export default defineConfig({
   },
   sitemap: {
     hostname: HOSTNAME,
-    // Declare every translation of a URL as an alternate, which is what
-    // Search Console reads to group a page's language versions.
-    transformItems: (items) => {
-      const known = new Set(items.map((i) => (i.url.startsWith('/') ? i.url : `/${i.url}`)))
-      return items.map((item) => {
-        const urlPath = item.url.startsWith('/') ? item.url : `/${item.url}`
-        const { slug } = splitLocale(urlPath)
-        const links = LOCALES.flatMap((locale) => {
-          const alt = slug === '/' ? `${locale.prefix}/` : `${locale.prefix}${slug}`
-          return known.has(alt) ? [{ lang: locale.hreflang, url: `${HOSTNAME}${alt}` }] : []
-        })
-        // Search Console reads x-default from the sitemap as well as the head.
-        if (known.has(slug)) links.push({ lang: 'x-default', url: `${HOSTNAME}${slug}` })
-        return { ...item, links, changefreq: 'monthly' as const, priority: slug === '/' ? 1.0 : 0.7 }
-      })
-    }
+    // VitePress enumerates the pages and writes the XML; the integrations only
+    // enrich each item. See generators.ts.
+    transformItems: runSitemapHooks
   },
 
   // Per-page Open Graph, Twitter, canonical, hreflang and JSON-LD are emitted
@@ -101,17 +85,7 @@ export default defineConfig({
   },
 
   async buildEnd(siteConfig) {
-    // Crawlers read robots.txt only at the domain root, so the Clown site's
-    // own /clown/robots.txt is never fetched. Announce its sitemap from here.
-    const robots = [
-      'User-agent: *',
-      'Allow: /',
-      '',
-      `Sitemap: ${HOSTNAME}/sitemap.xml`,
-      `Sitemap: ${CLOWN_SITE('')}sitemap.xml`,
-      ''
-    ].join('\n')
-    await writeFile(join(siteConfig.outDir, 'robots.txt'), robots, 'utf-8')
+    await runBuildHooks(siteConfig)
   },
 
   // Shallow-merged into every locale. Anything a locale redefines must be

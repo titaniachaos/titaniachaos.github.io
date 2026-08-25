@@ -44,3 +44,6 @@ jobs:
 
       - name: Check the built site
         run: npm run check:build
+
+      - name: Check the domain can still move
+        run: npm run check:origin

@@ -16,7 +16,8 @@
     "check:links": "node scripts/check-external.mjs",
     "check": "npm run check:sources && npm run docs:build && npm run check:build",
     "prepare": "node scripts/install-hooks.mjs",
-    "check:a11y": "node scripts/check-a11y.mjs"
+    "check:a11y": "node scripts/check-a11y.mjs",
+    "check:origin": "node scripts/check-origin.mjs"
   },
   "devDependencies": {
     "sharp": "^0.35.3",

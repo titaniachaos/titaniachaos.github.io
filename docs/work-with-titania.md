@@ -1,6 +1,6 @@
 ---
 title: Clown performer for events in Vienna
-description: Book Vienna-based clown performer Titania Chaos for weddings, company parties, festivals, family events and playful portraits with her time-travelling camera.
+description: Invite Vienna-based clown performer Titania Chaos to events, or book clown, physical-comedy and team-building workshops for your group.
 ---
 # Work with Titania
 

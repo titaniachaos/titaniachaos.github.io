@@ -9,7 +9,7 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "check:sources": "node scripts/check-locales.mjs",
+    "check:sources": "node scripts/check-locales.mjs && node scripts/check-ecosystem.mjs",
     "check:build": "node scripts/check-build.mjs && node scripts/check-images.mjs && node scripts/check-page-weight.mjs && node scripts/check-a11y.mjs",
     "check:images": "node scripts/check-images.mjs",
     "check:weight": "node scripts/check-page-weight.mjs",

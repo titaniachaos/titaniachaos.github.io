@@ -1,6 +1,6 @@
 ---
 title: Clown-Performerin für Veranstaltungen in Wien
-description: Buchen Sie die Wiener Clown-Performerin Titania Chaos für Hochzeiten, Firmenfeiern, Festivals, Familienfeste und verspielte Porträts mit ihrer Zeitreisekamera.
+description: Laden Sie die Wiener Clown-Performerin Titania Chaos zu Veranstaltungen ein oder buchen Sie Clown-, Physical-Comedy- und Teamwork-Workshops für Ihre Gruppe.
 ---
 # Mit Titania arbeiten
 

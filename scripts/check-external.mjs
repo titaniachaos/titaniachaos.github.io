@@ -46,6 +46,11 @@ for (const file of await sources(root)) {
 
   for (const match of text.matchAll(/https?:\/\/[^\s"'`)\]<>]+/g)) {
     const clean = match[0].replace(/[.,;:]+$/, '')
+    // Source files carry URLs that were never links: template literals like
+    // https://doi.org/${w.doi}, and documentation placeholders written with an
+    // ellipsis. Reporting those as rot is how a checker teaches people to
+    // ignore it, and this one guards the citations.
+    if (/\$\{|…|\.\.\.|example\.(at|com|org)$/.test(clean)) continue
     if (NAMESPACES.some((n) => n.test(clean))) continue
     if (NOT_DESTINATIONS.some((n) => n.test(clean))) continue
     if (!found.has(clean)) found.set(clean, new Set())

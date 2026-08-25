@@ -10,8 +10,9 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "check:sources": "node scripts/check-locales.mjs",
-    "check:build": "node scripts/check-build.mjs && node scripts/check-images.mjs",
+    "check:build": "node scripts/check-build.mjs && node scripts/check-images.mjs && node scripts/check-page-weight.mjs",
     "check:images": "node scripts/check-images.mjs",
+    "check:weight": "node scripts/check-page-weight.mjs",
     "check:links": "node scripts/check-external.mjs",
     "check": "npm run check:sources && npm run docs:build && npm run check:build",
     "prepare": "node scripts/install-hooks.mjs"

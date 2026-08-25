@@ -35,7 +35,7 @@ const IMAGES = {
   // portrait, which arrived on X and LinkedIn as a band across the middle.
   'titania-chaos-card.jpg': { w: 1200, h: 630, alt: 'Titania Chaos' },
   'titania-chaos-hero.webp': { w: 800, h: 992, alt: 'Titania Chaos' },
-  'titania-juggling.jpg': { w: 960, h: 1200, alt: 'Tatiana Petkova as Titania Chaos, catching a juggling club' },
+  'titania-juggling.jpg': { w: 800, h: 1000, alt: 'Tatiana Petkova as Titania Chaos, catching a juggling club' },
   'time-travelling-camera.jpg': { w: 768, h: 768, alt: "Titania's time-travelling camera" }
 } as const
 

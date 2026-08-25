@@ -36,6 +36,7 @@ const IMAGES = {
   'titania-chaos-card.jpg': { w: 1200, h: 630, alt: 'Titania Chaos' },
   'titania-chaos-hero.webp': { w: 800, h: 992, alt: 'Titania Chaos' },
   'titania-juggling.jpg': { w: 800, h: 1000, alt: 'Tatiana Petkova as Titania Chaos, catching a juggling club' },
+  'work-with-titania-card.jpg': { w: 768, h: 402, alt: 'Titania Chaos performing with a microphone in front of an audience' },
   'time-travelling-camera.jpg': { w: 768, h: 768, alt: "Titania's time-travelling camera" }
 } as const
 
@@ -43,7 +44,7 @@ const IMAGES = {
 const PAGE_IMAGE: Record<string, keyof typeof IMAGES> = {
   '/': 'titania-chaos-card.jpg',
   '/about-titania': 'titania-chaos-card.jpg',
-  '/work-with-titania': 'time-travelling-camera.jpg',
+  '/work-with-titania': 'work-with-titania-card.jpg',
   '/events': 'titania-chaos-card.jpg',
   '/legal-data': 'titania-chaos-card.jpg'
 }

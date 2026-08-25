@@ -10,8 +10,17 @@ import {
   splitLocale
 } from './seo.ts'
 
-/** The Clown project is a separate VitePress site built from the `clown` repository. */
-const CLOWN_SITE = `${HOSTNAME}/clown/`
+/**
+ * The Clown project is a separate VitePress site built from the `clown`
+ * repository. Same domain, so keep the reader in their language and their tab.
+ */
+const CLOWN_SITE = (prefix: string) => `${HOSTNAME}/clown${prefix}/`
+
+/**
+ * The Clown site shares this host, so a link to it is a same-site navigation:
+ * no new tab, no external-link icon, and the referrer is worth keeping.
+ */
+const SAME_SITE = { target: '_self', rel: '', noIcon: true } as const
 
 const PHOTOGRAPHERS =
   'Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, ' +
@@ -26,21 +35,47 @@ export default defineConfig({
   titleTemplate: ':title | Titania Chaos',
   description: 'Clown workshops, physical comedy, events and parties in Vienna.',
   cleanUrls: true,
+
+  markdown: {
+    // `markdown.externalLinks` is global, and the two sites share a host: a
+    // link between them is a same-site navigation, while a genuinely external
+    // link should still open a new tab. So decide per host.
+    config: (md) => {
+      const renderLink =
+        md.renderer.rules.link_open ??
+        ((tokens, idx, options, _env, self) => self.renderToken(tokens, idx, options))
+
+      md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+        const href = tokens[idx].attrGet('href') ?? ''
+        if (!href.startsWith(HOSTNAME)) return renderLink(tokens, idx, options, env, self)
+
+        // The theme can also draw the arrow from `a[href*="://"]` in CSS, so
+        // the class is needed as well as dropping the new-tab attributes.
+        tokens[idx].attrJoin('class', 'no-icon')
+        return renderLink(tokens, idx, options, env, self)
+          .replace(' target="_blank"', '')
+          .replace(' rel="noreferrer"', '')
+      }
+    }
+  },
   sitemap: {
     hostname: HOSTNAME,
     // Declare every translation of a URL as an alternate, which is what
     // Search Console reads to group a page's language versions.
-    transformItems: (items) =>
-      items.map((item) => {
+    transformItems: (items) => {
+      const known = new Set(items.map((i) => (i.url.startsWith('/') ? i.url : `/${i.url}`)))
+      return items.map((item) => {
         const urlPath = item.url.startsWith('/') ? item.url : `/${item.url}`
         const { slug } = splitLocale(urlPath)
-        const known = new Set(items.map((i) => (i.url.startsWith('/') ? i.url : `/${i.url}`)))
         const links = LOCALES.flatMap((locale) => {
           const alt = slug === '/' ? `${locale.prefix}/` : `${locale.prefix}${slug}`
           return known.has(alt) ? [{ lang: locale.hreflang, url: `${HOSTNAME}${alt}` }] : []
         })
+        // Search Console reads x-default from the sitemap as well as the head.
+        if (known.has(slug)) links.push({ lang: 'x-default', url: `${HOSTNAME}${slug}` })
         return { ...item, links, changefreq: 'monthly' as const, priority: slug === '/' ? 1.0 : 0.7 }
       })
+    }
   },
 
   // Per-page Open Graph, Twitter, canonical, hreflang and JSON-LD are emitted
@@ -67,7 +102,7 @@ export default defineConfig({
       'Allow: /',
       '',
       `Sitemap: ${HOSTNAME}/sitemap.xml`,
-      `Sitemap: ${CLOWN_SITE}sitemap.xml`,
+      `Sitemap: ${CLOWN_SITE('')}sitemap.xml`,
       ''
     ].join('\n')
     await writeFile(join(siteConfig.outDir, 'robots.txt'), robots, 'utf-8')
@@ -139,7 +174,7 @@ export default defineConfig({
           { text: 'Birthdays', link: '/events' },
           { text: 'Work with Titania', link: '/work-with-titania' },
           { text: 'About', link: '/about-titania' },
-          { text: 'Clown Project', link: CLOWN_SITE }
+          { text: 'Clown Project', link: CLOWN_SITE(''), ...SAME_SITE }
         ],
         outline: { level: [2, 3], label: 'On this page' },
         docFooter: { prev: 'Previous page', next: 'Next page' },
@@ -168,7 +203,7 @@ export default defineConfig({
           { text: 'Рождени дни', link: '/bg/events' },
           { text: 'Работа с Титания', link: '/bg/work-with-titania' },
           { text: 'За Титания', link: '/bg/about-titania' },
-          { text: 'Проект „Клоун“', link: CLOWN_SITE }
+          { text: 'Проект „Клоун“', link: CLOWN_SITE('/bg'), ...SAME_SITE }
         ],
         outline: { level: [2, 3], label: 'На тази страница' },
         docFooter: { prev: 'Предишна страница', next: 'Следваща страница' },
@@ -203,7 +238,7 @@ export default defineConfig({
           { text: 'Kindergeburtstage', link: '/de/events' },
           { text: 'Mit Titania arbeiten', link: '/de/work-with-titania' },
           { text: 'Über Titania', link: '/de/about-titania' },
-          { text: 'Clown-Projekt', link: CLOWN_SITE }
+          { text: 'Clown-Projekt', link: CLOWN_SITE('/de'), ...SAME_SITE }
         ],
         outline: { level: [2, 3], label: 'Auf dieser Seite' },
         docFooter: { prev: 'Vorherige Seite', next: 'Nächste Seite' },

@@ -18,4 +18,6 @@ This website presents the artistic work of an individual artist: clown workshops
 
 **Hosting.** This site is hosted by GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). The provider processes technical connection data — including your IP address — in server logs for security and delivery (Art. 6(1)(f) GDPR). This involves a transfer to the United States. No cookies, analytics or tracking are used, and no fonts or scripts are loaded from other services.
 
+**Research participants.** Audience tests and work-in-progress showings for the *Solo Titania Chaos* project are a separate matter from this website. Everyone in the room is told before it begins what is recorded, may decline any part of it and still take part, and may withdraw afterwards; working footage is deleted when the piece premieres. The information sheet and consent form are held with the project, in English, German and Bulgarian.
+
 **Your rights.** You may request access, rectification, erasure, restriction and data portability, and object to processing, by writing to the address above. You also have the right to lodge a complaint with the Austrian Data Protection Authority (Österreichische Datenschutzbehörde, Barichgasse 40–42, 1030 Vienna, dsb@dsb.gv.at).

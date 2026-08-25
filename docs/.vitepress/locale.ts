@@ -6,6 +6,10 @@
  * copies of three lines is not a cost until a fourth language arrives, and then
  * it is five edits and one of them gets missed.
  *
+ * The file is byte-identical in the main site and in the clown project site, so
+ * a fourth language is the same single edit in both, and the two can never
+ * disagree about what a language is.
+ *
  * Kept free of Vue and VitePress imports so the `.data.ts` loaders, which run
  * in Node, can use it too. The Vue side is in `theme/useLang.ts`.
  */
@@ -45,4 +49,33 @@ export function localePrefix(lang: Lang): string {
  */
 export function dateLocale(lang: Lang): string {
   return lang === 'en' ? 'en-GB' : lang === 'de' ? 'de-AT' : 'bg-BG'
+}
+
+/**
+ * Reduce any form of a page reference to its locale and its slug.
+ * `bg/concept.md` and `/bg/concept` both give `{ lang: 'bg', slug: 'concept' }`.
+ *
+ * A project site is served from a sub-path, and a reference may still carry it.
+ * Pass that sub-path as `base` -- `/clown/` -- and the leading segment is
+ * dropped before the locale is read. The default is the empty string, which is
+ * what a site at the domain root needs, and what page-relative references need
+ * in either site.
+ */
+export function parsePage(ref: string, base = ''): { lang: Lang; slug: string } {
+  const root = base.replace(/^\/+|\/+$/g, '')
+  const parts = ref
+    .replace(/\.md$/, '')
+    .split('/')
+    .filter(Boolean)
+
+  if (root && parts[0] === root) parts.shift()
+  if (!parts.length) return { lang: 'en', slug: 'index' }
+  const lang = toLang(parts[0])
+  const rest = parts[0] === 'bg' || parts[0] === 'de' ? parts.slice(1) : parts
+  return { lang, slug: rest.join('/') || 'index' }
+}
+
+/** Pick a localised value, falling back to English rather than to nothing. */
+export function pick<T>(value: Partial<Localised<T>> | undefined, lang: Lang): T | undefined {
+  return value?.[lang] ?? value?.en
 }

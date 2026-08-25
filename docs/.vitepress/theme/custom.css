@@ -46,6 +46,34 @@
 .vp-doc a:not(.contact-button) { text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
 .vp-doc li + li { margin-top: 0.3em; }
 .vp-doc blockquote { font-size: 1.05em; line-height: 1.7; }
+/* ---- three languages, three sets of needs ----------------------------------
+   The measure and the wrapping were tuned on English. German runs about ten
+   times the density of long compounds -- 152 words of fourteen characters or
+   more across these pages against English's 16, the longest 25 -- and Bulgarian
+   sits between the two. Unhyphenated, that leaves a 70ch measure visibly ragged
+   in German and only in German. Headings are left alone: they balance instead,
+   and a hyphenated headline reads as a mistake. */
+:lang(de) .vp-doc p,
+:lang(de) .vp-doc li,
+:lang(de) .vp-doc td,
+:lang(bg) .vp-doc p,
+:lang(bg) .vp-doc li,
+:lang(bg) .vp-doc td {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  /* never split a word under eight letters, never leave fewer than four
+     either side: the rule that keeps automatic hyphenation from looking automatic */
+  hyphenate-limit-chars: 8 4 4;
+}
+
+/* A compound longer than its column still has to go somewhere. */
+.vp-doc td,
+.vp-doc th {
+  overflow-wrap: break-word;
+}
+
+.vp-doc li { text-wrap: pretty; }
+
 .contact-button {
   display: inline-block;
   margin: 8px 8px 8px 0;

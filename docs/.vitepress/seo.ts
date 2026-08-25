@@ -1,6 +1,12 @@
 import type { HeadConfig, SiteConfig, TransformContext } from 'vitepress'
 
-export const HOSTNAME = 'https://titaniachaos.github.io'
+/**
+ * Every canonical URL, hreflang, sitemap entry and schema.org @id is built from
+ * this. It is the one thing a move to a custom domain has to change, so it
+ * reads from the environment with today's value as the default: a migration is
+ * `SITE_ORIGIN=https://example.at npm run docs:build`, not a search and replace.
+ */
+export const HOSTNAME = (process.env.SITE_ORIGIN ?? 'https://titaniachaos.github.io').replace(/\/$/, '')
 
 /**
  * Token from Search Console's "HTML tag" verification method (the value of

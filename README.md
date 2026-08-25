@@ -24,6 +24,24 @@ in each locale in `docs/.vitepress/config.mts`.
 `cleanUrls` is enabled, so pages resolve without a trailing slash — `/events`,
 not `/events/`. Only locale roots are directory URLs (`/bg/`, `/de/`).
 
+## Checks
+
+```sh
+npm run check        # locale parity, build, section ids, alt text
+npm run check:links  # every outward link still resolves (network)
+```
+
+`npm run check` runs on every pull request. The link check runs weekly from
+`.github/workflows/maintenance.yml`, and can be started by hand from the Actions
+tab; it matters most for the press citations on the About page, which are the
+part of this site most likely to rot.
+
+| Script | What it catches |
+| --- | --- |
+| `check-locales.mjs` | a missing translation; heading structures that have drifted apart; a page that is half-translated |
+| `check-build.mjs` | a dead `#anchor`, which VitePress does not check; images without alt text; duplicate ids |
+| `check-external.mjs` | link rot, told apart from a host refusing an automated request or serving an incomplete certificate chain — only the first fails the job |
+
 ## SEO
 
 `docs/.vitepress/seo.ts` generates, per page: a canonical URL, the full Open

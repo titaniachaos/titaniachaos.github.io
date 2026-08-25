@@ -1,7 +1,9 @@
 name: Build check
 
-# The build is the link checker: VitePress fails on a dead internal link, so
-# this has to run before a change reaches main, not after.
+# The build is the link checker -- VitePress fails on a dead internal link --
+# and the scripts add what it does not check: section ids, locale parity, and
+# the integrity of the source ledger. All of it runs before a change reaches
+# main, not after.
 on:
   pull_request:
   workflow_dispatch:
@@ -33,4 +35,12 @@ jobs:
           node-version: 26
           cache: npm
       - run: npm ci
-      - run: npm run docs:build
+
+      - name: Check the sources
+        run: npm run check:sources
+
+      - name: Build
+        run: npm run docs:build
+
+      - name: Check the built site
+        run: npm run check:build

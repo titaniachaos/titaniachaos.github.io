@@ -51,7 +51,9 @@ The workshops welcome anyone ready for an adventure with their own humanity, peo
 
 ## Practical details {#practical-details}
 
-Workshops take place in Vienna and welcome adult beginners as well as people with theatre experience. Ask Titania about upcoming dates or arranging a workshop for your group.
+Workshops take place in Vienna and welcome adult beginners as well as people with theatre experience.
+
+<WorkshopDates />
 
 [Ask about workshops](mailto:agent@tatianapetkova.com?subject=Clown%20workshop%20enquiry){.contact-button}
 

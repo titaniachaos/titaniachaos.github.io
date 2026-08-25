@@ -51,7 +51,9 @@ Die Workshops stehen allen offen, die bereit für ein Abenteuer mit ihrer eigene
 
 ## Praktische Informationen {#practical-details}
 
-Die Workshops finden in Wien statt und heißen sowohl erwachsene Anfängerinnen und Anfänger als auch Menschen mit Theatererfahrung willkommen. Fragen Sie Titania nach kommenden Terminen oder einem Workshop für Ihre Gruppe.
+Die Workshops finden in Wien statt und heißen sowohl erwachsene Anfängerinnen und Anfänger als auch Menschen mit Theatererfahrung willkommen.
+
+<WorkshopDates />
 
 [Workshops anfragen](mailto:agent@tatianapetkova.com?subject=Clown%20workshop%20enquiry){.contact-button}
 

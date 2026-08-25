@@ -160,7 +160,6 @@ export default defineConfig({
           { text: 'Clown Project', link: CLOWN_SITE(''), ...SAME_SITE }
         ],
         outline: { level: [2, 3], label: 'On this page' },
-        docFooter: { prev: 'Previous page', next: 'Next page' },
         footer: {
           message: `Photos by ${PHOTOGRAPHERS}. · <a href="/legal-data">Legal notice &amp; privacy</a>`,
           copyright: '© 2022–2026 Titania Chaos'
@@ -189,7 +188,6 @@ export default defineConfig({
           { text: 'Проект „Клоун“', link: CLOWN_SITE('/bg'), ...SAME_SITE }
         ],
         outline: { level: [2, 3], label: 'На тази страница' },
-        docFooter: { prev: 'Предишна страница', next: 'Следваща страница' },
         footer: {
           message: `Снимки от ${PHOTOGRAPHERS_BG}. · <a href="/bg/legal-data">Правна информация и поверителност</a>`,
           copyright: '© 2022–2026 Титания Хаос'
@@ -197,7 +195,6 @@ export default defineConfig({
         darkModeSwitchLabel: 'Изглед',
         lightModeSwitchTitle: 'Към светлата тема',
         darkModeSwitchTitle: 'Към тъмната тема',
-        sidebarMenuLabel: 'Меню',
         returnToTopLabel: 'Към началото',
         langMenuLabel: 'Смяна на езика',
         skipToContentLabel: 'Към съдържанието',
@@ -224,7 +221,6 @@ export default defineConfig({
           { text: 'Clown-Projekt', link: CLOWN_SITE('/de'), ...SAME_SITE }
         ],
         outline: { level: [2, 3], label: 'Auf dieser Seite' },
-        docFooter: { prev: 'Vorherige Seite', next: 'Nächste Seite' },
         footer: {
           message: `Fotos von ${PHOTOGRAPHERS}. · <a href="/de/legal-data">Impressum &amp; Datenschutz</a>`,
           copyright: '© 2022–2026 Titania Chaos'
@@ -232,7 +228,6 @@ export default defineConfig({
         darkModeSwitchLabel: 'Darstellung',
         lightModeSwitchTitle: 'Zum hellen Design wechseln',
         darkModeSwitchTitle: 'Zum dunklen Design wechseln',
-        sidebarMenuLabel: 'Menü',
         returnToTopLabel: 'Nach oben',
         langMenuLabel: 'Sprache wechseln',
         skipToContentLabel: 'Zum Inhalt springen',

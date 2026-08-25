@@ -74,6 +74,21 @@
 
 .vp-doc li { text-wrap: pretty; }
 
+.teacher-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.35rem 1.5rem;
+  padding-left: 0;
+  list-style: none;
+}
+.vp-doc .teacher-list li { margin-top: 0; }
+.vp-doc .teacher-list a {
+  color: var(--vp-c-text-1);
+  font-weight: 500;
+  text-decoration-color: var(--vp-c-brand-soft);
+}
+.vp-doc .teacher-list a:hover { color: var(--vp-c-brand-1); }
+
 .contact-button {
   display: inline-block;
   margin: 8px 8px 8px 0;

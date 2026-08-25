@@ -1,6 +1,7 @@
 ---
 title: About Titania
-description: Meet Tatiana Petkova, the Vienna-based clown artist and language coach behind Titania Chaos.
+description: Meet Tatiana Petkova, the Vienna-based clown artist, psychologist, polyglot and language teacher behind Titania Chaos.
+outline: [1, 2]
 ---
 # About Titania
 
@@ -8,15 +9,41 @@ description: Meet Tatiana Petkova, the Vienna-based clown artist and language co
 
 > I pursue a passion for contact through humour, languages, poetry and emotion.
 
-Tatiana Petkova, alias **Titania Chaos**, is a Vienna-based clown artist, a polyglot from Bulgaria and an experienced language coach with a background in psychology.
+I am Tatiana Petkova, alias **Titania Chaos** — a Vienna-based clown artist, psychologist, polyglot and language teacher from Bulgaria.
 
-My mission is to move and touch people positively through interaction, teaching and performance. Titania emerged thanks to Hubertus Zorell and Verena Vondrak, my beloved clown parents and co-founders of Austria’s medical-clown movement.
+I work in Bulgarian, German, English, French and Russian.
 
-As Titania Chaos, I perform on the street, at Vienna’s Theater Olé and at birthdays, weddings, corporate gatherings and social events. Sometimes Titania takes playful portraits with my time-travelling camera.
+Titania was born through my work with Hubertus Zorell and Verena Vondrak — my beloved clown parents and co-founders of Austria’s medical-clown movement.
 
-I am deeply interested in social circus, functional juggling and inclusive practices, and have trained with artists and teachers across Europe and the Americas.
+As Titania Chaos, I perform on the street, at Vienna’s [Theater Olé](https://www.theater-ole.at/) and at birthdays, weddings, corporate gatherings, festivals and social events.
+
+Alongside my artistic work, I have taught languages for 25 years. My academic and professional background spans psychology, communication and interpreting, and this experience strongly informs how I facilitate groups and learning processes.
+
+## Artistic practice & training
+
+My practice also draws on social circus, functional juggling and inclusive approaches.
+
+I have had the privilege of learning from artists and teachers including:
+
+- [Norman Taylor](https://www.helikos.org/norman-taylor){.no-icon} (UK)
+- [Hélène Gustin](https://www.colettegomette.com/){.no-icon} (FR)
+- [Laura Fernandez](https://www.das-tut.de/en/about-us/lecturer/laura-fernandez-2460){.no-icon} (USA/DE)
+- [Rodrigo Morganti](https://www.rodrigomorganti.com/){.no-icon} (IT)
+- [Inda Pereda](https://www.indapereda.com/){.no-icon} (ES)
+- [Christoph Schiele](https://christophschiele.com/vita/){.no-icon} (DE/AT)
+- [Patrick van den Boom](https://clownschoolinternational.eu/about-us/){.no-icon} (NL/NO)
+- [Avner Eisenberg](https://www.avnertheeccentric.com/biography.php){.no-icon} (USA)
+- [Barnaby King](https://www.clown-spirit.com/about){.no-icon} (UK/USA)
+- [Jeff Raz](https://www.medicalclownproject.org/who-we-are){.no-icon} (USA)
+- [Misha Usov](https://inside-theatre.com/pages/misha-usov){.no-icon} (RU/USA)
+- Masi Yahya James (USA/AT)
+- [Ira Seidenstein](https://iraseid.com/){.no-icon} (USA/AU)
+- [Lila Monti](https://www.lilamonti.com/?lang=en){.no-icon} (AR)
+{.teacher-list}
 
 ## In the press
+
+Titania Chaos has been featured in Bulgarian television, radio and print media, talking about clowning, laughter and the path that led Tatiana to Titania.
 
 - [Titania Chaos, the Bulgarian clown out in the world](https://bnt.bg/news/titaniya-haos-balgarskata-klounesa-po-sveta-v380538-335213news.html) — BNT, *100% будни*, 18 December 2024. Video.
 - [The clown profession, needed more than ever](https://bnr.bg/horizont/post/101836100/profesiata-kloun-vse-po-neobhodima-dnes) — Bulgarian National Radio, *Хоризонт · Арт зона*, 10 June 2023. Audio.

@@ -1,6 +1,7 @@
 ---
 title: Über Titania
-description: Lernen Sie Tatiana Petkova kennen – die Wiener Clownkünstlerin und Sprachcoachin hinter Titania Chaos.
+description: Lernen Sie Tatiana Petkova kennen – die Wiener Clownkünstlerin, Psychologin, Polyglottin und Sprachlehrerin hinter Titania Chaos.
+outline: [1, 2]
 ---
 # Über Titania
 
@@ -8,15 +9,41 @@ description: Lernen Sie Tatiana Petkova kennen – die Wiener Clownkünstlerin u
 
 > Ich folge einer Leidenschaft für Kontakt durch Humor, Sprachen, Poesie und Emotion.
 
-Tatiana Petkova, alias **Titania Chaos**, ist eine in Wien lebende Clownkünstlerin, Polyglottin aus Bulgarien und erfahrene Sprachcoachin mit einem Hintergrund in Psychologie.
+Ich bin Tatiana Petkova, alias **Titania Chaos** — eine in Wien lebende Clownkünstlerin, Psychologin, Polyglottin und Sprachlehrerin aus Bulgarien.
 
-Meine Mission ist es, Menschen durch Begegnung, Unterricht und Auftritte positiv zu bewegen und zu berühren. Titania entstand dank Hubertus Zorell und Verena Vondrak, meinen geliebten Clown-Eltern und Mitbegründern der österreichischen Klinikclown-Bewegung.
+Ich arbeite auf Bulgarisch, Deutsch, Englisch, Französisch und Russisch.
 
-Als Titania Chaos trete ich auf der Straße auf, im Wiener Theater Olé sowie bei Geburtstagen, Hochzeiten, Firmenfeiern und sozialen Veranstaltungen. Manchmal macht Titania verspielte Porträts mit meiner Zeitreisekamera.
+Titania entstand durch meine Arbeit mit Hubertus Zorell und Verena Vondrak — meinen geliebten Clown-Eltern und Mitbegründern der österreichischen Klinikclown-Bewegung.
 
-Sozialzirkus, funktionales Jonglieren und inklusive Praktiken interessieren mich sehr; ausgebildet habe ich mich bei Künstlerinnen und Lehrern in ganz Europa und Amerika.
+Als Titania Chaos trete ich auf der Straße, im Wiener [Theater Olé](https://www.theater-ole.at/) sowie bei Geburtstagen, Hochzeiten, Firmenfeiern, Festivals und sozialen Veranstaltungen auf.
+
+Neben meiner künstlerischen Arbeit unterrichte ich seit 25 Jahren Sprachen. Mein akademischer und beruflicher Hintergrund umfasst Psychologie, Kommunikation und Dolmetschen, und diese Erfahrung prägt stark, wie ich Gruppen und Lernprozesse begleite.
+
+## Künstlerische Praxis & Ausbildung
+
+Meine Praxis schöpft außerdem aus Sozialzirkus, funktionalem Jonglieren und inklusiven Ansätzen.
+
+Ich hatte das Privileg, unter anderem von folgenden Künstlerinnen, Künstlern und Lehrenden zu lernen:
+
+- [Norman Taylor](https://www.helikos.org/norman-taylor){.no-icon} (UK)
+- [Hélène Gustin](https://www.colettegomette.com/){.no-icon} (FR)
+- [Laura Fernandez](https://www.das-tut.de/en/about-us/lecturer/laura-fernandez-2460){.no-icon} (USA/DE)
+- [Rodrigo Morganti](https://www.rodrigomorganti.com/){.no-icon} (IT)
+- [Inda Pereda](https://www.indapereda.com/){.no-icon} (ES)
+- [Christoph Schiele](https://christophschiele.com/vita/){.no-icon} (DE/AT)
+- [Patrick van den Boom](https://clownschoolinternational.eu/about-us/){.no-icon} (NL/NO)
+- [Avner Eisenberg](https://www.avnertheeccentric.com/biography.php){.no-icon} (USA)
+- [Barnaby King](https://www.clown-spirit.com/about){.no-icon} (UK/USA)
+- [Jeff Raz](https://www.medicalclownproject.org/who-we-are){.no-icon} (USA)
+- [Misha Usov](https://inside-theatre.com/pages/misha-usov){.no-icon} (RU/USA)
+- Masi Yahya James (USA/AT)
+- [Ira Seidenstein](https://iraseid.com/){.no-icon} (USA/AU)
+- [Lila Monti](https://www.lilamonti.com/?lang=en){.no-icon} (AR)
+{.teacher-list}
 
 ## In den Medien
+
+Titania Chaos war im bulgarischen Fernsehen, Radio und in Printmedien zu sehen und zu hören und sprach dort über Clownerie, Lachen und den Weg, der Tatiana zu Titania führte.
 
 - [Titania Chaos – die bulgarische Clownin in der Welt](https://bnt.bg/news/titaniya-haos-balgarskata-klounesa-po-sveta-v380538-335213news.html) — BNT, *100% будни*, 18. Dezember 2024. Video.
 - [Der Beruf des Clowns – nötiger denn je](https://bnr.bg/horizont/post/101836100/profesiata-kloun-vse-po-neobhodima-dnes) — Bulgarischer Nationaler Rundfunk, *Хоризонт · Арт зона*, 10. Juni 2023. Audio.

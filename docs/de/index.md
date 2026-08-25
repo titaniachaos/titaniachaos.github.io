@@ -7,8 +7,10 @@ hero:
   text: Clown-Workshops, Veranstaltungen und Feste
   tagline: "<strong>SEIEN WIR GEMEINSAM MENSCH!</strong><br>Humor und Lachen sind ernste Angelegenheiten, die mit größter Hingabe erforscht und in die Welt getragen werden wollen."
   image:
-    src: /images/titania-chaos.webp
+    src: /images/titania-chaos-hero.webp
     alt: Titania Chaos
+    width: 800
+    height: 992
   actions:
     - theme: brand
       text: An einem Workshop teilnehmen
@@ -53,8 +55,14 @@ Schenken Sie jemandem einen Workshop – oder kommen Sie mit einer Freundin und 
 
 [Schreiben Sie Titania](mailto:agent@tatianapetkova.com){.contact-button}
 
-Lieber eine Vorstellung oder ein spielerisches Fotoerlebnis für Ihre Veranstaltung? [Entdecken Sie die Möglichkeiten der Zusammenarbeit](/de/work-with-titania){.contact-button.secondary}
+Lieber eine Vorstellung oder ein spielerisches Fotoerlebnis für Ihre Veranstaltung? [Entdecken Sie die Möglichkeiten der Zusammenarbeit](/de/work-with-titania){.contact-button .secondary}
 
 ## Mini Art Foundation
 
 Titania freut sich über die Zusammenarbeit mit der Mini Art Foundation. 2024–2025 haben wir Workshops für Clownerie und physische Komik für Erwachsene ohne Vorkenntnisse gestaltet. Parallel zu den Vorbereitungen für das 15. Mini Art Fest – Cirkolution (25.–27. September 2026) wollen wir die entstehende Clown-Szene in Bulgarien weiterentwickeln.
+
+## Kontakt & Unterstützung
+
+Laden Sie Titania zu einer Veranstaltung ein, fragen Sie nach einem Workshop oder unterstützen Sie das unabhängige Clown-Projekt.
+
+[Titania kontaktieren](mailto:agent@tatianapetkova.com){.contact-button} [Über Revolut unterstützen](https://revolut.me/titaniachaos){.contact-button .secondary}

@@ -18,4 +18,4 @@ For ages 5–12, up to 10 children and approximately 2–3 hours: **€290**. [S
 
 > “Titania took a six-year-old party to another level. Her spontaneity worked wonders with the children, and her old-school camera is spellbinding.” — Helena Soares
 
-[Ask about a birthday](/events){.contact-button.secondary}
+[Ask about a birthday](/events){.contact-button .secondary}

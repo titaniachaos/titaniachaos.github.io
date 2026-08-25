@@ -18,4 +18,4 @@ Für 5- bis 12-Jährige, bis zu 10 Kinder und etwa 2–3 Stunden: **€290**. [Z
 
 > „Titania hat die Feier eines sechsjährigen Kindes auf ein ganz anderes Niveau gehoben. Ihre Spontaneität wirkte Wunder bei den Kindern, und ihre altmodische Kamera ist bezaubernd.“ — Helena Soares
 
-[Nach einem Geburtstag fragen](/de/events){.contact-button.secondary}
+[Nach einem Geburtstag fragen](/de/events){.contact-button .secondary}

@@ -22,4 +22,4 @@ Sozialzirkus, funktionales Jonglieren und inklusive Praktiken interessieren mich
 - *Wie Tatiana Petkova zur Clownin Titania Chaos wurde* — 24 Chasa
 - Interviews und Beiträge auf BNT 1 und im Bulgarischen Nationalen Rundfunk
 
-[An einem Workshop teilnehmen](/de/#join-in){.contact-button} [Mit Titania arbeiten](/de/work-with-titania){.contact-button.secondary}
+[An einem Workshop teilnehmen](/de/#join-in){.contact-button} [Mit Titania arbeiten](/de/work-with-titania){.contact-button .secondary}

@@ -22,4 +22,4 @@ I am deeply interested in social circus, functional juggling and inclusive pract
 - *How Tatiana Petkova became the clown Titania Chaos* — 24 Chasa
 - Interviews and features on BNT 1 and Bulgarian National Radio
 
-[Join a workshop](/#join-in){.contact-button} [Work with Titania](/work-with-titania){.contact-button.secondary}
+[Join a workshop](/#join-in){.contact-button} [Work with Titania](/work-with-titania){.contact-button .secondary}

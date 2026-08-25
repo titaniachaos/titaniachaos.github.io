@@ -6,7 +6,10 @@ import './custom.css'
 export default {
   extends: DefaultTheme,
   Layout: () =>
+    // Rendered after the page content rather than in the aside: the aside is
+    // display:none below 1280px, which hid the only support CTA from every
+    // phone, tablet and small laptop.
     h(DefaultTheme.Layout, null, {
-      'aside-ads-before': () => h(SupportCard)
+      'doc-after': () => h(SupportCard)
     })
 }

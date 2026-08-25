@@ -37,16 +37,18 @@ const t = computed(() => COPY[lang.value.split('-')[0] as keyof typeof COPY] ?? 
     <p class="support-card__eyebrow">{{ t.eyebrow }}</p>
     <p id="support-card-title" class="support-card__title">{{ t.title }}</p>
     <p>{{ t.body }}</p>
-    <a class="support-card__action" href="mailto:agent@tatianapetkova.com">
-      {{ t.contact }}
-    </a>
-    <a
-      class="support-card__action support-card__action--secondary"
-      href="https://revolut.me/titaniachaos"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {{ t.support }}
-    </a>
+    <div class="support-card__actions">
+      <a class="support-card__action" href="mailto:agent@tatianapetkova.com">
+        {{ t.contact }}
+      </a>
+      <a
+        class="support-card__action support-card__action--secondary"
+        href="https://revolut.me/titaniachaos"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ t.support }}
+      </a>
+    </div>
   </aside>
 </template>

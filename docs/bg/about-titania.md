@@ -22,4 +22,4 @@ description: Запознайте се с Татяна Петкова – вие
 - *Как Татяна Петкова стана клоунесата Титания Хаос* — 24 часа
 - Интервюта и репортажи по БНТ 1 и Българското национално радио
 
-[Включете се в работилница](/bg/#join-in){.contact-button} [Работа с Титания](/bg/work-with-titania){.contact-button.secondary}
+[Включете се в работилница](/bg/#join-in){.contact-button} [Работа с Титания](/bg/work-with-titania){.contact-button .secondary}

@@ -30,18 +30,23 @@ export const LOCALES: LocaleMeta[] = [
 
 /** Real intrinsic sizes; Open Graph consumers reject mismatched dimensions. */
 const IMAGES = {
+  // Social cards are cropped to roughly 1.91:1 by every platform that renders
+  // them, so the sharing image is a real landscape crop rather than the
+  // portrait, which arrived on X and LinkedIn as a band across the middle.
+  'titania-chaos-card.jpg': { w: 1200, h: 630, alt: 'Titania Chaos' },
   'titania-chaos.webp': { w: 1452, h: 1800, alt: 'Titania Chaos' },
+  'titania-chaos-hero.webp': { w: 800, h: 992, alt: 'Titania Chaos' },
   'titania-portrait.jpg': { w: 384, h: 684, alt: 'Tatiana Petkova as Titania Chaos' },
   'time-travelling-camera.jpg': { w: 768, h: 768, alt: "Titania's time-travelling camera" }
 } as const
 
 /** Per-page social image, keyed by the locale-stripped slug. */
 const PAGE_IMAGE: Record<string, keyof typeof IMAGES> = {
-  '/': 'titania-chaos.webp',
-  '/about-titania': 'titania-portrait.jpg',
+  '/': 'titania-chaos-card.jpg',
+  '/about-titania': 'titania-chaos-card.jpg',
   '/work-with-titania': 'time-travelling-camera.jpg',
-  '/events': 'titania-chaos.webp',
-  '/legal-data': 'titania-chaos.webp'
+  '/events': 'titania-chaos-card.jpg',
+  '/legal-data': 'titania-chaos-card.jpg'
 }
 
 /** `index.md` -> `/`, `bg/events.md` -> `/bg/events` (cleanUrls is on). */
@@ -178,7 +183,7 @@ export function buildHead(ctx: TransformContext, siteConfig: SiteConfig): HeadCo
   const canonical = `${HOSTNAME}${urlPath}`
   const alternates = existingAlternates(slug, siteConfig.pages)
 
-  const imageKey = PAGE_IMAGE[slug] ?? 'titania-chaos.webp'
+  const imageKey = PAGE_IMAGE[slug] ?? 'titania-chaos-card.jpg'
   const image = IMAGES[imageKey]
   const imageUrl = `${HOSTNAME}/images/${imageKey}`
 

@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useData } from 'vitepress'
 import { data } from '../workshops.data'
 import type { Lang } from '../workshops.data'
+import { useLang } from './useLang.ts'
 
 /**
  * The announced dates, or an honest empty state.
@@ -15,12 +16,7 @@ import type { Lang } from '../workshops.data'
  * and a price is exactly what that markup is for.
  */
 
-const { lang: pageLang } = useData()
-
-const lang = computed<Lang>(() => {
-  const base = pageLang.value.split('-')[0]
-  return base === 'bg' || base === 'de' ? base : 'en'
-})
+const { lang, dateTag } = useLang()
 
 const ui = computed(() => data.ui[lang.value])
 
@@ -34,7 +30,7 @@ const upcoming = computed(() => {
  * formatting: "March 6, 2027, 03:00 PM" against "Saturday 6 March 2027,
  * 15:00". German and Bulgarian are already 24-hour and need no help.
  */
-const formatLocale = computed(() => (pageLang.value.split('-')[0] === 'en' ? 'en-GB' : pageLang.value))
+const formatLocale = dateTag
 
 const dateFormat = computed(
   () =>

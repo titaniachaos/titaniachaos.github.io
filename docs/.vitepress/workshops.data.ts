@@ -16,7 +16,8 @@ import { defineLoader } from 'vitepress'
  * without a rebuild.
  */
 
-export type Lang = 'en' | 'bg' | 'de'
+export type { Lang } from './locale.ts'
+import type { Lang } from './locale.ts'
 
 export interface Workshop {
   /** Stable id, used as the anchor and the schema.org identifier. */

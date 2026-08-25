@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useData } from 'vitepress'
+import { useLang } from './useLang.ts'
 
-const { lang } = useData()
+const { lang } = useLang()
 
 const COPY = {
   en: {
@@ -29,7 +29,7 @@ const COPY = {
 } as const
 
 // `lang` carries region subtags such as `de-AT`; match on the base language.
-const t = computed(() => COPY[lang.value.split('-')[0] as keyof typeof COPY] ?? COPY.en)
+const t = computed(() => COPY[lang.value] ?? COPY.en)
 </script>
 
 <template>

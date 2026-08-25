@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { useData } from 'vitepress'
+import { useLang } from './useLang.ts'
+import type { Lang } from '../locale.ts'
 
 /**
  * A YouTube video that contacts YouTube only when someone asks for it.
@@ -18,13 +19,7 @@ import { useData } from 'vitepress'
 
 const props = defineProps<{ id: string; thumb: string; title: string }>()
 const playing = ref(false)
-const { lang } = useData()
-
-type Lang = 'en' | 'bg' | 'de'
-const l = computed<Lang>(() => {
-  const base = lang.value.split('-')[0]
-  return (['en', 'bg', 'de'] as const).includes(base as Lang) ? (base as Lang) : 'en'
-})
+const { lang: l } = useLang()
 
 const COPY: Record<Lang, { play: string; note: string }> = {
   en: { play: 'Play', note: 'Loads from YouTube when you press play' },

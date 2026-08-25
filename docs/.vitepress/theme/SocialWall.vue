@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, ref, onMounted, onUnmounted, nextTick } from 'vue'
-import { useData } from 'vitepress'
 import { data } from '../social.data'
-import type { Lang, Post } from '../social.data'
+import type { Post } from '../social.data'
+import { useLang } from './useLang.ts'
 
 /**
  * The social wall.
@@ -17,11 +17,8 @@ import type { Lang, Post } from '../social.data'
  * site can show a feed without a consent banner.
  */
 
-const { localeIndex } = useData()
+const { lang, dateTag } = useLang()
 
-const lang = computed<Lang>(() =>
-  localeIndex.value === 'bg' ? 'bg' : localeIndex.value === 'de' ? 'de' : 'en'
-)
 const ui = computed(() => data.ui[lang.value])
 const posts = computed(() => data.posts)
 
@@ -61,10 +58,9 @@ onMounted(() => window.addEventListener('keydown', onKey))
 onUnmounted(() => window.removeEventListener('keydown', onKey))
 
 const dateOf = (p: Post) =>
-  new Date(p.timestamp).toLocaleDateString(
-    lang.value === 'bg' ? 'bg-BG' : lang.value === 'de' ? 'de-AT' : 'en-GB',
-    { year: 'numeric', month: 'long', day: 'numeric' }
-  )
+  new Date(p.timestamp).toLocaleDateString(dateTag.value, {
+    year: 'numeric', month: 'long', day: 'numeric'
+  })
 </script>
 
 <template>

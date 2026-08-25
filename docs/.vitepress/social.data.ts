@@ -11,7 +11,8 @@ import { defineLoader } from 'vitepress'
  * renders nothing, which is what a fork and a first checkout need.
  */
 
-export type Lang = 'en' | 'bg' | 'de'
+export type { Lang } from './locale.ts'
+import type { Lang } from './locale.ts'
 
 export interface Post {
   id: string

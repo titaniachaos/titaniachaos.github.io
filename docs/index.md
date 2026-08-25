@@ -57,10 +57,6 @@ Give someone a workshop—or come with a friend and share moments of lightness a
 
 Prefer a performance or a playful photo experience for your event? [Explore ways to work with Titania](/work-with-titania){.contact-button .secondary}
 
-## Mini Art Foundation
-
-Titania is thrilled to cooperate with Mini Art Foundation. In 2024–2025 we presented clown and physical-comedy workshops for adult beginners. Alongside preparations for the 15th Mini Art Fest – Cirkolution (25–27 September 2026), we aim to develop Bulgaria’s emerging clown community.
-
 ## Contact & support
 
 Invite Titania to an event, ask about a workshop, or support the independent clown project.

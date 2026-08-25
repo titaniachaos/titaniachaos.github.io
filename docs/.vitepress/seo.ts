@@ -90,6 +90,41 @@ const PERSON_ID = `${HOSTNAME}/#titania`
 const WEBSITE_ID = `${HOSTNAME}/#website`
 
 /**
+ * Press coverage, verified against the outlets' own pages. Carried as
+ * `subjectOf` on the About page, where the same four items are listed in prose.
+ */
+const PRESS = [
+  {
+    '@type': 'VideoObject',
+    name: 'Титания Хаос – българската клоунеса по света',
+    url: 'https://bnt.bg/news/titaniya-haos-balgarskata-klounesa-po-sveta-v380538-335213news.html',
+    datePublished: '2024-12-18',
+    publisher: { '@type': 'Organization', name: 'Българска национална телевизия' }
+  },
+  {
+    '@type': 'AudioObject',
+    name: 'Професията клоун – все по-необходима днес',
+    url: 'https://bnr.bg/horizont/post/101836100/profesiata-kloun-vse-po-neobhodima-dnes',
+    datePublished: '2023-06-10',
+    publisher: { '@type': 'Organization', name: 'Българско национално радио' }
+  },
+  {
+    '@type': 'NewsArticle',
+    name: 'Как полиглотът Татяна Петкова стана клоунът Титания Хаос',
+    url: 'https://www.24chasa.bg/ozhivlenie/article/12927305',
+    datePublished: '2022-11-03',
+    publisher: { '@type': 'Organization', name: '24 часа' }
+  },
+  {
+    '@type': 'Article',
+    name: 'Татяна Петкова: Смехът е свобода',
+    url: 'https://www.bulgaren.org/2022/10/20/%D1%82%D0%B0%D1%82%D1%8F%D0%BD%D0%B0-%D0%BF%D0%B5%D1%82%D0%BA%D0%BE%D0%B2%D0%B0-%D1%81%D0%BC%D0%B5%D1%85%D1%8A%D1%82-%D0%B5-%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0/',
+    datePublished: '2022-10-20',
+    publisher: { '@type': 'Organization', name: 'Меланж' }
+  }
+] as const
+
+/**
  * The postal address is the § 5 ECG Impressum datum. It is carried by the
  * legal notice page -- which states it in prose in every locale -- and not
  * repeated in the structured data of every other page.
@@ -107,6 +142,7 @@ function personNode(slug: string) {
     url: `${HOSTNAME}/`,
     image: `${HOSTNAME}/images/titania-portrait.jpg`,
     knowsLanguage: ['en', 'de', 'fr', 'ru', 'bg'],
+    ...(slug === '/about-titania' ? { subjectOf: PRESS } : {}),
     ...(slug === '/legal-data'
       ? {
           address: {

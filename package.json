@@ -12,7 +12,8 @@
     "check:sources": "node scripts/check-locales.mjs",
     "check:build": "node scripts/check-build.mjs",
     "check:links": "node scripts/check-external.mjs",
-    "check": "npm run check:sources && npm run docs:build && npm run check:build"
+    "check": "npm run check:sources && npm run docs:build && npm run check:build",
+    "prepare": "node scripts/install-hooks.mjs"
   },
   "devDependencies": {
     "vitepress": "2.0.0-alpha.19"

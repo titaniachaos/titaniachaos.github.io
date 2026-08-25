@@ -1,0 +1,28 @@
+#!/bin/sh
+# Run the same checks CI runs, so a state CI would reject cannot be committed.
+#
+# Scope: this validates the WORKING TREE, not the staged snapshot. Staging a
+# subset of your edits can therefore pass on the strength of files you have
+# not staged. That is the usual trade: checking the true staged state means
+# stashing mid-commit, which risks the work itself.
+#
+# Bypass once with:  git commit --no-verify
+set -e
+
+root=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
+cd "$root"
+
+# Nothing that can affect the build is staged -- a README or a workflow edit
+# cannot break locale parity or an anchor, so do not spend the seconds.
+if ! git diff --cached --name-only --diff-filter=ACMR \
+   | grep -qE '^(docs/|scripts/|package(-lock)?\.json$)'; then
+  exit 0
+fi
+
+if [ ! -d node_modules ]; then
+  echo "pre-commit: node_modules is missing -- run 'npm ci' to enable the checks." >&2
+  exit 0
+fi
+
+echo "pre-commit: npm run check"
+npm run --silent check

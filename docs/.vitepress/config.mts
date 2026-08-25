@@ -36,6 +36,12 @@ export default defineConfig({
   description: 'Clown workshops, physical comedy, events and parties in Vienna.',
   cleanUrls: true,
 
+  // Stated rather than left to the default, so nobody reaches for it to
+  // make a red build green. It covers links to pages; fragments are not
+  // checked by VitePress at all, which is what scripts/check-build.mjs is
+  // for -- this site navigates almost entirely by written section ids.
+  ignoreDeadLinks: false,
+
   markdown: {
     // `markdown.externalLinks` is global, and the two sites share a host: a
     // link between them is a same-site navigation, while a genuinely external

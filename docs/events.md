@@ -1,5 +1,5 @@
 ---
-title: Children's birthday parties with Titania Chaos
+title: Children's clown birthday parties in Vienna
 description: Playful children's birthday parties in Vienna with circus games, costumes and Titania Chaos' magical time-travelling camera.
 ---
 # Birthdays with Titania Chaos
@@ -12,11 +12,11 @@ Birthday parties for children aged **5 to 12** — with play, imagination, costu
 
 ## How does a party work?
 
-I arrive about 30 minutes before we begin. Then we get to know each other, play, and step together into the atmosphere of the day. After a cake break, the great dressing-up and photo shoot starts. Every child receives a printed photo, and group pictures are available on request.
+I arrive about 30 minutes before we begin. Then we get to know each other and ease into the celebration through play. After a cake break, the great dressing-up and photo shoot starts. Every child receives a printed photo, and group pictures are available on request.
 
 ## Social circus
 
-My games come from social circus. We juggle, invent characters and play with balance and body language — with lightness, humour and room for every child. It builds empathy, communication, body awareness and self-confidence.
+My games come from social circus. We juggle, invent characters and play with balance and body language — with lightness, humour and room for every child. The activities can encourage empathy, communication, body awareness and self-confidence.
 
 ## What I bring
 

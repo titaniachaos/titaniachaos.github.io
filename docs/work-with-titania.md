@@ -1,21 +1,57 @@
 ---
-title: Work with Titania
-description: Book Titania Chaos for weddings, company parties, festivals, family events and playful portraits with her time-travelling camera.
+title: Clown performer for events in Vienna
+description: Book Vienna-based clown performer Titania Chaos for weddings, company parties, festivals, family events and playful portraits with her time-travelling camera.
 ---
-# Titania Chaos and her time-travelling camera
+# Work with Titania
+
+Titania Chaos can be invited to perform, facilitate, teach, play — or simply bring a little constructive disorder into a room.
+
+Her work moves between clowning, physical comedy, workshops, events, education and social settings. Sometimes the clown is at the centre. Sometimes play is a way of helping a group connect, communicate or look at something differently.
+
+## Perform & play
+
+Titania can appear at festivals, weddings, corporate events, street events and other gatherings — as a clown performer, a playful intervention or with her time-travelling camera.
+
+### Titania Chaos and her time-travelling camera
 
 ![Titania's time-travelling camera](/images/time-travelling-camera.jpg)
 
-Equipped with an old-fashioned camera able to travel in time, Titania dresses willing photo models and creates a picture for them to take home immediately.
+A portable photographic time machine, somewhere between street theatre, performance and an old-fashioned photo studio.
 
-Titania’s photo booth is ideal for weddings, corporate parties, street festivals, children’s and family events, and festivities at social centres. For a quote, send the date, duration, location, event type, expected guest count and accessibility needs. Titania speaks **English, German, French, Russian, Bulgarian and Gibberish**.
+Guests choose costumes and props, enter Titania's improvised world and leave with a photograph from another possible century or dimension.
 
-[Mail Titania](mailto:agent@tatianapetkova.com?subject=Event%20with%20Titania){.contact-button}
+The camera works particularly well at birthday parties, weddings, company events, festivals and public celebrations.
 
-## Children’s birthday parties
+## Workshops & team building
 
-For ages 5–12, up to 10 children and approximately 2–3 hours: **€290**. [See the full birthday package](/events).
+Titania offers clown and physical comedy workshops for people with or without previous performance experience.
 
-> “Titania took a six-year-old party to another level. Her spontaneity worked wonders with the children, and her old-school camera is spellbinding.” — Helena Soares
+The work is based on play, presence, communication, failure, curiosity and contact with others.
 
-[Ask about a birthday](/events){.contact-button .secondary}
+Workshops can also be developed for teams and organisations looking for a different way to meet, play and work together.
+
+[Explore workshops](/#practical-details){.contact-button}
+
+## Learning & facilitation
+
+Titania is also an experienced facilitator and language teacher with 25 years of teaching experience.
+
+This background informs her work with groups: how people learn, communicate, take risks, make mistakes and find their own way into an exercise.
+
+Clowning, play and physical work can therefore also enter educational contexts — particularly where communication, group dynamics, language, creativity or learning are part of the question.
+
+## Children & communities
+
+Titania works with children, families and community settings through clowning, play and social circus.
+
+For children's birthdays, there is a dedicated programme combining games, costumes, circus elements and the time-travelling camera.
+
+[Children's birthdays](/events){.contact-button .secondary}
+
+## Invite Titania
+
+If you have an event, team, class, group or context in mind and are not sure which format fits, get in touch.
+
+Not everything needs to begin with a ready-made package.
+
+[Contact Titania](mailto:agent@tatianapetkova.com?subject=Work%20with%20Titania){.contact-button}

@@ -1,11 +1,11 @@
 ---
 layout: home
-title: Clown workshops and physical comedy
+title: Clown workshops and physical comedy in Vienna
 description: Discover clown workshops, physical comedy, playful events and creative experiences with Vienna-based artist Titania Chaos.
 hero:
   name: Titania Chaos
-  text: Clown workshops, events and parties
-  tagline: "<strong>LET'S BE HUMAN TOGETHER!</strong><br>Humour and laughter are serious matters that need to be examined and spread around the world with utmost dedication."
+  text: Clown workshops, performances and parties in Vienna
+  tagline: "<strong>LET'S BE HUMAN TOGETHER!</strong><br>Humour and laughter are serious matters that need to be examined and spread around the world with utmost dedication.<br><small>Titania Chaos is a professional clown, workshop facilitator and bookable performer based in Vienna.</small>"
   image:
     src: /images/titania-chaos-hero.webp
     alt: Titania Chaos
@@ -13,8 +13,8 @@ hero:
     height: 992
   actions:
     - theme: brand
-      text: Join a workshop
-      link: '#join-in'
+      text: Ask about workshops
+      link: 'mailto:agent@tatianapetkova.com?subject=Clown%20workshop%20enquiry'
     - theme: alt
       text: Work with Titania
       link: /work-with-titania
@@ -37,7 +37,7 @@ features:
 
 ## Who the workshops are for
 
-You might be an IT specialist, teacher, lawyer, social worker, nurse, translator, cook, dancer, librarian, musician, firefighter, doctor, shop owner, artist or hairdresser. You are someone who wants to discover more about yourself and have fun doing so.
+You do not need a theatre background or previous clown experience. You might work in an office, a school, a hospital, a kitchen or on a stage—or simply want to discover more about yourself and have fun doing so.
 
 The workshops welcome anyone ready for an adventure with their own humanity, people seeking joyful release from everyday life, theatre enthusiasts, clown beginners and introverts who want to perform in a safe, playful setting.
 
@@ -47,7 +47,13 @@ The workshops welcome anyone ready for an adventure with their own humanity, peo
 - Insights into clowning and humour
 - Techniques for finding the comedy in a situation
 - Body work and pantomime inspired by Jacques Lecoq, Marcel Marceau and Charlie Chaplin
-- Improvisation that helps you explore your own clown figure
+- Improvisation that helps you explore your own clown persona
+
+## Practical details {#practical-details}
+
+Workshops take place in Vienna and welcome adult beginners as well as people with theatre experience. Ask Titania about upcoming dates or arranging a workshop for your group.
+
+[Ask about workshops](mailto:agent@tatianapetkova.com?subject=Clown%20workshop%20enquiry){.contact-button}
 
 ## Give a clown workshop as a gift {#join-in}
 
@@ -57,8 +63,8 @@ Give someone a workshop—or come with a friend and share moments of lightness a
 
 Prefer a performance or a playful photo experience for your event? [Explore ways to work with Titania](/work-with-titania){.contact-button .secondary}
 
-## Contact & support
+## Bookings & enquiries
 
-Invite Titania to an event, ask about a workshop, or support the independent clown project.
+Invite Titania to an event or ask about a workshop, performance or playful photo experience.
 
-[Contact Titania](mailto:agent@tatianapetkova.com){.contact-button} [Support via Revolut](https://revolut.me/titaniachaos){.contact-button .secondary}
+[Contact Titania](mailto:agent@tatianapetkova.com){.contact-button}

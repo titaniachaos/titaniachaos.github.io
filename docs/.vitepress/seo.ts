@@ -134,7 +134,7 @@ function personNode(slug: string) {
     '@id': PERSON_ID,
     name: 'Tatiana Petkova',
     alternateName: 'Titania Chaos',
-    jobTitle: 'Clown, psychologist and language coach',
+    jobTitle: 'Clown artist and language coach',
     description:
       'Vienna-based clown artist offering clown workshops, physical comedy, performances and playful photo experiences.',
     email: 'agent@tatianapetkova.com',

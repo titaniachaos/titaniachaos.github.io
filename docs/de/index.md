@@ -1,11 +1,11 @@
 ---
 layout: home
-title: Clown-Workshops und physische Komik
+title: Clown-Workshops und physische Komik in Wien
 description: Entdecken Sie Clown-Workshops, physische Komik, spielerische Veranstaltungen und kreative Erfahrungen mit der Wiener Künstlerin Titania Chaos.
 hero:
   name: Titania Chaos
-  text: Clown-Workshops, Veranstaltungen und Feste
-  tagline: "<strong>SEIEN WIR GEMEINSAM MENSCH!</strong><br>Humor und Lachen sind ernste Angelegenheiten, die mit größter Hingabe erforscht und in die Welt getragen werden wollen."
+  text: Clown-Workshops, Performances und Feste in Wien
+  tagline: "<strong>SEIEN WIR GEMEINSAM MENSCH!</strong><br>Humor und Lachen sind ernste Angelegenheiten, die mit größter Hingabe erforscht und in die Welt getragen werden wollen.<br><small>Titania Chaos ist eine professionelle Clownin, Workshop-Leiterin und buchbare Performerin mit Sitz in Wien.</small>"
   image:
     src: /images/titania-chaos-hero.webp
     alt: Titania Chaos
@@ -13,8 +13,8 @@ hero:
     height: 992
   actions:
     - theme: brand
-      text: An einem Workshop teilnehmen
-      link: '#join-in'
+      text: Workshops anfragen
+      link: 'mailto:agent@tatianapetkova.com?subject=Clown%20workshop%20enquiry'
     - theme: alt
       text: Mit Titania arbeiten
       link: /de/work-with-titania
@@ -49,6 +49,12 @@ Die Workshops stehen allen offen, die bereit für ein Abenteuer mit ihrer eigene
 - Körperarbeit und Pantomime, inspiriert von Jacques Lecoq, Marcel Marceau und Charlie Chaplin
 - Improvisation, die Ihnen hilft, Ihre eigene Clownfigur zu erkunden
 
+## Praktische Informationen {#practical-details}
+
+Die Workshops finden in Wien statt und heißen sowohl erwachsene Anfängerinnen und Anfänger als auch Menschen mit Theatererfahrung willkommen. Fragen Sie Titania nach kommenden Terminen oder einem Workshop für Ihre Gruppe.
+
+[Workshops anfragen](mailto:agent@tatianapetkova.com?subject=Clown%20workshop%20enquiry){.contact-button}
+
 ## Einen Clown-Workshop verschenken {#join-in}
 
 Schenken Sie jemandem einen Workshop – oder kommen Sie mit einer Freundin und teilen Sie Momente der Leichtigkeit und Freude.
@@ -57,8 +63,8 @@ Schenken Sie jemandem einen Workshop – oder kommen Sie mit einer Freundin und 
 
 Lieber eine Vorstellung oder ein spielerisches Fotoerlebnis für Ihre Veranstaltung? [Entdecken Sie die Möglichkeiten der Zusammenarbeit](/de/work-with-titania){.contact-button .secondary}
 
-## Kontakt & Unterstützung
+## Buchungen & Anfragen
 
-Laden Sie Titania zu einer Veranstaltung ein, fragen Sie nach einem Workshop oder unterstützen Sie das unabhängige Clown-Projekt.
+Laden Sie Titania zu einer Veranstaltung ein oder fragen Sie nach einem Workshop, einer Performance oder einem spielerischen Fotoerlebnis.
 
-[Titania kontaktieren](mailto:agent@tatianapetkova.com){.contact-button} [Über Revolut unterstützen](https://revolut.me/titaniachaos){.contact-button .secondary}
+[Titania kontaktieren](mailto:agent@tatianapetkova.com){.contact-button}

@@ -1,5 +1,5 @@
 ---
-title: Kindergeburtstag mit Titania Chaos
+title: Kinder-Clowngeburtstage in Wien
 description: Spielerische Kindergeburtstage in Wien mit Zirkusspielen, Kostümen und Titania Chaos' magischer Zeitreisekamera.
 ---
 # Geburtstag mit Titania Chaos
@@ -12,11 +12,11 @@ Geburtstagsfeiern für Kinder von **5 bis 12 Jahren** – mit Spiel, Fantasie, K
 
 ## Wie läuft eine Feier ab?
 
-Ich komme etwa 30 Minuten vor Beginn. Dann lernen wir uns kennen, spielen und tauchen gemeinsam in die Atmosphäre des Tages ein. Nach einer Kuchenpause beginnt das große Verkleiden und Fotoshooting. Jedes Kind bekommt ein gedrucktes Foto; auf Wunsch gibt es auch Gruppenbilder.
+Ich komme etwa 30 Minuten vor Beginn. Dann lernen wir uns kennen und finden spielerisch in die Feier hinein. Nach einer Kuchenpause beginnt das große Verkleiden und Fotoshooting. Jedes Kind bekommt ein gedrucktes Foto; auf Wunsch gibt es auch Gruppenbilder.
 
 ## Sozialer Zirkus
 
-Meine Spiele stammen aus dem sozialen Zirkus. Wir jonglieren, erfinden Figuren und spielen mit Balance und Körpersprache – mit Leichtigkeit, Humor und Raum für jedes Kind. Das fördert Empathie, Kommunikation, Körperbewusstsein und Selbstvertrauen.
+Meine Spiele stammen aus dem sozialen Zirkus. Wir jonglieren, erfinden Figuren und spielen mit Balance und Körpersprache – mit Leichtigkeit, Humor und Raum für jedes Kind. Die Aktivitäten können Empathie, Kommunikation, Körperbewusstsein und Selbstvertrauen fördern.
 
 ## Was ich mitbringe
 

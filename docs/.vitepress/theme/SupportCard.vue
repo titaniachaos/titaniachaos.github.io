@@ -7,22 +7,22 @@ const { lang } = useData()
 const COPY = {
   en: {
     eyebrow: 'Keep the play moving',
-    title: 'Contact & support',
-    body: 'Invite Titania to an event, ask about a workshop, or support the independent clown project.',
+    title: 'Bookings & enquiries',
+    body: 'Invite Titania to an event or ask about a workshop, performance or playful photo experience.',
     contact: 'Contact Titania',
     support: 'Support via Revolut'
   },
   bg: {
     eyebrow: 'Нека играта продължи',
-    title: 'Контакт и подкрепа',
-    body: 'Поканете Титания на събитие, попитайте за работилница или подкрепете независимия клоунски проект.',
+    title: 'Резервации и запитвания',
+    body: 'Поканете Титания на събитие или попитайте за работилница, представление или забавно фотопреживяване.',
     contact: 'Пишете на Титания',
     support: 'Подкрепа през Revolut'
   },
   de: {
     eyebrow: 'Das Spiel am Laufen halten',
-    title: 'Kontakt & Unterstützung',
-    body: 'Laden Sie Titania zu einer Veranstaltung ein, fragen Sie nach einem Workshop oder unterstützen Sie das unabhängige Clown-Projekt.',
+    title: 'Buchungen & Anfragen',
+    body: 'Laden Sie Titania zu einer Veranstaltung ein oder fragen Sie nach einem Workshop, einer Performance oder einem spielerischen Fotoerlebnis.',
     contact: 'Titania kontaktieren',
     support: 'Über Revolut unterstützen'
   }

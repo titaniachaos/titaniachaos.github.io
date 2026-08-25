@@ -1,21 +1,57 @@
 ---
-title: Mit Titania arbeiten
-description: Buchen Sie Titania Chaos für Hochzeiten, Firmenfeiern, Festivals, Familienfeste und verspielte Porträts mit ihrer Zeitreisekamera.
+title: Clown-Performerin für Veranstaltungen in Wien
+description: Buchen Sie die Wiener Clown-Performerin Titania Chaos für Hochzeiten, Firmenfeiern, Festivals, Familienfeste und verspielte Porträts mit ihrer Zeitreisekamera.
 ---
-# Titania Chaos und ihre Zeitreisekamera
+# Mit Titania arbeiten
+
+Titania Chaos kann eingeladen werden, aufzutreten, anzuleiten, zu unterrichten, zu spielen — oder einfach ein wenig konstruktive Unordnung in einen Raum zu bringen.
+
+Ihre Arbeit bewegt sich zwischen Clownerie, physischer Komik, Workshops, Veranstaltungen, Bildung und sozialen Kontexten. Manchmal steht der Clown im Mittelpunkt. Manchmal hilft das Spiel einer Gruppe, sich zu verbinden, zu kommunizieren oder etwas anders zu betrachten.
+
+## Auftreten & spielen
+
+Titania kann bei Festivals, Hochzeiten, Firmenveranstaltungen, Straßenfesten und anderen Zusammenkünften auftreten — als Clown-Performerin, spielerische Intervention oder mit ihrer Zeitreisekamera.
+
+### Titania Chaos und ihre Zeitreisekamera
 
 ![Titanias Zeitreisekamera](/images/time-travelling-camera.jpg)
 
-Ausgestattet mit einer altmodischen Kamera, die durch die Zeit reisen kann, kostümiert Titania ihre Fotomodelle und schafft ein Bild, das sie sofort mit nach Hause nehmen können.
+Eine tragbare fotografische Zeitmaschine, irgendwo zwischen Straßentheater, Performance und einem altmodischen Fotostudio.
 
-Titanias Fotobox eignet sich ideal für Hochzeiten, Firmenfeiern, Straßenfeste, Kinder- und Familienveranstaltungen sowie Feste in sozialen Einrichtungen. Für ein Angebot senden Sie bitte Datum, Dauer, Ort, Art der Veranstaltung, erwartete Gästezahl und Anforderungen an die Barrierefreiheit. Titania spricht **Englisch, Deutsch, Französisch, Russisch, Bulgarisch und Kauderwelsch**.
+Die Gäste wählen Kostüme und Requisiten, betreten Titanias improvisierte Welt und gehen mit einem Foto aus einem anderen möglichen Jahrhundert oder einer anderen Dimension nach Hause.
 
-[Schreiben Sie Titania](mailto:agent@tatianapetkova.com?subject=Event%20with%20Titania){.contact-button}
+Die Kamera eignet sich besonders gut für Geburtstagsfeiern, Hochzeiten, Firmenveranstaltungen, Festivals und öffentliche Feste.
 
-## Kindergeburtstage
+## Workshops & Teambuilding
 
-Für 5- bis 12-Jährige, bis zu 10 Kinder und etwa 2–3 Stunden: **€290**. [Zum vollständigen Geburtstagspaket](/de/events).
+Titania bietet Clown- und Physical-Comedy-Workshops für Menschen mit oder ohne vorherige Bühnenerfahrung an.
 
-> „Titania hat die Feier eines sechsjährigen Kindes auf ein ganz anderes Niveau gehoben. Ihre Spontaneität wirkte Wunder bei den Kindern, und ihre altmodische Kamera ist bezaubernd.“ — Helena Soares
+Die Arbeit basiert auf Spiel, Präsenz, Kommunikation, Scheitern, Neugier und Kontakt mit anderen.
 
-[Nach einem Geburtstag fragen](/de/events){.contact-button .secondary}
+Workshops können auch für Teams und Organisationen entwickelt werden, die eine andere Art suchen, einander zu begegnen, zu spielen und zusammenzuarbeiten.
+
+[Workshops entdecken](/de/#practical-details){.contact-button}
+
+## Lernen & Facilitation
+
+Titania ist außerdem eine erfahrene Facilitatorin und Sprachlehrerin mit 25 Jahren Unterrichtserfahrung.
+
+Dieser Hintergrund prägt ihre Arbeit mit Gruppen: wie Menschen lernen, kommunizieren, Risiken eingehen, Fehler machen und ihren eigenen Weg in eine Übung finden.
+
+Clownerie, Spiel und körperliche Arbeit können daher auch in Bildungskontexte einfließen — insbesondere dort, wo Kommunikation, Gruppendynamik, Sprache, Kreativität oder Lernen Teil der Fragestellung sind.
+
+## Kinder & Gemeinschaften
+
+Titania arbeitet mit Kindern, Familien und Gemeinschaften durch Clownerie, Spiel und sozialen Zirkus.
+
+Für Kindergeburtstage gibt es ein eigenes Programm, das Spiele, Kostüme, Zirkuselemente und die Zeitreisekamera verbindet.
+
+[Kindergeburtstage](/de/events){.contact-button .secondary}
+
+## Titania einladen
+
+Wenn Sie eine Veranstaltung, ein Team, eine Klasse, eine Gruppe oder einen Kontext im Sinn haben und nicht sicher sind, welches Format passt, melden Sie sich.
+
+Nicht alles muss mit einem fertigen Paket beginnen.
+
+[Titania kontaktieren](mailto:agent@tatianapetkova.com?subject=Work%20with%20Titania){.contact-button}

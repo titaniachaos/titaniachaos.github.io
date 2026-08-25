@@ -27,7 +27,7 @@ not `/events/`. Only locale roots are directory URLs (`/bg/`, `/de/`).
 ## Checks
 
 ```sh
-npm run check        # locale parity, build, section ids, alt text
+npm run check        # locale parity, build, section ids, alt text, images
 npm run check:links  # every outward link still resolves (network)
 ```
 
@@ -41,6 +41,7 @@ part of this site most likely to rot.
 | `check-locales.mjs` | a missing translation; heading structures that have drifted apart; a page that is half-translated |
 | `check-build.mjs` | a dead `#anchor`, which VitePress does not check; images without alt text; duplicate ids |
 | `check-external.mjs` | link rot, told apart from a host refusing an automated request or serving an incomplete certificate chain — only the first fails the job |
+| `check-images.mjs` | an image over the weight budget, pixel dimensions far past any slot on the page, a picture that costs too many bytes per pixel, and — the one no diff shows — `seo.ts` declaring dimensions the file does not have, which is what a social platform reads before it fetches anything. Unreferenced images are reported, not failed: a file may be linked from somewhere this repository cannot see |
 
 ## SEO
 

@@ -7,6 +7,7 @@ import MediaHero from './MediaHero.vue'
 import MediaFigure from './MediaFigure.vue'
 import MediaCategory from './MediaCategory.vue'
 import MediaIndex from './MediaIndex.vue'
+import JournalIndex from './JournalIndex.vue'
 import './custom.css'
 
 export default {
@@ -18,6 +19,7 @@ export default {
     app.component('MediaFigure', MediaFigure)
     app.component('MediaCategory', MediaCategory)
     app.component('MediaIndex', MediaIndex)
+    app.component('JournalIndex', JournalIndex)
   },
   Layout: () =>
     // The sponsorship card fills the slot the default theme reserves for Carbon

@@ -76,6 +76,16 @@ export interface Frame {
    * `object-position`, so the crop is the same shape whatever the screen.
    */
   focus?: 'top' | 'centre' | 'bottom' | 'left top' | 'right top'
+  /**
+   * Imported, derived and tracked — but not published, because its alt text
+   * and caption have not been written yet.
+   *
+   * "Import everything" and "publish everything" are different acts, and this
+   * is the difference. A draft frame is in the repository, has its files, and
+   * appears in no page, no category and no index. Write its words and delete
+   * this line and it is live.
+   */
+  draft?: true
   /** Where the frame came from. Everything unmarked is the picture archive. */
   source?: 'youtube' | 'site' | 'instagram' | 'facebook'
   /**
@@ -640,6 +650,703 @@ const FRAMES: Frame[] = [
       bg: 'Празната зала не е нищо. Тя е онова, което работата трябва да запълни.',
       de: 'Ein leerer Raum ist nicht nichts. Er ist das, was die Arbeit füllen muss.'
     }
+  },
+  {
+    id: 'a-06077ced0b10175c',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'performance'],
+    consentOwed: 'a second performer, clearly identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-0679147602f4d57d',
+    draft: true,
+    kind: 'photo',
+    tags: ['props'],
+    consentOwed: 'a stock flat-lay of paints — not her photograph',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-06d135037c12fedf',
+    draft: true,
+    kind: 'photo',
+    tags: ['workshop'],
+    consentOwed: 'a screenshot of somebody else\'s Instagram account, handle and words',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-3bae0779b80bc772',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait'],
+    consentOwed: 'somebody else\'s drawing of the character',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-5214fe392c281774',
+    draft: true,
+    kind: 'photo',
+    tags: ['workshop', 'children'],
+    consentOwed: 'children watching, one in costume',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-597e6067aaf640d3',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'performance'],
+    consentOwed: 'a young man, clearly identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-6929cbe7e418b679',
+    draft: true,
+    kind: 'photo',
+    tags: ['children'],
+    consentOwed: 'a child, clearly identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-6bd9c2d47300f293',
+    draft: true,
+    kind: 'photo',
+    tags: ['workshop', 'children'],
+    consentOwed: 'a child and a second adult',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-8b30b47754adaae4',
+    draft: true,
+    kind: 'photo',
+    tags: ['workshop'],
+    consentOwed: 'about a dozen workshop participants',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-9eedf775a25a7a47',
+    draft: true,
+    kind: 'photo',
+    tags: ['children', 'performance'],
+    consentOwed: 'several children in an audience',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-aed9ec2ec09f7956',
+    draft: true,
+    kind: 'photo',
+    tags: ['stage', 'performance'],
+    consentOwed: 'two other performers',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-bf2c4943610a52c9',
+    draft: true,
+    kind: 'photo',
+    tags: ['juggling', 'street'],
+    consentOwed: 'a second person, clearly identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-dfc28077d265745f',
+    draft: true,
+    kind: 'photo',
+    tags: ['press'],
+    consentOwed: 'a partner organisation\'s logo, not a photograph',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-e4384cfe78cdc552',
+    draft: true,
+    kind: 'photo',
+    tags: ['stage', 'performance'],
+    consentOwed: 'a musician in the background',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-71d43133-c678-4ee5-af41-53856f37ffa3',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'solitude', 'portrait'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-c6ab823a-6d6e-48cd-8dba-d3c2f158e590',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-0013',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-0468',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-0491',
+    draft: true,
+    kind: 'photo',
+    tags: ['props', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-0494',
+    draft: true,
+    kind: 'photo',
+    tags: ['props', 'portrait'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-0511',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait'],
+    consentOwed: 'a shoulder at the edge of frame',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-0536',
+    draft: true,
+    kind: 'photo',
+    tags: ['camera', 'children'],
+    consentOwed: 'children and adults at the camera',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-0561',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-0825',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'portrait'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-1208',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-1272',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'performance'],
+    consentOwed: 'a group of adults and children',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-1275',
+    draft: true,
+    kind: 'photo',
+    tags: ['juggling', 'street'],
+    consentOwed: 'other people, identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-1320',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-1353',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-1355',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'performance'],
+    consentOwed: 'a second performer',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-1366',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-1406',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'performance'],
+    consentOwed: 'a second person, identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-1414',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'portrait'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-1419',
+    draft: true,
+    kind: 'photo',
+    tags: ['children', 'street'],
+    consentOwed: 'a child, clearly identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-1474',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'performance'],
+    consentOwed: 'three men, identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-1610',
+    draft: true,
+    kind: 'photo',
+    tags: ['workshop', 'children'],
+    consentOwed: 'children and seated adults',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-2173',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-2193',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-2634',
+    draft: true,
+    kind: 'photo',
+    tags: ['children', 'performance'],
+    consentOwed: 'children in the foreground',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-2709',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'performance'],
+    consentOwed: 'distant passers-by',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-2712',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-2845',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-2906',
+    draft: true,
+    kind: 'photo',
+    tags: ['props', 'portrait'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-3341',
+    draft: true,
+    kind: 'photo',
+    tags: ['stage', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-3608',
+    draft: true,
+    kind: 'video',
+    seconds: 1,
+    tags: ['performance', 'solitude'],
+    consentOwed: 'a bystander in the background',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-3630',
+    draft: true,
+    kind: 'video',
+    seconds: 1,
+    tags: ['workshop', 'children'],
+    consentOwed: 'children watching, and a second adult',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-3811',
+    draft: true,
+    kind: 'photo',
+    tags: ['workshop'],
+    consentOwed: 'a large group, identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-3834',
+    draft: true,
+    kind: 'photo',
+    tags: ['workshop', 'children'],
+    consentOwed: 'a group including children',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-4187',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-4367',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-4503',
+    draft: true,
+    kind: 'photo',
+    tags: ['workshop'],
+    consentOwed: 'a group of faces, identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-4690',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-5951',
+    draft: true,
+    kind: 'photo',
+    tags: ['camera', 'performance'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-6026',
+    draft: true,
+    kind: 'photo',
+    tags: ['children', 'workshop'],
+    consentOwed: 'a group including a wheelchair user and children',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-6371',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-6421',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'juggling'],
+    consentOwed: 'a child in the background',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-6763',
+    draft: true,
+    kind: 'photo',
+    tags: ['props', 'portrait'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-7052',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'portrait'],
+    consentOwed: 'a political banner behind her',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-7217',
+    draft: true,
+    kind: 'video',
+    seconds: 1,
+    tags: ['street', 'performance'],
+    consentOwed: 'passers-by, identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-7288',
+    draft: true,
+    kind: 'photo',
+    tags: ['stage', 'performance'],
+    consentOwed: 'a second performer, identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-7300',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-8040',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-8092',
+    draft: true,
+    kind: 'video',
+    seconds: 1,
+    tags: ['props', 'solitude'],
+    consentOwed: 'no face visible',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-8211',
+    draft: true,
+    kind: 'photo',
+    tags: ['children', 'workshop'],
+    consentOwed: 'several children',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-8521',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-8528',
+    draft: true,
+    kind: 'photo',
+    tags: ['props', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-8569',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-8628',
+    draft: true,
+    kind: 'photo',
+    tags: ['workshop'],
+    consentOwed: 'a group, identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-8734',
+    draft: true,
+    kind: 'photo',
+    tags: ['balloons', 'street'],
+    consentOwed: 'other people\'s legs in frame',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-9003',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude', 'stage'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-9614',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-9687',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-img-9785',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-margareten-2',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'solitude', 'street'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-dsc4738',
+    draft: true,
+    kind: 'photo',
+    tags: ['performance'],
+    consentOwed: 'a second person, identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-dsc4950',
+    draft: true,
+    kind: 'photo',
+    tags: ['stage', 'performance'],
+    consentOwed: 'an audience, several identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-b3d70d9d-71eb-4a9b-b8f8-c53b0068727f',
+    draft: true,
+    kind: 'photo',
+    tags: ['stage', 'portrait', 'solitude'],
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-cd563ea5-553b-422b-9723-bbc102345524',
+    draft: true,
+    kind: 'photo',
+    tags: ['balloons', 'birthday'],
+    consentOwed: 'a person beside the sign',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-de658a10-335c-4aa8-adf1-6681df61c1e0',
+    draft: true,
+    kind: 'photo',
+    tags: ['children', 'birthday'],
+    consentOwed: 'children at an event',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-e9b2ae95-a64f-40d1-9bbc-25df2c9a67e3',
+    draft: true,
+    kind: 'photo',
+    tags: ['workshop'],
+    consentOwed: 'a large group, identifiable',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'a-f2ed9844-1e7c-4d3f-8391-2e2627046173',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait'],
+    consentOwed: 'somebody else\'s drawing',
+    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
+    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   }
 ]
 
@@ -886,6 +1593,7 @@ export default defineLoader({
     const seen = new Set<string>()
     const used = new Set<Tag>()
     const owed: string[] = []
+    const drafts: string[] = []
     const media: Media[] = []
 
     const all = [...FRAMES, ...(await synced())]
@@ -906,9 +1614,11 @@ export default defineLoader({
         used.add(tag)
       }
 
+      // A draft is allowed to be unfinished; that is what makes it a draft.
       for (const field of ['alt', 'caption'] as const) {
         for (const lang of LANGS) {
           const value = frame[field][lang]?.trim()
+          if (frame.draft) continue
           if (!value) throw new Error(`${where}: ${field} has no ${lang}`)
           // media/import-media.mjs writes a record with the words it cannot
           // know marked TODO. That marker must not survive to a page: alt text
@@ -933,6 +1643,7 @@ export default defineLoader({
       if (frame.consentOwed) owed.push(`${frame.id}: ${frame.consentOwed}`)
 
       const file = `${DIR}/${frame.id}.webp`
+      if (frame.draft) { drafts.push(frame.id); continue }
       media.push({
         ...frame,
         file,
@@ -1066,6 +1777,13 @@ export default defineLoader({
 
         placements[key] = resolved
       }
+    }
+
+    if (drafts.length) {
+      console.log(
+        `\nmedia: ${drafts.length} frame(s) imported and waiting for their words — ` +
+          'they are in the repository and on no page:\n  ' + drafts.join(', ') + '\n'
+      )
     }
 
     if (empty.length) {

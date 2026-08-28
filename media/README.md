@@ -10,6 +10,23 @@ The research-side guidance for the Clown project lives in the `clown`
 repository under `ethics/`. This file is the version for the commercial pages,
 because this is where a photograph of a child would actually be reached for.
 
+## The forms
+
+`photo-consent-en.md`, `photo-consent-de.md` and `photo-consent-bg.md` are the
+releases. They were rewritten to be strict enough to be useful: the old ones
+asked only about "the website", which does not license an Instagram post, and
+covered children's parties only — while most of the archive is adults.
+
+Each now names every destination separately (website, the social accounts by
+handle, press, funder applications), says plainly that the platforms are run by
+companies outside the EU and that a picture posted there can be copied beyond
+recall, and comes in two forms: adults, and children signed for by a guardian.
+Bulgarian is there because the Sofia workshops are where it actually gets
+signed.
+
+They are working notes, not legal advice. Have a lawyer read them before they
+are used in earnest.
+
 ## The rule
 
 | In the frame | Before it goes on the site |
@@ -47,78 +64,55 @@ is in the `clown` repository's `ethics/README.md`.
 published. Being published once is not consent either: a fellow performer and
 a workshop participant are in those frames too, and neither was asked.
 
-## What is on the site, and why it is so little
+## Everything is imported. Almost nothing is published.
 
-`docs/.vitepress/media.data.ts` carries 26 frames. Twenty-one are frames
-Titania appears in **alone** — that is the selection rule, applied to both
-archives by `make-media.mjs`, which lists exactly which source file became
-which published frame. Five are the films on the YouTube channel, which she
-published herself and whose posters are already public at `i.ytimg.com`.
+The whole of both archives is now in the repository — 111 frames. That was
+deliberate: importing and publishing are different acts, and only the first is
+a job for a script.
 
-Excluded from the archives, and worth naming so nobody re-derives them by
-accident:
+- **30 are published.** They appear on pages, in categories and in
+  `/media.json`.
+- **81 are drafts.** They have been derived and are tracked, and they appear on
+  no page, in no category and in no index. Every build lists them.
 
-| Frame | Why |
+A draft stays a draft until somebody writes its alt text and caption in three
+languages and deletes its `draft: true`. The build refuses to publish a frame
+whose words still say `TODO`, so a half-finished record cannot slip out.
+
+## What is in each frame
+
+Every imported frame that has somebody other than Titania in it says so, in
+`consentOwed`, in its own words — "a child, clearly identifiable", "about a
+dozen workshop participants", "a musician in the background". Of the 81 drafts,
+**45 record another person** and 36 are Titania alone.
+
+That field is not a verdict. It is a note of what a person would see, written
+down so that the decision to publish is made by someone who can weigh it
+against the signed forms — not by a filename, and not by whoever is running the
+import script.
+
+Two published frames also carry it, and predate all of this:
+
+| Frame | Who else is in it |
 |---|---|
-| the workshop group photographs | a dozen identifiable participants, none asked |
-| the slackline, the exercise ball, the bubble show | children in frame |
-| the juggling pass, the street handstand | a second performer, clearly identifiable |
-| the stage clip with the musician | a colleague in the background, unlit but there |
-| the trampoline and gym videos | bystanders and children |
-| the Instagram screenshot | somebody else's account, handle and words |
-| the clown line drawings | somebody else's artwork; being the subject is not a licence |
+| `juggling-pass` | a second person, clearly identifiable, and a third person's hands |
+| `impact-hub` | a seated audience, several identifiable, including a child |
 
-Published from `100 procenta budni/`: two clips — Titania alone in a Viennese
-park, and alone across a city square. Both were checked frame by frame.
-
-## The two frames that break the rule
-
-They were on the site before any of this existed, and taking them down is not
-a decision to make quietly on somebody's behalf:
-
-| Frame | Was | Who else is in it |
-|---|---|---|
-| `juggling-pass` | the photograph on the About page, and still the schema.org Person image | a second person, clearly identifiable, and a third person's hands |
-| `impact-hub` | the photograph on the Work with Titania page, and still the Open Graph card for it | a seated audience, several identifiable, including a child |
-
-Both are marked `consentOwed` in `media.data.ts`, so **every build prints
-them**:
+Every build prints the list:
 
 ```
-media: 45 placements across 12 pages. 2 frame(s) still owe consent
-  juggling-pass: a second person, clearly identifiable, is in the frame
-  impact-hub: a seated audience, several of them identifiable, including a child
+media: 81 frame(s) imported and waiting for their words
+media: 47 frame(s) still owe consent (media/README.md)
 ```
 
-That is the whole mechanism. Nothing is silently excused and nothing is
-silently removed; the debt is in front of whoever builds the site until it is
-paid or the frames are dropped. `juggling-pass` is the same photograph as
-`bf2c4943610a52c9` in the archive, which the rule excluded — so the site was
-already publishing what the rule refuses. Worth knowing before trusting the
-rule to describe the site.
+## One thing to know about the draft files
 
-## Frames from Instagram and Facebook
+A draft is derived into `docs/public/images/media`, which is served. It is on
+no page and in no index, so nothing links to it and nothing lists it — but the
+file is fetchable by anyone who knows or guesses the URL, and it is in a public
+git repository. That is the price of "import everything into shared storage",
+and it is worth knowing before the frames with children in them stay drafts for
+long.
 
-`scripts/feed-sync.mjs` turns posts into frames. Two things about them are
-different from everything else here, and both are visible:
-
-**They carry one caption in three languages.** A post is written in whichever
-language it was written in, and it stands in all three — so a German reader may
-meet an English sentence under an Instagram photograph. The alternative is a
-machine translation nobody wrote.
-
-**Nobody vetted who is in them.** The consent rule above is applied by a person
-looking at a photograph. A sync is not a person. Anything pulled from a feed
-has had the same look taken at it as the account owner took before posting it,
-which is a real judgement but not this one. If the accounts contain workshop
-photographs — and they do — syncing will put participants on the site.
-
-## What this costs the site, in case it is worth fixing
-
-`workshop` is the tag the home page most wants, and among photographs it is
-carried by `juggling-pass` alone — the one that owes consent. Every other
-workshop photograph has participants in it. `children` reaches balloons and a
-camera rather than a child.
-
-Both gaps close the moment a release is signed — one field in `media.data.ts`,
-no code — and neither closes any other way.
+Deleting a frame's record and re-running `node media/make-media.mjs` removes
+the derived files with it.

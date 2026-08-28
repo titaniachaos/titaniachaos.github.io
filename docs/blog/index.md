@@ -8,6 +8,8 @@ outline: [2, 2]
 
 A multilingual journal drawn from Titania Chaos’ artistic practice, workshops and the development of the wordless clown solo.
 
+<JournalIndex />
+
 ## [The central contradiction](./the-central-contradiction)
 
 Can a clown investigate being alone when clown exists through relationship? Clown happens through contact. Something occurs, the clown registers it, the audience registers the…

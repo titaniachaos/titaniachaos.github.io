@@ -160,6 +160,7 @@ const gap = (what) => `'TODO ${what}'`
 
 const record = `  {
     id: ${q(found.id)},
+    draft: true,
     kind: ${q(found.kind)},${found.seconds ? `\n    seconds: ${found.seconds},` : ''}
     tags: [${suggested.map(q).join(', ')}],
     alt: {
@@ -236,9 +237,10 @@ if (WRITE) {
   console.log(stdout.split('\n').filter((l) => l.includes(found.id) || l.startsWith('export-media')).join('\n'))
 
   console.log(
-    `\nNow write the words. Until the TODOs in FRAMES['${found.id}'] are replaced\n` +
-      'the build fails on purpose — a placeholder that looks filled in is worse\n' +
-      'than a gap. Then place it with media_place, or leave it for a page to ask.'
+    `\nIt is imported as a draft: in the repository, derived, and on no page.\n` +
+      `Write the words in FRAMES['${found.id}'] and delete its \`draft: true\` to\n` +
+      'publish it. A placeholder that looks filled in is worse than a gap, so the\n' +
+      'build refuses a published frame that still says TODO.'
   )
   process.exit(0)
 }

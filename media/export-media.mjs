@@ -57,7 +57,14 @@ const index = []
 
 let skipped = 0
 
+let held = 0
+
 for (const frame of await frames()) {
+  // A draft is imported, not published: it has no words yet, so it gets no
+  // metadata written into it and no line in the public index. Writing "TODO"
+  // into a file's description would be worse than leaving it blank.
+  if (frame.draft) { held++; continue }
+
   const packet = xmp(frame, META)
 
   // Both derivatives: the one prose and the hero use, and the square the
@@ -134,6 +141,7 @@ if (!DRY) {
 
 console.log(
   `export-media: ${stamped} file(s) ${DRY ? 'would be stamped' : 'stamped'}, ${skipped} already current` +
+    (held ? `, ${held} draft(s) held back` : '') +
     (DRY ? '' : `, ${grew >= 0 ? '+' : ''}${kb(Math.abs(grew))} total`) +
     `\n  ${index.length} frames in docs/public/media.json` +
     (ORIGIN ? ` at ${ORIGIN}/media.json` : '')

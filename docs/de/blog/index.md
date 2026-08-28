@@ -8,6 +8,8 @@ outline: [2, 2]
 
 Ein mehrsprachiges Journal aus Titania Chaos’ künstlerischer Praxis, ihren Workshops und der Entwicklung des wortlosen Clown-Solos.
 
+<JournalIndex />
+
 ## [Der zentrale Widerspruch](./the-central-contradiction)
 
 Kann ein Clown das Alleinsein untersuchen, wenn Clown durch Beziehung existiert? Clown entsteht durch Kontakt. Etwas geschieht, der Clown registriert es, das Publikum registriert…

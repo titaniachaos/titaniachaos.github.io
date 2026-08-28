@@ -43,6 +43,7 @@ import { promisify } from 'node:util'
 import { join, dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
+import { context, frames as catalogue, xmp } from '../scripts/lib/media-meta.mjs'
 
 const run = promisify(execFile)
 const here = dirname(fileURLToPath(import.meta.url))
@@ -173,14 +174,28 @@ for (const dir of ['media-archive/originals', 'media-archive/youtube', '100 proc
 
 await mkdir(out, { recursive: true })
 
+// What each frame should say about itself, keyed by id. A frame being derived
+// before it has a record in media.data.ts simply gets no packet.
+const META = await context()
+const RECORDS = new Map((await catalogue()).map((f) => [f.id, f]))
+
 /**
  * The two derivatives a frame has: `<id>.webp` for prose and the hero, and
  * `<id>-s.webp`, a square, for the category listings.
+ *
+ * Both carry their XMP from this encode rather than being stamped afterwards.
+ * Stamping later would mean decoding and re-encoding a lossy file, and that
+ * does not come free -- three passes drifted pixels by a mean of 1.5 levels
+ * and compounds from there.
  */
 async function frame(source, id) {
-  await sharp(source).resize(W, H, { fit: 'inside', withoutEnlargement: true })
+  const record = RECORDS.get(id)
+  const packet = record ? xmp(record, META) : null
+  const stamp = (pipeline) => (packet ? pipeline.withXmp(packet) : pipeline)
+
+  await stamp(sharp(source).resize(W, H, { fit: 'inside', withoutEnlargement: true }))
     .webp({ quality: Q }).toFile(join(out, `${id}.webp`))
-  await sharp(source).resize(S, S, { fit: 'cover', position: 'attention' })
+  await stamp(sharp(source).resize(S, S, { fit: 'cover', position: 'attention' }))
     .webp({ quality: SQ }).toFile(join(out, `${id}-s.webp`))
 }
 
@@ -237,3 +252,10 @@ for (const [id, [file, at]] of Object.entries(VIDEOS)) {
   console.log(`${id.padEnd(18)} ${(await weigh(mp4)).padStart(8)} mp4` +
     `  ${(await weigh(join(out, `${id}.webp`))).padStart(8)} poster   <- ${file}`)
 }
+
+// The films are stamped and the index written here rather than by hand: sharp
+// has already put the packet in every webp above, but an mp4's metadata lives
+// in its container and docs/public/media.json has to be regenerated whenever
+// the catalogue moves.
+await run('node', [join(here, 'export-media.mjs')], { cwd: resolve(here, '..') })
+  .then(({ stdout }) => process.stdout.write(stdout))

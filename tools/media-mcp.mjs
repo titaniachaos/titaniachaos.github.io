@@ -239,6 +239,45 @@ const TOOLS = {
     }
   },
 
+  media_import: {
+    description:
+      'Read a photograph or film and produce the catalogue record for it, filled in as far as the file can ' +
+      'fill it in — dimensions, kind, length, capture date, camera. Accepts a local path OR a URL. Reports ' +
+      'geotagging rather than keeping it. Leaves alt text and caption as gaps, which are the parts a machine ' +
+      'has no business inventing.',
+    inputSchema: {
+      type: 'object',
+      required: ['source'],
+      properties: {
+        source: { type: 'string', description: 'A local path or an http(s) URL.' },
+        id: { type: 'string', description: 'The frame id to use. Defaults to the filename.' },
+        tags: { type: 'string', description: 'Space-separated tags, instead of guessing from the file.' }
+      }
+    },
+    async run({ source, id, tags }) {
+      const args = ['media/import-media.mjs', source]
+      if (id) args.push('--id', id)
+      if (tags) args.push('--tags', tags)
+      const r = await sh('node', args)
+      return r.out || 'no output'
+    }
+  },
+
+  media_export: {
+    description:
+      'Write the catalogue into the published files — XMP in every image, container metadata in every film, ' +
+      'in all three languages — and regenerate the public index at /media.json. Skips anything already ' +
+      'current, because re-encoding a lossy file costs quality.',
+    inputSchema: {
+      type: 'object',
+      properties: { dry: { type: 'boolean', description: 'Report what would change and write nothing.' } }
+    },
+    async run({ dry }) {
+      const r = await sh('node', ['media/export-media.mjs', ...(dry ? ['--dry'] : [])])
+      return r.out || 'no output'
+    }
+  },
+
   media_use: {
     description:
       'Use a photograph or film from this site in ANOTHER project. Returns the absolute URL it is served ' +

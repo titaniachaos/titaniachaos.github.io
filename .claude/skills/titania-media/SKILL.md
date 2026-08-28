@@ -69,6 +69,10 @@ fails the build — except `feed`, which is empty until someone syncs.)
 **See what exists** → `media_list` (add `unplaced: true` for frames no page
 renders — they still ship).
 
+**Work out what a file is** → `media_import`, with a local path or a URL. It
+returns a catalogue record filled in as far as the file allows, and warns if
+the original is geotagged.
+
 **Add a photograph**
 1. Put the source where `media/make-media.mjs` can see it and add it to
    `PHOTOS`.
@@ -101,6 +105,12 @@ Nobody vets who is in a synced photograph. See `media/README.md`.
 other projects link to it rather than copying, and the tool returns the
 absolute URL, the alt text in the language asked for, and pasteable markup. It
 warns when a frame owes consent.
+
+**After changing a caption or a tag** → `media_export`. Every published file
+carries its own XMP (three languages, keywords, credit, licence) and
+`/media.json` is the public index. It skips what is already current, because
+re-encoding a lossy file costs quality — `make-media.mjs` stamps during the
+derive for the same reason.
 
 **Before finishing** → `site_check`. It runs locale parity, the media
 couplings, dead links and anchors, alt text, image budgets, page weight and

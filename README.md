@@ -176,6 +176,46 @@ you, and what to check when a picture is not showing up. Both are checked in,
 so cloning the repository and opening it is enough — there is nothing to set
 up. `.claude/launch.json` starts the dev and preview servers the same way.
 
+### Importing and exporting
+
+**In.** `media/import-media.mjs` reads a file and writes the record for it,
+filled in as far as the file can fill it in — dimensions, kind, length, capture
+date, camera — leaving alt text and caption as gaps, which are the parts a
+machine has no business inventing. The source may be a **local path or a URL**;
+a URL is fetched to a temporary file first, so both behave the same.
+
+```sh
+node media/import-media.mjs https://example.com/photo.jpg --tags "street performance"
+node media/import-media.mjs ~/Pictures/IMG_2193.jpeg
+```
+
+It reports geotagging rather than keeping it. A phone photograph of a
+children's party carries the coordinates of the party, and the person deciding
+whether to publish it should be told rather than have to know to ask.
+
+**Out.** Every published file carries its own description. `media/export-media.mjs`
+writes an XMP packet into each image — title, description in all three
+languages as an `rdf:Alt`, tags as keywords, credit, licence, and the URL it is
+served from — and the same through the container for films. Standard Dublin
+Core, so Bridge, Lightroom, Finder's Get Info and `mdls` all read it. Save a
+picture from the site and it still knows what it is.
+
+It starts from empty and writes a chosen list; it never carries the original's
+metadata forward, which is how device identifiers and coordinates stay out of
+anything the site serves.
+
+The packet is written **during** the derive, in `make-media.mjs`, not stamped
+on afterwards: stamping means decoding and re-encoding a lossy file, and three
+passes drifted pixels by a mean of 1.5 levels and compound from there.
+`export-media.mjs` re-stamps only what has actually changed, so running it
+twice costs nothing. Metadata costs about 2 KB a file, ~100 KB across the site.
+
+**The index.** The same run writes `docs/public/media.json` — every frame, its
+tags, captions in three languages, dimensions and absolute URLs — served at
+[`/media.json`](https://titaniachaos.github.io/media.json). Another project can
+read one file over HTTP instead of running the MCP server, and the two agree
+because they come from the same source.
+
 ### Using this media from another project
 
 This site is the origin. Other projects — the Clown site, anything else — link

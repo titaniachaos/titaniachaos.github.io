@@ -1,0 +1,553 @@
+{
+  "origin": "https://titaniachaos.github.io",
+  "rights": "© Tatiana Petkova (Titania Chaos). Photographs by Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, Konstantin Oberlik, Tatiana Petkova, Marion Scholz and Laurent Ziegler.",
+  "count": 26,
+  "media": [
+    {
+      "id": "workshop-mini-art",
+      "kind": "video",
+      "tags": [
+        "workshop",
+        "performance"
+      ],
+      "seconds": 57,
+      "alt": {
+        "en": "Participants in a clown workshop playing together in a bright studio",
+        "bg": "Участници в клоунска работилница играят заедно в светло студио",
+        "de": "Teilnehmende eines Clown-Workshops spielen gemeinsam in einem hellen Studio"
+      },
+      "caption": {
+        "en": "A clown workshop at the Mini Art Foundation, January 2024.",
+        "bg": "Клоунска работилница във фондация „Мини Арт“, януари 2024.",
+        "de": "Ein Clown-Workshop in der Mini Art Foundation, Jänner 2024."
+      },
+      "url": "https://titaniachaos.github.io/images/media/workshop-mini-art.webp",
+      "tile": "https://titaniachaos.github.io/images/media/workshop-mini-art-s.webp",
+      "film": "https://titaniachaos.github.io/images/media/workshop-mini-art.mp4",
+      "source": "https://www.youtube.com/watch?v=JG4Iar3Ax7k"
+    },
+    {
+      "id": "workshop-sofia",
+      "kind": "video",
+      "tags": [
+        "workshop"
+      ],
+      "seconds": 108,
+      "alt": {
+        "en": "A clown workshop group at work in a rehearsal room",
+        "bg": "Група в клоунска работилница по време на работа в репетиционна зала",
+        "de": "Eine Clown-Workshop-Gruppe bei der Arbeit in einem Probenraum"
+      },
+      "caption": {
+        "en": "A clown workshop at the Mini Art Centre in Sofia, October 2023.",
+        "bg": "Клоунска работилница в Мини Арт Център, София, октомври 2023.",
+        "de": "Ein Clown-Workshop im Mini Art Centre in Sofia, Oktober 2023."
+      },
+      "url": "https://titaniachaos.github.io/images/media/workshop-sofia.webp",
+      "tile": "https://titaniachaos.github.io/images/media/workshop-sofia-s.webp",
+      "film": "https://titaniachaos.github.io/images/media/workshop-sofia.mp4",
+      "source": "https://www.youtube.com/watch?v=oh8HroecvrA"
+    },
+    {
+      "id": "park-dance",
+      "kind": "video",
+      "tags": [
+        "street",
+        "performance",
+        "portrait"
+      ],
+      "seconds": 10,
+      "alt": {
+        "en": "Titania Chaos in a red suit and striped scarf, leaping across a sunlit park",
+        "bg": "Титания Хаос в червен костюм и раиран шал прескача огрян от слънце парк",
+        "de": "Titania Chaos im roten Anzug und mit Ringelschal springt durch einen sonnigen Park"
+      },
+      "caption": {
+        "en": "A Viennese park, and nobody watching. The clown does not wait for an audience.",
+        "bg": "Виенски парк и никой наоколо. Клоунът не чака публика.",
+        "de": "Ein Wiener Park, niemand schaut zu. Der Clown wartet nicht auf Publikum."
+      },
+      "url": "https://titaniachaos.github.io/images/media/park-dance.webp",
+      "tile": "https://titaniachaos.github.io/images/media/park-dance-s.webp",
+      "film": "https://titaniachaos.github.io/images/media/park-dance.mp4"
+    },
+    {
+      "id": "square-cartwheel",
+      "kind": "video",
+      "tags": [
+        "street",
+        "performance"
+      ],
+      "seconds": 5,
+      "alt": {
+        "en": "Titania Chaos, dressed in red, turning a cartwheel across a wide city square",
+        "bg": "Титания Хаос, облечена в червено, прави колело през широк градски площад",
+        "de": "Titania Chaos, ganz in Rot, schlägt ein Rad über einen weiten Stadtplatz"
+      },
+      "caption": {
+        "en": "Barefoot across a square, between the passers-by and the pigeons.",
+        "bg": "Боса през площада, между минувачите и гълъбите.",
+        "de": "Barfuß über einen Platz, zwischen Passanten und Tauben."
+      },
+      "url": "https://titaniachaos.github.io/images/media/square-cartwheel.webp",
+      "tile": "https://titaniachaos.github.io/images/media/square-cartwheel-s.webp",
+      "film": "https://titaniachaos.github.io/images/media/square-cartwheel.mp4"
+    },
+    {
+      "id": "balloon-heart",
+      "kind": "photo",
+      "tags": [
+        "balloons",
+        "children",
+        "birthday",
+        "performance"
+      ],
+      "alt": {
+        "en": "Titania Chaos in a hat and dark glasses, holding a red heart made of balloon out to the camera",
+        "bg": "Титания Хаос с шапка и тъмни очила подава към камерата червено сърце от балон",
+        "de": "Titania Chaos mit Hut und dunkler Brille hält ein rotes Herz aus Luftballon in die Kamera"
+      },
+      "caption": {
+        "en": "A heart, twisted on the spot and given away immediately.",
+        "bg": "Сърце, усукано на място и подарено веднага.",
+        "de": "Ein Herz, an Ort und Stelle gedreht und sofort verschenkt."
+      },
+      "url": "https://titaniachaos.github.io/images/media/balloon-heart.webp",
+      "tile": "https://titaniachaos.github.io/images/media/balloon-heart-s.webp"
+    },
+    {
+      "id": "balloon-chain",
+      "kind": "photo",
+      "tags": [
+        "balloons",
+        "children",
+        "birthday"
+      ],
+      "alt": {
+        "en": "Titania Chaos in red, leaning over a railing to lower a long chain of coloured balloons",
+        "bg": "Титания Хаос в червено се навежда над парапет и спуска дълга верига от цветни балони",
+        "de": "Titania Chaos in Rot beugt sich über ein Geländer und lässt eine lange Kette bunter Luftballons hinab"
+      },
+      "caption": {
+        "en": "The balloon chain arrives before the clown does.",
+        "bg": "Веригата от балони пристига преди клоуна.",
+        "de": "Die Ballonkette ist vor dem Clown da."
+      },
+      "url": "https://titaniachaos.github.io/images/media/balloon-chain.webp",
+      "tile": "https://titaniachaos.github.io/images/media/balloon-chain-s.webp"
+    },
+    {
+      "id": "balloon-garland",
+      "kind": "photo",
+      "tags": [
+        "balloons",
+        "street",
+        "birthday"
+      ],
+      "alt": {
+        "en": "Titania Chaos crossing a city street carrying an armful of orange, purple and green balloons",
+        "bg": "Титания Хаос пресича градска улица с наръч оранжеви, лилави и зелени балони",
+        "de": "Titania Chaos überquert eine Straße mit einem Arm voll oranger, violetter und grüner Luftballons"
+      },
+      "caption": {
+        "en": "Getting to the party is already part of the party.",
+        "bg": "Отиването до празника вече е част от празника.",
+        "de": "Der Weg zum Fest ist schon Teil des Festes."
+      },
+      "url": "https://titaniachaos.github.io/images/media/balloon-garland.webp",
+      "tile": "https://titaniachaos.github.io/images/media/balloon-garland-s.webp"
+    },
+    {
+      "id": "camera-portrait",
+      "kind": "photo",
+      "tags": [
+        "camera",
+        "performance",
+        "props"
+      ],
+      "alt": {
+        "en": "Titania Chaos standing behind a large wooden bellows camera on a tripod, flowers on top of it",
+        "bg": "Титания Хаос стои зад голяма дървена мехова камера на статив, с цветя отгоре",
+        "de": "Titania Chaos steht hinter einer großen hölzernen Balgenkamera auf einem Stativ, Blumen darauf"
+      },
+      "caption": {
+        "en": "The time-travelling camera, waiting for its next century.",
+        "bg": "Машината на времето, в очакване на следващия си век.",
+        "de": "Die Zeitreisekamera wartet auf ihr nächstes Jahrhundert."
+      },
+      "url": "https://titaniachaos.github.io/images/media/camera-portrait.webp",
+      "tile": "https://titaniachaos.github.io/images/media/camera-portrait-s.webp"
+    },
+    {
+      "id": "traveller-kit",
+      "kind": "photo",
+      "tags": [
+        "camera",
+        "props"
+      ],
+      "alt": {
+        "en": "A wooden case marked TIME TRAVELLER on a floor, with a folded umbrella, a red hat and a leather box",
+        "bg": "Дървен куфар с надпис TIME TRAVELLER на пода, сгънат чадър, червена шапка и кожена кутия",
+        "de": "Ein Holzkoffer mit der Aufschrift TIME TRAVELLER am Boden, dazu ein Schirm, ein roter Hut und eine Lederschachtel"
+      },
+      "caption": {
+        "en": "Everything the time traveller needs, and nothing she does not.",
+        "bg": "Всичко, което е нужно на пътешественика във времето, и нищо повече.",
+        "de": "Alles, was die Zeitreisende braucht, und nichts darüber hinaus."
+      },
+      "url": "https://titaniachaos.github.io/images/media/traveller-kit.webp",
+      "tile": "https://titaniachaos.github.io/images/media/traveller-kit-s.webp"
+    },
+    {
+      "id": "stage-collar",
+      "kind": "photo",
+      "tags": [
+        "stage",
+        "portrait",
+        "performance"
+      ],
+      "alt": {
+        "en": "Titania Chaos in a dark dress with a wide white collar, red nose and round glasses, a red curtain behind her",
+        "bg": "Титания Хаос в тъмна рокля с широка бяла яка, червен нос и кръгли очила, пред червена завеса",
+        "de": "Titania Chaos in dunklem Kleid mit breitem weißen Kragen, roter Nase und runder Brille vor einem roten Vorhang"
+      },
+      "caption": {
+        "en": "Before the curtain, before the first laugh.",
+        "bg": "Пред завесата, преди първия смях.",
+        "de": "Vor dem Vorhang, vor dem ersten Lachen."
+      },
+      "url": "https://titaniachaos.github.io/images/media/stage-collar.webp",
+      "tile": "https://titaniachaos.github.io/images/media/stage-collar-s.webp"
+    },
+    {
+      "id": "stage-balloon",
+      "kind": "photo",
+      "tags": [
+        "stage",
+        "performance"
+      ],
+      "alt": {
+        "en": "Titania Chaos on a dark stage in a pale grey dress, holding a single balloon on an open hand",
+        "bg": "Титания Хаос на тъмна сцена в бледосива рокля държи един балон на отворена длан",
+        "de": "Titania Chaos auf dunkler Bühne im blassgrauen Kleid hält einen einzelnen Luftballon auf der offenen Hand"
+      },
+      "caption": {
+        "en": "One balloon, held out for as long as the silence lasts.",
+        "bg": "Един балон, поднесен толкова дълго, колкото трае тишината.",
+        "de": "Ein Luftballon, so lange hingehalten, wie die Stille dauert."
+      },
+      "url": "https://titaniachaos.github.io/images/media/stage-balloon.webp",
+      "tile": "https://titaniachaos.github.io/images/media/stage-balloon-s.webp"
+    },
+    {
+      "id": "stage-gown",
+      "kind": "photo",
+      "tags": [
+        "stage",
+        "performance"
+      ],
+      "alt": {
+        "en": "Titania Chaos on a dark stage, opening out the wide skirt of a pale gown with both hands",
+        "bg": "Титания Хаос на тъмна сцена разтваря с две ръце широката пола на бледа рокля",
+        "de": "Titania Chaos auf dunkler Bühne breitet mit beiden Händen den weiten Rock eines hellen Kleides aus"
+      },
+      "caption": {
+        "en": "A dress is also a prop, if you hold it long enough.",
+        "bg": "Роклята също е реквизит, ако я държиш достатъчно дълго.",
+        "de": "Ein Kleid ist auch eine Requisite, wenn man es lange genug hält."
+      },
+      "url": "https://titaniachaos.github.io/images/media/stage-gown.webp",
+      "tile": "https://titaniachaos.github.io/images/media/stage-gown-s.webp"
+    },
+    {
+      "id": "telephone",
+      "kind": "photo",
+      "tags": [
+        "portrait",
+        "performance"
+      ],
+      "alt": {
+        "en": "Titania Chaos in a houndstooth jacket at a wooden counter, listening into an antique telephone",
+        "bg": "Титания Хаос в сако на пепит до дървен плот слуша в антикварен телефон",
+        "de": "Titania Chaos im Hahnentritt-Sakko an einem Holztresen lauscht in ein altes Telefon"
+      },
+      "caption": {
+        "en": "Someone is on the line. It has been a while.",
+        "bg": "Някой е на линията. Мина доста време.",
+        "de": "Jemand ist in der Leitung. Es ist eine Weile her."
+      },
+      "url": "https://titaniachaos.github.io/images/media/telephone.webp",
+      "tile": "https://titaniachaos.github.io/images/media/telephone-s.webp"
+    },
+    {
+      "id": "wall-coat",
+      "kind": "photo",
+      "tags": [
+        "portrait"
+      ],
+      "alt": {
+        "en": "Titania Chaos against a concrete wall in a tweed coat over a pale blue dress, looking upwards",
+        "bg": "Титания Хаос пред бетонна стена, с туидово палто върху бледосиня рокля, гледа нагоре",
+        "de": "Titania Chaos vor einer Betonwand im Tweedmantel über hellblauem Kleid, den Blick nach oben"
+      },
+      "caption": {
+        "en": "Waiting is a whole scene, if you are honest about it.",
+        "bg": "Чакането е цяла сцена, ако си честен с него.",
+        "de": "Warten ist eine ganze Szene, wenn man ehrlich damit ist."
+      },
+      "url": "https://titaniachaos.github.io/images/media/wall-coat.webp",
+      "tile": "https://titaniachaos.github.io/images/media/wall-coat-s.webp"
+    },
+    {
+      "id": "beanie-portrait",
+      "kind": "photo",
+      "tags": [
+        "portrait",
+        "street"
+      ],
+      "alt": {
+        "en": "A close portrait of Titania Chaos in a yellow beanie and round glasses, eyes wide, red nose on",
+        "bg": "Близък портрет на Титания Хаос с жълта шапка и кръгли очила, с широко отворени очи и червен нос",
+        "de": "Nahes Porträt von Titania Chaos mit gelber Mütze und runder Brille, weit aufgerissene Augen, rote Nase"
+      },
+      "caption": {
+        "en": "The nose is the smallest mask in the theatre, and the hardest to hide behind.",
+        "bg": "Носът е най-малката маска в театъра и най-трудната за криене зад нея.",
+        "de": "Die Nase ist die kleinste Maske des Theaters — und die, hinter der man sich am wenigsten verstecken kann."
+      },
+      "url": "https://titaniachaos.github.io/images/media/beanie-portrait.webp",
+      "tile": "https://titaniachaos.github.io/images/media/beanie-portrait-s.webp"
+    },
+    {
+      "id": "shadow",
+      "kind": "photo",
+      "tags": [
+        "portrait"
+      ],
+      "alt": {
+        "en": "The shadow of Titania Chaos thrown on a pale wall, hat and open hand in silhouette",
+        "bg": "Сянката на Титания Хаос върху бледа стена — шапка и отворена длан в силует",
+        "de": "Der Schatten von Titania Chaos an heller Wand, Hut und offene Hand als Silhouette"
+      },
+      "caption": {
+        "en": "The clown arrives on the wall first.",
+        "bg": "Клоунът пристига първо на стената.",
+        "de": "Der Clown kommt zuerst an der Wand an."
+      },
+      "url": "https://titaniachaos.github.io/images/media/shadow.webp",
+      "tile": "https://titaniachaos.github.io/images/media/shadow-s.webp"
+    },
+    {
+      "id": "doorway-jump",
+      "kind": "photo",
+      "tags": [
+        "street",
+        "portrait"
+      ],
+      "alt": {
+        "en": "Titania Chaos in a red boilersuit jumping in a doorway, arms and legs spread wide",
+        "bg": "Титания Хаос в червен гащеризон скача в рамката на врата с широко разперени ръце и крака",
+        "de": "Titania Chaos im roten Overall springt in einem Türrahmen, Arme und Beine weit gespreizt"
+      },
+      "caption": {
+        "en": "A doorway is a frame, and a frame is an invitation.",
+        "bg": "Вратата е рамка, а рамката е покана.",
+        "de": "Eine Tür ist ein Rahmen, und ein Rahmen ist eine Einladung."
+      },
+      "url": "https://titaniachaos.github.io/images/media/doorway-jump.webp",
+      "tile": "https://titaniachaos.github.io/images/media/doorway-jump-s.webp"
+    },
+    {
+      "id": "bench-balance",
+      "kind": "photo",
+      "tags": [
+        "street",
+        "performance"
+      ],
+      "alt": {
+        "en": "Titania Chaos in a red dress balancing on one foot along the edge of a park bench",
+        "bg": "Титания Хаос в червена рокля балансира на един крак по ръба на пейка в парка",
+        "de": "Titania Chaos im roten Kleid balanciert auf einem Bein auf der Kante einer Parkbank"
+      },
+      "caption": {
+        "en": "Any edge will do, if you agree to take it seriously.",
+        "bg": "Всеки ръб върши работа, стига да се съгласиш да го приемеш сериозно.",
+        "de": "Jede Kante genügt, wenn man bereit ist, sie ernst zu nehmen."
+      },
+      "url": "https://titaniachaos.github.io/images/media/bench-balance.webp",
+      "tile": "https://titaniachaos.github.io/images/media/bench-balance-s.webp"
+    },
+    {
+      "id": "barrel-street",
+      "kind": "photo",
+      "tags": [
+        "street",
+        "performance"
+      ],
+      "alt": {
+        "en": "Titania Chaos in a red boilersuit standing on a painted barrel in a city square, one arm raised",
+        "bg": "Титания Хаос в червен гащеризон стои върху рисувана бъчва на градски площад с вдигната ръка",
+        "de": "Titania Chaos im roten Overall steht auf einer bemalten Tonne auf einem Stadtplatz, ein Arm erhoben"
+      },
+      "caption": {
+        "en": "A metre of height is enough to turn a pavement into a stage.",
+        "bg": "Един метър височина стига, за да превърне тротоара в сцена.",
+        "de": "Ein Meter Höhe genügt, um aus einem Gehsteig eine Bühne zu machen."
+      },
+      "url": "https://titaniachaos.github.io/images/media/barrel-street.webp",
+      "tile": "https://titaniachaos.github.io/images/media/barrel-street-s.webp"
+    },
+    {
+      "id": "statue-embrace",
+      "kind": "photo",
+      "tags": [
+        "street",
+        "performance"
+      ],
+      "alt": {
+        "en": "Titania Chaos with a red nose embracing a bronze statue on a pedestrian street, a second red nose on the statue",
+        "bg": "Титания Хаос с червен нос прегръща бронзова статуя на пешеходна улица; втори червен нос е сложен на статуята",
+        "de": "Titania Chaos mit roter Nase umarmt eine Bronzestatue in einer Fußgängerzone; auch die Statue trägt eine rote Nase"
+      },
+      "caption": {
+        "en": "Nobody is too bronze for a red nose.",
+        "bg": "Никой не е прекалено бронзов за червен нос.",
+        "de": "Niemand ist zu bronzen für eine rote Nase."
+      },
+      "url": "https://titaniachaos.github.io/images/media/statue-embrace.webp",
+      "tile": "https://titaniachaos.github.io/images/media/statue-embrace-s.webp"
+    },
+    {
+      "id": "radio-studio",
+      "kind": "photo",
+      "tags": [
+        "press"
+      ],
+      "alt": {
+        "en": "Tatiana Petkova in a checked shirt at a radio studio desk, a microphone arm in front of her",
+        "bg": "Татяна Петкова в карирана риза на пулта в радиостудио, пред нея стойка с микрофон",
+        "de": "Tatiana Petkova im Karohemd am Pult eines Radiostudios, vor ihr ein Mikrofonarm"
+      },
+      "caption": {
+        "en": "On air, out of costume: the clown explained rather than performed.",
+        "bg": "В ефир, без костюм: клоунът обяснен, вместо изигран.",
+        "de": "Auf Sendung, ohne Kostüm: der Clown erklärt statt gespielt."
+      },
+      "url": "https://titaniachaos.github.io/images/media/radio-studio.webp",
+      "tile": "https://titaniachaos.github.io/images/media/radio-studio-s.webp"
+    },
+    {
+      "id": "showreel",
+      "kind": "video",
+      "tags": [
+        "workshop",
+        "performance"
+      ],
+      "seconds": 55,
+      "alt": {
+        "en": "A workshop group in red noses, clowning around Titania Chaos in a studio",
+        "bg": "Група от работилница с червени носове клоунства около Титания Хаос в студио",
+        "de": "Eine Workshop-Gruppe mit roten Nasen albert im Studio um Titania Chaos herum"
+      },
+      "caption": {
+        "en": "The film that introduces the work, from the Titania Chaos channel.",
+        "bg": "Филмът, който представя работата, от канала на Титания Хаос.",
+        "de": "Der Film, der die Arbeit vorstellt, vom Titania-Chaos-Kanal."
+      },
+      "url": "https://titaniachaos.github.io/images/media/showreel.webp",
+      "tile": "https://titaniachaos.github.io/images/media/showreel-s.webp",
+      "film": "https://titaniachaos.github.io/images/media/showreel.mp4",
+      "source": "https://www.youtube.com/watch?v=OL9f3qKXE1I"
+    },
+    {
+      "id": "django-tribute",
+      "kind": "video",
+      "tags": [
+        "performance",
+        "street",
+        "portrait"
+      ],
+      "seconds": 205,
+      "alt": {
+        "en": "Titania Chaos in a red dress outdoors, singing into a toy microphone",
+        "bg": "Титания Хаос в червена рокля на открито пее в детски микрофон",
+        "de": "Titania Chaos im roten Kleid im Freien, singt in ein Spielzeugmikrofon"
+      },
+      "caption": {
+        "en": "“Smile” — a tribute to Django Edwards, 2023.",
+        "bg": "„Smile“ — почит към Джанго Едуардс, 2023.",
+        "de": "„Smile“ — eine Hommage an Django Edwards, 2023."
+      },
+      "url": "https://titaniachaos.github.io/images/media/django-tribute.webp",
+      "tile": "https://titaniachaos.github.io/images/media/django-tribute-s.webp",
+      "film": "https://titaniachaos.github.io/images/media/django-tribute.mp4",
+      "source": "https://www.youtube.com/watch?v=VJuf0huu2X4"
+    },
+    {
+      "id": "banana-encore",
+      "kind": "video",
+      "tags": [
+        "performance",
+        "stage"
+      ],
+      "seconds": 73,
+      "alt": {
+        "en": "Titania Chaos in a long coat outdoors, holding a banana handed up from the audience",
+        "bg": "Титания Хаос в дълго палто на открито държи банан, подаден от публиката",
+        "de": "Titania Chaos im langen Mantel im Freien, mit einer Banane aus dem Publikum"
+      },
+      "caption": {
+        "en": "The banana arrives from the audience, mid-performance with Äquatormassband. Vienna, November 2025.",
+        "bg": "Бананът идва от публиката, по време на представление с Äquatormassband. Виена, ноември 2025.",
+        "de": "Die Banane kommt aus dem Publikum, mitten im Auftritt mit der Äquatormassband. Wien, November 2025."
+      },
+      "url": "https://titaniachaos.github.io/images/media/banana-encore.webp",
+      "tile": "https://titaniachaos.github.io/images/media/banana-encore-s.webp",
+      "film": "https://titaniachaos.github.io/images/media/banana-encore.mp4",
+      "source": "https://www.youtube.com/watch?v=w3wkwyrTRiY"
+    },
+    {
+      "id": "juggling-pass",
+      "kind": "photo",
+      "tags": [
+        "juggling",
+        "street",
+        "workshop"
+      ],
+      "alt": {
+        "en": "Titania Chaos in a red dress outdoors, a pink juggling club spinning above her open hands",
+        "bg": "Титания Хаос в червена рокля на открито, розова бухалка се върти над отворените ѝ длани",
+        "de": "Titania Chaos im roten Kleid im Freien, eine rosa Jonglierkeule dreht sich über ihren offenen Händen"
+      },
+      "caption": {
+        "en": "A club in the air between two people is a conversation, not a trick.",
+        "bg": "Бухалка във въздуха между двама души е разговор, не трик.",
+        "de": "Eine Keule in der Luft zwischen zwei Menschen ist ein Gespräch, kein Trick."
+      },
+      "url": "https://titaniachaos.github.io/images/media/juggling-pass.webp",
+      "tile": "https://titaniachaos.github.io/images/media/juggling-pass-s.webp",
+      "consentOwed": "a second person, clearly identifiable, is in the frame"
+    },
+    {
+      "id": "impact-hub",
+      "kind": "photo",
+      "tags": [
+        "performance",
+        "stage"
+      ],
+      "alt": {
+        "en": "Titania Chaos performing at the top of a staircase to a seated audience in a bright hall",
+        "bg": "Титания Хаос играе на върха на стълбище пред седнала публика в светла зала",
+        "de": "Titania Chaos spielt am Kopf einer Treppe vor sitzendem Publikum in einem hellen Saal"
+      },
+      "caption": {
+        "en": "A staircase makes a stage, and a room full of strangers makes an audience.",
+        "bg": "Стълбището става сцена, а стая, пълна с непознати — публика.",
+        "de": "Eine Treppe wird zur Bühne, ein Raum voller Fremder zum Publikum."
+      },
+      "url": "https://titaniachaos.github.io/images/media/impact-hub.webp",
+      "tile": "https://titaniachaos.github.io/images/media/impact-hub-s.webp",
+      "consentOwed": "a seated audience, several of them identifiable, including a child"
+    }
+  ]
+}

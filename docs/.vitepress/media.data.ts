@@ -139,6 +139,21 @@ export interface Data {
    * internal linking the site never had, generated rather than written.
    */
   usedOn: Record<string, PageRef[]>
+  /**
+   * What each written page is about, keyed `${lang}/${slug}`.
+   *
+   * A section already says what it is about, in the vocabulary, when it asks
+   * for a picture: `<MediaFigure tags="birthday children" />`. That statement
+   * was read once, to choose a frame, and then thrown away -- so the four
+   * written pages sat in a site with 42 category pages and linked to none of
+   * them, and no category page could say which page discussed it.
+   *
+   * It is the tags the page asked for, not the tags of the frames it got: the
+   * first is what the page claims to be about, the second is whatever else the
+   * winning photograph happens to carry. Where a page names a frame outright
+   * there is no claim to read, so the frame's own tags stand in.
+   */
+  pageTags: Record<string, { ref: PageRef; tags: Tag[] }>
   tags: Tag[]
   /** Tag names as a reader sees them, per language. */
   label: Record<Lang, Record<Tag, string>>
@@ -1678,6 +1693,7 @@ export default defineLoader({
 
     const placements: Record<string, Placement[]> = {}
     const usedOn: Record<string, PageRef[]> = {}
+    const pageTags: Record<string, { ref: PageRef; tags: Tag[] }> = {}
     const empty: string[] = []
     let total = 0
 
@@ -1712,6 +1728,12 @@ export default defineLoader({
         const takenTags = new Set<string>()
         const takenFrames = new Set<string>()
         const resolved: Placement[] = []
+        const about = new Set<Tag>()
+        const ref: PageRef = {
+          lang, slug,
+          path: `${lang === 'en' ? '' : '/' + lang}/${slug === 'index' ? '' : slug}`.replace(/\/$/, '') || '/',
+          title: pageTitle
+        }
 
         for (const place of wanted) {
           // The lookup from component back to placement is by the tags string,
@@ -1729,11 +1751,8 @@ export default defineLoader({
             if (takenFrames.has(named)) throw new Error(`${key}: ${named} is already on this page`)
             takenFrames.add(named)
             resolved.push({ ...place, id: named })
-            ;(usedOn[named] ??= []).push({
-              lang, slug,
-              path: `${lang === 'en' ? '' : '/' + lang}/${slug === 'index' ? '' : slug}`.replace(/\/$/, '') || '/',
-              title: pageTitle
-            })
+            ;(usedOn[named] ??= []).push(ref)
+            for (const tag of frame.tags) about.add(tag)
             total++
             continue
           }
@@ -1743,6 +1762,7 @@ export default defineLoader({
           if (unknown.length) {
             throw new Error(`${key}: MediaFigure asks for ${unknown.join(', ')}, which is not in the vocabulary`)
           }
+          for (const tag of asked as Tag[]) about.add(tag)
 
           // Best score wins. On a tie a film wins over a photograph, and only
           // then does the archive's own order decide.
@@ -1776,16 +1796,15 @@ export default defineLoader({
           }
           takenFrames.add(best.frame.id)
           resolved.push({ ...place, id: best.frame.id })
-          ;(usedOn[best.frame.id] ??= []).push({
-            lang,
-            slug,
-            path: `${lang === 'en' ? '' : '/' + lang}/${slug === 'index' ? '' : slug}`.replace(/\/$/, '') || '/',
-            title: pageTitle
-          })
+          ;(usedOn[best.frame.id] ??= []).push(ref)
           total++
         }
 
         placements[key] = resolved
+        // `feed` is a source, not a subject: a page asking for it is asking
+        // for whatever was posted last, which says nothing about the page.
+        const subjects = [...about].filter((tag) => tag !== 'feed')
+        if (subjects.length) pageTags[key] = { ref, tags: subjects }
       }
     }
 
@@ -1810,6 +1829,6 @@ export default defineLoader({
       console.log('')
     }
 
-    return { media, tags: [...TAGS], label, ui, placements, usedOn }
+    return { media, tags: [...TAGS], label, ui, placements, usedOn, pageTags }
   }
 })

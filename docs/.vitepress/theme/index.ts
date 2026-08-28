@@ -8,6 +8,7 @@ import MediaFigure from './MediaFigure.vue'
 import MediaCategory from './MediaCategory.vue'
 import MediaIndex from './MediaIndex.vue'
 import JournalIndex from './JournalIndex.vue'
+import PageTopics from './PageTopics.vue'
 import './custom.css'
 
 export default {
@@ -29,6 +30,9 @@ export default {
     // shows exactly one of the two.
     h(DefaultTheme.Layout, null, {
       'aside-ads-before': () => h(SupportCard, { place: 'aside' }),
-      'doc-after': () => h(SupportCard, { place: 'inline' })
+      // What the page is about, then the ask. A reader who has finished the
+      // page should be offered somewhere to go before being offered a
+      // donation. PageTopics renders nothing on a page with no figures.
+      'doc-after': () => [h(PageTopics), h(SupportCard, { place: 'inline' })]
     })
 }

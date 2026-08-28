@@ -115,6 +115,10 @@ export const CATEGORY_UI: Record<Lang, {
   many: string
   /** Above the list of ordinary pages that also carry this tag. */
   alsoOn: string
+  /** Before the chips at the foot of a written page. */
+  about: string
+  /** Above the written pages that discuss this category. */
+  written: string
   /** The index page that lists every category. */
   indexTitle: string
   indexDescription: string
@@ -128,6 +132,8 @@ export const CATEGORY_UI: Record<Lang, {
     one: '1 picture',
     many: '%1 pictures',
     alsoOn: 'Also on',
+    about: 'This page is about',
+    written: 'Read about this',
     indexTitle: 'Everything, by what it is',
     indexDescription: 'Browse the photographs and films of Vienna clown Titania Chaos by subject.',
     indexIntro: 'Every photograph and film on this site, arranged by what it is rather than by which page it sits on.',
@@ -140,6 +146,8 @@ export const CATEGORY_UI: Record<Lang, {
     one: '1 кадър',
     many: '%1 кадъра',
     alsoOn: 'Също на',
+    about: 'Тази страница е за',
+    written: 'Прочетете за това',
     indexTitle: 'Всичко, според това какво е',
     indexDescription: 'Разгледайте снимките и филмите на виенската клоунеса Титания Хаос по тема.',
     indexIntro: 'Всяка снимка и всеки филм на този сайт, подредени според това какво са, а не на коя страница стоят.',
@@ -152,6 +160,8 @@ export const CATEGORY_UI: Record<Lang, {
     one: '1 Aufnahme',
     many: '%1 Aufnahmen',
     alsoOn: 'Auch auf',
+    about: 'Diese Seite handelt von',
+    written: 'Dazu zu lesen',
     indexTitle: 'Alles, nach dem was es ist',
     indexDescription: 'Die Fotos und Filme der Wiener Clownin Titania Chaos nach Thema.',
     indexIntro: 'Jedes Foto und jeder Film dieser Website, geordnet nach dem was sie sind statt danach, auf welcher Seite sie stehen.',

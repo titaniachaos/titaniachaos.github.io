@@ -40,6 +40,22 @@ const frames = computed<Media[]>(() =>
   data.media.filter((m) => m.tags.includes(tag.value))
 )
 
+/**
+ * The written pages that discuss this, rather than the frames that carry it.
+ *
+ * A category page was a listing of pictures with no way into the prose about
+ * them: `workshop` showed two films and never mentioned that a whole page
+ * explains what a workshop is. This is the reverse of `pageTags`, so a page
+ * that changes what its sections ask for appears and disappears here on its
+ * own.
+ */
+const written = computed(() =>
+  Object.values(data.pageTags)
+    .filter((entry) => entry.ref.lang === lang.value && entry.tags.includes(tag.value))
+    .map((entry) => entry.ref)
+    .sort((a, b) => a.title.localeCompare(b.title))
+)
+
 /** The other categories, so a reader can move sideways rather than back. */
 const siblings = computed(() =>
   data.tags
@@ -112,6 +128,11 @@ const pagesFor = (m: Media) => (data.usedOn[m.id] ?? []).filter((p) => p.lang ==
       </li>
     </ul>
 
+    <nav v-if="written.length" class="cat__written" :aria-label="t.written">
+      <span class="cat__written-lead">{{ t.written }}</span>
+      <a v-for="page in written" :key="page.path" :href="page.path">{{ page.title }}</a>
+    </nav>
+
     <nav v-if="siblings.length" class="cat__siblings" :aria-label="t.indexTitle">
       <a v-for="other in siblings" :key="other.tag" :href="other.path">{{ other.name }}</a>
     </nav>
@@ -120,6 +141,34 @@ const pagesFor = (m: Media) => (data.usedOn[m.id] ?? []).filter((p) => p.lang ==
 
 <style scoped>
 .cat { margin: 0; }
+
+.cat__written {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--vp-c-divider);
+}
+.cat__written-lead {
+  margin-right: 0.25rem;
+  color: var(--vp-c-text-3);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.cat__written a {
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  color: var(--vp-c-text-1);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.cat__written a:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
 .cat__title {
   margin: 0 0 0.6rem;
   font-size: 32px;

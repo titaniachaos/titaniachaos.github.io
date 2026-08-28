@@ -83,6 +83,15 @@ for (const file of files) {
     if (!/\salt=/.test(img)) add(file, `image without alt: ${img.slice(0, 80)}`)
   }
 
+  // Frontmatter is read before any component runs, so `{{ $params.name }}` in
+  // a generated page's title ships as those literal characters -- in the tab,
+  // in the search result and in the sitemap. It reads correctly in the body,
+  // which is why the category pages carried it in their headings for a while
+  // without anybody seeing it.
+  for (const [, expression] of html.matchAll(/\{\{\s*([^}]+?)\s*\}\}/g)) {
+    add(file, `un-interpolated template expression in the output: {{ ${expression} }}`)
+  }
+
   const seen = new Set()
   for (const [, id] of html.matchAll(/\sid="([^"]+)"/g)) {
     if (seen.has(id)) add(file, `duplicate id "${id}"`)

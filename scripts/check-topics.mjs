@@ -48,14 +48,30 @@ function asked(text) {
 const pages = new Map()
 const seen = new Set()
 
+/**
+ * The chips are rendered from the `doc-after` slot on every page that has one.
+ * The home layout has none -- VPHome renders `<Content />` last -- so index.md
+ * writes `<PageTopics />` out by hand. Anywhere else that would be a second
+ * copy under the first, and a home page missing it would be one language
+ * quietly losing its exit links.
+ */
+const homes = {}
+
 for (const lang of LANGS) {
   const dir = lang === 'en' ? DOCS : join(DOCS, lang)
   const names = (await readdir(dir).catch(() => []))
     .filter((n) => n.endsWith('.md') && !n.startsWith('['))
   for (const name of names.sort()) {
-    const queries = asked(await readFile(join(dir, name), 'utf8'))
+    const text = await readFile(join(dir, name), 'utf8')
+    const queries = asked(text)
     if (!pages.has(name)) pages.set(name, {})
     pages.get(name)[lang] = queries
+
+    const writesChips = /<PageTopics\s*\/>/.test(text)
+    if (name === 'index.md') homes[lang] = writesChips
+    else if (writesChips) {
+      add(`${lang}/${name}: writes <PageTopics /> and the layout renders it too — the chips would appear twice`)
+    }
 
     for (const query of queries) {
       for (const tag of query.split(/\s+/).filter(Boolean)) {
@@ -65,6 +81,12 @@ for (const lang of LANGS) {
         }
       }
     }
+  }
+}
+
+for (const lang of LANGS) {
+  if (homes[lang] === false) {
+    add(`${lang}/index.md: no <PageTopics /> — the home layout has no slot for it, so this page has no chips`)
   }
 }
 

@@ -86,3 +86,9 @@ Laden Sie Titania zu einer Veranstaltung ein oder fragen Sie nach einem Workshop
 [Titania kontaktieren](mailto:agent@tatianapetkova.com){.contact-button}
 
 <SocialWall />
+
+<!-- The subjects this page touches, as links to their category pages.
+     Written here rather than dropped into a layout slot because the home
+     layout has none after its content: VPHome renders <Content /> last. The
+     component still works out the chips itself -- this only says where. -->
+<PageTopics />

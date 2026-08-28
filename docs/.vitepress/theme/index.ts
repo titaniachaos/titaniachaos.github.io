@@ -21,6 +21,9 @@ export default {
     app.component('MediaCategory', MediaCategory)
     app.component('MediaIndex', MediaIndex)
     app.component('JournalIndex', JournalIndex)
+    // Also placed in the doc-after slot below, for every page that has one.
+    // The home layout does not, so index.md writes it out by hand.
+    app.component('PageTopics', PageTopics)
   },
   Layout: () =>
     // The sponsorship card fills the slot the default theme reserves for Carbon

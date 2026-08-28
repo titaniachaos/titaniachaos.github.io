@@ -32,6 +32,14 @@
 .VPFeature { border-color: var(--vp-c-brand-soft); transition: border-color 0.2s, transform 0.2s; }
 .VPFeature:hover { border-color: var(--vp-c-brand-1); transform: translateY(-2px); }
 .vp-doc img { border-radius: 18px; max-height: 680px; object-fit: cover; }
+/* A picture belongs to the section whose text is wrapped around it. Figures
+   float, and a float outlives its paragraph: a section with three lines and a
+   tall photograph would push it down into the next heading, where it means
+   something else. Headings clear, so a picture can never be read as belonging
+   to the section after it. */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3 { clear: both; }
 .vp-doc blockquote { border-left-color: var(--vp-c-brand-1); color: var(--vp-c-text-1); }
 .vp-doc { font-size: 16px; line-height: 1.75; }
 .vp-doc > p,

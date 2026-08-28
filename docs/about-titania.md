@@ -5,7 +5,9 @@ outline: [1, 2]
 ---
 # About Titania
 
-![Titania Chaos in a red dress and red nose, a juggling club spinning above her open hands](/images/titania-juggling.jpg)
+<MediaHero />
+
+<MediaFigure tags="street performance portrait" />
 
 > I pursue a passion for contact through humour, languages, poetry and emotion.
 
@@ -20,6 +22,8 @@ As Titania Chaos, I perform on the street, at Vienna’s [Theater Olé](https://
 Alongside my artistic work, I have taught languages for 25 years. My academic and professional background spans psychology, communication and interpreting, and this experience strongly informs how I facilitate groups and learning processes.
 
 ## Artistic practice & training
+
+<MediaFigure tags="juggling workshop" />
 
 My practice also draws on social circus, functional juggling and inclusive approaches.
 
@@ -41,9 +45,9 @@ I have had the privilege of learning from artists and teachers including:
 - [Lila Monti](https://www.lilamonti.com/?lang=en){.no-icon} (AR)
 {.teacher-list}
 
-<VideoFacade id="oh8HroecvrA" thumb="/images/yt-oh8HroecvrA.jpg" title="Clown workshop with Titania Chaos at Mini Art Centre, Sofia, October 2023" />
-
 ## In the press
+
+<MediaFigure tags="press" />
 
 Titania Chaos has been featured in Bulgarian television, radio and print media, talking about clowning, laughter and the path that led Tatiana to Titania.
 

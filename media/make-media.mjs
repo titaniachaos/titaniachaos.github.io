@@ -1,0 +1,214 @@
+#!/usr/bin/env node
+// Derives the published media in docs/public/images/media from the archives
+// that sit outside this repository.
+//
+// It is not part of `npm run check` and no build runs it: the sources are not
+// here, and the outputs are committed. It exists so the derivation is written
+// down -- which frame came from which file, at what size, at what quality --
+// rather than living in whoever's shell history produced the webp.
+//
+// One size per frame, because there is now only one way a frame is read: in
+// the prose that surrounds it, and in the hero slider, which shows the same
+// file at about the same size. The widest either slot ever gets is about
+// 320px, so 520px is still better than 1.6x on a retina screen, and the two
+// uses share a single fetch -- the browser caches it and
+// scripts/check-page-weight.mjs counts it once.
+//
+// The number matters: every frame a page places is counted against that
+// page's weight budget, so this quality setting is what decides how many
+// pictures a page can afford. Four at ~50 KB is the working figure.
+//
+// Videos are transcoded to 720p H.264 with a poster frame. Nothing is fetched
+// until someone presses play, so a clip costs a page nothing to carry.
+//
+// Only frames in which Titania is alone are here. See README.md in this
+// directory: a fellow performer, a participant or a child in the frame needs
+// that person's -- or a guardian's written -- agreement, and none of the
+// archive has one. That is the whole of why the good workshop photographs are
+// missing, and it is a consent gap, not an editing choice.
+//
+// Usage:  node media/make-gallery.mjs [archiveRoot]
+//         archiveRoot defaults to the parent of this repository.
+
+import { mkdir, stat } from 'node:fs/promises'
+import { execFile } from 'node:child_process'
+import { promisify } from 'node:util'
+import { join, dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import sharp from 'sharp'
+
+const run = promisify(execFile)
+const here = dirname(fileURLToPath(import.meta.url))
+const root = process.argv[2] ?? resolve(here, '..', '..')
+const out = resolve(here, '..', 'docs/public/images/media')
+
+const W = 520 // px, the widest a frame is shown in prose or in the hero
+const H = 700 // px, the tallest -- portraits are the common case here
+const Q = 66
+
+// The category pages list a whole tag at once -- `performance` is a dozen
+// frames -- and a dozen 50 KB pictures is twice the page budget on its own.
+// So a listing gets its own square, small enough that the largest category
+// still opens in well under half a megabyte.
+const S = 240
+const SQ = 60
+
+/** id -> file in media-archive/originals. Frames Titania appears alone in. */
+const PHOTOS = {
+  'balloon-heart': 'd4fbacdb587f45c9.jpg',
+  'balloon-garland': '2eae149b06a289db.webp',
+  'balloon-chain': 'f8a521d26208ac1b.jpg',
+  'traveller-kit': '7949bd0e9a79e49c.webp',
+  'camera-portrait': 'ad04a06769a7d64b.jpg',
+  'stage-balloon': '1f45dc7a09cecfd8.webp',
+  'stage-gown': '8325b1883f6f37c4.jpg',
+  'stage-collar': '6c231b430b6adac7.jpg',
+  'wall-coat': '8db268c6d04351f9.webp',
+  'beanie-portrait': '423fcf6319886b38.webp',
+  'telephone': '539f051963d9ece1.webp',
+  'radio-studio': '8ad411d87bcb4563.webp',
+  'shadow': 'c648605878f9121d.jpg',
+  'doorway-jump': 'e292705622ddb198.webp',
+  'bench-balance': 'c8307f2235da445e.webp',
+  'barrel-street': '2c1a4c61eeb87ff7.jpg',
+  'statue-embrace': '6fc42ab5f57595f5.webp'
+}
+
+/**
+ * id -> a jpg in media/posters. One is a photograph the site published before
+ * any of this existed and still does. The five YouTube posters that used to
+ * live here are gone: the films are served from this domain now, so their
+ * poster is a frame taken from the file rather than a still fetched from
+ * Google. They live outside docs/public because the site
+ * now carries only the webp derivatives, and a jpg nothing links to is bytes
+ * on GitHub Pages nobody asked for.
+ */
+const POSTERS = {
+  'impact-hub': 'time-travelling-camera.jpg'
+}
+
+/**
+ * The home page's hero portrait, which is not a frame -- no page places it and
+ * no tag reaches it; the theme renders it from the front matter. It is here
+ * because it is the heaviest image the site serves and nothing else recorded
+ * where it came from.
+ *
+ * The slot is at most 320x420 CSS pixels, so 640x840 covers a 2x screen
+ * exactly and anything larger is pixels no one sees. What was published was
+ * 800x992 and had been through webp twice -- re-encoded from the master it is
+ * both smaller and sharper.
+ */
+const HERO = {
+  file: 'titania-chaos-hero.webp',
+  from: '100 procenta budni/IMG_9577.jpeg',
+  w: 640,
+  h: 840,
+  q: 76
+}
+
+/**
+ * id -> a file still in docs/public/images, because something other than a
+ * page needs it at that exact name and size. `titania-juggling.jpg` is the
+ * schema.org Person image in seo.ts; the frame is derived from it rather than
+ * replacing it.
+ */
+const PUBLISHED = {
+  'juggling-pass': 'titania-juggling.jpg'
+}
+
+/**
+ * id -> [source file, where the poster comes from].
+ *
+ * The first two are phone clips from the video archive. The other five are the
+ * films from the @titaniachaosofficial346 channel, downloaded once into
+ * media-archive/youtube and re-encoded here. Serving the bytes from this
+ * domain is the point: the site no longer asks Google for anything, on load or
+ * on click, so the privacy policy is true without a facade standing in front
+ * of it.
+ *
+ * The poster is a number -- the second to freeze -- or the name of a jpg in
+ * media/posters. The five films use the second, and the jpg is YouTube's own
+ * thumbnail, because *she* chose that frame. Picking one here instead meant
+ * choosing which workshop participant's face becomes a still on the website,
+ * which is not a decision a timestamp should be making. The first attempt
+ * froze two of them mid-blur, which is how the question came up.
+ */
+const VIDEOS = {
+  'park-dance': ['100 procenta budni/IMG_2246.MOV', 1.2],
+  'square-cartwheel': ['100 procenta budni/IMG_8554.MOV', 2.0],
+  'workshop-mini-art': ['media-archive/youtube/JG4Iar3Ax7k.mkv', 'yt-JG4Iar3Ax7k.jpg'],
+  'workshop-sofia': ['media-archive/youtube/oh8HroecvrA.mp4', 'yt-oh8HroecvrA.jpg'],
+  'showreel': ['media-archive/youtube/OL9f3qKXE1I.mkv', 'yt-OL9f3qKXE1I.jpg'],
+  'django-tribute': ['media-archive/youtube/VJuf0huu2X4.mp4', 'yt-VJuf0huu2X4.jpg'],
+  'banana-encore': ['media-archive/youtube/w3wkwyrTRiY.mp4', 'yt-w3wkwyrTRiY.jpg']
+}
+
+const kb = (bytes) => `${Math.round(bytes / 1024)} KB`
+const weigh = async (file) => kb((await stat(file)).size)
+
+await mkdir(out, { recursive: true })
+
+/**
+ * The two derivatives a frame has: `<id>.webp` for prose and the hero, and
+ * `<id>-s.webp`, a square, for the category listings.
+ */
+async function frame(source, id) {
+  await sharp(source).resize(W, H, { fit: 'inside', withoutEnlargement: true })
+    .webp({ quality: Q }).toFile(join(out, `${id}.webp`))
+  await sharp(source).resize(S, S, { fit: 'cover', position: 'attention' })
+    .webp({ quality: SQ }).toFile(join(out, `${id}-s.webp`))
+}
+
+for (const [id, file] of Object.entries(PHOTOS)) {
+  const source = join(root, 'media-archive/originals', file)
+  await frame(source, id)
+  console.log(`${id.padEnd(18)} ${(await weigh(join(out, `${id}.webp`))).padStart(8)}   <- ${file}`)
+}
+
+for (const [id, file] of Object.entries(PUBLISHED)) {
+  await frame(resolve(here, '..', 'docs/public/images', file), id)
+  console.log(`${id.padEnd(18)} ${(await weigh(join(out, `${id}.webp`))).padStart(8)}   <- images/${file}`)
+}
+
+{
+  const dest = resolve(here, '..', 'docs/public/images', HERO.file)
+  await sharp(join(root, HERO.from))
+    // From the top: it is a portrait, and what a shorter frame loses is floor.
+    .resize(HERO.w, HERO.h, { fit: 'cover', position: 'top' })
+    .webp({ quality: HERO.q, effort: 6 })
+    .toFile(dest)
+  console.log(`${'hero'.padEnd(18)} ${(await weigh(dest)).padStart(8)}   <- ${HERO.from}`)
+}
+
+for (const [id, file] of Object.entries(POSTERS)) {
+  await frame(join(here, 'posters', file), id)
+  console.log(`${id.padEnd(18)} ${(await weigh(join(out, `${id}.webp`))).padStart(8)}   <- posters/${file}`)
+}
+
+for (const [id, [file, at]] of Object.entries(VIDEOS)) {
+  const source = join(root, file)
+  const mp4 = join(out, `${id}.mp4`)
+  // 720p, constant quality, faststart so it plays before it has finished
+  // arriving. Audio kept, but quietly: it is ambience, not a soundtrack.
+  await run('ffmpeg', ['-v', 'error', '-y', '-i', source,
+    // Fit inside 1280x720, then force both edges even: H.264 with yuv420p
+    // cannot encode an odd dimension, and a portrait source lands on one
+    // easily -- 1080x1920 scales to 405x720 and the encoder refuses to open,
+    // leaving a zero-byte file behind.
+    '-vf',
+    "scale='min(1280,iw)':'min(720,ih)':force_original_aspect_ratio=decrease," +
+      'scale=trunc(iw/2)*2:trunc(ih/2)*2',
+    '-c:v', 'libx264', '-crf', '29', '-preset', 'slow', '-pix_fmt', 'yuv420p',
+    '-c:a', 'aac', '-b:a', '64k', '-ac', '1', '-movflags', '+faststart', mp4])
+
+  if (typeof at === 'string') {
+    await frame(join(here, 'posters', at), id)
+  } else {
+    const still = join(out, `${id}-still.png`)
+    await run('ffmpeg', ['-v', 'error', '-y', '-ss', String(at), '-i', source, '-frames:v', '1', still])
+    await frame(still, id)
+    await run('rm', ['-f', still])
+  }
+  console.log(`${id.padEnd(18)} ${(await weigh(mp4)).padStart(8)} mp4` +
+    `  ${(await weigh(join(out, `${id}.webp`))).padStart(8)} poster   <- ${file}`)
+}

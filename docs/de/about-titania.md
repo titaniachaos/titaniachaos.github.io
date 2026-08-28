@@ -5,7 +5,9 @@ outline: [1, 2]
 ---
 # Über Titania
 
-![Titania Chaos im roten Kleid mit roter Nase, eine Jonglierkeule über den offenen Händen](/images/titania-juggling.jpg)
+<MediaHero />
+
+<MediaFigure tags="street performance portrait" />
 
 > Ich folge einer Leidenschaft für Kontakt durch Humor, Sprachen, Poesie und Emotion.
 
@@ -20,6 +22,8 @@ Als Titania Chaos trete ich auf der Straße, im Wiener [Theater Olé](https://ww
 Neben meiner künstlerischen Arbeit unterrichte ich seit 25 Jahren Sprachen. Mein akademischer und beruflicher Hintergrund umfasst Psychologie, Kommunikation und Dolmetschen, und diese Erfahrung prägt stark, wie ich Gruppen und Lernprozesse begleite.
 
 ## Künstlerische Praxis & Ausbildung
+
+<MediaFigure tags="juggling workshop" />
 
 Meine Praxis schöpft außerdem aus Sozialzirkus, funktionalem Jonglieren und inklusiven Ansätzen.
 
@@ -41,9 +45,9 @@ Ich hatte das Privileg, unter anderem von folgenden Künstlerinnen, Künstlern u
 - [Lila Monti](https://www.lilamonti.com/?lang=en){.no-icon} (AR)
 {.teacher-list}
 
-<VideoFacade id="oh8HroecvrA" thumb="/images/yt-oh8HroecvrA.jpg" title="Clown-Workshop mit Titania Chaos im Mini Art Centre, Sofia, Oktober 2023" />
-
 ## In den Medien
+
+<MediaFigure tags="press" />
 
 Titania Chaos war im bulgarischen Fernsehen, Radio und in Printmedien zu sehen und zu hören und sprach dort über Clownerie, Lachen und den Weg, der Tatiana zu Titania führte.
 

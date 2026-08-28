@@ -3,15 +3,19 @@ import DefaultTheme from 'vitepress/theme'
 import SupportCard from './SupportCard.vue'
 import WorkshopDates from './WorkshopDates.vue'
 import SocialWall from './SocialWall.vue'
-import VideoFacade from './VideoFacade.vue'
+import MediaHero from './MediaHero.vue'
+import MediaFigure from './MediaFigure.vue'
+import MediaCategory from './MediaCategory.vue'
 import './custom.css'
 
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
-    app.component('VideoFacade', VideoFacade)
     app.component('WorkshopDates', WorkshopDates)
     app.component('SocialWall', SocialWall)
+    app.component('MediaHero', MediaHero)
+    app.component('MediaFigure', MediaFigure)
+    app.component('MediaCategory', MediaCategory)
   },
   Layout: () =>
     // The sponsorship card fills the slot the default theme reserves for Carbon

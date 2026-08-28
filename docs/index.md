@@ -9,8 +9,8 @@ hero:
   image:
     src: /images/titania-chaos-hero.webp
     alt: Titania Chaos
-    width: 800
-    height: 992
+    width: 640
+    height: 840
   actions:
     - theme: brand
       text: Ask about workshops
@@ -26,8 +26,11 @@ features:
   - title: Reset
     details: Leave everyday pressure behind and rediscover lightness, energy and joy.
 ---
+<MediaHero />
 
 ## Clown workshop experiences
+
+<MediaFigure tags="workshop performance" />
 
 > “Everything was fluid, subtle and fun. Her great finesse and kindness enabled her to accompany each person personally.” — Juliette, philosophy teacher
 
@@ -35,15 +38,18 @@ features:
 
 > “I learned that clown is not just a word. It is a verb: contact and sharing key moments with the audience.” — Philipp, architect
 
-<VideoFacade id="JG4Iar3Ax7k" thumb="/images/yt-JG4Iar3Ax7k.jpg" title="Clown workshop with Titania Chaos, Mini Art Foundation, January 2024" />
 
 ## Who the workshops are for
+
+<MediaFigure tags="workshop juggling" />
 
 You do not need a theatre background or previous clown experience. You might be an IT specialist, a teacher, a lawyer, a social worker, a nurse, a translator, a cook, a dancer, a librarian, a musician, a firefighter, a doctor, a shop owner, an artist or a hairdresser. You might work in an office, a school, a hospital, a kitchen or on a stage. You are someone who wants to discover more about yourself and have fun doing so.
 
 The workshops welcome anyone ready for an adventure with their own humanity, people seeking joyful release from everyday life, theatre enthusiasts, clown beginners and introverts who want to perform in a safe, playful setting.
 
 ## What to expect from a clown workshop
+
+<MediaFigure tags="stage performance" />
 
 - Playfulness, laughter, lightness and joy
 - Insights into clowning and humour
@@ -53,13 +59,17 @@ The workshops welcome anyone ready for an adventure with their own humanity, peo
 
 ## Practical details {#practical-details}
 
+<MediaFigure tags="workshop" />
+
 Workshops take place in Vienna and welcome adult beginners as well as people with theatre experience.
 
 <WorkshopDates />
 
 [Ask about workshops](mailto:agent@tatianapetkova.com?subject=Clown%20workshop%20enquiry){.contact-button}
 
-## Give a clown workshop as a gift {#join-in}
+## Give a clown workshop as a gift
+
+<MediaFigure tags="portrait street" /> {#join-in}
 
 Give someone a workshop—or come with a friend and share moments of lightness and joy.
 
@@ -68,6 +78,8 @@ Give someone a workshop—or come with a friend and share moments of lightness a
 Prefer a performance or a playful photo experience for your event? [Explore ways to work with Titania](/work-with-titania){.contact-button .secondary}
 
 ## Bookings & enquiries
+
+<MediaFigure tags="feed" />
 
 Invite Titania to an event or ask about a workshop, performance or playful photo experience.
 

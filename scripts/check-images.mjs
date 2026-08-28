@@ -16,12 +16,14 @@
 // Unreferenced images are reported but do not fail: a file can be linked from
 // somewhere this repository cannot see.
 //
-// Dimensions are read from the file headers directly -- no dependencies.
+// Dimensions are read from the file headers by scripts/lib/image-size.mjs --
+// no dependencies, and one copy of the parsers rather than two.
 //
 // Usage: node scripts/check-images.mjs [publicDir] [distDir]
 
 import { readdir, readFile, stat } from 'node:fs/promises'
 import { join, relative, extname, basename } from 'node:path'
+import { dimensions } from './lib/image-size.mjs'
 
 const publicDir = process.argv[2] ?? 'docs/public'
 const distDir = process.argv[3] ?? 'docs/.vitepress/dist'
@@ -33,65 +35,6 @@ const MAX_EDGE = 2400 // fails: no slot on either site is anywhere near this
 const BYTES_PER_PIXEL = 1.2 // notes: a well-encoded photo is nearer 0.1–0.4
 
 const IMAGE = /\.(png|jpe?g|webp|gif|avif|svg)$/i
-
-// ---- dimensions from headers --------------------------------------------
-
-function pngSize(b) {
-  return b.length >= 24 && b.readUInt32BE(0) === 0x89504e47
-    ? { width: b.readUInt32BE(16), height: b.readUInt32BE(20) }
-    : null
-}
-
-function jpegSize(b) {
-  if (b.length < 4 || b[0] !== 0xff || b[1] !== 0xd8) return null
-  let i = 2
-  while (i < b.length - 9) {
-    if (b[i] !== 0xff) {
-      i++
-      continue
-    }
-    const marker = b[i + 1]
-    // SOF0..SOF15 carry the frame size; DHT, JPG and DAC share the range.
-    if (marker >= 0xc0 && marker <= 0xcf && marker !== 0xc4 && marker !== 0xc8 && marker !== 0xcc) {
-      return { height: b.readUInt16BE(i + 5), width: b.readUInt16BE(i + 7) }
-    }
-    if (marker === 0xd8 || (marker >= 0xd0 && marker <= 0xd9)) {
-      i += 2
-      continue
-    }
-    i += 2 + b.readUInt16BE(i + 2)
-  }
-  return null
-}
-
-function webpSize(b) {
-  if (b.length < 30 || b.toString('ascii', 0, 4) !== 'RIFF' || b.toString('ascii', 8, 12) !== 'WEBP') return null
-  const chunk = b.toString('ascii', 12, 16)
-  if (chunk === 'VP8 ') {
-    return { width: b.readUInt16LE(26) & 0x3fff, height: b.readUInt16LE(28) & 0x3fff }
-  }
-  if (chunk === 'VP8L') {
-    const bits = b.readUInt32LE(21)
-    return { width: (bits & 0x3fff) + 1, height: ((bits >> 14) & 0x3fff) + 1 }
-  }
-  if (chunk === 'VP8X') {
-    const at = 24
-    const w = b[at] | (b[at + 1] << 8) | (b[at + 2] << 16)
-    const h = b[at + 3] | (b[at + 4] << 8) | (b[at + 5] << 16)
-    return { width: w + 1, height: h + 1 }
-  }
-  return null
-}
-
-function gifSize(b) {
-  return b.length >= 10 && b.toString('ascii', 0, 3) === 'GIF'
-    ? { width: b.readUInt16LE(6), height: b.readUInt16LE(8) }
-    : null
-}
-
-function dimensions(buffer) {
-  return pngSize(buffer) ?? jpegSize(buffer) ?? webpSize(buffer) ?? gifSize(buffer)
-}
 
 // ---- gather --------------------------------------------------------------
 
@@ -172,6 +115,45 @@ for (const file of files.sort()) {
   }
 
   if (!used) notes.push(`${name} is not referenced by the built site (${kb} KB)`)
+}
+
+// ---- the media pool -------------------------------------------------------
+// A frame in media.data.ts is named in the JavaScript bundle whether or not
+// any page renders it, so the "unreferenced" test above always calls it used.
+// It is not: `<MediaFigure>` resolves to one best frame per section, and a
+// frame that never wins anywhere is a file GitHub Pages serves to nobody.
+//
+// That is allowed -- the archive is a pool, and a frame is there for the next
+// page that asks for what it is -- but it should be a decision, not a
+// surprise. So it is counted, and the heaviest of them are named.
+
+const rendered_html = built.filter((f) => f.endsWith('.html'))
+let pages = ''
+for (const f of rendered_html) pages += await readFile(f, 'utf8')
+
+const frames = [...(await readFile('docs/.vitepress/media.data.ts', 'utf8').catch(() => ''))
+  .matchAll(/^\s{4}id: '([a-z0-9-]+)',$/gm)].map((m) => m[1])
+
+if (frames.length) {
+  const idle = frames.filter((id) => !pages.includes(`/images/media/${id}.`))
+  if (idle.length) {
+    const weigh = async (id) => {
+      let bytes = 0
+      for (const ext of ['webp', 'mp4']) {
+        bytes += await stat(join(publicDir, 'images/media', `${id}.${ext}`)).then((s) => s.size).catch(() => 0)
+      }
+      return bytes
+    }
+    const weighed = (await Promise.all(idle.map(async (id) => ({ id, bytes: await weigh(id) }))))
+      .sort((a, b) => b.bytes - a.bytes)
+    const idleBytes = weighed.reduce((sum, f) => sum + f.bytes, 0)
+    notes.push(
+      `${idle.length} of ${frames.length} frames are in the pool — shipped, but no page renders them ` +
+        `(${Math.round(idleBytes / KB)} KB): ` +
+        weighed.slice(0, 4).map((f) => `${f.id} ${Math.round(f.bytes / KB)} KB`).join(', ') +
+        (weighed.length > 4 ? ', …' : '')
+    )
+  }
 }
 
 // ---- report --------------------------------------------------------------

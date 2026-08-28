@@ -6,6 +6,24 @@ import {
   localeAlternateTags
 } from './seo.ts'
 import { runBuildHooks, runSitemapHooks } from './generators.ts'
+import { TAGS, TAG_NAMES, CATEGORY_UI, asTitle, categoryPath } from './categories.ts'
+import type { Lang } from './locale.ts'
+
+/**
+ * The categories menu, generated from the vocabulary.
+ *
+ * Thirteen categories today and the list is a `const` somewhere else, so this
+ * is the one place that must not be a hand-written list of links: a new tag
+ * should appear in the navigation of all three languages without anyone
+ * remembering that navigation exists.
+ */
+const CATEGORIES = (lang: Lang) => ({
+  text: CATEGORY_UI[lang].indexTitle,
+  items: TAGS.map((tag) => ({
+    text: asTitle(TAG_NAMES[lang][tag]),
+    link: categoryPath(lang, tag)
+  }))
+})
 
 /**
  * The Clown project is a separate VitePress site built from the `clown`
@@ -78,6 +96,20 @@ export default defineConfig({
       ? [['meta', { name: 'google-site-verification', content: GOOGLE_SITE_VERIFICATION }] as const]
       : [])
   ],
+
+  // A generated category page carries its title and description in its route
+  // params, and front matter does not interpolate `$params` -- only the body
+  // does. Without this every one of the 39 of them would be served with a
+  // literal `{{ $params.title }}` in its <title>, its canonical card and its
+  // JSON-LD, which is exactly the sort of thing that looks fine in a browser
+  // and is wrong in a search result.
+  transformPageData(pageData) {
+    const params = pageData.params as { title?: string; description?: string } | undefined
+    if (!params?.title) return
+    pageData.title = params.title
+    pageData.description = params.description ?? pageData.description
+    pageData.frontmatter = { ...pageData.frontmatter, title: params.title, description: params.description }
+  },
 
   transformHead: (ctx) => buildHead(ctx, ctx.siteConfig),
 
@@ -158,6 +190,7 @@ export default defineConfig({
           { text: 'Work with Titania', link: '/work-with-titania' },
           { text: 'Journal', link: '/blog/' },
           { text: 'About', link: '/about-titania' },
+          CATEGORIES('en'),
           { text: 'Clown Project', link: CLOWN_SITE(''), ...SAME_SITE }
         ],
         outline: { level: [2, 3], label: 'On this page' },
@@ -187,6 +220,7 @@ export default defineConfig({
           { text: 'Работа с Титания', link: '/bg/work-with-titania' },
           { text: 'Дневник', link: '/bg/blog/' },
           { text: 'За Титания', link: '/bg/about-titania' },
+          CATEGORIES('bg'),
           { text: 'Проект „Клоун“', link: CLOWN_SITE('/bg'), ...SAME_SITE }
         ],
         outline: { level: [2, 3], label: 'На тази страница' },
@@ -221,6 +255,7 @@ export default defineConfig({
           { text: 'Mit Titania arbeiten', link: '/de/work-with-titania' },
           { text: 'Journal', link: '/de/blog/' },
           { text: 'Über Titania', link: '/de/about-titania' },
+          CATEGORIES('de'),
           { text: 'Clown-Projekt', link: CLOWN_SITE('/de'), ...SAME_SITE }
         ],
         outline: { level: [2, 3], label: 'Auf dieser Seite' },

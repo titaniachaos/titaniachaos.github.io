@@ -12,7 +12,7 @@ Diese Website stellt die künstlerische Arbeit einer einzelnen Künstlerin dar: 
 
 ## Datenschutzerklärung
 
-**Video.** Filme liegen auf YouTube. Beim Lesen wird nichts von YouTube angefordert: Das Vorschaubild kommt von dieser Website, ein Player wird nicht geladen. Wenn Sie auf Abspielen klicken, wird das Video von youtube-nocookie.com geladen — ab diesem Moment erhält Google Ihre IP-Adresse und kann Cookies nach seiner eigenen Datenschutzerklärung setzen, auf die diese Website keinen Einfluss hat. Ohne Klick besteht kein Kontakt zu Google.
+**Video.** Filme werden von dieser Website ausgeliefert. Weder beim Lesen noch beim Klick auf Abspielen wird etwas von Google angefordert: Die Datei und das Vorschaubild kommen beide von dieser Domain. Unter jedem Film steht zusätzlich ein Link zum selben Film auf YouTube — diesem Link zu folgen ist ein Besuch bei Google zu deren Bedingungen, und das ist Ihre Entscheidung.
 
 **Verantwortliche.** Tatiana Petkova, Anschrift wie oben.
 

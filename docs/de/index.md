@@ -9,8 +9,8 @@ hero:
   image:
     src: /images/titania-chaos-hero.webp
     alt: Titania Chaos
-    width: 800
-    height: 992
+    width: 640
+    height: 840
   actions:
     - theme: brand
       text: Workshops anfragen
@@ -26,8 +26,11 @@ features:
   - title: Auftanken
     details: Lassen Sie den Alltagsdruck hinter sich und entdecken Sie Leichtigkeit, Energie und Freude wieder.
 ---
+<MediaHero />
 
 ## Erfahrungen aus den Clown-Workshops
+
+<MediaFigure tags="workshop performance" />
 
 > „Alles war fließend, feinsinnig und lustig. Ihr großes Feingefühl und ihre Freundlichkeit haben es ihr ermöglicht, jede Person persönlich zu begleiten.“ — Juliette, Philosophielehrerin
 
@@ -35,15 +38,18 @@ features:
 
 > „Ich habe gelernt, dass Clown nicht nur ein Wort ist. Es ist ein Tätigkeitswort: Kontakt und das Teilen entscheidender Momente mit dem Publikum.“ — Philipp, Architekt
 
-<VideoFacade id="JG4Iar3Ax7k" thumb="/images/yt-JG4Iar3Ax7k.jpg" title="Clown-Workshop mit Titania Chaos, Mini Art Foundation, Jänner 2024" />
 
 ## Für wen die Workshops sind
+
+<MediaFigure tags="workshop juggling" />
 
 Sie brauchen keine Theatererfahrung und keine Vorerfahrung mit Clownerie. Sie können IT-Fachkraft, Lehrerin, Jurist, Sozialarbeiterin, Krankenpfleger, Übersetzerin, Koch, Tänzerin, Bibliothekar, Musikerin, Feuerwehrmann, Ärztin, Geschäftsinhaber, Künstlerin oder Friseur sein. Sie können in einem Büro, in einer Schule, in einem Krankenhaus, in einer Küche oder auf einer Bühne arbeiten. Sie sind jemand, der mehr über sich selbst entdecken und dabei Freude haben möchte.
 
 Die Workshops stehen allen offen, die bereit für ein Abenteuer mit ihrer eigenen Menschlichkeit sind: Menschen auf der Suche nach freudvoller Entlastung vom Alltag, Theaterbegeisterte, Clown-Anfängerinnen und Introvertierte, die in einem sicheren, spielerischen Rahmen auftreten möchten.
 
 ## Was Sie von einem Clown-Workshop erwarten können
+
+<MediaFigure tags="stage performance" />
 
 - Verspieltheit, Lachen, Leichtigkeit und Freude
 - Einblicke in Clownerie und Humor
@@ -53,13 +59,17 @@ Die Workshops stehen allen offen, die bereit für ein Abenteuer mit ihrer eigene
 
 ## Praktische Informationen {#practical-details}
 
+<MediaFigure tags="workshop" />
+
 Die Workshops finden in Wien statt und heißen sowohl erwachsene Anfängerinnen und Anfänger als auch Menschen mit Theatererfahrung willkommen.
 
 <WorkshopDates />
 
 [Workshops anfragen](mailto:agent@tatianapetkova.com?subject=Clown%20workshop%20enquiry){.contact-button}
 
-## Einen Clown-Workshop verschenken {#join-in}
+## Einen Clown-Workshop verschenken
+
+<MediaFigure tags="portrait street" /> {#join-in}
 
 Schenken Sie jemandem einen Workshop – oder kommen Sie mit einer Freundin und teilen Sie Momente der Leichtigkeit und Freude.
 
@@ -68,6 +78,8 @@ Schenken Sie jemandem einen Workshop – oder kommen Sie mit einer Freundin und 
 Lieber eine Vorstellung oder ein spielerisches Fotoerlebnis für Ihre Veranstaltung? [Entdecken Sie die Möglichkeiten der Zusammenarbeit](/de/work-with-titania){.contact-button .secondary}
 
 ## Buchungen & Anfragen
+
+<MediaFigure tags="feed" />
 
 Laden Sie Titania zu einer Veranstaltung ein oder fragen Sie nach einem Workshop, einer Performance oder einem spielerischen Fotoerlebnis.
 

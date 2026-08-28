@@ -40,10 +40,9 @@ const IMAGES = {
   // them, so the sharing image is a real landscape crop rather than the
   // portrait, which arrived on X and LinkedIn as a band across the middle.
   'titania-chaos-card.jpg': { w: 1200, h: 630, alt: 'Titania Chaos' },
-  'titania-chaos-hero.webp': { w: 800, h: 992, alt: 'Titania Chaos' },
+  'titania-chaos-hero.webp': { w: 640, h: 840, alt: 'Titania Chaos' },
   'titania-juggling.jpg': { w: 800, h: 1000, alt: 'Tatiana Petkova as Titania Chaos, catching a juggling club' },
-  'work-with-titania-card.jpg': { w: 768, h: 402, alt: 'Titania Chaos performing with a microphone in front of an audience' },
-  'time-travelling-camera.jpg': { w: 768, h: 768, alt: "Titania's time-travelling camera" }
+  'work-with-titania-card.jpg': { w: 768, h: 402, alt: 'Titania Chaos performing with a microphone in front of an audience' }
 } as const
 
 /** Per-page social image, keyed by the locale-stripped slug. */

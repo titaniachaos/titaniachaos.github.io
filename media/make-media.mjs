@@ -63,8 +63,14 @@ const Q = 66
 // frames -- and a dozen 50 KB pictures is twice the page budget on its own.
 // So a listing gets its own square, small enough that the largest category
 // still opens in well under half a megabyte.
-const S = 240
-const SQ = 60
+// 160, not 240. A listing square is shown at about 120px and never larger, so
+// 240 was two and a half times the pixels anyone sees. That did not matter at
+// 26 frames and matters a great deal at 111: the `solitude` category alone
+// lists 45 of them, and at the old size its tiles came to 495 KB against a
+// 500 KB page budget. At this size the same page carries every frame it has
+// and stays under 400 KB, with room for the archive to grow again.
+const S = 160
+const SQ = 62
 
 /** id -> file in media-archive/originals. Frames Titania appears alone in. */
 const PHOTOS = {

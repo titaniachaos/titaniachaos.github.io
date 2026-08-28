@@ -536,7 +536,7 @@
       },
       "url": "https://titaniachaos.github.io/images/media/juggling-pass.webp",
       "tile": "https://titaniachaos.github.io/images/media/juggling-pass-s.webp",
-      "consentOwed": "a second person, clearly identifiable, is in the frame"
+      "othersInFrame": "a second person, clearly identifiable, is in the frame"
     },
     {
       "id": "impact-hub",
@@ -557,7 +557,7 @@
       },
       "url": "https://titaniachaos.github.io/images/media/impact-hub.webp",
       "tile": "https://titaniachaos.github.io/images/media/impact-hub-s.webp",
-      "consentOwed": "a seated audience, several of them identifiable, including a child"
+      "othersInFrame": "a seated audience, several of them identifiable, including a child"
     },
     {
       "id": "blue-corner",

@@ -128,7 +128,7 @@ for (const frame of await frames()) {
     tile: `${base}-s.webp`,
     ...(frame.seconds ? { film: `${base}.mp4` } : {}),
     ...(frame.permalink ? { source: frame.permalink } : {}),
-    ...(frame.consentOwed ? { consentOwed: frame.consentOwed } : {})
+    ...(frame.othersInFrame ? { othersInFrame: frame.othersInFrame } : {})
   })
 }
 

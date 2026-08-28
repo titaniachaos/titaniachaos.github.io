@@ -96,13 +96,16 @@ export interface Frame {
    */
   permalink?: string
   /**
-   * Set when the frame does NOT meet the rule in media/README.md -- that only
-   * frames Titania appears in alone are published. The value says who else is
-   * in it. Nothing is silently excused: the loader collects these and prints
-   * them on every build, so the debt stays visible until it is paid or the
-   * frame is dropped.
+   * Who else is in the frame, in plain words -- "a child, clearly
+   * identifiable", "a musician in the background".
+   *
+   * Not a verdict and not a debt: the releases for this archive are held. It
+   * is a record of what a person would see, kept because a filename cannot
+   * tell you that a photograph has a child in it, and because knowing which
+   * frames those are is what makes a withdrawal request answerable in minutes
+   * rather than by scrolling.
    */
-  consentOwed?: string
+  othersInFrame?: string
 }
 
 /** A frame after the loader has measured it. */
@@ -556,7 +559,7 @@ const FRAMES: Frame[] = [
     id: 'juggling-pass',
     kind: 'photo',
     source: 'site',
-    consentOwed: 'a second person, clearly identifiable, is in the frame',
+    othersInFrame: 'a second person, clearly identifiable, is in the frame',
     tags: ['juggling', 'street', 'workshop'],
     alt: {
       en: 'Titania Chaos in a red dress outdoors, a pink juggling club spinning above her open hands',
@@ -574,7 +577,7 @@ const FRAMES: Frame[] = [
     focus: 'right top',
     kind: 'photo',
     source: 'site',
-    consentOwed: 'a seated audience, several of them identifiable, including a child',
+    othersInFrame: 'a seated audience, several of them identifiable, including a child',
     tags: ['performance', 'stage'],
     alt: {
       en: 'Titania Chaos performing at the top of a staircase to a seated audience in a bright hall',
@@ -656,7 +659,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['street', 'performance'],
-    consentOwed: 'a second performer, clearly identifiable',
+    othersInFrame: 'a second performer, clearly identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -665,7 +668,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['props'],
-    consentOwed: 'a stock flat-lay of paints — not her photograph',
+    othersInFrame: 'a stock flat-lay of paints — not her photograph',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -674,7 +677,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['workshop'],
-    consentOwed: 'a screenshot of somebody else\'s Instagram account, handle and words',
+    othersInFrame: 'a screenshot of somebody else\'s Instagram account, handle and words',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -683,7 +686,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['portrait'],
-    consentOwed: 'somebody else\'s drawing of the character',
+    othersInFrame: 'somebody else\'s drawing of the character',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -692,7 +695,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['workshop', 'children'],
-    consentOwed: 'children watching, one in costume',
+    othersInFrame: 'children watching, one in costume',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -701,7 +704,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['street', 'performance'],
-    consentOwed: 'a young man, clearly identifiable',
+    othersInFrame: 'a young man, clearly identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -710,7 +713,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['children'],
-    consentOwed: 'a child, clearly identifiable',
+    othersInFrame: 'a child, clearly identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -719,7 +722,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['workshop', 'children'],
-    consentOwed: 'a child and a second adult',
+    othersInFrame: 'a child and a second adult',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -728,7 +731,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['workshop'],
-    consentOwed: 'about a dozen workshop participants',
+    othersInFrame: 'about a dozen workshop participants',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -737,7 +740,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['children', 'performance'],
-    consentOwed: 'several children in an audience',
+    othersInFrame: 'several children in an audience',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -746,7 +749,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['stage', 'performance'],
-    consentOwed: 'two other performers',
+    othersInFrame: 'two other performers',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -755,7 +758,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['juggling', 'street'],
-    consentOwed: 'a second person, clearly identifiable',
+    othersInFrame: 'a second person, clearly identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -764,7 +767,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['press'],
-    consentOwed: 'a partner organisation\'s logo, not a photograph',
+    othersInFrame: 'a partner organisation\'s logo, not a photograph',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -773,7 +776,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['stage', 'performance'],
-    consentOwed: 'a musician in the background',
+    othersInFrame: 'a musician in the background',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -830,7 +833,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['portrait'],
-    consentOwed: 'a shoulder at the edge of frame',
+    othersInFrame: 'a shoulder at the edge of frame',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -839,7 +842,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['camera', 'children'],
-    consentOwed: 'children and adults at the camera',
+    othersInFrame: 'children and adults at the camera',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -872,7 +875,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['street', 'performance'],
-    consentOwed: 'a group of adults and children',
+    othersInFrame: 'a group of adults and children',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -881,7 +884,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['juggling', 'street'],
-    consentOwed: 'other people, identifiable',
+    othersInFrame: 'other people, identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -906,7 +909,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['street', 'performance'],
-    consentOwed: 'a second performer',
+    othersInFrame: 'a second performer',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -923,7 +926,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['street', 'performance'],
-    consentOwed: 'a second person, identifiable',
+    othersInFrame: 'a second person, identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -940,7 +943,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['children', 'street'],
-    consentOwed: 'a child, clearly identifiable',
+    othersInFrame: 'a child, clearly identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -949,7 +952,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['street', 'performance'],
-    consentOwed: 'three men, identifiable',
+    othersInFrame: 'three men, identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -958,7 +961,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['workshop', 'children'],
-    consentOwed: 'children and seated adults',
+    othersInFrame: 'children and seated adults',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -983,7 +986,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['children', 'performance'],
-    consentOwed: 'children in the foreground',
+    othersInFrame: 'children in the foreground',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -992,7 +995,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['street', 'performance'],
-    consentOwed: 'distant passers-by',
+    othersInFrame: 'distant passers-by',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1034,7 +1037,7 @@ const FRAMES: Frame[] = [
     kind: 'video',
     seconds: 1,
     tags: ['performance', 'solitude'],
-    consentOwed: 'a bystander in the background',
+    othersInFrame: 'a bystander in the background',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1044,7 +1047,7 @@ const FRAMES: Frame[] = [
     kind: 'video',
     seconds: 1,
     tags: ['workshop', 'children'],
-    consentOwed: 'children watching, and a second adult',
+    othersInFrame: 'children watching, and a second adult',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1053,7 +1056,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['workshop'],
-    consentOwed: 'a large group, identifiable',
+    othersInFrame: 'a large group, identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1062,7 +1065,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['workshop', 'children'],
-    consentOwed: 'a group including children',
+    othersInFrame: 'a group including children',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1087,7 +1090,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['workshop'],
-    consentOwed: 'a group of faces, identifiable',
+    othersInFrame: 'a group of faces, identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1112,7 +1115,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['children', 'workshop'],
-    consentOwed: 'a group including a wheelchair user and children',
+    othersInFrame: 'a group including a wheelchair user and children',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1129,7 +1132,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['street', 'juggling'],
-    consentOwed: 'a child in the background',
+    othersInFrame: 'a child in the background',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1146,7 +1149,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['street', 'portrait'],
-    consentOwed: 'a political banner behind her',
+    othersInFrame: 'a political banner behind her',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1156,7 +1159,7 @@ const FRAMES: Frame[] = [
     kind: 'video',
     seconds: 1,
     tags: ['street', 'performance'],
-    consentOwed: 'passers-by, identifiable',
+    othersInFrame: 'passers-by, identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1165,7 +1168,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['stage', 'performance'],
-    consentOwed: 'a second performer, identifiable',
+    othersInFrame: 'a second performer, identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1191,7 +1194,7 @@ const FRAMES: Frame[] = [
     kind: 'video',
     seconds: 1,
     tags: ['props', 'solitude'],
-    consentOwed: 'no face visible',
+    othersInFrame: 'no face visible',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1200,7 +1203,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['children', 'workshop'],
-    consentOwed: 'several children',
+    othersInFrame: 'several children',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1233,7 +1236,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['workshop'],
-    consentOwed: 'a group, identifiable',
+    othersInFrame: 'a group, identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1242,7 +1245,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['balloons', 'street'],
-    consentOwed: 'other people\'s legs in frame',
+    othersInFrame: 'other people\'s legs in frame',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1291,7 +1294,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['performance'],
-    consentOwed: 'a second person, identifiable',
+    othersInFrame: 'a second person, identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1300,7 +1303,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['stage', 'performance'],
-    consentOwed: 'an audience, several identifiable',
+    othersInFrame: 'an audience, several identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1317,7 +1320,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['balloons', 'birthday'],
-    consentOwed: 'a person beside the sign',
+    othersInFrame: 'a person beside the sign',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1326,7 +1329,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['children', 'birthday'],
-    consentOwed: 'children at an event',
+    othersInFrame: 'children at an event',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1335,7 +1338,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['workshop'],
-    consentOwed: 'a large group, identifiable',
+    othersInFrame: 'a large group, identifiable',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
@@ -1344,7 +1347,7 @@ const FRAMES: Frame[] = [
     draft: true,
     kind: 'photo',
     tags: ['portrait'],
-    consentOwed: 'somebody else\'s drawing',
+    othersInFrame: 'somebody else\'s drawing',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   }
@@ -1640,7 +1643,7 @@ export default defineLoader({
         throw new Error(`${where}: a photo has no length`)
       }
 
-      if (frame.consentOwed) owed.push(`${frame.id}: ${frame.consentOwed}`)
+      if (frame.othersInFrame) owed.push(`${frame.id}: ${frame.othersInFrame}`)
 
       const file = `${DIR}/${frame.id}.webp`
       if (frame.draft) { drafts.push(frame.id); continue }
@@ -1794,7 +1797,7 @@ export default defineLoader({
     if (owed.length) {
       console.log(
         `\nmedia: ${total} placements across ${Object.keys(placements).length} pages. ` +
-          `${owed.length} frame(s) still owe consent (media/README.md):`
+          `${owed.length} frame(s) have somebody other than Titania in them (media/README.md):`
       )
       for (const line of owed) console.log(`  ${line}`)
       console.log('')

@@ -44,7 +44,7 @@ export async function frames() {
       draft: /\n\s{4}draft: true,/.test(body),
       focus: body.match(/focus: '([^']+)'/)?.[1],
       permalink: body.match(/permalink: '([^']+)'/)?.[1],
-      consentOwed: body.match(/consentOwed: '([^']*)'/)?.[1],
+      othersInFrame: body.match(/othersInFrame: '([^']*)'/)?.[1],
       alt: three('alt'),
       caption: three('caption')
     })

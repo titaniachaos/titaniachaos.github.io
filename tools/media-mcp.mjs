@@ -78,7 +78,7 @@ async function catalogue() {
       tags: [...(body.match(/tags: \[([^\]]*)\]/)?.[1] ?? '').matchAll(/'([a-z-]+)'/g)].map((m) => m[1]),
       seconds: Number(body.match(/seconds: (\d+)/)?.[1]) || undefined,
       source: body.match(/source: '([a-z]+)'/)?.[1] ?? 'archive',
-      consentOwed: body.match(/consentOwed: '([^']*)'/)?.[1],
+      othersInFrame: body.match(/othersInFrame: '([^']*)'/)?.[1],
       caption: body.match(/caption: \{\s*\n\s*en: '((?:[^'\\]|\\.)*)'/)?.[1]
     })
   }
@@ -126,13 +126,13 @@ const TOOLS = {
       const lines = list.map(
         (f) =>
           `${f.placed ? ' ' : '·'} ${f.id.padEnd(20)} ${f.kind.padEnd(5)} ${(f.source ?? '').padEnd(10)}` +
-          `${f.tags.join(' ').padEnd(34)}${f.consentOwed ? ' ⚠ consent owed' : ''}`
+          `${f.tags.join(' ').padEnd(34)}${f.othersInFrame ? ' ⚠ consent owed' : ''}`
       )
       return (
         `vocabulary: ${tags.join(', ')}\n\n` +
         `${list.length} frame(s)  ("·" = shipped but no page renders it)\n` +
         lines.join('\n') +
-        `\n\n${list.filter((f) => f.consentOwed).length} owe consent; see media/README.md`
+        `\n\n${list.filter((f) => f.othersInFrame).length} owe consent; see media/README.md`
       )
     }
   },
@@ -323,7 +323,7 @@ const TOOLS = {
             `${f.id}  ${f.kind}${f.seconds ? ` ${f.seconds}s` : ''}  ${f.tags.join(' ')}`,
             `  ${url}`,
             film ? `  ${film}` : null,
-            f.consentOwed ? `  ⚠ consent owed: ${f.consentOwed}` : null,
+            f.othersInFrame ? `  ⚠ consent owed: ${f.othersInFrame}` : null,
             `  ${snippet}`
           ].filter(Boolean).join('\n')
         })

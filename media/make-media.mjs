@@ -293,6 +293,53 @@ const RECORDS = new Map((await catalogue()).map((f) => [f.id, f]))
  * does not come free -- three passes drifted pixels by a mean of 1.5 levels
  * and compounds from there.
  */
+/**
+ * Where the subject should sit in a square crop, as a rule-of-thirds
+ * intersection. `focus` names one of the four; anything else centres.
+ *
+ * A face on a third rather than in the middle is the difference between a
+ * photograph and a passport photo, and which of the four is not arbitrary: it
+ * follows the look. Someone facing right belongs on the left-hand third, so
+ * the frame gives them somewhere to look into; put them on the right and the
+ * gaze runs straight off the edge.
+ */
+const THIRDS = {
+  'left top': [1 / 3, 1 / 3],
+  'right top': [2 / 3, 1 / 3],
+  'left bottom': [1 / 3, 2 / 3],
+  'right bottom': [2 / 3, 2 / 3],
+  centre: [1 / 2, 1 / 2]
+}
+
+/**
+ * The square, cropped so the subject lands on its intersection.
+ *
+ * Where the subject *is* comes from sharp's attention strategy, which returns
+ * the offsets of the crop it chose; the centre of that crop is the best guess
+ * at the subject available without face detection. The square is then shifted
+ * so that point falls on the named third, and clamped so the crop stays inside
+ * the frame -- a subject already near an edge cannot be moved further than the
+ * picture allows, and a clamped crop is better than a black margin.
+ */
+async function square(source, focus) {
+  const meta = await sharp(source).metadata()
+  const side = Math.min(meta.width, meta.height)
+
+  const probe = await sharp(source)
+    .resize(side, side, { fit: 'cover', position: 'attention' })
+    .toBuffer({ resolveWithObject: true })
+
+  // Attention reports how far it moved the crop; its centre is the subject.
+  const subjectX = -(probe.info.cropOffsetLeft ?? 0) + side / 2
+  const subjectY = -(probe.info.cropOffsetTop ?? 0) + side / 2
+
+  const [tx, ty] = THIRDS[focus] ?? THIRDS.centre
+  const left = Math.round(Math.min(Math.max(subjectX - tx * side, 0), meta.width - side))
+  const top = Math.round(Math.min(Math.max(subjectY - ty * side, 0), meta.height - side))
+
+  return sharp(source).extract({ left, top, width: side, height: side }).resize(S, S)
+}
+
 async function frame(source, id) {
   const record = RECORDS.get(id)
   const packet = record ? xmp(record, META) : null
@@ -300,7 +347,7 @@ async function frame(source, id) {
 
   await stamp(sharp(source).resize(W, H, { fit: 'inside', withoutEnlargement: true }))
     .webp({ quality: Q }).toFile(join(out, `${id}.webp`))
-  await stamp(sharp(source).resize(S, S, { fit: 'cover', position: record?.focus ?? 'attention' }))
+  await stamp(await square(source, record?.focus))
     .webp({ quality: SQ }).toFile(join(out, `${id}-s.webp`))
 }
 

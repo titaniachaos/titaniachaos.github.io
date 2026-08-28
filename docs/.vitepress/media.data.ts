@@ -237,6 +237,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'balloon-heart',
+    focus: 'left top',
     kind: 'photo',
     tags: ['balloons', 'children', 'birthday', 'performance'],
     alt: {
@@ -252,7 +253,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'balloon-chain',
-    focus: 'top',
+    focus: 'right top',
     kind: 'photo',
     tags: ['balloons', 'children', 'birthday'],
     alt: {
@@ -268,7 +269,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'balloon-garland',
-    focus: 'top',
+    focus: 'right top',
     kind: 'photo',
     tags: ['balloons', 'street', 'birthday'],
     alt: {
@@ -284,7 +285,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'camera-portrait',
-    focus: 'top',
+    focus: 'left top',
     kind: 'photo',
     tags: ['camera', 'performance', 'props'],
     alt: {
@@ -300,6 +301,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'traveller-kit',
+    focus: 'centre',
     kind: 'photo',
     tags: ['camera', 'props'],
     alt: {
@@ -315,7 +317,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'stage-collar',
-    focus: 'top',
+    focus: 'left top',
     kind: 'photo',
     tags: ['stage', 'portrait', 'performance'],
     alt: {
@@ -331,6 +333,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'stage-balloon',
+    focus: 'right top',
     kind: 'photo',
     tags: ['stage', 'performance', 'solitude'],
     alt: {
@@ -346,6 +349,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'stage-gown',
+    focus: 'centre',
     kind: 'photo',
     tags: ['stage', 'performance', 'solitude'],
     alt: {
@@ -361,7 +365,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'telephone',
-    focus: 'top',
+    focus: 'right top',
     kind: 'photo',
     tags: ['portrait', 'performance', 'solitude'],
     alt: {
@@ -377,7 +381,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'wall-coat',
-    focus: 'top',
+    focus: 'left top',
     kind: 'photo',
     tags: ['portrait', 'solitude'],
     alt: {
@@ -393,7 +397,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'beanie-portrait',
-    focus: 'top',
+    focus: 'left top',
     kind: 'photo',
     tags: ['portrait', 'street', 'solitude'],
     alt: {
@@ -409,6 +413,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'shadow',
+    focus: 'left top',
     kind: 'photo',
     tags: ['portrait', 'solitude'],
     alt: {
@@ -424,7 +429,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'doorway-jump',
-    focus: 'top',
+    focus: 'centre',
     kind: 'photo',
     tags: ['street', 'portrait', 'solitude'],
     alt: {
@@ -440,7 +445,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'bench-balance',
-    focus: 'top',
+    focus: 'left top',
     kind: 'photo',
     tags: ['street', 'performance', 'solitude'],
     alt: {
@@ -456,7 +461,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'barrel-street',
-    focus: 'top',
+    focus: 'centre',
     kind: 'photo',
     tags: ['street', 'performance'],
     alt: {
@@ -472,7 +477,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'statue-embrace',
-    focus: 'top',
+    focus: 'centre',
     kind: 'photo',
     tags: ['street', 'performance', 'solitude'],
     alt: {
@@ -488,6 +493,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'radio-studio',
+    focus: 'left top',
     kind: 'photo',
     tags: ['press'],
     alt: {
@@ -557,6 +563,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'juggling-pass',
+    focus: 'centre',
     kind: 'photo',
     source: 'site',
     othersInFrame: 'a second person, clearly identifiable, is in the frame',
@@ -592,7 +599,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'blue-corner',
-    focus: 'top',
+    focus: 'left top',
     kind: 'photo',
     tags: ['portrait', 'stage', 'solitude'],
     alt: {
@@ -608,7 +615,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'dressing-room',
-    focus: 'top',
+    focus: 'right top',
     kind: 'photo',
     tags: ['portrait', 'stage', 'solitude'],
     alt: {
@@ -640,7 +647,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'empty-room',
-    focus: 'top',
+    focus: 'centre',
     kind: 'photo',
     tags: ['portrait', 'solitude'],
     alt: {

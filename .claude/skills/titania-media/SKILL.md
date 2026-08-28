@@ -97,6 +97,11 @@ build stays green without a token.
 
 Nobody vets who is in a synced photograph. See `media/README.md`.
 
+**Use a picture in another project** → `media_use`. This site is the origin;
+other projects link to it rather than copying, and the tool returns the
+absolute URL, the alt text in the language asked for, and pasteable markup. It
+warns when a frame owes consent.
+
 **Before finishing** → `site_check`. It runs locale parity, the media
 couplings, dead links and anchors, alt text, image budgets, page weight and
 contrast — the same thing CI runs.

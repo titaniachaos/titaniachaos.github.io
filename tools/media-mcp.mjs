@@ -17,7 +17,12 @@
 // purpose -- this repository has two, sharp and vitepress, and a server that
 // exists to describe the repository should not be the thing that triples that.
 //
-// Registered for this project in .mcp.json.
+// Registered for this project in .mcp.json, and registerable from any other
+// project the same way -- point `args` at this file by absolute path and the
+// server works, because it resolves its own repository from its own location
+// rather than from the caller's working directory. `media_use` is the tool a
+// consumer wants: this site is the origin for the published media, and other
+// projects link to it rather than keeping copies.
 
 import { readFile, writeFile, readdir, stat } from 'node:fs/promises'
 import { execFile } from 'node:child_process'
@@ -29,6 +34,7 @@ import { createInterface } from 'node:readline'
 const run = promisify(execFile)
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const DATA = join(ROOT, 'docs/.vitepress/media.data.ts')
+const SEO = join(ROOT, 'docs/.vitepress/seo.ts')
 // The vocabulary lives here, not in media.data.ts: the loader, the three
 // [category].paths.ts files, the navigation and the components all import it.
 const TAXONOMY = join(ROOT, 'docs/.vitepress/categories.ts')
@@ -41,6 +47,17 @@ const sh = async (cmd, args, opts = {}) => {
   } catch (err) {
     return { ok: false, out: ((err.stdout ?? '') + (err.stderr ?? '') + (err.message ?? '')).trim() }
   }
+}
+
+/**
+ * Where the media is served from, read from the same place the site reads it,
+ * so a move to a custom domain moves the URLs this hands out as well. Honours
+ * SITE_ORIGIN for the same reason.
+ */
+async function origin() {
+  if (process.env.SITE_ORIGIN) return process.env.SITE_ORIGIN.replace(/\/$/, '')
+  const src = await readFile(SEO, 'utf8').catch(() => '')
+  return (src.match(/SITE_ORIGIN \?\? '([^']+)'/)?.[1] ?? 'https://titaniachaos.github.io').replace(/\/$/, '')
 }
 
 // ---- reading the catalogue -------------------------------------------------
@@ -219,6 +236,59 @@ const TOOLS = {
     async run({ count = 6 }) {
       const r = await sh('node', ['scripts/feed-sync.mjs', String(count)])
       return r.out || 'no output'
+    }
+  },
+
+  media_use: {
+    description:
+      'Use a photograph or film from this site in ANOTHER project. Returns the absolute URL it is served ' +
+      'from, its dimensions, its alt text in all three languages, and markup ready to paste. Nothing is ' +
+      'copied: this site is the origin, other projects link to it, and a picture replaced here is replaced ' +
+      'everywhere at once.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        id: { type: 'string', description: 'A specific frame, by id.' },
+        tag: { type: 'string', description: 'Instead of an id: every frame carrying this tag.' },
+        lang: { type: 'string', description: 'Which language the alt text should be in: en, bg or de. Default en.' },
+        as: { type: 'string', description: '"html" (default) or "markdown".' }
+      }
+    },
+    async run({ id, tag, lang = 'en', as = 'html' }) {
+      const { frames } = await catalogue()
+      const host = await origin()
+      let want = frames
+      if (id) want = want.filter((f) => f.id === id)
+      if (tag) want = want.filter((f) => f.tags.includes(tag))
+      if (!want.length) return `nothing matches${id ? ` id ${id}` : ''}${tag ? ` tag ${tag}` : ''}`
+
+      // Alt text is per language and lives in the catalogue; read it straight
+      // from the source so a consumer never has to invent one.
+      const src = await readFile(DATA, 'utf8')
+      const altOf = (frameId) => {
+        const block = src.match(new RegExp(`id: '${frameId}',[\\s\\S]*?alt: \\{([\\s\\S]*?)\\}`))?.[1] ?? ''
+        return block.match(new RegExp(`${lang}: '((?:[^'\\\\]|\\\\.)*)'`))?.[1]?.replace(/\\'/g, "'") ?? ''
+      }
+
+      return want
+        .map((f) => {
+          const alt = altOf(f.id)
+          const url = `${host}/images/media/${f.id}.webp`
+          const film = f.seconds ? `${host}/images/media/${f.id}.mp4` : null
+          const snippet = film
+            ? `<video src="${film}" poster="${url}" controls playsinline preload="none" aria-label="${alt}"></video>`
+            : as === 'markdown'
+              ? `![${alt}](${url})`
+              : `<img src="${url}" alt="${alt}" loading="lazy" decoding="async">`
+          return [
+            `${f.id}  ${f.kind}${f.seconds ? ` ${f.seconds}s` : ''}  ${f.tags.join(' ')}`,
+            `  ${url}`,
+            film ? `  ${film}` : null,
+            f.consentOwed ? `  ⚠ consent owed: ${f.consentOwed}` : null,
+            `  ${snippet}`
+          ].filter(Boolean).join('\n')
+        })
+        .join('\n\n')
     }
   },
 

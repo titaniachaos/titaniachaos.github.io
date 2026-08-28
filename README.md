@@ -176,6 +176,41 @@ you, and what to check when a picture is not showing up. Both are checked in,
 so cloning the repository and opening it is enough — there is nothing to set
 up. `.claude/launch.json` starts the dev and preview servers the same way.
 
+### Using this media from another project
+
+This site is the origin. Other projects — the Clown site, anything else — link
+to it rather than keeping copies, so a picture replaced here is replaced
+everywhere at once and there is one place where consent is tracked.
+
+Register the server in the other project's `.mcp.json`, by absolute path:
+
+```json
+{
+  "mcpServers": {
+    "titania-media": {
+      "command": "node",
+      "args": ["/path/to/titaniachaos.github.io/tools/media-mcp.mjs"]
+    }
+  }
+}
+```
+
+It resolves this repository from its own location, so it works whatever the
+caller's working directory is. Then `media_use` hands back what a consumer
+needs — the absolute URL, the film's URL if it is one, alt text in the language
+asked for, and markup ready to paste:
+
+```
+showreel  video 55s  workshop performance
+  https://titaniachaos.github.io/images/media/showreel.webp
+  https://titaniachaos.github.io/images/media/showreel.mp4
+  <video src="…" poster="…" controls playsinline preload="none" aria-label="…"></video>
+```
+
+URLs follow `SITE_ORIGIN`, read from `seo.ts`, so a domain move takes the
+consumers with it. A frame that owes consent says so in the output, where
+whoever is about to embed it will see it.
+
 ### What it costs
 
 Every frame a page places is counted against that page's weight budget, so the

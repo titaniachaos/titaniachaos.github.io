@@ -186,8 +186,16 @@ a URL is fetched to a temporary file first, so both behave the same.
 
 ```sh
 node media/import-media.mjs https://example.com/photo.jpg --tags "street performance"
-node media/import-media.mjs ~/Pictures/IMG_2193.jpeg
+node media/import-media.mjs ~/Pictures/IMG_2193.jpeg --write
 ```
+
+With `--write` it does the writing: the source goes into the right map in
+`make-media.mjs`, the record into `FRAMES`, a URL is kept in `media/imported/`,
+and the derive runs for that one frame — `--only <id>`, because importing a
+photograph should not re-encode forty megabytes of film. What it cannot write
+is the alt text and the caption, so it leaves those marked `TODO`, **and the
+loader refuses to build while a TODO is still there**. A placeholder that looks
+filled in is worse than a gap.
 
 It reports geotagging rather than keeping it. A phone photograph of a
 children's party carries the coordinates of the party, and the person deciding
@@ -215,6 +223,14 @@ tags, captions in three languages, dimensions and absolute URLs — served at
 [`/media.json`](https://titaniachaos.github.io/media.json). Another project can
 read one file over HTTP instead of running the MCP server, and the two agree
 because they come from the same source.
+
+### The index page
+
+`/pictures`, `/bg/pictures`, `/de/pictures` lists every category with a
+picture and a count, generated from the archive. Without it the 39 category
+pages were reachable only from the tags under a photograph — fine for a reader
+already looking at one, no use to a reader who is not. The categories menu
+leads with it.
 
 ### Using this media from another project
 

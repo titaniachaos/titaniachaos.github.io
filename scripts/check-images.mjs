@@ -135,7 +135,12 @@ const frames = [...(await readFile('docs/.vitepress/media.data.ts', 'utf8').catc
   .matchAll(/^\s{4}id: '([a-z0-9-]+)',$/gm)].map((m) => m[1])
 
 if (frames.length) {
-  const idle = frames.filter((id) => !pages.includes(`/images/media/${id}.`))
+  // Both derivatives count as rendered: prose and the hero use `<id>.webp`,
+  // the category listings use `<id>-s.webp`. Testing only the first called
+  // every frame that appears solely in a listing "unused".
+  const idle = frames.filter(
+    (id) => !pages.includes(`/images/media/${id}.`) && !pages.includes(`/images/media/${id}-s.`)
+  )
   if (idle.length) {
     const weigh = async (id) => {
       let bytes = 0

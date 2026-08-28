@@ -6,6 +6,7 @@ import SocialWall from './SocialWall.vue'
 import MediaHero from './MediaHero.vue'
 import MediaFigure from './MediaFigure.vue'
 import MediaCategory from './MediaCategory.vue'
+import MediaIndex from './MediaIndex.vue'
 import './custom.css'
 
 export default {
@@ -16,6 +17,7 @@ export default {
     app.component('MediaHero', MediaHero)
     app.component('MediaFigure', MediaFigure)
     app.component('MediaCategory', MediaCategory)
+    app.component('MediaIndex', MediaIndex)
   },
   Layout: () =>
     // The sponsorship card fills the slot the default theme reserves for Carbon

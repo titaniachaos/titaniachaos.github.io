@@ -19,10 +19,16 @@ import type { Lang } from './locale.ts'
  */
 const CATEGORIES = (lang: Lang) => ({
   text: CATEGORY_UI[lang].indexTitle,
-  items: TAGS.map((tag) => ({
-    text: asTitle(TAG_NAMES[lang][tag]),
-    link: categoryPath(lang, tag)
-  }))
+  items: [
+    // The index first: thirteen category links are a menu, and a menu is no
+    // use to a reader who does not already know which of the thirteen they
+    // want.
+    { text: CATEGORY_UI[lang].indexTitle, link: `${lang === 'en' ? '' : '/' + lang}/pictures` },
+    ...TAGS.map((tag) => ({
+      text: asTitle(TAG_NAMES[lang][tag]),
+      link: categoryPath(lang, tag)
+    }))
+  ]
 })
 
 /**

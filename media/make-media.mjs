@@ -47,7 +47,12 @@ import { context, frames as catalogue, xmp } from '../scripts/lib/media-meta.mjs
 
 const run = promisify(execFile)
 const here = dirname(fileURLToPath(import.meta.url))
-const root = process.argv[2] ?? resolve(here, '..', '..')
+const argv = process.argv.slice(2)
+const root = argv.find((a, i) => !a.startsWith('--') && argv[i - 1] !== '--only') ?? resolve(here, '..', '..')
+// `--only <id>` derives one frame. Importing a single photograph should not
+// re-encode forty megabytes of video to do it.
+const ONLY = argv.includes('--only') ? argv[argv.indexOf('--only') + 1] : null
+const wanted = (id) => !ONLY || id === ONLY
 const out = resolve(here, '..', 'docs/public/images/media')
 
 const W = 520 // px, the widest a frame is shown in prose or in the hero
@@ -80,6 +85,15 @@ const PHOTOS = {
   'bench-balance': 'c8307f2235da445e.webp',
   'barrel-street': '2c1a4c61eeb87ff7.jpg',
   'statue-embrace': '6fc42ab5f57595f5.webp'
+}
+
+/**
+ * id -> a path relative to the archive root, for sources that are not in the
+ * WordPress archive: anything media/import-media.mjs brought in, from a URL or
+ * from somewhere else on the disk. Written by `--write`, so this map grows on
+ * its own and the paths in it are whole rather than bare filenames.
+ */
+const IMPORTED = {
 }
 
 /**
@@ -200,17 +214,25 @@ async function frame(source, id) {
 }
 
 for (const [id, file] of Object.entries(PHOTOS)) {
+  if (!wanted(id)) continue
   const source = join(root, 'media-archive/originals', file)
   await frame(source, id)
   console.log(`${id.padEnd(18)} ${(await weigh(join(out, `${id}.webp`))).padStart(8)}   <- ${file}`)
 }
 
+for (const [id, file] of Object.entries(IMPORTED)) {
+  if (!wanted(id)) continue
+  await frame(join(root, file), id)
+  console.log(`${id.padEnd(18)} ${(await weigh(join(out, `${id}.webp`))).padStart(8)}   <- ${file}`)
+}
+
 for (const [id, file] of Object.entries(PUBLISHED)) {
+  if (!wanted(id)) continue
   await frame(resolve(here, '..', 'docs/public/images', file), id)
   console.log(`${id.padEnd(18)} ${(await weigh(join(out, `${id}.webp`))).padStart(8)}   <- images/${file}`)
 }
 
-{
+if (wanted('hero')) {
   const dest = resolve(here, '..', 'docs/public/images', HERO.file)
   await sharp(join(root, HERO.from))
     // From the top: it is a portrait, and what a shorter frame loses is floor.
@@ -221,11 +243,13 @@ for (const [id, file] of Object.entries(PUBLISHED)) {
 }
 
 for (const [id, file] of Object.entries(POSTERS)) {
+  if (!wanted(id)) continue
   await frame(join(here, 'posters', file), id)
   console.log(`${id.padEnd(18)} ${(await weigh(join(out, `${id}.webp`))).padStart(8)}   <- posters/${file}`)
 }
 
 for (const [id, [file, at]] of Object.entries(VIDEOS)) {
+  if (!wanted(id)) continue
   const source = join(root, file)
   const mp4 = join(out, `${id}.mp4`)
   // 720p, constant quality, faststart so it plays before it has finished

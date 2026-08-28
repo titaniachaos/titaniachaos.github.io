@@ -806,7 +806,15 @@ export default defineLoader({
 
       for (const field of ['alt', 'caption'] as const) {
         for (const lang of LANGS) {
-          if (!frame[field][lang]?.trim()) throw new Error(`${where}: ${field} has no ${lang}`)
+          const value = frame[field][lang]?.trim()
+          if (!value) throw new Error(`${where}: ${field} has no ${lang}`)
+          // media/import-media.mjs writes a record with the words it cannot
+          // know marked TODO. That marker must not survive to a page: alt text
+          // reading "TODO what someone who cannot see it needs to know" is
+          // worse than no alt text, because it looks filled in.
+          if (/^TODO\b/.test(value)) {
+            throw new Error(`${where}: ${field}.${lang} is still the placeholder from import — write the real words`)
+          }
         }
       }
 

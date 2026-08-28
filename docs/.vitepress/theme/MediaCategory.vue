@@ -66,7 +66,22 @@ const pagesFor = (m: Media) => (data.usedOn[m.id] ?? []).filter((p) => p.lang ==
 
     <ul v-else class="cat__list">
       <li v-for="frame in frames" :key="frame.id" class="cat__item">
+        <!-- A film gets a player rather than a still. `preload="none"` means
+             it costs the page nothing until somebody presses play, and without
+             it a listing could show a film's poster while offering no way
+             anywhere on the site to watch it. -->
+        <video
+          v-if="frame.mp4"
+          class="cat__tile"
+          :src="frame.mp4"
+          :poster="frame.tile"
+          :aria-label="frame.alt[lang]"
+          controls
+          playsinline
+          preload="none"
+        />
         <img
+          v-else
           class="cat__tile"
           :src="frame.tile"
           :alt="frame.alt[lang]"

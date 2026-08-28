@@ -163,8 +163,8 @@ these are frames placed in prose.
 
 ### Working on it by tool
 
-`.mcp.json` registers a **`titania-media`** MCP server (`tools/media-mcp.mjs`,
-no dependencies) with seven tools: `media_list`, `media_derive`, `media_place`,
+`.mcp.json` at the repository root registers a **`titania-media`** MCP server
+(`tools/media-mcp.mjs`, no dependencies) with seven tools: `media_list`, `media_derive`, `media_place`,
 `media_fetch_youtube`, `feed_sync`, `site_check` and `page_weight`. They shell
 out to the same scripts rather than reimplementing them; what they add is a
 door. `media_place` in particular writes a figure into all three languages or
@@ -172,7 +172,9 @@ refuses and writes nothing — the edit that is easiest to do in one locale and
 forget in the other two.
 
 `.claude/skills/titania-media/` is the matching skill: the rules that will bite
-you, and what to check when a picture is not showing up.
+you, and what to check when a picture is not showing up. Both are checked in,
+so cloning the repository and opening it is enough — there is nothing to set
+up. `.claude/launch.json` starts the dev and preview servers the same way.
 
 ### What it costs
 

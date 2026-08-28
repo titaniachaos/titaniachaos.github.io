@@ -1,0 +1,29 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "titania-docs",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "docs:dev",
+        "--",
+        "--port",
+        "5199"
+      ],
+      "port": 5199
+    },
+    {
+      "name": "titania-built",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "docs:preview",
+        "--",
+        "--port",
+        "5200"
+      ],
+      "port": 5200
+    }
+  ]
+}

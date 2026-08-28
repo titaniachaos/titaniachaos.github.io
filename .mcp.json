@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "titania-media": {
+      "command": "node",
+      "args": [
+        "tools/media-mcp.mjs"
+      ],
+      "env": {}
+    }
+  }
+}

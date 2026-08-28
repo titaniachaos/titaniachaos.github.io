@@ -29,6 +29,9 @@ import { createInterface } from 'node:readline'
 const run = promisify(execFile)
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const DATA = join(ROOT, 'docs/.vitepress/media.data.ts')
+// The vocabulary lives here, not in media.data.ts: the loader, the three
+// [category].paths.ts files, the navigation and the components all import it.
+const TAXONOMY = join(ROOT, 'docs/.vitepress/categories.ts')
 const LOCALES = { en: 'docs', bg: 'docs/bg', de: 'docs/de' }
 
 const sh = async (cmd, args, opts = {}) => {
@@ -44,8 +47,10 @@ const sh = async (cmd, args, opts = {}) => {
 
 async function catalogue() {
   const src = await readFile(DATA, 'utf8')
-  const tags = [...(src.match(/export const TAGS = \[([\s\S]*?)\] as const/)?.[1] ?? '')
+  const taxonomy = await readFile(TAXONOMY, 'utf8')
+  const tags = [...(taxonomy.match(/export const TAGS = \[([\s\S]*?)\] as const/)?.[1] ?? '')
     .matchAll(/'([a-z-]+)'/g)].map((m) => m[1])
+  if (tags.length === 0) throw new Error(`could not read the tag vocabulary from ${TAXONOMY}`)
 
   const frames = []
   for (const block of src.matchAll(/\{\s*\n\s{4}id: '([a-z0-9-]+)',[\s\S]*?\n\s{2}\}/g)) {

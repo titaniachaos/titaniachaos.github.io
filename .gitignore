@@ -2,3 +2,7 @@ node_modules/
 docs/.vitepress/cache/
 docs/.vitepress/dist/
 .DS_Store
+
+# Claude Code's per-machine permission state. The rest of .claude/ is checked
+# in on purpose: the skill and the dev-server config belong with the repo.
+.claude/settings.local.json

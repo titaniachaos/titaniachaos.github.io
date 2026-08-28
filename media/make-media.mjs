@@ -27,8 +27,15 @@
 // archive has one. That is the whole of why the good workshop photographs are
 // missing, and it is a consent gap, not an editing choice.
 //
-// Usage:  node media/make-gallery.mjs [archiveRoot]
-//         archiveRoot defaults to the parent of this repository.
+// The archives are not in this repository and are not going to be: they hold
+// frames nobody has consent to publish, and originals far larger than any page
+// needs. They sit beside the checkout by default -- `media-archive/` and
+// `100 procenta budni/` in the directory above -- and `archiveRoot` says where
+// else to look. A clone without them cannot re-derive, which is why the derived
+// files are committed.
+//
+// Usage:  node media/make-media.mjs [archiveRoot]
+//         archiveRoot defaults to the directory above this repository.
 
 import { mkdir, stat } from 'node:fs/promises'
 import { execFile } from 'node:child_process'
@@ -145,6 +152,24 @@ const VIDEOS = {
 
 const kb = (bytes) => `${Math.round(bytes / 1024)} KB`
 const weigh = async (file) => kb((await stat(file)).size)
+
+// Fail with a sentence rather than a stack trace from inside sharp: a missing
+// archive is the ordinary case for anyone who has only cloned the repository.
+for (const dir of ['media-archive/originals', 'media-archive/youtube', '100 procenta budni']) {
+  try {
+    await stat(join(root, dir))
+  } catch {
+    console.error(
+      `make-media: no ${dir} under ${root}\n\n` +
+        '  The source archives live beside the checkout, not in it. Pass their\n' +
+        '  location if they are somewhere else:\n\n' +
+        '    node media/make-media.mjs /path/to/archives\n\n' +
+        '  Nothing has been written. The derived files in docs/public/images/media\n' +
+        '  are committed, so a clone without the archives still builds and deploys.'
+    )
+    process.exit(1)
+  }
+}
 
 await mkdir(out, { recursive: true })
 

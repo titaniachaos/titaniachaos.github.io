@@ -194,7 +194,7 @@ export default defineConfig({
           { text: 'Workshops', link: '/' },
           { text: 'Birthdays', link: '/events' },
           { text: 'Work with Titania', link: '/work-with-titania' },
-          { text: 'Journal', link: CLOWN_SITE('') + 'blog/', ...SAME_SITE },
+          { text: 'Blog', link: CLOWN_SITE('') + 'blog/', ...SAME_SITE },
           { text: 'About', link: '/about-titania' },
           CATEGORIES('en'),
           { text: 'Clown Project', link: CLOWN_SITE(''), ...SAME_SITE }
@@ -224,7 +224,7 @@ export default defineConfig({
           { text: 'Работилници', link: '/bg/' },
           { text: 'Рождени дни', link: '/bg/events' },
           { text: 'Работа с Титания', link: '/bg/work-with-titania' },
-          { text: 'Дневник', link: CLOWN_SITE('/bg') + 'blog/', ...SAME_SITE },
+          { text: 'Блог', link: CLOWN_SITE('/bg') + 'blog/', ...SAME_SITE },
           { text: 'За Титания', link: '/bg/about-titania' },
           CATEGORIES('bg'),
           { text: 'Проект „Клоун“', link: CLOWN_SITE('/bg'), ...SAME_SITE }
@@ -259,7 +259,7 @@ export default defineConfig({
           { text: 'Workshops', link: '/de/' },
           { text: 'Kindergeburtstage', link: '/de/events' },
           { text: 'Mit Titania arbeiten', link: '/de/work-with-titania' },
-          { text: 'Journal', link: CLOWN_SITE('/de') + 'blog/', ...SAME_SITE },
+          { text: 'Blog', link: CLOWN_SITE('/de') + 'blog/', ...SAME_SITE },
           { text: 'Über Titania', link: '/de/about-titania' },
           CATEGORIES('de'),
           { text: 'Clown-Projekt', link: CLOWN_SITE('/de'), ...SAME_SITE }

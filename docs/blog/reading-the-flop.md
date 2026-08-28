@@ -7,6 +7,8 @@ tags: ["English","Clown Project","Audience","Failure","question"]
 
 # Reading the Flop
 
+<MediaFigure id="telephone" />
+
 Failure is observed after it happens rather than manufactured according to a scale.
 
 Ask:

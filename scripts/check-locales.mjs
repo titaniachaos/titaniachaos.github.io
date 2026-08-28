@@ -23,9 +23,22 @@ const MAX_RATIO = 1.8
 const problems = []
 const add = (m) => problems.push(m)
 
-async function markdownIn(dir) {
+/**
+ * Every page in a locale, including the ones in subdirectories. The journal is
+ * twelve posts under blog/ and was outside this check entirely -- which meant
+ * a post could lose its Bulgarian translation, or drift to half the length of
+ * the English, and nothing would say so.
+ */
+async function markdownIn(dir, prefix = '') {
   const entries = await readdir(dir, { withFileTypes: true }).catch(() => [])
-  return entries.filter((e) => e.isFile() && e.name.endsWith('.md')).map((e) => e.name)
+  const out = []
+  for (const e of entries) {
+    if (e.isDirectory()) {
+      if (!prefix && LOCALES.includes(e.name)) continue
+      out.push(...(await markdownIn(join(dir, e.name), `${prefix}${e.name}/`)))
+    } else if (e.name.endsWith('.md')) out.push(`${prefix}${e.name}`)
+  }
+  return out
 }
 
 function parse(source) {

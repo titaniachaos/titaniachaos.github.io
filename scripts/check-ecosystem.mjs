@@ -50,15 +50,29 @@ const vocabulary = [...(taxonomy.match(/export const TAGS = \[([\s\S]*?)\] as co
 
 if (vocabulary.length === 0) problems.push('could not read the tag vocabulary from categories.ts')
 
+const frameIds = [...(await readFile('docs/.vitepress/media.data.ts', 'utf8'))
+  .matchAll(/^\s{4}id: '([a-z0-9-]+)',$/gm)].map((m) => m[1])
+
 const pages = new Map() // page name -> locale -> { hero, figures[] }
 for (const locale of ['', 'bg', 'de']) {
   const dir = join('docs', locale)
-  for (const name of (await readdir(dir, { withFileTypes: true }))
-    .filter((e) => e.isFile() && e.name.endsWith('.md'))
-    .map((e) => e.name)) {
+  // Subdirectories too: the journal is twelve posts under blog/, and they
+  // carry figures like any other page.
+  const walk = async (from, prefix = '') => {
+    const out = []
+    for (const e of await readdir(from, { withFileTypes: true }).catch(() => [])) {
+      if (e.isDirectory()) {
+        if (['bg', 'de'].includes(e.name)) continue
+        out.push(...(await walk(join(from, e.name), `${prefix}${e.name}/`)))
+      } else if (e.name.endsWith('.md')) out.push(`${prefix}${e.name}`)
+    }
+    return out
+  }
+  for (const name of await walk(dir)) {
     const source = await readFile(join(dir, name), 'utf8')
-    const figures = [...source.matchAll(/<MediaFigure[^>]*\btags="([^"]*)"/g)]
-      .map((m) => m[1].trim().replace(/\s+/g, ' '))
+    // Both ways of asking: by tags, and by naming a frame outright.
+    const figures = [...source.matchAll(/<MediaFigure[^>]*\b(tags|id)="([^"]*)"/g)]
+      .map((m) => (m[1] === 'id' ? `id:${m[2].trim()}` : m[2].trim().replace(/\s+/g, ' ')))
     const hero = /<MediaHero[\s/>]/.test(source)
     if (!hero && figures.length === 0) continue
     if (!pages.has(name)) pages.set(name, new Map())
@@ -72,14 +86,24 @@ for (const [name, byLocale] of pages) {
 
     // A tag nothing carries resolves to nothing, and the section quietly
     // loses its picture.
-    for (const tags of page.figures) {
-      const unknown = tags.split(' ').filter((tag) => !vocabulary.includes(tag))
+    for (const asked of page.figures) {
+      if (asked.startsWith('id:')) {
+        const id = asked.slice(3)
+        if (!frameIds.includes(id)) problems.push(`${where}: MediaFigure id="${id}" — there is no such frame`)
+        continue
+      }
+      const unknown = asked.split(' ').filter((tag) => !vocabulary.includes(tag))
       if (unknown.length) problems.push(`${where}: MediaFigure asks for ${unknown.join(', ')}, which no frame can carry`)
     }
 
-    // The hero slides the figures. Figures with no hero are pictures nobody
-    // is shown the shape of; a hero with no figures is an empty box.
-    if (page.figures.length && !page.hero) problems.push(`${where}: has figures but no <MediaHero />`)
+    // The hero slides a page's figures, so a page with several of them needs
+    // one -- but a slider of a single slide is not a slider, and a 140-word
+    // journal post carrying one picture is complete without a carousel above
+    // it. So: two or more figures require a hero, one does not, and a hero
+    // with nothing to slide is always wrong.
+    if (page.figures.length > 1 && !page.hero) {
+      problems.push(`${where}: has ${page.figures.length} figures and no <MediaHero /> to slide them`)
+    }
     if (page.hero && !page.figures.length) problems.push(`${where}: has a <MediaHero /> but nothing for it to slide`)
   }
 

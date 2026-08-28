@@ -7,6 +7,8 @@ tags: ["English","Clown Project","Failure","Object Play","quotation"]
 
 # Observation Practice
 
+<MediaFigure id="statue-embrace" />
+
 Observe solitary behaviour without assigning motives.
 
 Record what can actually be seen or heard: actions, repetitions, pauses, small rituals, use of space, relationships with objects, interrupted actions, sounds made without addressing another person.

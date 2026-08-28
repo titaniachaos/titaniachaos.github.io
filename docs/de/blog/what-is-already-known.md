@@ -7,6 +7,8 @@ tags: ["Deutsch","Clown Project","Clowning","Solo Titania Chaos","Solitude","Aud
 
 # Was bereits feststeht
 
+<MediaFigure id="stage-gown" />
+
 Solo Titania Chaos wird als körperliches, wortloses Clown-Solo über **Alleinsein / allein sein** entwickelt.
 
 Das Feld umfasst Alleinsein, Einsamkeit, Isolation, Verbindung, Privatheit, das private Selbst, Alleinsein in Gegenwart anderer sowie den Wunsch nach Kontakt und dessen Vermeidung.

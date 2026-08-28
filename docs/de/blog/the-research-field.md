@@ -7,6 +7,8 @@ tags: ["Deutsch","Clown Project","Solitude","Studio Practice","Sources","Field N
 
 # Das Forschungsfeld
 
+<MediaFigure id="harbour-bollard" />
+
 Die Recherche versammelt unterschiedliche Denkweisen über das Alleinsein: **Alleinsein, Einsamkeit, Isolation, gewähltes und auferlegtes Alleinsein, Privatheit, Abwesenheit, Verbindung und Alleinsein in Gegenwart anderer.**
 
 Diese Unterscheidungen sind keine vorgeschlagene Dramaturgie. Sie helfen, Unterschiede wahrzunehmen, die sonst gleich aussehen könnten.

@@ -63,6 +63,19 @@ export interface Frame {
   caption: Localised
   /** The length of the clip, in whole seconds. Every film is self-hosted. */
   seconds?: number
+  /**
+   * Where the face is, for every crop that has to throw part of the frame
+   * away: the square tile, and any `object-fit: cover` at display size.
+   *
+   * The default follows entropy, and entropy is not a face -- it kept the
+   * balloons and cut the head off the person holding them. This is declared
+   * rather than detected because there is no face detection here and a guess
+   * that is right most of the time is worse than a value someone looked at.
+   *
+   * Used by media/make-media.mjs for the square and by the components for
+   * `object-position`, so the crop is the same shape whatever the screen.
+   */
+  focus?: 'top' | 'centre' | 'bottom' | 'left top' | 'right top'
   /** Where the frame came from. Everything unmarked is the picture archive. */
   source?: 'youtube' | 'site' | 'instagram' | 'facebook'
   /**
@@ -87,6 +100,8 @@ export interface Media extends Frame {
   file: string
   /** The square the category listings use. */
   tile: string
+  /** `object-position` for any display-time cover crop, from `focus`. */
+  anchor: string
   mp4?: string
   width: number
   height: number
@@ -179,7 +194,7 @@ const FRAMES: Frame[] = [
     id: 'park-dance',
     kind: 'video',
     seconds: 10,
-    tags: ['street', 'performance', 'portrait'],
+    tags: ['street', 'performance', 'portrait', 'solitude'],
     alt: {
       en: 'Titania Chaos in a red suit and striped scarf, leaping across a sunlit park',
       bg: 'Титания Хаос в червен костюм и раиран шал прескача огрян от слънце парк',
@@ -224,6 +239,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'balloon-chain',
+    focus: 'top',
     kind: 'photo',
     tags: ['balloons', 'children', 'birthday'],
     alt: {
@@ -239,6 +255,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'balloon-garland',
+    focus: 'top',
     kind: 'photo',
     tags: ['balloons', 'street', 'birthday'],
     alt: {
@@ -254,6 +271,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'camera-portrait',
+    focus: 'top',
     kind: 'photo',
     tags: ['camera', 'performance', 'props'],
     alt: {
@@ -284,6 +302,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'stage-collar',
+    focus: 'top',
     kind: 'photo',
     tags: ['stage', 'portrait', 'performance'],
     alt: {
@@ -300,7 +319,7 @@ const FRAMES: Frame[] = [
   {
     id: 'stage-balloon',
     kind: 'photo',
-    tags: ['stage', 'performance'],
+    tags: ['stage', 'performance', 'solitude'],
     alt: {
       en: 'Titania Chaos on a dark stage in a pale grey dress, holding a single balloon on an open hand',
       bg: 'Титания Хаос на тъмна сцена в бледосива рокля държи един балон на отворена длан',
@@ -315,7 +334,7 @@ const FRAMES: Frame[] = [
   {
     id: 'stage-gown',
     kind: 'photo',
-    tags: ['stage', 'performance'],
+    tags: ['stage', 'performance', 'solitude'],
     alt: {
       en: 'Titania Chaos on a dark stage, opening out the wide skirt of a pale gown with both hands',
       bg: 'Титания Хаос на тъмна сцена разтваря с две ръце широката пола на бледа рокля',
@@ -329,8 +348,9 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'telephone',
+    focus: 'top',
     kind: 'photo',
-    tags: ['portrait', 'performance'],
+    tags: ['portrait', 'performance', 'solitude'],
     alt: {
       en: 'Titania Chaos in a houndstooth jacket at a wooden counter, listening into an antique telephone',
       bg: 'Титания Хаос в сако на пепит до дървен плот слуша в антикварен телефон',
@@ -344,8 +364,9 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'wall-coat',
+    focus: 'top',
     kind: 'photo',
-    tags: ['portrait'],
+    tags: ['portrait', 'solitude'],
     alt: {
       en: 'Titania Chaos against a concrete wall in a tweed coat over a pale blue dress, looking upwards',
       bg: 'Титания Хаос пред бетонна стена, с туидово палто върху бледосиня рокля, гледа нагоре',
@@ -359,8 +380,9 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'beanie-portrait',
+    focus: 'top',
     kind: 'photo',
-    tags: ['portrait', 'street'],
+    tags: ['portrait', 'street', 'solitude'],
     alt: {
       en: 'A close portrait of Titania Chaos in a yellow beanie and round glasses, eyes wide, red nose on',
       bg: 'Близък портрет на Титания Хаос с жълта шапка и кръгли очила, с широко отворени очи и червен нос',
@@ -375,7 +397,7 @@ const FRAMES: Frame[] = [
   {
     id: 'shadow',
     kind: 'photo',
-    tags: ['portrait'],
+    tags: ['portrait', 'solitude'],
     alt: {
       en: 'The shadow of Titania Chaos thrown on a pale wall, hat and open hand in silhouette',
       bg: 'Сянката на Титания Хаос върху бледа стена — шапка и отворена длан в силует',
@@ -389,8 +411,9 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'doorway-jump',
+    focus: 'top',
     kind: 'photo',
-    tags: ['street', 'portrait'],
+    tags: ['street', 'portrait', 'solitude'],
     alt: {
       en: 'Titania Chaos in a red boilersuit jumping in a doorway, arms and legs spread wide',
       bg: 'Титания Хаос в червен гащеризон скача в рамката на врата с широко разперени ръце и крака',
@@ -404,8 +427,9 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'bench-balance',
+    focus: 'top',
     kind: 'photo',
-    tags: ['street', 'performance'],
+    tags: ['street', 'performance', 'solitude'],
     alt: {
       en: 'Titania Chaos in a red dress balancing on one foot along the edge of a park bench',
       bg: 'Титания Хаос в червена рокля балансира на един крак по ръба на пейка в парка',
@@ -419,6 +443,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'barrel-street',
+    focus: 'top',
     kind: 'photo',
     tags: ['street', 'performance'],
     alt: {
@@ -434,8 +459,9 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'statue-embrace',
+    focus: 'top',
     kind: 'photo',
-    tags: ['street', 'performance'],
+    tags: ['street', 'performance', 'solitude'],
     alt: {
       en: 'Titania Chaos with a red nose embracing a bronze statue on a pedestrian street, a second red nose on the statue',
       bg: 'Титания Хаос с червен нос прегръща бронзова статуя на пешеходна улица; втори червен нос е сложен на статуята',
@@ -535,6 +561,7 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'impact-hub',
+    focus: 'right top',
     kind: 'photo',
     source: 'site',
     consentOwed: 'a seated audience, several of them identifiable, including a child',
@@ -548,6 +575,70 @@ const FRAMES: Frame[] = [
       en: 'A staircase makes a stage, and a room full of strangers makes an audience.',
       bg: 'Стълбището става сцена, а стая, пълна с непознати — публика.',
       de: 'Eine Treppe wird zur Bühne, ein Raum voller Fremder zum Publikum.'
+    }
+  },
+  {
+    id: 'blue-corner',
+    focus: 'top',
+    kind: 'photo',
+    tags: ['portrait', 'stage', 'solitude'],
+    alt: {
+      en: 'Titania Chaos in a red polka-dot suit, braced barefoot across the corner of a blue-painted alcove',
+      bg: 'Титания Хаос в червен костюм на точки, боса, се е подпряла в ъгъла на синя ниша',
+      de: 'Titania Chaos im rot gepunkteten Anzug, barfuß in die Ecke einer blau gestrichenen Nische gestemmt'
+    },
+    caption: {
+      en: 'A corner is the smallest room there is, and it still holds a whole person.',
+      bg: 'Ъгълът е най-малката стая, а пак побира цял човек.',
+      de: 'Eine Ecke ist der kleinste Raum, den es gibt — und fasst trotzdem einen ganzen Menschen.'
+    }
+  },
+  {
+    id: 'dressing-room',
+    focus: 'top',
+    kind: 'photo',
+    tags: ['portrait', 'stage', 'solitude'],
+    alt: {
+      en: 'Titania Chaos in a pale green dress and red nose, seated at a lit dressing-room mirror',
+      bg: 'Титания Хаос в бледозелена рокля и с червен нос, седнала пред осветено гримьорно огледало',
+      de: 'Titania Chaos in hellgrünem Kleid mit roter Nase, sitzend vor einem beleuchteten Garderobenspiegel'
+    },
+    caption: {
+      en: 'The last quiet before the room fills. The nose is already on.',
+      bg: 'Последната тишина, преди залата да се напълни. Носът вече е сложен.',
+      de: 'Die letzte Stille, bevor der Saal sich füllt. Die Nase sitzt schon.'
+    }
+  },
+  {
+    id: 'harbour-bollard',
+    focus: 'centre',
+    kind: 'photo',
+    tags: ['portrait', 'street', 'solitude'],
+    alt: {
+      en: 'Titania Chaos balanced on a harbour bollard against a bright sky, arms out, the sea behind her',
+      bg: 'Титания Хаос балансира върху кнехт на пристанището на фона на светло небе, с разперени ръце и море зад нея',
+      de: 'Titania Chaos balanciert auf einem Hafenpoller vor hellem Himmel, die Arme ausgebreitet, dahinter das Meer'
+    },
+    caption: {
+      en: 'Alone on a metre of iron, with the whole harbour to fall into.',
+      bg: 'Сама върху метър желязо, с цяло пристанище, в което да падне.',
+      de: 'Allein auf einem Meter Eisen, mit einem ganzen Hafen zum Hineinfallen.'
+    }
+  },
+  {
+    id: 'empty-room',
+    focus: 'top',
+    kind: 'photo',
+    tags: ['portrait', 'solitude'],
+    alt: {
+      en: 'Titania Chaos in a red hooded coat, standing alone in an empty rehearsal room',
+      bg: 'Титания Хаос в червено палто с качулка, сама в празна репетиционна зала',
+      de: 'Titania Chaos im roten Kapuzenmantel, allein in einem leeren Probenraum'
+    },
+    caption: {
+      en: 'An empty room is not nothing. It is the thing the work has to fill.',
+      bg: 'Празната зала не е нищо. Тя е онова, което работата трябва да запълни.',
+      de: 'Ein leerer Raum ist nicht nichts. Er ist das, was die Arbeit füllen muss.'
     }
   }
 ]
@@ -654,7 +745,11 @@ const isProse = (line: string) =>
   !/^\[[^\]]*\]\([^)]*\)\{/.test(line.trim()) // a link styled as a button
 
 export interface Placement {
-  /** The exact `tags` attribute written on the page. Unique within a page. */
+  /**
+   * How the page asked, verbatim: the `tags` attribute, or `id:<frame>` when
+   * the page named a frame outright. Unique within a page, because it is how
+   * the component finds its own placement.
+   */
   tags: string
   /** The frame the tags resolved to. */
   id: string
@@ -685,7 +780,14 @@ function readPage(source: string, fallbackTitle: string): Omit<Placement, 'id'>[
       headingAt = i
       continue
     }
-    const figure = /<MediaFigure[^>]*\btags="([^"]*)"/.exec(lines[i])
+    // Two ways to ask. `tags` is "something like this" and lets the archive
+    // choose; `id` is "this one", for a page whose words are about a
+    // particular picture. Tags cannot express that: three frames here are
+    // tagged exactly `portrait solitude`, so only the first is reachable by
+    // tag, and a journal post about a dressing room should not have to settle
+    // for whichever of them sorts first.
+    const byId = /<MediaFigure[^>]*\bid="([^"]*)"/.exec(lines[i])
+    const figure = byId ?? /<MediaFigure[^>]*\btags="([^"]*)"/.exec(lines[i])
     if (!figure) continue
 
     // The section's first paragraph: the first prose line after its heading
@@ -710,7 +812,7 @@ function readPage(source: string, fallbackTitle: string): Omit<Placement, 'id'>[
     }
 
     found.push({
-      tags: figure[1].trim().replace(/\s+/g, ' '),
+      tags: byId ? `id:${figure[1].trim()}` : figure[1].trim().replace(/\s+/g, ' '),
       title,
       level: Math.min(level + 1, 6),
       text: text || quoted || listed
@@ -835,6 +937,9 @@ export default defineLoader({
         ...frame,
         file,
         tile: `${DIR}/${frame.id}-s.webp`,
+        // The same focal point the square was cut on, in the form CSS wants,
+        // so a crop at display size lands where the build-time crop did.
+        anchor: (frame.focus ?? 'centre').replace('centre', 'center'),
         ...(frame.seconds ? { mp4: `${DIR}/${frame.id}.mp4` } : {}),
         ...(await measure(file))
       })
@@ -857,9 +962,20 @@ export default defineLoader({
 
     for (const lang of LANGS) {
       const dir = lang === 'en' ? DOCS : join(DOCS, lang)
-      const names = (await readdir(dir, { withFileTypes: true }))
-        .filter((e) => e.isFile() && e.name.endsWith('.md'))
-        .map((e) => e.name)
+      // Subdirectories too: the journal lives in blog/, and a figure written
+      // in a post is a figure like any other.
+      const walk = async (from: string, prefix = ''): Promise<string[]> => {
+        const out: string[] = []
+        for (const e of await readdir(from, { withFileTypes: true }).catch(() => [])) {
+          if (e.isDirectory()) {
+            // Only this locale's own pages: docs/ contains docs/bg and docs/de.
+            if (LANGS.includes(e.name as Lang)) continue
+            out.push(...(await walk(join(from, e.name), `${prefix}${e.name}/`)))
+          } else if (e.name.endsWith('.md')) out.push(`${prefix}${e.name}`)
+        }
+        return out
+      }
+      const names = await walk(dir)
 
       for (const name of names) {
         const source = await readFile(join(dir, name), 'utf8')
@@ -884,6 +1000,22 @@ export default defineLoader({
             throw new Error(`${key}: two MediaFigures ask for "${place.tags}" — a page's figures must differ`)
           }
           takenTags.add(place.tags)
+
+          const named = place.tags.startsWith('id:') ? place.tags.slice(3) : null
+          if (named) {
+            const frame = all.find((f) => f.id === named)
+            if (!frame) throw new Error(`${key}: MediaFigure id="${named}" — there is no such frame`)
+            if (takenFrames.has(named)) throw new Error(`${key}: ${named} is already on this page`)
+            takenFrames.add(named)
+            resolved.push({ ...place, id: named })
+            ;(usedOn[named] ??= []).push({
+              lang, slug,
+              path: `${lang === 'en' ? '' : '/' + lang}/${slug === 'index' ? '' : slug}`.replace(/\/$/, '') || '/',
+              title: pageTitle
+            })
+            total++
+            continue
+          }
 
           const asked = place.tags.split(' ').filter(Boolean)
           const unknown = asked.filter((tag) => !(TAGS as readonly string[]).includes(tag))

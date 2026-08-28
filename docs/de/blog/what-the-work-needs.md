@@ -7,6 +7,8 @@ tags: ["Deutsch","Clown Project","Solo Titania Chaos","Audience","Laughter","Stu
 
 # Was die Arbeit braucht
 
+<MediaFigure id="empty-room" />
+
 Die Aufführung ist bewusst klein. Die Bedingungen, unter denen sie präzise werden kann, sind es nicht.
 
 Das Material wird durch körperliche Forschung und nicht aus einem fertigen Skript entwickelt. Szenen, Objekte und Beziehungen müssen ausprobiert, verworfen, wiederholt und verändert werden.

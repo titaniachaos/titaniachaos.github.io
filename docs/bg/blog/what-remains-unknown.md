@@ -7,6 +7,8 @@ tags: ["Български","Clown Project","Solo Titania Chaos","Audience","Stu
 
 # Какво остава неизвестно
 
+<MediaFigure id="shadow" />
+
 Много — съвсем умишлено.
 
 **Защо тази тема сега?**

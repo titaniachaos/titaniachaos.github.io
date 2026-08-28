@@ -101,13 +101,36 @@ Dimensions are not declared — the loader reads them off the file, through the
 same header parser `check-images.mjs` uses, so the two cannot disagree.
 
 Tags are a closed vocabulary. A typo fails the build, and
-`check-ecosystem.mjs` fails first: it also catches a page with figures and no
-hero, a hero with nothing to slide, and three languages that have drifted into
-placing different figures.
+`check-ecosystem.mjs` fails first — as does an `id=` naming a frame that does
+not exist. It also catches a page with **two or more** figures and no hero (one
+figure needs none: a slider of a single slide is not a slider), a hero with
+nothing to slide, and three languages that have drifted into placing different
+figures.
+
+Every crop that throws part of a frame away — the square tile, and any
+`object-fit: cover` at display size — uses the frame's declared `focus`, so the
+face stays in shot at every screen size. It is declared rather than detected:
+the default follows entropy, and entropy kept the balloons and cut the head off
+the person holding them.
 
 Two figures on one page may not ask for the same thing — that is how a
 component finds its own placement — and one page never gets the same
 photograph twice.
+
+### Naming a picture
+
+`tags` asks for *something like this* and lets the archive choose. When a
+page's words are about a particular photograph, it can say so:
+
+```md
+<MediaFigure id="dressing-room" />
+```
+
+Tags cannot express that. Three frames are tagged exactly `portrait solitude`,
+so only the first is ever reachable by tag — fine for a service page that wants
+a portrait, useless for a journal entry about a dressing room. The journal's
+twelve posts each name their own picture, which is why they show twelve
+different ones.
 
 ### Category pages, generated
 

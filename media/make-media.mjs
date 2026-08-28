@@ -94,6 +94,10 @@ const PHOTOS = {
  * its own and the paths in it are whole rather than bare filenames.
  */
 const IMPORTED = {
+  'empty-room': '100 procenta budni/IMG_1349.JPG',
+  'harbour-bollard': '100 procenta budni/IMG_2935.jpeg',
+  'dressing-room': '100 procenta budni/IMG_0468.jpeg',
+  'blue-corner': '100 procenta budni/IMG_2869.jpeg',
 }
 
 /**
@@ -209,7 +213,7 @@ async function frame(source, id) {
 
   await stamp(sharp(source).resize(W, H, { fit: 'inside', withoutEnlargement: true }))
     .webp({ quality: Q }).toFile(join(out, `${id}.webp`))
-  await stamp(sharp(source).resize(S, S, { fit: 'cover', position: 'attention' }))
+  await stamp(sharp(source).resize(S, S, { fit: 'cover', position: record?.focus ?? 'attention' }))
     .webp({ quality: SQ }).toFile(join(out, `${id}-s.webp`))
 }
 

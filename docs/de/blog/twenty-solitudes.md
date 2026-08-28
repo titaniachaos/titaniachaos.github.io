@@ -7,6 +7,8 @@ tags: ["Deutsch","Clown Project","Solitude","Studio Practice","Failure","Object 
 
 # Zwanzig Formen des Alleinseins
 
+<MediaFigure id="traveller-kit" />
+
 Erzeuge **zwanzig kurze körperliche Improvisationen** von jeweils ungefähr einer Minute. Verwende in der ersten Runde keine Objekte.
 
 Jede Improvisation erhält eine genaue Bedingung oder Aufgabe. Sie soll Titania sagen, was sie tut oder in welcher Situation sie ist — nicht, welches Gefühl oder welche Bedeutung sie ausdrücken soll.

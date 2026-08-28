@@ -41,6 +41,7 @@ export async function frames() {
       kind: /kind: 'video'/.test(body) ? 'video' : 'photo',
       tags: [...(body.match(/tags: \[([^\]]*)\]/)?.[1] ?? '').matchAll(/'([a-z-]+)'/g)].map((m) => m[1]),
       seconds: Number(body.match(/seconds: (\d+)/)?.[1]) || undefined,
+      focus: body.match(/focus: '([^']+)'/)?.[1],
       permalink: body.match(/permalink: '([^']+)'/)?.[1],
       consentOwed: body.match(/consentOwed: '([^']*)'/)?.[1],
       alt: three('alt'),

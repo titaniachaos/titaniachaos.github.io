@@ -28,13 +28,17 @@ import { useLang } from './useLang.ts'
 
 const props = defineProps<{
   /** Space-separated tags from the vocabulary. Unique within the page. */
-  tags: string
+  tags?: string
+  /** Or a frame by name, when the words are about that particular picture. */
+  id?: string
 }>()
 
 const { lang, slug } = useLang()
 
 const page = computed<Placement[]>(() => data.placements[`${lang.value}/${slug.value}`] ?? [])
-const wanted = computed(() => props.tags.trim().replace(/\s+/g, ' '))
+const wanted = computed(() =>
+  props.id ? `id:${props.id.trim()}` : (props.tags ?? '').trim().replace(/\s+/g, ' ')
+)
 const at = computed(() => page.value.findIndex((p) => p.tags === wanted.value))
 const placement = computed<Placement | null>(() => page.value[at.value] ?? null)
 const frame = computed<Media | null>(

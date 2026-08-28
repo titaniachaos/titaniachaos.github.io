@@ -7,6 +7,8 @@ tags: ["English","Clown Project","Solitude","Studio Practice","Sources","Field N
 
 # The research field
 
+<MediaFigure id="harbour-bollard" />
+
 Research around the project brings together different ways of thinking about being alone: **solitude, loneliness, isolation, chosen and imposed aloneness, privacy, absence, connection and being alone in the presence of others.**
 
 These distinctions are not a proposed dramaturgy.

@@ -7,6 +7,8 @@ tags: ["Deutsch","Clown Project","Solitude","Studio Practice","Failure","Object 
 
 # Beobachtungspraxis
 
+<MediaFigure id="statue-embrace" />
+
 Beobachte alleiniges Verhalten, ohne Motive zuzuschreiben. Notiere nur Sicht- oder Hörbares: Handlungen, Wiederholungen, Pausen, kleine Rituale, Raumnutzung, Beziehungen zu Objekten, abgebrochene Handlungen und Laute, die nicht an andere gerichtet sind.
 
 Unterscheide:

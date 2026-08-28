@@ -7,6 +7,8 @@ tags: ["Deutsch","Clown Project","Solitude","Audience","Studio Practice","Source
 
 # D. W. Winnicott — die Fähigkeit zum Alleinsein
 
+<MediaFigure id="dressing-room" />
+
 **Status:** Verifiziert
 
 **Quellenbefund:** Winnicott beschreibt die Fähigkeit zum Alleinsein durch das Paradox, in Anwesenheit eines verlässlichen, nicht fordernden anderen allein zu sein.

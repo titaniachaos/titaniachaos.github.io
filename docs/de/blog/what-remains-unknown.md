@@ -7,6 +7,8 @@ tags: ["Deutsch","Clown Project","Solo Titania Chaos","Audience","Studio Practic
 
 # Was unbekannt bleibt
 
+<MediaFigure id="shadow" />
+
 Sehr vieles — mit Absicht.
 
 **Warum dieses Thema jetzt?**

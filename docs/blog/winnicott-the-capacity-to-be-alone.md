@@ -7,6 +7,8 @@ tags: ["English","Clown Project","Solitude","Audience","Studio Practice","Source
 
 # D. W. Winnicott — the capacity to be alone
 
+<MediaFigure id="dressing-room" />
+
 **Status:** Verified
 
 **Source finding:** Winnicott describes the capacity to be alone through the paradox of being alone in the presence of a reliable, non-demanding other.

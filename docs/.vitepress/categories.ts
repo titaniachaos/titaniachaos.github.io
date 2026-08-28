@@ -17,6 +17,7 @@ export const TAGS = [
   'portrait',
   'juggling',
   'press',
+  'solitude',
   'feed'
 ] as const
 
@@ -45,6 +46,7 @@ export const TAG_NAMES: Record<Lang, Record<Tag, string>> = {
     portrait: 'portrait',
     juggling: 'juggling',
     press: 'press',
+    solitude: 'solitude',
     feed: 'from the feed'
   },
   bg: {
@@ -60,6 +62,7 @@ export const TAG_NAMES: Record<Lang, Record<Tag, string>> = {
     portrait: 'портрет',
     juggling: 'жонглиране',
     press: 'медии',
+    solitude: 'уединение',
     feed: 'от потока'
   },
   de: {
@@ -75,6 +78,7 @@ export const TAG_NAMES: Record<Lang, Record<Tag, string>> = {
     portrait: 'Porträt',
     juggling: 'Jonglieren',
     press: 'Presse',
+    solitude: 'Alleinsein',
     feed: 'aus dem Feed'
   }
 }

@@ -1,7 +1,7 @@
 {
   "origin": "https://titaniachaos.github.io",
   "rights": "© Tatiana Petkova (Titania Chaos). Photographs by Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, Konstantin Oberlik, Tatiana Petkova, Marion Scholz and Laurent Ziegler.",
-  "count": 26,
+  "count": 30,
   "media": [
     {
       "id": "workshop-mini-art",
@@ -54,7 +54,8 @@
       "tags": [
         "street",
         "performance",
-        "portrait"
+        "portrait",
+        "solitude"
       ],
       "seconds": 10,
       "alt": {
@@ -224,7 +225,8 @@
       "kind": "photo",
       "tags": [
         "stage",
-        "performance"
+        "performance",
+        "solitude"
       ],
       "alt": {
         "en": "Titania Chaos on a dark stage in a pale grey dress, holding a single balloon on an open hand",
@@ -244,7 +246,8 @@
       "kind": "photo",
       "tags": [
         "stage",
-        "performance"
+        "performance",
+        "solitude"
       ],
       "alt": {
         "en": "Titania Chaos on a dark stage, opening out the wide skirt of a pale gown with both hands",
@@ -264,7 +267,8 @@
       "kind": "photo",
       "tags": [
         "portrait",
-        "performance"
+        "performance",
+        "solitude"
       ],
       "alt": {
         "en": "Titania Chaos in a houndstooth jacket at a wooden counter, listening into an antique telephone",
@@ -283,7 +287,8 @@
       "id": "wall-coat",
       "kind": "photo",
       "tags": [
-        "portrait"
+        "portrait",
+        "solitude"
       ],
       "alt": {
         "en": "Titania Chaos against a concrete wall in a tweed coat over a pale blue dress, looking upwards",
@@ -303,7 +308,8 @@
       "kind": "photo",
       "tags": [
         "portrait",
-        "street"
+        "street",
+        "solitude"
       ],
       "alt": {
         "en": "A close portrait of Titania Chaos in a yellow beanie and round glasses, eyes wide, red nose on",
@@ -322,7 +328,8 @@
       "id": "shadow",
       "kind": "photo",
       "tags": [
-        "portrait"
+        "portrait",
+        "solitude"
       ],
       "alt": {
         "en": "The shadow of Titania Chaos thrown on a pale wall, hat and open hand in silhouette",
@@ -342,7 +349,8 @@
       "kind": "photo",
       "tags": [
         "street",
-        "portrait"
+        "portrait",
+        "solitude"
       ],
       "alt": {
         "en": "Titania Chaos in a red boilersuit jumping in a doorway, arms and legs spread wide",
@@ -362,7 +370,8 @@
       "kind": "photo",
       "tags": [
         "street",
-        "performance"
+        "performance",
+        "solitude"
       ],
       "alt": {
         "en": "Titania Chaos in a red dress balancing on one foot along the edge of a park bench",
@@ -402,7 +411,8 @@
       "kind": "photo",
       "tags": [
         "street",
-        "performance"
+        "performance",
+        "solitude"
       ],
       "alt": {
         "en": "Titania Chaos with a red nose embracing a bronze statue on a pedestrian street, a second red nose on the statue",
@@ -548,6 +558,89 @@
       "url": "https://titaniachaos.github.io/images/media/impact-hub.webp",
       "tile": "https://titaniachaos.github.io/images/media/impact-hub-s.webp",
       "consentOwed": "a seated audience, several of them identifiable, including a child"
+    },
+    {
+      "id": "blue-corner",
+      "kind": "photo",
+      "tags": [
+        "portrait",
+        "stage",
+        "solitude"
+      ],
+      "alt": {
+        "en": "Titania Chaos in a red polka-dot suit, braced barefoot across the corner of a blue-painted alcove",
+        "bg": "Титания Хаос в червен костюм на точки, боса, се е подпряла в ъгъла на синя ниша",
+        "de": "Titania Chaos im rot gepunkteten Anzug, barfuß in die Ecke einer blau gestrichenen Nische gestemmt"
+      },
+      "caption": {
+        "en": "A corner is the smallest room there is, and it still holds a whole person.",
+        "bg": "Ъгълът е най-малката стая, а пак побира цял човек.",
+        "de": "Eine Ecke ist der kleinste Raum, den es gibt — und fasst trotzdem einen ganzen Menschen."
+      },
+      "url": "https://titaniachaos.github.io/images/media/blue-corner.webp",
+      "tile": "https://titaniachaos.github.io/images/media/blue-corner-s.webp"
+    },
+    {
+      "id": "dressing-room",
+      "kind": "photo",
+      "tags": [
+        "portrait",
+        "stage",
+        "solitude"
+      ],
+      "alt": {
+        "en": "Titania Chaos in a pale green dress and red nose, seated at a lit dressing-room mirror",
+        "bg": "Титания Хаос в бледозелена рокля и с червен нос, седнала пред осветено гримьорно огледало",
+        "de": "Titania Chaos in hellgrünem Kleid mit roter Nase, sitzend vor einem beleuchteten Garderobenspiegel"
+      },
+      "caption": {
+        "en": "The last quiet before the room fills. The nose is already on.",
+        "bg": "Последната тишина, преди залата да се напълни. Носът вече е сложен.",
+        "de": "Die letzte Stille, bevor der Saal sich füllt. Die Nase sitzt schon."
+      },
+      "url": "https://titaniachaos.github.io/images/media/dressing-room.webp",
+      "tile": "https://titaniachaos.github.io/images/media/dressing-room-s.webp"
+    },
+    {
+      "id": "harbour-bollard",
+      "kind": "photo",
+      "tags": [
+        "portrait",
+        "street",
+        "solitude"
+      ],
+      "alt": {
+        "en": "Titania Chaos balanced on a harbour bollard against a bright sky, arms out, the sea behind her",
+        "bg": "Титания Хаос балансира върху кнехт на пристанището на фона на светло небе, с разперени ръце и море зад нея",
+        "de": "Titania Chaos balanciert auf einem Hafenpoller vor hellem Himmel, die Arme ausgebreitet, dahinter das Meer"
+      },
+      "caption": {
+        "en": "Alone on a metre of iron, with the whole harbour to fall into.",
+        "bg": "Сама върху метър желязо, с цяло пристанище, в което да падне.",
+        "de": "Allein auf einem Meter Eisen, mit einem ganzen Hafen zum Hineinfallen."
+      },
+      "url": "https://titaniachaos.github.io/images/media/harbour-bollard.webp",
+      "tile": "https://titaniachaos.github.io/images/media/harbour-bollard-s.webp"
+    },
+    {
+      "id": "empty-room",
+      "kind": "photo",
+      "tags": [
+        "portrait",
+        "solitude"
+      ],
+      "alt": {
+        "en": "Titania Chaos in a red hooded coat, standing alone in an empty rehearsal room",
+        "bg": "Титания Хаос в червено палто с качулка, сама в празна репетиционна зала",
+        "de": "Titania Chaos im roten Kapuzenmantel, allein in einem leeren Probenraum"
+      },
+      "caption": {
+        "en": "An empty room is not nothing. It is the thing the work has to fill.",
+        "bg": "Празната зала не е нищо. Тя е онова, което работата трябва да запълни.",
+        "de": "Ein leerer Raum ist nicht nichts. Er ist das, was die Arbeit füllen muss."
+      },
+      "url": "https://titaniachaos.github.io/images/media/empty-room.webp",
+      "tile": "https://titaniachaos.github.io/images/media/empty-room-s.webp"
     }
   ]
 }

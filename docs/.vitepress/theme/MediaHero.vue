@@ -118,6 +118,7 @@ const position = (i: number) =>
           <video
             v-if="slide.frame.mp4"
             class="hero__video"
+            :style="{ objectPosition: slide.frame.anchor }"
             :src="slide.frame.mp4"
             :poster="slide.frame.file"
             :aria-label="slide.frame.alt[lang]"
@@ -132,6 +133,7 @@ const position = (i: number) =>
             :alt="slide.frame.alt[lang]"
             :width="slide.frame.width"
             :height="slide.frame.height"
+            :style="{ objectPosition: slide.frame.anchor }"
             :loading="i === 0 ? 'eager' : 'lazy'"
             decoding="async"
           />

@@ -7,6 +7,8 @@ tags: ["English","Clown Project","Clowning","Studio Practice","Failure","Sources
 
 # Henri Bergson — comic unconsciousness
 
+<MediaFigure id="beanie-portrait" />
+
 **Status:** Verified
 
 **Source finding:** Bergson connects comic effect with a character's limited awareness of what others can see.

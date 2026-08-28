@@ -1,11 +1,13 @@
 ---
 title: "Fragen für das Studio"
-description: "Das Projekt hat derzeit Fragen statt Szenen. Sie sind keine verborgene Synopsis, sondern Ausgangspunkte körperlicher Untersuchung. Kann Titania das Publikum entdecken? Kann das."
+description: "Das Projekt hat derzeit Fragen statt Szenen — keine verborgene Synopsis, sondern Ausgangspunkte für die körperliche Untersuchung im Probenraum."
 outline: [2, 3]
 tags: ["Deutsch","Clown Project","Clowning","Solitude","Audience","Laughter","Studio Practice","Failure","Object Play","question"]
 ---
 
 # Fragen für das Studio
+
+<MediaFigure id="blue-corner" />
 
 Das Projekt hat derzeit Fragen statt Szenen. Sie sind keine verborgene Synopsis, sondern Ausgangspunkte körperlicher Untersuchung.
 

@@ -7,6 +7,8 @@ tags: ["Deutsch","Clown Project","Solo Titania Chaos","Audience","Sources","Perf
 
 # Philippe Gaulier — Complicité
 
+<MediaFigure id="workshop-mini-art" />
+
 **Status:** Gewählte Linie
 
 **Quellenbefund:** Gaulier verwendet *complicité* für ein spontanes, oft unausgesprochenes Verständnis zwischen Spielenden und mit einem Publikum.

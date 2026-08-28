@@ -7,6 +7,8 @@ tags: ["Deutsch","Clown Project","Clowning","Solitude","Audience","Laughter","ex
 
 # Der zentrale Widerspruch
 
+<MediaFigure id="stage-balloon" />
+
 **Kann ein Clown das Alleinsein untersuchen, wenn Clown durch Beziehung existiert?**
 
 Clown entsteht durch Kontakt. Etwas geschieht, der Clown registriert es, das Publikum registriert den Clown, und das Ereignis wird geteilt.

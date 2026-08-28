@@ -1,11 +1,13 @@
 ---
 title: "Twenty Solitudes"
-description: "Generate twenty short physical improvisations, approximately one minute each. In the first round, use no objects. Each improvisation receives one precise condition or task. The."
+description: "A studio exercise: twenty short physical improvisations on being alone, one minute each, one precise condition apiece, no objects in the first round."
 outline: [2, 3]
 tags: ["English","Clown Project","Solitude","Audience","Studio Practice","Failure","Object Play","exercise"]
 ---
 
 # Twenty Solitudes
+
+<MediaFigure id="traveller-kit" />
 
 Generate **twenty short physical improvisations**, approximately one minute each.
 

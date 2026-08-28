@@ -7,6 +7,8 @@ tags: ["Български","Clown Project","Solo Titania Chaos","Audience","Sou
 
 # Филип Голие — complicité
 
+<MediaFigure id="workshop-mini-art" />
+
 **Статус:** Избрана линия
 
 **Източникът подкрепя:** Голие използва *complicité* за спонтанно, често неизказано разбиране между изпълнители и с публиката.

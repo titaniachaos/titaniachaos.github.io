@@ -7,6 +7,8 @@ tags: ["Deutsch","Clown Project","Clowning","Studio Practice","Failure","Sources
 
 # Henri Bergson — komische Unbewusstheit
 
+<MediaFigure id="beanie-portrait" />
+
 **Status:** Verifiziert
 
 **Quellenbefund:** Bergson verbindet komische Wirkung mit dem begrenzten Bewusstsein einer Figur für das, was andere sehen.

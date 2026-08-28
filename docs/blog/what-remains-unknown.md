@@ -7,6 +7,8 @@ tags: ["English","Clown Project","Solo Titania Chaos","Audience","Studio Practic
 
 # What remains unknown
 
+<MediaFigure id="shadow" />
+
 A great deal — deliberately.
 
 **Why this subject now?**

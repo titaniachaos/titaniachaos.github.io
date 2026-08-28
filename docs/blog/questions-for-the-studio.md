@@ -7,6 +7,8 @@ tags: ["English","Clown Project","Clowning","Solitude","Audience","Laughter","St
 
 # Questions for the studio
 
+<MediaFigure id="blue-corner" />
+
 The project currently has questions rather than scenes.
 
 They are not a hidden synopsis. They are starting points for physical investigation.

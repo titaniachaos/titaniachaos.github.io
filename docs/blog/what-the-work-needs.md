@@ -7,6 +7,8 @@ tags: ["English","Clown Project","Solo Titania Chaos","Audience","Laughter","Stu
 
 # What the work needs
 
+<MediaFigure id="empty-room" />
+
 The performance is deliberately small. The conditions that allow it to become precise are not.
 
 The material is developed through physical research rather than from a finished script. Scenes, objects and relationships have to be tried, failed, repeated and changed.

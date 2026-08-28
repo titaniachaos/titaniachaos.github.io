@@ -7,6 +7,8 @@ tags: ["Deutsch","Clown Project","Audience","Failure","question"]
 
 # Den Flop lesen
 
+<MediaFigure id="telephone" />
+
 Scheitern wird beobachtet, nachdem es geschieht, statt nach einer Skala hergestellt zu werden.
 
 Frage: Was wollte Titania? Was scheiterte? Konnte das Publikum ihr Ziel erkennen? Was stand für sie auf dem Spiel? Was wurde bloßgelegt? War das Scheitern gespielt, wirklich unerwartet oder dazwischen? Was geschah danach? Erzeugte es neues Verhalten?

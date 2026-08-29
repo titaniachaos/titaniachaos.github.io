@@ -32,7 +32,11 @@ export async function frames() {
   for (const block of source.matchAll(/\{\s*\n\s{4}id: '([a-z0-9-]+)',[\s\S]*?\n\s{2}\}/g)) {
     const body = block[0]
     const three = (field) => {
-      const m = body.match(new RegExp(`${field}: \\{([\\s\\S]*?)\\n\\s{4}\\}`))?.[1] ?? ''
+      // Up to the closing brace, wherever it is. The old pattern required the
+      // brace to be alone on a line indented by four, so a frame written as
+      // `alt: { en: '…', bg: '…', de: '…' }` parsed as three undefineds and
+      // was exported with no alt text at all, silently, for 75 frames.
+      const m = body.match(new RegExp(`${field}: \\{([^}]*)\\}`))?.[1] ?? ''
       const pick = (l) => m.match(new RegExp(`${l}: '((?:[^'\\\\]|\\\\.)*)'`))?.[1]?.replace(/\\'/g, "'")
       return { en: pick('en'), bg: pick('bg'), de: pick('de') }
     }

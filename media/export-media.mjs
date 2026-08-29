@@ -116,6 +116,21 @@ for (const frame of await frames()) {
     }
   }
 
+  // A published frame with no words is not a frame the other site can render:
+  // it borrows this index and has nowhere else to get alt text from. This
+  // shipped 75 entries with `alt: {}` before anything noticed, and the failure
+  // surfaced as bare images on a sibling repository's pages.
+  for (const field of ['alt', 'caption']) {
+    for (const lang of ['en', 'bg', 'de']) {
+      if (!frame[field][lang]) {
+        throw new Error(
+          `export-media: ${frame.id} is published but its ${field}.${lang} is empty — ` +
+            'the index is the only place the other sites can read it from'
+        )
+      }
+    }
+  }
+
   const base = `${ORIGIN}/images/media/${frame.id}`
   index.push({
     id: frame.id,

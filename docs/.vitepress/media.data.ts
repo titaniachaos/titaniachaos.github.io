@@ -86,6 +86,18 @@ export interface Frame {
    * this line and it is live.
    */
   draft?: true
+  /**
+   * Why a frame is held back, when the reason is not that nobody has written
+   * its words yet.
+   *
+   * Six of the imported frames are not photographs of the work: a screenshot
+   * of somebody else's Instagram post, another organisation's logo, a framed
+   * drawing by another artist, an unattributed illustration, an occasion this
+   * archive cannot name, and one that is a decision about what this project
+   * says in public rather than a decision about tagging. Written down because
+   * "still a draft" reads as unfinished, and these are not unfinished.
+   */
+  heldBack?: string
   /** Where the frame came from. Everything unmarked is the picture archive. */
   source?: 'youtube' | 'site' | 'instagram' | 'facebook'
   /**
@@ -678,422 +690,377 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-06077ced0b10175c',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'performance'],
-    othersInFrame: 'a second performer, clearly identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['street', 'performance', 'props'],
+    othersInFrame: 'a fellow performer, clearly identifiable, and passers-by in the background',
+    alt: { en: 'Titania Chaos in a red dress standing at a stone parapet while a fellow performer holds a handstand beside a hoop', bg: 'Титания Хаос в червена рокля до каменен парапет, докато друг артист прави стойка на ръце до обръч', de: 'Titania Chaos im roten Kleid an einer Steinbrüstung, daneben hält ein Kollege einen Handstand neben einem Reifen' },
+    caption: { en: 'A pitch on the street is whatever furniture the street already has.', bg: 'Сцената на улицата е това, което улицата вече е сложила там.', de: 'Die Bühne auf der Straße ist das, was die Straße schon hingestellt hat.' }
   },
   {
     id: 'a-0679147602f4d57d',
-    draft: true,
     kind: 'photo',
-    tags: ['props'],
-    othersInFrame: 'a stock flat-lay of paints — not her photograph',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['props', 'solitude'],
+    alt: { en: 'A watercolour palette, brushes and a blank spiral notebook on a wooden table, seen from above', bg: 'Палитра с акварели, четки и празен спирален бележник върху дървена маса, отгоре', de: 'Aquarellkasten, Pinsel und ein leeres Spiralheft auf einem Holztisch, von oben' },
+    caption: { en: 'Before the material exists there is a table, and on the table nothing yet.', bg: 'Преди материалът да съществува, има маса, а на масата — още нищо.', de: 'Bevor das Material existiert, gibt es einen Tisch, und auf dem Tisch noch nichts.' }
   },
   {
     id: 'a-06d135037c12fedf',
     draft: true,
+    heldBack: 'a screenshot of somebody else\'s Instagram post, showing their handle and their words — their copyright and their account, not this archive\'s to republish',
     kind: 'photo',
     tags: ['workshop'],
-    othersInFrame: 'a screenshot of somebody else\'s Instagram account, handle and words',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
   {
     id: 'a-3bae0779b80bc772',
     draft: true,
+    heldBack: 'a drawing of four clown figures whose author is not recorded — an illustration cannot be published as a photograph of the work without knowing who made it',
     kind: 'photo',
     tags: ['portrait'],
-    othersInFrame: 'somebody else\'s drawing of the character',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
   {
     id: 'a-5214fe392c281774',
-    draft: true,
     kind: 'photo',
-    tags: ['workshop', 'children'],
-    othersInFrame: 'children watching, one in costume',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['workshop', 'children', 'performance'],
+    othersInFrame: 'a seated audience including several small children, clearly identifiable',
+    alt: { en: 'A performer in a pink patterned costume balancing in a high kick along a low beam while a seated audience of adults and small children watches', bg: 'Артист в розов десениран костюм балансира с висок ритник по ниска греда пред седнала публика от възрастни и малки деца', de: 'Eine Darstellerin im rosa gemusterten Kostüm balanciert mit hohem Kick auf einem niedrigen Balken vor sitzendem Publikum aus Erwachsenen und kleinen Kindern' },
+    caption: { en: 'A beam a hand\'s breadth off the ground is high enough if somebody is watching.', bg: 'Греда на една длан от земята е достатъчно висока, ако някой гледа.', de: 'Ein Balken eine Handbreit über dem Boden ist hoch genug, wenn jemand zusieht.' }
   },
   {
     id: 'a-597e6067aaf640d3',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'performance'],
-    othersInFrame: 'a young man, clearly identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['street', 'props', 'performance'],
+    othersInFrame: 'a fellow performer, clearly identifiable',
+    alt: { en: 'Titania Chaos in red and a fellow performer framed inside a turquoise hoop against a stone wall', bg: 'Титания Хаос в червено и друг артист, рамкирани в тюркоазен обръч пред каменна стена', de: 'Titania Chaos in Rot und ein Kollege, gerahmt von einem türkisen Reifen vor einer Steinmauer' },
+    caption: { en: 'A hoop makes a frame, and a frame makes two people a picture.', bg: 'Обръчът прави рамка, а рамката прави от двама души картина.', de: 'Ein Reifen wird zum Rahmen, und ein Rahmen macht aus zwei Menschen ein Bild.' }
   },
   {
     id: 'a-6929cbe7e418b679',
-    draft: true,
     kind: 'photo',
-    tags: ['children'],
+    tags: ['children', 'portrait'],
     othersInFrame: 'a child, clearly identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    alt: { en: 'Titania Chaos in a red nose and glasses close beside a child, both looking into the camera', bg: 'Титания Хаос с червен нос и очила плътно до дете, и двамата гледат в камерата', de: 'Titania Chaos mit roter Nase und Brille dicht neben einem Kind, beide blicken in die Kamera' },
+    caption: { en: 'The nose is the shortest introduction there is.', bg: 'Носът е най-краткото представяне, което съществува.', de: 'Die Nase ist die kürzeste Vorstellung, die es gibt.' }
   },
   {
     id: 'a-6bd9c2d47300f293',
-    draft: true,
     kind: 'photo',
-    tags: ['workshop', 'children'],
-    othersInFrame: 'a child and a second adult',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['workshop', 'children', 'props'],
+    othersInFrame: 'a child on the ball and other participants, clearly identifiable',
+    alt: { en: 'A child balancing upright on a large exercise ball, steadied by two adults in a bright workshop room', bg: 'Дете балансира право върху голяма гимнастическа топка, придържано от двама възрастни в светла зала за работилница', de: 'Ein Kind balanciert aufrecht auf einem großen Gymnastikball, gestützt von zwei Erwachsenen in einem hellen Workshopraum' },
+    caption: { en: 'Two pairs of hands are the whole apparatus.', bg: 'Два чифта ръце са целият уред.', de: 'Zwei Paar Hände sind der ganze Apparat.' }
   },
   {
     id: 'a-8b30b47754adaae4',
-    draft: true,
     kind: 'photo',
-    tags: ['workshop'],
-    othersInFrame: 'about a dozen workshop participants',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['workshop', 'performance'],
+    othersInFrame: 'about fourteen workshop participants, clearly identifiable',
+    alt: { en: 'A group of about fourteen workshop participants in red noses posed together at the end of a session', bg: 'Група от около четиринадесет участници в работилница с червени носове, застанали заедно в края на занятието', de: 'Eine Gruppe von etwa vierzehn Workshop-Teilnehmenden mit roten Nasen am Ende einer Einheit' },
+    caption: { en: 'Everyone leaves with the same nose and a different discovery.', bg: 'Всички си тръгват с еднакъв нос и различно откритие.', de: 'Alle gehen mit derselben Nase und einer anderen Entdeckung.' }
   },
   {
     id: 'a-9eedf775a25a7a47',
-    draft: true,
     kind: 'photo',
-    tags: ['children', 'performance'],
-    othersInFrame: 'several children in an audience',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['stage', 'children', 'performance'],
+    othersInFrame: 'several children on stage, clearly identifiable',
+    alt: { en: 'Titania Chaos in red on a dark stage spraying a burst of white while several children play around her', bg: 'Титания Хаос в червено на тъмна сцена пръска бял облак, докато няколко деца играят около нея', de: 'Titania Chaos in Rot auf dunkler Bühne versprüht einen weißen Schwall, während mehrere Kinder um sie herum spielen' },
+    caption: { en: 'The stage stops being a stage the moment the children are on it.', bg: 'Сцената спира да бъде сцена в мига, в който децата са на нея.', de: 'Die Bühne hört auf, Bühne zu sein, sobald die Kinder darauf stehen.' }
   },
   {
     id: 'a-aed9ec2ec09f7956',
-    draft: true,
     kind: 'photo',
-    tags: ['stage', 'performance'],
-    othersInFrame: 'two other performers',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['street', 'props', 'performance'],
+    othersInFrame: 'passers-by, mostly legs and backs, one or two identifiable',
+    alt: { en: 'Titania Chaos kneeling on a pavement in a green and red costume beside a jointed dog puppet, with passers-by walking past', bg: 'Титания Хаос коленичи на тротоара в зелен и червен костюм до кукла куче със стави, а минувачи отминават', de: 'Titania Chaos kniet im grün-roten Kostüm auf dem Gehsteig neben einer Gelenkpuppe in Hundeform, Passanten gehen vorbei' },
+    caption: { en: 'A street audience is made of people who had somewhere else to be.', bg: 'Уличната публика е от хора, които са били тръгнали другаде.', de: 'Ein Straßenpublikum besteht aus Leuten, die eigentlich woanders hinwollten.' }
   },
   {
     id: 'a-bf2c4943610a52c9',
-    draft: true,
     kind: 'photo',
-    tags: ['juggling', 'street'],
-    othersInFrame: 'a second person, clearly identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['juggling', 'street', 'props'],
+    othersInFrame: 'a child\'s hand and an adult behind, partly identifiable',
+    alt: { en: 'Titania Chaos in a red dress catching a pink club on a cobbled square, with a child\'s hand reaching in from the edge', bg: 'Титания Хаос в червена рокля хваща розова бухалка на калдъръмен площад, а от края посяга детска ръка', de: 'Titania Chaos im roten Kleid fängt eine rosa Keule auf einem Kopfsteinpflasterplatz, vom Rand greift eine Kinderhand herein' },
+    caption: { en: 'Juggling in the open air is an invitation nobody has to accept.', bg: 'Жонглирането на открито е покана, която никой не е длъжен да приеме.', de: 'Jonglieren im Freien ist eine Einladung, die niemand annehmen muss.' }
   },
   {
     id: 'a-dfc28077d265745f',
     draft: true,
+    heldBack: 'the Mini Art Fondation Sofia logo — another organisation\'s trademark, not a photograph of the work',
     kind: 'photo',
     tags: ['press'],
-    othersInFrame: 'a partner organisation\'s logo, not a photograph',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
   {
     id: 'a-e4384cfe78cdc552',
-    draft: true,
     kind: 'photo',
-    tags: ['stage', 'performance'],
-    othersInFrame: 'a musician in the background',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['stage', 'performance', 'props'],
+    alt: { en: 'Titania Chaos on a dark stage in a striped jacket and red trousers behind a table draped in blue cloth', bg: 'Титания Хаос на тъмна сцена с раирано сако и червен панталон зад маса, покрита със синя материя', de: 'Titania Chaos auf dunkler Bühne in gestreiftem Jackett und roter Hose hinter einem blau bespannten Tisch' },
+    caption: { en: 'Light on a table and dark everywhere else is already a scene.', bg: 'Светлина върху маса и тъмнина навсякъде другаде вече е сцена.', de: 'Licht auf einem Tisch und Dunkel ringsum ist bereits eine Szene.' }
   },
   {
     id: 'a-71d43133-c678-4ee5-af41-53856f37ffa3',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'solitude', 'portrait'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['street', 'portrait', 'performance'],
+    alt: { en: 'Titania Chaos outdoors in a turquoise dress and navy jacket, arms flung open, sunglasses on, against a bright sky', bg: 'Титания Хаос навън с тюркоазена рокля и тъмносиньо сако, широко разперени ръце, слънчеви очила, на фона на светло небе', de: 'Titania Chaos im Freien in türkisem Kleid und marineblauem Jackett, die Arme weit geöffnet, Sonnenbrille, vor hellem Himmel' },
+    caption: { en: 'An entrance works outdoors too; there is simply no wing to come out of.', bg: 'Излизането работи и навън; просто няма кулиса, от която да излезеш.', de: 'Ein Auftritt funktioniert auch draußen; es fehlt nur die Gasse, aus der man kommt.' }
   },
   {
     id: 'a-c6ab823a-6d6e-48cd-8dba-d3c2f158e590',
-    draft: true,
     kind: 'photo',
     tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    alt: { en: 'Titania Chaos in a high-collared turquoise dress and red nose, looking away from the camera against a pale wall', bg: 'Титания Хаос с тюркоазена рокля с висока яка и червен нос, гледа встрани от камерата на фона на светла стена', de: 'Titania Chaos in türkisem Kleid mit hohem Kragen und roter Nase, den Blick von der Kamera abgewandt, vor heller Wand' },
+    caption: { en: 'The nose is on and the person underneath has not decided anything yet.', bg: 'Носът е сложен, а човекът отдолу още нищо не е решил.', de: 'Die Nase sitzt, und der Mensch darunter hat noch nichts entschieden.' }
   },
   {
     id: 'a-img-0013',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait', 'street'],
+    alt: { en: 'Close portrait of Titania Chaos in a yellow hood and red coat with a red nose, city lights behind', bg: 'Близък портрет на Титания Хаос с жълта качулка и червено палто, с червен нос, а зад нея — светлините на града', de: 'Nahes Porträt von Titania Chaos mit gelber Kapuze und rotem Mantel, rote Nase, dahinter Stadtlichter' },
+    caption: { en: 'Winter clothes and a red nose make a costume out of an ordinary evening.', bg: 'Зимни дрехи и червен нос правят костюм от една обикновена вечер.', de: 'Winterkleidung und eine rote Nase machen aus einem gewöhnlichen Abend ein Kostüm.' }
   },
   {
     id: 'a-img-0468',
-    draft: true,
     kind: 'photo',
     tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    alt: { en: 'Titania Chaos in a turquoise high-collared dress with a red nose, standing quietly against a pale wall', bg: 'Титания Хаос с тюркоазена рокля с висока яка и червен нос, застанала тихо до светла стена', de: 'Titania Chaos in türkisem Kleid mit hohem Kragen und roter Nase, still vor einer hellen Wand' },
+    caption: { en: 'Waiting is most of the work and almost never the photograph.', bg: 'Чакането е по-голямата част от работата и почти никога — снимката.', de: 'Warten ist der größte Teil der Arbeit und fast nie das Foto.' }
   },
   {
     id: 'a-img-0491',
-    draft: true,
     kind: 'photo',
-    tags: ['props', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['props', 'solitude', 'portrait'],
+    alt: { en: 'Titania Chaos lying on dark fabric beside a pale doll\'s hand, red nose on, eyes open', bg: 'Титания Хаос лежи върху тъмен плат до бледа кукленска ръка, с червен нос и отворени очи', de: 'Titania Chaos liegt auf dunklem Stoff neben einer blassen Puppenhand, rote Nase, offene Augen' },
+    caption: { en: 'An object with a hand in it stops being an object.', bg: 'Предмет, в който има ръка, спира да бъде предмет.', de: 'Ein Gegenstand mit einer Hand darin hört auf, Gegenstand zu sein.' }
   },
   {
     id: 'a-img-0494',
-    draft: true,
     kind: 'photo',
-    tags: ['props', 'portrait'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['props', 'stage', 'performance'],
+    alt: { en: 'Titania Chaos behind a hanging curtain of green and pink fringes on a black stage', bg: 'Титания Хаос зад висяща завеса от зелени и розови ресни на черна сцена', de: 'Titania Chaos hinter einem hängenden Vorhang aus grünen und rosa Fransen auf schwarzer Bühne' },
+    caption: { en: 'Anything you can look through is a place to appear from.', bg: 'Всичко, през което може да се гледа, е място, откъдето да се появиш.', de: 'Alles, wodurch man schauen kann, ist ein Ort zum Auftauchen.' }
   },
   {
     id: 'a-img-0511',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait'],
-    othersInFrame: 'a shoulder at the edge of frame',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait', 'performance'],
+    othersInFrame: 'a person behind, out of focus and not identifiable',
+    alt: { en: 'Titania Chaos smiling in a turquoise dress and red nose, a blurred figure behind her', bg: 'Титания Хаос се усмихва с тюркоазена рокля и червен нос, зад нея — размита фигура', de: 'Titania Chaos lächelt in türkisem Kleid mit roter Nase, dahinter eine unscharfe Gestalt' },
+    caption: { en: 'The moment before going on, which never looks like the moment after.', bg: 'Мигът преди излизането, който никога не прилича на мига след него.', de: 'Der Moment vor dem Auftritt, der nie aussieht wie der danach.' }
   },
   {
     id: 'a-img-0536',
-    draft: true,
     kind: 'photo',
-    tags: ['camera', 'children'],
-    othersInFrame: 'children and adults at the camera',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['props', 'children', 'street'],
+    othersInFrame: 'a child from behind, and two adults whose faces the photographer covered with stickers in the original',
+    alt: { en: 'A performer in a top hat beside a laden prop cart in a shop while a child watches from behind', bg: 'Артист с цилиндър до отрупана количка с реквизит в магазин, а отзад гледа дете', de: 'Eine Darstellerin mit Zylinder neben einem beladenen Requisitenwagen in einem Laden, ein Kind schaut von hinten zu' },
+    caption: { en: 'A cart of objects gathers an audience faster than an announcement.', bg: 'Количка с предмети събира публика по-бързо от всяко обявление.', de: 'Ein Wagen voller Gegenstände versammelt schneller Publikum als jede Ankündigung.' }
   },
   {
     id: 'a-img-0561',
-    draft: true,
     kind: 'photo',
     tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    alt: { en: 'Titania Chaos in a turquoise dress and red nose in a kitchen, caught mid-turn', bg: 'Титания Хаос с тюркоазена рокля и червен нос в кухня, уловена в обръщане', de: 'Titania Chaos in türkisem Kleid mit roter Nase in einer Küche, mitten in der Drehung' },
+    caption: { en: 'A costume in a kitchen is the whole comedy of having a body and a life.', bg: 'Костюм в кухня е цялата комедия на това да имаш тяло и живот.', de: 'Ein Kostüm in einer Küche ist die ganze Komik davon, einen Körper und ein Leben zu haben.' }
   },
   {
     id: 'a-img-0825',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'portrait'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait', 'props'],
+    othersInFrame: 'one companion, clearly identifiable',
+    alt: { en: 'Titania Chaos and a companion in red noses inside a brightly lit shop', bg: 'Титания Хаос и спътник с червени носове в ярко осветен магазин', de: 'Titania Chaos und eine Begleitung mit roten Nasen in einem hell erleuchteten Laden' },
+    caption: { en: 'Two noses in a shop is already a scene nobody rehearsed.', bg: 'Два носа в магазин вече са сцена, която никой не е репетирал.', de: 'Zwei Nasen in einem Laden sind schon eine Szene, die niemand geprobt hat.' }
   },
   {
     id: 'a-img-1208',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait', 'props', 'performance'],
+    alt: { en: 'Titania Chaos shrugging with open hands, in a black bowler hat, yellow sleeves and a quilted gilet', bg: 'Титания Хаос свива рамене с отворени длани, с черно бомбе, жълти ръкави и подплатен елек', de: 'Titania Chaos zuckt mit offenen Händen die Schultern, schwarze Melone, gelbe Ärmel, Steppweste' },
+    caption: { en: 'The shrug is the oldest line in the trade and needs no translation.', bg: 'Свиването на рамене е най-старата реплика в занаята и не се нуждае от превод.', de: 'Das Schulterzucken ist der älteste Satz des Fachs und braucht keine Übersetzung.' }
   },
   {
     id: 'a-img-1272',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'performance'],
-    othersInFrame: 'a group of adults and children',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['workshop', 'street'],
+    othersInFrame: 'about eight adults, clearly identifiable; one face was covered in the original',
+    alt: { en: 'A circle of adults outdoors passing a gesture between them during an open-air session', bg: 'Кръг от възрастни на открито си подават жест по време на занятие навън', de: 'Ein Kreis von Erwachsenen im Freien gibt während einer Übung eine Geste weiter' },
+    caption: { en: 'The circle is not a warm-up device; it is the only shape where everyone is seen.', bg: 'Кръгът не е загрявка; той е единствената форма, в която всички са видени.', de: 'Der Kreis ist keine Aufwärmübung; er ist die einzige Form, in der alle gesehen werden.' }
   },
   {
     id: 'a-img-1275',
-    draft: true,
     kind: 'photo',
     tags: ['juggling', 'street'],
-    othersInFrame: 'other people, identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    othersInFrame: 'an adult and a child at the edge of the frame',
+    alt: { en: 'Titania Chaos in a red dress mid-juggle with a pink club on a cobbled square', bg: 'Титания Хаос в червена рокля жонглира с розова бухалка на калдъръмен площад', de: 'Titania Chaos im roten Kleid jongliert mit einer rosa Keule auf einem Kopfsteinpflasterplatz' },
+    caption: { en: 'Three objects and a square: the smallest complete apparatus there is.', bg: 'Три предмета и площад: най-малкият пълен уред, който съществува.', de: 'Drei Gegenstände und ein Platz: der kleinste vollständige Apparat, den es gibt.' }
   },
   {
     id: 'a-img-1320',
-    draft: true,
     kind: 'photo',
     tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    alt: { en: 'Titania Chaos in a long black coat and red beanie standing on a bare wooden floor', bg: 'Титания Хаос с дълго черно палто и червена шапка, застанала на гол дървен под', de: 'Titania Chaos in langem schwarzem Mantel und roter Mütze auf blankem Holzboden' },
+    caption: { en: 'An empty room is the most demanding partner in the building.', bg: 'Празната стая е най-взискателният партньор в сградата.', de: 'Ein leerer Raum ist der anspruchsvollste Partner im Haus.' }
   },
   {
     id: 'a-img-1353',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait'],
+    alt: { en: 'Titania Chaos in a red beanie, glasses and red nose in a doorway of yellow glass', bg: 'Титания Хаос с червена шапка, очила и червен нос на врата от жълто стъкло', de: 'Titania Chaos mit roter Mütze, Brille und roter Nase in einem Türrahmen aus gelbem Glas' },
+    caption: { en: 'The face does nothing; the nose does the announcing.', bg: 'Лицето не прави нищо; носът обявява.', de: 'Das Gesicht tut nichts; die Nase kündigt an.' }
   },
   {
     id: 'a-img-1355',
-    draft: true,
     kind: 'photo',
     tags: ['street', 'performance'],
-    othersInFrame: 'a second performer',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    othersInFrame: 'a fellow performer, clearly identifiable, and passers-by',
+    alt: { en: 'Titania Chaos in red at a stone parapet watching a fellow performer hold a handstand on the pavement', bg: 'Титания Хаос в червено до каменен парапет гледа как друг артист прави стойка на ръце на тротоара', de: 'Titania Chaos in Rot an einer Steinbrüstung sieht zu, wie ein Kollege auf dem Gehsteig einen Handstand hält' },
+    caption: { en: 'Somebody has to be the one who watches, or nothing is being shown.', bg: 'Някой трябва да е този, който гледа, иначе нищо не се показва.', de: 'Jemand muss der sein, der zusieht, sonst wird nichts gezeigt.' }
   },
   {
     id: 'a-img-1366',
-    draft: true,
     kind: 'photo',
     tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    alt: { en: 'Close self-portrait of Titania Chaos in a grey fur-lined hood with a red nose and round glasses', bg: 'Близък автопортрет на Титания Хаос със сива качулка с косъм, червен нос и кръгли очила', de: 'Nahes Selbstporträt von Titania Chaos in grauer Fellkapuze mit roter Nase und runder Brille' },
+    caption: { en: 'The camera at arm\'s length is how a solo keeps itself company.', bg: 'Камерата на една ръка разстояние е начинът, по който едно соло си прави компания.', de: 'Die Kamera auf Armlänge ist die Art, wie ein Solo sich Gesellschaft leistet.' }
   },
   {
     id: 'a-img-1406',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'performance'],
-    othersInFrame: 'a second person, identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['street', 'juggling', 'performance'],
+    othersInFrame: 'a fellow performer, clearly identifiable',
+    alt: { en: 'Titania Chaos in a red dress beside a fellow performer holding green clubs in front of a stone staircase', bg: 'Титания Хаос в червена рокля до друг артист със зелени бухалки пред каменно стълбище', de: 'Titania Chaos im roten Kleid neben einem Kollegen mit grünen Keulen vor einer Steintreppe' },
+    caption: { en: 'Two people and a staircase: the set was already there.', bg: 'Двама души и стълбище: декорът вече е бил там.', de: 'Zwei Menschen und eine Treppe: das Bühnenbild war schon da.' }
   },
   {
     id: 'a-img-1414',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'portrait'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['street', 'props'],
+    alt: { en: 'Titania Chaos with dark feathered props and a length of green fabric against an ornate building facade', bg: 'Титания Хаос с тъмен перест реквизит и зелен плат пред богато украсена фасада', de: 'Titania Chaos mit dunklen Federrequisiten und grünem Stoff vor einer reich verzierten Fassade' },
+    caption: { en: 'The building is the budget the street gives you for free.', bg: 'Сградата е бюджетът, който улицата ти дава безплатно.', de: 'Das Gebäude ist das Budget, das die Straße gratis hergibt.' }
   },
   {
     id: 'a-img-1419',
-    draft: true,
     kind: 'photo',
-    tags: ['children', 'street'],
-    othersInFrame: 'a child, clearly identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['children', 'street', 'props'],
+    othersInFrame: 'several children, clearly identifiable',
+    alt: { en: 'Titania Chaos in red crouched with juggling props among children on a cobbled street', bg: 'Титания Хаос в червено, приклекнала с реквизит за жонглиране сред деца на калдъръмена улица', de: 'Titania Chaos in Rot hockt mit Jongliergerät zwischen Kindern auf einer Kopfsteinpflasterstraße' },
+    caption: { en: 'Handing the object over is where the performance stops being one.', bg: 'Подаването на предмета е мястото, където представлението спира да бъде представление.', de: 'Das Weitergeben des Gegenstands ist der Moment, in dem die Vorstellung aufhört, eine zu sein.' }
   },
   {
     id: 'a-img-1474',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'performance'],
-    othersInFrame: 'three men, identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['street', 'portrait'],
+    othersInFrame: 'two men, clearly identifiable',
+    alt: { en: 'Titania Chaos with an orange nose standing between two seated men on a grassy bank', bg: 'Титания Хаос с оранжев нос, застанала между двама седнали мъже на тревист бряг', de: 'Titania Chaos mit oranger Nase zwischen zwei sitzenden Männern auf einer Wiese' },
+    caption: { en: 'An audience of two is still an audience and knows it.', bg: 'Публика от двама пак е публика и го знае.', de: 'Ein Publikum von zwei ist immer noch ein Publikum und weiß das.' }
   },
   {
     id: 'a-img-1610',
-    draft: true,
     kind: 'photo',
-    tags: ['workshop', 'children'],
-    othersInFrame: 'children and seated adults',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['workshop', 'children', 'performance'],
+    othersInFrame: 'two children on the platform and a seated audience, clearly identifiable',
+    alt: { en: 'A performer in a pink patterned costume on a low platform holding hands with two children while others watch', bg: 'Артист в розов десениран костюм на нисък подиум държи ръцете на две деца, а други гледат', de: 'Eine Darstellerin im rosa gemusterten Kostüm auf einem niedrigen Podest hält zwei Kinder an den Händen, andere schauen zu' },
+    caption: { en: 'A platform two hands high is a tightrope if you agree that it is.', bg: 'Подиум висок две длани е въже, ако се съгласиш, че е.', de: 'Ein Podest zwei Handbreit hoch ist ein Seil, wenn man sich darauf einigt.' }
   },
   {
     id: 'a-img-2173',
-    draft: true,
     kind: 'photo',
     tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    alt: { en: 'Studio portrait of Titania Chaos in a dark dress with a wide white collar and a red nose, hands held together', bg: 'Студиен портрет на Титания Хаос с тъмна рокля с широка бяла яка и червен нос, събрани ръце', de: 'Studioporträt von Titania Chaos in dunklem Kleid mit breitem weißem Kragen und roter Nase, die Hände zusammengelegt' },
+    caption: { en: 'The collar does the formality so the face does not have to.', bg: 'Яката поема официалността, за да не се налага лицето да я поема.', de: 'Der Kragen übernimmt die Förmlichkeit, damit das Gesicht es nicht muss.' }
   },
   {
     id: 'a-img-2193',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait', 'performance'],
+    othersInFrame: 'a second person\'s hand only',
+    alt: { en: 'Titania Chaos on a magenta ground in a curled wig and red nose, a hand pointing in from above', bg: 'Титания Хаос на пурпурен фон с къдрава перука и червен нос, а отгоре сочи ръка', de: 'Titania Chaos vor magentafarbenem Grund in Lockenperücke und roter Nase, von oben zeigt eine Hand herein' },
+    caption: { en: 'Being pointed at is the beginning of most trouble worth having.', bg: 'Да те посочат е началото на повечето неприятности, които си струват.', de: 'Angezeigt zu werden ist der Anfang der meisten Schwierigkeiten, die sich lohnen.' }
   },
   {
     id: 'a-img-2634',
-    draft: true,
     kind: 'photo',
-    tags: ['children', 'performance'],
-    othersInFrame: 'children in the foreground',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['children', 'birthday', 'balloons'],
+    othersInFrame: 'several children, clearly identifiable',
+    alt: { en: 'Titania Chaos leaning down among several children at a decorated party table', bg: 'Титания Хаос се навежда сред няколко деца на украсена празнична маса', de: 'Titania Chaos beugt sich zwischen mehreren Kindern an einem geschmückten Festtisch hinunter' },
+    caption: { en: 'At a child\'s height the room is a different room.', bg: 'На височината на дете стаята е друга стая.', de: 'Auf Kinderhöhe ist der Raum ein anderer Raum.' }
   },
   {
     id: 'a-img-2709',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'performance'],
-    othersInFrame: 'distant passers-by',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['street', 'performance', 'props'],
+    alt: { en: 'Titania Chaos in a red suit standing on a painted oil drum in the middle of a city street', bg: 'Титания Хаос в червен костюм, застанала върху боядисан варел насред градска улица', de: 'Titania Chaos im roten Anzug steht auf einem bemalten Ölfass mitten auf einer Stadtstraße' },
+    caption: { en: 'Height is the cheapest way to be a performance rather than a person.', bg: 'Височината е най-евтиният начин да си представление, а не човек.', de: 'Höhe ist der billigste Weg, eine Vorstellung zu sein statt eine Person.' }
   },
   {
     id: 'a-img-2712',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['street', 'performance'],
+    othersInFrame: 'a passer-by, clearly identifiable',
+    alt: { en: 'Titania Chaos in red stepping down from a painted drum while a passer-by in black stops to look', bg: 'Титания Хаос в червено слиза от боядисан варел, а минувач в черно спира да погледне', de: 'Titania Chaos in Rot steigt von einem bemalten Fass, ein Passant in Schwarz bleibt stehen' },
+    caption: { en: 'One person stopping is the difference between a street and a theatre.', bg: 'Един спрял човек е разликата между улица и театър.', de: 'Ein Mensch, der stehen bleibt, ist der Unterschied zwischen Straße und Theater.' }
   },
   {
     id: 'a-img-2845',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait', 'solitude', 'props'],
+    alt: { en: 'Titania Chaos in a red polka-dot jumpsuit sitting barefoot inside a blue arched niche', bg: 'Титания Хаос с червен гащеризон на точки, седнала боса в синя сводеста ниша', de: 'Titania Chaos im rot gepunkteten Overall sitzt barfuß in einer blauen Bogennische' },
+    caption: { en: 'A niche the size of a person is a room with an opinion about you.', bg: 'Ниша с размера на човек е стая, която има мнение за теб.', de: 'Eine Nische in Menschengröße ist ein Raum mit einer Meinung über dich.' }
   },
   {
     id: 'a-img-2906',
-    draft: true,
     kind: 'photo',
-    tags: ['props', 'portrait'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait', 'workshop'],
+    alt: { en: 'Titania Chaos in bright floral dungarees and a red nose in a daylit studio', bg: 'Титания Хаос с ярък цветен гащеризон и червен нос в осветено от деня студио', de: 'Titania Chaos in bunter Blumenlatzhose mit roter Nase in einem tageshellen Studio' },
+    caption: { en: 'Working clothes, which in this trade are also the costume.', bg: 'Работни дрехи, които в този занаят са и костюмът.', de: 'Arbeitskleidung, die in diesem Beruf zugleich das Kostüm ist.' }
   },
   {
     id: 'a-img-3341',
-    draft: true,
     kind: 'photo',
-    tags: ['stage', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait', 'stage'],
+    alt: { en: 'Titania Chaos full length in a red polka-dot jumpsuit and pale shoes against a black ground', bg: 'Титания Хаос в цял ръст с червен гащеризон на точки и светли обувки на черен фон', de: 'Titania Chaos in ganzer Figur im rot gepunkteten Overall und hellen Schuhen vor schwarzem Grund' },
+    caption: { en: 'Black behind a body is a promise that something is about to happen.', bg: 'Черното зад едно тяло е обещание, че нещо ще се случи.', de: 'Schwarz hinter einem Körper ist ein Versprechen, dass gleich etwas passiert.' }
   },
   {
     id: 'a-img-3608',
-    draft: true,
     kind: 'video',
-    seconds: 1,
-    tags: ['performance', 'solitude'],
-    othersInFrame: 'a bystander in the background',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    seconds: 14,
+    tags: ['juggling', 'performance'],
+    alt: { en: 'Titania Chaos in floral dungarees walking the length of a trampoline lane in a sports hall', bg: 'Титания Хаос с цветен гащеризон върви по батутна писта в спортна зала', de: 'Titania Chaos in Blumenlatzhose geht die Länge einer Trampolinbahn in einer Sporthalle entlang' },
+    caption: { en: 'A floor that answers back changes what walking is.', bg: 'Под, който отвръща, променя това какво е ходенето.', de: 'Ein Boden, der antwortet, verändert, was Gehen ist.' }
   },
   {
     id: 'a-img-3630',
-    draft: true,
     kind: 'video',
-    seconds: 1,
-    tags: ['workshop', 'children'],
-    othersInFrame: 'children watching, and a second adult',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    seconds: 8,
+    tags: ['children', 'workshop', 'performance'],
+    othersInFrame: 'several children watching, clearly identifiable',
+    alt: { en: 'Titania Chaos in red diving forward onto a mat in a gym while children watch from the wall bars', bg: 'Титания Хаос в червено се гмурка напред върху дюшек в салон, а деца гледат от шведската стена', de: 'Titania Chaos in Rot taucht in einer Turnhalle nach vorn auf eine Matte, Kinder schauen von der Sprossenwand zu' },
+    caption: { en: 'Falling on purpose is the first thing worth teaching.', bg: 'Да паднеш нарочно е първото нещо, което си струва да се научи.', de: 'Absichtlich zu fallen ist das Erste, was zu lehren sich lohnt.' }
   },
   {
     id: 'a-img-3811',
-    draft: true,
     kind: 'photo',
-    tags: ['workshop'],
-    othersInFrame: 'a large group, identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['workshop', 'stage'],
+    othersInFrame: 'about fourteen participants, clearly identifiable',
+    alt: { en: 'A group of about fourteen participants posed on a stage at the end of a course', bg: 'Група от около четиринадесет участници, застанали на сцена в края на курс', de: 'Eine Gruppe von etwa vierzehn Teilnehmenden auf einer Bühne am Ende eines Kurses' },
+    caption: { en: 'The last photograph of a course is always the loudest thing in it.', bg: 'Последната снимка от един курс винаги е най-шумното нещо в него.', de: 'Das letzte Foto eines Kurses ist immer das Lauteste daran.' }
   },
   {
     id: 'a-img-3834',
-    draft: true,
     kind: 'photo',
-    tags: ['workshop', 'children'],
-    othersInFrame: 'a group including children',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['workshop'],
+    othersInFrame: 'about fourteen participants, clearly identifiable',
+    alt: { en: 'About fourteen workshop participants with arms raised in a bright white studio', bg: 'Около четиринадесет участници в работилница с вдигнати ръце в светло бяло студио', de: 'Etwa vierzehn Workshop-Teilnehmende mit erhobenen Armen in einem hellen weißen Studio' },
+    caption: { en: 'An empty white room and fourteen people willing to look foolish.', bg: 'Празна бяла стая и четиринадесет души, готови да изглеждат глупаво.', de: 'Ein leerer weißer Raum und vierzehn Menschen, die bereit sind, sich zum Narren zu machen.' }
   },
   {
     id: 'a-img-4187',
     draft: true,
+    heldBack: 'a sports field, a sash and people this archive cannot name — the occasion is not recorded anywhere, and a photograph nobody can caption honestly should not be published',
     kind: 'photo',
     tags: ['street', 'solitude'],
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
@@ -1101,275 +1068,243 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-4367',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['solitude', 'performance'],
+    alt: { en: 'The shadow of a figure with one hand raised, cast across a pale wall', bg: 'Сянката на фигура с вдигната ръка, паднала върху светла стена', de: 'Der Schatten einer Gestalt mit erhobener Hand auf einer hellen Wand' },
+    caption: { en: 'The shadow does the gesture a moment late and better.', bg: 'Сянката прави жеста миг по-късно и по-добре.', de: 'Der Schatten macht die Geste einen Moment später und besser.' }
   },
   {
     id: 'a-img-4503',
-    draft: true,
     kind: 'photo',
     tags: ['workshop'],
-    othersInFrame: 'a group of faces, identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    othersInFrame: 'about ten participants, clearly identifiable',
+    alt: { en: 'Workshop participants lying and sitting together on a studio floor, seen from above', bg: 'Участници в работилница лежат и седят заедно на пода на студиото, гледани отгоре', de: 'Workshop-Teilnehmende liegen und sitzen gemeinsam auf dem Studioboden, von oben gesehen' },
+    caption: { en: 'The floor is where a group stops performing for each other.', bg: 'Подът е мястото, където групата спира да играе една за друга.', de: 'Der Boden ist der Ort, an dem eine Gruppe aufhört, füreinander zu spielen.' }
   },
   {
     id: 'a-img-4690',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait', 'performance'],
+    alt: { en: 'Titania Chaos in a turquoise dress and red nose gesturing in a bright corridor', bg: 'Титания Хаос с тюркоазена рокля и червен нос жестикулира в светъл коридор', de: 'Titania Chaos in türkisem Kleid mit roter Nase gestikuliert in einem hellen Gang' },
+    caption: { en: 'A corridor is a stage with the audience at both ends.', bg: 'Коридорът е сцена с публика в двата края.', de: 'Ein Gang ist eine Bühne mit Publikum an beiden Enden.' }
   },
   {
     id: 'a-img-5951',
-    draft: true,
     kind: 'photo',
-    tags: ['camera', 'performance'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['camera', 'props', 'portrait'],
+    alt: { en: 'Titania Chaos in a pink headpiece beside the time-travelling camera, a large wooden plate camera on a tripod', bg: 'Титания Хаос с розова украса за глава до пътуващата във времето камера — голям дървен фотоапарат на статив', de: 'Titania Chaos mit rosa Kopfschmuck neben der Zeitreisekamera, einer großen hölzernen Plattenkamera auf einem Stativ' },
+    caption: { en: 'The camera does not take the picture; it gives people a reason to pose.', bg: 'Камерата не прави снимката; тя дава на хората повод да позират.', de: 'Die Kamera macht das Bild nicht; sie gibt den Leuten einen Grund zu posieren.' }
   },
   {
     id: 'a-img-6026',
-    draft: true,
     kind: 'photo',
-    tags: ['children', 'workshop'],
-    othersInFrame: 'a group including a wheelchair user and children',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['workshop', 'props'],
+    othersInFrame: 'about a dozen participants, clearly identifiable, one using a wheelchair',
+    alt: { en: 'A workshop in a wooden-floored hall with participants seated in a wide circle, one using a wheelchair', bg: 'Работилница в зала с дървен под, участници седят в широк кръг, един от тях в инвалидна количка', de: 'Ein Workshop in einem Saal mit Holzboden, Teilnehmende sitzen im weiten Kreis, eine Person im Rollstuhl' },
+    caption: { en: 'The circle adjusts to whoever is in it, which is the whole method.', bg: 'Кръгът се нагажда към този, който е в него — това е целият метод.', de: 'Der Kreis richtet sich nach denen, die darin sind — das ist die ganze Methode.' }
   },
   {
     id: 'a-img-6371',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['street', 'performance'],
+    alt: { en: 'Titania Chaos in a red dress standing on a turquoise barrel on rough ground by a river wall', bg: 'Титания Хаос в червена рокля стои върху тюркоазен варел на неравна земя до речна стена', de: 'Titania Chaos im roten Kleid steht auf einem türkisen Fass auf unebenem Boden an einer Ufermauer' },
+    caption: { en: 'Anywhere with a drop and a barrel will do.', bg: 'Става всяко място със спад и варел.', de: 'Es genügt jeder Ort mit Gefälle und einem Fass.' }
   },
   {
     id: 'a-img-6421',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'juggling'],
-    othersInFrame: 'a child in the background',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['juggling', 'street', 'children'],
+    othersInFrame: 'a woman and two small children, clearly identifiable',
+    alt: { en: 'Titania Chaos juggling on a park path while a woman with a pram and two small children stop to watch', bg: 'Титания Хаос жонглира по алея в парка, а жена с количка и две малки деца спират да гледат', de: 'Titania Chaos jongliert auf einem Parkweg, eine Frau mit Kinderwagen und zwei kleine Kinder bleiben stehen' },
+    caption: { en: 'The pram stopping is the review.', bg: 'Спрялата количка е рецензията.', de: 'Der stehen gebliebene Kinderwagen ist die Kritik.' }
   },
   {
     id: 'a-img-6763',
-    draft: true,
     kind: 'photo',
-    tags: ['props', 'portrait'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['press', 'props', 'portrait'],
+    alt: { en: 'Titania Chaos holding up a black T-shirt printed with the Bulgarian words for hungry circus, in a market stall', bg: 'Титания Хаос вдига черна тениска с надпис „Аз съм гладен цирк“ на щанд на пазар', de: 'Titania Chaos hält ein schwarzes T-Shirt mit bulgarischer Aufschrift „Ich bin hungriger Zirkus“ an einem Marktstand hoch' },
+    caption: { en: 'The circus says out loud what the profession usually keeps quiet.', bg: 'Циркът казва на глас това, което професията обикновено премълчава.', de: 'Der Zirkus sagt laut, was der Beruf sonst verschweigt.' }
   },
   {
     id: 'a-img-7052',
     draft: true,
+    heldBack: 'Titania in front of political graffiti. Whether this project speaks on that subject in public is hers to decide, not a tagging decision',
     kind: 'photo',
     tags: ['street', 'portrait'],
-    othersInFrame: 'a political banner behind her',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   },
   {
     id: 'a-img-7217',
-    draft: true,
     kind: 'video',
-    seconds: 1,
-    tags: ['street', 'performance'],
-    othersInFrame: 'passers-by, identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    seconds: 20,
+    tags: ['street', 'solitude'],
+    othersInFrame: 'two distant figures, too small to identify',
+    alt: { en: 'A distant figure walking along the foot of a long grey building on an empty street', bg: 'Далечна фигура върви покрай основата на дълга сива сграда на празна улица', de: 'Eine ferne Gestalt geht am Fuß eines langen grauen Gebäudes eine leere Straße entlang' },
+    caption: { en: 'From far enough away every walk is a solo.', bg: 'От достатъчно далеч всяко вървене е соло.', de: 'Aus genügend Entfernung ist jedes Gehen ein Solo.' }
   },
   {
     id: 'a-img-7288',
-    draft: true,
     kind: 'photo',
     tags: ['stage', 'performance'],
-    othersInFrame: 'a second performer, identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    othersInFrame: 'a fellow performer, clearly identifiable',
+    alt: { en: 'Titania Chaos in red on a dark stage beside a performer in a white polka-dot shirt holding a cup', bg: 'Титания Хаос в червено на тъмна сцена до артист с бяла риза на точки, който държи чаша', de: 'Titania Chaos in Rot auf dunkler Bühne neben einem Darsteller im weiß gepunkteten Hemd mit einer Tasse' },
+    caption: { en: 'Two clowns and one cup is a plot.', bg: 'Двама клоуни и една чаша са сюжет.', de: 'Zwei Clowns und eine Tasse sind eine Handlung.' }
   },
   {
     id: 'a-img-7300',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['solitude', 'street', 'portrait'],
+    alt: { en: 'Titania Chaos in an orange dress standing in the fork of a bare tree at night, arms spread', bg: 'Титания Хаос с оранжева рокля стои в разклонението на голо дърво през нощта, с разперени ръце', de: 'Titania Chaos im orangen Kleid steht nachts in der Astgabel eines kahlen Baums, die Arme ausgebreitet' },
+    caption: { en: 'Nobody is watching, which is when the best of it happens.', bg: 'Никой не гледа — тъкмо тогава се случва най-доброто.', de: 'Niemand schaut zu, und genau dann passiert das Beste.' }
   },
   {
     id: 'a-img-8040',
-    draft: true,
     kind: 'photo',
-    tags: ['street', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['solitude', 'street'],
+    alt: { en: 'Titania Chaos in a red dress climbing the trunk of a tree in a green park', bg: 'Титания Хаос в червена рокля се катери по ствол на дърво в зелен парк', de: 'Titania Chaos im roten Kleid klettert an einem Baumstamm in einem grünen Park' },
+    caption: { en: 'A tree is the only rehearsal room that is never booked.', bg: 'Дървото е единствената репетиционна, която никога не е заета.', de: 'Ein Baum ist der einzige Probenraum, der nie belegt ist.' }
   },
   {
     id: 'a-img-8092',
-    draft: true,
     kind: 'video',
-    seconds: 1,
-    tags: ['props', 'solitude'],
-    othersInFrame: 'no face visible',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    seconds: 12,
+    tags: ['props', 'solitude', 'performance'],
+    alt: { en: 'A figure silhouetted against a pale sky raising two coloured flags overhead', bg: 'Фигура на фона на бледо небе вдига два цветни флага над главата си', de: 'Eine Gestalt vor blassem Himmel hebt zwei bunte Fahnen über den Kopf' },
+    caption: { en: 'Signalling to nobody in particular, which is most of practice.', bg: 'Сигнал към никого конкретно — това е по-голямата част от практиката.', de: 'Signale an niemand Bestimmten, was der größte Teil des Übens ist.' }
   },
   {
     id: 'a-img-8211',
-    draft: true,
     kind: 'photo',
     tags: ['children', 'workshop'],
-    othersInFrame: 'several children',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    othersInFrame: 'a class of young children, clearly identifiable',
+    alt: { en: 'A classroom of young children at desks with drawings and a rainbow on the wall behind them', bg: 'Класна стая с малки деца по чиновете, а зад тях — рисунки и дъга на стената', de: 'Ein Klassenzimmer voller kleiner Kinder an Tischen, dahinter Zeichnungen und ein Regenbogen an der Wand' },
+    caption: { en: 'Twenty children and a rainbow, which is a harder room than any theatre.', bg: 'Двадесет деца и една дъга — по-трудна зала от който и да е театър.', de: 'Zwanzig Kinder und ein Regenbogen, ein schwierigerer Raum als jedes Theater.' }
   },
   {
     id: 'a-img-8521',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['solitude', 'props'],
+    alt: { en: 'Titania Chaos in a plain black hoodie and jeans standing over a heap of costumes on a wooden floor', bg: 'Титания Хаос с обикновен черен суитшърт и дънки, застанала над купчина костюми на дървен под', de: 'Titania Chaos in schlichtem schwarzem Hoodie und Jeans über einem Haufen Kostüme auf Holzboden' },
+    caption: { en: 'Before the costume there is a person deciding whether to put it on.', bg: 'Преди костюма има човек, който решава дали да го облече.', de: 'Vor dem Kostüm steht ein Mensch, der entscheidet, ob er es anzieht.' }
   },
   {
     id: 'a-img-8528',
-    draft: true,
     kind: 'photo',
     tags: ['props', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    alt: { en: 'Titania Chaos in a black hoodie and a white tulle skirt beside an open costume bag', bg: 'Титания Хаос с черен суитшърт и бяла тюлена пола до отворен сак с костюми', de: 'Titania Chaos in schwarzem Hoodie und weißem Tüllrock neben einer offenen Kostümtasche' },
+    caption: { en: 'Half a costume is funnier than a whole one and harder to wear.', bg: 'Половин костюм е по-смешен от цял и по-труден за носене.', de: 'Ein halbes Kostüm ist komischer als ein ganzes und schwerer zu tragen.' }
   },
   {
     id: 'a-img-8569',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait', 'performance'],
+    alt: { en: 'Titania Chaos standing straight in a red boilersuit with a red nose against a plain wall', bg: 'Титания Хаос стои изправена с червен работен гащеризон и червен нос до гола стена', de: 'Titania Chaos steht aufrecht im roten Overall mit roter Nase vor einer kahlen Wand' },
+    caption: { en: 'One colour, one wall, and whatever the body decides to add.', bg: 'Един цвят, една стена и каквото тялото реши да добави.', de: 'Eine Farbe, eine Wand und was der Körper hinzufügt.' }
   },
   {
     id: 'a-img-8628',
-    draft: true,
     kind: 'photo',
-    tags: ['workshop'],
-    othersInFrame: 'a group, identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['workshop', 'performance'],
+    othersInFrame: 'about thirteen participants, clearly identifiable',
+    alt: { en: 'About thirteen workshop participants in a studio, some standing, some crouched, all in mid-gesture', bg: 'Около тринадесет участници в работилница в студио — някои прави, други приклекнали, всички в жест', de: 'Etwa dreizehn Workshop-Teilnehmende in einem Studio, teils stehend, teils hockend, alle mitten in einer Geste' },
+    caption: { en: 'The group photograph everyone insists on, and it is always the truest one.', bg: 'Груповата снимка, на която всички настояват, и винаги най-истинската.', de: 'Das Gruppenfoto, auf dem alle bestehen, und immer das ehrlichste.' }
   },
   {
     id: 'a-img-8734',
-    draft: true,
     kind: 'photo',
-    tags: ['balloons', 'street'],
-    othersInFrame: 'other people\'s legs in frame',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['street', 'props', 'performance'],
+    othersInFrame: 'the wearer, whose face is turned away',
+    alt: { en: 'A costume covered in large orange, purple and green pom-poms worn on a city street', bg: 'Костюм, покрит с големи оранжеви, лилави и зелени помпони, носен на градска улица', de: 'Ein Kostüm voller großer oranger, violetter und grüner Bommeln auf einer Stadtstraße' },
+    caption: { en: 'A shape the street has no category for is already half the joke.', bg: 'Форма, за която улицата няма категория, вече е половината шега.', de: 'Eine Form, für die die Straße keine Kategorie hat, ist schon der halbe Witz.' }
   },
   {
     id: 'a-img-9003',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait', 'solitude', 'stage'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait', 'props'],
+    alt: { en: 'Titania Chaos in a black dress with a white collar and yellow tights, palms open, against a wooden wall', bg: 'Титания Хаос с черна рокля с бяла яка и жълт чорапогащник, с отворени длани, до дървена стена', de: 'Titania Chaos in schwarzem Kleid mit weißem Kragen und gelber Strumpfhose, die Handflächen offen, vor einer Holzwand' },
+    caption: { en: 'Yellow legs under a serious dress: the argument in one costume.', bg: 'Жълти крака под сериозна рокля: спорът в един костюм.', de: 'Gelbe Beine unter einem ernsten Kleid: das Argument in einem Kostüm.' }
   },
   {
     id: 'a-img-9614',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait', 'props'],
+    alt: { en: 'Close portrait of Titania Chaos with a red nose and a small pink puppet at her shoulder', bg: 'Близък портрет на Титания Хаос с червен нос и малка розова кукла на рамото ѝ', de: 'Nahes Porträt von Titania Chaos mit roter Nase und einer kleinen rosa Puppe an der Schulter' },
+    caption: { en: 'The puppet gets to say the part the clown will not.', bg: 'Куклата казва онова, което клоунът няма да каже.', de: 'Die Puppe sagt den Teil, den der Clown nicht sagt.' }
   },
   {
     id: 'a-img-9687',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait', 'street'],
+    alt: { en: 'Titania Chaos in a turquoise dress under a grey tweed coat, red nose on, outdoors', bg: 'Титания Хаос с тюркоазена рокля под сиво туидено палто, с червен нос, навън', de: 'Titania Chaos im türkisen Kleid unter grauem Tweedmantel, rote Nase, im Freien' },
+    caption: { en: 'The coat is for the weather; the nose is not.', bg: 'Палтото е заради времето; носът — не.', de: 'Der Mantel ist wegen des Wetters; die Nase nicht.' }
   },
   {
     id: 'a-img-9785',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['portrait'],
+    alt: { en: 'Titania Chaos in a houndstooth coat and round glasses with a small dark nose piece', bg: 'Титания Хаос с палто на пипит и кръгли очила с малък тъмен нос', de: 'Titania Chaos in einem Hahnentrittmantel mit runder Brille und kleinem dunklem Nasenstück' },
+    caption: { en: 'A pattern loud enough to count as a second performer.', bg: 'Десен, достатъчно шумен, за да мине за втори артист.', de: 'Ein Muster, laut genug, um als zweiter Darsteller zu gelten.' }
   },
   {
     id: 'a-margareten-2',
-    draft: true,
     kind: 'photo',
-    tags: ['portrait', 'solitude', 'street'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['street', 'portrait', 'solitude'],
+    alt: { en: 'Black and white portrait of Titania Chaos in a cap and glasses on a Vienna street of tall old facades', bg: 'Черно-бял портрет на Титания Хаос с шапка и очила на виенска улица с високи стари фасади', de: 'Schwarz-weiß-Porträt von Titania Chaos mit Mütze und Brille in einer Wiener Straße mit hohen Altbaufassaden' },
+    caption: { en: 'Margareten on an ordinary day, which is where the material comes from.', bg: 'Маргаретен в обикновен ден — оттам идва материалът.', de: 'Margareten an einem gewöhnlichen Tag, von dort kommt das Material.' }
   },
   {
     id: 'a-dsc4738',
-    draft: true,
     kind: 'photo',
-    tags: ['performance'],
-    othersInFrame: 'a second person, identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['performance', 'portrait'],
+    othersInFrame: 'three people, clearly identifiable',
+    alt: { en: 'Titania Chaos in a red nose in conversation with three other people holding cups at an indoor gathering', bg: 'Титания Хаос с червен нос разговаря с още трима души с чаши в ръце на закрито събиране', de: 'Titania Chaos mit roter Nase im Gespräch mit drei weiteren Personen mit Bechern bei einem Treffen in Innenräumen' },
+    caption: { en: 'The nose stays on after the show, which changes every conversation.', bg: 'Носът остава и след представлението, което променя всеки разговор.', de: 'Die Nase bleibt nach der Vorstellung auf, und das verändert jedes Gespräch.' }
   },
   {
     id: 'a-dsc4950',
-    draft: true,
     kind: 'photo',
     tags: ['stage', 'performance'],
-    othersInFrame: 'an audience, several identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    othersInFrame: 'a standing audience, many clearly identifiable',
+    alt: { en: 'Titania Chaos performing on a small raised stage in a gallery to a standing audience', bg: 'Титания Хаос играе на малка повдигната сцена в галерия пред правостояща публика', de: 'Titania Chaos spielt auf einer kleinen erhöhten Bühne in einer Galerie vor stehendem Publikum' },
+    caption: { en: 'A gallery lends its walls and takes back its silence.', bg: 'Галерията заема стените си и си взема обратно тишината.', de: 'Eine Galerie leiht ihre Wände und nimmt ihre Stille zurück.' }
   },
   {
     id: 'a-b3d70d9d-71eb-4a9b-b8f8-c53b0068727f',
-    draft: true,
     kind: 'photo',
-    tags: ['stage', 'portrait', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['stage', 'portrait', 'performance'],
+    alt: { en: 'Titania Chaos lit on a dark stage in a red comb headpiece, white collar and red nose', bg: 'Титания Хаос, осветена на тъмна сцена, с червена украса за глава, бяла яка и червен нос', de: 'Titania Chaos im Licht auf dunkler Bühne mit rotem Kopfschmuck, weißem Kragen und roter Nase' },
+    caption: { en: 'The look that says the trouble has already started.', bg: 'Погледът, който казва, че бедата вече е започнала.', de: 'Der Blick, der sagt, dass der Ärger schon begonnen hat.' }
   },
   {
     id: 'a-cd563ea5-553b-422b-9723-bbc102345524',
-    draft: true,
     kind: 'photo',
-    tags: ['balloons', 'birthday'],
-    othersInFrame: 'a person beside the sign',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['birthday', 'balloons', 'street'],
+    alt: { en: 'Titania Chaos seated outdoors behind a hand-painted sign reading Geburtstagsamt, with balloon animals on the table', bg: 'Титания Хаос седи навън зад ръчно изписана табела „Geburtstagsamt“, а на масата — балонени фигури', de: 'Titania Chaos sitzt im Freien hinter einem handgemalten Schild „Geburtstagsamt“, auf dem Tisch Ballontiere' },
+    caption: { en: 'An office for birthdays, open to anyone having one.', bg: 'Служба за рождени дни, отворена за всеки, който има такъв.', de: 'Ein Amt für Geburtstage, offen für alle, die einen haben.' }
   },
   {
     id: 'a-de658a10-335c-4aa8-adf1-6681df61c1e0',
-    draft: true,
     kind: 'photo',
-    tags: ['children', 'birthday'],
-    othersInFrame: 'children at an event',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['children', 'performance', 'props'],
+    othersInFrame: 'children and adults at a public event, several clearly identifiable',
+    alt: { en: 'Titania Chaos in stripes at a busy indoor event with families and a wooden cart behind her', bg: 'Титания Хаос на райета на оживено закрито събитие със семейства и дървена количка зад нея', de: 'Titania Chaos in Streifen bei einer belebten Hallenveranstaltung mit Familien und einem Holzwagen dahinter' },
+    caption: { en: 'A hall this loud is won one family at a time.', bg: 'Толкова шумна зала се печели по едно семейство наведнъж.', de: 'So ein lauter Saal wird Familie für Familie gewonnen.' }
   },
   {
     id: 'a-e9b2ae95-a64f-40d1-9bbc-25df2c9a67e3',
-    draft: true,
     kind: 'photo',
     tags: ['workshop'],
-    othersInFrame: 'a large group, identifiable',
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    othersInFrame: 'about twenty-five people, clearly identifiable',
+    alt: { en: 'A large group of about twenty-five people posed together at the end of a training week', bg: 'Голяма група от около двадесет и пет души, застанали заедно в края на седмица обучение', de: 'Eine große Gruppe von etwa fünfundzwanzig Personen am Ende einer Trainingswoche' },
+    caption: { en: 'Twenty-five people who spent a week failing in front of each other.', bg: 'Двадесет и пет души, прекарали седмица в провали един пред друг.', de: 'Fünfundzwanzig Menschen, die eine Woche lang voreinander gescheitert sind.' }
   },
   {
     id: 'a-f2ed9844-1e7c-4d3f-8391-2e2627046173',
     draft: true,
+    heldBack: 'a framed line drawing by another artist, signed and not attributed here — somebody else\'s work, photographed',
     kind: 'photo',
     tags: ['portrait'],
-    othersInFrame: 'somebody else\'s drawing',
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
   }
@@ -1619,6 +1554,7 @@ export default defineLoader({
     const used = new Set<Tag>()
     const owed: string[] = []
     const drafts: string[] = []
+    const held: string[] = []
     const media: Media[] = []
 
     const all = [...FRAMES, ...(await synced())]
@@ -1668,7 +1604,11 @@ export default defineLoader({
       if (frame.othersInFrame) owed.push(`${frame.id}: ${frame.othersInFrame}`)
 
       const file = `${DIR}/${frame.id}.webp`
-      if (frame.draft) { drafts.push(frame.id); continue }
+      if (frame.draft) {
+        if (frame.heldBack) held.push(`${frame.id}: ${frame.heldBack}`)
+        else drafts.push(frame.id)
+        continue
+      }
       media.push({
         ...frame,
         file,
@@ -1813,6 +1753,12 @@ export default defineLoader({
         `\nmedia: ${drafts.length} frame(s) imported and waiting for their words — ` +
           'they are in the repository and on no page:\n  ' + drafts.join(', ') + '\n'
       )
+    }
+
+    if (held.length) {
+      console.log(`\nmedia: ${held.length} frame(s) held back on purpose, not for want of words:`)
+      for (const line of held) console.log(`  ${line}`)
+      console.log('')
     }
 
     if (empty.length) {

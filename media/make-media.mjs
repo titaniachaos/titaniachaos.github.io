@@ -312,6 +312,18 @@ const THIRDS = {
 }
 
 /**
+ * The size the picture actually has once its EXIF rotation is applied.
+ *
+ * `metadata()` reports the stored pixels, not the shown ones: a phone photo
+ * held upright is written to disk as 4032x3024 landscape with orientation 6,
+ * and only the tag says to turn it. Orientations 5 to 8 are the quarter turns.
+ */
+function oriented(meta) {
+  const turned = (meta.orientation ?? 1) >= 5
+  return { width: turned ? meta.height : meta.width, height: turned ? meta.width : meta.height }
+}
+
+/**
  * The square, cropped so the subject lands on its intersection.
  *
  * Where the subject *is* comes from sharp's attention strategy, which returns
@@ -323,9 +335,10 @@ const THIRDS = {
  */
 async function square(source, focus) {
   const meta = await sharp(source).metadata()
-  const side = Math.min(meta.width, meta.height)
+  const { width, height } = oriented(meta)
+  const side = Math.min(width, height)
 
-  const probe = await sharp(source)
+  const probe = await sharp(source, { autoOrient: true })
     .resize(side, side, { fit: 'cover', position: 'attention' })
     .toBuffer({ resolveWithObject: true })
 
@@ -334,10 +347,12 @@ async function square(source, focus) {
   const subjectY = -(probe.info.cropOffsetTop ?? 0) + side / 2
 
   const [tx, ty] = THIRDS[focus] ?? THIRDS.centre
-  const left = Math.round(Math.min(Math.max(subjectX - tx * side, 0), meta.width - side))
-  const top = Math.round(Math.min(Math.max(subjectY - ty * side, 0), meta.height - side))
+  const left = Math.round(Math.min(Math.max(subjectX - tx * side, 0), width - side))
+  const top = Math.round(Math.min(Math.max(subjectY - ty * side, 0), height - side))
 
-  return sharp(source).extract({ left, top, width: side, height: side }).resize(S, S)
+  return sharp(source, { autoOrient: true })
+    .extract({ left, top, width: side, height: side })
+    .resize(S, S)
 }
 
 async function frame(source, id) {
@@ -345,10 +360,27 @@ async function frame(source, id) {
   const packet = record ? xmp(record, META) : null
   const stamp = (pipeline) => (packet ? pipeline.withXmp(packet) : pipeline)
 
-  await stamp(sharp(source).resize(W, H, { fit: 'inside', withoutEnlargement: true }))
+  const wide = await stamp(sharp(source, { autoOrient: true }).resize(W, H, { fit: 'inside', withoutEnlargement: true }))
     .webp({ quality: Q }).toFile(join(out, `${id}.webp`))
   await stamp(await square(source, record?.focus))
     .webp({ quality: SQ }).toFile(join(out, `${id}-s.webp`))
+
+  // Seventeen phone photographs carried an EXIF rotation tag, and sharp does
+  // not act on one unless asked. They were derived sideways, published
+  // sideways, and then described in three languages as though upright: the
+  // alt text for one said "lying on dark fabric" about a woman standing up.
+  // Nothing in the build could see it, so this compares what came out with
+  // what the oriented source says should have.
+  const meta = await sharp(source).metadata()
+  const { width, height } = oriented(meta)
+  const want = width / height
+  const got = wide.width / wide.height
+  if (Math.abs(want - got) > 0.02) {
+    throw new Error(
+      `${id}: derived ${wide.width}x${wide.height} (${got.toFixed(2)}) from a source that is ` +
+        `${width}x${height} upright (${want.toFixed(2)}) — the EXIF rotation was not applied`
+    )
+  }
 }
 
 for (const [id, file] of Object.entries(PHOTOS)) {
@@ -372,7 +404,7 @@ for (const [id, file] of Object.entries(PUBLISHED)) {
 
 if (wanted('hero')) {
   const dest = resolve(here, '..', 'docs/public/images', HERO.file)
-  await sharp(join(root, HERO.from))
+  await sharp(join(root, HERO.from), { autoOrient: true })
     // From the top: it is a portrait, and what a shorter frame loses is floor.
     .resize(HERO.w, HERO.h, { fit: 'cover', position: 'top' })
     .webp({ quality: HERO.q, effort: 6 })

@@ -819,8 +819,8 @@ const FRAMES: Frame[] = [
     id: 'a-img-0013',
     kind: 'photo',
     tags: ['portrait', 'street'],
-    alt: { en: 'Close portrait of Titania Chaos in a yellow hood and red coat with a red nose, city lights behind', bg: 'Близък портрет на Титания Хаос с жълта качулка и червено палто, с червен нос, а зад нея — светлините на града', de: 'Nahes Porträt von Titania Chaos mit gelber Kapuze und rotem Mantel, rote Nase, dahinter Stadtlichter' },
-    caption: { en: 'Winter clothes and a red nose make a costume out of an ordinary evening.', bg: 'Зимни дрехи и червен нос правят костюм от една обикновена вечер.', de: 'Winterkleidung und eine rote Nase machen aus einem gewöhnlichen Abend ein Kostüm.' }
+    alt: { en: 'Selfie of Titania Chaos in a yellow-green knitted hat and a red coat with a red nose, on a snowy square', bg: 'Селфи на Титания Хаос с жълто-зелена плетена шапка и червено палто с червен нос, на заснежен площад', de: 'Selfie von Titania Chaos mit gelbgrüner Strickmütze und rotem Mantel mit roter Nase auf einem verschneiten Platz' },
+    caption: { en: 'Winter clothes and a red nose make a costume out of an ordinary afternoon.', bg: 'Зимни дрехи и червен нос правят костюм от един обикновен следобед.', de: 'Winterkleidung und eine rote Nase machen aus einem gewöhnlichen Nachmittag ein Kostüm.' }
   },
   {
     id: 'a-img-0468',
@@ -832,9 +832,9 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-0491',
     kind: 'photo',
-    tags: ['props', 'solitude', 'portrait'],
-    alt: { en: 'Titania Chaos lying on dark fabric beside a pale doll\'s hand, red nose on, eyes open', bg: 'Титания Хаос лежи върху тъмен плат до бледа кукленска ръка, с червен нос и отворени очи', de: 'Titania Chaos liegt auf dunklem Stoff neben einer blassen Puppenhand, rote Nase, offene Augen' },
-    caption: { en: 'An object with a hand in it stops being an object.', bg: 'Предмет, в който има ръка, спира да бъде предмет.', de: 'Ein Gegenstand mit einer Hand darin hört auf, Gegenstand zu sein.' }
+    tags: ['portrait', 'stage', 'performance'],
+    alt: { en: 'Titania Chaos standing in a long dark dress with a white collar and cuffs, red nose on, hands open beside a dark curtain', bg: 'Титания Хаос стои с дълга тъмна рокля с бяла яка и маншети, с червен нос и отворени длани до тъмна завеса', de: 'Titania Chaos steht in einem langen dunklen Kleid mit weißem Kragen und weißen Manschetten, rote Nase, die Hände offen neben einem dunklen Vorhang' },
+    caption: { en: 'The hands are already saying something the face has not agreed to.', bg: 'Ръцете вече казват нещо, с което лицето не се е съгласило.', de: 'Die Hände sagen schon etwas, dem das Gesicht nicht zugestimmt hat.' }
   },
   {
     id: 'a-img-0494',
@@ -869,10 +869,9 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-0825',
     kind: 'photo',
-    tags: ['portrait', 'props'],
-    othersInFrame: 'one companion, clearly identifiable',
-    alt: { en: 'Titania Chaos and a companion in red noses inside a brightly lit shop', bg: 'Титания Хаос и спътник с червени носове в ярко осветен магазин', de: 'Titania Chaos und eine Begleitung mit roten Nasen in einem hell erleuchteten Laden' },
-    caption: { en: 'Two noses in a shop is already a scene nobody rehearsed.', bg: 'Два носа в магазин вече са сцена, която никой не е репетирал.', de: 'Zwei Nasen in einem Laden sind schon eine Szene, die niemand geprobt hat.' }
+    tags: ['street', 'portrait', 'props'],
+    alt: { en: 'Selfie of Titania Chaos in a navy jacket with gold braid in front of a bronze monument whose figures have been given red noses too', bg: 'Селфи на Титания Хаос с тъмносиньо сако със златни ширити пред бронзов паметник, чиито фигури също са с червени носове', de: 'Selfie von Titania Chaos in marineblauer Jacke mit Goldlitze vor einem Bronzedenkmal, dessen Figuren ebenfalls rote Nasen tragen' },
+    caption: { en: 'The monument had never been asked before and did not object.', bg: 'Паметникът никога не е бил питан преди и не възрази.', de: 'Das Denkmal war noch nie gefragt worden und hatte nichts dagegen.' }
   },
   {
     id: 'a-img-1208',
@@ -901,7 +900,7 @@ const FRAMES: Frame[] = [
     id: 'a-img-1320',
     kind: 'photo',
     tags: ['portrait', 'solitude'],
-    alt: { en: 'Titania Chaos in a long black coat and red beanie standing on a bare wooden floor', bg: 'Титания Хаос с дълго черно палто и червена шапка, застанала на гол дървен под', de: 'Titania Chaos in langem schwarzem Mantel und roter Mütze auf blankem Holzboden' },
+    alt: { en: 'Titania Chaos standing in a long black dress with a red antenna headpiece and red nose on a bare wooden floor', bg: 'Титания Хаос стои с дълга черна рокля, червена антена на главата и червен нос на гол дървен под', de: 'Titania Chaos steht in einem langen schwarzen Kleid mit roter Antenne im Haar und roter Nase auf blankem Holzboden' },
     caption: { en: 'An empty room is the most demanding partner in the building.', bg: 'Празната стая е най-взискателният партньор в сградата.', de: 'Ein leerer Raum ist der anspruchsvollste Partner im Haus.' }
   },
   {
@@ -922,9 +921,9 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-1366',
     kind: 'photo',
-    tags: ['portrait', 'solitude'],
-    alt: { en: 'Close self-portrait of Titania Chaos in a grey fur-lined hood with a red nose and round glasses', bg: 'Близък автопортрет на Титания Хаос със сива качулка с косъм, червен нос и кръгли очила', de: 'Nahes Selbstporträt von Titania Chaos in grauer Fellkapuze mit roter Nase und runder Brille' },
-    caption: { en: 'The camera at arm\'s length is how a solo keeps itself company.', bg: 'Камерата на една ръка разстояние е начинът, по който едно соло си прави компания.', de: 'Die Kamera auf Armlänge ist die Art, wie ein Solo sich Gesellschaft leistet.' }
+    tags: ['portrait', 'props'],
+    alt: { en: 'Close selfie of Titania Chaos in a long grey curled wig with round glasses and a red nose', bg: 'Близко селфи на Титания Хаос с дълга сива къдрава перука, кръгли очила и червен нос', de: 'Nahes Selfie von Titania Chaos in langer grauer Lockenperücke mit runder Brille und roter Nase' },
+    caption: { en: 'Borrowed authority, worn at arm\'s length from a phone.', bg: 'Заета авторитетност, носена на една ръка разстояние от телефона.', de: 'Geliehene Autorität, auf Armlänge vom Telefon getragen.' }
   },
   {
     id: 'a-img-1406',
@@ -937,9 +936,9 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-1414',
     kind: 'photo',
-    tags: ['street', 'props'],
-    alt: { en: 'Titania Chaos with dark feathered props and a length of green fabric against an ornate building facade', bg: 'Титания Хаос с тъмен перест реквизит и зелен плат пред богато украсена фасада', de: 'Titania Chaos mit dunklen Federrequisiten und grünem Stoff vor einer reich verzierten Fassade' },
-    caption: { en: 'The building is the budget the street gives you for free.', bg: 'Сградата е бюджетът, който улицата ти дава безплатно.', de: 'Das Gebäude ist das Budget, das die Straße gratis hergibt.' }
+    tags: ['street', 'props', 'performance'],
+    alt: { en: 'Titania Chaos in a turquoise skirt and dark jacket holding a red hoop in front of a baroque church and monument in Vienna', bg: 'Титания Хаос с тюркоазена пола и тъмно сако държи червен обръч пред барокова църква и паметник във Виена', de: 'Titania Chaos in türkisem Rock und dunklem Jackett hält einen roten Reifen vor einer barocken Kirche und einem Denkmal in Wien' },
+    caption: { en: 'The city lends its best backdrop to anyone willing to stand in front of it.', bg: 'Градът заема най-добрия си декор на всеки, готов да застане пред него.', de: 'Die Stadt leiht ihre beste Kulisse jedem, der sich davorstellt.' }
   },
   {
     id: 'a-img-1419',
@@ -976,9 +975,8 @@ const FRAMES: Frame[] = [
     id: 'a-img-2193',
     kind: 'photo',
     tags: ['portrait', 'performance'],
-    othersInFrame: 'a second person\'s hand only',
-    alt: { en: 'Titania Chaos on a magenta ground in a curled wig and red nose, a hand pointing in from above', bg: 'Титания Хаос на пурпурен фон с къдрава перука и червен нос, а отгоре сочи ръка', de: 'Titania Chaos vor magentafarbenem Grund in Lockenperücke und roter Nase, von oben zeigt eine Hand herein' },
-    caption: { en: 'Being pointed at is the beginning of most trouble worth having.', bg: 'Да те посочат е началото на повечето неприятности, които си струват.', de: 'Angezeigt zu werden ist der Anfang der meisten Schwierigkeiten, die sich lohnen.' }
+    alt: { en: 'Titania Chaos against a magenta curtain in a pale bun and white collar, red nose on, pointing at herself', bg: 'Титания Хаос пред пурпурна завеса със светъл кок и бяла яка, с червен нос, сочи себе си', de: 'Titania Chaos vor einem magentafarbenen Vorhang mit hellem Dutt und weißem Kragen, rote Nase, zeigt auf sich selbst' },
+    caption: { en: 'Pointing at yourself is the shortest confession in the trade.', bg: 'Да посочиш себе си е най-краткото признание в занаята.', de: 'Auf sich selbst zu zeigen ist das kürzeste Geständnis des Fachs.' }
   },
   {
     id: 'a-img-2634',
@@ -1070,16 +1068,16 @@ const FRAMES: Frame[] = [
     id: 'a-img-4367',
     kind: 'photo',
     tags: ['solitude', 'performance'],
-    alt: { en: 'The shadow of a figure with one hand raised, cast across a pale wall', bg: 'Сянката на фигура с вдигната ръка, паднала върху светла стена', de: 'Der Schatten einer Gestalt mit erhobener Hand auf einer hellen Wand' },
+    alt: { en: 'The shadow of a standing figure with an antenna headpiece and both arms open, cast across a pale wall', bg: 'Сянката на права фигура с антена на главата и разперени ръце, паднала върху светла стена', de: 'Der Schatten einer stehenden Gestalt mit Antenne im Haar und offenen Armen auf einer hellen Wand' },
     caption: { en: 'The shadow does the gesture a moment late and better.', bg: 'Сянката прави жеста миг по-късно и по-добре.', de: 'Der Schatten macht die Geste einen Moment später und besser.' }
   },
   {
     id: 'a-img-4503',
     kind: 'photo',
-    tags: ['workshop'],
-    othersInFrame: 'about ten participants, clearly identifiable',
-    alt: { en: 'Workshop participants lying and sitting together on a studio floor, seen from above', bg: 'Участници в работилница лежат и седят заедно на пода на студиото, гледани отгоре', de: 'Workshop-Teilnehmende liegen und sitzen gemeinsam auf dem Studioboden, von oben gesehen' },
-    caption: { en: 'The floor is where a group stops performing for each other.', bg: 'Подът е мястото, където групата спира да играе една за друга.', de: 'Der Boden ist der Ort, an dem eine Gruppe aufhört, füreinander zu spielen.' }
+    tags: ['workshop', 'performance'],
+    othersInFrame: 'about eleven participants, clearly identifiable',
+    alt: { en: 'About eleven workshop participants in red noses crowded together for a photograph in a plain room', bg: 'Около единадесет участници в работилница с червени носове, скупчени за снимка в обикновена стая', de: 'Etwa elf Workshop-Teilnehmende mit roten Nasen drängen sich in einem schlichten Raum für ein Foto zusammen' },
+    caption: { en: 'Eleven people who have stopped minding how they look.', bg: 'Единадесет души, които са спрели да мислят как изглеждат.', de: 'Elf Menschen, denen egal geworden ist, wie sie aussehen.' }
   },
   {
     id: 'a-img-4690',
@@ -1098,10 +1096,10 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-6026',
     kind: 'photo',
-    tags: ['workshop', 'props'],
-    othersInFrame: 'about a dozen participants, clearly identifiable, one using a wheelchair',
-    alt: { en: 'A workshop in a wooden-floored hall with participants seated in a wide circle, one using a wheelchair', bg: 'Работилница в зала с дървен под, участници седят в широк кръг, един от тях в инвалидна количка', de: 'Ein Workshop in einem Saal mit Holzboden, Teilnehmende sitzen im weiten Kreis, eine Person im Rollstuhl' },
-    caption: { en: 'The circle adjusts to whoever is in it, which is the whole method.', bg: 'Кръгът се нагажда към този, който е в него — това е целият метод.', de: 'Der Kreis richtet sich nach denen, die darin sind — das ist die ganze Methode.' }
+    tags: ['performance', 'stage', 'props'],
+    othersInFrame: 'several performers, clearly identifiable, one using a wheelchair',
+    alt: { en: 'Performers in bright clown costume on a wooden stage beside a wheelchair strung with coloured lights', bg: 'Артисти в ярки клоунски костюми на дървена сцена до инвалидна количка, окичена с цветни лампички', de: 'Darstellende in bunten Clownskostümen auf einer Holzbühne neben einem mit bunten Lichtern geschmückten Rollstuhl' },
+    caption: { en: 'A wheelchair hung with lights is a vehicle, and the show is built around it.', bg: 'Количка, окичена със светлини, е превозно средство, и представлението се гради около нея.', de: 'Ein mit Lichtern behängter Rollstuhl ist ein Fahrzeug, und die Vorstellung baut sich darum.' }
   },
   {
     id: 'a-img-6371',
@@ -1176,10 +1174,10 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-8211',
     kind: 'photo',
-    tags: ['children', 'workshop'],
+    tags: ['children', 'workshop', 'props'],
     othersInFrame: 'a class of young children, clearly identifiable',
-    alt: { en: 'A classroom of young children at desks with drawings and a rainbow on the wall behind them', bg: 'Класна стая с малки деца по чиновете, а зад тях — рисунки и дъга на стената', de: 'Ein Klassenzimmer voller kleiner Kinder an Tischen, dahinter Zeichnungen und ein Regenbogen an der Wand' },
-    caption: { en: 'Twenty children and a rainbow, which is a harder room than any theatre.', bg: 'Двадесет деца и една дъга — по-трудна зала от който и да е театър.', de: 'Zwanzig Kinder und ein Regenbogen, ein schwierigerer Raum als jedes Theater.' }
+    alt: { en: 'A performer in a top hat surrounded by young children in a classroom hung with their drawings and a paper rainbow', bg: 'Артист с цилиндър, заобиколен от малки деца в класна стая с техните рисунки и хартиена дъга', de: 'Eine Darstellerin mit Zylinder, umringt von kleinen Kindern in einem Klassenzimmer mit ihren Zeichnungen und einem Papierregenbogen' },
+    caption: { en: 'Surrounded is the only way to be in a room this size.', bg: 'Заобиколен е единственият начин да си в стая с такъв размер.', de: 'Umringt ist die einzige Art, in einem Raum dieser Größe zu sein.' }
   },
   {
     id: 'a-img-8521',
@@ -1213,9 +1211,8 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-8734',
     kind: 'photo',
-    tags: ['street', 'props', 'performance'],
-    othersInFrame: 'the wearer, whose face is turned away',
-    alt: { en: 'A costume covered in large orange, purple and green pom-poms worn on a city street', bg: 'Костюм, покрит с големи оранжеви, лилави и зелени помпони, носен на градска улица', de: 'Ein Kostüm voller großer oranger, violetter und grüner Bommeln auf einer Stadtstraße' },
+    tags: ['balloons', 'street', 'props'],
+    alt: { en: 'Titania Chaos in a yellow-green hat wearing a costume built from orange, purple, green and black balloons on a city street', bg: 'Титания Хаос с жълто-зелена шапка носи костюм от оранжеви, лилави, зелени и черни балони на градска улица', de: 'Titania Chaos mit gelbgrüner Mütze trägt ein Kostüm aus orangen, violetten, grünen und schwarzen Ballons auf einer Stadtstraße' },
     caption: { en: 'A shape the street has no category for is already half the joke.', bg: 'Форма, за която улицата няма категория, вече е половината шега.', de: 'Eine Form, für die die Straße keine Kategorie hat, ist schon der halbe Witz.' }
   },
   {

@@ -200,7 +200,7 @@ const FRAMES: Frame[] = [
     seconds: 57,
     permalink: 'https://www.youtube.com/watch?v=JG4Iar3Ax7k',
     source: 'youtube',
-    tags: ['workshop', 'performance'],
+    tags: ['workshop'],
     alt: {
       en: 'Participants in a clown workshop playing together in a bright studio',
       bg: 'Участници в клоунска работилница играят заедно в светло студио',
@@ -234,7 +234,7 @@ const FRAMES: Frame[] = [
     id: 'park-dance',
     kind: 'video',
     seconds: 10,
-    tags: ['street', 'performance', 'portrait', 'solitude'],
+    tags: ['street', 'portrait', 'solitude'],
     alt: {
       en: 'Titania Chaos in a red suit and striped scarf, leaping across a sunlit park',
       bg: 'Титания Хаос в червен костюм и раиран шал прескача огрян от слънце парк',
@@ -314,7 +314,7 @@ const FRAMES: Frame[] = [
     id: 'camera-portrait',
     focus: 'left top',
     kind: 'photo',
-    tags: ['camera', 'performance', 'props'],
+    tags: ['camera', 'props'],
     alt: {
       en: 'Titania Chaos standing behind a large wooden bellows camera on a tripod, flowers on top of it',
       bg: 'Титания Хаос стои зад голяма дървена мехова камера на статив, с цветя отгоре',
@@ -346,7 +346,7 @@ const FRAMES: Frame[] = [
     id: 'stage-collar',
     focus: 'left top',
     kind: 'photo',
-    tags: ['stage', 'portrait', 'performance'],
+    tags: ['stage', 'portrait'],
     alt: {
       en: 'Titania Chaos in a dark dress with a wide white collar, red nose and round glasses, a red curtain behind her',
       bg: 'Титания Хаос в тъмна рокля с широка бяла яка, червен нос и кръгли очила, пред червена завеса',
@@ -362,7 +362,7 @@ const FRAMES: Frame[] = [
     id: 'stage-balloon',
     focus: 'right top',
     kind: 'photo',
-    tags: ['stage', 'performance', 'solitude'],
+    tags: ['stage', 'solitude'],
     alt: {
       en: 'Titania Chaos on a dark stage in a pale grey dress, holding a single balloon on an open hand',
       bg: 'Титания Хаос на тъмна сцена в бледосива рокля държи един балон на отворена длан',
@@ -378,7 +378,7 @@ const FRAMES: Frame[] = [
     id: 'stage-gown',
     focus: 'centre',
     kind: 'photo',
-    tags: ['stage', 'performance', 'solitude'],
+    tags: ['stage', 'solitude'],
     alt: {
       en: 'Titania Chaos on a dark stage, opening out the wide skirt of a pale gown with both hands',
       bg: 'Титания Хаос на тъмна сцена разтваря с две ръце широката пола на бледа рокля',
@@ -394,7 +394,7 @@ const FRAMES: Frame[] = [
     id: 'telephone',
     focus: 'right top',
     kind: 'photo',
-    tags: ['portrait', 'performance', 'solitude'],
+    tags: ['portrait', 'solitude'],
     alt: {
       en: 'Titania Chaos in a houndstooth jacket at a wooden counter, listening into an antique telephone',
       bg: 'Титания Хаос в сако на пепит до дървен плот слуша в антикварен телефон',
@@ -474,7 +474,7 @@ const FRAMES: Frame[] = [
     id: 'bench-balance',
     focus: 'left top',
     kind: 'photo',
-    tags: ['street', 'performance', 'solitude'],
+    tags: ['street', 'solitude'],
     alt: {
       en: 'Titania Chaos in a red dress balancing on one foot along the edge of a park bench',
       bg: 'Титания Хаос в червена рокля балансира на един крак по ръба на пейка в парка',
@@ -506,7 +506,7 @@ const FRAMES: Frame[] = [
     id: 'statue-embrace',
     focus: 'centre',
     kind: 'photo',
-    tags: ['street', 'performance', 'solitude'],
+    tags: ['street', 'solitude'],
     alt: {
       en: 'Titania Chaos with a red nose embracing a bronze statue on a pedestrian street, a second red nose on the statue',
       bg: 'Титания Хаос с червен нос прегръща бронзова статуя на пешеходна улица; втори червен нос е сложен на статуята',
@@ -756,7 +756,7 @@ const FRAMES: Frame[] = [
   {
     id: 'a-8b30b47754adaae4',
     kind: 'photo',
-    tags: ['workshop', 'performance'],
+    tags: ['workshop'],
     othersInFrame: 'about fourteen workshop participants, clearly identifiable',
     alt: { en: 'A group of about fourteen workshop participants in red noses posed together at the end of a session', bg: 'Група от около четиринадесет участници в работилница с червени носове, застанали заедно в края на занятието', de: 'Eine Gruppe von etwa vierzehn Workshop-Teilnehmenden mit roten Nasen am Ende einer Einheit' },
     caption: { en: 'Everyone leaves with the same nose and a different discovery.', bg: 'Всички си тръгват с еднакъв нос и различно откритие.', de: 'Alle gehen mit derselben Nase und einer anderen Entdeckung.' }
@@ -797,14 +797,14 @@ const FRAMES: Frame[] = [
   {
     id: 'a-e4384cfe78cdc552',
     kind: 'photo',
-    tags: ['stage', 'performance', 'props'],
+    tags: ['stage', 'props'],
     alt: { en: 'Titania Chaos on a dark stage in a striped jacket and red trousers behind a table draped in blue cloth', bg: 'Титания Хаос на тъмна сцена с раирано сако и червен панталон зад маса, покрита със синя материя', de: 'Titania Chaos auf dunkler Bühne in gestreiftem Jackett und roter Hose hinter einem blau bespannten Tisch' },
     caption: { en: 'Light on a table and dark everywhere else is already a scene.', bg: 'Светлина върху маса и тъмнина навсякъде другаде вече е сцена.', de: 'Licht auf einem Tisch und Dunkel ringsum ist bereits eine Szene.' }
   },
   {
     id: 'a-71d43133-c678-4ee5-af41-53856f37ffa3',
     kind: 'photo',
-    tags: ['street', 'portrait', 'performance'],
+    tags: ['street', 'portrait'],
     alt: { en: 'Titania Chaos outdoors in a turquoise dress and navy jacket, arms flung open, sunglasses on, against a bright sky', bg: 'Титания Хаос навън с тюркоазена рокля и тъмносиньо сако, широко разперени ръце, слънчеви очила, на фона на светло небе', de: 'Titania Chaos im Freien in türkisem Kleid und marineblauem Jackett, die Arme weit geöffnet, Sonnenbrille, vor hellem Himmel' },
     caption: { en: 'An entrance works outdoors too; there is simply no wing to come out of.', bg: 'Излизането работи и навън; просто няма кулиса, от която да излезеш.', de: 'Ein Auftritt funktioniert auch draußen; es fehlt nur die Gasse, aus der man kommt.' }
   },
@@ -832,21 +832,21 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-0491',
     kind: 'photo',
-    tags: ['portrait', 'stage', 'performance'],
+    tags: ['portrait', 'stage'],
     alt: { en: 'Titania Chaos standing in a long dark dress with a white collar and cuffs, red nose on, hands open beside a dark curtain', bg: 'Титания Хаос стои с дълга тъмна рокля с бяла яка и маншети, с червен нос и отворени длани до тъмна завеса', de: 'Titania Chaos steht in einem langen dunklen Kleid mit weißem Kragen und weißen Manschetten, rote Nase, die Hände offen neben einem dunklen Vorhang' },
     caption: { en: 'The hands are already saying something the face has not agreed to.', bg: 'Ръцете вече казват нещо, с което лицето не се е съгласило.', de: 'Die Hände sagen schon etwas, dem das Gesicht nicht zugestimmt hat.' }
   },
   {
     id: 'a-img-0494',
     kind: 'photo',
-    tags: ['props', 'stage', 'performance'],
+    tags: ['props', 'stage'],
     alt: { en: 'Titania Chaos behind a hanging curtain of green and pink fringes on a black stage', bg: 'Титания Хаос зад висяща завеса от зелени и розови ресни на черна сцена', de: 'Titania Chaos hinter einem hängenden Vorhang aus grünen und rosa Fransen auf schwarzer Bühne' },
     caption: { en: 'Anything you can look through is a place to appear from.', bg: 'Всичко, през което може да се гледа, е място, откъдето да се появиш.', de: 'Alles, wodurch man schauen kann, ist ein Ort zum Auftauchen.' }
   },
   {
     id: 'a-img-0511',
     kind: 'photo',
-    tags: ['portrait', 'performance'],
+    tags: ['portrait'],
     othersInFrame: 'a person behind, out of focus and not identifiable',
     alt: { en: 'Titania Chaos smiling in a turquoise dress and red nose, a blurred figure behind her', bg: 'Титания Хаос се усмихва с тюркоазена рокля и червен нос, зад нея — размита фигура', de: 'Titania Chaos lächelt in türkisem Kleid mit roter Nase, dahinter eine unscharfe Gestalt' },
     caption: { en: 'The moment before going on, which never looks like the moment after.', bg: 'Мигът преди излизането, който никога не прилича на мига след него.', de: 'Der Moment vor dem Auftritt, der nie aussieht wie der danach.' }
@@ -876,7 +876,7 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-1208',
     kind: 'photo',
-    tags: ['portrait', 'props', 'performance'],
+    tags: ['portrait', 'props'],
     alt: { en: 'Titania Chaos shrugging with open hands, in a black bowler hat, yellow sleeves and a quilted gilet', bg: 'Титания Хаос свива рамене с отворени длани, с черно бомбе, жълти ръкави и подплатен елек', de: 'Titania Chaos zuckt mit offenen Händen die Schultern, schwarze Melone, gelbe Ärmel, Steppweste' },
     caption: { en: 'The shrug is the oldest line in the trade and needs no translation.', bg: 'Свиването на рамене е най-старата реплика в занаята и не се нуждае от превод.', de: 'Das Schulterzucken ist der älteste Satz des Fachs und braucht keine Übersetzung.' }
   },
@@ -936,7 +936,7 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-1414',
     kind: 'photo',
-    tags: ['street', 'props', 'performance'],
+    tags: ['street', 'props'],
     alt: { en: 'Titania Chaos in a turquoise skirt and dark jacket holding a red hoop in front of a baroque church and monument in Vienna', bg: 'Титания Хаос с тюркоазена пола и тъмно сако държи червен обръч пред барокова църква и паметник във Виена', de: 'Titania Chaos in türkisem Rock und dunklem Jackett hält einen roten Reifen vor einer barocken Kirche und einem Denkmal in Wien' },
     caption: { en: 'The city lends its best backdrop to anyone willing to stand in front of it.', bg: 'Градът заема най-добрия си декор на всеки, готов да застане пред него.', de: 'Die Stadt leiht ihre beste Kulisse jedem, der sich davorstellt.' }
   },
@@ -974,7 +974,7 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-2193',
     kind: 'photo',
-    tags: ['portrait', 'performance'],
+    tags: ['portrait'],
     alt: { en: 'Titania Chaos against a magenta curtain in a pale bun and white collar, red nose on, pointing at herself', bg: 'Титания Хаос пред пурпурна завеса със светъл кок и бяла яка, с червен нос, сочи себе си', de: 'Titania Chaos vor einem magentafarbenen Vorhang mit hellem Dutt und weißem Kragen, rote Nase, zeigt auf sich selbst' },
     caption: { en: 'Pointing at yourself is the shortest confession in the trade.', bg: 'Да посочиш себе си е най-краткото признание в занаята.', de: 'Auf sich selbst zu zeigen ist das kürzeste Geständnis des Fachs.' }
   },
@@ -1026,7 +1026,7 @@ const FRAMES: Frame[] = [
     id: 'a-img-3608',
     kind: 'video',
     seconds: 14,
-    tags: ['juggling', 'performance'],
+    tags: ['juggling'],
     alt: { en: 'Titania Chaos in floral dungarees walking the length of a trampoline lane in a sports hall', bg: 'Титания Хаос с цветен гащеризон върви по батутна писта в спортна зала', de: 'Titania Chaos in Blumenlatzhose geht die Länge einer Trampolinbahn in einer Sporthalle entlang' },
     caption: { en: 'A floor that answers back changes what walking is.', bg: 'Под, който отвръща, променя това какво е ходенето.', de: 'Ein Boden, der antwortet, verändert, was Gehen ist.' }
   },
@@ -1034,7 +1034,7 @@ const FRAMES: Frame[] = [
     id: 'a-img-3630',
     kind: 'video',
     seconds: 8,
-    tags: ['children', 'workshop', 'performance'],
+    tags: ['children', 'workshop'],
     othersInFrame: 'several children watching, clearly identifiable',
     alt: { en: 'Titania Chaos in red diving forward onto a mat in a gym while children watch from the wall bars', bg: 'Титания Хаос в червено се гмурка напред върху дюшек в салон, а деца гледат от шведската стена', de: 'Titania Chaos in Rot taucht in einer Turnhalle nach vorn auf eine Matte, Kinder schauen von der Sprossenwand zu' },
     caption: { en: 'Falling on purpose is the first thing worth teaching.', bg: 'Да паднеш нарочно е първото нещо, което си струва да се научи.', de: 'Absichtlich zu fallen ist das Erste, was zu lehren sich lohnt.' }
@@ -1067,14 +1067,14 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-4367',
     kind: 'photo',
-    tags: ['solitude', 'performance'],
+    tags: ['solitude'],
     alt: { en: 'The shadow of a standing figure with an antenna headpiece and both arms open, cast across a pale wall', bg: 'Сянката на права фигура с антена на главата и разперени ръце, паднала върху светла стена', de: 'Der Schatten einer stehenden Gestalt mit Antenne im Haar und offenen Armen auf einer hellen Wand' },
     caption: { en: 'The shadow does the gesture a moment late and better.', bg: 'Сянката прави жеста миг по-късно и по-добре.', de: 'Der Schatten macht die Geste einen Moment später und besser.' }
   },
   {
     id: 'a-img-4503',
     kind: 'photo',
-    tags: ['workshop', 'performance'],
+    tags: ['workshop'],
     othersInFrame: 'about eleven participants, clearly identifiable',
     alt: { en: 'About eleven workshop participants in red noses crowded together for a photograph in a plain room', bg: 'Около единадесет участници в работилница с червени носове, скупчени за снимка в обикновена стая', de: 'Etwa elf Workshop-Teilnehmende mit roten Nasen drängen sich in einem schlichten Raum für ein Foto zusammen' },
     caption: { en: 'Eleven people who have stopped minding how they look.', bg: 'Единадесет души, които са спрели да мислят как изглеждат.', de: 'Elf Menschen, denen egal geworden ist, wie sie aussehen.' }
@@ -1082,7 +1082,7 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-4690',
     kind: 'photo',
-    tags: ['portrait', 'performance'],
+    tags: ['portrait'],
     alt: { en: 'Titania Chaos in a turquoise dress and red nose gesturing in a bright corridor', bg: 'Титания Хаос с тюркоазена рокля и червен нос жестикулира в светъл коридор', de: 'Titania Chaos in türkisem Kleid mit roter Nase gestikuliert in einem hellen Gang' },
     caption: { en: 'A corridor is a stage with the audience at both ends.', bg: 'Коридорът е сцена с публика в двата края.', de: 'Ein Gang ist eine Bühne mit Publikum an beiden Enden.' }
   },
@@ -1167,7 +1167,7 @@ const FRAMES: Frame[] = [
     id: 'a-img-8092',
     kind: 'video',
     seconds: 12,
-    tags: ['props', 'solitude', 'performance'],
+    tags: ['props', 'solitude'],
     alt: { en: 'A figure silhouetted against a pale sky raising two coloured flags overhead', bg: 'Фигура на фона на бледо небе вдига два цветни флага над главата си', de: 'Eine Gestalt vor blassem Himmel hebt zwei bunte Fahnen über den Kopf' },
     caption: { en: 'Signalling to nobody in particular, which is most of practice.', bg: 'Сигнал към никого конкретно — това е по-голямата част от практиката.', de: 'Signale an niemand Bestimmten, was der größte Teil des Übens ist.' }
   },
@@ -1196,14 +1196,14 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-8569',
     kind: 'photo',
-    tags: ['portrait', 'performance'],
+    tags: ['portrait'],
     alt: { en: 'Titania Chaos standing straight in a red boilersuit with a red nose against a plain wall', bg: 'Титания Хаос стои изправена с червен работен гащеризон и червен нос до гола стена', de: 'Titania Chaos steht aufrecht im roten Overall mit roter Nase vor einer kahlen Wand' },
     caption: { en: 'One colour, one wall, and whatever the body decides to add.', bg: 'Един цвят, една стена и каквото тялото реши да добави.', de: 'Eine Farbe, eine Wand und was der Körper hinzufügt.' }
   },
   {
     id: 'a-img-8628',
     kind: 'photo',
-    tags: ['workshop', 'performance'],
+    tags: ['workshop'],
     othersInFrame: 'about thirteen participants, clearly identifiable',
     alt: { en: 'About thirteen workshop participants in a studio, some standing, some crouched, all in mid-gesture', bg: 'Около тринадесет участници в работилница в студио — някои прави, други приклекнали, всички в жест', de: 'Etwa dreizehn Workshop-Teilnehmende in einem Studio, teils stehend, teils hockend, alle mitten in einer Geste' },
     caption: { en: 'The group photograph everyone insists on, and it is always the truest one.', bg: 'Груповата снимка, на която всички настояват, и винаги най-истинската.', de: 'Das Gruppenfoto, auf dem alle bestehen, und immer das ehrlichste.' }
@@ -1253,7 +1253,7 @@ const FRAMES: Frame[] = [
   {
     id: 'a-dsc4738',
     kind: 'photo',
-    tags: ['performance', 'portrait'],
+    tags: ['portrait'],
     othersInFrame: 'three people, clearly identifiable',
     alt: { en: 'Titania Chaos in a red nose in conversation with three other people holding cups at an indoor gathering', bg: 'Титания Хаос с червен нос разговаря с още трима души с чаши в ръце на закрито събиране', de: 'Titania Chaos mit roter Nase im Gespräch mit drei weiteren Personen mit Bechern bei einem Treffen in Innenräumen' },
     caption: { en: 'The nose stays on after the show, which changes every conversation.', bg: 'Носът остава и след представлението, което променя всеки разговор.', de: 'Die Nase bleibt nach der Vorstellung auf, und das verändert jedes Gespräch.' }
@@ -1269,7 +1269,7 @@ const FRAMES: Frame[] = [
   {
     id: 'a-b3d70d9d-71eb-4a9b-b8f8-c53b0068727f',
     kind: 'photo',
-    tags: ['stage', 'portrait', 'performance'],
+    tags: ['stage', 'portrait'],
     alt: { en: 'Titania Chaos lit on a dark stage in a red comb headpiece, white collar and red nose', bg: 'Титания Хаос, осветена на тъмна сцена, с червена украса за глава, бяла яка и червен нос', de: 'Titania Chaos im Licht auf dunkler Bühne mit rotem Kopfschmuck, weißem Kragen und roter Nase' },
     caption: { en: 'The look that says the trouble has already started.', bg: 'Погледът, който казва, че бедата вече е започнала.', de: 'Der Blick, der sagt, dass der Ärger schon begonnen hat.' }
   },

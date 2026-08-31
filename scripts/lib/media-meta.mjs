@@ -53,6 +53,19 @@ export async function frames() {
       caption: three('caption')
     })
   }
+  // Newly imported frames can be published in a compact, reviewed translation
+  // table after the generated records. Apply that table here too: this parser
+  // intentionally reads source rather than executing the Vite data loader.
+  const reviewed = source.match(
+    /const AUGUST_2026_MEDIA:[\s\S]*?= \[([\s\S]*?)\n\]\n\nfor \(const \[id, en, bg, de, othersInFrame\]/
+  )?.[1] ?? ''
+  for (const row of reviewed.matchAll(/\['([^']+)', '((?:[^'\\]|\\.)*)', '((?:[^'\\]|\\.)*)', '((?:[^'\\]|\\.)*)'(?:, '((?:[^'\\]|\\.)*)')?\]/g)) {
+    const frame = out.find((item) => item.id === row[1])
+    if (!frame) continue
+    frame.draft = false
+    frame.alt = frame.caption = { en: row[2], bg: row[3], de: row[4] }
+    if (row[5]) frame.othersInFrame = row[5]
+  }
   return out
 }
 

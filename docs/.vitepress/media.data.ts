@@ -1304,8 +1304,511 @@ const FRAMES: Frame[] = [
     tags: ['portrait'],
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
     caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+  },
+  {
+    id: 'b-img-1464',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-1421',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'performance', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-1463',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-1420',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'performance', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-1462',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-3748',
+    draft: true,
+    kind: 'photo',
+    tags: ['stage', 'performance', 'props'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-7189',
+    draft: true,
+    kind: 'photo',
+    tags: ['portrait', 'press'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-3806',
+    draft: true,
+    kind: 'photo',
+    tags: ['workshop', 'children', 'performance'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-parade-portrait',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-dsc02596',
+    draft: true,
+    kind: 'photo',
+    tags: ['stage', 'performance', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-7549',
+    draft: true,
+    kind: 'photo',
+    tags: ['juggling', 'props', 'performance', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-3750',
+    draft: true,
+    kind: 'photo',
+    tags: ['stage', 'performance', 'props'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-1424',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'performance', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-1466',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'performance', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-1465',
+    draft: true,
+    kind: 'photo',
+    tags: ['street', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-1422',
+    draft: true,
+    kind: 'photo',
+    tags: ['children', 'street', 'props', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-4998',
+    draft: true,
+    kind: 'video',
+    seconds: 38,
+    tags: ['workshop', 'performance'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-2046',
+    draft: true,
+    kind: 'video',
+    seconds: 18,
+    tags: ['street', 'solitude', 'props'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-8531',
+    draft: true,
+    kind: 'video',
+    seconds: 15,
+    tags: ['street', 'performance', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-7614',
+    draft: true,
+    kind: 'video',
+    seconds: 10,
+    tags: ['stage', 'performance', 'props'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-5213',
+    draft: true,
+    kind: 'video',
+    seconds: 39,
+    tags: ['street', 'children', 'performance'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-2755',
+    draft: true,
+    kind: 'video',
+    seconds: 35,
+    tags: ['street', 'performance', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-1816',
+    draft: true,
+    kind: 'video',
+    seconds: 10,
+    tags: ['stage', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-6401',
+    draft: true,
+    kind: 'video',
+    seconds: 25,
+    tags: ['street', 'props', 'solitude'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-6436',
+    draft: true,
+    kind: 'video',
+    seconds: 16,
+    tags: ['street', 'stage', 'performance', 'children'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-7960',
+    draft: true,
+    kind: 'video',
+    seconds: 12,
+    tags: ['street', 'performance', 'portrait'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-6558',
+    draft: true,
+    kind: 'video',
+    seconds: 10,
+    tags: ['street', 'performance', 'children'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
+  },
+  {
+    id: 'b-img-3107',
+    draft: true,
+    kind: 'video',
+    seconds: 44,
+    tags: ['stage', 'performance'],
+    alt: {
+      en: 'TODO what someone who cannot see it needs to know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    },
+    caption: {
+      en: 'TODO what someone who can see it might not know',
+      bg: 'TODO the same, in Bulgarian',
+      de: 'TODO the same, in German'
+    }
   }
 ]
+
+// Media imported from the August 2026 archive. Keeping the descriptions here
+// beside the generated records makes the import auditable while publishing the
+// frames in all three site languages.
+const AUGUST_2026_MEDIA: Array<[string, string, string, string, string?]> = [
+  ['b-img-1464', 'Titania Chaos in a red costume smiling in a crowded street parade', 'Титания Хаос в червен костюм се усмихва сред улично шествие', 'Titania Chaos lächelt im roten Kostüm inmitten eines Straßenumzugs', 'people in a street-parade crowd'],
+  ['b-img-1421', 'Titania Chaos twirling a broad green patterned skirt during a street parade', 'Титания Хаос завърта широка зелена шарена пола по време на улично шествие', 'Titania Chaos wirbelt bei einem Straßenumzug einen breiten grün gemusterten Rock', 'people in a street-parade crowd'],
+  ['b-img-1463', 'Black-and-white street portrait of Titania Chaos in costume among parade spectators', 'Черно-бял уличен портрет на Титания Хаос в костюм сред зрители на шествие', 'Schwarzweißes Straßenporträt von Titania Chaos im Kostüm unter Zuschauenden', 'people in a street-parade crowd'],
+  ['b-img-1420', 'Titania Chaos high-fiving a spectator while moving through a street parade', 'Титания Хаос дава пет на зрител по време на улично шествие', 'Titania Chaos gibt einer Person beim Straßenumzug ein High Five', 'spectators at a street parade'],
+  ['b-img-1462', 'Titania Chaos posing in a red costume on a busy parade street', 'Титания Хаос позира в червен костюм на оживена улица по време на шествие', 'Titania Chaos posiert im roten Kostüm auf einer belebten Umzugsstraße', 'people in a street-parade crowd'],
+  ['b-img-3748', 'Titania Chaos kneeling onstage beside a wooden puppet and fellow performers', 'Титания Хаос коленичи на сцената до дървена кукла и други артисти', 'Titania Chaos kniet auf der Bühne neben einer Holzpuppe und weiteren Spielenden', 'fellow performers on stage'],
+  ['b-img-7189', 'Titania Chaos seated in front of a microphone during a radio appearance', 'Титания Хаос седи пред микрофон по време на радио участие', 'Titania Chaos sitzt bei einem Radioauftritt vor einem Mikrofon'],
+  ['b-img-3806', 'Titania Chaos makes a playful quiet gesture to children and adults in a workshop', 'Титания Хаос приканва за тишина деца и възрастни по време на работилница', 'Titania Chaos bittet Kinder und Erwachsene in einem Workshop spielerisch um Ruhe', 'children and adults in a workshop'],
+  ['b-parade-portrait', 'Titania Chaos in red costume and clown nose turns toward the camera in a parade crowd', 'Титания Хаос в червен костюм и с клоунски нос се обръща към камерата сред шествие', 'Titania Chaos im roten Kostüm und mit Clownsnase blickt inmitten eines Umzugs zur Kamera', 'people in a street-parade crowd'],
+  ['b-dsc02596', 'Titania Chaos performing onstage in a red dress with bright yellow sleeves', 'Титания Хаос играе на сцена в червена рокля с яркожълти ръкави', 'Titania Chaos spielt auf der Bühne in einem roten Kleid mit leuchtend gelben Ärmeln'],
+  ['b-img-7549', 'Titania Chaos balances a red juggling club upright on her nose', 'Титания Хаос балансира червена жонгльорска бухалка върху носа си', 'Titania Chaos balanciert eine rote Jonglierkeule auf ihrer Nase'],
+  ['b-img-3750', 'Titania Chaos performs from an upper balcony with a long decorated rope prop', 'Титания Хаос играе от горен балкон с дълго украсено въже', 'Titania Chaos spielt von einem oberen Balkon mit einem langen geschmückten Seil'],
+  ['b-img-1424', 'Titania Chaos gestures to the parade crowd with a giant puppet behind her', 'Титания Хаос жестикулира към публиката на шествието, а зад нея има гигантска кукла', 'Titania Chaos gestikuliert zur Umzugsmenge, hinter ihr eine riesige Puppe', 'people in a parade crowd'],
+  ['b-img-1466', 'Titania Chaos performs in red costume while walking through a crowded street parade', 'Титания Хаос играе в червен костюм сред многолюдно улично шествие', 'Titania Chaos spielt im roten Kostüm in einem belebten Straßenumzug', 'people in a street-parade crowd'],
+  ['b-img-1465', 'Black-and-white portrait of Titania Chaos walking through a street crowd', 'Черно-бял портрет на Титания Хаос сред улична тълпа', 'Schwarzweißes Porträt von Titania Chaos in einer Straßenmenge', 'people in a street crowd'],
+  ['b-img-1422', 'Close-up of Titania Chaos interacting with a child and a colourful toy in the street', 'Близък план на Титания Хаос с дете и цветна играчка на улицата', 'Nahaufnahme von Titania Chaos mit einem Kind und buntem Spielzeug auf der Straße', 'a child at a public street event'],
+  ['b-img-4998', 'Titania Chaos rehearses movement in a studio wearing pink patterned overalls', 'Титания Хаос репетира движение в студио с розов шарен гащеризон', 'Titania Chaos probt Bewegung im Studio in einer rosa gemusterten Latzhose'],
+  ['b-img-2046', 'A camera moves through an empty graffiti-covered playground and performance yard', 'Камерата преминава през празна площадка с графити и сценичен двор', 'Die Kamera bewegt sich durch einen leeren, graffitibedeckten Spiel- und Auftrittshof'],
+  ['b-img-8531', 'Titania Chaos gestures during an outdoor performance on a wooden platform', 'Титания Хаос жестикулира по време на представление върху дървена платформа на открито', 'Titania Chaos gestikuliert bei einem Auftritt auf einer Holzplattform im Freien'],
+  ['b-img-7614', 'Titania Chaos performs onstage among brightly coloured fabric props', 'Титания Хаос играе на сцена сред яркоцветни платнени реквизити', 'Titania Chaos spielt auf der Bühne zwischen farbenfrohen Stoffrequisiten'],
+  ['b-img-5213', 'Titania Chaos performs in red among families at an outdoor festival', 'Титания Хаос играе в червено сред семейства на фестивал на открито', 'Titania Chaos spielt in Rot zwischen Familien bei einem Festival im Freien', 'children and adults at an outdoor festival'],
+  ['b-img-2755', 'Titania Chaos in a pale blue dress speaks through a megaphone beside a brick wall', 'Титания Хаос в светлосиня рокля говори с мегафон до тухлена стена', 'Titania Chaos spricht im hellblauen Kleid durch ein Megafon neben einer Backsteinwand'],
+  ['b-img-1816', 'Backstage selfie of Titania Chaos in a dark dress, white lace collar and red nose', 'Задкулисно селфи на Титания Хаос с тъмна рокля, бяла дантелена яка и червен нос', 'Backstage-Selfie von Titania Chaos im dunklen Kleid mit weißem Spitzenkragen und roter Nase'],
+  ['b-img-6401', 'Titania Chaos crouches beside a van wheel to inspect or repair it', 'Титания Хаос е приклекнала до колело на бус, за да го огледа или поправи', 'Titania Chaos hockt neben einem Kleinbus-Rad, um es zu prüfen oder zu reparieren'],
+  ['b-img-6436', 'Titania Chaos moves along an outdoor stage beside a seated family audience', 'Титания Хаос се движи по сцена на открито до седнала семейна публика', 'Titania Chaos bewegt sich über eine Freiluftbühne neben sitzendem Familienpublikum', 'children and adults in the audience'],
+  ['b-img-7960', 'Titania Chaos sings or speaks into a microphone during a street performance', 'Титания Хаос пее или говори в микрофон по време на улично представление', 'Titania Chaos singt oder spricht bei einem Straßenauftritt ins Mikrofon'],
+  ['b-img-6558', 'A performer leaps over crouching children during an outdoor show', 'Артист прескача приклекнали деца по време на представление на открито', 'Ein Künstler springt bei einer Freiluftvorstellung über hockende Kinder', 'a fellow performer and children in the audience'],
+  ['b-img-3107', 'Titania Chaos shares an outdoor stage with a singer during a live performance', 'Титания Хаос споделя сцена на открито с певец по време на живо представление', 'Titania Chaos steht bei einem Live-Auftritt mit einem Sänger auf einer Freiluftbühne', 'a fellow performer on stage']
+]
+
+for (const [id, en, bg, de, othersInFrame] of AUGUST_2026_MEDIA) {
+  const frame = FRAMES.find((item) => item.id === id)
+  if (!frame) throw new Error(`August 2026 media record missing: ${id}`)
+  delete frame.draft
+  frame.alt = { en, bg, de }
+  frame.caption = { en, bg, de }
+  if (othersInFrame) frame.othersInFrame = othersInFrame
+}
 
 // ---- what a reader sees --------------------------------------------------
 

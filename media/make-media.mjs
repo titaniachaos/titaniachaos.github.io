@@ -100,6 +100,22 @@ const PHOTOS = {
  * its own and the paths in it are whole rather than bare filenames.
  */
 const IMPORTED = {
+  'b-img-1422': 'titaniachaos.github.io/media/IMG_1422.jpeg',
+  'b-img-1465': 'titaniachaos.github.io/media/IMG_1465.jpeg',
+  'b-img-1466': 'titaniachaos.github.io/media/IMG_1466.jpeg',
+  'b-img-1424': 'titaniachaos.github.io/media/IMG_1424.jpeg',
+  'b-img-3750': 'titaniachaos.github.io/media/IMG_3750.jpeg',
+  'b-img-7549': 'titaniachaos.github.io/media/IMG_7549.jpeg',
+  'b-dsc02596': 'titaniachaos.github.io/media/DSC02596.jpeg',
+  'b-parade-portrait': 'titaniachaos.github.io/media/att.aKfT5H8MHpsbKmcrgLwdm5X8BcotP7euax4aCtryXrs.jpeg',
+  'b-img-3806': 'titaniachaos.github.io/media/IMG_3806.jpeg',
+  'b-img-7189': 'titaniachaos.github.io/media/IMG_7189.jpeg',
+  'b-img-3748': 'titaniachaos.github.io/media/IMG_3748.jpeg',
+  'b-img-1462': 'titaniachaos.github.io/media/IMG_1462.jpeg',
+  'b-img-1420': 'titaniachaos.github.io/media/IMG_1420.jpeg',
+  'b-img-1463': 'titaniachaos.github.io/media/IMG_1463.jpeg',
+  'b-img-1421': 'titaniachaos.github.io/media/IMG_1421.jpeg',
+  'b-img-1464': 'titaniachaos.github.io/media/IMG_1464.jpeg',
   'a-06077ced0b10175c': 'media-archive/originals/06077ced0b10175c.webp',
   'a-0679147602f4d57d': 'media-archive/originals/0679147602f4d57d.webp',
   'a-06d135037c12fedf': 'media-archive/originals/06d135037c12fedf.webp',
@@ -243,6 +259,18 @@ const PUBLISHED = {
  * froze two of them mid-blur, which is how the question came up.
  */
 const VIDEOS = {
+  'b-img-3107': ['titaniachaos.github.io/media/IMG_3107.mov', 1],
+  'b-img-6558': ['titaniachaos.github.io/media/IMG_6558.mov', 1],
+  'b-img-7960': ['titaniachaos.github.io/media/IMG_7960.mov', 1],
+  'b-img-6436': ['titaniachaos.github.io/media/IMG_6436.mov', 1],
+  'b-img-6401': ['titaniachaos.github.io/media/IMG_6401.mov', 1],
+  'b-img-1816': ['titaniachaos.github.io/media/IMG_1816.mov', 1],
+  'b-img-2755': ['titaniachaos.github.io/media/IMG_2755.mov', 1],
+  'b-img-5213': ['titaniachaos.github.io/media/IMG_5213.mov', 1],
+  'b-img-7614': ['titaniachaos.github.io/media/IMG_7614.mov', 1],
+  'b-img-8531': ['titaniachaos.github.io/media/IMG_8531.mov', 1],
+  'b-img-2046': ['titaniachaos.github.io/media/IMG_2046.mov', 1],
+  'b-img-4998': ['titaniachaos.github.io/media/IMG_4998.mov', 1],
   'a-img-3608': ['100 procenta budni/IMG_3608.MOV', 1],
   'a-img-3630': ['100 procenta budni/IMG_3630.MOV', 1],
   'a-img-7217': ['100 procenta budni/IMG_7217.MOV', 1],

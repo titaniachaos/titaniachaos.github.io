@@ -18,7 +18,7 @@ import type { Lang } from './locale.ts'
  * remembering that navigation exists.
  */
 const CATEGORIES = (lang: Lang) => ({
-  text: CATEGORY_UI[lang].indexTitle,
+  text: CATEGORY_UI[lang].navLabel,
   items: [
     // The index first: thirteen category links are a menu, and a menu is no
     // use to a reader who does not already know which of the thirteen they

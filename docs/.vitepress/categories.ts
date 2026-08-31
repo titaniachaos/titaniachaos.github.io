@@ -115,6 +115,11 @@ export const CATEGORY_UI: Record<Lang, {
   many: string
   /** Above the list of ordinary pages that also carry this tag. */
   alsoOn: string
+  /** The pager under a listing that runs to more than one page. */
+  previous: string
+  next: string
+  /** `Page %1`, for the numbered links. */
+  page: string
   /** Before the chips at the foot of a written page. */
   about: string
   /** Above the written pages that discuss this category. */
@@ -132,6 +137,9 @@ export const CATEGORY_UI: Record<Lang, {
     one: '1 picture',
     many: '%1 pictures',
     alsoOn: 'Also on',
+    previous: 'Previous',
+    next: 'Next',
+    page: 'Page %1',
     about: 'This page is about',
     written: 'Read about this',
     indexTitle: 'Everything, by what it is',
@@ -146,6 +154,9 @@ export const CATEGORY_UI: Record<Lang, {
     one: '1 кадър',
     many: '%1 кадъра',
     alsoOn: 'Също на',
+    previous: 'Назад',
+    next: 'Напред',
+    page: 'Страница %1',
     about: 'Тази страница е за',
     written: 'Прочетете за това',
     indexTitle: 'Всичко, според това какво е',
@@ -160,6 +171,9 @@ export const CATEGORY_UI: Record<Lang, {
     one: '1 Aufnahme',
     many: '%1 Aufnahmen',
     alsoOn: 'Auch auf',
+    previous: 'Zurück',
+    next: 'Weiter',
+    page: 'Seite %1',
     about: 'Diese Seite handelt von',
     written: 'Dazu zu lesen',
     indexTitle: 'Alles, nach dem was es ist',
@@ -170,6 +184,17 @@ export const CATEGORY_UI: Record<Lang, {
 }
 
 /** `%1` filled in. Kept here so the three locales cannot drift apart. */
+/**
+ * How many frames a category page lists before it needs a second one.
+ *
+ * A listing shows a whole tag at once, and after the import `portrait` is 43
+ * frames and `street` 37. At 160px each that put /street at 455 KB against a
+ * 500 KB budget -- and the answer is not a smaller tile, because the tile is
+ * already only 1.33x the 120px slot it renders in and these are photographs.
+ * Twenty-four is what fits with room to grow.
+ */
+export const PER_PAGE = 24
+
 export const fill = (template: string, value: string | number) => template.replace('%1', String(value))
 
 /**
@@ -185,5 +210,9 @@ export const asTitle = (name: string) => name.charAt(0).toUpperCase() + name.sli
 
 /** The URL of a category page. Every language, one shape. */
 export const categoryPath = (lang: Lang, tag: string) => `${localePrefix(lang)}/${tag}`
+
+/** Page one is the category itself; the rest hang under it. */
+export const categoryPagePath = (lang: Lang, tag: string, page: number) =>
+  page <= 1 ? categoryPath(lang, tag) : `${categoryPath(lang, tag)}/${page}`
 
 export { LANGS }

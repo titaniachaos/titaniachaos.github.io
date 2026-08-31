@@ -152,5 +152,5 @@ const figures = [...pages.values()].reduce((n, byLocale) => n + [...byLocale.val
 console.log(
   'check-ecosystem: locale-aware clown links, professional metadata, typography contract ' +
     `and ${figures} figures on ${pages.size} pages asking the same ${vocabulary.length}-word vocabulary, ` +
-    `named identically across three languages and ${vocabulary.length * 3} generated category pages`
+    `named identically across three languages and ${vocabulary.length * 3} category pages, one per word per language, plus a second page wherever a word carries more than a listing holds`
 )

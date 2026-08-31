@@ -1544,6 +1544,24 @@ async function synced(): Promise<Frame[]> {
   })
 }
 
+/**
+ * How many published frames carry each tag, for the routes that have to know
+ * how many pages a listing needs before the loader has run.
+ *
+ * Synced feed posts are deliberately not counted: they exist only for whoever
+ * holds a token, so counting them would generate a page that is empty in every
+ * other clone. If a feed post ever pushes a category past the last generated
+ * page the pager links somewhere that was not built, and check-build says so.
+ */
+export function publishedPerTag(): Record<string, number> {
+  const out: Record<string, number> = {}
+  for (const frame of FRAMES) {
+    if (frame.draft) continue
+    for (const tag of frame.tags) out[tag] = (out[tag] ?? 0) + 1
+  }
+  return out
+}
+
 export default defineLoader({
   watch: ['./*.md', './bg/*.md', './de/*.md', './public/images/media/*', './media-manifest.json'],
   async load(): Promise<Data> {

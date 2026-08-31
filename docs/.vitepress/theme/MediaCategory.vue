@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { useData } from 'vitepress'
 import { data } from '../media.data'
 import type { Media, Tag } from '../media.data'
-import { CATEGORY_UI, fill, categoryPath } from '../categories.ts'
+import { CATEGORY_UI, PER_PAGE, fill, categoryPath, categoryPagePath } from '../categories.ts'
 import { useLang } from './useLang.ts'
 
 /**
@@ -36,8 +36,21 @@ const name = computed(() => (params.value?.name ?? '') as string)
 const t = computed(() => CATEGORY_UI[lang.value])
 const names = computed(() => data.label[lang.value])
 
+/** Everything carrying the tag, in archive order. */
+const all = computed<Media[]>(() => data.media.filter((m) => m.tags.includes(tag.value)))
+
+/**
+ * One page of it.
+ *
+ * A listing used to show a whole tag at once, which was fine at eleven frames
+ * and not at forty-three: /street reached 455 KB of a 500 KB budget, and the
+ * cheap fix — a smaller tile — is the wrong one on a site whose subject is
+ * photographs. So the listing pages instead, page one at the plain URL.
+ */
+const page = computed(() => Math.max(1, Number(params.value?.page ?? 1) || 1))
+const pages = computed(() => Math.max(1, Math.ceil(all.value.length / PER_PAGE)))
 const frames = computed<Media[]>(() =>
-  data.media.filter((m) => m.tags.includes(tag.value))
+  all.value.slice((page.value - 1) * PER_PAGE, page.value * PER_PAGE)
 )
 
 /**
@@ -76,7 +89,10 @@ const pagesFor = (m: Media) => (data.usedOn[m.id] ?? []).filter((p) => p.lang ==
          id="params-name" and a permalink reading "Permalink to {{ $params.name }}".
          A heading that comes from data belongs in the component that has the data. -->
     <h1 class="cat__title">{{ name }}</h1>
-    <p class="cat__count">{{ countOf(frames.length) }}</p>
+    <p class="cat__count">
+      {{ countOf(all.length)
+      }}<template v-if="pages > 1"> · {{ fill(t.page, page) }}/{{ pages }}</template>
+    </p>
 
     <p v-if="!frames.length" class="cat__empty">{{ t.empty }}</p>
 
@@ -133,6 +149,20 @@ const pagesFor = (m: Media) => (data.usedOn[m.id] ?? []).filter((p) => p.lang ==
       <a v-for="page in written" :key="page.path" :href="page.path">{{ page.title }}</a>
     </nav>
 
+    <nav v-if="pages > 1" class="cat__pager" :aria-label="fill(t.page, page)">
+      <a v-if="page > 1" :href="categoryPagePath(lang, tag, page - 1)" rel="prev">{{ t.previous }}</a>
+      <span v-else class="cat__pager--off">{{ t.previous }}</span>
+      <a
+        v-for="n in pages"
+        :key="n"
+        :href="categoryPagePath(lang, tag, n)"
+        :aria-current="n === page ? 'page' : undefined"
+        :class="{ 'cat__pager--here': n === page }"
+      >{{ n }}</a>
+      <a v-if="page < pages" :href="categoryPagePath(lang, tag, page + 1)" rel="next">{{ t.next }}</a>
+      <span v-else class="cat__pager--off">{{ t.next }}</span>
+    </nav>
+
     <nav v-if="siblings.length" class="cat__siblings" :aria-label="t.indexTitle">
       <a v-for="other in siblings" :key="other.tag" :href="other.path">{{ other.name }}</a>
     </nav>
@@ -141,6 +171,35 @@ const pagesFor = (m: Media) => (data.usedOn[m.id] ?? []).filter((p) => p.lang ==
 
 <style scoped>
 .cat { margin: 0; }
+
+.cat__pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--vp-c-divider);
+}
+.cat__pager a,
+.cat__pager--off {
+  min-width: 2rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  color: var(--vp-c-text-2);
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  text-decoration: none;
+}
+.cat__pager a:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+.cat__pager--off { color: var(--vp-c-text-3); opacity: 0.5; }
+.cat__pager--here {
+  border-color: var(--vp-c-brand-1) !important;
+  color: var(--vp-c-brand-1) !important;
+}
 
 .cat__written {
   display: flex;

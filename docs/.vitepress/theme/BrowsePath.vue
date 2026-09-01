@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { data } from '../media.data'
 import type { Media, Tag } from '../media.data'
-import { BROWSE_UI, TAG_NAMES, fill, asTitle } from '../categories.ts'
+import { BROWSE_UI, TAG_NAMES, browsePath, fill, asTitle } from '../categories.ts'
 import { useLang } from './useLang.ts'
 
 /**
@@ -20,6 +20,14 @@ import { useLang } from './useLang.ts'
  * which is the failure this surface exists to end.
  */
 
+/**
+ * The question can arrive two ways: from the route, on the 42 listings built
+ * for it, or as a prop, when an address nobody pre-generated turns out to be a
+ * question the archive can answer anyway. Same component either way, so a
+ * computed listing is the page rather than a lesser version of it.
+ */
+const props = defineProps<{ want?: Tag[] }>()
+
 const { params } = useData()
 const { lang } = useLang()
 
@@ -28,7 +36,9 @@ const names = computed(() => TAG_NAMES[lang.value])
 
 /** The words of the path, in order, as the route captured them. */
 const want = computed<Tag[]>(() =>
-  [params.value?.w1, params.value?.w2, params.value?.w3].filter(Boolean) as Tag[]
+  props.want?.length
+    ? props.want
+    : ([params.value?.w1, params.value?.w2, params.value?.w3].filter(Boolean) as Tag[])
 )
 
 const spoken = computed(() => want.value.map((w) => names.value[w]).join(' · '))
@@ -47,6 +57,13 @@ const all = computed<Media[]>(() =>
  * right and wrong enough to lose frames again.
  */
 const shown = computed<Media[]>(() => {
+  // A computed listing has no `ids` because no build chose them. It also never
+  // needs the rarity order: every path the build declined to make is one with
+  // fewer than three frames on it, so there is nothing to truncate and no tail
+  // to choose. Measured across the whole vocabulary -- the largest such
+  // listing holds two.
+  if (props.want?.length) return all.value
+
   const ids = String(params.value?.ids ?? '').split(' ').filter(Boolean)
   const byId = new Map(data.media.map((m) => [m.id, m]))
   return ids.map((id) => byId.get(id)).filter(Boolean) as Media[]
@@ -59,8 +76,7 @@ const narrower = computed(() => {
     if (want.value.includes(word) || want.value.length >= 3) continue
     const n = all.value.filter((m) => m.tags.includes(word)).length
     if (n >= 3) {
-      const words = [...want.value, word].sort()
-      out.push({ path: withBase(`${lang.value === 'en' ? '' : '/' + lang.value}/${words.join('/')}`), name: names.value[word], n })
+      out.push({ path: withBase(browsePath(lang.value, ...want.value, word)), name: names.value[word], n })
     }
   }
   return out.sort((a, b) => b.n - a.n).slice(0, 8)

@@ -202,6 +202,59 @@ export const PER_PAGE = 24
  * answers it. The words in the URL stay English because they are the
  * vocabulary's own; the heading uses each language's names for them.
  */
+/**
+ * What an address that answers nothing should say.
+ *
+ * A path here is a question, so an address with no answer is a question this
+ * archive cannot answer -- which is worth saying in the reader's language,
+ * with the questions it can answer offered beside it.
+ */
+/**
+ * A question's address, per language.
+ *
+ * The words are sorted here rather than at each call site, because `/a/b` and
+ * `/b/a` are one question and only one of them is a page. Pair it with
+ * `withBase()`, which is the only thing that knows where the site is served
+ * from.
+ */
+export const browsePath = (lang: Lang, ...words: string[]) =>
+  `${lang === 'en' ? '' : `/${lang}`}/${[...new Set(words.flat())].sort().join('/')}`
+
+export const MISSING: Record<Lang, {
+  /** `%1` is the question as it was asked. */
+  asked: string
+  /** The words are known; nothing carries all of them. */
+  empty: string
+  /** A word the archive does not use. */
+  unknown: string
+  /** Above the questions that do have answers. */
+  instead: string
+  /** Not a question at all. */
+  plain: string
+}> = {
+  en: {
+    asked: 'No photograph here answers %1.',
+    empty: 'Those words exist, but nothing carries all of them at once.',
+    unknown: 'This archive does not use that word.',
+    instead: 'Questions with answers',
+    plain: 'That page does not exist.'
+  },
+  bg: {
+    asked: 'Тук няма снимка, която да отговаря на %1.',
+    empty: 'Тези думи съществуват, но нищо не носи всички наведнъж.',
+    unknown: 'Този архив не използва тази дума.',
+    instead: 'Въпроси с отговори',
+    plain: 'Тази страница не съществува.'
+  },
+  de: {
+    asked: 'Hier beantwortet kein Bild %1.',
+    empty: 'Diese Wörter gibt es, aber nichts trägt sie alle zugleich.',
+    unknown: 'Dieses Archiv verwendet dieses Wort nicht.',
+    instead: 'Fragen mit Antworten',
+    plain: 'Diese Seite existiert nicht.'
+  }
+}
+
 export const BROWSE_UI: Record<Lang, {
   /** `%1` is the joined names of the words asked for. */
   title: string

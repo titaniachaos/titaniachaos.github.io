@@ -75,7 +75,7 @@ const clock = (seconds: number) => `${Math.floor(seconds / 60)}:${String(seconds
       decoding="async"
     />
     <figcaption class="figure__caption">
-      <span class="figure__kind">
+      <span class="ui-label figure__kind">
         {{ frame.kind === 'video' ? t.video : t.photo
         }}<template v-if="frame.seconds"> · {{ clock(frame.seconds) }}</template>
       </span>
@@ -116,16 +116,7 @@ const clock = (seconds: number) => `${Math.floor(seconds / 60)}:${String(seconds
   line-height: 1.55;
   text-wrap: pretty;
 }
-.figure__kind {
-  display: block;
-  margin-bottom: 0.15rem;
-  color: var(--vp-c-text-3);
-  font-size: 11px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+.figure__kind { display: block; margin-bottom: 0.15rem; }
 .figure__source {
   display: block;
   margin-top: 0.25rem;

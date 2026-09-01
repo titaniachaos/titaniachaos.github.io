@@ -131,7 +131,7 @@ async function share() {
 
 <template>
   <section v-if="ready" class="arr">
-    <p class="arr__size">{{ t.of }} {{ size }}</p>
+    <p class="ui-label arr__size">{{ t.of }} {{ size }}</p>
 
     <ol class="arr__lines">
       <li v-for="line in lines" :key="line.at" class="arr__line">
@@ -146,40 +146,30 @@ async function share() {
           decoding="async"
         />
         <div class="arr__words">
-          <p class="arr__asked">{{ asTitle(line.asked) }}<span>{{ line.of }}</span></p>
+          <p class="ui-label arr__asked">{{ asTitle(line.asked) }}<span class="ui-badge__count">{{ line.of }}</span></p>
           <p class="arr__caption">{{ line.frame?.caption[lang] }}</p>
         </div>
         <div class="arr__turn">
-          <button type="button" :aria-label="`${t.back}: ${line.asked}`" @click="turnLine(line.at, -1)">↑</button>
-          <button type="button" :aria-label="`${t.turn}: ${line.asked}`" @click="turnLine(line.at, 1)">↓</button>
+          <UiButton variant="ghost" size="icon" :aria-label="`${t.back}: ${line.asked}`" @click="turnLine(line.at, -1)">↑</UiButton>
+          <UiButton variant="ghost" size="icon" :aria-label="`${t.turn}: ${line.asked}`" @click="turnLine(line.at, 1)">↓</UiButton>
         </div>
       </li>
     </ol>
 
-    <footer class="arr__foot">
+    <footer class="arr__foot ui-separator">
       <p class="arr__address">
-        <span class="arr__label">{{ t.address }}</span>
+        <span class="ui-label">{{ t.address }}</span>
         <code>{{ address.toString() }}</code>
       </p>
       <p class="arr__note">{{ checked ? t.exact : t.drifted }}</p>
-      <button type="button" class="arr__share" @click="share">
-        {{ copied ? t.copied : t.share }}
-      </button>
+      <UiButton variant="alt" size="sm" @click="share">{{ copied ? t.copied : t.share }}</UiButton>
     </footer>
   </section>
 </template>
 
 <style scoped>
 .arr { margin: 0; }
-.arr__size {
-  margin: 0 0 1.6rem;
-  color: var(--vp-c-text-3);
-  font-size: 11px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+.arr__size { margin: 0 0 1.6rem; }
 .arr__lines { margin: 0; padding: 0; list-style: none; }
 .arr__line {
   display: grid;
@@ -200,58 +190,14 @@ async function share() {
   background: var(--vp-c-bg-soft);
 }
 .arr__words { min-width: 0; }
-.arr__asked {
-  display: flex;
-  gap: 0.4rem;
-  align-items: baseline;
-  margin: 0 0 0.15rem;
-  color: var(--vp-c-text-3);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.arr__asked span { color: var(--vp-c-text-3); font-variant-numeric: tabular-nums; opacity: 0.7; }
+.arr__asked { display: flex; gap: 0.4rem; align-items: baseline; margin: 0 0 0.15rem; }
 .arr__caption { margin: 0; color: var(--vp-c-text-1); line-height: 1.5; text-wrap: pretty; }
 .arr__turn { display: flex; flex-direction: column; gap: 0.25rem; }
-.arr__turn button {
-  width: 2rem;
-  height: 1.6rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 6px;
-  background: var(--vp-c-bg);
-  color: var(--vp-c-text-2);
-  font-size: 12px;
-  line-height: 1;
-  cursor: pointer;
-  transition: border-color 0.15s, color 0.15s;
-}
-.arr__turn button:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
 
-.arr__foot { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--vp-c-divider); }
+.arr__foot { margin-top: 2rem; }
 .arr__address { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: baseline; margin: 0 0 0.4rem; }
-.arr__label {
-  color: var(--vp-c-text-3);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
 .arr__address code { font-size: 12px; word-break: break-all; }
 .arr__note { margin: 0 0 1rem; color: var(--vp-c-text-3); font-size: 12px; line-height: 1.5; }
-.arr__share {
-  padding: 0.45rem 1rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  background: var(--vp-c-bg);
-  color: var(--vp-c-text-2);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.arr__share:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
 
 @media (max-width: 560px) {
   .arr__line { grid-template-columns: 3.25rem minmax(0, 1fr) auto; gap: 0.7rem; }

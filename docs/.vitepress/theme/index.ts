@@ -9,12 +9,22 @@ import BrowsePath from './BrowsePath.vue'
 import LocalePreference from './LocalePreference.vue'
 import NotFound from './NotFound.vue'
 import Arrangement from './Arrangement.vue'
+import UiBadge from './ui/UiBadge.vue'
+import UiButton from './ui/UiButton.vue'
+import UiLabel from './ui/UiLabel.vue'
 import './custom.css'
 
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
     app.component('Arrangement', Arrangement)
+    // Ported primitives, registered globally so a Markdown page can reach them
+    // as well as a component can. `enhanceApp` is the documented place for
+    // this; the styling is in custom.css, which is the documented place for
+    // that.
+    app.component('UiBadge', UiBadge)
+    app.component('UiButton', UiButton)
+    app.component('UiLabel', UiLabel)
     app.component('WorkshopDates', WorkshopDates)
     app.component('SocialWall', SocialWall)
     app.component('MediaHero', MediaHero)

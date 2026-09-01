@@ -133,7 +133,7 @@ const instead = computed(() => {
   </div>
 
   <div v-else-if="ready" class="missing">
-    <p class="missing__code">404</p>
+    <p class="ui-label missing__code">404</p>
 
     <template v-if="asked.length">
       <h1 class="missing__title">{{ fill(t.asked, asTitle(spoken)) }}</h1>
@@ -143,11 +143,9 @@ const instead = computed(() => {
       <h1 class="missing__title">{{ t.plain }}</h1>
     </template>
 
-    <nav v-if="instead.length" class="missing__instead" :aria-label="t.instead">
-      <span class="missing__lead-in">{{ t.instead }}</span>
-      <a v-for="one in instead" :key="one.path" :href="one.path"
-        >{{ one.name }}<span>{{ one.n }}</span></a
-      >
+    <nav v-if="instead.length" class="missing__instead ui-separator" :aria-label="t.instead">
+      <span class="ui-label missing__lead-in">{{ t.instead }}</span>
+      <UiBadge v-for="one in instead" :key="one.path" :href="one.path" :count="one.n">{{ one.name }}</UiBadge>
     </nav>
 
     <p class="missing__home">
@@ -159,14 +157,7 @@ const instead = computed(() => {
 <style scoped>
 .missing__found { max-width: 48rem; margin: 0 auto; padding: 3rem 1.5rem 6rem; }
 .missing { max-width: 44rem; margin: 0 auto; padding: 6rem 1.5rem 8rem; }
-.missing__code {
-  margin: 0 0 0.75rem;
-  color: var(--vp-c-text-3);
-  font-size: 11px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 0.12em;
-}
+.missing__code { margin: 0 0 0.75rem; letter-spacing: 0.12em; }
 .missing__title {
   margin: 0 0 0.75rem;
   font-size: 32px;
@@ -176,38 +167,9 @@ const instead = computed(() => {
   text-wrap: balance;
 }
 .missing__lead { margin: 0 0 2rem; color: var(--vp-c-text-2); line-height: 1.6; text-wrap: pretty; }
-.missing__instead {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: baseline;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--vp-c-divider);
-}
-.missing__lead-in {
-  width: 100%;
-  margin-bottom: 0.25rem;
-  color: var(--vp-c-text-3);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.missing__instead a {
-  display: inline-flex;
-  gap: 0.4rem;
-  align-items: baseline;
-  padding: 0.3rem 0.75rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  color: var(--vp-c-text-2);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.missing__instead a span { color: var(--vp-c-text-3); font-variant-numeric: tabular-nums; }
-.missing__instead a:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+/* Chips are `.ui-badge`, the lead is `.ui-label`, the rule is
+   `.ui-separator`. What is left is where they sit. */
+.missing__instead { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: baseline; margin-top: 0; }
+.missing__lead-in { width: 100%; margin-bottom: 0.25rem; }
 .missing__home { margin: 2.5rem 0 0; }
 </style>

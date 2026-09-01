@@ -97,19 +97,30 @@
 }
 .vp-doc .teacher-list a:hover { color: var(--vp-c-brand-1); }
 
+/* `.contact-button` is written by hand in the Markdown, so the name stays and
+   the recipe moves underneath it: same declarations as `.ui-btn--brand`,
+   reached through a class a page can type. `.secondary` is `--alt`. */
 .contact-button {
-  display: inline-block;
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
   margin: 8px 8px 8px 0;
   padding: 10px 18px;
-  border-radius: 999px;
-  background: var(--vp-c-brand-1);
+  border: 1px solid var(--vp-button-brand-border);
+  border-radius: var(--vp-ui-radius-pill);
+  background: var(--vp-button-brand-bg);
   color: #fff !important;
   font-weight: 600;
   text-decoration: none !important;
-  transition: background 0.2s, transform 0.2s;
+  transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
 }
-.contact-button:hover { background: var(--vp-c-brand-2); transform: translateY(-1px); }
-.contact-button.secondary { background: var(--vp-c-bg-soft); color: var(--vp-c-text-1) !important; }
+.contact-button:hover { background: var(--vp-button-brand-hover-bg); transform: translateY(-1px); }
+.contact-button.secondary {
+  border-color: var(--vp-button-alt-border);
+  background: var(--vp-button-alt-bg);
+  color: var(--vp-button-alt-text) !important;
+}
 /* White on the lifted dark tint would only reach 2.4:1, so the filled buttons
    keep the light-mode red as their ground in dark mode. */
 .dark .contact-button:not(.secondary) { background: #d62246; }
@@ -135,30 +146,40 @@
   border-radius: 14px;
   background: linear-gradient(145deg, var(--vp-c-brand-soft), var(--vp-c-bg-soft) 70%);
 }
+/* `.ui-label` with the brand colour: the one micro-label that is not grey. */
 .support-card__eyebrow {
   margin: 0 0 6px;
   color: var(--vp-c-brand-1);
-  font-size: 11px;
+  font-size: var(--vp-ui-label-size);
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: var(--vp-ui-label-tracking);
   text-transform: uppercase;
 }
 .support-card__title { margin: 0 0 8px !important; color: var(--vp-c-text-1) !important; font-size: 20px !important; font-weight: 600; line-height: 1.35 !important; }
 .support-card p:not(.support-card__eyebrow) { margin: 0 0 16px; max-width: 62ch; color: var(--vp-c-text-2); font-size: 14px; line-height: 1.6; }
 .support-card__actions { display: flex; flex-wrap: wrap; gap: 10px; }
+/* The same two buttons again, in the card the theme mounts for us. */
 .support-card__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 18px;
-  border-radius: 999px;
-  background: var(--vp-c-brand-1);
+  border: 1px solid var(--vp-button-brand-border);
+  border-radius: var(--vp-ui-radius-pill);
+  background: var(--vp-button-brand-bg);
   color: #fff !important;
   font-size: 13px;
   font-weight: 600;
   text-decoration: none !important;
-  transition: background 0.2s, transform 0.2s;
+  transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
 }
-.support-card__action:hover { background: var(--vp-c-brand-2); transform: translateY(-1px); }
-.support-card__action--secondary { background: var(--vp-c-bg); color: var(--vp-c-brand-1) !important; }
-.support-card__action--secondary:hover { background: var(--vp-c-brand-soft); }
+.support-card__action:hover { background: var(--vp-button-brand-hover-bg); transform: translateY(-1px); }
+.support-card__action--secondary {
+  border-color: var(--vp-button-alt-border);
+  background: var(--vp-button-alt-bg);
+  color: var(--vp-c-brand-1) !important;
+}
+.support-card__action--secondary:hover { background: var(--vp-button-alt-hover-bg); }
 .dark .support-card__action:not(.support-card__action--secondary) { background: #d62246; }
 .dark .support-card__action:not(.support-card__action--secondary):hover { background: #b91839; }
 
@@ -284,3 +305,139 @@
     margin-inline: auto;
   }
 }
+
+/* ==========================================================================
+   Ported primitives
+   ==========================================================================
+
+   shadcn/ui is React and Tailwind, so none of it can be installed here. What
+   ports is its actual idea: a small set of recipes over a token layer, copied
+   into the project rather than depended on, each with variants instead of a
+   new stylesheet per use.
+
+   The recipes are CSS classes rather than components-only, because half the
+   call sites are Markdown -- `<a class="contact-button">` is written in
+   events.md, not in a .vue file -- and a primitive that Markdown cannot reach
+   is a primitive half the site will keep reimplementing.
+
+   Following vitepress.dev: variables are `--vp-` prefixed and declared at
+   `:root`, per "the default theme CSS is customizable by overriding root level
+   CSS variables". The colours are the theme's own -- `--vp-button-brand-*` and
+   `--vp-button-alt-*` are documented tokens with light and dark values already
+   set -- so a ported button inherits the theme instead of forking it, and
+   dark mode needs no second definition.
+
+   What this replaces: eleven separate 999px pills across nine files, 29
+   uppercase micro-labels and 21 copies of the same letter-spacing. Every one
+   of them was a hand-rolled version of one of the four recipes below. */
+:root {
+  --vp-ui-radius: 8px;
+  --vp-ui-radius-pill: 999px;
+  --vp-ui-label-size: 11px;
+  --vp-ui-label-tracking: 0.08em;
+}
+
+/* The uppercase micro-label used above counts, sections and chips. */
+.ui-label {
+  color: var(--vp-c-text-3);
+  font-size: var(--vp-ui-label-size);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: var(--vp-ui-label-tracking);
+  text-transform: uppercase;
+}
+
+/* A pill. `--solid` fills, `--muted` sits back, plain is outlined. */
+.ui-badge {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: baseline;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--vp-ui-radius-pill);
+  background: transparent;
+  color: var(--vp-c-text-2);
+  font-size: var(--vp-ui-label-size);
+  font-weight: 700;
+  letter-spacing: var(--vp-ui-label-tracking);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.ui-badge__count { color: var(--vp-c-text-3); font-variant-numeric: tabular-nums; }
+.ui-badge--muted { border-color: transparent; background: var(--vp-c-bg-soft); color: var(--vp-c-text-3); }
+.ui-badge--solid { border-color: var(--vp-c-brand-soft); background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1); }
+/* Only a badge that goes somewhere reacts to a pointer. */
+a.ui-badge:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-brand-soft); }
+
+/* A button, on a <button> or an <a>. `--brand` fills, `--alt` outlines,
+   `--ghost` waits until it is hovered. */
+.ui-btn {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--vp-button-alt-border);
+  border-radius: var(--vp-ui-radius-pill);
+  background: var(--vp-button-alt-bg);
+  color: var(--vp-button-alt-text);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.ui-btn:hover {
+  border-color: var(--vp-button-alt-hover-border);
+  background: var(--vp-button-alt-hover-bg);
+  color: var(--vp-button-alt-hover-text);
+}
+.ui-btn--brand {
+  border-color: var(--vp-button-brand-border);
+  background: var(--vp-button-brand-bg);
+  color: var(--vp-button-brand-text);
+}
+.ui-btn--brand:hover {
+  border-color: var(--vp-button-brand-hover-border);
+  background: var(--vp-button-brand-hover-bg);
+  color: var(--vp-button-brand-hover-text);
+  transform: translateY(-1px);
+}
+.ui-btn--ghost { border-color: transparent; background: transparent; color: var(--vp-c-text-2); }
+.ui-btn--ghost:hover { border-color: var(--vp-c-divider); background: var(--vp-c-bg-soft); color: var(--vp-c-text-1); }
+.ui-btn--sm { padding: 0.3rem 0.75rem; font-size: var(--vp-ui-label-size); font-weight: 700; letter-spacing: var(--vp-ui-label-tracking); text-transform: uppercase; }
+.ui-btn--icon { width: 2rem; height: 1.7rem; padding: 0; border-radius: var(--vp-ui-radius); font-size: 12px; }
+.ui-btn--block { width: 100%; }
+
+/* A panel: the bordered, rounded surface the support card and the figures use. */
+.ui-card {
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--vp-ui-radius);
+  background: var(--vp-c-bg-soft);
+}
+
+/* A rule with air above and below it, which every footer here drew by hand. */
+.ui-separator { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--vp-c-divider); }
+
+/* The primitives, inside the prose.
+ *
+ * `.vp-doc a` is (0,1,1) and paints every link brand-coloured with an
+ * underline; `.ui-badge` is (0,1,0) and loses, so a chip rendered inside a
+ * page came out as a link wearing a pill. These are the same recipes at a
+ * specificity that reaches into the document, which is where most of them are
+ * used.
+ *
+ * Written as an override block rather than `!important` on the recipe, so a
+ * page that needs to say something else still can. */
+.vp-doc a.ui-badge { color: var(--vp-c-text-2); text-decoration: none; }
+.vp-doc a.ui-badge--muted { color: var(--vp-c-text-3); }
+.vp-doc a.ui-badge--solid { color: var(--vp-c-brand-1); }
+.vp-doc a.ui-badge:hover { color: var(--vp-c-brand-1); }
+.vp-doc a.ui-btn { color: var(--vp-button-alt-text); text-decoration: none; }
+.vp-doc a.ui-btn--brand { color: var(--vp-button-brand-text); }
+.vp-doc a.ui-btn--ghost { color: var(--vp-c-text-2); }
+.vp-doc a.ui-btn:hover { color: var(--vp-button-alt-hover-text); }
+.vp-doc a.ui-btn--brand:hover { color: var(--vp-button-brand-hover-text); }

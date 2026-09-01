@@ -96,7 +96,7 @@ const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2,
 <template>
   <section class="browse">
     <h1 class="browse__title">{{ asTitle(spoken) }}</h1>
-    <p class="browse__count">
+    <p class="ui-label browse__count">
       {{ all.length > shown.length ? showing : fill(t.all, all.length) }}
     </p>
 
@@ -123,7 +123,7 @@ const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2,
           decoding="async"
         />
         <div class="browse__words">
-          <p class="browse__kind">
+          <p class="ui-label browse__kind">
             {{ frame.kind === 'video' ? data.ui[lang].video : data.ui[lang].photo
             }}<template v-if="frame.seconds"> · {{ clock(frame.seconds) }}</template>
           </p>
@@ -135,9 +135,9 @@ const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2,
       </li>
     </ul>
 
-    <nav v-if="narrower.length" class="browse__narrower" :aria-label="t.narrower">
-      <span class="browse__lead">{{ t.narrower }}</span>
-      <a v-for="n in narrower" :key="n.path" :href="n.path">{{ n.name }}<span>{{ n.n }}</span></a>
+    <nav v-if="narrower.length" class="browse__narrower ui-separator" :aria-label="t.narrower">
+      <span class="ui-label browse__lead">{{ t.narrower }}</span>
+      <UiBadge v-for="n in narrower" :key="n.path" :href="n.path" :count="n.n">{{ n.name }}</UiBadge>
     </nav>
   </section>
 </template>
@@ -152,15 +152,8 @@ const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2,
   line-height: 1.1;
   text-wrap: balance;
 }
-.browse__count {
-  margin: 0 0 1.6rem;
-  color: var(--vp-c-text-3);
-  font-size: 11px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+/* Type comes from `.ui-label`; only the spacing is this component's. */
+.browse__count { margin: 0 0 1.6rem; }
 /* A listing is pictures, so the pictures get the width.
  *
  * This was a one-column list with a 7.5rem thumbnail beside the caption,
@@ -202,15 +195,7 @@ const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2,
   background: var(--vp-c-bg-soft);
 }
 .browse__words { min-width: 0; }
-.browse__kind {
-  margin: 0 0 0.2rem;
-  color: var(--vp-c-text-3);
-  font-size: 11px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+.browse__kind { margin: 0 0 0.2rem; }
 /* Clamped, so one long caption cannot push its whole row down and leave the
    tiles beside it floating in space. The full text stays in the title. */
 .browse__caption {
@@ -225,39 +210,17 @@ const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2,
   text-wrap: pretty;
 }
 
+/* Spacing and the rule come from `.ui-separator`. */
 .browse__narrower {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: baseline;
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--vp-c-divider);
 }
-.browse__lead {
-  margin-right: 0.25rem;
-  color: var(--vp-c-text-3);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.browse__narrower a {
-  display: inline-flex;
-  gap: 0.4rem;
-  align-items: baseline;
-  padding: 0.3rem 0.75rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  color: var(--vp-c-text-2);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.browse__narrower a span { color: var(--vp-c-text-3); font-variant-numeric: tabular-nums; }
-.browse__narrower a:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+/* The chips are `.ui-badge` now, and the lead is `.ui-label`; what is left
+   here is where they sit, which is this component's business and not the
+   primitive's. */
+.browse__lead { margin-right: 0.25rem; }
 
 /* No breakpoint here on purpose. `auto-fill` already answers every width
    between a 320px phone and the doc column, so there is nothing to keep in

@@ -140,7 +140,7 @@ const position = (i: number) =>
         </div>
 
         <div class="hero__words">
-          <p class="hero__eyebrow">
+          <p class="ui-label hero__eyebrow">
             <span class="hero__count">{{ position(i) }}</span>
             {{ slide.frame.kind === 'video' ? t.video : t.photo
             }}<template v-if="slide.frame.seconds"> · {{ clock(slide.frame.seconds) }}</template>
@@ -219,17 +219,7 @@ const position = (i: number) =>
 }
 
 .hero__words { min-width: 0; }
-.hero__eyebrow {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  margin: 0 0 0.35rem;
-  color: var(--vp-c-text-3);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+.hero__eyebrow { display: flex; align-items: baseline; gap: 0.5rem; margin: 0 0 0.35rem; }
 .hero__count { color: var(--vp-c-brand-1); font-variant-numeric: tabular-nums; }
 
 /* The title keeps whatever size its level gives it — that is the whole point

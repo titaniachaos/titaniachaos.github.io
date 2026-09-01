@@ -81,10 +81,17 @@ whose words still say `TODO`, so a half-finished record cannot slip out.
 
 ## What is in each frame
 
-Every imported frame that has somebody other than Titania in it says so, in
-`consentOwed`, in its own words — "a child, clearly identifiable", "about a
-dozen workshop participants", "a musician in the background". Of the 81 drafts,
-**45 record another person** and 36 are Titania alone.
+Every frame that has somebody other than Titania in it says so, in
+`othersInFrame`, in its own words — "a child, clearly identifiable", "about a
+dozen workshop participants", "a musician in the background". Of the 139 frames
+in the archive, **52 record another person**, and every build prints all 52.
+
+A frame may also carry `heldBack`, which is a reason rather than an unfinished
+record: `draft: true` on its own means the words are unwritten, while
+`heldBack` means somebody decided this one does not go out — another artist's
+work, another organisation's mark, or the archive owner's own refusal. Those
+are printed separately, because "still a draft" reads as unfinished and these
+are not.
 
 That field is not a verdict. It is a note of what a person would see, written
 down so that the decision to publish is made by someone who can weigh it

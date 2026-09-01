@@ -36,8 +36,9 @@ const run = promisify(execFile)
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const DATA = join(ROOT, 'docs/.vitepress/media.data.ts')
 const SEO = join(ROOT, 'docs/.vitepress/seo.ts')
-// The vocabulary lives here, not in media.data.ts: the loader, the three
-// [category].paths.ts files, the navigation and the components all import it.
+// The vocabulary lives here, not in media.data.ts: the loader, the navigation
+// and the components all import it. (It also fed the generated category pages,
+// until those were removed.)
 const TAXONOMY = join(ROOT, 'docs/.vitepress/categories.ts')
 const LOCALES = { en: 'docs', bg: 'docs/bg', de: 'docs/de' }
 

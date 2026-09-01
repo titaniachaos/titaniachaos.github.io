@@ -644,8 +644,6 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'dressing-room',
-    draft: true,
-    heldBack: 'Rejected from website use by the archive owner.',
     focus: 'right top',
     kind: 'photo',
     tags: ['portrait', 'stage', 'solitude'],
@@ -662,8 +660,6 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'harbour-bollard',
-    draft: true,
-    heldBack: 'Rejected from website use by the archive owner.',
     focus: 'centre',
     kind: 'photo',
     tags: ['portrait', 'street', 'solitude'],
@@ -833,7 +829,7 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-0468',
     draft: true,
-    heldBack: 'Rejected from website use by the archive owner.',
+    heldBack: 'the same photograph as a-c6ab823a-6d6e-48cd-8dba-d3c2f158e590, which was here first and is already published — not a question of approval, only of showing one picture once',
     kind: 'photo',
     tags: ['portrait', 'solitude'],
     alt: { en: 'Titania Chaos in a turquoise high-collared dress with a red nose, standing quietly against a pale wall', bg: 'Титания Хаос с тюркоазена рокля с висока яка и червен нос, застанала тихо до светла стена', de: 'Titania Chaos in türkisem Kleid mit hohem Kragen und roter Nase, still vor einer hellen Wand' },
@@ -878,8 +874,6 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-0825',
-    draft: true,
-    heldBack: 'Rejected from website use by the archive owner.',
     kind: 'photo',
     tags: ['street', 'portrait', 'props'],
     alt: { en: 'Selfie of Titania Chaos in a navy jacket with gold braid in front of a bronze monument whose figures have been given red noses too', bg: 'Селфи на Титания Хаос с тъмносиньо сако със златни ширити пред бронзов паметник, чиито фигури също са с червени носове', de: 'Selfie von Titania Chaos in marineblauer Jacke mit Goldlitze vor einem Bronzedenkmal, dessen Figuren ebenfalls rote Nasen tragen' },
@@ -966,8 +960,6 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-1474',
-    draft: true,
-    heldBack: 'Rejected from website use by the archive owner.',
     kind: 'photo',
     tags: ['street', 'portrait'],
     othersInFrame: 'two men, clearly identifiable',
@@ -1075,12 +1067,11 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-4187',
-    draft: true,
-    heldBack: 'a sports field, a sash and people this archive cannot name — the occasion is not recorded anywhere, and a photograph nobody can caption honestly should not be published',
     kind: 'photo',
-    tags: ['street', 'solitude'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    tags: ['street', 'performance'],
+    othersInFrame: 'a second person, clearly identifiable, walking beside her',
+    alt: { en: 'Titania Chaos in a red nose, sunglasses and a green-and-red sash beside another woman at a football pitch, a Bulgarian flag hung on the fence behind them', bg: 'Титания Хаос с червен нос, слънчеви очила и зелено-червен шарф до друга жена на футболно игрище, с българско знаме, окачено на оградата зад тях', de: 'Titania Chaos mit roter Nase, Sonnenbrille und grün-roter Schärpe neben einer anderen Frau auf einem Fußballplatz, dahinter eine bulgarische Fahne am Zaun' },
+    caption: { en: 'A Bulgarian flag on a Viennese fence, and a clown who came for the football.', bg: 'Българско знаме на виенска ограда и клоун, дошъл заради футбола.', de: 'Eine bulgarische Fahne an einem Wiener Zaun und ein Clown, der wegen des Fußballs gekommen ist.' }
   },
   {
     id: 'a-img-4367',
@@ -1147,12 +1138,10 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-7052',
-    draft: true,
-    heldBack: 'Rejected from website use by the archive owner.',
     kind: 'photo',
     tags: ['street', 'portrait'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    alt: { en: 'Titania Chaos in a teal hooded jacket and dark cap, leaning against an ivy-covered wall beneath a hand-painted banner reading “Safe abortion is a human right”', bg: 'Титания Хаос с тюркоазено яке с качулка и тъмна шапка, облегната на обрасла с бръшлян стена под ръчно изписан транспарант „Безопасният аборт е човешко право“', de: 'Titania Chaos in türkisfarbener Kapuzenjacke und dunkler Mütze, an eine efeubewachsene Wand gelehnt, unter einem handgemalten Transparent mit der Aufschrift „Sicherer Schwangerschaftsabbruch ist ein Menschenrecht“' },
+    caption: { en: 'No costume, no nose. Some things she stands under as herself.', bg: 'Без костюм, без нос. Под някои неща застава като себе си.', de: 'Kein Kostüm, keine Nase. Unter manchem steht sie als sie selbst.' }
   },
   {
     id: 'a-img-7217',
@@ -1165,8 +1154,6 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-7288',
-    draft: true,
-    heldBack: 'Rejected from website use by the archive owner.',
     kind: 'photo',
     tags: ['stage', 'performance'],
     othersInFrame: 'a fellow performer, clearly identifiable',

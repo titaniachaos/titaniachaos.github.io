@@ -28,8 +28,16 @@ export async function context() {
 /** Every frame in FRAMES, with the fields this needs. */
 export async function frames() {
   const source = await readFile(join(ROOT, 'docs/.vitepress/media.data.ts'), 'utf8')
+  // Only the FRAMES array. The block-shaped match below says "an object with an
+  // id", and the reviewed translation table further down the file is now
+  // exactly that shape too -- so without this bound it read as 28 extra frames,
+  // and the archive came back with 167 records and every b- frame in it twice.
+  const catalogue = source.slice(
+    source.indexOf('const FRAMES'),
+    source.indexOf('const AUGUST_2026_MEDIA')
+  )
   const out = []
-  for (const block of source.matchAll(/\{\s*\n\s{4}id: '([a-z0-9-]+)',[\s\S]*?\n\s{2}\}/g)) {
+  for (const block of catalogue.matchAll(/\{\s*\n\s{4}id: '([a-z0-9-]+)',[\s\S]*?\n\s{2}\}/g)) {
     const body = block[0]
     const three = (field) => {
       // Up to the closing brace, wherever it is. The old pattern required the
@@ -59,10 +67,26 @@ export async function frames() {
   // table after the generated records. Apply that table here too: this parser
   // intentionally reads source rather than executing the Vite data loader.
   const reviewed = source.match(
-    /const AUGUST_2026_MEDIA:[\s\S]*?= \[([\s\S]*?)\n\]\n\nfor \(const \[id, en, bg, de, othersInFrame\]/
+    /const AUGUST_2026_MEDIA:[\s\S]*?= \[([\s\S]*?)\n\]\n\nfor \(const \{ id, alt, caption, othersInFrame \}/
   )?.[1] ?? ''
-  for (const row of reviewed.matchAll(/\['([^']+)', '((?:[^'\\]|\\.)*)', '((?:[^'\\]|\\.)*)', '((?:[^'\\]|\\.)*)'(?:, '((?:[^'\\]|\\.)*)')?\]/g)) {
-    const frame = out.find((item) => item.id === row[1])
+  // The table is objects, not tuples, because alt and caption are two fields
+  // now. When it was a tuple this parser matched the row shape AND the loop's
+  // destructuring, so changing the table in media.data.ts left this reading an
+  // empty string and silently un-publishing all 28 frames for every tool that
+  // asks here. Anchoring on the loop is what caught it; keep it anchored.
+  const strings = (block, field) => {
+    const found = new RegExp(`${field}: \\[([^\\]]*)\\]`).exec(block)?.[1] ?? ''
+    return [...found.matchAll(/'((?:[^'\\]|\\.)*)'/g)].map((m) => m[1].replace(/\\'/g, "'"))
+  }
+  for (const block of reviewed.split(/\n  \},?/)) {
+    const id = /id: '([^']+)'/.exec(block)?.[1]
+    if (!id) continue
+    const alt = strings(block, 'alt')
+    const caption = strings(block, 'caption')
+    const others = /othersInFrame: '((?:[^'\\]|\\.)*)'/.exec(block)?.[1]
+    if (alt.length !== 3 || caption.length !== 3) continue
+    const row = [null, id, ...alt, others]
+    const frame = out.find((item) => item.id === id)
     if (!frame) continue
     // Held back stays held back. media.data.ts keeps this rule at the same
     // point in its own loop; the two must agree, because this parser reads the
@@ -71,8 +95,13 @@ export async function frames() {
     // duplicate was published by this table for the tools that read it here.
     if (frame.heldBack) continue
     frame.draft = false
-    frame.alt = frame.caption = { en: row[2], bg: row[3], de: row[4] }
-    if (row[5]) frame.othersInFrame = row[5]
+    // Two objects, not one assigned twice. `frame.alt = frame.caption = {...}`
+    // is how the archive ended up with 27 published frames whose alt text was
+    // its caption -- and worse, the same object, so a change to one changed
+    // both.
+    frame.alt = { en: alt[0], bg: alt[1], de: alt[2] }
+    frame.caption = { en: caption[0], bg: caption[1], de: caption[2] }
+    if (others) frame.othersInFrame = others
   }
   return out
 }

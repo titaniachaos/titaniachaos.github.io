@@ -1793,38 +1793,397 @@ const FRAMES: Frame[] = [
 // Media imported from the August 2026 archive. Keeping the descriptions here
 // beside the generated records makes the import auditable while publishing the
 // frames in all three site languages.
-const AUGUST_2026_MEDIA: Array<[string, string, string, string, string?]> = [
-  ['b-img-1464', 'Titania Chaos in a red costume smiling in a crowded street parade', 'Титания Хаос в червен костюм се усмихва сред улично шествие', 'Titania Chaos lächelt im roten Kostüm inmitten eines Straßenumzugs', 'people in a street-parade crowd'],
-  ['b-img-1421', 'Titania Chaos twirling a broad green patterned skirt during a street parade', 'Титания Хаос завърта широка зелена шарена пола по време на улично шествие', 'Titania Chaos wirbelt bei einem Straßenumzug einen breiten grün gemusterten Rock', 'people in a street-parade crowd'],
-  ['b-img-1463', 'Black-and-white street portrait of Titania Chaos in costume among parade spectators', 'Черно-бял уличен портрет на Титания Хаос в костюм сред зрители на шествие', 'Schwarzweißes Straßenporträt von Titania Chaos im Kostüm unter Zuschauenden', 'people in a street-parade crowd'],
-  ['b-img-1420', 'Titania Chaos high-fiving a spectator while moving through a street parade', 'Титания Хаос дава пет на зрител по време на улично шествие', 'Titania Chaos gibt einer Person beim Straßenumzug ein High Five', 'spectators at a street parade'],
-  ['b-img-1462', 'Titania Chaos posing in a red costume on a busy parade street', 'Титания Хаос позира в червен костюм на оживена улица по време на шествие', 'Titania Chaos posiert im roten Kostüm auf einer belebten Umzugsstraße', 'people in a street-parade crowd'],
-  ['b-img-3748', 'Titania Chaos kneeling onstage beside a wooden puppet and fellow performers', 'Титания Хаос коленичи на сцената до дървена кукла и други артисти', 'Titania Chaos kniet auf der Bühne neben einer Holzpuppe und weiteren Spielenden', 'fellow performers on stage'],
-  ['b-img-7189', 'Titania Chaos seated in front of a microphone during a radio appearance', 'Титания Хаос седи пред микрофон по време на радио участие', 'Titania Chaos sitzt bei einem Radioauftritt vor einem Mikrofon'],
-  ['b-img-3806', 'Titania Chaos makes a playful quiet gesture to children and adults in a workshop', 'Титания Хаос приканва за тишина деца и възрастни по време на работилница', 'Titania Chaos bittet Kinder und Erwachsene in einem Workshop spielerisch um Ruhe', 'children and adults in a workshop'],
-  ['b-parade-portrait', 'Titania Chaos in red costume and clown nose turns toward the camera in a parade crowd', 'Титания Хаос в червен костюм и с клоунски нос се обръща към камерата сред шествие', 'Titania Chaos im roten Kostüm und mit Clownsnase blickt inmitten eines Umzugs zur Kamera', 'people in a street-parade crowd'],
-  ['b-dsc02596', 'Titania Chaos performing onstage in a red dress with bright yellow sleeves', 'Титания Хаос играе на сцена в червена рокля с яркожълти ръкави', 'Titania Chaos spielt auf der Bühne in einem roten Kleid mit leuchtend gelben Ärmeln'],
-  ['b-img-7549', 'Titania Chaos balances a red juggling club upright on her nose', 'Титания Хаос балансира червена жонгльорска бухалка върху носа си', 'Titania Chaos balanciert eine rote Jonglierkeule auf ihrer Nase'],
-  ['b-img-3750', 'Titania Chaos performs from an upper balcony with a long decorated rope prop', 'Титания Хаос играе от горен балкон с дълго украсено въже', 'Titania Chaos spielt von einem oberen Balkon mit einem langen geschmückten Seil'],
-  ['b-img-1424', 'Titania Chaos gestures to the parade crowd with a giant puppet behind her', 'Титания Хаос жестикулира към публиката на шествието, а зад нея има гигантска кукла', 'Titania Chaos gestikuliert zur Umzugsmenge, hinter ihr eine riesige Puppe', 'people in a parade crowd'],
-  ['b-img-1466', 'Titania Chaos performs in red costume while walking through a crowded street parade', 'Титания Хаос играе в червен костюм сред многолюдно улично шествие', 'Titania Chaos spielt im roten Kostüm in einem belebten Straßenumzug', 'people in a street-parade crowd'],
-  ['b-img-1465', 'Black-and-white portrait of Titania Chaos walking through a street crowd', 'Черно-бял портрет на Титания Хаос сред улична тълпа', 'Schwarzweißes Porträt von Titania Chaos in einer Straßenmenge', 'people in a street crowd'],
-  ['b-img-1422', 'Close-up of Titania Chaos interacting with a child and a colourful toy in the street', 'Близък план на Титания Хаос с дете и цветна играчка на улицата', 'Nahaufnahme von Titania Chaos mit einem Kind und buntem Spielzeug auf der Straße', 'a child at a public street event'],
-  ['b-img-4998', 'Titania Chaos rehearses movement in a studio wearing pink patterned overalls', 'Титания Хаос репетира движение в студио с розов шарен гащеризон', 'Titania Chaos probt Bewegung im Studio in einer rosa gemusterten Latzhose'],
-  ['b-img-2046', 'A camera moves through an empty graffiti-covered playground and performance yard', 'Камерата преминава през празна площадка с графити и сценичен двор', 'Die Kamera bewegt sich durch einen leeren, graffitibedeckten Spiel- und Auftrittshof'],
-  ['b-img-8531', 'Titania Chaos gestures during an outdoor performance on a wooden platform', 'Титания Хаос жестикулира по време на представление върху дървена платформа на открито', 'Titania Chaos gestikuliert bei einem Auftritt auf einer Holzplattform im Freien'],
-  ['b-img-7614', 'Titania Chaos performs onstage among brightly coloured fabric props', 'Титания Хаос играе на сцена сред яркоцветни платнени реквизити', 'Titania Chaos spielt auf der Bühne zwischen farbenfrohen Stoffrequisiten'],
-  ['b-img-5213', 'Titania Chaos performs in red among families at an outdoor festival', 'Титания Хаос играе в червено сред семейства на фестивал на открито', 'Titania Chaos spielt in Rot zwischen Familien bei einem Festival im Freien', 'children and adults at an outdoor festival'],
-  ['b-img-2755', 'Titania Chaos in a pale blue dress speaks through a megaphone beside a brick wall', 'Титания Хаос в светлосиня рокля говори с мегафон до тухлена стена', 'Titania Chaos spricht im hellblauen Kleid durch ein Megafon neben einer Backsteinwand'],
-  ['b-img-1816', 'Backstage selfie of Titania Chaos in a dark dress, white lace collar and red nose', 'Задкулисно селфи на Титания Хаос с тъмна рокля, бяла дантелена яка и червен нос', 'Backstage-Selfie von Titania Chaos im dunklen Kleid mit weißem Spitzenkragen und roter Nase'],
-  ['b-img-6401', 'Titania Chaos crouches beside a van wheel to inspect or repair it', 'Титания Хаос е приклекнала до колело на бус, за да го огледа или поправи', 'Titania Chaos hockt neben einem Kleinbus-Rad, um es zu prüfen oder zu reparieren'],
-  ['b-img-6436', 'Titania Chaos moves along an outdoor stage beside a seated family audience', 'Титания Хаос се движи по сцена на открито до седнала семейна публика', 'Titania Chaos bewegt sich über eine Freiluftbühne neben sitzendem Familienpublikum', 'children and adults in the audience'],
-  ['b-img-7960', 'Titania Chaos sings or speaks into a microphone during a street performance', 'Титания Хаос пее или говори в микрофон по време на улично представление', 'Titania Chaos singt oder spricht bei einem Straßenauftritt ins Mikrofon'],
-  ['b-img-6558', 'A performer leaps over crouching children during an outdoor show', 'Артист прескача приклекнали деца по време на представление на открито', 'Ein Künstler springt bei einer Freiluftvorstellung über hockende Kinder', 'a fellow performer and children in the audience'],
-  ['b-img-3107', 'Titania Chaos shares an outdoor stage with a singer during a live performance', 'Титания Хаос споделя сцена на открито с певец по време на живо представление', 'Titania Chaos steht bei einem Live-Auftritt mit einem Sänger auf einer Freiluftbühne', 'a fellow performer on stage']
+const AUGUST_2026_MEDIA: Array<{
+  id: string
+  /** What someone who cannot see it needs to know, in en/bg/de. */
+  alt: [string, string, string]
+  /** What someone who can see it might not know. Never the alt again. */
+  caption: [string, string, string]
+  othersInFrame?: string
+}> = [
+  {
+    id: 'b-img-1464',
+    alt: [
+      'Titania Chaos in a red costume smiling in a crowded street parade',
+      'Титания Хаос в червен костюм се усмихва сред улично шествие',
+      'Titania Chaos lächelt im roten Kostüm inmitten eines Straßenumzugs'
+    ],
+    caption: [
+      'The crowd is behind a barrier and the clown is not. That is most of the job.',
+      'Публиката е зад ограда, клоунът не е. Това е по-голямата част от работата.',
+      'Das Publikum steht hinter der Absperrung, der Clown nicht. Das ist der größte Teil der Arbeit.'
+    ],
+    othersInFrame: 'people in a street-parade crowd'
+  },
+  {
+    id: 'b-img-1421',
+    alt: [
+      'Titania Chaos twirling a broad green patterned skirt during a street parade',
+      'Титания Хаос завърта широка зелена шарена пола по време на улично шествие',
+      'Titania Chaos wirbelt bei einem Straßenumzug einen breiten grün gemusterten Rock'
+    ],
+    caption: [
+      'A skirt with enough cloth in it to furnish a room, opened in the middle of the road.',
+      'Пола с толкова плат, че да обзаведе стая, разтворена насред улицата.',
+      'Ein Rock mit genug Stoff für ein ganzes Zimmer, mitten auf der Straße geöffnet.'
+    ],
+    othersInFrame: 'people in a street-parade crowd'
+  },
+  {
+    id: 'b-img-1463',
+    alt: [
+      'Black-and-white street portrait of Titania Chaos in costume among parade spectators',
+      'Черно-бял уличен портрет на Титания Хаос в костюм сред зрители на шествие',
+      'Schwarzweißes Straßenporträt von Titania Chaos im Kostüm unter Zuschauenden'
+    ],
+    caption: [
+      'Black and white takes the costume away and leaves the grin.',
+      'Черно-бялото отнема костюма и оставя усмивката.',
+      'Schwarzweiß nimmt das Kostüm weg und lässt das Grinsen.'
+    ],
+    othersInFrame: 'people in a street-parade crowd'
+  },
+  {
+    id: 'b-img-1420',
+    alt: [
+      'Titania Chaos high-fiving a spectator while moving through a street parade',
+      'Титания Хаос дава пет на зрител по време на улично шествие',
+      'Titania Chaos gibt einer Person beim Straßenumzug ein High Five'
+    ],
+    caption: [
+      'Four strangers behind a railing, and every hand already knows what to do.',
+      'Четирима непознати зад парапет и всяка ръка вече знае какво да прави.',
+      'Vier Fremde hinter einem Geländer, und jede Hand weiß schon, was zu tun ist.'
+    ],
+    othersInFrame: 'spectators at a street parade'
+  },
+  {
+    id: 'b-img-1462',
+    alt: [
+      'Titania Chaos posing in a red costume on a busy parade street',
+      'Титания Хаос позира в червен костюм на оживена улица по време на шествие',
+      'Titania Chaos posiert im roten Kostüm auf einer belebten Umzugsstraße'
+    ],
+    caption: [
+      'The glasses are hers. Everything else belongs to the character, and the nose settles it.',
+      'Очилата са нейни. Всичко останало е на образа, а носът решава спора.',
+      'Die Brille gehört ihr. Alles andere gehört der Figur, und die Nase entscheidet.'
+    ],
+    othersInFrame: 'people in a street-parade crowd'
+  },
+  {
+    id: 'b-img-3748',
+    alt: [
+      'Titania Chaos kneeling onstage beside a wooden puppet and fellow performers',
+      'Титания Хаос коленичи на сцената до дървена кукла и други артисти',
+      'Titania Chaos kniet auf der Bühne neben einer Holzpuppe und weiteren Spielenden'
+    ],
+    caption: [
+      'Titania Chaos kneeling onstage beside a wooden puppet and fellow performers',
+      'Титания Хаос коленичи на сцената до дървена кукла и други артисти',
+      'Titania Chaos kniet auf der Bühne neben einer Holzpuppe und weiteren Spielenden'
+    ],
+    othersInFrame: 'fellow performers on stage'
+  },
+  {
+    id: 'b-img-7189',
+    alt: [
+      'Titania Chaos seated in front of a microphone during a radio appearance',
+      'Титания Хаос седи пред микрофон по време на радио участие',
+      'Titania Chaos sitzt bei einem Radioauftritt vor einem Mikrofon'
+    ],
+    caption: [
+      'Radio: the one room where the nose would have been no help at all.',
+      'Радио — единствената стая, в която носът нямаше да помогне с нищо.',
+      'Radio — der einzige Raum, in dem die Nase überhaupt nichts genützt hätte.'
+    ]
+  },
+  {
+    id: 'b-img-3806',
+    alt: [
+      'Titania Chaos makes a playful quiet gesture to children and adults in a workshop',
+      'Титания Хаос приканва за тишина деца и възрастни по време на работилница',
+      'Titania Chaos bittet Kinder und Erwachsene in einem Workshop spielerisch um Ruhe'
+    ],
+    caption: [
+      'One finger, and a room full of children goes quiet to find out why.',
+      'Един пръст — и стая, пълна с деца, млъква, за да разбере защо.',
+      'Ein Finger, und ein Raum voller Kinder wird still, um herauszufinden, warum.'
+    ],
+    othersInFrame: 'children and adults in a workshop'
+  },
+  {
+    id: 'b-parade-portrait',
+    alt: [
+      'Titania Chaos in red costume and clown nose turns toward the camera in a parade crowd',
+      'Титания Хаос в червен костюм и с клоунски нос се обръща към камерата сред шествие',
+      'Titania Chaos im roten Kostüm und mit Clownsnase blickt inmitten eines Umzugs zur Kamera'
+    ],
+    caption: [
+      'Turned to the camera for exactly as long as that took.',
+      'Обърната към камерата точно толкова, колкото това отне.',
+      'Der Kamera zugewandt, genau so lange wie es dauerte.'
+    ],
+    othersInFrame: 'people in a street-parade crowd'
+  },
+  {
+    id: 'b-dsc02596',
+    alt: [
+      'Titania Chaos performing onstage in a red dress with bright yellow sleeves',
+      'Титания Хаос играе на сцена в червена рокля с яркожълти ръкави',
+      'Titania Chaos spielt auf der Bühne in einem roten Kleid mit leuchtend gelben Ärmeln'
+    ],
+    caption: [
+      'A dark stage, a red dress, and somebody else\'s striped legs waiting at the edge of it.',
+      'Тъмна сцена, червена рокля и нечии чужди раирани крака, които чакат в края ѝ.',
+      'Dunkle Bühne, rotes Kleid, und jemandes gestreifte Beine, die am Rand warten.'
+    ]
+  },
+  {
+    id: 'b-img-7549',
+    alt: [
+      'Titania Chaos balances a red juggling club upright on her nose',
+      'Титания Хаос балансира червена жонгльорска бухалка върху носа си',
+      'Titania Chaos balanciert eine rote Jonglierkeule auf ihrer Nase'
+    ],
+    caption: [
+      'Balancing is mostly standing still and letting the club do the deciding.',
+      'Балансирането е главно да стоиш неподвижно и да оставиш бухалката да решава.',
+      'Balancieren heißt meist stillstehen und die Keule entscheiden lassen.'
+    ]
+  },
+  {
+    id: 'b-img-3750',
+    alt: [
+      'Titania Chaos performs from an upper balcony with a long decorated rope prop',
+      'Титания Хаос играе от горен балкон с дълго украсено въже',
+      'Titania Chaos spielt von einem oberen Balkon mit einem langen geschmückten Seil'
+    ],
+    caption: [
+      'The rope goes down to the floor, which is where the audience is, which is the point.',
+      'Въжето слиза до пода, където е публиката — там е и смисълът.',
+      'Das Seil führt hinunter zum Boden, wo das Publikum ist, und darum geht es.'
+    ]
+  },
+  {
+    id: 'b-img-1424',
+    alt: [
+      'Titania Chaos gestures to the parade crowd with a giant puppet behind her',
+      'Титания Хаос жестикулира към публиката на шествието, а зад нея има гигантска кукла',
+      'Titania Chaos gestikuliert zur Umzugsmenge, hinter ihr eine riesige Puppe'
+    ],
+    caption: [
+      'Upstaged by a giant in a tie, and waving anyway.',
+      'Засенчена от гигант с вратовръзка — и въпреки това маха.',
+      'Von einem Riesen mit Krawatte überstrahlt, und winkt trotzdem.'
+    ],
+    othersInFrame: 'people in a parade crowd'
+  },
+  {
+    id: 'b-img-1466',
+    alt: [
+      'Titania Chaos performs in red costume while walking through a crowded street parade',
+      'Титания Хаос играе в червен костюм сред многолюдно улично шествие',
+      'Titania Chaos spielt im roten Kostüm in einem belebten Straßenumzug'
+    ],
+    caption: [
+      'A parade is a corridor of strangers, and each one is briefly a partner.',
+      'Шествието е коридор от непознати и всеки от тях за миг е партньор.',
+      'Ein Umzug ist ein Korridor aus Fremden, und jeder davon ist kurz ein Partner.'
+    ],
+    othersInFrame: 'people in a street-parade crowd'
+  },
+  {
+    id: 'b-img-1465',
+    alt: [
+      'Black-and-white portrait of Titania Chaos walking through a street crowd',
+      'Черно-бял портрет на Титания Хаос сред улична тълпа',
+      'Schwarzweißes Porträt von Titania Chaos in einer Straßenmenge'
+    ],
+    caption: [
+      'The eyes are doing the work; the crowd behind them has gone soft.',
+      'Работят очите; тълпата зад тях е омекнала.',
+      'Die Augen machen die Arbeit; die Menge dahinter ist weich geworden.'
+    ],
+    othersInFrame: 'people in a street crowd'
+  },
+  {
+    id: 'b-img-1422',
+    alt: [
+      'Close-up of Titania Chaos interacting with a child and a colourful toy in the street',
+      'Близък план на Титания Хаос с дете и цветна играчка на улицата',
+      'Nahaufnahme von Titania Chaos mit einem Kind und buntem Spielzeug auf der Straße'
+    ],
+    caption: [
+      'The bubbles came out of a plastic dolphin and nobody present objected.',
+      'Балончетата излизаха от пластмасов делфин и никой от присъстващите не възрази.',
+      'Die Seifenblasen kamen aus einem Plastikdelfin, und niemand hatte etwas dagegen.'
+    ],
+    othersInFrame: 'a child at a public street event'
+  },
+  {
+    id: 'b-img-4998',
+    alt: [
+      'Titania Chaos rehearses movement in a studio wearing pink patterned overalls',
+      'Титания Хаос репетира движение в студио с розов шарен гащеризон',
+      'Titania Chaos probt Bewegung im Studio in einer rosa gemusterten Latzhose'
+    ],
+    caption: [
+      'Arms open to an empty rehearsal room, which is the hardest audience there is.',
+      'Разтворени ръце към празна репетиционна зала — най-трудната публика.',
+      'Arme geöffnet zu einem leeren Probenraum, dem schwersten Publikum überhaupt.'
+    ]
+  },
+  {
+    id: 'b-img-2046',
+    alt: [
+      'A camera moves through an empty graffiti-covered playground and performance yard',
+      'Камерата преминава през празна площадка с графити и сценичен двор',
+      'Die Kamera bewegt sich durch einen leeren, graffitibedeckten Spiel- und Auftrittshof'
+    ],
+    caption: [
+      'An empty playground after rain, and something invisible to hold back.',
+      'Празна детска площадка след дъжд и нещо невидимо, което да удържиш.',
+      'Ein leerer Spielplatz nach dem Regen, und etwas Unsichtbares zum Aufhalten.'
+    ]
+  },
+  {
+    id: 'b-img-8531',
+    alt: [
+      'Titania Chaos gestures during an outdoor performance on a wooden platform',
+      'Титания Хаос жестикулира по време на представление върху дървена платформа на открито',
+      'Titania Chaos gestikuliert bei einem Auftritt auf einer Holzplattform im Freien'
+    ],
+    caption: [
+      'Barefoot on stacked timber, in the corner of the park nobody had claimed yet.',
+      'Боса върху струпани греди, в ъгъла на парка, който още никой не беше заел.',
+      'Barfuß auf gestapelten Balken, in der Ecke des Parks, die noch niemand beansprucht hatte.'
+    ]
+  },
+  {
+    id: 'b-img-7614',
+    alt: [
+      'Titania Chaos performs onstage among brightly coloured fabric props',
+      'Титания Хаос играе на сцена сред яркоцветни платнени реквизити',
+      'Titania Chaos spielt auf der Bühne zwischen farbenfrohen Stoffrequisiten'
+    ],
+    caption: [
+      'The cloth is up, and everything now depends on where it comes down.',
+      'Платът е горе и всичко вече зависи от това къде ще падне.',
+      'Das Tuch ist oben, und jetzt hängt alles davon ab, wo es landet.'
+    ]
+  },
+  {
+    id: 'b-img-5213',
+    alt: [
+      'Titania Chaos performs in red among families at an outdoor festival',
+      'Титания Хаос играе в червено сред семейства на фестивал на открито',
+      'Titania Chaos spielt in Rot zwischen Familien bei einem Festival im Freien'
+    ],
+    caption: [
+      'A microphone at a festival, and a field that has not decided to listen yet.',
+      'Микрофон на фестивал и поле, което още не е решило да слуша.',
+      'Ein Mikrofon auf einem Festival, und ein Feld, das sich noch nicht entschieden hat zuzuhören.'
+    ],
+    othersInFrame: 'children and adults at an outdoor festival'
+  },
+  {
+    id: 'b-img-2755',
+    alt: [
+      'Titania Chaos in a pale blue dress speaks through a megaphone beside a brick wall',
+      'Титания Хаос в светлосиня рокля говори с мегафон до тухлена стена',
+      'Titania Chaos spricht im hellblauen Kleid durch ein Megafon neben einer Backsteinwand'
+    ],
+    caption: [
+      'A long green dress, a bridge, and a microphone leading nowhere in particular.',
+      'Дълга зелена рокля, мост и микрофон, който не води доникъде конкретно.',
+      'Ein langes grünes Kleid, eine Brücke und ein Mikrofon, das nirgendwohin führt.'
+    ]
+  },
+  {
+    id: 'b-img-1816',
+    alt: [
+      'Backstage selfie of Titania Chaos in a dark dress, white lace collar and red nose',
+      'Задкулисно селфи на Титания Хаос с тъмна рокля, бяла дантелена яка и червен нос',
+      'Backstage-Selfie von Titania Chaos im dunklen Kleid mit weißem Spitzenkragen und roter Nase'
+    ],
+    caption: [
+      'A lace collar, a red nose, and a room that has gone dark behind them.',
+      'Дантелена яка, червен нос и стая, която е потънала в тъмнина зад тях.',
+      'Ein Spitzenkragen, eine rote Nase und ein Raum, der dahinter dunkel geworden ist.'
+    ]
+  },
+  {
+    id: 'b-img-6401',
+    alt: [
+      'Titania Chaos crouches beside a van wheel to inspect or repair it',
+      'Титания Хаос е приклекнала до колело на бус, за да го огледа или поправи',
+      'Titania Chaos hockt neben einem Kleinbus-Rad, um es zu prüfen oder zu reparieren'
+    ],
+    caption: [
+      'The van is up on a jack, and the show is not going to wait for it.',
+      'Бусът е вдигнат на крик, а представлението няма да го чака.',
+      'Der Bus steht auf dem Wagenheber, und die Vorstellung wird nicht auf ihn warten.'
+    ]
+  },
+  {
+    id: 'b-img-6436',
+    alt: [
+      'Titania Chaos moves along an outdoor stage beside a seated family audience',
+      'Титания Хаос се движи по сцена на открито до седнала семейна публика',
+      'Titania Chaos bewegt sich über eine Freiluftbühne neben sitzendem Familienpublikum'
+    ],
+    caption: [
+      'A whole kerb of hands went up at once, and there is only one of her.',
+      'Цял тротоар ръце се вдигна наведнъж, а тя е една.',
+      'Ein ganzer Randstein voller Hände ging auf einmal hoch, und es gibt nur eine von ihr.'
+    ],
+    othersInFrame: 'children and adults in the audience'
+  },
+  {
+    id: 'b-img-7960',
+    alt: [
+      'Titania Chaos sings or speaks into a microphone during a street performance',
+      'Титания Хаос пее или говори в микрофон по време на улично представление',
+      'Titania Chaos singt oder spricht bei einem Straßenauftritt ins Mikrofon'
+    ],
+    caption: [
+      'Singing to a square that holds one person on a bench, who has not looked up.',
+      'Пее на площад, в който има един човек на пейка — и той не е вдигнал поглед.',
+      'Singt einem Platz vor, auf dem eine Person auf der Bank sitzt und nicht aufgesehen hat.'
+    ]
+  },
+  {
+    id: 'b-img-6558',
+    alt: [
+      'A performer leaps over crouching children during an outdoor show',
+      'Артист прескача приклекнали деца по време на представление на открито',
+      'Ein Künstler springt bei einer Freiluftvorstellung über hockende Kinder'
+    ],
+    caption: [
+      'The adults are face down in the road playing the game. The children are the audience now.',
+      'Възрастните са по лице на пътя и играят. Публиката вече са децата.',
+      'Die Erwachsenen liegen bäuchlings auf der Straße und spielen. Jetzt sind die Kinder das Publikum.'
+    ],
+    othersInFrame: 'a fellow performer and children in the audience'
+  },
+  {
+    id: 'b-img-3107',
+    alt: [
+      'Titania Chaos shares an outdoor stage with a singer during a live performance',
+      'Титания Хаос споделя сцена на открито с певец по време на живо представление',
+      'Titania Chaos steht bei einem Live-Auftritt mit einem Sänger auf einer Freiluftbühne'
+    ],
+    caption: [
+      'A stage built for a band, with one clown standing in the middle of it.',
+      'Сцена, направена за група, и един клоун, застанал в средата ѝ.',
+      'Eine Bühne für eine Band, und ein Clown steht mittendrin.'
+    ],
+    othersInFrame: 'a fellow performer on stage'
+  }
 ]
 
-for (const [id, en, bg, de, othersInFrame] of AUGUST_2026_MEDIA) {
+for (const { id, alt, caption, othersInFrame } of AUGUST_2026_MEDIA) {
   const frame = FRAMES.find((item) => item.id === id)
   if (!frame) throw new Error(`August 2026 media record missing: ${id}`)
   // A frame held back on purpose stays held back. This table exists to give
@@ -1833,8 +2192,14 @@ for (const [id, en, bg, de, othersInFrame] of AUGUST_2026_MEDIA) {
   // here and the decision is silently undone.
   if (frame.heldBack) continue
   delete frame.draft
-  frame.alt = { en, bg, de }
-  frame.caption = { en, bg, de }
+  // Alt and caption are separate fields because they are separate jobs. This
+  // table used to carry one description per language and assign it to both,
+  // which gave 27 published frames an alt identical to its caption: a screen
+  // reader heard the description twice, and a sighted reader got a label where
+  // the rest of the archive has a remark. It was not 27 mistakes, it was this
+  // one line.
+  frame.alt = { en: alt[0], bg: alt[1], de: alt[2] }
+  frame.caption = { en: caption[0], bg: caption[1], de: caption[2] }
   if (othersInFrame) frame.othersInFrame = othersInFrame
 }
 

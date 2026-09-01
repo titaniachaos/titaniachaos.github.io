@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { readFile, readdir } from 'node:fs/promises'
 import { join } from 'node:path'
+import { frames as catalogue, vocabulary as readVocabulary } from './lib/media-meta.mjs'
 
 const [config, seo, css, en, bg, de] = await Promise.all([
   readFile('docs/.vitepress/config.mts', 'utf8'),
@@ -45,13 +46,11 @@ for (const token of [
 // The vocabulary lives in categories.ts, which the loader and media
 // components import. It remains useful even though there is no public gallery.
 const taxonomy = await readFile('docs/.vitepress/categories.ts', 'utf8')
-const vocabulary = [...(taxonomy.match(/export const TAGS = \[([\s\S]*?)\] as const/)?.[1] ?? '')
-  .matchAll(/'([a-z-]+)'/g)].map((m) => m[1])
+const vocabulary = await readVocabulary()
 
 if (vocabulary.length === 0) problems.push('could not read the tag vocabulary from categories.ts')
 
-const frameIds = [...(await readFile('docs/.vitepress/media.data.ts', 'utf8'))
-  .matchAll(/^\s{4}id: '([a-z0-9-]+)',$/gm)].map((m) => m[1])
+const frameIds = (await catalogue()).map((f) => f.id)
 
 const pages = new Map() // page name -> locale -> { hero, figures[] }
 for (const locale of ['', 'bg', 'de']) {

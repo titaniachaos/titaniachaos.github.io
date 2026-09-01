@@ -30,6 +30,7 @@ import { promisify } from 'node:util'
 import { join, dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createInterface } from 'node:readline'
+import { frames as readFrames, vocabulary } from '../scripts/lib/media-meta.mjs'
 
 const run = promisify(execFile)
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -62,26 +63,25 @@ async function origin() {
 
 // ---- reading the catalogue -------------------------------------------------
 
+// One reader for the archive, shared with the checks and the derivation.
+//
+// This carried its own parser, and its caption regex required the brace and
+// the `en:` on separate lines -- so the day the ledger gained entries written
+// on one line, this tool began reporting `caption: undefined` for 80 of 139
+// frames and said nothing. A parser per tool is a bug per tool.
 async function catalogue() {
-  const src = await readFile(DATA, 'utf8')
-  const taxonomy = await readFile(TAXONOMY, 'utf8')
-  const tags = [...(taxonomy.match(/export const TAGS = \[([\s\S]*?)\] as const/)?.[1] ?? '')
-    .matchAll(/'([a-z-]+)'/g)].map((m) => m[1])
+  const tags = await vocabulary()
   if (tags.length === 0) throw new Error(`could not read the tag vocabulary from ${TAXONOMY}`)
-
-  const frames = []
-  for (const block of src.matchAll(/\{\s*\n\s{4}id: '([a-z0-9-]+)',[\s\S]*?\n\s{2}\}/g)) {
-    const body = block[0]
-    frames.push({
-      id: block[1],
-      kind: /kind: 'video'/.test(body) ? 'video' : 'photo',
-      tags: [...(body.match(/tags: \[([^\]]*)\]/)?.[1] ?? '').matchAll(/'([a-z-]+)'/g)].map((m) => m[1]),
-      seconds: Number(body.match(/seconds: (\d+)/)?.[1]) || undefined,
-      source: body.match(/source: '([a-z]+)'/)?.[1] ?? 'archive',
-      othersInFrame: body.match(/othersInFrame: '([^']*)'/)?.[1],
-      caption: body.match(/caption: \{\s*\n\s*en: '((?:[^'\\]|\\.)*)'/)?.[1]
-    })
-  }
+  const frames = (await readFrames()).map((f) => ({
+    id: f.id,
+    kind: f.kind,
+    tags: f.tags,
+    seconds: f.seconds,
+    source: f.source ?? 'archive',
+    draft: f.draft,
+    othersInFrame: f.othersInFrame,
+    caption: f.caption?.en
+  }))
   return { tags, frames }
 }
 

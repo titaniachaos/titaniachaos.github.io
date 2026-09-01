@@ -70,6 +70,31 @@ export async function frames() {
   return out
 }
 
+/**
+ * The closed tag vocabulary, read from the one module that declares it.
+ *
+ * check-ecosystem and the MCP server each carried their own copy of this
+ * regex. Three readers of one list is three chances to disagree with it.
+ */
+export async function vocabulary() {
+  const source = await readFile(join(ROOT, 'docs/.vitepress/categories.ts'), 'utf8')
+  const block = /export const TAGS = \[([\s\S]*?)\] as const/.exec(source)?.[1] ?? ''
+  return [...block.matchAll(/'([a-z-]+)'/g)].map((m) => m[1])
+}
+
+/** Where a frame's derivatives live. The one place that knows the shape. */
+export const DERIVED = 'images/media'
+
+/**
+ * The files a frame becomes: the prose picture, the square tile, and the film
+ * if it is one. Seven files built these paths by hand from the same
+ * convention, which is a convention nobody can change.
+ */
+export function derived(frame) {
+  const base = `${DERIVED}/${frame.id}`
+  return { wide: `${base}.webp`, tile: `${base}-s.webp`, ...(frame.seconds ? { film: `${base}.mp4` } : {}) }
+}
+
 export const xmlEscape = (s) =>
   String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 

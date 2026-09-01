@@ -24,6 +24,7 @@
 import { readdir, readFile, stat } from 'node:fs/promises'
 import { join, relative, extname, basename } from 'node:path'
 import { dimensions } from './lib/image-size.mjs'
+import { frames as catalogue } from './lib/media-meta.mjs'
 
 const publicDir = process.argv[2] ?? 'docs/public'
 const distDir = process.argv[3] ?? 'docs/.vitepress/dist'
@@ -131,8 +132,10 @@ const rendered_html = built.filter((f) => f.endsWith('.html'))
 let pages = ''
 for (const f of rendered_html) pages += await readFile(f, 'utf8')
 
-const frames = [...(await readFile('docs/.vitepress/media.data.ts', 'utf8').catch(() => ''))
-  .matchAll(/^\s{4}id: '([a-z0-9-]+)',$/gm)].map((m) => m[1])
+// One reader. This file used to carry its own copy of the id regex, which
+// meant the archive had four parsers and any of them could fall behind the
+// file's formatting -- as one did, shipping 75 frames with no alt text.
+const frames = (await catalogue().catch(() => [])).map((f) => f.id)
 
 if (frames.length) {
   // Both derivatives count as rendered: prose and the hero use `<id>.webp`,

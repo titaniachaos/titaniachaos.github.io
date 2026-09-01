@@ -90,7 +90,7 @@ export function spaceOf(positions) {
  * an address out of a link — or an old one, or a mistyped one — needs somewhere
  * to land. Walking forward is deterministic: the same wrong address sends
  * everybody to the same right one. It gives up rather than scanning the whole
- * space, which is 10^32 long.
+ * space, which is 10^29 long.
  */
 export function nearest(address, positions, tries = 256) {
   const total = spaceOf(positions)
@@ -148,7 +148,7 @@ export function turn(address, positions, at, by = 1) {
 /**
  * A readable name for a number with thirty digits in it.
  *
- * `1.3 × 10^32` is a size a person can hold; the digits are not. The exact
+ * `1.33 × 10^29` is a size a person can hold; the digits are not. The exact
  * address is still shown, because that is the thing you can share.
  */
 export function magnitude(n) {

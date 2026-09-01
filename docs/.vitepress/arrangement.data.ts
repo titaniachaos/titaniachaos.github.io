@@ -40,7 +40,7 @@ export interface ArrangementData {
   positions: Position[]
   /** Decimal, because JSON has no bigint and this one has 32 digits. */
   space: string
-  /** `1.34 × 10^32`, for saying out loud. */
+  /** `1.33 × 10^29`, for saying out loud. */
   magnitude: string
 }
 

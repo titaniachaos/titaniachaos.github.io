@@ -111,7 +111,10 @@ const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2,
             {{ frame.kind === 'video' ? data.ui[lang].video : data.ui[lang].photo
             }}<template v-if="frame.seconds"> · {{ clock(frame.seconds) }}</template>
           </p>
-          <p class="browse__caption">{{ frame.caption[lang] }}</p>
+          <!-- `title` because the clamp can cut a caption that credits
+               somebody by name, and a truncated attribution is worse than a
+               long one. -->
+          <p class="browse__caption" :title="frame.caption[lang]">{{ frame.caption[lang] }}</p>
         </div>
       </li>
     </ul>
@@ -142,17 +145,37 @@ const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2,
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.browse__list { margin: 0; padding: 0; list-style: none; }
-.browse__item {
+/* A listing is pictures, so the pictures get the width.
+ *
+ * This was a one-column list with a 7.5rem thumbnail beside the caption,
+ * which gave the photograph 18% of the row on a desktop and 80px on a phone
+ * -- a gallery laid out like a bibliography. The grid is sized to the source
+ * rather than to taste: tiles are 160px squares, so columns want to land near
+ * that and never far above it.
+ *
+ * The track floor is clamped rather than fixed because one number cannot do
+ * both ends. A flat 8.5rem gives four 156px columns in the doc column and
+ * then collapses a 320px phone to a single 272px tile -- one blurry
+ * upscale of a 160px source per screenful. `clamp(7rem, 30%, 9rem)` reads the
+ * container instead: two columns at 128px on the narrowest phone, two at
+ * 163px on a normal one, four at 156px on a desktop. No breakpoint, so there
+ * is nothing here to keep in step with the other components.
+ */
+.browse__list {
   display: grid;
-  grid-template-columns: 7.5rem minmax(0, 1fr);
-  gap: 1.1rem;
-  align-items: start;
-  margin: 0 0 1.4rem;
-  padding-bottom: 1.4rem;
-  border-bottom: 1px solid var(--vp-c-divider);
+  grid-template-columns: repeat(auto-fill, minmax(clamp(7rem, 30%, 9rem), 1fr));
+  gap: 1.6rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.browse__item:last-child { border-bottom: 0; }
+.browse__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-width: 0;
+  margin: 0;
+}
 .browse__tile {
   width: 100%;
   height: auto;
@@ -172,7 +195,19 @@ const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2,
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.browse__caption { margin: 0; color: var(--vp-c-text-2); line-height: 1.5; text-wrap: pretty; }
+/* Clamped, so one long caption cannot push its whole row down and leave the
+   tiles beside it floating in space. The full text stays in the title. */
+.browse__caption {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin: 0;
+  color: var(--vp-c-text-2);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
 
 .browse__narrower {
   display: flex;
@@ -208,7 +243,7 @@ const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2,
 .browse__narrower a span { color: var(--vp-c-text-3); font-variant-numeric: tabular-nums; }
 .browse__narrower a:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
 
-@media (max-width: 560px) {
-  .browse__item { grid-template-columns: 5rem minmax(0, 1fr); gap: 0.8rem; }
-}
+/* No breakpoint here on purpose. `auto-fill` already answers every width
+   between a 320px phone and the doc column, so there is nothing to keep in
+   step with the other components' breakpoints. */
 </style>

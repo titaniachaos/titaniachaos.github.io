@@ -170,3 +170,31 @@
   .VPHomeHero .image-src { max-height: 320px; }
   .contact-button { width: 100%; text-align: center; }
 }
+
+/* The navigation needs more room than the theme gives it.
+
+   VitePress swaps the hamburger for the full menu at 768px. That fits its own
+   docs, whose nav is three short words; it does not fit seven items in three
+   languages. Measured on the built site, the bar needs 1000px in English and
+   1106px in German, so every page scrolled sideways in the whole 768-959 band
+   -- 338px of it on /de/ at 768, which is an iPad held upright.
+
+   It was not the browse menu that did this, though that made it worse: hiding
+   `Bilder` still left 257px of overflow. Seven destinations simply do not fit
+   at tablet width, and no shorter label fixes that.
+
+   So the seam moves to 960px, which is not a new number -- it is the width at
+   which VitePress's own layout stops being cramped, and where all three
+   languages measure clean. Below it the hamburger keeps every link one tap
+   away. The nav screen has to be freed too, or the hamburger would open onto
+   a menu the theme has already hidden.
+
+   `!important` because the theme's rules are scoped: they carry a
+   `[data-v-...]` attribute selector and outrank a plain class from here.
+   Without it the menu hides, the hamburger stays hidden too, and the band has
+   no navigation at all -- which is how the first attempt at this measured. */
+@media (min-width: 768px) and (max-width: 959.98px) {
+  .VPNavBarMenu.menu { display: none !important; }
+  .VPNavBarHamburger { display: flex !important; }
+  .VPNavScreen { display: block !important; }
+}

@@ -220,6 +220,51 @@ export const PER_PAGE = 24
 export const browsePath = (lang: Lang, ...words: string[]) =>
   `${lang === 'en' ? '' : `/${lang}`}/${[...new Set(words.flat())].sort().join('/')}`
 
+/** The words around the arrangement machine. */
+export const ARRANGEMENT_UI: Record<Lang, {
+  /** Before the size of the space. */
+  of: string
+  turn: string
+  back: string
+  address: string
+  /** The arrangement on screen names this number, checked both ways. */
+  exact: string
+  drifted: string
+  share: string
+  copied: string
+}> = {
+  en: {
+    of: 'One of',
+    turn: 'Turn this line',
+    back: 'Turn this line back',
+    address: 'Address',
+    exact: 'This number names this arrangement, and this arrangement names this number. Nothing is stored: the same address rebuilds the same page on any machine.',
+    drifted: 'This address is not an arrangement.',
+    share: 'Copy this address',
+    copied: 'Copied'
+  },
+  bg: {
+    of: 'Едно от',
+    turn: 'Завърти този ред',
+    back: 'Върни този ред',
+    address: 'Адрес',
+    exact: 'Това число назовава тази подредба, а подредбата назовава числото. Нищо не се съхранява: същият адрес възстановява същата страница на всяка машина.',
+    drifted: 'Този адрес не е подредба.',
+    share: 'Копирай адреса',
+    copied: 'Копирано'
+  },
+  de: {
+    of: 'Eine von',
+    turn: 'Diese Zeile weiterdrehen',
+    back: 'Diese Zeile zurückdrehen',
+    address: 'Adresse',
+    exact: 'Diese Zahl benennt diese Anordnung, und diese Anordnung benennt diese Zahl. Nichts wird gespeichert: dieselbe Adresse baut dieselbe Seite auf jedem Gerät wieder auf.',
+    drifted: 'Diese Adresse ist keine Anordnung.',
+    share: 'Adresse kopieren',
+    copied: 'Kopiert'
+  }
+}
+
 export const MISSING: Record<Lang, {
   /** `%1` is the question as it was asked. */
   asked: string

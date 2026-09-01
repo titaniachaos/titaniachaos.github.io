@@ -42,11 +42,24 @@ const browseWords = paths(browseState)
 
 const browseMenu = (lang: Lang) => ({
   text: BROWSE_LABEL[lang],
-  items: browseWords.map(({ word }) => ({
-    text: asTitle(TAG_NAMES[lang][word as keyof (typeof TAG_NAMES)[typeof lang]]),
-    link: `${lang === 'en' ? '' : '/' + lang}/${word}`
-  }))
+  items: [
+    ...browseWords.map(({ word }) => ({
+      text: asTitle(TAG_NAMES[lang][word as keyof (typeof TAG_NAMES)[typeof lang]]),
+      link: `${lang === 'en' ? '' : '/' + lang}/${word}`
+    })),
+    // The whole archive at once, bound like Queneau's sonnets. It sits under
+    // the pictures because that is what it arranges, and it is one link
+    // rather than 10^29: the address lives in the fragment.
+    { text: ARRANGEMENT_LABEL[lang], link: `${lang === 'en' ? '' : '/' + lang}/arrangement` }
+  ]
 })
+
+/** What the arrangement machine is called in the menu. */
+const ARRANGEMENT_LABEL: Record<Lang, string> = {
+  en: 'Arrangements',
+  bg: 'Подредби',
+  de: 'Anordnungen'
+}
 
 /** What the menu is called. Not a page title — nothing sits at the top of it. */
 const BROWSE_LABEL: Record<Lang, string> = {

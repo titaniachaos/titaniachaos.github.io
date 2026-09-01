@@ -8,11 +8,13 @@ import MediaFigure from './MediaFigure.vue'
 import BrowsePath from './BrowsePath.vue'
 import LocalePreference from './LocalePreference.vue'
 import NotFound from './NotFound.vue'
+import Arrangement from './Arrangement.vue'
 import './custom.css'
 
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
+    app.component('Arrangement', Arrangement)
     app.component('WorkshopDates', WorkshopDates)
     app.component('SocialWall', SocialWall)
     app.component('MediaHero', MediaHero)

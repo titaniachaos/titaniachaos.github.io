@@ -15,6 +15,7 @@ const props = withDefaults(
     variant?: 'alt' | 'brand' | 'ghost'
     size?: 'default' | 'sm' | 'icon'
     block?: boolean
+    disabled?: boolean
     type?: 'button' | 'submit'
   }>(),
   { variant: 'alt', size: 'default', type: 'button' }
@@ -24,11 +25,12 @@ const classes = computed(() => [
   'ui-btn',
   props.variant !== 'alt' && `ui-btn--${props.variant}`,
   props.size !== 'default' && `ui-btn--${props.size}`,
-  props.block && 'ui-btn--block'
+  props.block && 'ui-btn--block',
+  props.disabled && 'ui-btn--disabled'
 ])
 </script>
 
 <template>
   <a v-if="href" :href="href" :class="classes"><slot /></a>
-  <button v-else :type="type" :class="classes"><slot /></button>
+  <button v-else :type="type" :class="classes" :disabled="disabled"><slot /></button>
 </template>

@@ -35,8 +35,22 @@
 
 import { frames as catalogue, vocabulary } from './media-meta.mjs'
 
-/** Below this a path is a page with one picture on it, which is not a page. */
-export const ENOUGH = 3
+/**
+ * How many frames a question needs before it gets a page of its own.
+ *
+ * One. It was three, on the reasoning that a page with one picture is not a
+ * page -- and that is a judgement about which pages are worth pre-rendering,
+ * not about which addresses are worth answering. The 48 questions below the
+ * line were answered by the 404 handler instead, and a 404 in this theme has
+ * no sidebar, no outline and a narrower container, so a real listing arrived
+ * wearing a different template. Measured on the workspace next door, where
+ * the same fault was visible: content at 256px against 336px, no aside, no
+ * `.VPDoc`.
+ *
+ * So every answerable question is a page, and the 404 is left for words the
+ * archive does not use. 90 questions rather than 42.
+ */
+export const ENOUGH = 1
 
 /**
  * How many frames one listing shows.

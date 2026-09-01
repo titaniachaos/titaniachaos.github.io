@@ -410,6 +410,13 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 .ui-btn--sm { padding: 0.3rem 0.75rem; font-size: var(--vp-ui-label-size); font-weight: 700; letter-spacing: var(--vp-ui-label-tracking); text-transform: uppercase; }
 .ui-btn--icon { width: 2rem; height: 1.7rem; padding: 0; border-radius: var(--vp-ui-radius); font-size: 12px; }
 .ui-btn--block { width: 100%; }
+/* A button with nowhere to go. Kept legible rather than greyed to nothing:
+   this marks a question only one piece of writing ever answers, which is
+   information, not an error. */
+.ui-btn--disabled,
+.ui-btn:disabled { opacity: 0.4; cursor: default; }
+.ui-btn--disabled:hover,
+.ui-btn:disabled:hover { border-color: transparent; background: transparent; color: var(--vp-c-text-2); }
 
 /* A panel: the bordered, rounded surface the support card and the figures use. */
 .ui-card {

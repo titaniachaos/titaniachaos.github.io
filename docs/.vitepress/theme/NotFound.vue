@@ -53,8 +53,12 @@ const ready = ref(false)
 const carrying = (words: string[]) =>
   data.media.filter((m) => words.every((w) => m.tags.includes(w as Tag))).length
 
-/** The threshold the build uses. Below it a listing is not pre-rendered. */
-const ENOUGH = 3
+/**
+ * The threshold the build uses. It is one now, so every question the archive
+ * can answer is a real page and this component sees only two cases: a word the
+ * archive does not use, and a question whose page exists under another order.
+ */
+const ENOUGH = 1
 
 onMounted(() => {
   // `/de/portrait/street` -> ['portrait','street']. The language prefix is

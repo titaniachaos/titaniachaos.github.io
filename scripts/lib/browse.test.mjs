@@ -53,9 +53,26 @@ test('and together they reach every published frame', () => {
 })
 
 test('the space is bounded and small', () => {
+  // The bound that matters is the vocabulary, not the threshold. Thirteen
+  // words cannot make more than a couple of hundred answerable questions
+  // however low the bar goes, which is what keeps this a faceted index rather
+  // than a page generator.
   const all = paths(state, 1)
   assert.ok(all.length < 200, `${all.length} paths is more than a browse surface`)
-  assert.ok(paths(state).length < all.length, 'the threshold should exclude the thin ones')
+})
+
+test('every question the archive can answer has a page', () => {
+  // This used to assert the opposite -- that the threshold excluded the thin
+  // ones. It did, and they were answered by the 404 handler instead, which in
+  // this theme has no sidebar, no outline and a narrower container: a real
+  // listing arrived wearing a different template. Which pages are worth
+  // pre-rendering and which addresses are worth answering turned out to be
+  // two questions, and only the first one was ever about thinness.
+  assert.equal(
+    paths(state).length,
+    paths(state, 1).length,
+    'a question with something in it is not being built'
+  )
 })
 
 test('no path returns a draft or a held-back frame', () => {

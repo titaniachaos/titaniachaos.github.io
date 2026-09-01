@@ -75,7 +75,8 @@ const narrower = computed(() => {
   for (const word of Object.keys(names.value) as Tag[]) {
     if (want.value.includes(word) || want.value.length >= 3) continue
     const n = all.value.filter((m) => m.tags.includes(word)).length
-    if (n >= 3) {
+    // One is enough to be worth offering, because one is enough to be a page.
+    if (n >= 1) {
       out.push({ path: withBase(browsePath(lang.value, ...want.value, word)), name: names.value[word], n })
     }
   }

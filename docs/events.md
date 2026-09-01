@@ -29,7 +29,6 @@ My games come from social circus. We juggle, invent characters and play with bal
 ## What I bring
 
 <MediaFigure tags="balloons street" />
-<MediaFigure id="a-img-8734" />
 
 - The time-travelling camera, costumes and accessories
 - Circus games with movement, improvisation and teamwork

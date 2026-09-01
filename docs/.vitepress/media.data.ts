@@ -1,5 +1,5 @@
 import { defineLoader } from 'vitepress'
-import { readFile, readdir } from 'node:fs/promises'
+import { readFile, readdir, stat } from 'node:fs/promises'
 import { join } from 'node:path'
 import { dimensions } from '../../scripts/lib/image-size.mjs'
 import { LANGS, type Lang, type Localised } from './locale.ts'
@@ -1224,6 +1224,8 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-8734',
+    draft: true,
+    heldBack: 'the same photograph as balloon-garland, which was here first and is better named — the import re-added it under its filename, and both landed on /events, 123 KB for one picture twice',
     kind: 'photo',
     tags: ['balloons', 'street', 'props'],
     alt: { en: 'Titania Chaos in a yellow-green hat wearing a costume built from orange, purple, green and black balloons on a city street', bg: 'Титания Хаос с жълто-зелена шапка носи костюм от оранжеви, лилави, зелени и черни балони на градска улица', de: 'Titania Chaos mit gelbgrüner Mütze trägt ein Kostüm aus orangen, violetten, grünen und schwarzen Ballons auf einer Stadtstraße' },
@@ -2029,6 +2031,57 @@ function score(frame: Frame, asked: string[]): number {
 }
 
 /**
+ * Words long enough to mean something, in any of the three alphabets.
+ *
+ * Four letters and up, which drops `the`, `и`, `und`, `von`, `for` without a
+ * stopword list per language — a list this site would have to keep in three.
+ */
+const words = (text: string): string[] =>
+  [...String(text ?? '').toLowerCase().matchAll(/\p{L}{4,}/gu)].map((m) => m[0])
+
+/**
+ * How much a frame's own words have to do with the section it would sit in.
+ *
+ * The tags say what a section is about in fourteen words. The section itself
+ * says it in its heading and its first paragraph, and every frame says it in
+ * alt text and a caption written in the same three languages -- all of which
+ * was read at build time already and thrown away. Two frames that tie on tags
+ * used to be separated by their position in the array, which is to say by
+ * nothing: `banana-encore` and `stage-gown` both carry `performance stage`,
+ * and whichever was typed first won every time.
+ *
+ * A word only counts if it is rare enough to distinguish. `titania` is in
+ * almost every caption and separates nothing; `trampoline` appears once and
+ * separates everything. That is measured off the archive rather than declared,
+ * so it stays true as the archive grows and needs no list to maintain.
+ */
+function relevance(frame: Frame, place: { title: string; text: string }, lang: Lang, rare: Set<string>): number {
+  const asked = new Set(words(`${place.title} ${place.text}`).filter((w) => rare.has(w)))
+  if (asked.size === 0) return 0
+  const mine = new Set(words(`${frame.alt[lang]} ${frame.caption[lang]}`))
+  let shared = 0
+  for (const w of mine) if (asked.has(w)) shared++
+  return shared
+}
+
+/**
+ * The words worth matching on: those in fewer than two fifths of the frames.
+ *
+ * Computed once over the whole archive. A word carried by most of it says
+ * nothing about which frame belongs where.
+ */
+function discriminating(frames: Frame[], lang: Lang): Set<string> {
+  const seen = new Map<string, number>()
+  for (const frame of frames) {
+    for (const w of new Set(words(`${frame.alt[lang]} ${frame.caption[lang]}`))) {
+      seen.set(w, (seen.get(w) ?? 0) + 1)
+    }
+  }
+  const ceiling = Math.max(2, Math.floor(frames.length * 0.4))
+  return new Set([...seen].filter(([, n]) => n <= ceiling).map(([w]) => w))
+}
+
+/**
  * Frames synced from the Instagram and Facebook accounts by
  * scripts/feed-sync.mjs, if that has ever run here.
  *
@@ -2176,6 +2229,25 @@ export default defineLoader({
     const empty: string[] = []
     let total = 0
 
+    // What each frame costs the page that shows it. Every figure is charged
+    // against a 500 KB budget, and on this site that budget is nearly spent —
+    // so when two frames answer a section equally well, the cheaper one is the
+    // better answer. Read once, from the files already on disk.
+    const weight = new Map<string, number>()
+    for (const frame of all) {
+      if (frame.draft) continue
+      try {
+        weight.set(frame.id, (await stat(join(PUBLIC, `${DIR}/${frame.id}.webp`))).size)
+      } catch {
+        /* nothing derived yet; treated as weightless rather than fatal */
+      }
+    }
+
+    // The discriminating vocabulary, per language, measured off the archive
+    // once rather than per placement.
+    const rare: Record<string, Set<string>> = {}
+    for (const lang of LANGS) rare[lang] = discriminating(all, lang)
+
     for (const lang of LANGS) {
       const dir = lang === 'en' ? DOCS : join(DOCS, lang)
       // Subdirectories too: the journal lives in blog/, and a figure written
@@ -2214,6 +2286,19 @@ export default defineLoader({
           title: pageTitle
         }
 
+        // Named frames are reserved before anything is searched for.
+        //
+        // A scored query and an `id:` placement draw from the same pool, and
+        // the loop used to hand them out in document order — so a query high
+        // on the page could take the very frame a later figure named outright,
+        // and the build died with "b-img-4998 is already on this page". The
+        // page did nothing wrong. An explicit naming is a decision and a query
+        // is a question, so the decisions are settled first and the questions
+        // answered from what is left.
+        const reserved = new Set(
+          wanted.filter((p) => p.tags.startsWith('id:')).map((p) => p.tags.slice(3))
+        )
+
         for (const place of wanted) {
           // The lookup from component back to placement is by the tags string,
           // so two figures on a page may not ask for the same thing. They also
@@ -2227,6 +2312,13 @@ export default defineLoader({
           if (named) {
             const frame = all.find((f) => f.id === named)
             if (!frame) throw new Error(`${key}: MediaFigure id="${named}" — there is no such frame`)
+            if (frame.draft) {
+              throw new Error(
+                `${key}: MediaFigure id="${named}" names a frame that is not published` +
+                  (frame.heldBack ? ` — ${frame.heldBack}` : ' — its words are still TODO') +
+                  '. Naming it outright would render nothing at all.'
+              )
+            }
             if (takenFrames.has(named)) throw new Error(`${key}: ${named} is already on this page`)
             takenFrames.add(named)
             resolved.push({ ...place, id: named })
@@ -2252,13 +2344,37 @@ export default defineLoader({
           // and so does `stage-gown` -- so ordering alone buried every one of
           // them, permanently and invisibly. A site about a performer that
           // never shows her moving because of an array index is a bug.
+          // Then, on a tie, what the section is actually about. The film rule
+          // stays ahead of it because it corrects a real burial; the archive's
+          // own order falls to last, where it belongs — it was never a
+          // statement about anything.
           const best = all
-            .map((frame, order) => ({ frame, order, points: score(frame, asked) }))
-            .filter((r) => r.points > 0 && !takenFrames.has(r.frame.id))
+            .map((frame, order) => ({
+              frame,
+              order,
+              points: score(frame, asked),
+              fits: relevance(frame, place, lang, rare[lang])
+            }))
+            // Not a draft. A draft has no derived file on the page and no
+            // words yet, so when one won a query the figure rendered as
+            // nothing at all -- `portrait` on work-with-titania resolved to
+            // a-3bae0779b80bc772, a frame held back as somebody else's
+            // drawing, and that section simply had no picture. Silently, on a
+            // live page, because a blank figure looks like a section that was
+            // never given one.
+            .filter(
+              (r) =>
+                r.points > 0 &&
+                !r.frame.draft &&
+                !takenFrames.has(r.frame.id) &&
+                !reserved.has(r.frame.id)
+            )
             .sort(
               (a, b) =>
                 b.points - a.points ||
                 Number(b.frame.kind === 'video') - Number(a.frame.kind === 'video') ||
+                b.fits - a.fits ||
+                (weight.get(a.frame.id) ?? 0) - (weight.get(b.frame.id) ?? 0) ||
                 a.order - b.order
             )[0]
 

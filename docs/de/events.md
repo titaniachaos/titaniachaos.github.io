@@ -29,7 +29,6 @@ Meine Spiele stammen aus dem sozialen Zirkus. Wir jonglieren, erfinden Figuren u
 ## Was ich mitbringe
 
 <MediaFigure tags="balloons street" />
-<MediaFigure id="a-img-8734" />
 
 - Zeitreisekamera, Kostüme und Accessoires
 - Zirkusspiele mit Bewegung, Improvisation und Zusammenarbeit

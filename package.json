@@ -15,6 +15,8 @@
     "check:weight": "node scripts/check-page-weight.mjs",
     "check:links": "node scripts/check-external.mjs",
     "check": "npm run check:sources && npm run docs:build && npm run check:build",
+    "all": "npm test && npm run check",
+    "deployed": "node scripts/deployed.mjs",
     "prepare": "node scripts/install-hooks.mjs",
     "check:a11y": "node scripts/check-a11y.mjs",
     "check:topics": "node scripts/check-topics.mjs",

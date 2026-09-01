@@ -1,0 +1,26 @@
+#!/bin/sh
+# The last gate before a push becomes a deploy.
+#
+# pre-commit validates the working tree, and it can be skipped with
+# --no-verify, amended around, or simply not run on a machine where
+# `npm ci` was never done. What reaches the remote is what CI builds and what
+# the public gets, so it is checked once more here — against the tree as it
+# actually stands, tests included.
+#
+# `npm run check` is not enough on its own: it builds the site and validates
+# it, but until now it never ran the unit tests. A red test could reach the
+# remote through a green pre-commit. `npm run all` is both.
+#
+# Bypass once with:  git push --no-verify
+set -e
+
+root=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
+cd "$root"
+
+if [ ! -d node_modules ]; then
+  echo "pre-push: node_modules is missing — run 'npm ci' to enable the checks." >&2
+  exit 1
+fi
+
+echo "pre-push: npm run all (tests, then the full check)"
+npm run --silent all

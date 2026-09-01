@@ -19,6 +19,21 @@ import { HOSTNAME, LOCALES, splitLocale } from './seo.ts'
 /** The Clown project, served from a sub-path of this host. */
 const CLOWN = `${HOSTNAME}/clown/`
 
+/**
+ * Relative importance for sitemap consumers that still read the optional
+ * priority field. Google ignores it, but a truthful hierarchy is preferable
+ * to declaring every page equally important.
+ */
+function sitemapMeta(slug: string): Pick<SitemapItem, 'changefreq' | 'priority'> {
+  if (slug === '/') return { changefreq: 'weekly', priority: 1.0 }
+  if (slug === '/events' || slug === '/work-with-titania') {
+    return { changefreq: 'monthly', priority: 0.9 }
+  }
+  if (slug === '/about-titania') return { changefreq: 'yearly', priority: 0.7 }
+  if (slug === '/legal-data') return { changefreq: 'yearly', priority: 0.2 }
+  return { changefreq: 'monthly', priority: 0.5 }
+}
+
 // ---------------------------------------------------------------------------
 
 export interface SitemapItem {
@@ -71,7 +86,7 @@ const hreflang: Integration = {
         })
         // Search Console reads x-default from the sitemap as well as the head.
         if (known.has(slug)) links.push({ lang: 'x-default', url: `${HOSTNAME}${slug}` })
-        return { ...item, links, changefreq: 'monthly', priority: slug === '/' ? 1.0 : 0.7 }
+        return { ...item, links, ...sitemapMeta(slug) }
       })
     }
   }

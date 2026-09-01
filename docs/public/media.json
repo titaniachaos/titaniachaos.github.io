@@ -1,7 +1,7 @@
 {
   "origin": "https://titaniachaos.com",
   "rights": "© Tatiana Petkova (Titania Chaos). Photographs by Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, Konstantin Oberlik, Tatiana Petkova, Marion Scholz and Laurent Ziegler.",
-  "count": 128,
+  "count": 120,
   "media": [
     {
       "id": "workshop-mini-art",
@@ -785,28 +785,6 @@
       "othersInFrame": "passers-by, mostly legs and backs, one or two identifiable"
     },
     {
-      "id": "a-bf2c4943610a52c9",
-      "kind": "photo",
-      "tags": [
-        "juggling",
-        "street",
-        "props"
-      ],
-      "alt": {
-        "en": "Titania Chaos in a red dress catching a pink club on a cobbled square, with a child's hand reaching in from the edge",
-        "bg": "Титания Хаос в червена рокля хваща розова бухалка на калдъръмен площад, а от края посяга детска ръка",
-        "de": "Titania Chaos im roten Kleid fängt eine rosa Keule auf einem Kopfsteinpflasterplatz, vom Rand greift eine Kinderhand herein"
-      },
-      "caption": {
-        "en": "Juggling in the open air is an invitation nobody has to accept.",
-        "bg": "Жонглирането на открито е покана, която никой не е длъжен да приеме.",
-        "de": "Jonglieren im Freien ist eine Einladung, die niemand annehmen muss."
-      },
-      "url": "https://titaniachaos.com/images/media/a-bf2c4943610a52c9.webp",
-      "tile": "https://titaniachaos.com/images/media/a-bf2c4943610a52c9-s.webp",
-      "othersInFrame": "a child\\"
-    },
-    {
       "id": "a-e4384cfe78cdc552",
       "kind": "photo",
       "tags": [
@@ -1030,27 +1008,6 @@
       "othersInFrame": "about eight adults, clearly identifiable; one face was covered in the original"
     },
     {
-      "id": "a-img-1275",
-      "kind": "photo",
-      "tags": [
-        "juggling",
-        "street"
-      ],
-      "alt": {
-        "en": "Titania Chaos in a red dress mid-juggle with a pink club on a cobbled square",
-        "bg": "Титания Хаос в червена рокля жонглира с розова бухалка на калдъръмен площад",
-        "de": "Titania Chaos im roten Kleid jongliert mit einer rosa Keule auf einem Kopfsteinpflasterplatz"
-      },
-      "caption": {
-        "en": "Three objects and a square: the smallest complete apparatus there is.",
-        "bg": "Три предмета и площад: най-малкият пълен уред, който съществува.",
-        "de": "Drei Gegenstände und ein Platz: der kleinste vollständige Apparat, den es gibt."
-      },
-      "url": "https://titaniachaos.com/images/media/a-img-1275.webp",
-      "tile": "https://titaniachaos.com/images/media/a-img-1275-s.webp",
-      "othersInFrame": "an adult and a child at the edge of the frame"
-    },
-    {
       "id": "a-img-1320",
       "kind": "photo",
       "tags": [
@@ -1088,27 +1045,6 @@
       },
       "url": "https://titaniachaos.com/images/media/a-img-1353.webp",
       "tile": "https://titaniachaos.com/images/media/a-img-1353-s.webp"
-    },
-    {
-      "id": "a-img-1355",
-      "kind": "photo",
-      "tags": [
-        "street",
-        "performance"
-      ],
-      "alt": {
-        "en": "Titania Chaos in red at a stone parapet watching a fellow performer hold a handstand on the pavement",
-        "bg": "Титания Хаос в червено до каменен парапет гледа как друг артист прави стойка на ръце на тротоара",
-        "de": "Titania Chaos in Rot an einer Steinbrüstung sieht zu, wie ein Kollege auf dem Gehsteig einen Handstand hält"
-      },
-      "caption": {
-        "en": "Somebody has to be the one who watches, or nothing is being shown.",
-        "bg": "Някой трябва да е този, който гледа, иначе нищо не се показва.",
-        "de": "Jemand muss der sein, der zusieht, sonst wird nichts gezeigt."
-      },
-      "url": "https://titaniachaos.com/images/media/a-img-1355.webp",
-      "tile": "https://titaniachaos.com/images/media/a-img-1355-s.webp",
-      "othersInFrame": "a fellow performer, clearly identifiable, and passers-by"
     },
     {
       "id": "a-img-1366",
@@ -1466,25 +1402,6 @@
       "othersInFrame": "about fourteen participants, clearly identifiable"
     },
     {
-      "id": "a-img-4367",
-      "kind": "photo",
-      "tags": [
-        "solitude"
-      ],
-      "alt": {
-        "en": "The shadow of a standing figure with an antenna headpiece and both arms open, cast across a pale wall",
-        "bg": "Сянката на права фигура с антена на главата и разперени ръце, паднала върху светла стена",
-        "de": "Der Schatten einer stehenden Gestalt mit Antenne im Haar und offenen Armen auf einer hellen Wand"
-      },
-      "caption": {
-        "en": "The shadow does the gesture a moment late and better.",
-        "bg": "Сянката прави жеста миг по-късно и по-добре.",
-        "de": "Der Schatten macht die Geste einen Moment später und besser."
-      },
-      "url": "https://titaniachaos.com/images/media/a-img-4367.webp",
-      "tile": "https://titaniachaos.com/images/media/a-img-4367-s.webp"
-    },
-    {
       "id": "a-img-4503",
       "kind": "photo",
       "tags": [
@@ -1522,27 +1439,6 @@
       },
       "url": "https://titaniachaos.com/images/media/a-img-4690.webp",
       "tile": "https://titaniachaos.com/images/media/a-img-4690-s.webp"
-    },
-    {
-      "id": "a-img-5951",
-      "kind": "photo",
-      "tags": [
-        "camera",
-        "props",
-        "portrait"
-      ],
-      "alt": {
-        "en": "Titania Chaos in a pink headpiece beside the time-travelling camera, a large wooden plate camera on a tripod",
-        "bg": "Титания Хаос с розова украса за глава до пътуващата във времето камера — голям дървен фотоапарат на статив",
-        "de": "Titania Chaos mit rosa Kopfschmuck neben der Zeitreisekamera, einer großen hölzernen Plattenkamera auf einem Stativ"
-      },
-      "caption": {
-        "en": "The camera does not take the picture; it gives people a reason to pose.",
-        "bg": "Камерата не прави снимката; тя дава на хората повод да позират.",
-        "de": "Die Kamera macht das Bild nicht; sie gibt den Leuten einen Grund zu posieren."
-      },
-      "url": "https://titaniachaos.com/images/media/a-img-5951.webp",
-      "tile": "https://titaniachaos.com/images/media/a-img-5951-s.webp"
     },
     {
       "id": "a-img-6026",
@@ -1817,27 +1713,6 @@
       "othersInFrame": "about thirteen participants, clearly identifiable"
     },
     {
-      "id": "a-img-8734",
-      "kind": "photo",
-      "tags": [
-        "balloons",
-        "street",
-        "props"
-      ],
-      "alt": {
-        "en": "Titania Chaos in a yellow-green hat wearing a costume built from orange, purple, green and black balloons on a city street",
-        "bg": "Титания Хаос с жълто-зелена шапка носи костюм от оранжеви, лилави, зелени и черни балони на градска улица",
-        "de": "Titania Chaos mit gelbgrüner Mütze trägt ein Kostüm aus orangen, violetten, grünen und schwarzen Ballons auf einer Stadtstraße"
-      },
-      "caption": {
-        "en": "A shape the street has no category for is already half the joke.",
-        "bg": "Форма, за която улицата няма категория, вече е половината шега.",
-        "de": "Eine Form, für die die Straße keine Kategorie hat, ist schon der halbe Witz."
-      },
-      "url": "https://titaniachaos.com/images/media/a-img-8734.webp",
-      "tile": "https://titaniachaos.com/images/media/a-img-8734-s.webp"
-    },
-    {
       "id": "a-img-9003",
       "kind": "photo",
       "tags": [
@@ -1876,26 +1751,6 @@
       },
       "url": "https://titaniachaos.com/images/media/a-img-9614.webp",
       "tile": "https://titaniachaos.com/images/media/a-img-9614-s.webp"
-    },
-    {
-      "id": "a-img-9687",
-      "kind": "photo",
-      "tags": [
-        "portrait",
-        "street"
-      ],
-      "alt": {
-        "en": "Titania Chaos in a turquoise dress under a grey tweed coat, red nose on, outdoors",
-        "bg": "Титания Хаос с тюркоазена рокля под сиво туидено палто, с червен нос, навън",
-        "de": "Titania Chaos im türkisen Kleid unter grauem Tweedmantel, rote Nase, im Freien"
-      },
-      "caption": {
-        "en": "The coat is for the weather; the nose is not.",
-        "bg": "Палтото е заради времето; носът — не.",
-        "de": "Der Mantel ist wegen des Wetters; die Nase nicht."
-      },
-      "url": "https://titaniachaos.com/images/media/a-img-9687.webp",
-      "tile": "https://titaniachaos.com/images/media/a-img-9687-s.webp"
     },
     {
       "id": "a-img-9785",
@@ -2187,28 +2042,6 @@
       "url": "https://titaniachaos.com/images/media/b-img-1462.webp",
       "tile": "https://titaniachaos.com/images/media/b-img-1462-s.webp",
       "othersInFrame": "people in a street-parade crowd"
-    },
-    {
-      "id": "b-img-3748",
-      "kind": "photo",
-      "tags": [
-        "stage",
-        "performance",
-        "props"
-      ],
-      "alt": {
-        "en": "Titania Chaos kneeling onstage beside a wooden puppet and fellow performers",
-        "bg": "Титания Хаос коленичи на сцената до дървена кукла и други артисти",
-        "de": "Titania Chaos kniet auf der Bühne neben einer Holzpuppe und weiteren Spielenden"
-      },
-      "caption": {
-        "en": "Titania Chaos kneeling onstage beside a wooden puppet and fellow performers",
-        "bg": "Титания Хаос коленичи на сцената до дървена кукла и други артисти",
-        "de": "Titania Chaos kniet auf der Bühne neben einer Holzpuppe und weiteren Spielenden"
-      },
-      "url": "https://titaniachaos.com/images/media/b-img-3748.webp",
-      "tile": "https://titaniachaos.com/images/media/b-img-3748-s.webp",
-      "othersInFrame": "fellow performers on stage"
     },
     {
       "id": "b-img-7189",

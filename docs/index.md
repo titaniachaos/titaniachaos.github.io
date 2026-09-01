@@ -30,6 +30,9 @@ features:
 
 ## Clown workshop experiences
 
+The question underneath all of it is whether a clown can make a room *experience* solitude rather than watch it depicted — and whether the contact that makes an audience laugh is the same contact that lets a person be alone in front of them. That is worked out in the studio and [published as it goes](https://titaniachaos.com/clown/).
+
+
 <MediaFigure tags="workshop performance" />
 <MediaFigure id="b-img-4998" />
 

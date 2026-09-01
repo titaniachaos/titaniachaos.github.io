@@ -36,6 +36,8 @@ Die Kamera eignet sich besonders gut für Geburtstagsfeiern, Hochzeiten, Firmenv
 
 Team-Workshops für Firmen und Organisationen, die eine andere Art suchen, einander zu begegnen, zu spielen und zusammenzuarbeiten. Offene Workshops für Einzelpersonen finden Sie auf der [Startseite](/de/#practical-details).
 
+Die Arbeit beruht auf einer Studiomethode namens **Die Bedingung erzeugen**: die Situation herstellen und beobachten, was ein Körper darin tatsächlich tut, statt jemanden zu bitten, ein Gefühl zu spielen. Sie wird offen entwickelt — die [vier Phasen](https://titaniachaos.com/clown/de/studio-process), die [Fragen, von denen sie ausgeht](https://titaniachaos.com/clown/de/concept) und die [Lektüre dahinter](https://titaniachaos.com/clown/de/sources) sind veröffentlicht, so wie sie sind.
+
 [Workshops entdecken](/de/#practical-details){.contact-button}
 
 ## Lernen & Facilitation

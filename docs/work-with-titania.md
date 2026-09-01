@@ -36,6 +36,8 @@ The camera works particularly well at birthday parties, weddings, company events
 
 Team workshops for organisations looking for a different way to meet, play and work together. Open workshops for individuals are on the [home page](/#practical-details).
 
+The teaching rests on a studio method called **Create the Condition** — build the circumstance and watch what a body actually does in it, rather than ask anyone to act a feeling. It is worked out in the open, with its [four phases](https://titaniachaos.com/clown/studio-process), the [questions it starts from](https://titaniachaos.com/clown/concept) and the [reading behind it](https://titaniachaos.com/clown/sources) all published as they stand.
+
 [Explore workshops](/#practical-details){.contact-button}
 
 ## Learning & facilitation

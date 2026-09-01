@@ -30,6 +30,9 @@ features:
 
 ## Erfahrungen aus den Clown-Workshops
 
+Die Frage darunter lautet, ob ein Clown einen Raum das Alleinsein *erfahren* lassen kann, statt es vorzuführen — und ob der Kontakt, der ein Publikum zum Lachen bringt, derselbe ist, der einen Menschen vor ihm allein sein lässt. Das wird im Studio erarbeitet und [offen veröffentlicht](https://titaniachaos.com/clown/de/).
+
+
 <MediaFigure tags="workshop performance" />
 <MediaFigure id="b-img-4998" />
 

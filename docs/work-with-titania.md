@@ -53,7 +53,7 @@ Clowning, play and physical work can therefore also enter educational contexts â
 
 <MediaFigure tags="children birthday" />
 <MediaFigure id="b-img-6401" />
-<MediaFigure id="a-img-9687" />
+<MediaFigure id="wall-coat" />
 
 Titania works with children, families and community settings through clowning, play and social circus.
 

@@ -53,7 +53,7 @@ Clownerie, Spiel und körperliche Arbeit können daher auch in Bildungskontexte 
 
 <MediaFigure tags="children birthday" />
 <MediaFigure id="b-img-6401" />
-<MediaFigure id="a-img-9687" />
+<MediaFigure id="wall-coat" />
 
 Titania arbeitet mit Kindern, Familien und Gemeinschaften durch Clownerie, Spiel und sozialen Zirkus.
 

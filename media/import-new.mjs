@@ -120,6 +120,24 @@ for (const name of await readdir(join(ROOT, 'docs/public/images'))) {
   }
 }
 
+/**
+ * Two published frames that are the same photograph.
+ *
+ * The folder is guarded against importing a duplicate, and the archive was
+ * not: two batches each re-added pictures already held under better names, so
+ * `juggling-pass` was on /juggling three times as itself,
+ * a-bf2c4943610a52c9 and a-img-1275, and nothing said so for weeks. The
+ * fingerprints are already computed above; the comparison is free.
+ */
+const twins = []
+const live = known.filter((k) => !k.draft && !k.id.startsWith('images/'))
+for (let i = 0; i < live.length; i++) {
+  for (let j = i + 1; j < live.length; j++) {
+    const apart = distance(live[i].bits, live[j].bits)
+    if (apart <= 6) twins.push({ a: live[i].id, b: live[j].id, apart })
+  }
+}
+
 // ---- what is sitting in the folder -----------------------------------------
 
 const candidates = (await readdir(INBOX, { withFileTypes: true }))
@@ -180,7 +198,12 @@ if (close.length) {
   for (const c of close.slice(0, 10)) console.log(`    ${c.name} ~ ${c.id} (differs in ${c.d} of 64)`)
 }
 
-if (!fresh.length) {
+if (twins.length) {
+  console.log(`\n  ${twins.length} pair(s) of published frames are the same photograph:`)
+  for (const t of twins) console.log(`    ${t.a} = ${t.b}  (differ in ${t.apart} of 64)`)
+}
+
+if (!fresh.length && !twins.length) {
   console.log('\nnothing to import.')
   process.exit(0)
 }
@@ -188,6 +211,13 @@ if (!fresh.length) {
 // `--check` is the guard the build runs: media/ may not hold a picture the
 // archive has never seen. Dropping a file in and forgetting is exactly how 93
 // of them came to sit here referenced by nothing.
+if (CHECK && twins.length) {
+  console.error(`\nimport-new: ${twins.length} pair(s) of published frames are the same photograph:`)
+  for (const t of twins) console.error(`    ${t.a} = ${t.b}  (differ in ${t.apart} of 64)`)
+  console.error('\n  fix: hold one back with `heldBack`, naming the one that stays.')
+  process.exit(1)
+}
+
 if (CHECK) {
   console.error(`\nimport-new: ${fresh.length} file(s) in media/ are not in the archive:`)
   for (const f of fresh) console.error(`    ${f.name}`)

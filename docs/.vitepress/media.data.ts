@@ -785,6 +785,8 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-bf2c4943610a52c9',
+    draft: true,
+    heldBack: 'the same photograph as juggling-pass, re-added by an import under its archive hash',
     kind: 'photo',
     tags: ['juggling', 'street', 'props'],
     othersInFrame: 'a child\'s hand and an adult behind, partly identifiable',
@@ -900,6 +902,8 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-1275',
+    draft: true,
+    heldBack: 'the same photograph as juggling-pass again, a third copy under a third name',
     kind: 'photo',
     tags: ['juggling', 'street'],
     othersInFrame: 'an adult and a child at the edge of the frame',
@@ -922,6 +926,8 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-1355',
+    draft: true,
+    heldBack: 'the same photograph as a-06077ced0b10175c, imported twice from two folders',
     kind: 'photo',
     tags: ['street', 'performance'],
     othersInFrame: 'a fellow performer, clearly identifiable, and passers-by',
@@ -1078,6 +1084,8 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-4367',
+    draft: true,
+    heldBack: 'the same shadow as the frame named shadow, which was here first; a slightly different crop of one moment',
     kind: 'photo',
     tags: ['solitude'],
     alt: { en: 'The shadow of a standing figure with an antenna headpiece and both arms open, cast across a pale wall', bg: 'Сянката на права фигура с антена на главата и разперени ръце, паднала върху светла стена', de: 'Der Schatten einer stehenden Gestalt mit Antenne im Haar und offenen Armen auf einer hellen Wand' },
@@ -1100,6 +1108,8 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-5951',
+    draft: true,
+    heldBack: 'the same photograph as camera-portrait, which was here first and is named for what it is; this is the import under its filename',
     kind: 'photo',
     tags: ['camera', 'props', 'portrait'],
     alt: { en: 'Titania Chaos in a pink headpiece beside the time-travelling camera, a large wooden plate camera on a tripod', bg: 'Титания Хаос с розова украса за глава до пътуващата във времето камера — голям дървен фотоапарат на статив', de: 'Titania Chaos mit rosa Kopfschmuck neben der Zeitreisekamera, einer großen hölzernen Plattenkamera auf einem Stativ' },
@@ -1247,6 +1257,8 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-9687',
+    draft: true,
+    heldBack: 'the same photograph as wall-coat, a wider crop of it',
     kind: 'photo',
     tags: ['portrait', 'street'],
     alt: { en: 'Titania Chaos in a turquoise dress under a grey tweed coat, red nose on, outdoors', bg: 'Титания Хаос с тюркоазена рокля под сиво туидено палто, с червен нос, навън', de: 'Titania Chaos im türkisen Kleid unter grauem Tweedmantel, rote Nase, im Freien' },
@@ -1411,6 +1423,7 @@ const FRAMES: Frame[] = [
   {
     id: 'b-img-3748',
     draft: true,
+    heldBack: 'the same moment as a-aed9ec2ec09f7956, a second apart — the August batch re-added what an earlier one already held',
     kind: 'photo',
     tags: ['stage', 'performance', 'props'],
     alt: {
@@ -1827,6 +1840,11 @@ const AUGUST_2026_MEDIA: Array<[string, string, string, string, string?]> = [
 for (const [id, en, bg, de, othersInFrame] of AUGUST_2026_MEDIA) {
   const frame = FRAMES.find((item) => item.id === id)
   if (!frame) throw new Error(`August 2026 media record missing: ${id}`)
+  // A frame held back on purpose stays held back. This table exists to give
+  // the August import its words, and giving a frame its words is not a reason
+  // to publish it — without this line a `heldBack` on any b- frame is deleted
+  // here and the decision is silently undone.
+  if (frame.heldBack) continue
   delete frame.draft
   frame.alt = { en, bg, de }
   frame.caption = { en, bg, de }

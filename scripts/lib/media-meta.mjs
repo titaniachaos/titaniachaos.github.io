@@ -50,6 +50,7 @@ export async function frames() {
       creator: body.match(/creator: '([^']+)'/)?.[1],
       permalink: body.match(/permalink: '([^']+)'/)?.[1],
       othersInFrame: body.match(/othersInFrame: '([^']*)'/)?.[1],
+      heldBack: body.match(/heldBack: '((?:[^'\\]|\\.)*)'/)?.[1]?.replace(/\\'/g, "'"),
       alt: three('alt'),
       caption: three('caption')
     })
@@ -63,6 +64,12 @@ export async function frames() {
   for (const row of reviewed.matchAll(/\['([^']+)', '((?:[^'\\]|\\.)*)', '((?:[^'\\]|\\.)*)', '((?:[^'\\]|\\.)*)'(?:, '((?:[^'\\]|\\.)*)')?\]/g)) {
     const frame = out.find((item) => item.id === row[1])
     if (!frame) continue
+    // Held back stays held back. media.data.ts keeps this rule at the same
+    // point in its own loop; the two must agree, because this parser reads the
+    // source rather than running the loader, and a rule kept in one of them is
+    // a rule the other quietly breaks. It did: a frame held back as a
+    // duplicate was published by this table for the tools that read it here.
+    if (frame.heldBack) continue
     frame.draft = false
     frame.alt = frame.caption = { en: row[2], bg: row[3], de: row[4] }
     if (row[5]) frame.othersInFrame = row[5]

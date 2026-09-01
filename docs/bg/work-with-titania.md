@@ -53,7 +53,7 @@ description: Наемете клоун-артиста Титания Хаос в
 
 <MediaFigure tags="children birthday" />
 <MediaFigure id="b-img-6401" />
-<MediaFigure id="a-img-9687" />
+<MediaFigure id="wall-coat" />
 
 Титания работи с деца, семейства и общности чрез клоунада, игра и социален цирк.
 

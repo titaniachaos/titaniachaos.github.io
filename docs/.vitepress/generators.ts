@@ -1,4 +1,4 @@
-import { writeFile } from 'node:fs/promises'
+import { rename, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import type { SiteConfig } from 'vitepress'
 import { HOSTNAME, LOCALES, splitLocale } from './seo.ts'
@@ -85,7 +85,7 @@ const robots: Integration = {
   name: 'robots',
   hooks: {
     'build:done': ({ logger }) => {
-      const sitemaps = [`${HOSTNAME}/sitemap.xml`, `${CLOWN}sitemap.xml`]
+      const sitemaps = [`${HOSTNAME}/sitemap.xml`]
       logger.info(`announcing ${sitemaps.length} sitemaps`)
       return [
         {
@@ -97,9 +97,32 @@ const robots: Integration = {
   }
 }
 
+/**
+ * The root sitemap is an index so Search Console discovers the main site and
+ * the Clown subsite from one submitted URL. VitePress's generated URL set is
+ * retained as sitemap-main.xml and remains the source of the main-site URLs.
+ */
+const sitemapIndex: Integration = {
+  name: 'sitemap-index',
+  hooks: {
+    'build:done': ({ stamp, logger }) => {
+      const sitemaps = [`${HOSTNAME}/sitemap-main.xml`, `${CLOWN}sitemap.xml`]
+      logger.info(`indexing ${sitemaps.length} sitemaps`)
+      return [{
+        file: 'sitemap.xml',
+        body:
+          '<?xml version="1.0" encoding="UTF-8"?>\n' +
+          '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+          sitemaps.map((loc) => `  <sitemap><loc>${loc}</loc><lastmod>${stamp}</lastmod></sitemap>`).join('\n') +
+          '\n</sitemapindex>\n'
+      }]
+    }
+  }
+}
+
 // ---------------------------------------------------------------------------
 
-export const INTEGRATIONS: Integration[] = [hreflang, robots]
+export const INTEGRATIONS: Integration[] = [hreflang, sitemapIndex, robots]
 
 /** Wire into `sitemap.transformItems`. Each integration refines in turn. */
 export function runSitemapHooks(items: SitemapItem[]): SitemapItem[] {
@@ -113,6 +136,10 @@ export function runSitemapHooks(items: SitemapItem[]): SitemapItem[] {
 export async function runBuildHooks(siteConfig: SiteConfig): Promise<void> {
   const stamp = new Date().toISOString()
   const pages = siteConfig.pages.filter((p) => p !== '404.md')
+
+  // Preserve VitePress's URL set before sitemapIndex replaces the conventional
+  // root filename with the cross-site index.
+  await rename(join(siteConfig.outDir, 'sitemap.xml'), join(siteConfig.outDir, 'sitemap-main.xml'))
 
   for (const integration of INTEGRATIONS) {
     const hook = integration.hooks['build:done']

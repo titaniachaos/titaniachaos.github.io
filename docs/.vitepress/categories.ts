@@ -195,6 +195,46 @@ export const CATEGORY_UI: Record<Lang, {
  */
 export const PER_PAGE = 24
 
+/**
+ * The copy a browse listing needs, in each language.
+ *
+ * A path is a question in the vocabulary — `/portrait/street` — and the page
+ * answers it. The words in the URL stay English because they are the
+ * vocabulary's own; the heading uses each language's names for them.
+ */
+export const BROWSE_UI: Record<Lang, {
+  /** `%1` is the joined names of the words asked for. */
+  title: string
+  description: string
+  /** `%1` shown of `%2` found. */
+  showing: string
+  all: string
+  /** Above the narrower paths that lead out of this one. */
+  narrower: string
+}> = {
+  en: {
+    title: '%1',
+    description: 'Photographs and films of Vienna clown Titania Chaos: %1.',
+    showing: 'Showing %1 of %2',
+    all: 'All %1',
+    narrower: 'Narrower'
+  },
+  bg: {
+    title: '%1',
+    description: 'Снимки и филми на виенската клоунеса Титания Хаос: %1.',
+    showing: 'Показани %1 от %2',
+    all: 'Всички %1',
+    narrower: 'По-точно'
+  },
+  de: {
+    title: '%1',
+    description: 'Fotos und Filme der Wiener Clownin Titania Chaos: %1.',
+    showing: '%1 von %2 gezeigt',
+    all: 'Alle %1',
+    narrower: 'Enger'
+  }
+}
+
 export const fill = (template: string, value: string | number) => template.replace('%1', String(value))
 
 /**

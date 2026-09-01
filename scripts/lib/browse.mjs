@@ -39,6 +39,21 @@ import { frames as catalogue, vocabulary } from './media-meta.mjs'
 export const ENOUGH = 3
 
 /**
+ * How many frames one listing shows.
+ *
+ * `/portrait` answers with 56 and a page of 56 pictures is 400 KB of tiles
+ * against a 500 KB budget. Truncating is the obvious fix and the obvious fix
+ * loses frames: a flat cap of 24 leaves five of the 127 reachable from nowhere,
+ * which is the exact failure this whole surface exists to end.
+ *
+ * So the order is not arbitrary. Each listing leads with the frames that
+ * appear on the FEWEST other listings, and the tail it cuts is the frames you
+ * will meet again on a neighbouring path. At eighteen — at twelve, in fact —
+ * every one of the 127 is still reachable.
+ */
+export const SHOWN = 18
+
+/**
  * The archive as this asks about it: published frames, and the words that can
  * appear in a path.
  *
@@ -81,6 +96,22 @@ export function resolve(segments, shelfState) {
  * `TAGS` opens its paths on the next run and a word nothing carries opens
  * none. Thirteen words is 8191 subsets, which is nothing to enumerate.
  */
+/**
+ * The frames of one listing, rarest first.
+ *
+ * Rarity is counted over the listings themselves, so it answers "where else
+ * could somebody meet this picture?" rather than anything about the picture.
+ */
+export function ordered(found, shelfState, min = ENOUGH) {
+  const appears = new Map()
+  for (const p of paths(shelfState, min)) {
+    for (const f of p.frames) appears.set(f.id, (appears.get(f.id) ?? 0) + 1)
+  }
+  return [...found.frames].sort(
+    (a, b) => (appears.get(a.id) ?? 0) - (appears.get(b.id) ?? 0) || a.id.localeCompare(b.id)
+  )
+}
+
 export function paths(shelfState, min = ENOUGH) {
   const { words } = shelfState
   const out = []
@@ -100,7 +131,9 @@ export function paths(shelfState, min = ENOUGH) {
  * rendered nowhere — and raising the threshold to tidy away thin pages is
  * exactly how that happens again.
  */
-export function unreachable(shelfState, min = ENOUGH) {
-  const reached = new Set(paths(shelfState, min).flatMap((p) => p.frames.map((f) => f.id)))
+export function unreachable(shelfState, min = ENOUGH, shown = SHOWN) {
+  const reached = new Set(
+    paths(shelfState, min).flatMap((p) => ordered(p, shelfState, min).slice(0, shown).map((f) => f.id))
+  )
   return shelfState.frames.filter((f) => !reached.has(f.id)).map((f) => f.id)
 }

@@ -53,7 +53,7 @@ const ready = ref(false)
 /**
  * The address lives in the fragment, not the path.
  *
- * `#1234…` is one page to a search engine and 10^32 pages to a reader, which
+ * `#1234…` is one page to a search engine and 10^29 pages to a reader, which
  * is the correct arrangement of those two facts. A path would make each
  * turn a separate URL for an index to crawl and rightly demote.
  */
@@ -106,6 +106,17 @@ const checked = computed(() => {
   return chosen ? addressFrom(chosen, positions) === address.value : false
 })
 
+/**
+ * `1,33 × 10^29` in Bulgarian and German, `1.33` in English.
+ *
+ * The prose on this page already writes it with a comma in two of the three
+ * languages, so the live figure beside it should not disagree with the
+ * sentence above it.
+ */
+const size = computed(() =>
+  lang.value === 'en' ? boardData.magnitude : boardData.magnitude.replace('.', ',')
+)
+
 const copied = ref(false)
 async function share() {
   try {
@@ -120,7 +131,7 @@ async function share() {
 
 <template>
   <section v-if="ready" class="arr">
-    <p class="arr__size">{{ t.of }} {{ boardData.magnitude }}</p>
+    <p class="arr__size">{{ t.of }} {{ size }}</p>
 
     <ol class="arr__lines">
       <li v-for="line in lines" :key="line.at" class="arr__line">

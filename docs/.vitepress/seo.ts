@@ -1,4 +1,7 @@
 import type { HeadConfig, SiteConfig, TransformContext } from 'vitepress'
+import type { Lang } from './locale.ts'
+import { COPY } from './site-copy.ts'
+import type { ImageKey } from './site-copy.ts'
 
 /**
  * Every canonical URL, hreflang, sitemap entry and schema.org @id is built from
@@ -25,13 +28,14 @@ export interface LocaleMeta {
   hreflang: string
   /** Open Graph `language_TERRITORY` form. */
   ogLocale: string
-  siteName: string
+  /** Which set of words this locale is served from. See site-copy.ts. */
+  lang: Lang
 }
 
 export const LOCALES: LocaleMeta[] = [
-  { prefix: '', hreflang: 'en', ogLocale: 'en_GB', siteName: 'Titania Chaos' },
-  { prefix: '/bg', hreflang: 'bg', ogLocale: 'bg_BG', siteName: 'Титания Хаос' },
-  { prefix: '/de', hreflang: 'de-AT', ogLocale: 'de_AT', siteName: 'Titania Chaos' }
+  { prefix: '', hreflang: 'en', ogLocale: 'en_GB', lang: 'en' },
+  { prefix: '/bg', hreflang: 'bg', ogLocale: 'bg_BG', lang: 'bg' },
+  { prefix: '/de', hreflang: 'de-AT', ogLocale: 'de_AT', lang: 'de' }
 ]
 
 /** Real intrinsic sizes; Open Graph consumers reject mismatched dimensions. */
@@ -39,10 +43,10 @@ const IMAGES = {
   // Social cards are cropped to roughly 1.91:1 by every platform that renders
   // them, so the sharing image is a real landscape crop rather than the
   // portrait, which arrived on X and LinkedIn as a band across the middle.
-  'titania-chaos-card.jpg': { w: 1200, h: 630, alt: 'Titania Chaos' },
-  'titania-chaos-hero.webp': { w: 640, h: 840, alt: 'Titania Chaos' },
-  'titania-juggling.jpg': { w: 800, h: 1000, alt: 'Tatiana Petkova as Titania Chaos, catching a juggling club' },
-  'work-with-titania-card.jpg': { w: 768, h: 402, alt: 'Titania Chaos performing with a microphone in front of an audience' }
+  'titania-chaos-card.jpg': { w: 1200, h: 630 },
+  'titania-chaos-hero.webp': { w: 640, h: 840 },
+  'titania-juggling.jpg': { w: 800, h: 1000 },
+  'work-with-titania-card.jpg': { w: 768, h: 402 }
 } as const
 
 /** Per-page social image, keyed by the locale-stripped slug. */
@@ -88,9 +92,6 @@ function jsonLd(data: object): HeadConfig {
   return ['script', { type: 'application/ld+json' }, JSON.stringify(data)]
 }
 
-const SITE_DESCRIPTION =
-  'Clown workshops, physical comedy, events and parties in Vienna.'
-
 const PERSON_ID = `${HOSTNAME}/#titania`
 const WEBSITE_ID = `${HOSTNAME}/#website`
 
@@ -134,15 +135,15 @@ const PRESS = [
  * legal notice page -- which states it in prose in every locale -- and not
  * repeated in the structured data of every other page.
  */
-function personNode(slug: string) {
+function personNode(slug: string, lang: Lang) {
+  const copy = COPY[lang]
   return {
     '@type': 'Person',
     '@id': PERSON_ID,
     name: 'Tatiana Petkova',
-    alternateName: 'Titania Chaos',
-    jobTitle: 'Clown artist, psychologist and language teacher',
-    description:
-      'Vienna-based clown artist offering clown workshops, physical comedy, performances and playful photo experiences.',
+    alternateName: copy.siteName,
+    jobTitle: copy.jobTitle,
+    description: copy.personDescription,
     email: 'agent@tatianapetkova.com',
     url: `${HOSTNAME}/`,
     image: `${HOSTNAME}/images/titania-juggling.jpg`,
@@ -167,14 +168,15 @@ function personNode(slug: string) {
 }
 
 /** Services carry an Offer only where a published price exists. */
-function serviceNodes(slug: string, hreflang: string) {
+function serviceNodes(slug: string, hreflang: string, lang: Lang) {
   if (slug === '/events') {
+    const service = COPY[lang].services['/events']
     return [
       {
         '@type': 'Service',
         '@id': `${HOSTNAME}${slug}#service`,
-        name: "Children's birthday parties with Titania Chaos",
-        serviceType: "Children's birthday entertainment",
+        name: service.name,
+        serviceType: service.serviceType,
         provider: { '@id': PERSON_ID },
         areaServed: { '@type': 'City', name: 'Vienna', addressCountry: 'AT' },
         audience: {
@@ -187,8 +189,7 @@ function serviceNodes(slug: string, hreflang: string) {
           '@type': 'Offer',
           price: 290,
           priceCurrency: 'EUR',
-          description:
-            'Up to 10 children, approximately 2-3 hours, plus taxi within Vienna.',
+          description: service.offerDescription,
           availability: 'https://schema.org/InStock'
         },
         inLanguage: hreflang
@@ -196,12 +197,13 @@ function serviceNodes(slug: string, hreflang: string) {
     ]
   }
   if (slug === '/work-with-titania') {
+    const service = COPY[lang].services['/work-with-titania']
     return [
       {
         '@type': 'Service',
         '@id': `${HOSTNAME}${slug}#service`,
-        name: 'Titania Chaos and her time-travelling camera',
-        serviceType: 'Walkabout performance and photo experience',
+        name: service.name,
+        serviceType: service.serviceType,
         provider: { '@id': PERSON_ID },
         areaServed: { '@type': 'City', name: 'Vienna', addressCountry: 'AT' },
         availableLanguage: ['en', 'de', 'fr', 'ru', 'bg'],
@@ -224,22 +226,37 @@ export function buildHead(ctx: TransformContext, siteConfig: SiteConfig): HeadCo
   const canonical = `${HOSTNAME}${urlPath}`
   const alternates = existingAlternates(slug, siteConfig.pages)
 
-  const imageKey = PAGE_IMAGE[slug] ?? 'titania-chaos-card.jpg'
+  const copy = COPY[locale.lang]
+  const imageKey: ImageKey = PAGE_IMAGE[slug] ?? 'titania-chaos-card.jpg'
   const image = IMAGES[imageKey]
+  const imageAlt = copy.imageAlt[imageKey]
   const imageUrl = `${HOSTNAME}/images/${imageKey}`
 
   // ctx.title has the titleTemplate applied ('Page | Titania Chaos'), which
   // reads as duplicated branding in a social card. Prefer the bare title.
   const title = ctx.pageData.title || ctx.title
-  const description = ctx.description || ctx.siteData.description
+  const description = ctx.description || ctx.siteData.description || copy.siteDescription
 
   const head: HeadConfig[] = [
     ['link', { rel: 'canonical', href: canonical }],
 
+    // Feed autodiscovery, pointing at this page's own language. A reader that
+    // finds the German page should be offered the German feed, not the root
+    // one -- which is the whole reason there are three.
+    [
+      'link',
+      {
+        rel: 'alternate',
+        type: 'application/atom+xml',
+        title: copy.feed.title,
+        href: `${HOSTNAME}${locale.prefix}/feed.atom`
+      }
+    ],
+
     // Open Graph. og:title, og:type, og:image and og:url are the four
     // properties the protocol requires on every page.
     ['meta', { property: 'og:type', content: slug === '/' ? 'website' : 'article' }],
-    ['meta', { property: 'og:site_name', content: locale.siteName }],
+    ['meta', { property: 'og:site_name', content: copy.siteName }],
     ['meta', { property: 'og:title', content: title }],
     ['meta', { property: 'og:description', content: description }],
     ['meta', { property: 'og:url', content: canonical }],
@@ -247,13 +264,13 @@ export function buildHead(ctx: TransformContext, siteConfig: SiteConfig): HeadCo
     ['meta', { property: 'og:image', content: imageUrl }],
     ['meta', { property: 'og:image:width', content: String(image.w) }],
     ['meta', { property: 'og:image:height', content: String(image.h) }],
-    ['meta', { property: 'og:image:alt', content: image.alt }],
+    ['meta', { property: 'og:image:alt', content: imageAlt }],
 
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: title }],
     ['meta', { name: 'twitter:description', content: description }],
     ['meta', { name: 'twitter:image', content: imageUrl }],
-    ['meta', { name: 'twitter:image:alt', content: image.alt }]
+    ['meta', { name: 'twitter:image:alt', content: imageAlt }]
   ]
 
   // hreflang, emitted only for locales that really have this page, so Search
@@ -270,13 +287,13 @@ export function buildHead(ctx: TransformContext, siteConfig: SiteConfig): HeadCo
     jsonLd({
       '@context': 'https://schema.org',
       '@graph': [
-        personNode(slug),
+        personNode(slug, locale.lang),
         {
           '@type': 'WebSite',
           '@id': WEBSITE_ID,
           url: `${HOSTNAME}/`,
           name: 'Titania Chaos',
-          description: SITE_DESCRIPTION,
+          description: copy.siteDescription,
           inLanguage: LOCALES.map((l) => l.hreflang),
           publisher: { '@id': PERSON_ID }
         },
@@ -294,7 +311,7 @@ export function buildHead(ctx: TransformContext, siteConfig: SiteConfig): HeadCo
             url: imageUrl,
             width: image.w,
             height: image.h,
-            caption: image.alt
+            caption: imageAlt
           },
           ...(slug === '/'
             ? {}
@@ -305,7 +322,7 @@ export function buildHead(ctx: TransformContext, siteConfig: SiteConfig): HeadCo
                     {
                       '@type': 'ListItem',
                       position: 1,
-                      name: locale.siteName,
+                      name: copy.siteName,
                       item: `${HOSTNAME}${locale.prefix}/`
                     },
                     { '@type': 'ListItem', position: 2, name: title }
@@ -313,7 +330,7 @@ export function buildHead(ctx: TransformContext, siteConfig: SiteConfig): HeadCo
                 }
               })
         },
-        ...serviceNodes(slug, locale.hreflang)
+        ...serviceNodes(slug, locale.hreflang, locale.lang)
       ]
     })
   )

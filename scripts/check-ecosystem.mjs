@@ -3,9 +3,10 @@ import { readFile, readdir } from 'node:fs/promises'
 import { join } from 'node:path'
 import { frames as catalogue, vocabulary as readVocabulary } from './lib/media-meta.mjs'
 
-const [config, seo, css, en, bg, de] = await Promise.all([
+const [config, seo, copy, css, en, bg, de] = await Promise.all([
   readFile('docs/.vitepress/config.mts', 'utf8'),
   readFile('docs/.vitepress/seo.ts', 'utf8'),
+  readFile('docs/.vitepress/site-copy.ts', 'utf8'),
   readFile('docs/.vitepress/theme/custom.css', 'utf8'),
   readFile('docs/work-with-titania.md', 'utf8'),
   readFile('docs/bg/work-with-titania.md', 'utf8'),
@@ -21,7 +22,18 @@ for (const prefix of ["CLOWN_SITE('')", "CLOWN_SITE('/bg')", "CLOWN_SITE('/de')"
   requireText(config, prefix, `missing locale-aware clown navigation: ${prefix}`)
 }
 
-requireText(seo, "jobTitle: 'Clown artist, psychologist and language teacher'", 'structured job title is stale')
+// The structured job title moved out of seo.ts into the per-locale copy, so
+// this checks where it lives now -- and checks all three, which is the point
+// of having moved it. Asserting only the English string is what let the same
+// English prose be served as `inLanguage: 'bg'` for as long as it was.
+requireText(copy, "jobTitle: 'Clown artist, psychologist and language teacher'", 'structured job title is stale')
+
+const jobTitles = [...copy.matchAll(/jobTitle: '([^']+)'/g)].map((m) => m[1])
+if (jobTitles.length !== 3) {
+  problems.push(`expected a structured job title in three languages, found ${jobTitles.length}`)
+} else if (new Set(jobTitles).size !== 3) {
+  problems.push('a structured job title is repeated across locales -- one of them is untranslated')
+}
 
 for (const [name, source] of [['English', en], ['Bulgarian', bg], ['German', de]]) {
   // `екип` as well as `тийм`: the Bulgarian for a team is екип, and the page

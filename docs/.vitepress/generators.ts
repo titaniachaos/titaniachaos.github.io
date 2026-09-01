@@ -1,7 +1,10 @@
+import { existsSync, readFileSync } from 'node:fs'
 import { writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import type { SiteConfig } from 'vitepress'
 import { HOSTNAME, LOCALES, splitLocale } from './seo.ts'
+import { COPY } from './site-copy.ts'
+import { atom } from './feed.ts'
 
 /**
  * Build-time integrations, in Astro's shape: a named object with a `hooks` map.
@@ -49,6 +52,8 @@ export interface EmitContext {
   pages: string[]
   /** One timestamp for the whole build, so outputs agree with each other. */
   stamp: string
+  /** Absolute path the page sources are relative to, for hooks that read them. */
+  root: string
   /** Prefixed reporter, so a build log says which integration spoke. */
   logger: { info: (msg: string) => void }
 }
@@ -114,7 +119,124 @@ const robots: Integration = {
 
 // ---------------------------------------------------------------------------
 
-export const INTEGRATIONS: Integration[] = [hreflang, robots]
+/**
+ * The written pages, with the words their own front matter gives them.
+ *
+ * `EmitContext` hands over source paths and nothing else, so the titles come
+ * from the files. Only the hand-written pages are read: the 42 keyword
+ * listings per language are generated from route params and have no front
+ * matter, and a feed of 126 machine-made permutations is not a feed anybody
+ * subscribes to.
+ *
+ * They are filtered by whether a file is actually there. VitePress lists
+ * dynamic routes already resolved -- `balloons.md`, `de/portrait/street.md` --
+ * so a name-based filter looks right and then opens a file that was never on
+ * disk.
+ */
+function writtenPages(pages: string[], root: string) {
+  const field = (body: string, name: string) => {
+    const fm = /^---\r?\n([\s\S]*?)\r?\n---/.exec(body)?.[1] ?? ''
+    const line = new RegExp(`^${name}:\\s*(.*)$`, 'm').exec(fm)?.[1]?.trim() ?? ''
+    return line.replace(/^["']|["']$/g, '')
+  }
+  return pages
+    .filter((page) => existsSync(join(root, page)))
+    .map((page) => {
+      const urlPath = '/' + page.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
+      const body = readFileSync(join(root, page), 'utf-8')
+      const { locale, slug } = splitLocale(urlPath.endsWith('/') ? urlPath : urlPath)
+      return {
+        urlPath,
+        slug,
+        locale,
+        title: field(body, 'title'),
+        description: field(body, 'description')
+      }
+    })
+    .filter((p) => p.title)
+}
+
+/**
+ * One Atom feed per language, and one JSON index behind them.
+ *
+ * Atom rather than RSS for the same reason the Clown site chose it: an entry
+ * needs an identity that outlives its URL. Per language rather than one mixed
+ * feed, because a reader who subscribes in German has said which language they
+ * read -- and a feed whose entries are three translations of each page is a
+ * feed with everything in it three times.
+ */
+const feeds: Integration = {
+  name: 'feeds',
+  hooks: {
+    'build:done': ({ pages, stamp, logger, root }) => {
+      const written = writtenPages(pages, root)
+      const out: Emitted[] = []
+
+      for (const locale of LOCALES) {
+        const copy = COPY[locale.lang]
+        const mine = written.filter((p) => p.locale.prefix === locale.prefix)
+        if (!mine.length) continue
+        const home = `${HOSTNAME}${locale.prefix}/`
+        const self = `${HOSTNAME}${locale.prefix}/feed.atom`
+        out.push({
+          file: `${locale.prefix.replace(/^\//, '')}${locale.prefix ? '/' : ''}feed.atom`,
+          body: atom({
+            id: `tag:titaniachaos.com,2024:feed${locale.prefix || '/'}`,
+            title: copy.feed.title,
+            subtitle: copy.feed.subtitle,
+            self,
+            alternate: home,
+            author: 'Tatiana Petkova',
+            lang: locale.hreflang,
+            updated: stamp,
+            items: mine.map((p) => ({
+              id: `tag:titaniachaos.com,2024:${p.slug}`,
+              title: p.title,
+              summary: p.description || copy.siteDescription,
+              updated: stamp,
+              links: [{ href: `${HOSTNAME}${p.urlPath}`, rel: 'alternate', type: 'text/html' }]
+            }))
+          })
+        })
+      }
+
+      // The same answer as data, for anything that would rather not parse XML
+      // -- and the one place the per-locale wording can be read from outside
+      // the build.
+      out.push({
+        file: 'site.json',
+        body: JSON.stringify(
+          {
+            updated: stamp,
+            locales: LOCALES.map((locale) => ({
+              lang: locale.lang,
+              hreflang: locale.hreflang,
+              prefix: locale.prefix || '/',
+              siteName: COPY[locale.lang].siteName,
+              description: COPY[locale.lang].siteDescription,
+              feed: `${HOSTNAME}${locale.prefix}/feed.atom`,
+              pages: written
+                .filter((p) => p.locale.prefix === locale.prefix)
+                .map((p) => ({
+                  url: `${HOSTNAME}${p.urlPath}`,
+                  slug: p.slug,
+                  title: p.title,
+                  description: p.description
+                }))
+            }))
+          },
+          null,
+          2
+        ) + '\n'
+      })
+
+      logger.info(`${out.length - 1} feed(s) and site.json over ${written.length} written pages`)
+      return out
+    }
+  }
+}
+
+export const INTEGRATIONS: Integration[] = [hreflang, robots, feeds]
 
 /** Wire into `sitemap.transformItems`. Each integration refines in turn. */
 export function runSitemapHooks(items: SitemapItem[]): SitemapItem[] {
@@ -133,7 +255,7 @@ export async function runBuildHooks(siteConfig: SiteConfig): Promise<void> {
     const hook = integration.hooks['build:done']
     if (!hook) continue
     const logger = { info: (msg: string) => console.log(`  [${integration.name}] ${msg}`) }
-    const files = hook({ pages, stamp, logger })
+    const files = hook({ pages, stamp, logger, root: siteConfig.srcDir })
     await Promise.all(files.map((f) => writeFile(join(siteConfig.outDir, f.file), f.body, 'utf-8')))
     logger.info(files.map((f) => `${f.file} (${(f.body.length / 1024).toFixed(1)} KB)`).join(', '))
   }

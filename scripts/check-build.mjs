@@ -124,7 +124,12 @@ function checkOurs(file, href, path) {
     if (!pages.has(local)) add(file, `dead link ${href} -> ${target} is not a page in this build`)
     return
   }
-  if (!SIBLING) {
+  // `sibling.size`, not `SIBLING`. The flag says a path was offered; only the
+  // set says a build was found there. Treating the offer as the answer made an
+  // empty directory mean "the sibling has no pages", so every correct link to
+  // it was reported dead -- which is exactly what happened in CI, where only
+  // one repository is ever checked out.
+  if (!sibling.size) {
     unverified.add(target)
     return
   }

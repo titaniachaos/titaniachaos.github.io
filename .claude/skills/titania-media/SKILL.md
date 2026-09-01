@@ -107,7 +107,7 @@ to `media/import-media.mjs` rather than guessing.
 
 ## Consent, accurately
 
-**This is not an archive of Titania alone.** 52 of 139 frames have other people
+**This is not an archive of Titania alone.** 51 of 139 frames have other people
 in them — fellow performers, workshop participants, audiences, and children.
 Each one records what a viewer would see in `othersInFrame` ("a class of young
 children, clearly identifiable"), and **every build prints all 52**, so a
@@ -171,14 +171,37 @@ refuses to index a published frame whose alt or caption is empty.
 
 ## Where the pictures actually appear
 
-There are no category pages. `/street`, `/portrait` and the rest were generated
-once and removed in "Remove the public media gallery"; `/pictures` went with
-them. Do not re-add them without asking — their removal was deliberate.
+Two surfaces, and you place a frame on neither.
 
-The consequence is worth knowing before you add anything: **109 of 139 frames
-are shipped but rendered on no page** (42 MB), because the only places a
-picture can appear now are the four written pages and their heroes. A frame you
-add will be in that pool unless you place it.
+**The written pages.** A section asks with `<MediaFigure tags="…" />` and the
+loader answers. Four pages and their heroes — the only place a *particular*
+picture is chosen for a *particular* argument.
+
+**Keyword paths.** A path is a question. `/street` is every frame carrying that
+word; `/portrait/street` every frame carrying both; likewise under `/bg/` and
+`/de/`. The words are read out of the URL rather than from a list, so thirteen
+words make 42 pages that nobody maintains — every subset of the vocabulary with
+at least three frames in it, out of 8191 possible and 90 non-empty.
+
+`scripts/lib/browse.mjs` is the whole rulebook and its header says why each
+rule is there. Two of them exist because the obvious version loses
+photographs:
+
+- **Segments sort alphabetically.** `/street/portrait` and `/portrait/street`
+  are one page, not two. A faceted index that skips this invents a factorial of
+  duplicates.
+- **A listing shows its eighteen rarest frames** — rarest meaning *appears on
+  the fewest other listings*. Truncating by archive order instead left seven
+  frames reachable from nowhere, which is the exact failure this surface was
+  built to end.
+
+`check-browse` fails the build if a path stops building, if a home page stops
+linking the one-word listings, or if any published frame becomes unreachable.
+
+So a published frame you add needs no placement: it reaches its listings on the
+next build. The pool is now small and deliberate — **19 of 139 frames render on
+no page, and all nineteen are held back on purpose**. They still ship 798 KB of
+derived files, which is the one thing about them worth fixing.
 
 ## Why a picture is not showing up
 

@@ -1,9 +1,9 @@
 // A path is a question. Split it on `/` and every segment is a word the
 // archive knows.
 //
-//   /portrait                 56 frames
-//   /street/portrait          22
-//   /performance/stage/street  6
+//   /portrait                    54 frames
+//   /portrait/street             21
+//   /performance/portrait/street  8
 //
 // The address does not have to be opaque. A uuid names an arrangement nobody
 // can guess and nobody can want; `/street/portrait` names street portraits,
@@ -13,8 +13,8 @@
 //
 // ---- what makes it bounded ------------------------------------------------
 //
-// Thirteen words, so 8191 possible paths, of which 93 have anything in them
-// and 44 have three frames or more. That is the whole space: not an infinite
+// Thirteen words, so 8191 possible paths, of which 90 have anything in them
+// and 42 have three frames or more. That is the whole space: not an infinite
 // surface of near-identical pages, which is what an unbounded generator would
 // have produced and what search engines rightly demote. It is closer to a
 // faceted index than to a page generator.
@@ -41,15 +41,16 @@ export const ENOUGH = 3
 /**
  * How many frames one listing shows.
  *
- * `/portrait` answers with 56 and a page of 56 pictures is 400 KB of tiles
- * against a 500 KB budget. Truncating is the obvious fix and the obvious fix
- * loses frames: a flat cap of 24 leaves five of the 127 reachable from nowhere,
- * which is the exact failure this whole surface exists to end.
+ * `/portrait` answers with 54 and a page of 54 pictures blows the 500 KB
+ * budget in tiles alone. Truncating is the obvious fix and the obvious fix
+ * loses frames: cutting each listing at eighteen in archive order leaves seven
+ * of the 120 reachable from nowhere, which is the exact failure this whole
+ * surface exists to end.
  *
  * So the order is not arbitrary. Each listing leads with the frames that
  * appear on the FEWEST other listings, and the tail it cuts is the frames you
- * will meet again on a neighbouring path. At eighteen — at twelve, in fact —
- * every one of the 127 is still reachable.
+ * will meet again on a neighbouring path. At eighteen — at ten, in fact —
+ * every one of the 120 is still reachable.
  */
 export const SHOWN = 18
 
@@ -127,8 +128,8 @@ export function paths(shelfState, min = ENOUGH) {
  * Which frames no path of this size would reach.
  *
  * The number that matters. A browse surface that leaves photographs
- * unreachable is the state the site is in now — 106 of them shipped and
- * rendered nowhere — and raising the threshold to tidy away thin pages is
+ * unreachable is the state this replaced — 106 of them shipped and rendered
+ * nowhere — and raising the threshold to tidy away thin pages is
  * exactly how that happens again.
  */
 export function unreachable(shelfState, min = ENOUGH, shown = SHOWN) {

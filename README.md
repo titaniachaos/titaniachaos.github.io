@@ -132,22 +132,38 @@ a portrait, useless for a journal entry about a dressing room. The journal's
 twelve posts each name their own picture, which is why they show twelve
 different ones.
 
-### Category pages, generated
+### Keyword paths
 
-Every word in the vocabulary once had its own page in every language —
-`/street`, `/bg/street`, `/de/street` — listing everything that carried it.
-Those pages, the `/pictures` index above them and the tag chips that linked
-into them were **removed on purpose** in "Remove the public media gallery".
-Do not restore them without asking.
+The vocabulary once had one page per word, and those pages plus the `/pictures`
+index above them were removed as a gallery nobody read. Removing them left the
+archive with nowhere to appear: 109 of 139 frames shipped and rendered on no
+page.
 
-What follows from that is worth stating plainly: the only places a picture can
-appear now are the four written pages and their heroes, so most of the archive
-appears nowhere. `check-images` counts it on every build — currently **109 of
-139 frames are shipped but rendered on no page**.
+What replaced them is not the gallery again. A path is a question, and the
+question is parsed out of the URL:
+
+    /street                     every frame carrying the word
+    /portrait/street            every frame carrying both
+    /de/performance/stage       the same question, in German
+
+Thirteen words, 8191 subsets, 90 of them non-empty, 42 with enough in them to
+be a page — in three languages, generated, unmaintained. It is a faceted index,
+not a page generator: bounded by the vocabulary, AND-semantics so the paths do
+not all answer the same thing, and one canonical alphabetical order so
+`/street/portrait` is a synonym rather than a duplicate.
+
+Each listing shows the eighteen frames that appear on the *fewest other*
+listings, so what truncation cuts is what you would have met next door anyway.
+That ordering is the difference between every published frame being reachable
+and seven of them not; `scripts/lib/browse.mjs` explains it, `check-browse`
+enforces it, and `browse.test.mjs` asserts it.
+
+The count `check-images` prints on every build is now **19 of 139**, and those
+nineteen are the frames deliberately held back.
 
 `docs/.vitepress/categories.ts` is still the single home of the vocabulary and
-its names; the loader, the navigation and the components all import it, so
-there is no copy to drift.
+its names; the loader, the routes, the navigation and the components all import
+it, so there is no copy to drift.
 
 ### Instagram, Facebook and YouTube
 
@@ -294,7 +310,7 @@ YouTube, is fetched until someone presses play.
 
 `media/README.md` holds the rule about who has to agree before a photograph
 goes on a page. This was once an archive of Titania alone; it is not any more.
-52 of the 139 frames have other people in them — fellow performers, workshop
+51 of the 139 frames have other people in them — fellow performers, workshop
 participants, audiences and children — and each says what a viewer would see in
 `othersInFrame`. Every build prints all of them:
 

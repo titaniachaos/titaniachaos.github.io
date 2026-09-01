@@ -11,12 +11,12 @@ import { useLang } from './useLang.ts'
  *
  * The path is the question: `/portrait/street` asks for the frames carrying
  * both. The words come from the URL rather than from a list here, which is
- * what makes 44 pages out of thirteen words and no maintenance.
+ * what makes 42 pages out of thirteen words and no maintenance.
  *
  * The order is the interesting part. A listing shows eighteen, and the
  * eighteen it shows are the frames appearing on the FEWEST other listings —
  * so what it cuts is what you will meet again next door. Truncating by
- * archive order instead leaves five of the 127 frames reachable from nowhere,
+ * archive order instead leaves seven of the 120 frames reachable from nowhere,
  * which is the failure this surface exists to end.
  */
 
@@ -40,8 +40,8 @@ const all = computed<Media[]>(() =>
 /**
  * The frames to show, in the order the build chose.
  *
- * Not recomputed here. The order is rarity across all 44 listings, and the
- * guarantee that every one of the 127 frames survives truncation was measured
+ * Not recomputed here. The order is rarity across all 42 listings, and the
+ * guarantee that every one of the 120 frames survives truncation was measured
  * against exactly that. A component that re-derived it from something cheaper
  * — the number of tags a frame carries, say — would be near enough to look
  * right and wrong enough to lose frames again.

@@ -46,9 +46,9 @@ test('every path worth building has enough on it to be a page', () => {
 })
 
 test('and together they reach every published frame', () => {
-  // The point of the whole exercise. 106 frames are currently shipped and
-  // rendered nowhere; a browse surface that leaves any of them unreachable
-  // has not fixed the thing it was built to fix.
+  // The point of the whole exercise. 106 frames were shipped and rendered
+  // nowhere before this existed; a browse surface that leaves any of them
+  // unreachable has not fixed the thing it was built to fix.
   assert.deepEqual(unreachable(state), [], 'some frames are reachable by no path')
 })
 

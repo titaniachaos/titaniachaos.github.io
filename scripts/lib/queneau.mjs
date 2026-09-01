@@ -32,7 +32,7 @@
 // caption in this archive was written by somebody who looked at the picture.
 // This may reorder, pair and sequence them. It may not describe a photograph,
 // because describing a photograph you have not seen is how you end up
-// asserting who is in it — and 52 of these frames have other people in them,
+// asserting who is in it — and 51 of these frames have other people in them,
 // 12 more are held back by somebody's decision. Both are inputs here, not
 // afterthoughts: a draft never appears in any arrangement.
 

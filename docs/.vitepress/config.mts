@@ -6,7 +6,8 @@ import {
   localeAlternateTags
 } from './seo.ts'
 import { runBuildHooks, runSitemapHooks } from './generators.ts'
-import { shelf, paths } from '../../scripts/lib/browse.mjs'
+import { shelf, paths, resolve, ordered, ENOUGH, SHOWN } from '../../scripts/lib/browse.mjs'
+import { frames } from '../../scripts/lib/media-meta.mjs'
 import { TAG_NAMES, asTitle } from './categories.ts'
 import type { Lang } from './locale.ts'
 /**
@@ -52,6 +53,56 @@ const BROWSE_LABEL: Record<Lang, string> = {
   en: 'Pictures',
   bg: 'Снимки',
   de: 'Bilder'
+}
+
+/**
+ * What a keyword listing puts into the search index.
+ *
+ * The 42 listings in three languages -- 126 pages -- were not in it at all.
+ * Their source is a single `<BrowsePath />`, and everything a reader sees is
+ * rendered from route params in the browser, so MiniSearch indexed an empty
+ * document: searching the site for `portrait` found nothing, on a site with a
+ * page called Portrait carrying 54 photographs.
+ *
+ * `_render` is VitePress's hook for exactly this. The listing is given the
+ * words it actually shows -- its title, the words of the path, and the caption
+ * of every frame on it -- and an `<h1>`, because a result with no heading is
+ * listed under a blank title even when its body matches.
+ */
+const CAPTIONS = new Map(
+  (await frames()).filter((f) => !f.draft).map((f) => [f.id, f.caption as Record<Lang, string>])
+)
+
+function browseSearchBody(relativePath: string): string | null {
+  const parts = relativePath.replace(/\.md$/, '').split('/')
+  let lang: Lang = 'en'
+  if (parts[0] === 'bg' || parts[0] === 'de') lang = parts.shift() as Lang
+  if (!parts.length || parts.some((w) => !browseState.words.includes(w))) return null
+
+  const found = resolve(parts, browseState)
+  if (!found || found.frames.length < ENOUGH) return null
+
+  const spoken = found.want.map(
+    (w: string) => TAG_NAMES[lang][w as keyof (typeof TAG_NAMES)[typeof lang]]
+  )
+  const heading = asTitle(spoken.join(' · '))
+  const anchor = found.want.join('-')
+  const captions = ordered(found, browseState)
+    .slice(0, SHOWN)
+    .map((f: { id: string }) => CAPTIONS.get(f.id)?.[lang])
+    .filter(Boolean)
+
+  return [
+    // VitePress splits a page into search sections with
+    // `/<h(\d*).*?>(.*?<a.*? href="#.*?".*?>.*?<\/a>)<\/h\1>/` -- a heading only
+    // counts if it contains a header-anchor link. A bare `<h1>` matches
+    // nothing, the split yields one chunk, `shift()` drops it, and the page is
+    // indexed as empty. That is why these listings were missing from search
+    // even though this function was returning the right words all along.
+    `<h1 id="${anchor}" tabindex="-1">${heading} <a class="header-anchor" href="#${anchor}" aria-label="Permalink to &quot;${heading}&quot;">\u200b</a></h1>`,
+    `<p>${[...spoken, ...found.want].join(' ')}</p>`,
+    ...captions.map((c) => `<p>${c}</p>`)
+  ].join('\n')
 }
 
 const PHOTOGRAPHERS =
@@ -150,6 +201,16 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
+        // Dynamic routes render in the browser, so what MiniSearch is handed
+        // for them is whatever this returns. Written pages keep the default.
+        _render(src, env, md) {
+          // A dynamic route arrives here with an empty `src` and no params in
+          // `env` -- only its path, which for these pages is the question
+          // itself. So the listing is recomputed from the path, the same way
+          // the route computes it.
+          const body = browseSearchBody(String(env.relativePath ?? ''))
+          return body ?? md.render(src, env)
+        },
         locales: {
           bg: {
             translations: {

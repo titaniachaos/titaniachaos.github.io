@@ -139,6 +139,7 @@ for (const frame of await frames()) {
     seconds: frame.seconds,
     alt: frame.alt,
     caption: frame.caption,
+    ...(frame.creator ? { creator: frame.creator } : {}),
     url: `${base}.webp`,
     tile: `${base}-s.webp`,
     ...(frame.seconds ? { film: `${base}.mp4` } : {}),

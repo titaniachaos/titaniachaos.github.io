@@ -47,6 +47,7 @@ export async function frames() {
       seconds: Number(body.match(/seconds: (\d+)/)?.[1]) || undefined,
       draft: /\n\s{4}draft: true,/.test(body),
       focus: body.match(/focus: '([^']+)'/)?.[1],
+      creator: body.match(/creator: '([^']+)'/)?.[1],
       permalink: body.match(/permalink: '([^']+)'/)?.[1],
       othersInFrame: body.match(/othersInFrame: '([^']*)'/)?.[1],
       alt: three('alt'),
@@ -95,7 +96,7 @@ export function xmp(frame, { origin, credit, rights }) {
     `<dc:title><rdf:Alt>${alt(frame.caption)}</rdf:Alt></dc:title>` +
     `<dc:description><rdf:Alt>${alt(frame.alt)}</rdf:Alt></dc:description>` +
     `<dc:subject><rdf:Bag>${frame.tags.map((t) => `<rdf:li>${xmlEscape(t)}</rdf:li>`).join('')}</rdf:Bag></dc:subject>` +
-    `<dc:creator><rdf:Seq><rdf:li>${xmlEscape(credit)}</rdf:li></rdf:Seq></dc:creator>` +
+    `<dc:creator><rdf:Seq><rdf:li>${xmlEscape(frame.creator ?? credit)}</rdf:li></rdf:Seq></dc:creator>` +
     `<dc:rights><rdf:Alt><rdf:li xml:lang="x-default">${xmlEscape(rights)}</rdf:li></rdf:Alt></dc:rights>` +
     `<dc:source>${xmlEscape(frame.permalink ?? url)}</dc:source>` +
     `<xmp:Identifier>${xmlEscape(url)}</xmp:Identifier>` +

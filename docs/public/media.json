@@ -1,7 +1,7 @@
 {
-  "origin": "https://titaniachaos.github.io",
+  "origin": "https://titaniachaos.com",
   "rights": "© Tatiana Petkova (Titania Chaos). Photographs by Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, Konstantin Oberlik, Tatiana Petkova, Marion Scholz and Laurent Ziegler.",
-  "count": 133,
+  "count": 128,
   "media": [
     {
       "id": "workshop-mini-art",
@@ -20,9 +20,9 @@
         "bg": "Клоунска работилница във фондация „Мини Арт“, януари 2024.",
         "de": "Ein Clown-Workshop in der Mini Art Foundation, Jänner 2024."
       },
-      "url": "https://titaniachaos.github.io/images/media/workshop-mini-art.webp",
-      "tile": "https://titaniachaos.github.io/images/media/workshop-mini-art-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/workshop-mini-art.mp4",
+      "url": "https://titaniachaos.com/images/media/workshop-mini-art.webp",
+      "tile": "https://titaniachaos.com/images/media/workshop-mini-art-s.webp",
+      "film": "https://titaniachaos.com/images/media/workshop-mini-art.mp4",
       "source": "https://www.youtube.com/watch?v=JG4Iar3Ax7k"
     },
     {
@@ -42,9 +42,9 @@
         "bg": "Клоунска работилница в Мини Арт Център, София, октомври 2023.",
         "de": "Ein Clown-Workshop im Mini Art Centre in Sofia, Oktober 2023."
       },
-      "url": "https://titaniachaos.github.io/images/media/workshop-sofia.webp",
-      "tile": "https://titaniachaos.github.io/images/media/workshop-sofia-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/workshop-sofia.mp4",
+      "url": "https://titaniachaos.com/images/media/workshop-sofia.webp",
+      "tile": "https://titaniachaos.com/images/media/workshop-sofia-s.webp",
+      "film": "https://titaniachaos.com/images/media/workshop-sofia.mp4",
       "source": "https://www.youtube.com/watch?v=oh8HroecvrA"
     },
     {
@@ -66,9 +66,9 @@
         "bg": "Виенски парк и никой наоколо. Клоунът не чака публика.",
         "de": "Ein Wiener Park, niemand schaut zu. Der Clown wartet nicht auf Publikum."
       },
-      "url": "https://titaniachaos.github.io/images/media/park-dance.webp",
-      "tile": "https://titaniachaos.github.io/images/media/park-dance-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/park-dance.mp4"
+      "url": "https://titaniachaos.com/images/media/park-dance.webp",
+      "tile": "https://titaniachaos.com/images/media/park-dance-s.webp",
+      "film": "https://titaniachaos.com/images/media/park-dance.mp4"
     },
     {
       "id": "square-cartwheel",
@@ -88,9 +88,9 @@
         "bg": "Боса през площада, между минувачите и гълъбите.",
         "de": "Barfuß über einen Platz, zwischen Passanten und Tauben."
       },
-      "url": "https://titaniachaos.github.io/images/media/square-cartwheel.webp",
-      "tile": "https://titaniachaos.github.io/images/media/square-cartwheel-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/square-cartwheel.mp4"
+      "url": "https://titaniachaos.com/images/media/square-cartwheel.webp",
+      "tile": "https://titaniachaos.com/images/media/square-cartwheel-s.webp",
+      "film": "https://titaniachaos.com/images/media/square-cartwheel.mp4"
     },
     {
       "id": "balloon-heart",
@@ -111,8 +111,8 @@
         "bg": "Сърце, усукано на място и подарено веднага.",
         "de": "Ein Herz, an Ort und Stelle gedreht und sofort verschenkt."
       },
-      "url": "https://titaniachaos.github.io/images/media/balloon-heart.webp",
-      "tile": "https://titaniachaos.github.io/images/media/balloon-heart-s.webp"
+      "url": "https://titaniachaos.com/images/media/balloon-heart.webp",
+      "tile": "https://titaniachaos.com/images/media/balloon-heart-s.webp"
     },
     {
       "id": "balloon-chain",
@@ -132,8 +132,8 @@
         "bg": "Веригата от балони пристига преди клоуна.",
         "de": "Die Ballonkette ist vor dem Clown da."
       },
-      "url": "https://titaniachaos.github.io/images/media/balloon-chain.webp",
-      "tile": "https://titaniachaos.github.io/images/media/balloon-chain-s.webp"
+      "url": "https://titaniachaos.com/images/media/balloon-chain.webp",
+      "tile": "https://titaniachaos.com/images/media/balloon-chain-s.webp"
     },
     {
       "id": "balloon-garland",
@@ -153,8 +153,8 @@
         "bg": "Отиването до празника вече е част от празника.",
         "de": "Der Weg zum Fest ist schon Teil des Festes."
       },
-      "url": "https://titaniachaos.github.io/images/media/balloon-garland.webp",
-      "tile": "https://titaniachaos.github.io/images/media/balloon-garland-s.webp"
+      "url": "https://titaniachaos.com/images/media/balloon-garland.webp",
+      "tile": "https://titaniachaos.com/images/media/balloon-garland-s.webp"
     },
     {
       "id": "camera-portrait",
@@ -173,8 +173,8 @@
         "bg": "Машината на времето, в очакване на следващия си век.",
         "de": "Die Zeitreisekamera wartet auf ihr nächstes Jahrhundert."
       },
-      "url": "https://titaniachaos.github.io/images/media/camera-portrait.webp",
-      "tile": "https://titaniachaos.github.io/images/media/camera-portrait-s.webp"
+      "url": "https://titaniachaos.com/images/media/camera-portrait.webp",
+      "tile": "https://titaniachaos.com/images/media/camera-portrait-s.webp"
     },
     {
       "id": "traveller-kit",
@@ -193,8 +193,8 @@
         "bg": "Всичко, което е нужно на пътешественика във времето, и нищо повече.",
         "de": "Alles, was die Zeitreisende braucht, und nichts darüber hinaus."
       },
-      "url": "https://titaniachaos.github.io/images/media/traveller-kit.webp",
-      "tile": "https://titaniachaos.github.io/images/media/traveller-kit-s.webp"
+      "url": "https://titaniachaos.com/images/media/traveller-kit.webp",
+      "tile": "https://titaniachaos.com/images/media/traveller-kit-s.webp"
     },
     {
       "id": "stage-collar",
@@ -213,8 +213,8 @@
         "bg": "Пред завесата, преди първия смях.",
         "de": "Vor dem Vorhang, vor dem ersten Lachen."
       },
-      "url": "https://titaniachaos.github.io/images/media/stage-collar.webp",
-      "tile": "https://titaniachaos.github.io/images/media/stage-collar-s.webp"
+      "url": "https://titaniachaos.com/images/media/stage-collar.webp",
+      "tile": "https://titaniachaos.com/images/media/stage-collar-s.webp"
     },
     {
       "id": "stage-balloon",
@@ -233,8 +233,8 @@
         "bg": "Един балон, поднесен толкова дълго, колкото трае тишината.",
         "de": "Ein Luftballon, so lange hingehalten, wie die Stille dauert."
       },
-      "url": "https://titaniachaos.github.io/images/media/stage-balloon.webp",
-      "tile": "https://titaniachaos.github.io/images/media/stage-balloon-s.webp"
+      "url": "https://titaniachaos.com/images/media/stage-balloon.webp",
+      "tile": "https://titaniachaos.com/images/media/stage-balloon-s.webp"
     },
     {
       "id": "stage-gown",
@@ -253,8 +253,8 @@
         "bg": "Роклята също е реквизит, ако я държиш достатъчно дълго.",
         "de": "Ein Kleid ist auch eine Requisite, wenn man es lange genug hält."
       },
-      "url": "https://titaniachaos.github.io/images/media/stage-gown.webp",
-      "tile": "https://titaniachaos.github.io/images/media/stage-gown-s.webp"
+      "url": "https://titaniachaos.com/images/media/stage-gown.webp",
+      "tile": "https://titaniachaos.com/images/media/stage-gown-s.webp"
     },
     {
       "id": "telephone",
@@ -273,8 +273,8 @@
         "bg": "Някой е на линията. Мина доста време.",
         "de": "Jemand ist in der Leitung. Es ist eine Weile her."
       },
-      "url": "https://titaniachaos.github.io/images/media/telephone.webp",
-      "tile": "https://titaniachaos.github.io/images/media/telephone-s.webp"
+      "url": "https://titaniachaos.com/images/media/telephone.webp",
+      "tile": "https://titaniachaos.com/images/media/telephone-s.webp"
     },
     {
       "id": "wall-coat",
@@ -293,8 +293,8 @@
         "bg": "Чакането е цяла сцена, ако си честен с него.",
         "de": "Warten ist eine ganze Szene, wenn man ehrlich damit ist."
       },
-      "url": "https://titaniachaos.github.io/images/media/wall-coat.webp",
-      "tile": "https://titaniachaos.github.io/images/media/wall-coat-s.webp"
+      "url": "https://titaniachaos.com/images/media/wall-coat.webp",
+      "tile": "https://titaniachaos.com/images/media/wall-coat-s.webp"
     },
     {
       "id": "beanie-portrait",
@@ -314,8 +314,8 @@
         "bg": "Носът е най-малката маска в театъра и най-трудната за криене зад нея.",
         "de": "Die Nase ist die kleinste Maske des Theaters — und die, hinter der man sich am wenigsten verstecken kann."
       },
-      "url": "https://titaniachaos.github.io/images/media/beanie-portrait.webp",
-      "tile": "https://titaniachaos.github.io/images/media/beanie-portrait-s.webp"
+      "url": "https://titaniachaos.com/images/media/beanie-portrait.webp",
+      "tile": "https://titaniachaos.com/images/media/beanie-portrait-s.webp"
     },
     {
       "id": "shadow",
@@ -334,8 +334,8 @@
         "bg": "Клоунът пристига първо на стената.",
         "de": "Der Clown kommt zuerst an der Wand an."
       },
-      "url": "https://titaniachaos.github.io/images/media/shadow.webp",
-      "tile": "https://titaniachaos.github.io/images/media/shadow-s.webp"
+      "url": "https://titaniachaos.com/images/media/shadow.webp",
+      "tile": "https://titaniachaos.com/images/media/shadow-s.webp"
     },
     {
       "id": "doorway-jump",
@@ -355,8 +355,8 @@
         "bg": "Вратата е рамка, а рамката е покана.",
         "de": "Eine Tür ist ein Rahmen, und ein Rahmen ist eine Einladung."
       },
-      "url": "https://titaniachaos.github.io/images/media/doorway-jump.webp",
-      "tile": "https://titaniachaos.github.io/images/media/doorway-jump-s.webp"
+      "url": "https://titaniachaos.com/images/media/doorway-jump.webp",
+      "tile": "https://titaniachaos.com/images/media/doorway-jump-s.webp"
     },
     {
       "id": "bench-balance",
@@ -375,8 +375,8 @@
         "bg": "Всеки ръб върши работа, стига да се съгласиш да го приемеш сериозно.",
         "de": "Jede Kante genügt, wenn man bereit ist, sie ernst zu nehmen."
       },
-      "url": "https://titaniachaos.github.io/images/media/bench-balance.webp",
-      "tile": "https://titaniachaos.github.io/images/media/bench-balance-s.webp"
+      "url": "https://titaniachaos.com/images/media/bench-balance.webp",
+      "tile": "https://titaniachaos.com/images/media/bench-balance-s.webp"
     },
     {
       "id": "barrel-street",
@@ -395,8 +395,8 @@
         "bg": "Един метър височина стига, за да превърне тротоара в сцена.",
         "de": "Ein Meter Höhe genügt, um aus einem Gehsteig eine Bühne zu machen."
       },
-      "url": "https://titaniachaos.github.io/images/media/barrel-street.webp",
-      "tile": "https://titaniachaos.github.io/images/media/barrel-street-s.webp"
+      "url": "https://titaniachaos.com/images/media/barrel-street.webp",
+      "tile": "https://titaniachaos.com/images/media/barrel-street-s.webp"
     },
     {
       "id": "statue-embrace",
@@ -415,8 +415,8 @@
         "bg": "Никой не е прекалено бронзов за червен нос.",
         "de": "Niemand ist zu bronzen für eine rote Nase."
       },
-      "url": "https://titaniachaos.github.io/images/media/statue-embrace.webp",
-      "tile": "https://titaniachaos.github.io/images/media/statue-embrace-s.webp"
+      "url": "https://titaniachaos.com/images/media/statue-embrace.webp",
+      "tile": "https://titaniachaos.com/images/media/statue-embrace-s.webp"
     },
     {
       "id": "radio-studio",
@@ -434,8 +434,8 @@
         "bg": "В ефир, без костюм: клоунът обяснен, вместо изигран.",
         "de": "Auf Sendung, ohne Kostüm: der Clown erklärt statt gespielt."
       },
-      "url": "https://titaniachaos.github.io/images/media/radio-studio.webp",
-      "tile": "https://titaniachaos.github.io/images/media/radio-studio-s.webp"
+      "url": "https://titaniachaos.com/images/media/radio-studio.webp",
+      "tile": "https://titaniachaos.com/images/media/radio-studio-s.webp"
     },
     {
       "id": "showreel",
@@ -455,9 +455,9 @@
         "bg": "Филмът, който представя работата, от канала на Титания Хаос.",
         "de": "Der Film, der die Arbeit vorstellt, vom Titania-Chaos-Kanal."
       },
-      "url": "https://titaniachaos.github.io/images/media/showreel.webp",
-      "tile": "https://titaniachaos.github.io/images/media/showreel-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/showreel.mp4",
+      "url": "https://titaniachaos.com/images/media/showreel.webp",
+      "tile": "https://titaniachaos.com/images/media/showreel-s.webp",
+      "film": "https://titaniachaos.com/images/media/showreel.mp4",
       "source": "https://www.youtube.com/watch?v=OL9f3qKXE1I"
     },
     {
@@ -479,9 +479,9 @@
         "bg": "„Smile“ — почит към Джанго Едуардс, 2023.",
         "de": "„Smile“ — eine Hommage an Django Edwards, 2023."
       },
-      "url": "https://titaniachaos.github.io/images/media/django-tribute.webp",
-      "tile": "https://titaniachaos.github.io/images/media/django-tribute-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/django-tribute.mp4",
+      "url": "https://titaniachaos.com/images/media/django-tribute.webp",
+      "tile": "https://titaniachaos.com/images/media/django-tribute-s.webp",
+      "film": "https://titaniachaos.com/images/media/django-tribute.mp4",
       "source": "https://www.youtube.com/watch?v=VJuf0huu2X4"
     },
     {
@@ -502,9 +502,9 @@
         "bg": "Бананът идва от публиката, по време на представление с Äquatormassband. Виена, ноември 2025.",
         "de": "Die Banane kommt aus dem Publikum, mitten im Auftritt mit der Äquatormassband. Wien, November 2025."
       },
-      "url": "https://titaniachaos.github.io/images/media/banana-encore.webp",
-      "tile": "https://titaniachaos.github.io/images/media/banana-encore-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/banana-encore.mp4",
+      "url": "https://titaniachaos.com/images/media/banana-encore.webp",
+      "tile": "https://titaniachaos.com/images/media/banana-encore-s.webp",
+      "film": "https://titaniachaos.com/images/media/banana-encore.mp4",
       "source": "https://www.youtube.com/watch?v=w3wkwyrTRiY"
     },
     {
@@ -525,8 +525,8 @@
         "bg": "Бухалка във въздуха между двама души е разговор, не трик.",
         "de": "Eine Keule in der Luft zwischen zwei Menschen ist ein Gespräch, kein Trick."
       },
-      "url": "https://titaniachaos.github.io/images/media/juggling-pass.webp",
-      "tile": "https://titaniachaos.github.io/images/media/juggling-pass-s.webp",
+      "url": "https://titaniachaos.com/images/media/juggling-pass.webp",
+      "tile": "https://titaniachaos.com/images/media/juggling-pass-s.webp",
       "othersInFrame": "a second person, clearly identifiable, is in the frame"
     },
     {
@@ -546,8 +546,8 @@
         "bg": "Стълбището става сцена, а стая, пълна с непознати — публика.",
         "de": "Eine Treppe wird zur Bühne, ein Raum voller Fremder zum Publikum."
       },
-      "url": "https://titaniachaos.github.io/images/media/impact-hub.webp",
-      "tile": "https://titaniachaos.github.io/images/media/impact-hub-s.webp",
+      "url": "https://titaniachaos.com/images/media/impact-hub.webp",
+      "tile": "https://titaniachaos.com/images/media/impact-hub-s.webp",
       "othersInFrame": "a seated audience, several of them identifiable, including a child"
     },
     {
@@ -568,50 +568,8 @@
         "bg": "Ъгълът е най-малката стая, а пак побира цял човек.",
         "de": "Eine Ecke ist der kleinste Raum, den es gibt — und fasst trotzdem einen ganzen Menschen."
       },
-      "url": "https://titaniachaos.github.io/images/media/blue-corner.webp",
-      "tile": "https://titaniachaos.github.io/images/media/blue-corner-s.webp"
-    },
-    {
-      "id": "dressing-room",
-      "kind": "photo",
-      "tags": [
-        "portrait",
-        "stage",
-        "solitude"
-      ],
-      "alt": {
-        "en": "Titania Chaos in a pale green dress and red nose, seated at a lit dressing-room mirror",
-        "bg": "Титания Хаос в бледозелена рокля и с червен нос, седнала пред осветено гримьорно огледало",
-        "de": "Titania Chaos in hellgrünem Kleid mit roter Nase, sitzend vor einem beleuchteten Garderobenspiegel"
-      },
-      "caption": {
-        "en": "The last quiet before the room fills. The nose is already on.",
-        "bg": "Последната тишина, преди залата да се напълни. Носът вече е сложен.",
-        "de": "Die letzte Stille, bevor der Saal sich füllt. Die Nase sitzt schon."
-      },
-      "url": "https://titaniachaos.github.io/images/media/dressing-room.webp",
-      "tile": "https://titaniachaos.github.io/images/media/dressing-room-s.webp"
-    },
-    {
-      "id": "harbour-bollard",
-      "kind": "photo",
-      "tags": [
-        "portrait",
-        "street",
-        "solitude"
-      ],
-      "alt": {
-        "en": "Titania Chaos balanced on a harbour bollard against a bright sky, arms out, the sea behind her",
-        "bg": "Титания Хаос балансира върху кнехт на пристанището на фона на светло небе, с разперени ръце и море зад нея",
-        "de": "Titania Chaos balanciert auf einem Hafenpoller vor hellem Himmel, die Arme ausgebreitet, dahinter das Meer"
-      },
-      "caption": {
-        "en": "Alone on a metre of iron, with the whole harbour to fall into.",
-        "bg": "Сама върху метър желязо, с цяло пристанище, в което да падне.",
-        "de": "Allein auf einem Meter Eisen, mit einem ganzen Hafen zum Hineinfallen."
-      },
-      "url": "https://titaniachaos.github.io/images/media/harbour-bollard.webp",
-      "tile": "https://titaniachaos.github.io/images/media/harbour-bollard-s.webp"
+      "url": "https://titaniachaos.com/images/media/blue-corner.webp",
+      "tile": "https://titaniachaos.com/images/media/blue-corner-s.webp"
     },
     {
       "id": "empty-room",
@@ -630,8 +588,8 @@
         "bg": "Празната зала не е нищо. Тя е онова, което работата трябва да запълни.",
         "de": "Ein leerer Raum ist nicht nichts. Er ist das, was die Arbeit füllen muss."
       },
-      "url": "https://titaniachaos.github.io/images/media/empty-room.webp",
-      "tile": "https://titaniachaos.github.io/images/media/empty-room-s.webp"
+      "url": "https://titaniachaos.com/images/media/empty-room.webp",
+      "tile": "https://titaniachaos.com/images/media/empty-room-s.webp"
     },
     {
       "id": "a-06077ced0b10175c",
@@ -651,8 +609,8 @@
         "bg": "Сцената на улицата е това, което улицата вече е сложила там.",
         "de": "Die Bühne auf der Straße ist das, was die Straße schon hingestellt hat."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-06077ced0b10175c.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-06077ced0b10175c-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-06077ced0b10175c.webp",
+      "tile": "https://titaniachaos.com/images/media/a-06077ced0b10175c-s.webp",
       "othersInFrame": "a fellow performer, clearly identifiable, and passers-by in the background"
     },
     {
@@ -672,8 +630,8 @@
         "bg": "Преди материалът да съществува, има маса, а на масата — още нищо.",
         "de": "Bevor das Material existiert, gibt es einen Tisch, und auf dem Tisch noch nichts."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-0679147602f4d57d.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-0679147602f4d57d-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-0679147602f4d57d.webp",
+      "tile": "https://titaniachaos.com/images/media/a-0679147602f4d57d-s.webp"
     },
     {
       "id": "a-5214fe392c281774",
@@ -693,8 +651,8 @@
         "bg": "Греда на една длан от земята е достатъчно висока, ако някой гледа.",
         "de": "Ein Balken eine Handbreit über dem Boden ist hoch genug, wenn jemand zusieht."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-5214fe392c281774.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-5214fe392c281774-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-5214fe392c281774.webp",
+      "tile": "https://titaniachaos.com/images/media/a-5214fe392c281774-s.webp",
       "othersInFrame": "a seated audience including several small children, clearly identifiable"
     },
     {
@@ -715,8 +673,8 @@
         "bg": "Обръчът прави рамка, а рамката прави от двама души картина.",
         "de": "Ein Reifen wird zum Rahmen, und ein Rahmen macht aus zwei Menschen ein Bild."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-597e6067aaf640d3.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-597e6067aaf640d3-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-597e6067aaf640d3.webp",
+      "tile": "https://titaniachaos.com/images/media/a-597e6067aaf640d3-s.webp",
       "othersInFrame": "a fellow performer, clearly identifiable"
     },
     {
@@ -736,8 +694,8 @@
         "bg": "Носът е най-краткото представяне, което съществува.",
         "de": "Die Nase ist die kürzeste Vorstellung, die es gibt."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-6929cbe7e418b679.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-6929cbe7e418b679-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-6929cbe7e418b679.webp",
+      "tile": "https://titaniachaos.com/images/media/a-6929cbe7e418b679-s.webp",
       "othersInFrame": "a child, clearly identifiable"
     },
     {
@@ -758,8 +716,8 @@
         "bg": "Два чифта ръце са целият уред.",
         "de": "Zwei Paar Hände sind der ganze Apparat."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-6bd9c2d47300f293.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-6bd9c2d47300f293-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-6bd9c2d47300f293.webp",
+      "tile": "https://titaniachaos.com/images/media/a-6bd9c2d47300f293-s.webp",
       "othersInFrame": "a child on the ball and other participants, clearly identifiable"
     },
     {
@@ -778,8 +736,8 @@
         "bg": "Всички си тръгват с еднакъв нос и различно откритие.",
         "de": "Alle gehen mit derselben Nase und einer anderen Entdeckung."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-8b30b47754adaae4.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-8b30b47754adaae4-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-8b30b47754adaae4.webp",
+      "tile": "https://titaniachaos.com/images/media/a-8b30b47754adaae4-s.webp",
       "othersInFrame": "about fourteen workshop participants, clearly identifiable"
     },
     {
@@ -800,8 +758,8 @@
         "bg": "Сцената спира да бъде сцена в мига, в който децата са на нея.",
         "de": "Die Bühne hört auf, Bühne zu sein, sobald die Kinder darauf stehen."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-9eedf775a25a7a47.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-9eedf775a25a7a47-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-9eedf775a25a7a47.webp",
+      "tile": "https://titaniachaos.com/images/media/a-9eedf775a25a7a47-s.webp",
       "othersInFrame": "several children on stage, clearly identifiable"
     },
     {
@@ -822,8 +780,8 @@
         "bg": "Уличната публика е от хора, които са били тръгнали другаде.",
         "de": "Ein Straßenpublikum besteht aus Leuten, die eigentlich woanders hinwollten."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-aed9ec2ec09f7956.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-aed9ec2ec09f7956-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-aed9ec2ec09f7956.webp",
+      "tile": "https://titaniachaos.com/images/media/a-aed9ec2ec09f7956-s.webp",
       "othersInFrame": "passers-by, mostly legs and backs, one or two identifiable"
     },
     {
@@ -844,8 +802,8 @@
         "bg": "Жонглирането на открито е покана, която никой не е длъжен да приеме.",
         "de": "Jonglieren im Freien ist eine Einladung, die niemand annehmen muss."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-bf2c4943610a52c9.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-bf2c4943610a52c9-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-bf2c4943610a52c9.webp",
+      "tile": "https://titaniachaos.com/images/media/a-bf2c4943610a52c9-s.webp",
       "othersInFrame": "a child\\"
     },
     {
@@ -865,8 +823,8 @@
         "bg": "Светлина върху маса и тъмнина навсякъде другаде вече е сцена.",
         "de": "Licht auf einem Tisch und Dunkel ringsum ist bereits eine Szene."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-e4384cfe78cdc552.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-e4384cfe78cdc552-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-e4384cfe78cdc552.webp",
+      "tile": "https://titaniachaos.com/images/media/a-e4384cfe78cdc552-s.webp"
     },
     {
       "id": "a-71d43133-c678-4ee5-af41-53856f37ffa3",
@@ -885,8 +843,8 @@
         "bg": "Излизането работи и навън; просто няма кулиса, от която да излезеш.",
         "de": "Ein Auftritt funktioniert auch draußen; es fehlt nur die Gasse, aus der man kommt."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-71d43133-c678-4ee5-af41-53856f37ffa3.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-71d43133-c678-4ee5-af41-53856f37ffa3-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-71d43133-c678-4ee5-af41-53856f37ffa3.webp",
+      "tile": "https://titaniachaos.com/images/media/a-71d43133-c678-4ee5-af41-53856f37ffa3-s.webp"
     },
     {
       "id": "a-c6ab823a-6d6e-48cd-8dba-d3c2f158e590",
@@ -905,8 +863,8 @@
         "bg": "Носът е сложен, а човекът отдолу още нищо не е решил.",
         "de": "Die Nase sitzt, und der Mensch darunter hat noch nichts entschieden."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-c6ab823a-6d6e-48cd-8dba-d3c2f158e590.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-c6ab823a-6d6e-48cd-8dba-d3c2f158e590-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-c6ab823a-6d6e-48cd-8dba-d3c2f158e590.webp",
+      "tile": "https://titaniachaos.com/images/media/a-c6ab823a-6d6e-48cd-8dba-d3c2f158e590-s.webp"
     },
     {
       "id": "a-img-0013",
@@ -925,28 +883,8 @@
         "bg": "Зимни дрехи и червен нос правят костюм от един обикновен следобед.",
         "de": "Winterkleidung und eine rote Nase machen aus einem gewöhnlichen Nachmittag ein Kostüm."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-0013.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-0013-s.webp"
-    },
-    {
-      "id": "a-img-0468",
-      "kind": "photo",
-      "tags": [
-        "portrait",
-        "solitude"
-      ],
-      "alt": {
-        "en": "Titania Chaos in a turquoise high-collared dress with a red nose, standing quietly against a pale wall",
-        "bg": "Титания Хаос с тюркоазена рокля с висока яка и червен нос, застанала тихо до светла стена",
-        "de": "Titania Chaos in türkisem Kleid mit hohem Kragen und roter Nase, still vor einer hellen Wand"
-      },
-      "caption": {
-        "en": "Waiting is most of the work and almost never the photograph.",
-        "bg": "Чакането е по-голямата част от работата и почти никога — снимката.",
-        "de": "Warten ist der größte Teil der Arbeit und fast nie das Foto."
-      },
-      "url": "https://titaniachaos.github.io/images/media/a-img-0468.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-0468-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-0013.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-0013-s.webp"
     },
     {
       "id": "a-img-0491",
@@ -965,8 +903,8 @@
         "bg": "Ръцете вече казват нещо, с което лицето не се е съгласило.",
         "de": "Die Hände sagen schon etwas, dem das Gesicht nicht zugestimmt hat."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-0491.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-0491-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-0491.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-0491-s.webp"
     },
     {
       "id": "a-img-0494",
@@ -985,8 +923,8 @@
         "bg": "Всичко, през което може да се гледа, е място, откъдето да се появиш.",
         "de": "Alles, wodurch man schauen kann, ist ein Ort zum Auftauchen."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-0494.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-0494-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-0494.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-0494-s.webp"
     },
     {
       "id": "a-img-0511",
@@ -1004,8 +942,8 @@
         "bg": "Мигът преди излизането, който никога не прилича на мига след него.",
         "de": "Der Moment vor dem Auftritt, der nie aussieht wie der danach."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-0511.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-0511-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-0511.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-0511-s.webp",
       "othersInFrame": "a person behind, out of focus and not identifiable"
     },
     {
@@ -1026,8 +964,8 @@
         "bg": "Количка с предмети събира публика по-бързо от всяко обявление.",
         "de": "Ein Wagen voller Gegenstände versammelt schneller Publikum als jede Ankündigung."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-0536.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-0536-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-0536.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-0536-s.webp",
       "othersInFrame": "a child from behind, and two adults whose faces the photographer covered with stickers in the original"
     },
     {
@@ -1047,29 +985,8 @@
         "bg": "Костюм в кухня е цялата комедия на това да имаш тяло и живот.",
         "de": "Ein Kostüm in einer Küche ist die ganze Komik davon, einen Körper und ein Leben zu haben."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-0561.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-0561-s.webp"
-    },
-    {
-      "id": "a-img-0825",
-      "kind": "photo",
-      "tags": [
-        "street",
-        "portrait",
-        "props"
-      ],
-      "alt": {
-        "en": "Selfie of Titania Chaos in a navy jacket with gold braid in front of a bronze monument whose figures have been given red noses too",
-        "bg": "Селфи на Титания Хаос с тъмносиньо сако със златни ширити пред бронзов паметник, чиито фигури също са с червени носове",
-        "de": "Selfie von Titania Chaos in marineblauer Jacke mit Goldlitze vor einem Bronzedenkmal, dessen Figuren ebenfalls rote Nasen tragen"
-      },
-      "caption": {
-        "en": "The monument had never been asked before and did not object.",
-        "bg": "Паметникът никога не е бил питан преди и не възрази.",
-        "de": "Das Denkmal war noch nie gefragt worden und hatte nichts dagegen."
-      },
-      "url": "https://titaniachaos.github.io/images/media/a-img-0825.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-0825-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-0561.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-0561-s.webp"
     },
     {
       "id": "a-img-1208",
@@ -1088,8 +1005,8 @@
         "bg": "Свиването на рамене е най-старата реплика в занаята и не се нуждае от превод.",
         "de": "Das Schulterzucken ist der älteste Satz des Fachs und braucht keine Übersetzung."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-1208.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-1208-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-1208.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-1208-s.webp"
     },
     {
       "id": "a-img-1272",
@@ -1108,8 +1025,8 @@
         "bg": "Кръгът не е загрявка; той е единствената форма, в която всички са видени.",
         "de": "Der Kreis ist keine Aufwärmübung; er ist die einzige Form, in der alle gesehen werden."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-1272.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-1272-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-1272.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-1272-s.webp",
       "othersInFrame": "about eight adults, clearly identifiable; one face was covered in the original"
     },
     {
@@ -1129,8 +1046,8 @@
         "bg": "Три предмета и площад: най-малкият пълен уред, който съществува.",
         "de": "Drei Gegenstände und ein Platz: der kleinste vollständige Apparat, den es gibt."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-1275.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-1275-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-1275.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-1275-s.webp",
       "othersInFrame": "an adult and a child at the edge of the frame"
     },
     {
@@ -1150,8 +1067,8 @@
         "bg": "Празната стая е най-взискателният партньор в сградата.",
         "de": "Ein leerer Raum ist der anspruchsvollste Partner im Haus."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-1320.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-1320-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-1320.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-1320-s.webp"
     },
     {
       "id": "a-img-1353",
@@ -1169,8 +1086,8 @@
         "bg": "Лицето не прави нищо; носът обявява.",
         "de": "Das Gesicht tut nichts; die Nase kündigt an."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-1353.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-1353-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-1353.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-1353-s.webp"
     },
     {
       "id": "a-img-1355",
@@ -1189,8 +1106,8 @@
         "bg": "Някой трябва да е този, който гледа, иначе нищо не се показва.",
         "de": "Jemand muss der sein, der zusieht, sonst wird nichts gezeigt."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-1355.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-1355-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-1355.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-1355-s.webp",
       "othersInFrame": "a fellow performer, clearly identifiable, and passers-by"
     },
     {
@@ -1210,8 +1127,8 @@
         "bg": "Заета авторитетност, носена на една ръка разстояние от телефона.",
         "de": "Geliehene Autorität, auf Armlänge vom Telefon getragen."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-1366.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-1366-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-1366.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-1366-s.webp"
     },
     {
       "id": "a-img-1406",
@@ -1231,8 +1148,8 @@
         "bg": "Двама души и стълбище: декорът вече е бил там.",
         "de": "Zwei Menschen und eine Treppe: das Bühnenbild war schon da."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-1406.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-1406-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-1406.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-1406-s.webp",
       "othersInFrame": "a fellow performer, clearly identifiable"
     },
     {
@@ -1252,8 +1169,8 @@
         "bg": "Градът заема най-добрия си декор на всеки, готов да застане пред него.",
         "de": "Die Stadt leiht ihre beste Kulisse jedem, der sich davorstellt."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-1414.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-1414-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-1414.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-1414-s.webp"
     },
     {
       "id": "a-img-1419",
@@ -1273,30 +1190,9 @@
         "bg": "Подаването на предмета е мястото, където представлението спира да бъде представление.",
         "de": "Das Weitergeben des Gegenstands ist der Moment, in dem die Vorstellung aufhört, eine zu sein."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-1419.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-1419-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-1419.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-1419-s.webp",
       "othersInFrame": "several children, clearly identifiable"
-    },
-    {
-      "id": "a-img-1474",
-      "kind": "photo",
-      "tags": [
-        "street",
-        "portrait"
-      ],
-      "alt": {
-        "en": "Titania Chaos with an orange nose standing between two seated men on a grassy bank",
-        "bg": "Титания Хаос с оранжев нос, застанала между двама седнали мъже на тревист бряг",
-        "de": "Titania Chaos mit oranger Nase zwischen zwei sitzenden Männern auf einer Wiese"
-      },
-      "caption": {
-        "en": "An audience of two is still an audience and knows it.",
-        "bg": "Публика от двама пак е публика и го знае.",
-        "de": "Ein Publikum von zwei ist immer noch ein Publikum und weiß das."
-      },
-      "url": "https://titaniachaos.github.io/images/media/a-img-1474.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-1474-s.webp",
-      "othersInFrame": "two men, clearly identifiable"
     },
     {
       "id": "a-img-1610",
@@ -1316,8 +1212,8 @@
         "bg": "Подиум висок две длани е въже, ако се съгласиш, че е.",
         "de": "Ein Podest zwei Handbreit hoch ist ein Seil, wenn man sich darauf einigt."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-1610.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-1610-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-1610.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-1610-s.webp",
       "othersInFrame": "two children on the platform and a seated audience, clearly identifiable"
     },
     {
@@ -1337,8 +1233,8 @@
         "bg": "Яката поема официалността, за да не се налага лицето да я поема.",
         "de": "Der Kragen übernimmt die Förmlichkeit, damit das Gesicht es nicht muss."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-2173.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-2173-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-2173.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-2173-s.webp"
     },
     {
       "id": "a-img-2193",
@@ -1356,8 +1252,8 @@
         "bg": "Да посочиш себе си е най-краткото признание в занаята.",
         "de": "Auf sich selbst zu zeigen ist das kürzeste Geständnis des Fachs."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-2193.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-2193-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-2193.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-2193-s.webp"
     },
     {
       "id": "a-img-2634",
@@ -1377,8 +1273,8 @@
         "bg": "На височината на дете стаята е друга стая.",
         "de": "Auf Kinderhöhe ist der Raum ein anderer Raum."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-2634.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-2634-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-2634.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-2634-s.webp",
       "othersInFrame": "several children, clearly identifiable"
     },
     {
@@ -1399,8 +1295,8 @@
         "bg": "Височината е най-евтиният начин да си представление, а не човек.",
         "de": "Höhe ist der billigste Weg, eine Vorstellung zu sein statt eine Person."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-2709.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-2709-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-2709.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-2709-s.webp"
     },
     {
       "id": "a-img-2712",
@@ -1419,8 +1315,8 @@
         "bg": "Един спрял човек е разликата между улица и театър.",
         "de": "Ein Mensch, der stehen bleibt, ist der Unterschied zwischen Straße und Theater."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-2712.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-2712-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-2712.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-2712-s.webp",
       "othersInFrame": "a passer-by, clearly identifiable"
     },
     {
@@ -1441,8 +1337,8 @@
         "bg": "Ниша с размера на човек е стая, която има мнение за теб.",
         "de": "Eine Nische in Menschengröße ist ein Raum mit einer Meinung über dich."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-2845.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-2845-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-2845.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-2845-s.webp"
     },
     {
       "id": "a-img-2906",
@@ -1461,8 +1357,8 @@
         "bg": "Работни дрехи, които в този занаят са и костюмът.",
         "de": "Arbeitskleidung, die in diesem Beruf zugleich das Kostüm ist."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-2906.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-2906-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-2906.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-2906-s.webp"
     },
     {
       "id": "a-img-3341",
@@ -1481,8 +1377,8 @@
         "bg": "Черното зад едно тяло е обещание, че нещо ще се случи.",
         "de": "Schwarz hinter einem Körper ist ein Versprechen, dass gleich etwas passiert."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-3341.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-3341-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-3341.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-3341-s.webp"
     },
     {
       "id": "a-img-3608",
@@ -1501,9 +1397,9 @@
         "bg": "Под, който отвръща, променя това какво е ходенето.",
         "de": "Ein Boden, der antwortet, verändert, was Gehen ist."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-3608.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-3608-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/a-img-3608.mp4"
+      "url": "https://titaniachaos.com/images/media/a-img-3608.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-3608-s.webp",
+      "film": "https://titaniachaos.com/images/media/a-img-3608.mp4"
     },
     {
       "id": "a-img-3630",
@@ -1523,9 +1419,9 @@
         "bg": "Да паднеш нарочно е първото нещо, което си струва да се научи.",
         "de": "Absichtlich zu fallen ist das Erste, was zu lehren sich lohnt."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-3630.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-3630-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/a-img-3630.mp4",
+      "url": "https://titaniachaos.com/images/media/a-img-3630.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-3630-s.webp",
+      "film": "https://titaniachaos.com/images/media/a-img-3630.mp4",
       "othersInFrame": "several children watching, clearly identifiable"
     },
     {
@@ -1545,8 +1441,8 @@
         "bg": "Последната снимка от един курс винаги е най-шумното нещо в него.",
         "de": "Das letzte Foto eines Kurses ist immer das Lauteste daran."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-3811.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-3811-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-3811.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-3811-s.webp",
       "othersInFrame": "about fourteen participants, clearly identifiable"
     },
     {
@@ -1565,8 +1461,8 @@
         "bg": "Празна бяла стая и четиринадесет души, готови да изглеждат глупаво.",
         "de": "Ein leerer weißer Raum und vierzehn Menschen, die bereit sind, sich zum Narren zu machen."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-3834.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-3834-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-3834.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-3834-s.webp",
       "othersInFrame": "about fourteen participants, clearly identifiable"
     },
     {
@@ -1585,8 +1481,8 @@
         "bg": "Сянката прави жеста миг по-късно и по-добре.",
         "de": "Der Schatten macht die Geste einen Moment später und besser."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-4367.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-4367-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-4367.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-4367-s.webp"
     },
     {
       "id": "a-img-4503",
@@ -1604,8 +1500,8 @@
         "bg": "Единадесет души, които са спрели да мислят как изглеждат.",
         "de": "Elf Menschen, denen egal geworden ist, wie sie aussehen."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-4503.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-4503-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-4503.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-4503-s.webp",
       "othersInFrame": "about eleven participants, clearly identifiable"
     },
     {
@@ -1624,8 +1520,8 @@
         "bg": "Коридорът е сцена с публика в двата края.",
         "de": "Ein Gang ist eine Bühne mit Publikum an beiden Enden."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-4690.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-4690-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-4690.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-4690-s.webp"
     },
     {
       "id": "a-img-5951",
@@ -1645,8 +1541,8 @@
         "bg": "Камерата не прави снимката; тя дава на хората повод да позират.",
         "de": "Die Kamera macht das Bild nicht; sie gibt den Leuten einen Grund zu posieren."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-5951.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-5951-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-5951.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-5951-s.webp"
     },
     {
       "id": "a-img-6026",
@@ -1666,8 +1562,8 @@
         "bg": "Количка, окичена със светлини, е превозно средство, и представлението се гради около нея.",
         "de": "Ein mit Lichtern behängter Rollstuhl ist ein Fahrzeug, und die Vorstellung baut sich darum."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-6026.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-6026-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-6026.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-6026-s.webp",
       "othersInFrame": "several performers, clearly identifiable, one using a wheelchair"
     },
     {
@@ -1687,8 +1583,8 @@
         "bg": "Става всяко място със спад и варел.",
         "de": "Es genügt jeder Ort mit Gefälle und einem Fass."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-6371.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-6371-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-6371.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-6371-s.webp"
     },
     {
       "id": "a-img-6421",
@@ -1708,8 +1604,8 @@
         "bg": "Спрялата количка е рецензията.",
         "de": "Der stehen gebliebene Kinderwagen ist die Kritik."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-6421.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-6421-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-6421.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-6421-s.webp",
       "othersInFrame": "a woman and two small children, clearly identifiable"
     },
     {
@@ -1730,8 +1626,8 @@
         "bg": "Циркът казва на глас това, което професията обикновено премълчава.",
         "de": "Der Zirkus sagt laut, was der Beruf sonst verschweigt."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-6763.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-6763-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-6763.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-6763-s.webp"
     },
     {
       "id": "a-img-7217",
@@ -1751,31 +1647,10 @@
         "bg": "От достатъчно далеч всяко вървене е соло.",
         "de": "Aus genügend Entfernung ist jedes Gehen ein Solo."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-7217.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-7217-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/a-img-7217.mp4",
+      "url": "https://titaniachaos.com/images/media/a-img-7217.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-7217-s.webp",
+      "film": "https://titaniachaos.com/images/media/a-img-7217.mp4",
       "othersInFrame": "two distant figures, too small to identify"
-    },
-    {
-      "id": "a-img-7288",
-      "kind": "photo",
-      "tags": [
-        "stage",
-        "performance"
-      ],
-      "alt": {
-        "en": "Titania Chaos in red on a dark stage beside a performer in a white polka-dot shirt holding a cup",
-        "bg": "Титания Хаос в червено на тъмна сцена до артист с бяла риза на точки, който държи чаша",
-        "de": "Titania Chaos in Rot auf dunkler Bühne neben einem Darsteller im weiß gepunkteten Hemd mit einer Tasse"
-      },
-      "caption": {
-        "en": "Two clowns and one cup is a plot.",
-        "bg": "Двама клоуни и една чаша са сюжет.",
-        "de": "Zwei Clowns und eine Tasse sind eine Handlung."
-      },
-      "url": "https://titaniachaos.github.io/images/media/a-img-7288.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-7288-s.webp",
-      "othersInFrame": "a fellow performer, clearly identifiable"
     },
     {
       "id": "a-img-7300",
@@ -1795,8 +1670,8 @@
         "bg": "Никой не гледа — тъкмо тогава се случва най-доброто.",
         "de": "Niemand schaut zu, und genau dann passiert das Beste."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-7300.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-7300-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-7300.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-7300-s.webp"
     },
     {
       "id": "a-img-8040",
@@ -1815,8 +1690,8 @@
         "bg": "Дървото е единствената репетиционна, която никога не е заета.",
         "de": "Ein Baum ist der einzige Probenraum, der nie belegt ist."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-8040.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-8040-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-8040.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-8040-s.webp"
     },
     {
       "id": "a-img-8092",
@@ -1836,9 +1711,9 @@
         "bg": "Сигнал към никого конкретно — това е по-голямата част от практиката.",
         "de": "Signale an niemand Bestimmten, was der größte Teil des Übens ist."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-8092.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-8092-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/a-img-8092.mp4"
+      "url": "https://titaniachaos.com/images/media/a-img-8092.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-8092-s.webp",
+      "film": "https://titaniachaos.com/images/media/a-img-8092.mp4"
     },
     {
       "id": "a-img-8211",
@@ -1858,8 +1733,8 @@
         "bg": "Заобиколен е единственият начин да си в стая с такъв размер.",
         "de": "Umringt ist die einzige Art, in einem Raum dieser Größe zu sein."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-8211.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-8211-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-8211.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-8211-s.webp",
       "othersInFrame": "a class of young children, clearly identifiable"
     },
     {
@@ -1879,8 +1754,8 @@
         "bg": "Преди костюма има човек, който решава дали да го облече.",
         "de": "Vor dem Kostüm steht ein Mensch, der entscheidet, ob er es anzieht."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-8521.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-8521-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-8521.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-8521-s.webp"
     },
     {
       "id": "a-img-8528",
@@ -1899,8 +1774,8 @@
         "bg": "Половин костюм е по-смешен от цял и по-труден за носене.",
         "de": "Ein halbes Kostüm ist komischer als ein ganzes und schwerer zu tragen."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-8528.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-8528-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-8528.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-8528-s.webp"
     },
     {
       "id": "a-img-8569",
@@ -1918,8 +1793,8 @@
         "bg": "Един цвят, една стена и каквото тялото реши да добави.",
         "de": "Eine Farbe, eine Wand und was der Körper hinzufügt."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-8569.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-8569-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-8569.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-8569-s.webp"
     },
     {
       "id": "a-img-8628",
@@ -1937,8 +1812,8 @@
         "bg": "Груповата снимка, на която всички настояват, и винаги най-истинската.",
         "de": "Das Gruppenfoto, auf dem alle bestehen, und immer das ehrlichste."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-8628.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-8628-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-img-8628.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-8628-s.webp",
       "othersInFrame": "about thirteen participants, clearly identifiable"
     },
     {
@@ -1959,8 +1834,8 @@
         "bg": "Форма, за която улицата няма категория, вече е половината шега.",
         "de": "Eine Form, für die die Straße keine Kategorie hat, ist schon der halbe Witz."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-8734.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-8734-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-8734.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-8734-s.webp"
     },
     {
       "id": "a-img-9003",
@@ -1979,8 +1854,8 @@
         "bg": "Жълти крака под сериозна рокля: спорът в един костюм.",
         "de": "Gelbe Beine unter einem ernsten Kleid: das Argument in einem Kostüm."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-9003.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-9003-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-9003.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-9003-s.webp"
     },
     {
       "id": "a-img-9614",
@@ -1999,8 +1874,8 @@
         "bg": "Куклата казва онова, което клоунът няма да каже.",
         "de": "Die Puppe sagt den Teil, den der Clown nicht sagt."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-9614.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-9614-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-9614.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-9614-s.webp"
     },
     {
       "id": "a-img-9687",
@@ -2019,8 +1894,8 @@
         "bg": "Палтото е заради времето; носът — не.",
         "de": "Der Mantel ist wegen des Wetters; die Nase nicht."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-9687.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-9687-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-9687.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-9687-s.webp"
     },
     {
       "id": "a-img-9785",
@@ -2038,8 +1913,8 @@
         "bg": "Десен, достатъчно шумен, за да мине за втори артист.",
         "de": "Ein Muster, laut genug, um als zweiter Darsteller zu gelten."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-img-9785.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-img-9785-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-img-9785.webp",
+      "tile": "https://titaniachaos.com/images/media/a-img-9785-s.webp"
     },
     {
       "id": "a-margareten-2",
@@ -2059,8 +1934,8 @@
         "bg": "Маргаретен в обикновен ден — оттам идва материалът.",
         "de": "Margareten an einem gewöhnlichen Tag, von dort kommt das Material."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-margareten-2.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-margareten-2-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-margareten-2.webp",
+      "tile": "https://titaniachaos.com/images/media/a-margareten-2-s.webp"
     },
     {
       "id": "a-dsc4738",
@@ -2078,8 +1953,8 @@
         "bg": "Носът остава и след представлението, което променя всеки разговор.",
         "de": "Die Nase bleibt nach der Vorstellung auf, und das verändert jedes Gespräch."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-dsc4738.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-dsc4738-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-dsc4738.webp",
+      "tile": "https://titaniachaos.com/images/media/a-dsc4738-s.webp",
       "othersInFrame": "three people, clearly identifiable"
     },
     {
@@ -2099,8 +1974,8 @@
         "bg": "Галерията заема стените си и си взема обратно тишината.",
         "de": "Eine Galerie leiht ihre Wände und nimmt ihre Stille zurück."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-dsc4950.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-dsc4950-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-dsc4950.webp",
+      "tile": "https://titaniachaos.com/images/media/a-dsc4950-s.webp",
       "othersInFrame": "a standing audience, many clearly identifiable"
     },
     {
@@ -2120,8 +1995,8 @@
         "bg": "Погледът, който казва, че бедата вече е започнала.",
         "de": "Der Blick, der sagt, dass der Ärger schon begonnen hat."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-b3d70d9d-71eb-4a9b-b8f8-c53b0068727f.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-b3d70d9d-71eb-4a9b-b8f8-c53b0068727f-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-b3d70d9d-71eb-4a9b-b8f8-c53b0068727f.webp",
+      "tile": "https://titaniachaos.com/images/media/a-b3d70d9d-71eb-4a9b-b8f8-c53b0068727f-s.webp"
     },
     {
       "id": "a-cd563ea5-553b-422b-9723-bbc102345524",
@@ -2141,8 +2016,8 @@
         "bg": "Служба за рождени дни, отворена за всеки, който има такъв.",
         "de": "Ein Amt für Geburtstage, offen für alle, die einen haben."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-cd563ea5-553b-422b-9723-bbc102345524.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-cd563ea5-553b-422b-9723-bbc102345524-s.webp"
+      "url": "https://titaniachaos.com/images/media/a-cd563ea5-553b-422b-9723-bbc102345524.webp",
+      "tile": "https://titaniachaos.com/images/media/a-cd563ea5-553b-422b-9723-bbc102345524-s.webp"
     },
     {
       "id": "a-de658a10-335c-4aa8-adf1-6681df61c1e0",
@@ -2162,8 +2037,8 @@
         "bg": "Толкова шумна зала се печели по едно семейство наведнъж.",
         "de": "So ein lauter Saal wird Familie für Familie gewonnen."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-de658a10-335c-4aa8-adf1-6681df61c1e0.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-de658a10-335c-4aa8-adf1-6681df61c1e0-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-de658a10-335c-4aa8-adf1-6681df61c1e0.webp",
+      "tile": "https://titaniachaos.com/images/media/a-de658a10-335c-4aa8-adf1-6681df61c1e0-s.webp",
       "othersInFrame": "children and adults at a public event, several clearly identifiable"
     },
     {
@@ -2182,9 +2057,29 @@
         "bg": "Двадесет и пет души, прекарали седмица в провали един пред друг.",
         "de": "Fünfundzwanzig Menschen, die eine Woche lang voreinander gescheitert sind."
       },
-      "url": "https://titaniachaos.github.io/images/media/a-e9b2ae95-a64f-40d1-9bbc-25df2c9a67e3.webp",
-      "tile": "https://titaniachaos.github.io/images/media/a-e9b2ae95-a64f-40d1-9bbc-25df2c9a67e3-s.webp",
+      "url": "https://titaniachaos.com/images/media/a-e9b2ae95-a64f-40d1-9bbc-25df2c9a67e3.webp",
+      "tile": "https://titaniachaos.com/images/media/a-e9b2ae95-a64f-40d1-9bbc-25df2c9a67e3-s.webp",
       "othersInFrame": "about twenty-five people, clearly identifiable"
+    },
+    {
+      "id": "a-f2ed9844-1e7c-4d3f-8391-2e2627046173",
+      "kind": "photo",
+      "tags": [
+        "portrait"
+      ],
+      "alt": {
+        "en": "A framed line portrait of a clown by Fedir Andriiovych Aleksandrovych",
+        "bg": "Рамкиран линеен портрет на клоун от Федір Андрійович Александрович",
+        "de": "Gerahmtes Linienporträt eines Clowns von Fedir Andriiovych Aleksandrovych"
+      },
+      "caption": {
+        "en": "Clown portrait by Fedir Andriiovych Aleksandrovych (Федір Андрійович Александрович).",
+        "bg": "Портрет на клоун от Федір Андрійович Александрович.",
+        "de": "Clownporträt von Fedir Andriiovych Aleksandrovych (Федір Андрійович Александрович)."
+      },
+      "creator": "Fedir Andriiovych Aleksandrovych (Федір Андрійович Александрович)",
+      "url": "https://titaniachaos.com/images/media/a-f2ed9844-1e7c-4d3f-8391-2e2627046173.webp",
+      "tile": "https://titaniachaos.com/images/media/a-f2ed9844-1e7c-4d3f-8391-2e2627046173-s.webp"
     },
     {
       "id": "b-img-1464",
@@ -2203,8 +2098,8 @@
         "bg": "Титания Хаос в червен костюм се усмихва сред улично шествие",
         "de": "Titania Chaos lächelt im roten Kostüm inmitten eines Straßenumzugs"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-1464.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-1464-s.webp",
+      "url": "https://titaniachaos.com/images/media/b-img-1464.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-1464-s.webp",
       "othersInFrame": "people in a street-parade crowd"
     },
     {
@@ -2225,8 +2120,8 @@
         "bg": "Титания Хаос завърта широка зелена шарена пола по време на улично шествие",
         "de": "Titania Chaos wirbelt bei einem Straßenumzug einen breiten grün gemusterten Rock"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-1421.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-1421-s.webp",
+      "url": "https://titaniachaos.com/images/media/b-img-1421.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-1421-s.webp",
       "othersInFrame": "people in a street-parade crowd"
     },
     {
@@ -2246,8 +2141,8 @@
         "bg": "Черно-бял уличен портрет на Титания Хаос в костюм сред зрители на шествие",
         "de": "Schwarzweißes Straßenporträt von Titania Chaos im Kostüm unter Zuschauenden"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-1463.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-1463-s.webp",
+      "url": "https://titaniachaos.com/images/media/b-img-1463.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-1463-s.webp",
       "othersInFrame": "people in a street-parade crowd"
     },
     {
@@ -2268,8 +2163,8 @@
         "bg": "Титания Хаос дава пет на зрител по време на улично шествие",
         "de": "Titania Chaos gibt einer Person beim Straßenumzug ein High Five"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-1420.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-1420-s.webp",
+      "url": "https://titaniachaos.com/images/media/b-img-1420.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-1420-s.webp",
       "othersInFrame": "spectators at a street parade"
     },
     {
@@ -2289,8 +2184,8 @@
         "bg": "Титания Хаос позира в червен костюм на оживена улица по време на шествие",
         "de": "Titania Chaos posiert im roten Kostüm auf einer belebten Umzugsstraße"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-1462.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-1462-s.webp",
+      "url": "https://titaniachaos.com/images/media/b-img-1462.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-1462-s.webp",
       "othersInFrame": "people in a street-parade crowd"
     },
     {
@@ -2311,8 +2206,8 @@
         "bg": "Титания Хаос коленичи на сцената до дървена кукла и други артисти",
         "de": "Titania Chaos kniet auf der Bühne neben einer Holzpuppe und weiteren Spielenden"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-3748.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-3748-s.webp",
+      "url": "https://titaniachaos.com/images/media/b-img-3748.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-3748-s.webp",
       "othersInFrame": "fellow performers on stage"
     },
     {
@@ -2332,8 +2227,8 @@
         "bg": "Титания Хаос седи пред микрофон по време на радио участие",
         "de": "Titania Chaos sitzt bei einem Radioauftritt vor einem Mikrofon"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-7189.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-7189-s.webp"
+      "url": "https://titaniachaos.com/images/media/b-img-7189.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-7189-s.webp"
     },
     {
       "id": "b-img-3806",
@@ -2353,8 +2248,8 @@
         "bg": "Титания Хаос приканва за тишина деца и възрастни по време на работилница",
         "de": "Titania Chaos bittet Kinder und Erwachsene in einem Workshop spielerisch um Ruhe"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-3806.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-3806-s.webp",
+      "url": "https://titaniachaos.com/images/media/b-img-3806.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-3806-s.webp",
       "othersInFrame": "children and adults in a workshop"
     },
     {
@@ -2374,8 +2269,8 @@
         "bg": "Титания Хаос в червен костюм и с клоунски нос се обръща към камерата сред шествие",
         "de": "Titania Chaos im roten Kostüm und mit Clownsnase blickt inmitten eines Umzugs zur Kamera"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-parade-portrait.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-parade-portrait-s.webp",
+      "url": "https://titaniachaos.com/images/media/b-parade-portrait.webp",
+      "tile": "https://titaniachaos.com/images/media/b-parade-portrait-s.webp",
       "othersInFrame": "people in a street-parade crowd"
     },
     {
@@ -2396,8 +2291,8 @@
         "bg": "Титания Хаос играе на сцена в червена рокля с яркожълти ръкави",
         "de": "Titania Chaos spielt auf der Bühne in einem roten Kleid mit leuchtend gelben Ärmeln"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-dsc02596.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-dsc02596-s.webp"
+      "url": "https://titaniachaos.com/images/media/b-dsc02596.webp",
+      "tile": "https://titaniachaos.com/images/media/b-dsc02596-s.webp"
     },
     {
       "id": "b-img-7549",
@@ -2418,8 +2313,8 @@
         "bg": "Титания Хаос балансира червена жонгльорска бухалка върху носа си",
         "de": "Titania Chaos balanciert eine rote Jonglierkeule auf ihrer Nase"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-7549.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-7549-s.webp"
+      "url": "https://titaniachaos.com/images/media/b-img-7549.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-7549-s.webp"
     },
     {
       "id": "b-img-3750",
@@ -2439,8 +2334,8 @@
         "bg": "Титания Хаос играе от горен балкон с дълго украсено въже",
         "de": "Titania Chaos spielt von einem oberen Balkon mit einem langen geschmückten Seil"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-3750.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-3750-s.webp"
+      "url": "https://titaniachaos.com/images/media/b-img-3750.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-3750-s.webp"
     },
     {
       "id": "b-img-1424",
@@ -2460,8 +2355,8 @@
         "bg": "Титания Хаос жестикулира към публиката на шествието, а зад нея има гигантска кукла",
         "de": "Titania Chaos gestikuliert zur Umzugsmenge, hinter ihr eine riesige Puppe"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-1424.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-1424-s.webp",
+      "url": "https://titaniachaos.com/images/media/b-img-1424.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-1424-s.webp",
       "othersInFrame": "people in a parade crowd"
     },
     {
@@ -2482,8 +2377,8 @@
         "bg": "Титания Хаос играе в червен костюм сред многолюдно улично шествие",
         "de": "Titania Chaos spielt im roten Kostüm in einem belebten Straßenumzug"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-1466.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-1466-s.webp",
+      "url": "https://titaniachaos.com/images/media/b-img-1466.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-1466-s.webp",
       "othersInFrame": "people in a street-parade crowd"
     },
     {
@@ -2503,8 +2398,8 @@
         "bg": "Черно-бял портрет на Титания Хаос сред улична тълпа",
         "de": "Schwarzweißes Porträt von Titania Chaos in einer Straßenmenge"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-1465.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-1465-s.webp",
+      "url": "https://titaniachaos.com/images/media/b-img-1465.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-1465-s.webp",
       "othersInFrame": "people in a street crowd"
     },
     {
@@ -2526,8 +2421,8 @@
         "bg": "Близък план на Титания Хаос с дете и цветна играчка на улицата",
         "de": "Nahaufnahme von Titania Chaos mit einem Kind und buntem Spielzeug auf der Straße"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-1422.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-1422-s.webp",
+      "url": "https://titaniachaos.com/images/media/b-img-1422.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-1422-s.webp",
       "othersInFrame": "a child at a public street event"
     },
     {
@@ -2548,9 +2443,9 @@
         "bg": "Титания Хаос репетира движение в студио с розов шарен гащеризон",
         "de": "Titania Chaos probt Bewegung im Studio in einer rosa gemusterten Latzhose"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-4998.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-4998-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/b-img-4998.mp4"
+      "url": "https://titaniachaos.com/images/media/b-img-4998.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-4998-s.webp",
+      "film": "https://titaniachaos.com/images/media/b-img-4998.mp4"
     },
     {
       "id": "b-img-2046",
@@ -2571,9 +2466,9 @@
         "bg": "Камерата преминава през празна площадка с графити и сценичен двор",
         "de": "Die Kamera bewegt sich durch einen leeren, graffitibedeckten Spiel- und Auftrittshof"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-2046.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-2046-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/b-img-2046.mp4"
+      "url": "https://titaniachaos.com/images/media/b-img-2046.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-2046-s.webp",
+      "film": "https://titaniachaos.com/images/media/b-img-2046.mp4"
     },
     {
       "id": "b-img-8531",
@@ -2594,9 +2489,9 @@
         "bg": "Титания Хаос жестикулира по време на представление върху дървена платформа на открито",
         "de": "Titania Chaos gestikuliert bei einem Auftritt auf einer Holzplattform im Freien"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-8531.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-8531-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/b-img-8531.mp4"
+      "url": "https://titaniachaos.com/images/media/b-img-8531.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-8531-s.webp",
+      "film": "https://titaniachaos.com/images/media/b-img-8531.mp4"
     },
     {
       "id": "b-img-7614",
@@ -2617,9 +2512,9 @@
         "bg": "Титания Хаос играе на сцена сред яркоцветни платнени реквизити",
         "de": "Titania Chaos spielt auf der Bühne zwischen farbenfrohen Stoffrequisiten"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-7614.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-7614-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/b-img-7614.mp4"
+      "url": "https://titaniachaos.com/images/media/b-img-7614.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-7614-s.webp",
+      "film": "https://titaniachaos.com/images/media/b-img-7614.mp4"
     },
     {
       "id": "b-img-5213",
@@ -2640,9 +2535,9 @@
         "bg": "Титания Хаос играе в червено сред семейства на фестивал на открито",
         "de": "Titania Chaos spielt in Rot zwischen Familien bei einem Festival im Freien"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-5213.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-5213-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/b-img-5213.mp4",
+      "url": "https://titaniachaos.com/images/media/b-img-5213.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-5213-s.webp",
+      "film": "https://titaniachaos.com/images/media/b-img-5213.mp4",
       "othersInFrame": "children and adults at an outdoor festival"
     },
     {
@@ -2664,9 +2559,9 @@
         "bg": "Титания Хаос в светлосиня рокля говори с мегафон до тухлена стена",
         "de": "Titania Chaos spricht im hellblauen Kleid durch ein Megafon neben einer Backsteinwand"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-2755.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-2755-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/b-img-2755.mp4"
+      "url": "https://titaniachaos.com/images/media/b-img-2755.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-2755-s.webp",
+      "film": "https://titaniachaos.com/images/media/b-img-2755.mp4"
     },
     {
       "id": "b-img-1816",
@@ -2686,9 +2581,9 @@
         "bg": "Задкулисно селфи на Титания Хаос с тъмна рокля, бяла дантелена яка и червен нос",
         "de": "Backstage-Selfie von Titania Chaos im dunklen Kleid mit weißem Spitzenkragen und roter Nase"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-1816.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-1816-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/b-img-1816.mp4"
+      "url": "https://titaniachaos.com/images/media/b-img-1816.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-1816-s.webp",
+      "film": "https://titaniachaos.com/images/media/b-img-1816.mp4"
     },
     {
       "id": "b-img-6401",
@@ -2709,9 +2604,9 @@
         "bg": "Титания Хаос е приклекнала до колело на бус, за да го огледа или поправи",
         "de": "Titania Chaos hockt neben einem Kleinbus-Rad, um es zu prüfen oder zu reparieren"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-6401.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-6401-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/b-img-6401.mp4"
+      "url": "https://titaniachaos.com/images/media/b-img-6401.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-6401-s.webp",
+      "film": "https://titaniachaos.com/images/media/b-img-6401.mp4"
     },
     {
       "id": "b-img-6436",
@@ -2733,9 +2628,9 @@
         "bg": "Титания Хаос се движи по сцена на открито до седнала семейна публика",
         "de": "Titania Chaos bewegt sich über eine Freiluftbühne neben sitzendem Familienpublikum"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-6436.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-6436-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/b-img-6436.mp4",
+      "url": "https://titaniachaos.com/images/media/b-img-6436.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-6436-s.webp",
+      "film": "https://titaniachaos.com/images/media/b-img-6436.mp4",
       "othersInFrame": "children and adults in the audience"
     },
     {
@@ -2757,9 +2652,9 @@
         "bg": "Титания Хаос пее или говори в микрофон по време на улично представление",
         "de": "Titania Chaos singt oder spricht bei einem Straßenauftritt ins Mikrofon"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-7960.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-7960-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/b-img-7960.mp4"
+      "url": "https://titaniachaos.com/images/media/b-img-7960.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-7960-s.webp",
+      "film": "https://titaniachaos.com/images/media/b-img-7960.mp4"
     },
     {
       "id": "b-img-6558",
@@ -2780,9 +2675,9 @@
         "bg": "Артист прескача приклекнали деца по време на представление на открито",
         "de": "Ein Künstler springt bei einer Freiluftvorstellung über hockende Kinder"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-6558.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-6558-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/b-img-6558.mp4",
+      "url": "https://titaniachaos.com/images/media/b-img-6558.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-6558-s.webp",
+      "film": "https://titaniachaos.com/images/media/b-img-6558.mp4",
       "othersInFrame": "a fellow performer and children in the audience"
     },
     {
@@ -2803,9 +2698,9 @@
         "bg": "Титания Хаос споделя сцена на открито с певец по време на живо представление",
         "de": "Titania Chaos steht bei einem Live-Auftritt mit einem Sänger auf einer Freiluftbühne"
       },
-      "url": "https://titaniachaos.github.io/images/media/b-img-3107.webp",
-      "tile": "https://titaniachaos.github.io/images/media/b-img-3107-s.webp",
-      "film": "https://titaniachaos.github.io/images/media/b-img-3107.mp4",
+      "url": "https://titaniachaos.com/images/media/b-img-3107.webp",
+      "tile": "https://titaniachaos.com/images/media/b-img-3107-s.webp",
+      "film": "https://titaniachaos.com/images/media/b-img-3107.mp4",
       "othersInFrame": "a fellow performer on stage"
     }
   ]

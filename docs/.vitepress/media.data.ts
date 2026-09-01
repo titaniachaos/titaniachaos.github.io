@@ -61,6 +61,8 @@ export interface Frame {
   alt: Localised
   /** What someone who can see it might not know. Required in all three. */
   caption: Localised
+  /** The maker of this specific work when the global photography credit does not apply. */
+  creator?: string
   /** The length of the clip, in whole seconds. Every film is self-hosted. */
   seconds?: number
   /**
@@ -642,6 +644,8 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'dressing-room',
+    draft: true,
+    heldBack: 'Rejected from website use by the archive owner.',
     focus: 'right top',
     kind: 'photo',
     tags: ['portrait', 'stage', 'solitude'],
@@ -658,6 +662,8 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'harbour-bollard',
+    draft: true,
+    heldBack: 'Rejected from website use by the archive owner.',
     focus: 'centre',
     kind: 'photo',
     tags: ['portrait', 'street', 'solitude'],
@@ -824,6 +830,8 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-0468',
+    draft: true,
+    heldBack: 'Rejected from website use by the archive owner.',
     kind: 'photo',
     tags: ['portrait', 'solitude'],
     alt: { en: 'Titania Chaos in a turquoise high-collared dress with a red nose, standing quietly against a pale wall', bg: 'Титания Хаос с тюркоазена рокля с висока яка и червен нос, застанала тихо до светла стена', de: 'Titania Chaos in türkisem Kleid mit hohem Kragen und roter Nase, still vor einer hellen Wand' },
@@ -868,6 +876,8 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-0825',
+    draft: true,
+    heldBack: 'Rejected from website use by the archive owner.',
     kind: 'photo',
     tags: ['street', 'portrait', 'props'],
     alt: { en: 'Selfie of Titania Chaos in a navy jacket with gold braid in front of a bronze monument whose figures have been given red noses too', bg: 'Селфи на Титания Хаос с тъмносиньо сако със златни ширити пред бронзов паметник, чиито фигури също са с червени носове', de: 'Selfie von Titania Chaos in marineblauer Jacke mit Goldlitze vor einem Bronzedenkmal, dessen Figuren ebenfalls rote Nasen tragen' },
@@ -950,6 +960,8 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-1474',
+    draft: true,
+    heldBack: 'Rejected from website use by the archive owner.',
     kind: 'photo',
     tags: ['street', 'portrait'],
     othersInFrame: 'two men, clearly identifiable',
@@ -1126,7 +1138,7 @@ const FRAMES: Frame[] = [
   {
     id: 'a-img-7052',
     draft: true,
-    heldBack: 'Titania in front of political graffiti. Whether this project speaks on that subject in public is hers to decide, not a tagging decision',
+    heldBack: 'Rejected from website use by the archive owner.',
     kind: 'photo',
     tags: ['street', 'portrait'],
     alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
@@ -1143,6 +1155,8 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-img-7288',
+    draft: true,
+    heldBack: 'Rejected from website use by the archive owner.',
     kind: 'photo',
     tags: ['stage', 'performance'],
     othersInFrame: 'a fellow performer, clearly identifiable',
@@ -1298,12 +1312,19 @@ const FRAMES: Frame[] = [
   },
   {
     id: 'a-f2ed9844-1e7c-4d3f-8391-2e2627046173',
-    draft: true,
-    heldBack: 'a framed line drawing by another artist, signed and not attributed here — somebody else\'s work, photographed',
     kind: 'photo',
     tags: ['portrait'],
-    alt: { en: 'TODO', bg: 'TODO', de: 'TODO' },
-    caption: { en: 'TODO', bg: 'TODO', de: 'TODO' }
+    creator: 'Fedir Andriiovych Aleksandrovych (Федір Андрійович Александрович)',
+    alt: {
+      en: 'A framed line portrait of a clown by Fedir Andriiovych Aleksandrovych',
+      bg: 'Рамкиран линеен портрет на клоун от Федір Андрійович Александрович',
+      de: 'Gerahmtes Linienporträt eines Clowns von Fedir Andriiovych Aleksandrovych'
+    },
+    caption: {
+      en: 'Clown portrait by Fedir Andriiovych Aleksandrovych (Федір Андрійович Александрович).',
+      bg: 'Портрет на клоун от Федір Андрійович Александрович.',
+      de: 'Clownporträt von Fedir Andriiovych Aleksandrovych (Федір Андрійович Александрович).'
+    }
   },
   {
     id: 'b-img-1464',

@@ -238,3 +238,49 @@
     margin-inline: auto;
   }
 }
+
+/* Two figures in a row are a pair, so set them as one.
+
+   The home page places its pictures in twos -- one floated right, one left,
+   with the prose running between them. When the two are different shapes the
+   taller overhangs the text by 125-176px.
+
+   Resizing cannot fix that, and it is worth saying why, because it looks as
+   though it should. Narrowing a float widens the column beside it, so the
+   text needs fewer lines and gets shorter too; the gap follows the picture
+   down. Measured: capping the pair at 15rem moved the total from 432px to
+   436px, and the worst single gap from 178px to 184px. Capping the image's
+   height instead leaves the box at its old width -- an image contributes its
+   intrinsic width to `max-content` regardless of `max-height` -- so the text
+   then wraps against 114px of empty box, a horizontal gap for a vertical one.
+
+   What works is not floating them. Side by side in one row, at half the
+   measure each, with the prose above and below: nothing is beside them, so
+   there is no gap to leave, and two pictures of different shapes read as a
+   spread instead of as a mistake.
+
+   `.figure + .figure.figure` doubles the class deliberately. MediaFigure's
+   own `width` is a scoped rule carrying a `[data-v-...]` attribute, which
+   ties with a two-class selector, and a tie goes to the component. */
+@media (min-width: 721px) {
+  .vp-doc .figure:has(+ .figure),
+  .vp-doc .figure + .figure.figure {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 0.6rem);
+    max-width: calc(50% - 0.6rem);
+    margin: 0.4rem 0 1.2rem;
+  }
+  /* Same ceiling as a plate, so a page that uses both keeps one rhythm. At
+     half the measure an untrimmed portrait stands 750px tall, which is a
+     different page. The image centres in the half it no longer fills; with
+     nothing flowing beside it that is a gallery cell, not a gap. */
+  .vp-doc .figure:has(+ .figure) :is(.figure__image, .figure__video),
+  .vp-doc .figure + .figure.figure :is(.figure__image, .figure__video) {
+    width: auto;
+    max-width: 100%;
+    max-height: 26rem;
+    margin-inline: auto;
+  }
+}

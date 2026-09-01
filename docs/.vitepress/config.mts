@@ -6,6 +6,9 @@ import {
   localeAlternateTags
 } from './seo.ts'
 import { runBuildHooks, runSitemapHooks } from './generators.ts'
+import { shelf, paths } from '../../scripts/lib/browse.mjs'
+import { TAG_NAMES, asTitle } from './categories.ts'
+import type { Lang } from './locale.ts'
 /**
  * The Clown project is a separate VitePress site built from the `clown`
  * repository. Same domain, so keep the reader in their language and their tab.
@@ -17,6 +20,39 @@ const CLOWN_SITE = (prefix: string) => `${HOSTNAME}/clown${prefix}/`
  * no new tab, no external-link icon, and the referrer is worth keeping.
  */
 const SAME_SITE = { target: '_self', rel: '', noIcon: true } as const
+
+/**
+ * The way in to the 44 keyword paths.
+ *
+ * Every published photograph is reachable from one of them, and until this
+ * menu existed a reader could only arrive by typing a URL or following a
+ * `Narrower` link from a page they had no way to reach either. A browse
+ * surface nothing links to is the pool with extra steps.
+ *
+ * The single words only: thirteen entries, richest first, and the deeper
+ * combinations are reached from the listing itself. Built from the archive, so
+ * a new word in TAGS appears here on the next build and a word nothing carries
+ * never does.
+ */
+const browseState = await shelf()
+const browseWords = paths(browseState)
+  .filter((p) => p.want.length === 1)
+  .map((p) => ({ word: p.want[0], n: p.frames.length }))
+
+const browseMenu = (lang: Lang) => ({
+  text: BROWSE_LABEL[lang],
+  items: browseWords.map(({ word }) => ({
+    text: asTitle(TAG_NAMES[lang][word as keyof (typeof TAG_NAMES)[typeof lang]]),
+    link: `${lang === 'en' ? '' : '/' + lang}/${word}`
+  }))
+})
+
+/** What the menu is called. Not a page title — nothing sits at the top of it. */
+const BROWSE_LABEL: Record<Lang, string> = {
+  en: 'Pictures',
+  bg: 'Снимки',
+  de: 'Bilder'
+}
 
 const PHOTOGRAPHERS =
   'Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, ' +
@@ -170,6 +206,7 @@ export default defineConfig({
           { text: 'Birthdays', link: '/events' },
           { text: 'Work with Titania', link: '/work-with-titania' },
           { text: 'Blog', link: CLOWN_SITE('') + 'blog/', ...SAME_SITE },
+          browseMenu('en'),
           { text: 'About', link: '/about-titania' },
           { text: 'Clown Project', link: CLOWN_SITE(''), ...SAME_SITE }
         ],
@@ -199,6 +236,7 @@ export default defineConfig({
           { text: 'Рождени дни', link: '/bg/events' },
           { text: 'Работа с Титания', link: '/bg/work-with-titania' },
           { text: 'Блог', link: CLOWN_SITE('/bg') + 'blog/', ...SAME_SITE },
+          browseMenu('bg'),
           { text: 'За Титания', link: '/bg/about-titania' },
           { text: 'Проект „Клоун“', link: CLOWN_SITE('/bg'), ...SAME_SITE }
         ],
@@ -233,6 +271,7 @@ export default defineConfig({
           { text: 'Kindergeburtstage', link: '/de/events' },
           { text: 'Mit Titania arbeiten', link: '/de/work-with-titania' },
           { text: 'Blog', link: CLOWN_SITE('/de') + 'blog/', ...SAME_SITE },
+          browseMenu('de'),
           { text: 'Über Titania', link: '/de/about-titania' },
           { text: 'Clown-Projekt', link: CLOWN_SITE('/de'), ...SAME_SITE }
         ],

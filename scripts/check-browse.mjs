@@ -13,7 +13,7 @@
 //
 // Usage: node scripts/check-browse.mjs [distDir]
 
-import { access } from 'node:fs/promises'
+import { access, readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { shelf, paths, ordered, SHOWN, unreachable } from './lib/browse.mjs'
 
@@ -32,6 +32,30 @@ for (const p of wanted) {
     } catch {
       problems.push(`${locale ? '/' + locale : ''}${p.path} was not built`)
     }
+  }
+}
+
+// Reachable by a reader, not just by the build. A listing nobody links to is
+// the pool with extra steps, which is the state this replaced — so the home
+// page of each language must offer the way in.
+for (const locale of LOCALES) {
+  const home = join(dist, locale, 'index.html')
+  let html = ''
+  try {
+    html = await readFile(home, 'utf8')
+  } catch {
+    problems.push(`${locale || 'root'}: no home page to check the menu on`)
+    continue
+  }
+  const prefix = locale ? `/${locale}` : ''
+  const missing = wanted
+    .filter((p) => p.want.length === 1)
+    .filter((p) => !html.includes(`href="${prefix}/${p.want[0]}"`))
+  if (missing.length) {
+    problems.push(
+      `${locale || 'root'} home page does not link to ${missing.length} browse path(s): ` +
+        missing.map((p) => p.path).join(', ')
+    )
   }
 }
 

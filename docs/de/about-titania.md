@@ -8,6 +8,8 @@ outline: [1, 2]
 <MediaHero />
 
 <MediaFigure tags="street performance portrait" />
+<MediaFigure id="a-c6ab823a-6d6e-48cd-8dba-d3c2f158e590" />
+<MediaFigure id="a-img-4690" />
 
 > Ich folge einer Leidenschaft für Kontakt durch Humor, Sprachen, Poesie und Emotion.
 
@@ -48,6 +50,8 @@ Ich hatte das Privileg, unter anderem von folgenden Künstlerinnen, Künstlern u
 ## In den Medien
 
 <MediaFigure tags="press" />
+<MediaFigure id="b-img-7189" />
+<MediaFigure id="a-img-6763" />
 
 Titania Chaos war im bulgarischen Fernsehen, Radio und in Printmedien zu sehen und zu hören und sprach dort über Clownerie, Lachen und den Weg, der Tatiana zu Titania führte.
 

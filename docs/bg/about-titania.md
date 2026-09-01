@@ -8,6 +8,8 @@ outline: [1, 2]
 <MediaHero />
 
 <MediaFigure tags="street performance portrait" />
+<MediaFigure id="a-c6ab823a-6d6e-48cd-8dba-d3c2f158e590" />
+<MediaFigure id="a-img-4690" />
 
 > Следвам страстта си към контакта чрез хумор, езици, поезия и емоция.
 
@@ -48,6 +50,8 @@ outline: [1, 2]
 ## В медиите
 
 <MediaFigure tags="press" />
+<MediaFigure id="b-img-7189" />
+<MediaFigure id="a-img-6763" />
 
 Титания Хаос е представяна в български телевизионни, радио и печатни медии, където говори за клоунадата, смеха и пътя, отвел Татяна до Титания.
 

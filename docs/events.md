@@ -29,6 +29,7 @@ My games come from social circus. We juggle, invent characters and play with bal
 ## What I bring
 
 <MediaFigure tags="balloons street" />
+<MediaFigure id="a-img-8734" />
 
 - The time-travelling camera, costumes and accessories
 - Circus games with movement, improvisation and teamwork
@@ -37,6 +38,7 @@ My games come from social circus. We juggle, invent characters and play with bal
 ## Price & conditions
 
 <MediaFigure tags="children birthday" />
+<MediaFigure id="a-img-1414" />
 
 Up to 10 children, approximately 2–3 hours: **€290 plus taxi** within Vienna. Cancellation less than two days in advance incurs a €100 fee; rescheduling is always possible.
 

@@ -31,6 +31,7 @@ features:
 ## Erfahrungen aus den Clown-Workshops
 
 <MediaFigure tags="workshop performance" />
+<MediaFigure id="b-img-4998" />
 
 > „Alles war fließend, feinsinnig und lustig. Ihr großes Feingefühl und ihre Freundlichkeit haben es ihr ermöglicht, jede Person persönlich zu begleiten.“ — Juliette, Philosophielehrerin
 
@@ -42,6 +43,7 @@ features:
 ## Für wen die Workshops sind
 
 <MediaFigure tags="workshop juggling" />
+<MediaFigure id="a-img-3608" />
 
 Sie brauchen keine Theatererfahrung und keine Vorerfahrung mit Clownerie. Sie können IT-Fachkraft, Lehrerin, Jurist, Sozialarbeiterin, Krankenpfleger, Übersetzerin, Koch, Tänzerin, Bibliothekar, Musikerin, Feuerwehrmann, Ärztin, Geschäftsinhaber, Künstlerin oder Friseur sein. Sie können in einem Büro, in einer Schule, in einem Krankenhaus, in einer Küche oder auf einer Bühne arbeiten. Sie sind jemand, der mehr über sich selbst entdecken und dabei Freude haben möchte.
 
@@ -60,6 +62,7 @@ Die Workshops stehen allen offen, die bereit für ein Abenteuer mit ihrer eigene
 ## Praktische Informationen {#practical-details}
 
 <MediaFigure tags="workshop" />
+<MediaFigure id="a-img-0561" />
 
 Die Workshops finden in Wien statt und heißen sowohl erwachsene Anfängerinnen und Anfänger als auch Menschen mit Theatererfahrung willkommen.
 
@@ -67,9 +70,10 @@ Die Workshops finden in Wien statt und heißen sowohl erwachsene Anfängerinnen 
 
 [Workshops anfragen](mailto:agent@tatianapetkova.com?subject=Clown%20workshop%20enquiry){.contact-button}
 
-## Einen Clown-Workshop verschenken
+## Einen Clown-Workshop verschenken {#join-in}
 
-<MediaFigure tags="portrait street" /> {#join-in}
+<MediaFigure tags="portrait street" />
+<MediaFigure id="a-img-0013" />
 
 Schenken Sie jemandem einen Workshop – oder kommen Sie mit einer Freundin und teilen Sie Momente der Leichtigkeit und Freude.
 

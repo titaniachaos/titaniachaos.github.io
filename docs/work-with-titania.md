@@ -13,12 +13,15 @@ Her work moves between clowning, physical comedy, workshops, events, education a
 ## Perform & play
 
 <MediaFigure tags="performance stage" />
+<MediaFigure id="b-dsc02596" />
+<MediaFigure id="a-img-0491" />
 
 Titania can appear at festivals, weddings, corporate events, street events and other gatherings â€” as a clown performer, a playful intervention or with her time-travelling camera.
 
 ### Titania Chaos and her time-travelling camera
 
 <MediaFigure tags="camera performance" />
+<MediaFigure id="a-img-0494" />
 
 
 A portable photographic time machine, somewhere between street theatre, performance and an old-fashioned photo studio.
@@ -42,6 +45,7 @@ Workshops can also be developed for teams and organisations looking for a differ
 ## Learning & facilitation
 
 <MediaFigure tags="portrait" />
+<MediaFigure id="a-img-1208" />
 
 Titania is also an experienced facilitator and language teacher with 25 years of teaching experience.
 
@@ -52,6 +56,8 @@ Clowning, play and physical work can therefore also enter educational contexts â
 ## Children & communities
 
 <MediaFigure tags="children birthday" />
+<MediaFigure id="b-img-6401" />
+<MediaFigure id="a-img-9687" />
 
 Titania works with children, families and community settings through clowning, play and social circus.
 
@@ -63,6 +69,7 @@ For children's birthdays, there is a dedicated programme combining games, costum
 ## Invite Titania
 
 <MediaFigure tags="street performance" />
+<MediaFigure id="b-img-7549" />
 
 If you have an event, team, class, group or context in mind and are not sure which format fits, get in touch.
 

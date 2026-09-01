@@ -13,12 +13,15 @@ Ihre Arbeit bewegt sich zwischen Clownerie, physischer Komik, Workshops, Veranst
 ## Auftreten & spielen
 
 <MediaFigure tags="performance stage" />
+<MediaFigure id="b-dsc02596" />
+<MediaFigure id="a-img-0491" />
 
 Titania kann bei Festivals, Hochzeiten, Firmenveranstaltungen, Straßenfesten und anderen Zusammenkünften auftreten — als Clown-Performerin, spielerische Intervention oder mit ihrer Zeitreisekamera.
 
 ### Titania Chaos und ihre Zeitreisekamera
 
 <MediaFigure tags="camera performance" />
+<MediaFigure id="a-img-0494" />
 
 
 Eine tragbare fotografische Zeitmaschine, irgendwo zwischen Straßentheater, Performance und einem altmodischen Fotostudio.
@@ -42,6 +45,7 @@ Workshops können auch für Teams und Organisationen entwickelt werden, die eine
 ## Lernen & Facilitation
 
 <MediaFigure tags="portrait" />
+<MediaFigure id="a-img-1208" />
 
 Titania ist außerdem eine erfahrene Facilitatorin und Sprachlehrerin mit 25 Jahren Unterrichtserfahrung.
 
@@ -52,6 +56,8 @@ Clownerie, Spiel und körperliche Arbeit können daher auch in Bildungskontexte 
 ## Kinder & Gemeinschaften
 
 <MediaFigure tags="children birthday" />
+<MediaFigure id="b-img-6401" />
+<MediaFigure id="a-img-9687" />
 
 Titania arbeitet mit Kindern, Familien und Gemeinschaften durch Clownerie, Spiel und sozialen Zirkus.
 
@@ -63,6 +69,7 @@ Für Kindergeburtstage gibt es ein eigenes Programm, das Spiele, Kostüme, Zirku
 ## Titania einladen
 
 <MediaFigure tags="street performance" />
+<MediaFigure id="b-img-7549" />
 
 Wenn Sie eine Veranstaltung, ein Team, eine Klasse, eine Gruppe oder einen Kontext im Sinn haben und nicht sicher sind, welches Format passt, melden Sie sich.
 

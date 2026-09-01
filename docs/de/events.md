@@ -29,6 +29,7 @@ Meine Spiele stammen aus dem sozialen Zirkus. Wir jonglieren, erfinden Figuren u
 ## Was ich mitbringe
 
 <MediaFigure tags="balloons street" />
+<MediaFigure id="a-img-8734" />
 
 - Zeitreisekamera, Kostüme und Accessoires
 - Zirkusspiele mit Bewegung, Improvisation und Zusammenarbeit
@@ -37,6 +38,7 @@ Meine Spiele stammen aus dem sozialen Zirkus. Wir jonglieren, erfinden Figuren u
 ## Preis & Bedingungen
 
 <MediaFigure tags="children birthday" />
+<MediaFigure id="a-img-1414" />
 
 Bis zu 10 Kinder, etwa 2–3 Stunden: **€290 plus Taxi** in Wien. Bei Absage weniger als zwei Tage vorher fällt eine Stornogebühr von €100 an; eine Verschiebung ist jederzeit möglich.
 

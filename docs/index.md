@@ -31,6 +31,7 @@ features:
 ## Clown workshop experiences
 
 <MediaFigure tags="workshop performance" />
+<MediaFigure id="b-img-4998" />
 
 > “Everything was fluid, subtle and fun. Her great finesse and kindness enabled her to accompany each person personally.” — Juliette, philosophy teacher
 
@@ -42,6 +43,7 @@ features:
 ## Who the workshops are for
 
 <MediaFigure tags="workshop juggling" />
+<MediaFigure id="a-img-3608" />
 
 You do not need a theatre background or previous clown experience. You might be an IT specialist, a teacher, a lawyer, a social worker, a nurse, a translator, a cook, a dancer, a librarian, a musician, a firefighter, a doctor, a shop owner, an artist or a hairdresser. You might work in an office, a school, a hospital, a kitchen or on a stage. You are someone who wants to discover more about yourself and have fun doing so.
 
@@ -60,6 +62,7 @@ The workshops welcome anyone ready for an adventure with their own humanity, peo
 ## Practical details {#practical-details}
 
 <MediaFigure tags="workshop" />
+<MediaFigure id="a-img-0561" />
 
 Workshops take place in Vienna and welcome adult beginners as well as people with theatre experience.
 
@@ -67,9 +70,10 @@ Workshops take place in Vienna and welcome adult beginners as well as people wit
 
 [Ask about workshops](mailto:agent@tatianapetkova.com?subject=Clown%20workshop%20enquiry){.contact-button}
 
-## Give a clown workshop as a gift
+## Give a clown workshop as a gift {#join-in}
 
-<MediaFigure tags="portrait street" /> {#join-in}
+<MediaFigure tags="portrait street" />
+<MediaFigure id="a-img-0013" />
 
 Give someone a workshop—or come with a friend and share moments of lightness and joy.
 

@@ -6,6 +6,7 @@ import SocialWall from './SocialWall.vue'
 import MediaHero from './MediaHero.vue'
 import MediaFigure from './MediaFigure.vue'
 import JournalIndex from './JournalIndex.vue'
+import LocalePreference from './LocalePreference.vue'
 import './custom.css'
 
 export default {
@@ -24,6 +25,7 @@ export default {
     // the only support CTA from every phone, tablet and small laptop. The CSS
     // shows exactly one of the two.
     h(DefaultTheme.Layout, null, {
+      'layout-top': () => h(LocalePreference),
       'aside-ads-before': () => h(SupportCard, { place: 'aside' }),
       'doc-after': () => h(SupportCard, { place: 'inline' })
     })

@@ -198,3 +198,43 @@
   .VPNavBarHamburger { display: flex !important; }
   .VPNavScreen { display: block !important; }
 }
+
+/* A figure with nothing to flow beside it should stop pretending to float.
+
+   A float only works when the section has enough prose to close around it.
+   Where it does not, the picture towers over two lines and leaves a column of
+   empty page beside it, and the next heading clears below the picture rather
+   than below the text. Measured on /events: 988px of that down one page, in
+   gaps of 284-304px, while /work-with-titania -- whose sections carry lists
+   and several paragraphs -- had 100px in total.
+
+   The condition is structural, so `:has()` can say it: a figure with at most
+   two blocks between it and the next heading is a figure nearly alone in its
+   section. Those become a plate -- centred, capped in height, with the text
+   above and below it rather than beside it. Nothing is beside them, so there
+   is no gap to leave.
+
+   This is the same move the 720px rule already makes for narrow screens, for
+   the same reason; it just also applies when the shortage is prose rather
+   than width. */
+/* Only where floats exist. Below 720px every figure is already a full-width
+   break, and a max-height there would shrink it away from the edges for no
+   reason. */
+@media (min-width: 721px) {
+  .vp-doc .figure:has(+ :is(h2, h3)),
+  .vp-doc .figure:has(+ :is(p, ul, ol, blockquote) + :is(h2, h3)),
+  .vp-doc .figure:has(+ :is(p, ul, ol, blockquote) + :is(p, ul, ol, blockquote) + :is(h2, h3)) {
+    float: none;
+    width: auto;
+    max-width: 100%;
+    margin: 1.6rem 0;
+  }
+  .vp-doc .figure:has(+ :is(h2, h3)) :is(.figure__image, .figure__video),
+  .vp-doc .figure:has(+ :is(p, ul, ol, blockquote) + :is(h2, h3)) :is(.figure__image, .figure__video),
+  .vp-doc .figure:has(+ :is(p, ul, ol, blockquote) + :is(p, ul, ol, blockquote) + :is(h2, h3)) :is(.figure__image, .figure__video) {
+    width: auto;
+    max-width: 100%;
+    max-height: 26rem;
+    margin-inline: auto;
+  }
+}

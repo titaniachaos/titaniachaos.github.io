@@ -6,7 +6,7 @@ import type { HeadConfig, SiteConfig, TransformContext } from 'vitepress'
  * reads from the environment with today's value as the default: a migration is
  * `SITE_ORIGIN=https://example.at npm run docs:build`, not a search and replace.
  */
-export const HOSTNAME = (process.env.SITE_ORIGIN ?? 'https://titaniachaos.github.io').replace(/\/$/, '')
+export const HOSTNAME = (process.env.SITE_ORIGIN ?? 'https://titaniachaos.com').replace(/\/$/, '')
 
 /**
  * Token from Search Console's "HTML tag" verification method (the value of

@@ -21,7 +21,7 @@ import { readdir, readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
 const PROBE = 'https://origin-probe.invalid'
-const WRITTEN = 'titaniachaos.github.io'
+const WRITTEN = 'titaniachaos.com'
 const dist = 'docs/.vitepress/dist'
 
 console.log(`  building against ${PROBE} …`)

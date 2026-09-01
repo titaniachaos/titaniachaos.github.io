@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Clown workshops and physical comedy in Vienna
-description: Discover clown workshops, physical comedy, playful events and creative experiences with Vienna-based artist Titania Chaos.
+title: Clown workshops in Vienna for adults
+description: Clown workshops and clowning courses in Vienna for adults, with or without stage experience — play, presence, improvisation and physical work with Titania Chaos.
 hero:
   name: Titania Chaos
   text: Clown workshops, performances and parties in Vienna

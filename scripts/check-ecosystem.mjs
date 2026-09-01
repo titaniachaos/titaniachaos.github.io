@@ -24,7 +24,10 @@ for (const prefix of ["CLOWN_SITE('')", "CLOWN_SITE('/bg')", "CLOWN_SITE('/de')"
 requireText(seo, "jobTitle: 'Clown artist, psychologist and language teacher'", 'structured job title is stale')
 
 for (const [name, source] of [['English', en], ['Bulgarian', bg], ['German', de]]) {
-  if (!/team|тийм|Team/i.test(source.match(/^description:.*$/m)?.[0] ?? '')) {
+  // `екип` as well as `тийм`: the Bulgarian for a team is екип, and the page
+  // body has used екипна работа since it was written. The check only knew the
+  // transliterated loanword, so correct Bulgarian failed it.
+  if (!/team|тийм|екип|Team/i.test(source.match(/^description:.*$/m)?.[0] ?? '')) {
     problems.push(`${name} Work with Titania description does not mention team workshops`)
   }
 }

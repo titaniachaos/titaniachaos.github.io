@@ -1,6 +1,6 @@
 ---
-title: Clown-Performerin für Veranstaltungen in Wien
-description: Laden Sie die Wiener Clown-Performerin Titania Chaos zu Veranstaltungen ein oder buchen Sie Clown-, Physical-Comedy- und Teamwork-Workshops für Ihre Gruppe.
+title: Clown mieten in Wien — Firmenfeier, Hochzeit, Straßenfest
+description: "Clown-Performerin Titania Chaos in Wien mieten: Firmenfeiern, Hochzeiten, Festivals und Straßenfeste — Walking Act, Zeitreisekamera und Team-Workshops für Firmen."
 ---
 # Mit Titania arbeiten
 
@@ -34,11 +34,7 @@ Die Kamera eignet sich besonders gut für Geburtstagsfeiern, Hochzeiten, Firmenv
 
 <MediaFigure tags="workshop" />
 
-Titania bietet Clown- und Physical-Comedy-Workshops für Menschen mit oder ohne vorherige Bühnenerfahrung an.
-
-Die Arbeit basiert auf Spiel, Präsenz, Kommunikation, Scheitern, Neugier und Kontakt mit anderen.
-
-Workshops können auch für Teams und Organisationen entwickelt werden, die eine andere Art suchen, einander zu begegnen, zu spielen und zusammenzuarbeiten.
+Team-Workshops für Firmen und Organisationen, die eine andere Art suchen, einander zu begegnen, zu spielen und zusammenzuarbeiten. Offene Workshops für Einzelpersonen finden Sie auf der [Startseite](/de/#practical-details).
 
 [Workshops entdecken](/de/#practical-details){.contact-button}
 
@@ -61,9 +57,7 @@ Clownerie, Spiel und körperliche Arbeit können daher auch in Bildungskontexte 
 
 Titania arbeitet mit Kindern, Familien und Gemeinschaften durch Clownerie, Spiel und sozialen Zirkus.
 
-Für Kindergeburtstage gibt es ein eigenes Programm, das Spiele, Kostüme, Zirkuselemente und die Zeitreisekamera verbindet.
-
-[Kindergeburtstage](/de/events){.contact-button .secondary}
+[Kindergeburtstage, Kindergarten und Kinderfeste](/de/events){.contact-button .secondary}
 
 
 ## Titania einladen

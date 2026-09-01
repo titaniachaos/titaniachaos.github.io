@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Clown-Workshops und physische Komik in Wien
-description: Entdecken Sie Clown-Workshops, physische Komik, spielerische Veranstaltungen und kreative Erfahrungen mit der Wiener Künstlerin Titania Chaos.
+title: Clown-Workshops in Wien für Erwachsene
+description: Clown-Workshops und Clownerie-Kurse in Wien für Erwachsene — mit oder ohne Bühnenerfahrung. Spiel, Präsenz, Improvisation und Körperarbeit mit Titania Chaos.
 hero:
   name: Titania Chaos
   text: Clown-Workshops, Performances und Feste in Wien

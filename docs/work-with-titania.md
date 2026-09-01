@@ -1,6 +1,6 @@
 ---
-title: Clown performer for events in Vienna
-description: Invite Vienna-based clown performer Titania Chaos to events, or book clown, physical-comedy and team-building workshops for your group.
+title: Hire a clown in Vienna — company parties, weddings, street festivals
+description: Hire clown performer Titania Chaos in Vienna for company parties, weddings, festivals and street events — walking act, the time-travelling camera and team workshops for organisations.
 ---
 # Work with Titania
 
@@ -34,11 +34,7 @@ The camera works particularly well at birthday parties, weddings, company events
 
 <MediaFigure tags="workshop" />
 
-Titania offers clown and physical comedy workshops for people with or without previous performance experience.
-
-The work is based on play, presence, communication, failure, curiosity and contact with others.
-
-Workshops can also be developed for teams and organisations looking for a different way to meet, play and work together.
+Team workshops for organisations looking for a different way to meet, play and work together. Open workshops for individuals are on the [home page](/#practical-details).
 
 [Explore workshops](/#practical-details){.contact-button}
 
@@ -61,9 +57,7 @@ Clowning, play and physical work can therefore also enter educational contexts �
 
 Titania works with children, families and community settings through clowning, play and social circus.
 
-For children's birthdays, there is a dedicated programme combining games, costumes, circus elements and the time-travelling camera.
-
-[Children's birthdays](/events){.contact-button .secondary}
+[Birthdays, kindergartens and children's festivals](/events){.contact-button .secondary}
 
 
 ## Invite Titania

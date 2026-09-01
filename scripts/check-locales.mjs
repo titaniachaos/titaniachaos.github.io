@@ -72,6 +72,18 @@ for (const name of rootPages) {
     }
   }
 
+  // A colon inside an unquoted front-matter value is a YAML mapping, not text.
+  // `title: Clown mieten in Wien: Firmenfeier` is a parse error, and VitePress
+  // reports it as a build failure some way from the file that caused it — once
+  // while a stale dist made the copy look as though it had landed. Cheap to
+  // check here, where the front matter is already in hand.
+  for (const field of ['title', 'description']) {
+    const line = new RegExp(`^${field}: (.*)$`, 'm').exec(reference.frontmatter)?.[1]
+    if (line && /: /.test(line) && !/^["']/.test(line.trim())) {
+      add(`${name}: ${field} contains ": " and is not quoted — that is invalid YAML`)
+    }
+  }
+
   for (const locale of LOCALES) {
     const path = join(docs, locale, name)
     let source
@@ -86,6 +98,10 @@ for (const name of rootPages) {
     for (const field of ['title', 'description']) {
       if (!new RegExp(`^${field}:`, 'm').test(page.frontmatter)) {
         add(`${locale}/${name}: frontmatter has no ${field}`)
+      }
+      const line = new RegExp(`^${field}: (.*)$`, 'm').exec(page.frontmatter)?.[1]
+      if (line && /: /.test(line) && !/^["']/.test(line.trim())) {
+        add(`${locale}/${name}: ${field} contains ": " and is not quoted — that is invalid YAML`)
       }
     }
 

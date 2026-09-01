@@ -125,7 +125,6 @@ export const CATEGORY_UI: Record<Lang, {
   /** Above the written pages that discuss this category. */
   written: string
   /** The index page that lists every category. */
-  navLabel: string
   indexTitle: string
   indexDescription: string
   indexIntro: string
@@ -143,7 +142,6 @@ export const CATEGORY_UI: Record<Lang, {
     page: 'Page %1',
     about: 'This page is about',
     written: 'Read about this',
-    navLabel: 'Gallery',
     indexTitle: 'Everything, by what it is',
     indexDescription: 'Browse the photographs and films of Vienna clown Titania Chaos by subject.',
     indexIntro: 'Every photograph and film on this site, arranged by what it is rather than by which page it sits on.',
@@ -161,7 +159,6 @@ export const CATEGORY_UI: Record<Lang, {
     page: 'Страница %1',
     about: 'Тази страница е за',
     written: 'Прочетете за това',
-    navLabel: 'Галерия',
     indexTitle: 'Всичко, според това какво е',
     indexDescription: 'Разгледайте снимките и филмите на виенската клоунеса Титания Хаос по тема.',
     indexIntro: 'Всяка снимка и всеки филм на този сайт, подредени според това какво са, а не на коя страница стоят.',
@@ -179,7 +176,6 @@ export const CATEGORY_UI: Record<Lang, {
     page: 'Seite %1',
     about: 'Diese Seite handelt von',
     written: 'Dazu zu lesen',
-    navLabel: 'Galerie',
     indexTitle: 'Alles, nach dem was es ist',
     indexDescription: 'Die Fotos und Filme der Wiener Clownin Titania Chaos nach Thema.',
     indexIntro: 'Jedes Foto und jeder Film dieser Website, geordnet nach dem was sie sind statt danach, auf welcher Seite sie stehen.',

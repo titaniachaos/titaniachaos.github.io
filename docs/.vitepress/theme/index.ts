@@ -5,10 +5,7 @@ import WorkshopDates from './WorkshopDates.vue'
 import SocialWall from './SocialWall.vue'
 import MediaHero from './MediaHero.vue'
 import MediaFigure from './MediaFigure.vue'
-import MediaCategory from './MediaCategory.vue'
-import MediaIndex from './MediaIndex.vue'
 import JournalIndex from './JournalIndex.vue'
-import PageTopics from './PageTopics.vue'
 import './custom.css'
 
 export default {
@@ -18,12 +15,7 @@ export default {
     app.component('SocialWall', SocialWall)
     app.component('MediaHero', MediaHero)
     app.component('MediaFigure', MediaFigure)
-    app.component('MediaCategory', MediaCategory)
-    app.component('MediaIndex', MediaIndex)
     app.component('JournalIndex', JournalIndex)
-    // Also placed in the doc-after slot below, for every page that has one.
-    // The home layout does not, so index.md writes it out by hand.
-    app.component('PageTopics', PageTopics)
   },
   Layout: () =>
     // The sponsorship card fills the slot the default theme reserves for Carbon
@@ -33,9 +25,6 @@ export default {
     // shows exactly one of the two.
     h(DefaultTheme.Layout, null, {
       'aside-ads-before': () => h(SupportCard, { place: 'aside' }),
-      // What the page is about, then the ask. A reader who has finished the
-      // page should be offered somewhere to go before being offered a
-      // donation. PageTopics renders nothing on a page with no figures.
-      'doc-after': () => [h(PageTopics), h(SupportCard, { place: 'inline' })]
+      'doc-after': () => h(SupportCard, { place: 'inline' })
     })
 }

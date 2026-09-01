@@ -2,7 +2,6 @@
 import { computed } from 'vue'
 import { data } from '../media.data'
 import type { Media, Placement } from '../media.data'
-import { categoryPath } from '../categories.ts'
 import { useLang } from './useLang.ts'
 
 /**
@@ -46,7 +45,6 @@ const frame = computed<Media | null>(
 )
 
 const t = computed(() => data.ui[lang.value])
-const names = computed(() => data.label[lang.value])
 
 /** First figure right, second left, and so on down the page. */
 const side = computed(() => (at.value % 2 === 0 ? 'right' : 'left'))
@@ -85,14 +83,6 @@ const clock = (seconds: number) => `${Math.floor(seconds / 60)}:${String(seconds
       <a v-if="frame.permalink" class="figure__source" :href="frame.permalink" rel="noopener" target="_blank">
         {{ t.source }}
       </a>
-      <span class="figure__tags">
-        <a
-          v-for="tag in frame.tags"
-          :key="tag"
-          class="figure__tag"
-          :href="categoryPath(lang, tag)"
-        >{{ names[tag] }}</a>
-      </span>
     </figcaption>
   </figure>
 </template>
@@ -141,21 +131,6 @@ const clock = (seconds: number) => `${Math.floor(seconds / 60)}:${String(seconds
   margin-top: 0.25rem;
   font-size: 0.75rem;
 }
-.figure__tags {
-  display: block;
-  margin-top: 0.3rem;
-  color: var(--vp-c-text-3);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-}
-/* The tags under a picture are the way into the category pages: every
-   photograph on the site is a door to everything else of its kind. */
-.figure__tag { color: inherit; text-decoration: none; }
-.figure__tag:hover { color: var(--vp-c-brand-1); }
-.figure__tag:not(:last-child)::after { content: '·'; margin: 0 0.35rem; opacity: 0.6; }
-
 /* Text around a picture needs room to be text. Below this the figure stops
    floating and becomes a full-width break in the reading instead. */
 @media (max-width: 720px) {

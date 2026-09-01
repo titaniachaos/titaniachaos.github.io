@@ -3,8 +3,7 @@
 //
 // A section states what it is about by asking for a picture --
 // `<MediaFigure tags="birthday children" />` -- and that statement now does
-// three jobs: it chooses the frame, it fills the hero slider, and it decides
-// which category pages the page links to and appears on. So a German section
+// two jobs: it chooses the frame and fills the hero slider. So a German section
 // that asks for `children` where the English asks for `birthday children` is
 // not a slightly different picture. It is a page filed under a different
 // subject for German readers.
@@ -48,15 +47,6 @@ function asked(text) {
 const pages = new Map()
 const seen = new Set()
 
-/**
- * The chips are rendered from the `doc-after` slot on every page that has one.
- * The home layout has none -- VPHome renders `<Content />` last -- so index.md
- * writes `<PageTopics />` out by hand. Anywhere else that would be a second
- * copy under the first, and a home page missing it would be one language
- * quietly losing its exit links.
- */
-const homes = {}
-
 for (const lang of LANGS) {
   const dir = lang === 'en' ? DOCS : join(DOCS, lang)
   const names = (await readdir(dir).catch(() => []))
@@ -67,26 +57,14 @@ for (const lang of LANGS) {
     if (!pages.has(name)) pages.set(name, {})
     pages.get(name)[lang] = queries
 
-    const writesChips = /<PageTopics\s*\/>/.test(text)
-    if (name === 'index.md') homes[lang] = writesChips
-    else if (writesChips) {
-      add(`${lang}/${name}: writes <PageTopics /> and the layout renders it too — the chips would appear twice`)
-    }
-
     for (const query of queries) {
       for (const tag of query.split(/\s+/).filter(Boolean)) {
         seen.add(tag)
         if (!VOCABULARY.includes(tag)) {
-          add(`${lang}/${name}: "${tag}" is not in the vocabulary — its category page is not built`)
+          add(`${lang}/${name}: "${tag}" is not in the media vocabulary`)
         }
       }
     }
-  }
-}
-
-for (const lang of LANGS) {
-  if (homes[lang] === false) {
-    add(`${lang}/index.md: no <PageTopics /> — the home layout has no slot for it, so this page has no chips`)
   }
 }
 
@@ -117,9 +95,8 @@ for (const [name, langs] of pages) {
   }
 }
 
-// A tag no page asks for still has a category page, reachable from the index
-// and from any frame that carries it. Not an error — it is a subject the
-// archive has and the prose has not reached yet — but worth saying out loud.
+// A tag no page asks for can still describe archived media. Not an error, but
+// worth saying out loud because it is not currently used for placement.
 const unasked = VOCABULARY.filter((tag) => tag !== 'feed' && !seen.has(tag))
 
 if (problems.length) {

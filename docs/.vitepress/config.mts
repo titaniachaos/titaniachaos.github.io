@@ -6,31 +6,6 @@ import {
   localeAlternateTags
 } from './seo.ts'
 import { runBuildHooks, runSitemapHooks } from './generators.ts'
-import { TAGS, TAG_NAMES, CATEGORY_UI, asTitle, categoryPath } from './categories.ts'
-import type { Lang } from './locale.ts'
-
-/**
- * The categories menu, generated from the vocabulary.
- *
- * Thirteen categories today and the list is a `const` somewhere else, so this
- * is the one place that must not be a hand-written list of links: a new tag
- * should appear in the navigation of all three languages without anyone
- * remembering that navigation exists.
- */
-const CATEGORIES = (lang: Lang) => ({
-  text: CATEGORY_UI[lang].navLabel,
-  items: [
-    // The index first: thirteen category links are a menu, and a menu is no
-    // use to a reader who does not already know which of the thirteen they
-    // want.
-    { text: CATEGORY_UI[lang].indexTitle, link: `${lang === 'en' ? '' : '/' + lang}/pictures` },
-    ...TAGS.map((tag) => ({
-      text: asTitle(TAG_NAMES[lang][tag]),
-      link: categoryPath(lang, tag)
-    }))
-  ]
-})
-
 /**
  * The Clown project is a separate VitePress site built from the `clown`
  * repository. Same domain, so keep the reader in their language and their tab.
@@ -196,7 +171,6 @@ export default defineConfig({
           { text: 'Work with Titania', link: '/work-with-titania' },
           { text: 'Blog', link: CLOWN_SITE('') + 'blog/', ...SAME_SITE },
           { text: 'About', link: '/about-titania' },
-          CATEGORIES('en'),
           { text: 'Clown Project', link: CLOWN_SITE(''), ...SAME_SITE }
         ],
         outline: { level: [2, 3], label: 'On this page' },
@@ -226,7 +200,6 @@ export default defineConfig({
           { text: 'Работа с Титания', link: '/bg/work-with-titania' },
           { text: 'Блог', link: CLOWN_SITE('/bg') + 'blog/', ...SAME_SITE },
           { text: 'За Титания', link: '/bg/about-titania' },
-          CATEGORIES('bg'),
           { text: 'Проект „Клоун“', link: CLOWN_SITE('/bg'), ...SAME_SITE }
         ],
         outline: { level: [2, 3], label: 'На тази страница' },
@@ -261,7 +234,6 @@ export default defineConfig({
           { text: 'Mit Titania arbeiten', link: '/de/work-with-titania' },
           { text: 'Blog', link: CLOWN_SITE('/de') + 'blog/', ...SAME_SITE },
           { text: 'Über Titania', link: '/de/about-titania' },
-          CATEGORIES('de'),
           { text: 'Clown-Projekt', link: CLOWN_SITE('/de'), ...SAME_SITE }
         ],
         outline: { level: [2, 3], label: 'Auf dieser Seite' },

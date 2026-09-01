@@ -42,8 +42,8 @@ for (const token of [
 // nothing about it, and `<MediaHero />` shows whatever those queries resolved
 // to. Four things can go wrong and none of them show in a diff.
 
-// The vocabulary lives in categories.ts, which the loader, the three
-// [category].paths.ts files, the navigation and the components all import.
+// The vocabulary lives in categories.ts, which the loader and media
+// components import. It remains useful even though there is no public gallery.
 const taxonomy = await readFile('docs/.vitepress/categories.ts', 'utf8')
 const vocabulary = [...(taxonomy.match(/export const TAGS = \[([\s\S]*?)\] as const/)?.[1] ?? '')
   .matchAll(/'([a-z-]+)'/g)].map((m) => m[1])
@@ -122,26 +122,6 @@ for (const [name, byLocale] of pages) {
   }
 }
 
-// ---- the generated category pages -----------------------------------------
-// The three `[category].paths.ts` files each used to carry their own copy of
-// the tag names, and a check to stop the three copies drifting. They import
-// them now, from the one module that has them. What is worth checking is that
-// nobody puts a copy back.
-
-for (const [locale, dir] of [['en', 'docs'], ['bg', 'docs/bg'], ['de', 'docs/de']]) {
-  const paths = await readFile(join(dir, '[category].paths.ts'), 'utf8').catch(() => null)
-  if (paths === null) {
-    problems.push(`${dir}/[category].paths.ts is missing — that locale has no category pages`)
-    continue
-  }
-  if (!/TAG_NAMES/.test(paths) || !/from '\.{1,2}\/\.vitepress\/categories\.ts'/.test(paths)) {
-    problems.push(`${dir}/[category].paths.ts does not take its tag names from categories.ts — a second copy will drift`)
-  }
-  if (!new RegExp(`TAG_NAMES\\['${locale}'\\]`).test(paths)) {
-    problems.push(`${dir}/[category].paths.ts does not read the ${locale} names — it will title its pages in another language`)
-  }
-}
-
 if (problems.length) {
   console.error(`check-ecosystem: ${problems.length} problem(s)\n`)
   problems.forEach((p) => console.error(`  ${p}`))
@@ -151,6 +131,6 @@ if (problems.length) {
 const figures = [...pages.values()].reduce((n, byLocale) => n + [...byLocale.values()].reduce((m, p) => m + p.figures.length, 0), 0)
 console.log(
   'check-ecosystem: locale-aware clown links, professional metadata, typography contract ' +
-    `and ${figures} figures on ${pages.size} pages asking the same ${vocabulary.length}-word vocabulary, ` +
-    `named identically across three languages and ${vocabulary.length * 3} category pages, one per word per language, plus a second page wherever a word carries more than a listing holds`
+    `and ${figures} figures on ${pages.size} pages asking the same ${vocabulary.length}-word vocabulary ` +
+    'identically across three languages'
 )

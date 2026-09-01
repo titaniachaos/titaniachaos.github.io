@@ -18,6 +18,8 @@
     "prepare": "node scripts/install-hooks.mjs",
     "check:a11y": "node scripts/check-a11y.mjs",
     "check:topics": "node scripts/check-topics.mjs",
+    "test": "node --test scripts/lib/*.test.mjs",
+    "queneau": "node scripts/queneau.mjs",
     "media:new": "node media/import-new.mjs",
     "media:import": "node media/import-new.mjs --write",
     "check:origin": "node scripts/check-origin.mjs"

@@ -1787,6 +1787,108 @@ const FRAMES: Frame[] = [
       bg: 'TODO the same, in Bulgarian',
       de: 'TODO the same, in German'
     }
+  },
+  {
+    id: 'aequator-stage-monologue',
+    kind: 'video',
+    seconds: 158,
+    tags: ['performance', 'stage'],
+    othersInFrame: 'a fellow performer and members of the audience',
+    alt: {
+      en: 'Titania Chaos speaks into a handheld microphone during an indoor performance',
+      bg: 'Титания Хаос говори с ръчен микрофон по време на представление на закрито',
+      de: 'Titania Chaos spricht bei einem Auftritt in einem Innenraum in ein Handmikrofon'
+    },
+    caption: {
+      en: 'An indoor scene from Äquatormassband.',
+      bg: 'Сцена на закрито от Äquatormassband.',
+      de: 'Eine Szene im Innenraum aus Äquatormassband.'
+    }
+  },
+  {
+    id: 'aequator-night-circle',
+    kind: 'video',
+    seconds: 29,
+    tags: ['performance', 'street'],
+    othersInFrame: 'fellow performers and passers-by in a public park',
+    alt: {
+      en: 'Performers move around a taped circle in a park as daylight fades',
+      bg: 'Артисти се движат около очертан с лента кръг в парк при смрачаване',
+      de: 'Spielende bewegen sich bei einsetzender Dämmerung um einen mit Band markierten Kreis im Park'
+    },
+    caption: {
+      en: 'Äquatormassband carries the performance from daylight into night.',
+      bg: 'Äquatormassband продължава представлението от деня към нощта.',
+      de: 'Äquatormassband trägt den Auftritt vom Tageslicht in die Nacht.'
+    }
+  },
+  {
+    id: 'aequator-skirt-dance',
+    kind: 'video',
+    seconds: 20,
+    tags: ['performance', 'street'],
+    othersInFrame: 'fellow performers and passers-by in a public park',
+    alt: {
+      en: 'Titania Chaos spins a broad green patterned skirt inside a taped performance circle',
+      bg: 'Титания Хаос завърта широка зелена шарена пола в очертан с лента сценичен кръг',
+      de: 'Titania Chaos wirbelt einen breiten grün gemusterten Rock in einem mit Band markierten Spielkreis'
+    },
+    caption: {
+      en: 'A turning costume moment from the outdoor Äquatormassband performance.',
+      bg: 'Момент с въртящ се костюм от представлението на Äquatormassband на открито.',
+      de: 'Ein wirbelnder Kostümmoment aus dem Äquatormassband-Auftritt im Freien.'
+    }
+  },
+  {
+    id: 'aequator-audience-crossing',
+    kind: 'video',
+    seconds: 22,
+    tags: ['performance', 'street'],
+    othersInFrame: 'audience members and passers-by in a public park',
+    alt: {
+      en: 'Titania Chaos guides people across a taped performance line in a park',
+      bg: 'Титания Хаос превежда хора през сценична линия от лента в парк',
+      de: 'Titania Chaos führt Menschen in einem Park über eine mit Band markierte Spiellinie'
+    },
+    caption: {
+      en: 'The boundary becomes part of the encounter in Äquatormassband.',
+      bg: 'Границата става част от срещата в Äquatormassband.',
+      de: 'Bei Äquatormassband wird die Grenze zum Teil der Begegnung.'
+    }
+  },
+  {
+    id: 'aequator-circle-performance',
+    kind: 'video',
+    seconds: 11,
+    tags: ['performance', 'street', 'props'],
+    othersInFrame: 'a fellow performer and passers-by in a public park',
+    alt: {
+      en: 'Titania Chaos and another performer play beside props inside a taped circle',
+      bg: 'Титания Хаос и друг артист играят до реквизит в очертан с лента кръг',
+      de: 'Titania Chaos und eine weitere spielende Person agieren neben Requisiten in einem mit Band markierten Kreis'
+    },
+    caption: {
+      en: 'The marked circle turns a park path into a stage for Äquatormassband.',
+      bg: 'Очертаният кръг превръща алеята в сцена за Äquatormassband.',
+      de: 'Der markierte Kreis verwandelt einen Parkweg in die Bühne für Äquatormassband.'
+    }
+  },
+  {
+    id: 'aequator-white-costume',
+    kind: 'video',
+    seconds: 6,
+    tags: ['performance', 'street', 'props'],
+    othersInFrame: 'a fellow performer in a public park',
+    alt: {
+      en: 'A performer in a white and blue costume gathers a long red fabric prop in a park',
+      bg: 'Артист в бяло-син костюм събира дълъг червен платнен реквизит в парк',
+      de: 'Eine spielende Person in weiß-blauem Kostüm nimmt in einem Park eine lange rote Stoffrequisite auf'
+    },
+    caption: {
+      en: 'A brief prop transition during the outdoor Äquatormassband performance.',
+      bg: 'Кратък преход с реквизит по време на представлението на Äquatormassband на открито.',
+      de: 'Ein kurzer Requisitenwechsel während des Äquatormassband-Auftritts im Freien.'
+    }
   }
 ]
 

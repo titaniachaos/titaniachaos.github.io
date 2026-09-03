@@ -259,6 +259,12 @@ const PUBLISHED = {
  * froze two of them mid-blur, which is how the question came up.
  */
 const VIDEOS = {
+  'aequator-white-costume': ['titaniachaos.github.io/media/aequator videos/IMG_4565.MOV', 3],
+  'aequator-circle-performance': ['titaniachaos.github.io/media/aequator videos/IMG_0878.MOV', 3],
+  'aequator-audience-crossing': ['titaniachaos.github.io/media/aequator videos/IMG_0064.mov', 1],
+  'aequator-skirt-dance': ['titaniachaos.github.io/media/aequator videos/IMG_0038.mov', 1],
+  'aequator-night-circle': ['titaniachaos.github.io/media/aequator videos/IMG_0033.MOV', 1],
+  'aequator-stage-monologue': ['titaniachaos.github.io/media/aequator videos/12345.mov', 10],
   'b-img-3107': ['titaniachaos.github.io/media/IMG_3107.mov', 1],
   'b-img-6558': ['titaniachaos.github.io/media/IMG_6558.mov', 1],
   'b-img-7960': ['titaniachaos.github.io/media/IMG_7960.mov', 1],

@@ -1,7 +1,7 @@
 {
   "origin": "https://titaniachaos.com",
   "rights": "© Tatiana Petkova (Titania Chaos). Photographs by Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, Konstantin Oberlik, Tatiana Petkova, Marion Scholz and Laurent Ziegler.",
-  "count": 127,
+  "count": 133,
   "media": [
     {
       "id": "workshop-mini-art",
@@ -2681,6 +2681,146 @@
       "tile": "https://titaniachaos.com/images/media/b-img-3107-s.webp",
       "film": "https://titaniachaos.com/images/media/b-img-3107.mp4",
       "othersInFrame": "a fellow performer on stage"
+    },
+    {
+      "id": "aequator-stage-monologue",
+      "kind": "video",
+      "tags": [
+        "performance",
+        "stage"
+      ],
+      "seconds": 158,
+      "alt": {
+        "en": "Titania Chaos speaks into a handheld microphone during an indoor performance",
+        "bg": "Титания Хаос говори с ръчен микрофон по време на представление на закрито",
+        "de": "Titania Chaos spricht bei einem Auftritt in einem Innenraum in ein Handmikrofon"
+      },
+      "caption": {
+        "en": "An indoor scene from Äquatormassband.",
+        "bg": "Сцена на закрито от Äquatormassband.",
+        "de": "Eine Szene im Innenraum aus Äquatormassband."
+      },
+      "url": "https://titaniachaos.com/images/media/aequator-stage-monologue.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-stage-monologue-s.webp",
+      "film": "https://titaniachaos.com/images/media/aequator-stage-monologue.mp4",
+      "othersInFrame": "a fellow performer and members of the audience"
+    },
+    {
+      "id": "aequator-night-circle",
+      "kind": "video",
+      "tags": [
+        "performance",
+        "street"
+      ],
+      "seconds": 29,
+      "alt": {
+        "en": "Performers move around a taped circle in a park as daylight fades",
+        "bg": "Артисти се движат около очертан с лента кръг в парк при смрачаване",
+        "de": "Spielende bewegen sich bei einsetzender Dämmerung um einen mit Band markierten Kreis im Park"
+      },
+      "caption": {
+        "en": "Äquatormassband carries the performance from daylight into night.",
+        "bg": "Äquatormassband продължава представлението от деня към нощта.",
+        "de": "Äquatormassband trägt den Auftritt vom Tageslicht in die Nacht."
+      },
+      "url": "https://titaniachaos.com/images/media/aequator-night-circle.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-night-circle-s.webp",
+      "film": "https://titaniachaos.com/images/media/aequator-night-circle.mp4",
+      "othersInFrame": "fellow performers and passers-by in a public park"
+    },
+    {
+      "id": "aequator-skirt-dance",
+      "kind": "video",
+      "tags": [
+        "performance",
+        "street"
+      ],
+      "seconds": 20,
+      "alt": {
+        "en": "Titania Chaos spins a broad green patterned skirt inside a taped performance circle",
+        "bg": "Титания Хаос завърта широка зелена шарена пола в очертан с лента сценичен кръг",
+        "de": "Titania Chaos wirbelt einen breiten grün gemusterten Rock in einem mit Band markierten Spielkreis"
+      },
+      "caption": {
+        "en": "A turning costume moment from the outdoor Äquatormassband performance.",
+        "bg": "Момент с въртящ се костюм от представлението на Äquatormassband на открито.",
+        "de": "Ein wirbelnder Kostümmoment aus dem Äquatormassband-Auftritt im Freien."
+      },
+      "url": "https://titaniachaos.com/images/media/aequator-skirt-dance.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-skirt-dance-s.webp",
+      "film": "https://titaniachaos.com/images/media/aequator-skirt-dance.mp4",
+      "othersInFrame": "fellow performers and passers-by in a public park"
+    },
+    {
+      "id": "aequator-audience-crossing",
+      "kind": "video",
+      "tags": [
+        "performance",
+        "street"
+      ],
+      "seconds": 22,
+      "alt": {
+        "en": "Titania Chaos guides people across a taped performance line in a park",
+        "bg": "Титания Хаос превежда хора през сценична линия от лента в парк",
+        "de": "Titania Chaos führt Menschen in einem Park über eine mit Band markierte Spiellinie"
+      },
+      "caption": {
+        "en": "The boundary becomes part of the encounter in Äquatormassband.",
+        "bg": "Границата става част от срещата в Äquatormassband.",
+        "de": "Bei Äquatormassband wird die Grenze zum Teil der Begegnung."
+      },
+      "url": "https://titaniachaos.com/images/media/aequator-audience-crossing.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-audience-crossing-s.webp",
+      "film": "https://titaniachaos.com/images/media/aequator-audience-crossing.mp4",
+      "othersInFrame": "audience members and passers-by in a public park"
+    },
+    {
+      "id": "aequator-circle-performance",
+      "kind": "video",
+      "tags": [
+        "performance",
+        "street",
+        "props"
+      ],
+      "seconds": 11,
+      "alt": {
+        "en": "Titania Chaos and another performer play beside props inside a taped circle",
+        "bg": "Титания Хаос и друг артист играят до реквизит в очертан с лента кръг",
+        "de": "Titania Chaos und eine weitere spielende Person agieren neben Requisiten in einem mit Band markierten Kreis"
+      },
+      "caption": {
+        "en": "The marked circle turns a park path into a stage for Äquatormassband.",
+        "bg": "Очертаният кръг превръща алеята в сцена за Äquatormassband.",
+        "de": "Der markierte Kreis verwandelt einen Parkweg in die Bühne für Äquatormassband."
+      },
+      "url": "https://titaniachaos.com/images/media/aequator-circle-performance.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-circle-performance-s.webp",
+      "film": "https://titaniachaos.com/images/media/aequator-circle-performance.mp4",
+      "othersInFrame": "a fellow performer and passers-by in a public park"
+    },
+    {
+      "id": "aequator-white-costume",
+      "kind": "video",
+      "tags": [
+        "performance",
+        "street",
+        "props"
+      ],
+      "seconds": 6,
+      "alt": {
+        "en": "A performer in a white and blue costume gathers a long red fabric prop in a park",
+        "bg": "Артист в бяло-син костюм събира дълъг червен платнен реквизит в парк",
+        "de": "Eine spielende Person in weiß-blauem Kostüm nimmt in einem Park eine lange rote Stoffrequisite auf"
+      },
+      "caption": {
+        "en": "A brief prop transition during the outdoor Äquatormassband performance.",
+        "bg": "Кратък преход с реквизит по време на представлението на Äquatormassband на открито.",
+        "de": "Ein kurzer Requisitenwechsel während des Äquatormassband-Auftritts im Freien."
+      },
+      "url": "https://titaniachaos.com/images/media/aequator-white-costume.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-white-costume-s.webp",
+      "film": "https://titaniachaos.com/images/media/aequator-white-costume.mp4",
+      "othersInFrame": "a fellow performer in a public park"
     }
   ]
 }

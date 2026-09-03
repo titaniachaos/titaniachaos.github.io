@@ -578,7 +578,7 @@ const FRAMES: Frame[] = [
     seconds: 73,
     permalink: 'https://www.youtube.com/watch?v=w3wkwyrTRiY',
     source: 'youtube',
-    tags: ['performance', 'stage'],
+    tags: ['aequator', 'performance', 'stage'],
     alt: {
       en: 'Titania Chaos in a long coat outdoors, holding a banana handed up from the audience',
       bg: 'Титания Хаос в дълго палто на открито държи банан, подаден от публиката',
@@ -1792,7 +1792,7 @@ const FRAMES: Frame[] = [
     id: 'aequator-stage-monologue',
     kind: 'video',
     seconds: 158,
-    tags: ['performance', 'stage'],
+    tags: ['aequator', 'performance', 'stage'],
     othersInFrame: 'a fellow performer and members of the audience',
     alt: {
       en: 'Titania Chaos speaks into a handheld microphone during an indoor performance',
@@ -1809,7 +1809,7 @@ const FRAMES: Frame[] = [
     id: 'aequator-night-circle',
     kind: 'video',
     seconds: 29,
-    tags: ['performance', 'street'],
+    tags: ['aequator', 'performance', 'street'],
     othersInFrame: 'fellow performers and passers-by in a public park',
     alt: {
       en: 'Performers move around a taped circle in a park as daylight fades',
@@ -1826,7 +1826,7 @@ const FRAMES: Frame[] = [
     id: 'aequator-skirt-dance',
     kind: 'video',
     seconds: 20,
-    tags: ['performance', 'street'],
+    tags: ['aequator', 'performance', 'street'],
     othersInFrame: 'fellow performers and passers-by in a public park',
     alt: {
       en: 'Titania Chaos spins a broad green patterned skirt inside a taped performance circle',
@@ -1843,7 +1843,7 @@ const FRAMES: Frame[] = [
     id: 'aequator-audience-crossing',
     kind: 'video',
     seconds: 22,
-    tags: ['performance', 'street'],
+    tags: ['aequator', 'performance', 'street'],
     othersInFrame: 'audience members and passers-by in a public park',
     alt: {
       en: 'Titania Chaos guides people across a taped performance line in a park',
@@ -1860,7 +1860,7 @@ const FRAMES: Frame[] = [
     id: 'aequator-circle-performance',
     kind: 'video',
     seconds: 11,
-    tags: ['performance', 'street', 'props'],
+    tags: ['aequator', 'performance', 'street', 'props'],
     othersInFrame: 'a fellow performer and passers-by in a public park',
     alt: {
       en: 'Titania Chaos and another performer play beside props inside a taped circle',
@@ -1877,7 +1877,7 @@ const FRAMES: Frame[] = [
     id: 'aequator-white-costume',
     kind: 'video',
     seconds: 6,
-    tags: ['performance', 'street', 'props'],
+    tags: ['aequator', 'performance', 'street', 'props'],
     othersInFrame: 'a fellow performer in a public park',
     alt: {
       en: 'A performer in a white and blue costume gathers a long red fabric prop in a park',

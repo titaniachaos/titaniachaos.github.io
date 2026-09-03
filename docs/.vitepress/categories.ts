@@ -6,6 +6,7 @@ import { LANGS, localePrefix, type Lang } from './locale.ts'
  */
 export const TAGS = [
   'workshop',
+  'aequator',
   'performance',
   'stage',
   'street',
@@ -35,6 +36,7 @@ export type Tag = (typeof TAGS)[number]
 export const TAG_NAMES: Record<Lang, Record<Tag, string>> = {
   en: {
     workshop: 'workshop',
+    aequator: 'Äquatormassband',
     performance: 'performance',
     stage: 'stage',
     street: 'street',
@@ -51,6 +53,7 @@ export const TAG_NAMES: Record<Lang, Record<Tag, string>> = {
   },
   bg: {
     workshop: 'работилница',
+    aequator: 'Äquatormassband',
     performance: 'представление',
     stage: 'сцена',
     street: 'улица',
@@ -67,6 +70,7 @@ export const TAG_NAMES: Record<Lang, Record<Tag, string>> = {
   },
   de: {
     workshop: 'Workshop',
+    aequator: 'Äquatormassband',
     performance: 'Auftritt',
     stage: 'Bühne',
     street: 'Straße',

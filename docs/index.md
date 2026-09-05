@@ -30,11 +30,10 @@ features:
 
 ## Clown workshop experiences
 
-The question underneath all of it is whether a clown can make a room *experience* solitude rather than watch it depicted — and whether the contact that makes an audience laugh is the same contact that lets a person be alone in front of them. That is worked out in the studio and [published as it goes](https://titaniachaos.com/clown/).
+See the work in motion and hear what participants discovered through play, improvisation and physical comedy.
 
-
-<MediaFigure tags="workshop performance" />
-<MediaFigure id="b-img-4998" />
+<MediaFigure id="showreel" />
+<MediaFigure id="a-8b30b47754adaae4" />
 
 > “Everything was fluid, subtle and fun. Her great finesse and kindness enabled her to accompany each person personally.” — Juliette, philosophy teacher
 
@@ -45,8 +44,7 @@ The question underneath all of it is whether a clown can make a room *experience
 
 ## Who the workshops are for
 
-<MediaFigure tags="workshop juggling" />
-<MediaFigure id="a-img-3608" />
+<MediaFigure id="a-img-1272" />
 
 You do not need a theatre background or previous clown experience. You might be an IT specialist, a teacher, a lawyer, a social worker, a nurse, a translator, a cook, a dancer, a librarian, a musician, a firefighter, a doctor, a shop owner, an artist or a hairdresser. You might work in an office, a school, a hospital, a kitchen or on a stage. You are someone who wants to discover more about yourself and have fun doing so.
 
@@ -54,7 +52,7 @@ The workshops welcome anyone ready for an adventure with their own humanity, peo
 
 ## What to expect from a clown workshop
 
-<MediaFigure tags="stage performance" />
+<MediaFigure id="workshop-mini-art" />
 
 - Playfulness, laughter, lightness and joy
 - Insights into clowning and humour
@@ -64,8 +62,7 @@ The workshops welcome anyone ready for an adventure with their own humanity, peo
 
 ## Practical details {#practical-details}
 
-<MediaFigure tags="workshop" />
-<MediaFigure id="a-img-0561" />
+<MediaFigure id="workshop-sofia" />
 
 Workshops take place in Vienna and welcome adult beginners as well as people with theatre experience.
 
@@ -75,8 +72,7 @@ Workshops take place in Vienna and welcome adult beginners as well as people wit
 
 ## Give a clown workshop as a gift {#join-in}
 
-<MediaFigure tags="portrait street" />
-<MediaFigure id="a-img-0013" />
+<MediaFigure id="a-img-2906" />
 
 Give someone a workshop—or come with a friend and share moments of lightness and joy.
 

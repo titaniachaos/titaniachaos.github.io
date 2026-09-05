@@ -4,24 +4,19 @@ description: "Clown-Performerin Titania Chaos in Wien mieten: Firmenfeiern, Hoch
 ---
 # Mit Titania arbeiten
 
-<MediaHero />
-
 Titania Chaos kann eingeladen werden, aufzutreten, anzuleiten, zu unterrichten, zu spielen — oder einfach ein wenig konstruktive Unordnung in einen Raum zu bringen.
 
 Ihre Arbeit bewegt sich zwischen Clownerie, physischer Komik, Workshops, Veranstaltungen, Bildung und sozialen Kontexten. Manchmal steht der Clown im Mittelpunkt. Manchmal hilft das Spiel einer Gruppe, sich zu verbinden, zu kommunizieren oder etwas anders zu betrachten.
 
 ## Auftreten & spielen
 
-<MediaFigure tags="performance stage" />
-<MediaFigure id="b-dsc02596" />
-<MediaFigure id="a-img-0491" />
+<MediaFigure id="impact-hub" />
 
 Titania kann bei Festivals, Hochzeiten, Firmenveranstaltungen, Straßenfesten und anderen Zusammenkünften auftreten — als Clown-Performerin, spielerische Intervention oder mit ihrer Zeitreisekamera.
 
 ### Titania Chaos und ihre Zeitreisekamera
 
-<MediaFigure tags="camera performance" />
-<MediaFigure id="a-img-0494" />
+<MediaFigure id="camera-portrait" />
 
 
 Eine tragbare fotografische Zeitmaschine, irgendwo zwischen Straßentheater, Performance und einem altmodischen Fotostudio.
@@ -32,18 +27,17 @@ Die Kamera eignet sich besonders gut für Geburtstagsfeiern, Hochzeiten, Firmenv
 
 ## Workshops & Teambuilding
 
-<MediaFigure tags="workshop" />
+<MediaFigure id="workshop-mini-art" />
 
 Team-Workshops für Firmen und Organisationen, die eine andere Art suchen, einander zu begegnen, zu spielen und zusammenzuarbeiten. Offene Workshops für Einzelpersonen finden Sie auf der [Startseite](/de/#practical-details).
 
-Die Arbeit beruht auf einer Studiomethode namens **Die Bedingung erzeugen**: die Situation herstellen und beobachten, was ein Körper darin tatsächlich tut, statt jemanden zu bitten, ein Gefühl zu spielen. Sie wird offen entwickelt — die [vier Phasen](https://titaniachaos.com/clown/de/studio-process), die [Fragen, von denen sie ausgeht](https://titaniachaos.com/clown/de/concept) und die [Lektüre dahinter](https://titaniachaos.com/clown/de/sources) sind veröffentlicht, so wie sie sind.
+Die Einheiten arbeiten mit klaren körperlichen Aufgaben und strukturierter Improvisation. So entsteht Raum, um zu beobachten, zu reagieren, Risiken einzugehen und das wirklich Komische zu entdecken.
 
 [Workshops entdecken](/de/#practical-details){.contact-button}
 
 ## Lernen & Facilitation
 
-<MediaFigure tags="portrait" />
-<MediaFigure id="a-img-1208" />
+<MediaFigure id="a-img-1272" />
 
 Titania ist außerdem eine erfahrene Facilitatorin und Sprachlehrerin mit 25 Jahren Unterrichtserfahrung.
 
@@ -53,9 +47,7 @@ Clownerie, Spiel und körperliche Arbeit können daher auch in Bildungskontexte 
 
 ## Kinder & Gemeinschaften
 
-<MediaFigure tags="children birthday" />
-<MediaFigure id="b-img-6401" />
-<MediaFigure id="wall-coat" />
+<MediaFigure id="b-img-3806" />
 
 Titania arbeitet mit Kindern, Familien und Gemeinschaften durch Clownerie, Spiel und sozialen Zirkus.
 
@@ -63,9 +55,6 @@ Titania arbeitet mit Kindern, Familien und Gemeinschaften durch Clownerie, Spiel
 
 
 ## Titania einladen
-
-<MediaFigure tags="street performance" />
-<MediaFigure id="b-img-7549" />
 
 Wenn Sie eine Veranstaltung, ein Team, eine Klasse, eine Gruppe oder einen Kontext im Sinn haben und nicht sicher sind, welches Format passt, melden Sie sich.
 

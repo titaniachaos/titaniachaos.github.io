@@ -6,7 +6,7 @@ import {
   localeAlternateTags
 } from './seo.ts'
 import { runBuildHooks, runSitemapHooks } from './generators.ts'
-import { shelf, paths, resolve, ordered, ENOUGH, SHOWN } from '../../scripts/lib/browse.mjs'
+import { shelf, resolve, ordered, ENOUGH, SHOWN } from '../../scripts/lib/browse.mjs'
 import { frames } from '../../scripts/lib/media-meta.mjs'
 import { TAG_NAMES, asTitle } from './categories.ts'
 import type { Lang } from './locale.ts'
@@ -36,20 +36,43 @@ const SAME_SITE = { target: '_self', rel: '', noIcon: true } as const
  * never does.
  */
 const browseState = await shelf()
-const browseWords = paths(browseState)
-  .filter((p) => p.want.length === 1)
-  .map((p) => ({ word: p.want[0], n: p.frames.length }))
+
+/** Six clear entrances into the archive. More specific filters remain available
+ * from each listing, without crowding the primary navigation. */
+const BROWSE_GROUPS: Record<Lang, { word: string; text: string }[]> = {
+  en: [
+    { word: 'portrait', text: 'Portraits' },
+    { word: 'performance', text: 'Performance' },
+    { word: 'street', text: 'Street' },
+    { word: 'workshop', text: 'Workshops' },
+    { word: 'children', text: 'Children & celebrations' },
+    { word: 'props', text: 'Props & projects' }
+  ],
+  bg: [
+    { word: 'portrait', text: 'Портрети' },
+    { word: 'performance', text: 'Представления' },
+    { word: 'street', text: 'Улица' },
+    { word: 'workshop', text: 'Работилници' },
+    { word: 'children', text: 'Деца и празници' },
+    { word: 'props', text: 'Реквизит и проекти' }
+  ],
+  de: [
+    { word: 'portrait', text: 'Porträts' },
+    { word: 'performance', text: 'Performance' },
+    { word: 'street', text: 'Straße' },
+    { word: 'workshop', text: 'Workshops' },
+    { word: 'children', text: 'Kinder & Feste' },
+    { word: 'props', text: 'Requisiten & Projekte' }
+  ]
+}
 
 const browseMenu = (lang: Lang) => ({
   text: BROWSE_LABEL[lang],
   items: [
-    ...browseWords.map(({ word }) => ({
-      text: asTitle(TAG_NAMES[lang][word as keyof (typeof TAG_NAMES)[typeof lang]]),
+    ...BROWSE_GROUPS[lang].map(({ word, text }) => ({
+      text,
       link: `${lang === 'en' ? '' : '/' + lang}/${word}`
     })),
-    // The whole archive at once, bound like Queneau's sonnets. It sits under
-    // the pictures because that is what it arranges, and it is one link
-    // rather than 10^29: the address lives in the fragment.
     { text: ARRANGEMENT_LABEL[lang], link: `${lang === 'en' ? '' : '/' + lang}/arrangement` }
   ]
 })

@@ -4,24 +4,19 @@ description: Hire clown performer Titania Chaos in Vienna for company parties, w
 ---
 # Work with Titania
 
-<MediaHero />
-
 Titania Chaos can be invited to perform, facilitate, teach, play — or simply bring a little constructive disorder into a room.
 
 Her work moves between clowning, physical comedy, workshops, events, education and social settings. Sometimes the clown is at the centre. Sometimes play is a way of helping a group connect, communicate or look at something differently.
 
 ## Perform & play
 
-<MediaFigure tags="performance stage" />
-<MediaFigure id="b-dsc02596" />
-<MediaFigure id="a-img-0491" />
+<MediaFigure id="impact-hub" />
 
 Titania can appear at festivals, weddings, corporate events, street events and other gatherings — as a clown performer, a playful intervention or with her time-travelling camera.
 
 ### Titania Chaos and her time-travelling camera
 
-<MediaFigure tags="camera performance" />
-<MediaFigure id="a-img-0494" />
+<MediaFigure id="camera-portrait" />
 
 
 A portable photographic time machine, somewhere between street theatre, performance and an old-fashioned photo studio.
@@ -32,18 +27,17 @@ The camera works particularly well at birthday parties, weddings, company events
 
 ## Workshops & team building
 
-<MediaFigure tags="workshop" />
+<MediaFigure id="workshop-mini-art" />
 
 Team workshops for organisations looking for a different way to meet, play and work together. Open workshops for individuals are on the [home page](/#practical-details).
 
-The teaching rests on a studio method called **Create the Condition** — build the circumstance and watch what a body actually does in it, rather than ask anyone to act a feeling. It is worked out in the open, with its [four phases](https://titaniachaos.com/clown/studio-process), the [questions it starts from](https://titaniachaos.com/clown/concept) and the [reading behind it](https://titaniachaos.com/clown/sources) all published as they stand.
+Sessions use clear physical tasks and structured improvisation, giving participants room to observe, respond, take risks and discover what is genuinely funny.
 
 [Explore workshops](/#practical-details){.contact-button}
 
 ## Learning & facilitation
 
-<MediaFigure tags="portrait" />
-<MediaFigure id="a-img-1208" />
+<MediaFigure id="a-img-1272" />
 
 Titania is also an experienced facilitator and language teacher with 25 years of teaching experience.
 
@@ -53,9 +47,7 @@ Clowning, play and physical work can therefore also enter educational contexts �
 
 ## Children & communities
 
-<MediaFigure tags="children birthday" />
-<MediaFigure id="b-img-6401" />
-<MediaFigure id="wall-coat" />
+<MediaFigure id="b-img-3806" />
 
 Titania works with children, families and community settings through clowning, play and social circus.
 
@@ -63,9 +55,6 @@ Titania works with children, families and community settings through clowning, p
 
 
 ## Invite Titania
-
-<MediaFigure tags="street performance" />
-<MediaFigure id="b-img-7549" />
 
 If you have an event, team, class, group or context in mind and are not sure which format fits, get in touch.
 

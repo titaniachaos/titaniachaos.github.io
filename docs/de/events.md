@@ -4,11 +4,9 @@ description: Clown für Kindergeburtstag, Kindergarten oder Kinderfest in Wien b
 ---
 # Clown für den Kindergeburtstag in Wien
 
-<MediaHero />
-
 ## Magische Momente, Lachen und Erinnerungen, die bleiben
 
-<MediaFigure tags="balloons birthday children" />
+<MediaFigure id="a-img-2634" />
 
 Geburtstagsfeiern für Kinder von **5 bis 12 Jahren** – mit Spiel, Fantasie, Kostümen und meiner magischen Zeitreisekamera.
 
@@ -16,19 +14,19 @@ Geburtstagsfeiern für Kinder von **5 bis 12 Jahren** – mit Spiel, Fantasie, K
 
 ## Wie läuft eine Feier ab?
 
-<MediaFigure tags="camera props" />
+<MediaFigure id="traveller-kit" />
 
 Ich komme etwa 30 Minuten vor Beginn. Dann lernen wir uns kennen und finden spielerisch in die Feier hinein. Nach einer Kuchenpause beginnt das große Verkleiden und Fotoshooting. Jedes Kind bekommt ein gedrucktes Foto; auf Wunsch gibt es auch Gruppenbilder.
 
 ## Sozialer Zirkus
 
-<MediaFigure tags="street performance" />
+<MediaFigure id="a-6bd9c2d47300f293" />
 
 Meine Spiele stammen aus dem sozialen Zirkus. Wir jonglieren, erfinden Figuren und spielen mit Balance und Körpersprache – mit Leichtigkeit, Humor und Raum für jedes Kind. Die Aktivitäten können Empathie, Kommunikation, Körperbewusstsein und Selbstvertrauen fördern.
 
 ## Was ich mitbringe
 
-<MediaFigure tags="balloons street" />
+<MediaFigure id="a-cd563ea5-553b-422b-9723-bbc102345524" />
 
 - Zeitreisekamera, Kostüme und Accessoires
 - Zirkusspiele mit Bewegung, Improvisation und Zusammenarbeit
@@ -36,9 +34,6 @@ Meine Spiele stammen aus dem sozialen Zirkus. Wir jonglieren, erfinden Figuren u
 - Ballontiere und Ballonfiguren
 
 ## Preis & Bedingungen
-
-<MediaFigure tags="children birthday" />
-<MediaFigure id="a-img-1414" />
 
 Bis zu 10 Kinder, etwa 2–3 Stunden: **€290 plus Taxi** in Wien. Das gleiche Programm eignet sich für eine Kindergartengruppe, ein Kinderfest oder Fasching. Bei Absage weniger als zwei Tage vorher fällt eine Stornogebühr von €100 an; eine Verschiebung ist jederzeit möglich.
 

@@ -30,11 +30,10 @@ features:
 
 ## Erfahrungen aus den Clown-Workshops
 
-Die Frage darunter lautet, ob ein Clown einen Raum das Alleinsein *erfahren* lassen kann, statt es vorzuführen — und ob der Kontakt, der ein Publikum zum Lachen bringt, derselbe ist, der einen Menschen vor ihm allein sein lässt. Das wird im Studio erarbeitet und [offen veröffentlicht](https://titaniachaos.com/clown/de/).
+Sehen Sie die Arbeit in Bewegung und lesen Sie, was Teilnehmende durch Spiel, Improvisation und physische Komik entdeckt haben.
 
-
-<MediaFigure tags="workshop performance" />
-<MediaFigure id="b-img-4998" />
+<MediaFigure id="showreel" />
+<MediaFigure id="a-8b30b47754adaae4" />
 
 > „Alles war fließend, feinsinnig und lustig. Ihr großes Feingefühl und ihre Freundlichkeit haben es ihr ermöglicht, jede Person persönlich zu begleiten.“ — Juliette, Philosophielehrerin
 
@@ -45,8 +44,7 @@ Die Frage darunter lautet, ob ein Clown einen Raum das Alleinsein *erfahren* las
 
 ## Für wen die Workshops sind
 
-<MediaFigure tags="workshop juggling" />
-<MediaFigure id="a-img-3608" />
+<MediaFigure id="a-img-1272" />
 
 Sie brauchen keine Theatererfahrung und keine Vorerfahrung mit Clownerie. Sie können IT-Fachkraft, Lehrerin, Jurist, Sozialarbeiterin, Krankenpfleger, Übersetzerin, Koch, Tänzerin, Bibliothekar, Musikerin, Feuerwehrmann, Ärztin, Geschäftsinhaber, Künstlerin oder Friseur sein. Sie können in einem Büro, in einer Schule, in einem Krankenhaus, in einer Küche oder auf einer Bühne arbeiten. Sie sind jemand, der mehr über sich selbst entdecken und dabei Freude haben möchte.
 
@@ -54,7 +52,7 @@ Die Workshops stehen allen offen, die bereit für ein Abenteuer mit ihrer eigene
 
 ## Was Sie von einem Clown-Workshop erwarten können
 
-<MediaFigure tags="stage performance" />
+<MediaFigure id="workshop-mini-art" />
 
 - Verspieltheit, Lachen, Leichtigkeit und Freude
 - Einblicke in Clownerie und Humor
@@ -64,8 +62,7 @@ Die Workshops stehen allen offen, die bereit für ein Abenteuer mit ihrer eigene
 
 ## Praktische Informationen {#practical-details}
 
-<MediaFigure tags="workshop" />
-<MediaFigure id="a-img-0561" />
+<MediaFigure id="workshop-sofia" />
 
 Die Workshops finden in Wien statt und heißen sowohl erwachsene Anfängerinnen und Anfänger als auch Menschen mit Theatererfahrung willkommen.
 
@@ -75,8 +72,7 @@ Die Workshops finden in Wien statt und heißen sowohl erwachsene Anfängerinnen 
 
 ## Einen Clown-Workshop verschenken {#join-in}
 
-<MediaFigure tags="portrait street" />
-<MediaFigure id="a-img-0013" />
+<MediaFigure id="a-img-2906" />
 
 Schenken Sie jemandem einen Workshop – oder kommen Sie mit einer Freundin und teilen Sie Momente der Leichtigkeit und Freude.
 

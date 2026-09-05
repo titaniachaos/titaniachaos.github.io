@@ -5,11 +5,7 @@ outline: [1, 2]
 ---
 # Über Titania
 
-<MediaHero />
-
-<MediaFigure tags="street performance portrait" />
 <MediaFigure id="a-c6ab823a-6d6e-48cd-8dba-d3c2f158e590" />
-<MediaFigure id="a-img-4690" />
 
 > Ich folge einer Leidenschaft für Kontakt durch Humor, Sprachen, Poesie und Emotion.
 
@@ -23,9 +19,12 @@ Als Titania Chaos trete ich auf der Straße, im Wiener [Theater Olé](https://ww
 
 Neben meiner künstlerischen Arbeit unterrichte ich seit 25 Jahren Sprachen. Mein akademischer und beruflicher Hintergrund umfasst Psychologie, Kommunikation und Dolmetschen, und diese Erfahrung prägt stark, wie ich Gruppen und Lernprozesse begleite.
 
+<MediaFigure id="impact-hub" />
+
 ## Künstlerische Praxis & Ausbildung
 
-<MediaFigure tags="juggling workshop" />
+<MediaFigure id="juggling-pass" />
+<MediaFigure id="a-img-1272" />
 
 Meine Praxis schöpft außerdem aus Sozialzirkus, funktionalem Jonglieren und inklusiven Ansätzen.
 
@@ -49,9 +48,7 @@ Ich hatte das Privileg, unter anderem von folgenden Künstlerinnen, Künstlern u
 
 ## In den Medien
 
-<MediaFigure tags="press" />
-<MediaFigure id="b-img-7189" />
-<MediaFigure id="a-img-6763" />
+<MediaFigure id="radio-studio" />
 
 Titania Chaos war im bulgarischen Fernsehen, Radio und in Printmedien zu sehen und zu hören und sprach dort über Clownerie, Lachen und den Weg, der Tatiana zu Titania führte.
 

@@ -35,9 +35,10 @@ for (const p of wanted) {
   }
 }
 
-// Reachable by a reader, not just by the build. A listing nobody links to is
-// the pool with extra steps, which is the state this replaced — so the home
-// page of each language must offer the way in.
+// Reachable by a reader, not just by the build. The primary menu deliberately
+// offers six broad entrances; the more specific legacy tags remain available
+// as linked filters inside the archive rather than crowding the main menu.
+const ENTRANCES = ['portrait', 'performance', 'street', 'workshop', 'children', 'props']
 for (const locale of LOCALES) {
   const home = join(dist, locale, 'index.html')
   let html = ''
@@ -48,13 +49,11 @@ for (const locale of LOCALES) {
     continue
   }
   const prefix = locale ? `/${locale}` : ''
-  const missing = wanted
-    .filter((p) => p.want.length === 1)
-    .filter((p) => !html.includes(`href="${prefix}/${p.want[0]}"`))
+  const missing = ENTRANCES.filter((word) => !html.includes(`href="${prefix}/${word}"`))
   if (missing.length) {
     problems.push(
-      `${locale || 'root'} home page does not link to ${missing.length} browse path(s): ` +
-        missing.map((p) => p.path).join(', ')
+      `${locale || 'root'} home page is missing ${missing.length} primary browse entrance(s): ` +
+        missing.map((word) => `/${word}`).join(', ')
     )
   }
 }

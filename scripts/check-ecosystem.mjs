@@ -110,13 +110,15 @@ for (const [name, byLocale] of pages) {
       if (unknown.length) problems.push(`${where}: MediaFigure asks for ${unknown.join(', ')}, which no frame can carry`)
     }
 
-    // The hero slides a page's figures, so a page with several of them needs
-    // one -- but a slider of a single slide is not a slider, and a 140-word
-    // journal post carrying one picture is complete without a carousel above
-    // it. So: two or more figures require a hero, one does not, and a hero
-    // with nothing to slide is always wrong.
-    if (page.figures.length > 1 && !page.hero) {
-      problems.push(`${where}: has ${page.figures.length} figures and no <MediaHero /> to slide them`)
+    // The homepage may preview its selected media in a carousel. Internal
+    // editorial pages place each figure beside the claim it supports, so a
+    // second carousel would repeat the same material before the page begins.
+    const isHome = name === 'index.md'
+    if (isHome && page.figures.length > 1 && !page.hero) {
+      problems.push(`${where}: homepage has ${page.figures.length} figures and no <MediaHero /> preview`)
+    }
+    if (!isHome && page.hero) {
+      problems.push(`${where}: internal page repeats its figures in a <MediaHero /> carousel`)
     }
     if (page.hero && !page.figures.length) problems.push(`${where}: has a <MediaHero /> but nothing for it to slide`)
   }

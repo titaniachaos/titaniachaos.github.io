@@ -5,8 +5,6 @@ description: Clown workshops and clowning courses in Vienna for adults, with or 
 
 # Clown workshops in Vienna
 
-<MediaHero />
-
 ## Clown workshop experiences
 
 See the work in motion and hear what participants discovered through play, improvisation and physical comedy.

@@ -5,8 +5,6 @@ description: Clown-Workshops und Clownerie-Kurse in Wien für Erwachsene — mit
 
 # Clown-Workshops in Wien
 
-<MediaHero />
-
 ## Erfahrungen aus den Clown-Workshops
 
 Sehen Sie die Arbeit in Bewegung und lesen Sie, was Teilnehmende durch Spiel, Improvisation und physische Komik entdeckt haben.

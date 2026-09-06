@@ -7,7 +7,7 @@ pageClass: book-titania-page
 ---
 # Titania buchen
 
-<p class="book-intro">Laden Sie Titania zu einer Veranstaltung, an einen Arbeitsplatz, in eine Schule oder in eine Gemeinschaft ein — für eine Clown-Performance, spielerische Fotografie oder ein gemeinsames Erlebnis mit Bewegung, Improvisation und Humor.</p>
+<p class="book-intro">Laden Sie Titania zu einer Veranstaltung, an einen Arbeitsplatz, in eine Schule oder in eine Gemeinschaft ein — für eine Clown-Performance, spielerische Fotografie oder gemeinsame Erlebnisse, die Verbindung, Improvisation und Humor in den Mittelpunkt stellen.</p>
 
 <p class="book-intro">Wählen Sie eines der folgenden Formate oder kontaktieren Sie mich, wenn Sie nicht sicher sind, was zu Ihrem Anlass passt.</p>
 

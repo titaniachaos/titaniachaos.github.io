@@ -7,7 +7,7 @@ pageClass: book-titania-page
 ---
 # Book Titania
 
-<p class="book-intro">Invite Titania to an event, workplace, school or community setting—for clown performance, playful photography or a shared experience built around movement, improvisation and humour.</p>
+<p class="book-intro">Invite Titania to an event, workplace, school or community setting—for clown performance, playful photography or shared experiences built around connection, improvisation and humour.</p>
 
 <p class="book-intro">Choose one of the formats below, or contact me if you are unsure what would suit your occasion.</p>
 

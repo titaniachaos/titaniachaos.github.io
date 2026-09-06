@@ -7,6 +7,7 @@ const props = withDefaults(defineProps<{ lang?: HomeLang }>(), { lang: 'en' })
 
 const COPY = {
   en: {
+    pageTitle: 'Titania Chaos — clown artist in Vienna',
     pathsEyebrow: 'Two ways in',
     pathsTitle: 'What brings you here?',
     bookTitle: 'Book Titania',
@@ -42,6 +43,7 @@ const COPY = {
     soloAlt: 'Titania Chaos on stage during the development of her wordless clown solo'
   },
   de: {
+    pageTitle: 'Titania Chaos — Clownkünstlerin in Wien',
     pathsEyebrow: 'Zwei Wege',
     pathsTitle: 'Was führt Sie hierher?',
     bookTitle: 'Titania buchen',
@@ -77,6 +79,7 @@ const COPY = {
     soloAlt: 'Titania Chaos auf der Bühne während der Entwicklung ihres wortlosen Clown-Solos'
   },
   bg: {
+    pageTitle: 'Титания Хаос — клоун и артист във Виена',
     pathsEyebrow: 'Два пътя',
     pathsTitle: 'Какво ви води тук?',
     bookTitle: 'Поканете Титания',
@@ -121,6 +124,7 @@ const soloLink = computed(() => `https://titaniachaos.com/clown/${props.lang ===
 
 <template>
   <main class="home-landing">
+    <h1 class="home-sr-only">{{ t.pageTitle }}</h1>
     <section class="home-section home-paths" aria-labelledby="home-paths-title">
       <p class="home-eyebrow">{{ t.pathsEyebrow }}</p>
       <h2 id="home-paths-title">{{ t.pathsTitle }}</h2>

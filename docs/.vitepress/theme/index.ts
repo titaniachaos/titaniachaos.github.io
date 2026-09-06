@@ -9,6 +9,7 @@ import BrowsePath from './BrowsePath.vue'
 import LocalePreference from './LocalePreference.vue'
 import NotFound from './NotFound.vue'
 import Arrangement from './Arrangement.vue'
+import HomeLanding from './components/HomeLanding.vue'
 import UiBadge from './ui/UiBadge.vue'
 import UiButton from './ui/UiButton.vue'
 import UiLabel from './ui/UiLabel.vue'
@@ -18,6 +19,7 @@ export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
     app.component('Arrangement', Arrangement)
+    app.component('HomeLanding', HomeLanding)
     // Ported primitives, registered globally so a Markdown page can reach them
     // as well as a component can. `enhanceApp` is the documented place for
     // this; the styling is in custom.css, which is the documented place for

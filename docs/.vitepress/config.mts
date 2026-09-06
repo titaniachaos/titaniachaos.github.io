@@ -299,7 +299,7 @@ export default defineConfig({
       lang: 'en',
       themeConfig: {
         nav: [
-          { text: 'Workshops', link: '/' },
+          { text: 'Workshops', link: '/workshops' },
           { text: 'Birthdays', link: '/events' },
           { text: 'Book Titania', link: '/work-with-titania' },
           { text: 'Blog', link: CLOWN_SITE('') + 'blog/', ...SAME_SITE },
@@ -329,7 +329,7 @@ export default defineConfig({
       description: 'Клоунски работилници, физическа комедия, събития и празненства във Виена.',
       themeConfig: {
         nav: [
-          { text: 'Работилници', link: '/bg/' },
+          { text: 'Работилници', link: '/bg/workshops' },
           { text: 'Рождени дни', link: '/bg/events' },
           { text: 'Поканете Титания', link: '/bg/work-with-titania' },
           { text: 'Блог', link: CLOWN_SITE('/bg') + 'blog/', ...SAME_SITE },
@@ -364,7 +364,7 @@ export default defineConfig({
       description: 'Clown-Workshops, physische Komik, Veranstaltungen und Feste in Wien.',
       themeConfig: {
         nav: [
-          { text: 'Workshops', link: '/de/' },
+          { text: 'Workshops', link: '/de/workshops' },
           { text: 'Kindergeburtstage', link: '/de/events' },
           { text: 'Titania buchen', link: '/de/work-with-titania' },
           { text: 'Blog', link: CLOWN_SITE('/de') + 'blog/', ...SAME_SITE },

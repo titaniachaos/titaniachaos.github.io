@@ -5,11 +5,17 @@ aside: false
 outline: false
 pageClass: book-titania-page
 ---
-# Поканете Титания
-
-<p class="book-intro">Поканете Титания на събитие, в работна среда, училище или общност — за клоунско представление, игрова фотография или споделени преживявания, изградени около свързването, импровизацията и хумора.</p>
-
-<p class="book-intro">Изберете един от форматите по-долу или се свържете с мен, ако не сте сигурни кой е подходящ за вашия повод.</p>
+<section class="book-hero" aria-labelledby="book-title">
+  <div class="book-hero__copy">
+    <h1 id="book-title">Поканете Титания</h1>
+    <p>Клоунско представление, игрова фотография и споделени преживявания, изградени около свързването, импровизацията и хумора — за събития, работни места, училища и общности.</p>
+    <div class="book-hero__actions">
+      <a class="contact-button" href="mailto:agent@tatianapetkova.com?subject=Поканете%20Титания">Пишете на Титания</a>
+      <a class="contact-button secondary" href="#performance">Разгледайте форматите</a>
+    </div>
+  </div>
+  <div class="book-hero__media"><MediaFigure id="stage-collar" /></div>
+</section>
 
 <section class="book-facts" aria-label="Практическа информация">
   <div class="book-fact">

@@ -5,11 +5,17 @@ aside: false
 outline: false
 pageClass: book-titania-page
 ---
-# Book Titania
-
-<p class="book-intro">Invite Titania to an event, workplace, school or community setting—for clown performance, playful photography or shared experiences built around connection, improvisation and humour.</p>
-
-<p class="book-intro">Choose one of the formats below, or contact me if you are unsure what would suit your occasion.</p>
+<section class="book-hero" aria-labelledby="book-title">
+  <div class="book-hero__copy">
+    <h1 id="book-title">Book Titania</h1>
+    <p>Clown performance, playful photography and shared experiences built around connection, improvisation and humour—for events, workplaces, schools and community settings.</p>
+    <div class="book-hero__actions">
+      <a class="contact-button" href="mailto:agent@tatianapetkova.com?subject=Book%20Titania">Contact Titania</a>
+      <a class="contact-button secondary" href="#performance">Explore the formats</a>
+    </div>
+  </div>
+  <div class="book-hero__media"><MediaFigure id="stage-collar" /></div>
+</section>
 
 <section class="book-facts" aria-label="Practical information">
   <div class="book-fact">

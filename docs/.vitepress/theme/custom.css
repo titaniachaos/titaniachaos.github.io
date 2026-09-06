@@ -455,31 +455,73 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 .VPDoc.book-titania-page .content-container {
   max-width: 1060px;
 }
+
 .VPDoc.book-titania-page .support-card { display: none; }
 
-.book-titania-page .book-intro {
-  max-width: 68ch;
+.book-titania-page .book-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(16rem, 0.9fr);
+  gap: clamp(1.5rem, 4vw, 3.25rem);
+  align-items: center;
+  padding: 0.5rem 0 2rem;
+}
+
+.book-titania-page .book-hero__copy h1 {
+  margin: 0;
+  max-width: 14ch;
+}
+
+.book-titania-page .book-hero__copy > p {
+  max-width: 56ch;
+  margin: 1rem 0 0;
   color: var(--vp-c-text-2);
-  font-size: 1.05rem;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.book-titania-page .book-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+
+.book-titania-page .book-hero__actions .contact-button {
+  margin: 0;
+}
+
+.VPDoc.book-titania-page .book-hero__media .figure {
+  float: none;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.VPDoc.book-titania-page .book-hero__media :is(.figure__image, .figure__video) {
+  width: 100%;
+  max-width: 100%;
+  max-height: 25rem;
+  margin: 0;
+  object-fit: contain;
 }
 
 .book-titania-page .book-facts {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin: 2rem 0 3.25rem;
+  margin: 1.25rem 0 2.25rem;
   border-block: 1px solid var(--vp-c-divider);
 }
 
 .book-titania-page .book-fact {
-  padding: 1.15rem 1.35rem 1.2rem 0;
+  padding: 0.85rem 1rem 0.9rem 0;
 }
 
 .book-titania-page .book-fact + .book-fact {
-  padding-left: 1.35rem;
+  padding-left: 1rem;
   border-left: 1px solid var(--vp-c-divider);
 }
 
-.vp-doc.book-titania-page .book-fact h2 {
+.book-titania-page .vp-doc .book-fact h2 {
   margin: 0;
   color: var(--vp-c-text-1);
   font-size: 1rem;
@@ -487,18 +529,18 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 }
 
 .book-titania-page .book-fact p {
-  margin: 0.3rem 0 0;
+  margin: 0.25rem 0 0;
   color: var(--vp-c-text-2);
   font-size: 0.9rem;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .book-titania-page .book-service {
   display: grid;
   grid-template-columns: minmax(16rem, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 3.25rem);
   align-items: center;
-  padding: 3.4rem 0;
+  padding: 2.7rem 0;
   border-top: 1px solid var(--vp-c-divider);
 }
 
@@ -508,14 +550,14 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 
 .book-titania-page .book-service--reverse .book-service__media { order: 2; }
 
-.vp-doc.book-titania-page .book-service h2,
-.vp-doc.book-titania-page .book-workshop h2 {
-  margin: 0.35rem 0 1rem;
+.book-titania-page .vp-doc .book-service h2,
+.book-titania-page .vp-doc .book-workshop h2 {
+  margin: 0.25rem 0 0.8rem;
   max-width: 24ch;
 }
 
 .book-titania-page .book-service__copy > p {
-  margin: 0.8rem 0;
+  margin: 0.7rem 0;
   max-width: 58ch;
 }
 
@@ -531,7 +573,7 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 }
 
 .book-titania-page .book-service__details {
-  padding-top: 0.7rem;
+  padding-top: 0.65rem;
   border-top: 1px solid var(--vp-c-divider);
   color: var(--vp-c-text-2);
 }
@@ -552,14 +594,14 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 }
 
 .book-titania-page .book-workshop {
-  padding: 3.6rem 0;
+  padding: 2.85rem 0;
   border-top: 1px solid var(--vp-c-divider);
 }
 
 .book-titania-page .book-workshop__lead {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(16rem, 0.9fr);
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 3.25rem);
   align-items: center;
 }
 
@@ -570,36 +612,36 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 .book-titania-page .book-outcomes {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.6rem;
-  margin: 2.1rem 0 1.25rem;
+  gap: 1.25rem;
+  margin: 1.6rem 0 1rem;
 }
 
 .book-titania-page .book-outcome {
-  padding-top: 0.85rem;
+  padding-top: 0.75rem;
   border-top: 3px solid var(--vp-c-brand-1);
 }
 
-.vp-doc.book-titania-page .book-outcome h3 {
+.book-titania-page .vp-doc .book-outcome h3 {
   margin: 0;
   font-size: 1rem;
 }
 
 .book-titania-page .book-outcome p {
-  margin: 0.4rem 0 0;
+  margin: 0.35rem 0 0;
   color: var(--vp-c-text-2);
   font-size: 0.92rem;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 .book-titania-page .book-experience {
   display: grid;
   grid-template-columns: minmax(12rem, 0.7fr) minmax(0, 1.3fr);
-  gap: clamp(2rem, 5vw, 4rem);
-  padding: 3.4rem 0;
+  gap: clamp(1.5rem, 4vw, 3.25rem);
+  padding: 2.7rem 0;
   border-top: 1px solid var(--vp-c-divider);
 }
 
-.vp-doc.book-titania-page .book-experience h2 {
+.book-titania-page .vp-doc .book-experience h2 {
   margin: 0;
 }
 
@@ -610,15 +652,15 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
   gap: 2rem;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0.75rem;
-  padding: 1.6rem 1.75rem;
+  margin-top: 0.5rem;
+  padding: 1.5rem 1.65rem;
   border: 1px solid var(--vp-c-brand-soft);
   border-radius: 14px;
   background: linear-gradient(145deg, var(--vp-c-brand-soft), var(--vp-c-bg-soft) 72%);
 }
 
-.vp-doc.book-titania-page .book-enquiry h2 {
-  margin: 0 0 0.5rem;
+.book-titania-page .vp-doc .book-enquiry h2 {
+  margin: 0 0 0.45rem;
 }
 
 .book-titania-page .book-enquiry p {
@@ -633,6 +675,7 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 }
 
 @media (max-width: 720px) {
+  .book-titania-page .book-hero,
   .book-titania-page .book-facts,
   .book-titania-page .book-service,
   .book-titania-page .book-service--reverse,
@@ -640,6 +683,29 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
   .book-titania-page .book-outcomes,
   .book-titania-page .book-experience {
     grid-template-columns: 1fr;
+  }
+
+  .book-titania-page .book-hero {
+    gap: 1.25rem;
+    padding: 0.15rem 0 1.5rem;
+  }
+
+  .book-titania-page .book-hero__copy > p {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .book-titania-page .book-hero__actions {
+    margin-top: 1rem;
+  }
+
+  .book-titania-page .book-facts {
+    margin: 0.8rem 0 1.75rem;
+  }
+
+  .book-titania-page .book-fact {
+    padding: 0.8rem 0;
   }
 
   .book-titania-page .book-fact + .book-fact {
@@ -651,20 +717,24 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
   .book-titania-page .book-service,
   .book-titania-page .book-workshop,
   .book-titania-page .book-experience {
-    gap: 1.5rem;
-    padding: 2.5rem 0;
+    gap: 1.1rem;
+    padding: 1.8rem 0;
   }
 
   .book-titania-page .book-service--reverse .book-service__media { order: 0; }
-  .book-titania-page .book-outcomes { gap: 1rem; }
+
+  .book-titania-page .book-outcomes {
+    gap: 0.85rem;
+    margin-top: 1.25rem;
+  }
 
   .book-titania-page .book-enquiry {
     display: block;
-    padding: 1.4rem;
+    padding: 1.25rem;
   }
 
   .book-titania-page .book-enquiry .contact-button {
     width: 100%;
-    margin-top: 1.2rem;
+    margin-top: 1rem;
   }
 }

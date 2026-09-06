@@ -5,11 +5,17 @@ aside: false
 outline: false
 pageClass: book-titania-page
 ---
-# Titania buchen
-
-<p class="book-intro">Laden Sie Titania zu einer Veranstaltung, an einen Arbeitsplatz, in eine Schule oder in eine Gemeinschaft ein — für eine Clown-Performance, spielerische Fotografie oder gemeinsame Erlebnisse, die Verbindung, Improvisation und Humor in den Mittelpunkt stellen.</p>
-
-<p class="book-intro">Wählen Sie eines der folgenden Formate oder kontaktieren Sie mich, wenn Sie nicht sicher sind, was zu Ihrem Anlass passt.</p>
+<section class="book-hero" aria-labelledby="book-title">
+  <div class="book-hero__copy">
+    <h1 id="book-title">Titania buchen</h1>
+    <p>Clown-Performance, spielerische Fotografie und gemeinsame Erlebnisse rund um Verbindung, Improvisation und Humor — für Veranstaltungen, Arbeitsplätze, Schulen und Gemeinschaften.</p>
+    <div class="book-hero__actions">
+      <a class="contact-button" href="mailto:agent@tatianapetkova.com?subject=Titania%20buchen">Titania kontaktieren</a>
+      <a class="contact-button secondary" href="#performance">Formate entdecken</a>
+    </div>
+  </div>
+  <div class="book-hero__media"><MediaFigure id="stage-collar" /></div>
+</section>
 
 <section class="book-facts" aria-label="Praktische Informationen">
   <div class="book-fact">

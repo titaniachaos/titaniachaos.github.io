@@ -1,63 +1,111 @@
 ---
-title: Clown mieten in Wien — Firmenfeier, Hochzeit, Straßenfest
-description: "Clown-Performerin Titania Chaos in Wien mieten: Firmenfeiern, Hochzeiten, Festivals und Straßenfeste — Walking Act, Zeitreisekamera und Team-Workshops für Firmen."
+title: Titania buchen — Clown-Performances, Workshops und Veranstaltungen in Wien
+description: Buchen Sie Titania Chaos in Wien für Clown-Performances, die Zeitreisekamera, Team-Workshops sowie Programme für Kinder und Gemeinschaften.
+aside: false
+outline: false
+pageClass: book-titania-page
 ---
-# Mit Titania arbeiten
+# Titania buchen
 
-Titania Chaos kann eingeladen werden, aufzutreten, anzuleiten, zu unterrichten, zu spielen — oder einfach ein wenig konstruktive Unordnung in einen Raum zu bringen.
+<p class="book-intro">Laden Sie Titania zu einer Veranstaltung, an einen Arbeitsplatz, in eine Schule oder in eine Gemeinschaft ein — für eine Clown-Performance, spielerische Fotografie oder ein gemeinsames Erlebnis mit Bewegung, Improvisation und Humor.</p>
 
-Ihre Arbeit bewegt sich zwischen Clownerie, physischer Komik, Workshops, Veranstaltungen, Bildung und sozialen Kontexten. Manchmal steht der Clown im Mittelpunkt. Manchmal hilft das Spiel einer Gruppe, sich zu verbinden, zu kommunizieren oder etwas anders zu betrachten.
+<p class="book-intro">Wählen Sie eines der folgenden Formate oder kontaktieren Sie mich, wenn Sie nicht sicher sind, was zu Ihrem Anlass passt.</p>
 
-## Auftreten & spielen
+<section class="book-facts" aria-label="Praktische Informationen">
+  <div class="book-fact">
+    <h2>Maßgeschneidert</h2>
+    <p>Auf den Anlass, den Ort und die Teilnehmenden abgestimmt.</p>
+  </div>
+  <div class="book-fact">
+    <h2>Individuell vereinbart</h2>
+    <p>Umfang, Dauer und Preis werden für jedes Engagement vereinbart.</p>
+  </div>
+  <div class="book-fact">
+    <h2>Fünf Sprachen</h2>
+    <p>Deutsch, Englisch, Französisch, Russisch und Bulgarisch.</p>
+  </div>
+</section>
 
-<MediaFigure id="impact-hub" />
+<section class="book-service" aria-labelledby="performance">
+  <div class="book-service__media"><MediaFigure id="impact-hub" /></div>
+  <div class="book-service__copy">
+    <p class="ui-label">Festivals · Hochzeiten · Veranstaltungen</p>
+    <h2 id="performance">Clown-Performance und spielerische Intervention</h2>
+    <p><strong>Geeignet für:</strong> Festivals, Hochzeiten, Firmenveranstaltungen, Straßenfeste und öffentliche Feiern.</p>
+    <p>Titania kommt als Clownfigur zur Veranstaltung und reagiert spielerisch auf die Menschen, den Raum und die Situation. Die Performance kann im Mittelpunkt stehen oder sich in kleineren Begegnungen mit den Gästen entfalten.</p>
+    <p class="book-service__benefit">Sie schafft einen unvorhersehbaren Mittelpunkt und Momente gemeinsamen Lachens und der Verbindung zwischen den Gästen.</p>
+    <a class="contact-button" href="mailto:agent@tatianapetkova.com?subject=Anfrage%20zur%20Performance">Performance anfragen</a>
+  </div>
+</section>
 
-Titania kann bei Festivals, Hochzeiten, Firmenveranstaltungen, Straßenfesten und anderen Zusammenkünften auftreten — als Clown-Performerin, spielerische Intervention oder mit ihrer Zeitreisekamera.
+<section class="book-service book-service--reverse" aria-labelledby="camera">
+  <div class="book-service__media"><MediaFigure id="camera-portrait" /></div>
+  <div class="book-service__copy">
+    <p class="ui-label">Partizipative Fotografie</p>
+    <h2 id="camera">Die Zeitreisekamera</h2>
+    <p><strong>Geeignet für:</strong> Hochzeiten, Firmenveranstaltungen, Festivals, Geburtstage und öffentliche Feiern.</p>
+    <p>Die Zeitreisekamera ist ein mobiles Fotoerlebnis irgendwo zwischen Straßentheater, Performance und einem altmodischen Fotostudio.</p>
+    <p>Die Gäste wählen Kostüme und Requisiten, betreten Titanias improvisierte Welt und gehen mit einem Foto aus einem anderen möglichen Jahrhundert oder einer anderen Dimension nach Hause.</p>
+    <p class="book-service__benefit">Das Erlebnis lädt die Gäste zum Mitmachen ein, statt sie nur zusehen zu lassen — und gibt ihnen ein persönliches Foto zum Mitnehmen.</p>
+    <p class="book-service__details"><strong>Platzbedarf:</strong> etwa 7 m²<br><strong>Mindestdauer:</strong> zwei Stunden</p>
+    <a class="contact-button" href="mailto:agent@tatianapetkova.com?subject=Anfrage%20zur%20Zeitreisekamera">Zeitreisekamera anfragen</a>
+  </div>
+</section>
 
-### Titania Chaos und ihre Zeitreisekamera
+<section class="book-workshop" aria-labelledby="workshops">
+  <div class="book-workshop__lead">
+    <div>
+      <p class="ui-label">Firmen · Gruppen · Erwachsene ohne Vorerfahrung</p>
+      <h2 id="workshops">Clown-Workshops und Teamerlebnisse</h2>
+      <p><strong>Geeignet für:</strong> Firmen, Organisationen, private Gruppen und Erwachsene, die Spiel, Kommunikation und physische Komik erkunden möchten. Die Workshops richten sich sowohl an Erwachsene ohne Vorerfahrung als auch an Menschen mit Theatererfahrung. Private Workshops und Teamerlebnisse können auf Anfrage für Gruppen organisiert werden.</p>
+      <p>Die Workshops arbeiten mit klaren körperlichen Aufgaben und strukturierter Improvisation. Die Teilnehmenden erhalten Raum, zu beobachten, zu reagieren, Risiken einzugehen, Fehler zu machen und das wirklich Komische zu entdecken. Bühnenerfahrung ist nicht erforderlich.</p>
+    </div>
+    <div class="book-service__media"><MediaFigure id="workshop-mini-art" /></div>
+  </div>
+  <div class="book-outcomes" aria-label="Wirkung des Workshops">
+    <div class="book-outcome">
+      <h3>Loslassen</h3>
+      <p>Abstand vom Alltagsdruck gewinnen und durch Bewegung, Lachen und Spiel Stress lösen.</p>
+    </div>
+    <div class="book-outcome">
+      <h3>Verbinden</h3>
+      <p>Aufmerksamkeit, Vertrauen und gemeinsames Lachen in der Gruppe erleben.</p>
+    </div>
+    <div class="book-outcome">
+      <h3>Auftanken</h3>
+      <p>Mit einem Gefühl von Leichtigkeit und neuer Energie nach Hause gehen.</p>
+    </div>
+  </div>
+  <a class="contact-button" href="mailto:agent@tatianapetkova.com?subject=Anfrage%20zu%20einem%20privaten%20oder%20Team-Workshop">Privaten oder Team-Workshop anfragen</a>
+  <a class="contact-button secondary" href="/de/#practical-details">Offene Workshops entdecken</a>
+</section>
 
-<MediaFigure id="camera-portrait" />
+<section class="book-service book-service--reverse" aria-labelledby="children">
+  <div class="book-service__media"><MediaFigure id="b-img-3806" /></div>
+  <div class="book-service__copy">
+    <p class="ui-label">Schulen · Festivals · Gemeinschaften</p>
+    <h2 id="children">Kinder und Gemeinschaften</h2>
+    <p><strong>Geeignet für:</strong> Kindergärten, Schulen, Kinderfestivals, Familienveranstaltungen und Gemeinschaftsorganisationen.</p>
+    <p>Titania arbeitet mit Kindern und Familien durch Clownerie, Spiele und sozialen Zirkus. Die Aktivitäten können Bewegung, Improvisation, Jonglieren, Figurenspiel und spielerische Zusammenarbeit umfassen — mit Raum für unterschiedliche Fähigkeiten und Arten der Teilnahme.</p>
+    <p class="book-service__benefit">Die Aktivitäten können durch Spiel Empathie, Kommunikation, Körperwahrnehmung und Selbstvertrauen fördern.</p>
+    <a class="contact-button" href="mailto:agent@tatianapetkova.com?subject=Anfrage%20zu%20einem%20Kinderprogramm">Kinderprogramm anfragen</a>
+    <a class="contact-button secondary" href="/de/events">Kindergeburtstage ansehen</a>
+  </div>
+</section>
 
+<section class="book-experience" aria-labelledby="experience">
+  <h2 id="experience">Erfahrung und Hintergrund</h2>
+  <div>
+    <p>Ich bin Clown-Künstlerin, Psychologin, Polyglottin und Sprachlehrerin mit 25 Jahren Unterrichtserfahrung.</p>
+    <p>Mein Hintergrund in Psychologie, Kommunikation, Dolmetschen und Sprachunterricht prägt meine Arbeit mit Gruppen: wie Menschen lernen, kommunizieren, Risiken eingehen, Fehler machen und ihren eigenen Zugang zu einer Übung finden.</p>
+    <p>Meine künstlerische Praxis stützt sich auf Clownerie, physische Komik, sozialen Zirkus, funktionales Jonglieren und inklusive Ansätze.</p>
+  </div>
+</section>
 
-Eine tragbare fotografische Zeitmaschine, irgendwo zwischen Straßentheater, Performance und einem altmodischen Fotostudio.
-
-Die Gäste wählen Kostüme und Requisiten, betreten Titanias improvisierte Welt und gehen mit einem Foto aus einem anderen möglichen Jahrhundert oder einer anderen Dimension nach Hause.
-
-Die Kamera eignet sich besonders gut für Geburtstagsfeiern, Hochzeiten, Firmenveranstaltungen, Festivals und öffentliche Feste.
-
-## Workshops & Teambuilding
-
-<MediaFigure id="workshop-mini-art" />
-
-Team-Workshops für Firmen und Organisationen, die eine andere Art suchen, einander zu begegnen, zu spielen und zusammenzuarbeiten. Offene Workshops für Einzelpersonen finden Sie auf der [Startseite](/de/#practical-details).
-
-Die Einheiten arbeiten mit klaren körperlichen Aufgaben und strukturierter Improvisation. So entsteht Raum, um zu beobachten, zu reagieren, Risiken einzugehen und das wirklich Komische zu entdecken.
-
-[Workshops entdecken](/de/#practical-details){.contact-button}
-
-## Lernen & Facilitation
-
-<MediaFigure id="a-img-1272" />
-
-Titania ist außerdem eine erfahrene Facilitatorin und Sprachlehrerin mit 25 Jahren Unterrichtserfahrung.
-
-Dieser Hintergrund prägt ihre Arbeit mit Gruppen: wie Menschen lernen, kommunizieren, Risiken eingehen, Fehler machen und ihren eigenen Weg in eine Übung finden.
-
-Clownerie, Spiel und körperliche Arbeit können daher auch in Bildungskontexte einfließen — insbesondere dort, wo Kommunikation, Gruppendynamik, Sprache, Kreativität oder Lernen Teil der Fragestellung sind.
-
-## Kinder & Gemeinschaften
-
-<MediaFigure id="b-img-3806" />
-
-Titania arbeitet mit Kindern, Familien und Gemeinschaften durch Clownerie, Spiel und sozialen Zirkus.
-
-[Kindergeburtstage, Kindergarten und Kinderfeste](/de/events){.contact-button .secondary}
-
-
-## Titania einladen
-
-Wenn Sie eine Veranstaltung, ein Team, eine Klasse, eine Gruppe oder einen Kontext im Sinn haben und nicht sicher sind, welches Format passt, melden Sie sich.
-
-Nicht alles muss mit einem fertigen Paket beginnen.
-
-[Titania kontaktieren](mailto:agent@tatianapetkova.com?subject=Work%20with%20Titania){.contact-button}
+<section class="book-enquiry" aria-labelledby="occasion">
+  <div>
+    <h2 id="occasion">Erzählen Sie mir von Ihrem Anlass</h2>
+    <p>Sie brauchen noch kein fertiges Konzept. Schreiben Sie mir, um welchen Anlass es geht, wann und wo er stattfindet, wie viele Personen ungefähr teilnehmen und wie alt sie sind, welche Sprache Sie bevorzugen und was die Menschen erleben sollen.</p>
+  </div>
+  <a class="contact-button" href="mailto:agent@tatianapetkova.com?subject=Titania%20buchen">Titania kontaktieren</a>
+</section>

@@ -301,7 +301,7 @@ export default defineConfig({
         nav: [
           { text: 'Workshops', link: '/' },
           { text: 'Birthdays', link: '/events' },
-          { text: 'Work with Titania', link: '/work-with-titania' },
+          { text: 'Book Titania', link: '/work-with-titania' },
           { text: 'Blog', link: CLOWN_SITE('') + 'blog/', ...SAME_SITE },
           browseMenu('en'),
           { text: 'About', link: '/about-titania' },
@@ -331,7 +331,7 @@ export default defineConfig({
         nav: [
           { text: 'Работилници', link: '/bg/' },
           { text: 'Рождени дни', link: '/bg/events' },
-          { text: 'Работа с Титания', link: '/bg/work-with-titania' },
+          { text: 'Поканете Титания', link: '/bg/work-with-titania' },
           { text: 'Блог', link: CLOWN_SITE('/bg') + 'blog/', ...SAME_SITE },
           browseMenu('bg'),
           { text: 'За Титания', link: '/bg/about-titania' },
@@ -366,7 +366,7 @@ export default defineConfig({
         nav: [
           { text: 'Workshops', link: '/de/' },
           { text: 'Kindergeburtstage', link: '/de/events' },
-          { text: 'Mit Titania arbeiten', link: '/de/work-with-titania' },
+          { text: 'Titania buchen', link: '/de/work-with-titania' },
           { text: 'Blog', link: CLOWN_SITE('/de') + 'blog/', ...SAME_SITE },
           browseMenu('de'),
           { text: 'Über Titania', link: '/de/about-titania' },

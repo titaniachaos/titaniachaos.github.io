@@ -115,8 +115,8 @@ const COPY = {
 
 const t = computed(() => COPY[props.lang])
 const prefix = computed(() => (props.lang === 'en' ? '' : `/${props.lang}`))
-const aequatorLink = computed(() => `/aequator/${props.lang === 'en' ? '' : `${props.lang}/`}`)
-const soloLink = computed(() => `/clown/${props.lang === 'en' ? '' : `${props.lang}/`}`)
+const aequatorLink = computed(() => `https://titaniachaos.com/aequator/${props.lang === 'en' ? '' : `${props.lang}/`}`)
+const soloLink = computed(() => `https://titaniachaos.com/clown/${props.lang === 'en' ? '' : `${props.lang}/`}`)
 </script>
 
 <template>

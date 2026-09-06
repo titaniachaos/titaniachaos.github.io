@@ -83,7 +83,7 @@ pageClass: book-titania-page
     </div>
   </div>
   <a class="contact-button" href="mailto:agent@tatianapetkova.com?subject=Anfrage%20zu%20einem%20privaten%20oder%20Team-Workshop">Privaten oder Team-Workshop anfragen</a>
-  <a class="contact-button secondary" href="/de/#practical-details">Offene Workshops entdecken</a>
+  <a class="contact-button secondary" href="/de/workshops#practical-details">Offene Workshops entdecken</a>
 </section>
 
 <section class="book-service book-service--reverse" aria-labelledby="children">

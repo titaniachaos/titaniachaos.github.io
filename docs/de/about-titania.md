@@ -57,4 +57,4 @@ Titania Chaos war im bulgarischen Fernsehen, Radio und in Printmedien zu sehen u
 - [Wie die Polyglottin Tatiana Petkova zur Clownin Titania Chaos wurde](https://www.24chasa.bg/ozhivlenie/article/12927305) — *24 Chasa*, 3. November 2022.
 - [Lachen ist Freiheit](https://www.bulgaren.org/2022/10/20/%D1%82%D0%B0%D1%82%D1%8F%D0%BD%D0%B0-%D0%BF%D0%B5%D1%82%D0%BA%D0%BE%D0%B2%D0%B0-%D1%81%D0%BC%D0%B5%D1%85%D1%8A%D1%82-%D0%B5-%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0/) — *Melange*, der bulgarische Blog in Österreich, 20. Oktober 2022.
 
-[An einem Workshop teilnehmen](/de/#join-in){.contact-button} [Mit Titania arbeiten](/de/work-with-titania){.contact-button .secondary}
+[An einem Workshop teilnehmen](/de/workshops#join-in){.contact-button} [Mit Titania arbeiten](/de/work-with-titania){.contact-button .secondary}

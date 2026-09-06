@@ -83,7 +83,7 @@ pageClass: book-titania-page
     </div>
   </div>
   <a class="contact-button" href="mailto:agent@tatianapetkova.com?subject=Запитване%20за%20частна%20или%20екипна%20работилница">Попитайте за частна или екипна работилница</a>
-  <a class="contact-button secondary" href="/bg/#practical-details">Разгледайте отворените работилници</a>
+  <a class="contact-button secondary" href="/bg/workshops#practical-details">Разгледайте отворените работилници</a>
 </section>
 
 <section class="book-service book-service--reverse" aria-labelledby="children">

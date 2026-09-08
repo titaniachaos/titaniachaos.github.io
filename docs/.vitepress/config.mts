@@ -142,12 +142,14 @@ function browseSearchBody(relativePath: string): string | null {
 }
 
 const PHOTOGRAPHERS =
-  'Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, ' +
-  'Konstantin Oberlik, Tatiana Petkova, Marion Scholz and Laurent Ziegler'
+  'Veliko Balabanov, Ulrich Girolami, Mariane Hink, Heidi Holtl, Geo Kalev, ' +
+  'Tanya Matskevich, Konstantin Oberlik, Tatiana Petkova, Marion Scholz, ' +
+  'Krasimir Stoichkov and Laurent Ziegler'
 
 const PHOTOGRAPHERS_BG =
-  'Велико Балабанов, Марин Хинк, Хайди Холтл, Гео Калев, Таня Мацкевич, ' +
-  'Константин Оберлик, Татяна Петкова, Марион Шолц и Лоран Циглер'
+  'Велико Балабанов, Улрих Джиролами, Мариане Хинк, Хайди Холтл, Гео Калев, ' +
+  'Таня Мацкевич, Константин Оберлик, Татяна Петкова, Марион Шолц, ' +
+  'Красимир Стоичков и Лоран Циглер'
 
 export default defineConfig({
   title: 'Titania Chaos',

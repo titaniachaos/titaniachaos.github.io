@@ -451,8 +451,8 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 
 
 /* ---- Book Titania: editorial service page ------------------------------- */
-.VPDoc.book-titania-page .content,
-.VPDoc.book-titania-page .content-container {
+.book-titania-page .VPDoc .content,
+.book-titania-page .VPDoc .content-container {
   max-width: 1060px;
 }
 
@@ -490,16 +490,14 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
   margin: 0;
 }
 
-.vp-doc.book-titania-page .book-hero__media .figure,
-.VPDoc.book-titania-page .book-hero__media .figure {
+.book-titania-page .vp-doc .book-hero__media .figure {
   float: none;
   width: 100%;
   max-width: none;
   margin: 0;
 }
 
-.vp-doc.book-titania-page .book-hero__media :is(.figure__image, .figure__video),
-.VPDoc.book-titania-page .book-hero__media :is(.figure__image, .figure__video) {
+.book-titania-page .vp-doc .book-hero__media :is(.figure__image, .figure__video) {
   width: 100%;
   max-width: 100%;
   max-height: 25rem;
@@ -587,16 +585,14 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
   color: var(--vp-c-text-2);
 }
 
-.vp-doc.book-titania-page .book-service__media .figure,
-.VPDoc.book-titania-page .book-service__media .figure {
+.book-titania-page .vp-doc .book-service__media .figure {
   float: none;
   width: 100%;
   max-width: none;
   margin: 0;
 }
 
-.vp-doc.book-titania-page .book-service__media :is(.figure__image, .figure__video),
-.VPDoc.book-titania-page .book-service__media :is(.figure__image, .figure__video) {
+.book-titania-page .vp-doc .book-service__media :is(.figure__image, .figure__video) {
   width: 100%;
   max-width: 100%;
   max-height: 29rem;

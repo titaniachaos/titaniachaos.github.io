@@ -33,7 +33,7 @@ pageClass: book-titania-page
 </section>
 
 <section class="book-service" aria-labelledby="performance">
-  <div class="book-service__media"><MediaFigure id="impact-hub" /></div>
+  <div class="book-service__media"><MediaFigure id="b-img-1420" /></div>
   <div class="book-service__copy">
     <p class="ui-label">Фестивали · сватби · събития</p>
     <h2 id="performance">Клоунско представление и игрова намеса</h2>

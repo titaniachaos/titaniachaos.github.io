@@ -35,24 +35,24 @@ for (const p of wanted) {
   }
 }
 
-// Reachable by a reader, not just by the build. The six broad entrances live
-// on About: pictures remain available without competing with the site's five
-// primary visitor destinations in the main navigation.
+// Reachable by a reader, not just by the build. A compact Pictures index offers
+// six broad entrances; the more specific legacy tags remain available as linked
+// filters inside the archive.
 const ENTRANCES = ['portrait', 'performance', 'street', 'workshop', 'children', 'props']
 for (const locale of LOCALES) {
-  const about = join(dist, locale, 'about-titania.html')
+  const pictures = join(dist, locale, 'pictures.html')
   let html = ''
   try {
-    html = await readFile(about, 'utf8')
+    html = await readFile(pictures, 'utf8')
   } catch {
-    problems.push(`${locale || 'root'}: no About page to check picture access on`)
+    problems.push(`${locale || 'root'}: no Pictures index to check`)
     continue
   }
   const prefix = locale ? `/${locale}` : ''
   const missing = ENTRANCES.filter((word) => !html.includes(`href="${prefix}/${word}"`))
   if (missing.length) {
     problems.push(
-      `${locale || 'root'} About page is missing ${missing.length} primary browse entrance(s): ` +
+      `${locale || 'root'} Pictures index is missing ${missing.length} primary browse entrance(s): ` +
         missing.map((word) => `/${word}`).join(', ')
     )
   }

@@ -57,14 +57,4 @@ outline: [1, 2]
 - [„Как полиглотът Татяна Петкова стана клоунът Титания Хаос“](https://www.24chasa.bg/ozhivlenie/article/12927305) — „24 часа“, 3 ноември 2022 г.
 - [„Татяна Петкова: Смехът е свобода“](https://www.bulgaren.org/2022/10/20/%D1%82%D0%B0%D1%82%D1%8F%D0%BD%D0%B0-%D0%BF%D0%B5%D1%82%D0%BA%D0%BE%D0%B2%D0%B0-%D1%81%D0%BC%D0%B5%D1%85%D1%8A%D1%82-%D0%B5-%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0/) — „Меланж“, българският блог в Австрия, 20 октомври 2022 г.
 
-## Снимки
-
-Избрани фотографии от представленията, работилниците, уличната работа и проектите на Титания са запазени в съществуващия фотоархив.
-
-<MediaFigure id="stage-gown" />
-<MediaFigure id="workshop-sofia" />
-<MediaFigure id="camera-portrait" />
-
-[Портрети](/bg/portrait) · [Представления](/bg/performance) · [Сцена](/bg/stage) · [Улица](/bg/street) · [Работилници](/bg/workshop) · [Деца](/bg/children) · [Рождени дни](/bg/birthday) · [Балони](/bg/balloons) · [Машина на времето](/bg/camera) · [Реквизит](/bg/props) · [Жонглиране](/bg/juggling) · [Медии](/bg/press) · [Уединение](/bg/solitude) · [Äquatormaßband](/bg/aequator)
-
 [Включете се в работилница](/bg/workshops#join-in){.contact-button} [Работа с Титания](/bg/work-with-titania){.contact-button .secondary}

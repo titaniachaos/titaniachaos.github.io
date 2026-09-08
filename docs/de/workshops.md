@@ -47,11 +47,11 @@ Die Workshops finden in Wien statt und heißen sowohl erwachsene Anfängerinnen 
 
 [Workshops anfragen](mailto:agent@tatianapetkova.com?subject=Clown%20workshop%20enquiry){.contact-button}
 
-## Einen Clown-Workshop verschenken {#join-in}
+## Einen Platz im Clown-Workshop verschenken {#join-in}
 
-<MediaFigure id="a-img-2906" />
+<MediaFigure id="a-img-2173" />
 
-Schenken Sie jemandem einen Workshop – oder kommen Sie mit einer Freundin und teilen Sie Momente der Leichtigkeit und Freude.
+Verschenken Sie die Teilnahme an einem kommenden Workshop. Das Geschenk ist der Platz dieser Person in der Gruppe – keine Buchung eines privaten Workshops. Sie können auch gemeinsam kommen und Momente der Leichtigkeit und Freude teilen.
 
 [Schreiben Sie Titania](mailto:agent@tatianapetkova.com){.contact-button}
 

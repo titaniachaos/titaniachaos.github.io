@@ -47,11 +47,11 @@ Workshops take place in Vienna and welcome adult beginners as well as people wit
 
 [Ask about workshops](mailto:agent@tatianapetkova.com?subject=Clown%20workshop%20enquiry){.contact-button}
 
-## Give a clown workshop as a gift {#join-in}
+## Gift a place in a clown workshop {#join-in}
 
-<MediaFigure id="a-img-2906" />
+<MediaFigure id="a-img-2173" />
 
-Give someone a workshop—or come with a friend and share moments of lightness and joy.
+Give someone the experience of taking part in an upcoming workshop. The gift is their place in the group—not a private workshop booking. You can also come together and share moments of lightness and joy.
 
 [Email Titania](mailto:agent@tatianapetkova.com){.contact-button}
 

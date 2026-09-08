@@ -35,24 +35,24 @@ for (const p of wanted) {
   }
 }
 
-// Reachable by a reader, not just by the build. The primary menu deliberately
-// offers six broad entrances; the more specific legacy tags remain available
-// as linked filters inside the archive rather than crowding the main menu.
+// Reachable by a reader, not just by the build. The six broad entrances live
+// on About: pictures remain available without competing with the site's five
+// primary visitor destinations in the main navigation.
 const ENTRANCES = ['portrait', 'performance', 'street', 'workshop', 'children', 'props']
 for (const locale of LOCALES) {
-  const home = join(dist, locale, 'index.html')
+  const about = join(dist, locale, 'about-titania.html')
   let html = ''
   try {
-    html = await readFile(home, 'utf8')
+    html = await readFile(about, 'utf8')
   } catch {
-    problems.push(`${locale || 'root'}: no home page to check the menu on`)
+    problems.push(`${locale || 'root'}: no About page to check picture access on`)
     continue
   }
   const prefix = locale ? `/${locale}` : ''
   const missing = ENTRANCES.filter((word) => !html.includes(`href="${prefix}/${word}"`))
   if (missing.length) {
     problems.push(
-      `${locale || 'root'} home page is missing ${missing.length} primary browse entrance(s): ` +
+      `${locale || 'root'} About page is missing ${missing.length} primary browse entrance(s): ` +
         missing.map((word) => `/${word}`).join(', ')
     )
   }

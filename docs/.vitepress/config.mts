@@ -66,31 +66,6 @@ const BROWSE_GROUPS: Record<Lang, { word: string; text: string }[]> = {
   ]
 }
 
-const browseMenu = (lang: Lang) => ({
-  text: BROWSE_LABEL[lang],
-  items: [
-    ...BROWSE_GROUPS[lang].map(({ word, text }) => ({
-      text,
-      link: `${lang === 'en' ? '' : '/' + lang}/${word}`
-    })),
-    { text: ARRANGEMENT_LABEL[lang], link: `${lang === 'en' ? '' : '/' + lang}/arrangement` }
-  ]
-})
-
-/** What the arrangement machine is called in the menu. */
-const ARRANGEMENT_LABEL: Record<Lang, string> = {
-  en: 'Arrangements',
-  bg: 'Подредби',
-  de: 'Anordnungen'
-}
-
-/** What the menu is called. Not a page title — nothing sits at the top of it. */
-const BROWSE_LABEL: Record<Lang, string> = {
-  en: 'Pictures',
-  bg: 'Снимки',
-  de: 'Bilder'
-}
-
 /**
  * What a keyword listing puts into the search index.
  *
@@ -302,12 +277,24 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Workshops', link: '/workshops' },
-          { text: 'Birthdays', link: '/events' },
-          { text: 'Book Titania', link: '/work-with-titania' },
-          { text: 'Blog', link: CLOWN_SITE('') + 'blog/', ...SAME_SITE },
-          browseMenu('en'),
-          { text: 'About', link: '/about-titania' },
-          { text: 'Clown Project', link: CLOWN_SITE(''), ...SAME_SITE }
+          { text: 'Performances & Events', link: '/work-with-titania' },
+          { text: 'Children’s Birthdays', link: '/events' },
+          {
+            text: 'Projects',
+            link: '/projects',
+            items: [
+              { text: 'Äquatormaßband', link: `${HOSTNAME}/aequator/`, ...SAME_SITE },
+              { text: 'Solo Titania Chaos', link: CLOWN_SITE(''), ...SAME_SITE }
+            ]
+          },
+          {
+            text: 'About',
+            link: '/about-titania',
+            items: [
+              { text: 'About Titania', link: '/about-titania' },
+              { text: 'Blog', link: CLOWN_SITE('') + 'blog/', ...SAME_SITE }
+            ]
+          }
         ],
         outline: { level: [2, 3], label: 'On this page' },
         footer: {
@@ -332,12 +319,24 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Работилници', link: '/bg/workshops' },
-          { text: 'Рождени дни', link: '/bg/events' },
-          { text: 'Поканете Титания', link: '/bg/work-with-titania' },
-          { text: 'Блог', link: CLOWN_SITE('/bg') + 'blog/', ...SAME_SITE },
-          browseMenu('bg'),
-          { text: 'За Титания', link: '/bg/about-titania' },
-          { text: 'Проект „Клоун“', link: CLOWN_SITE('/bg'), ...SAME_SITE }
+          { text: 'Представления и събития', link: '/bg/work-with-titania' },
+          { text: 'Детски рождени дни', link: '/bg/events' },
+          {
+            text: 'Проекти',
+            link: '/bg/projects',
+            items: [
+              { text: 'Äquatormaßband', link: `${HOSTNAME}/aequator/`, ...SAME_SITE },
+              { text: 'Solo Titania Chaos', link: CLOWN_SITE('/bg'), ...SAME_SITE }
+            ]
+          },
+          {
+            text: 'За Титания',
+            link: '/bg/about-titania',
+            items: [
+              { text: 'За Титания', link: '/bg/about-titania' },
+              { text: 'Блог', link: CLOWN_SITE('/bg') + 'blog/', ...SAME_SITE }
+            ]
+          }
         ],
         outline: { level: [2, 3], label: 'На тази страница' },
         footer: {
@@ -367,12 +366,24 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Workshops', link: '/de/workshops' },
+          { text: 'Performances & Veranstaltungen', link: '/de/work-with-titania' },
           { text: 'Kindergeburtstage', link: '/de/events' },
-          { text: 'Titania buchen', link: '/de/work-with-titania' },
-          { text: 'Blog', link: CLOWN_SITE('/de') + 'blog/', ...SAME_SITE },
-          browseMenu('de'),
-          { text: 'Über Titania', link: '/de/about-titania' },
-          { text: 'Clown-Projekt', link: CLOWN_SITE('/de'), ...SAME_SITE }
+          {
+            text: 'Projekte',
+            link: '/de/projects',
+            items: [
+              { text: 'Äquatormaßband', link: `${HOSTNAME}/aequator/`, ...SAME_SITE },
+              { text: 'Solo Titania Chaos', link: CLOWN_SITE('/de'), ...SAME_SITE }
+            ]
+          },
+          {
+            text: 'Über Titania',
+            link: '/de/about-titania',
+            items: [
+              { text: 'Über Titania', link: '/de/about-titania' },
+              { text: 'Blog', link: CLOWN_SITE('/de') + 'blog/', ...SAME_SITE }
+            ]
+          }
         ],
         outline: { level: [2, 3], label: 'Auf dieser Seite' },
         footer: {

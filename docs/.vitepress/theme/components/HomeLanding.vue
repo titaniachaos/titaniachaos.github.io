@@ -7,6 +7,13 @@ const props = withDefaults(defineProps<{ lang?: HomeLang }>(), { lang: 'en' })
 const COPY = {
   en: {
     pageTitle: 'Titania Chaos — Clown artist in Vienna',
+    pathsTitle: 'What brings you here?',
+    learnTitle: 'I want to learn',
+    learnBody: 'Explore clown workshops.',
+    celebrateTitle: 'I’m planning a celebration',
+    celebrateBody: 'Discover children’s birthdays.',
+    performanceTitle: 'I’m looking for a performance',
+    performanceBody: 'See performances and events.',
     projectsTitle: 'Current projects',
     aequatorTitle: 'Äquatormaßband × Titania Chaos',
     aequatorBody: 'A participatory textile art and peace project created by Bianca Trappl, accompanied by Titania as ambassador and performative partner.',
@@ -24,6 +31,13 @@ const COPY = {
   },
   de: {
     pageTitle: 'Titania Chaos — Clownkünstlerin in Wien',
+    pathsTitle: 'Was führt Sie hierher?',
+    learnTitle: 'Ich möchte lernen',
+    learnBody: 'Clown-Workshops entdecken.',
+    celebrateTitle: 'Ich plane ein Fest',
+    celebrateBody: 'Kindergeburtstage entdecken.',
+    performanceTitle: 'Ich suche eine Performance',
+    performanceBody: 'Performances und Veranstaltungen ansehen.',
     projectsTitle: 'Aktuelle Projekte',
     aequatorTitle: 'Äquatormaßband × Titania Chaos',
     aequatorBody: 'Ein partizipatives Textilkunst- und Friedensprojekt von Bianca Trappl, begleitet von Titania als Botschafterin und performative Partnerin.',
@@ -41,6 +55,13 @@ const COPY = {
   },
   bg: {
     pageTitle: 'Титания Хаос — клоун и артист във Виена',
+    pathsTitle: 'Какво ви води тук?',
+    learnTitle: 'Искам да уча',
+    learnBody: 'Разгледайте клоунските работилници.',
+    celebrateTitle: 'Планирам празненство',
+    celebrateBody: 'Открийте детските рождени дни.',
+    performanceTitle: 'Търся представление',
+    performanceBody: 'Вижте представления и събития.',
     projectsTitle: 'Актуални проекти',
     aequatorTitle: 'Äquatormaßband × Titania Chaos',
     aequatorBody: 'Партиципативен проект за текстилно изкуство и мир, създаден от Бианка Трапл, с Титания като посланик и пърформативен партньор.',
@@ -66,6 +87,27 @@ const soloLink = computed(() => `https://titaniachaos.com/clown/${props.lang ===
 <template>
   <main class="home-landing">
     <h1 class="home-sr-only">{{ t.pageTitle }}</h1>
+    <section class="home-section home-paths" aria-labelledby="home-paths-title">
+      <h2 id="home-paths-title">{{ t.pathsTitle }}</h2>
+      <div class="home-outcome-grid">
+        <a :href="`${prefix}/workshops`">
+          <h3>{{ t.learnTitle }}</h3>
+          <p>{{ t.learnBody }}</p>
+          <span aria-hidden="true">→</span>
+        </a>
+        <a :href="`${prefix}/events`">
+          <h3>{{ t.celebrateTitle }}</h3>
+          <p>{{ t.celebrateBody }}</p>
+          <span aria-hidden="true">→</span>
+        </a>
+        <a :href="`${prefix}/work-with-titania`">
+          <h3>{{ t.performanceTitle }}</h3>
+          <p>{{ t.performanceBody }}</p>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
     <section class="home-section home-projects" aria-labelledby="home-projects-title">
       <h2 id="home-projects-title">{{ t.projectsTitle }}</h2>
       <div class="home-project-list">

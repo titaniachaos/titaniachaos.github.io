@@ -57,14 +57,4 @@ Titania Chaos has been featured in Bulgarian television, radio and print media, 
 - [How the polyglot Tatiana Petkova became the clown Titania Chaos](https://www.24chasa.bg/ozhivlenie/article/12927305) — *24 Chasa*, 3 November 2022.
 - [Laughter is freedom](https://www.bulgaren.org/2022/10/20/%D1%82%D0%B0%D1%82%D1%8F%D0%BD%D0%B0-%D0%BF%D0%B5%D1%82%D0%BA%D0%BE%D0%B2%D0%B0-%D1%81%D0%BC%D0%B5%D1%85%D1%8A%D1%82-%D0%B5-%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0/) — *Melange*, the Bulgarian blog in Austria, 20 October 2022.
 
-## Pictures
-
-Selected photographs from Titania’s performances, workshops, street work and projects are preserved in the existing picture archive.
-
-<MediaFigure id="stage-gown" />
-<MediaFigure id="workshop-sofia" />
-<MediaFigure id="camera-portrait" />
-
-[Portraits](/portrait) · [Performance](/performance) · [Stage](/stage) · [Street](/street) · [Workshops](/workshop) · [Children](/children) · [Birthdays](/birthday) · [Balloons](/balloons) · [Time-travelling camera](/camera) · [Props](/props) · [Juggling](/juggling) · [Press](/press) · [Solitude](/solitude) · [Äquatormaßband](/aequator)
-
 [Join a workshop](/workshops#join-in){.contact-button} [Work with Titania](/work-with-titania){.contact-button .secondary}

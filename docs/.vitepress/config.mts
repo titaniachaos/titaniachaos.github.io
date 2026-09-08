@@ -22,48 +22,13 @@ const CLOWN_SITE = (prefix: string) => `${HOSTNAME}/clown${prefix}/`
  */
 const SAME_SITE = { target: '_self', rel: '', noIcon: true } as const
 
-/**
- * The way in to the 44 keyword paths.
- *
- * Every published photograph is reachable from one of them, and until this
- * menu existed a reader could only arrive by typing a URL or following a
- * `Narrower` link from a page they had no way to reach either. A browse
- * surface nothing links to is the pool with extra steps.
- *
- * The single words only: thirteen entries, richest first, and the deeper
- * combinations are reached from the listing itself. Built from the archive, so
- * a new word in TAGS appears here on the next build and a word nothing carries
- * never does.
- */
+/** The archive state also supplies the generated picture routes and search. */
 const browseState = await shelf()
 
-/** Six clear entrances into the archive. More specific filters remain available
- * from each listing, without crowding the primary navigation. */
-const BROWSE_GROUPS: Record<Lang, { word: string; text: string }[]> = {
-  en: [
-    { word: 'portrait', text: 'Portraits' },
-    { word: 'performance', text: 'Performance' },
-    { word: 'street', text: 'Street' },
-    { word: 'workshop', text: 'Workshops' },
-    { word: 'children', text: 'Children & celebrations' },
-    { word: 'props', text: 'Props & projects' }
-  ],
-  bg: [
-    { word: 'portrait', text: 'Портрети' },
-    { word: 'performance', text: 'Представления' },
-    { word: 'street', text: 'Улица' },
-    { word: 'workshop', text: 'Работилници' },
-    { word: 'children', text: 'Деца и празници' },
-    { word: 'props', text: 'Реквизит и проекти' }
-  ],
-  de: [
-    { word: 'portrait', text: 'Porträts' },
-    { word: 'performance', text: 'Performance' },
-    { word: 'street', text: 'Straße' },
-    { word: 'workshop', text: 'Workshops' },
-    { word: 'children', text: 'Kinder & Feste' },
-    { word: 'props', text: 'Requisiten & Projekte' }
-  ]
+const BROWSE_LABEL: Record<Lang, string> = {
+  en: 'Pictures',
+  bg: 'Снимки',
+  de: 'Bilder'
 }
 
 /**
@@ -292,6 +257,7 @@ export default defineConfig({
             link: '/about-titania',
             items: [
               { text: 'About Titania', link: '/about-titania' },
+              { text: BROWSE_LABEL.en, link: '/pictures' },
               { text: 'Blog', link: CLOWN_SITE('') + 'blog/', ...SAME_SITE }
             ]
           }
@@ -334,6 +300,7 @@ export default defineConfig({
             link: '/bg/about-titania',
             items: [
               { text: 'За Титания', link: '/bg/about-titania' },
+              { text: BROWSE_LABEL.bg, link: '/bg/pictures' },
               { text: 'Блог', link: CLOWN_SITE('/bg') + 'blog/', ...SAME_SITE }
             ]
           }
@@ -381,6 +348,7 @@ export default defineConfig({
             link: '/de/about-titania',
             items: [
               { text: 'Über Titania', link: '/de/about-titania' },
+              { text: BROWSE_LABEL.de, link: '/de/pictures' },
               { text: 'Blog', link: CLOWN_SITE('/de') + 'blog/', ...SAME_SITE }
             ]
           }

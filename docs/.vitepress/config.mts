@@ -254,7 +254,6 @@ export default defineConfig({
           },
           {
             text: 'About',
-            link: '/about-titania',
             items: [
               { text: 'About Titania', link: '/about-titania' },
               { text: BROWSE_LABEL.en, link: '/pictures' },
@@ -297,7 +296,6 @@ export default defineConfig({
           },
           {
             text: 'За Титания',
-            link: '/bg/about-titania',
             items: [
               { text: 'За Титания', link: '/bg/about-titania' },
               { text: BROWSE_LABEL.bg, link: '/bg/pictures' },
@@ -345,7 +343,6 @@ export default defineConfig({
           },
           {
             text: 'Über Titania',
-            link: '/de/about-titania',
             items: [
               { text: 'Über Titania', link: '/de/about-titania' },
               { text: BROWSE_LABEL.de, link: '/de/pictures' },

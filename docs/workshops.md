@@ -21,7 +21,7 @@ See the work in motion and hear what participants discovered through play, impro
 
 ## Who the workshops are for
 
-<MediaFigure id="a-img-1272" />
+<MediaFigure id="a-img-8628" />
 
 You do not need a theatre background or previous clown experience. You might be an IT specialist, a teacher, a lawyer, a social worker, a nurse, a translator, a cook, a dancer, a librarian, a musician, a firefighter, a doctor, a shop owner, an artist or a hairdresser. You might work in an office, a school, a hospital, a kitchen or on a stage. You are someone who wants to discover more about yourself and have fun doing so.
 

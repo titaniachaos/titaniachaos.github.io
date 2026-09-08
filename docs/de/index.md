@@ -3,9 +3,9 @@ layout: home
 title: Titania Chaos — Clownkünstlerin in Wien
 description: Performances, spielerische Begegnungen, Clown-Workshops und aktuelle künstlerische Projekte von Titania Chaos in Wien.
 hero:
-  name: Titania Chaos
-  text: Clownkünstlerin · Wien
-  tagline: "Humor und Lachen sind ernste Angelegenheiten, die mit größter Hingabe erforscht und in die Welt getragen werden wollen.<br><small>Clownkünstlerin, Workshop-Leiterin und Schöpferin partizipativer Erlebnisse.</small>"
+  name: Titania Chaos — Clownkünstlerin in Wien
+  text: Humor und Lachen sind ernste Angelegenheiten.
+  tagline: Clownkünstlerin und Workshop-Leiterin für Live-Performances und partizipative Erlebnisse.
   image:
     src: /images/titania-chaos-home-portrait.webp
     alt: Titania Chaos lächelt im Freien mit roter Clownsnase, Propellermütze und buntem Strickschal
@@ -13,10 +13,10 @@ hero:
     height: 1439
   actions:
     - theme: brand
-      text: Titania buchen
+      text: Performance oder Veranstaltung buchen
       link: /de/work-with-titania
     - theme: alt
-      text: Workshop besuchen
+      text: An einem Clown-Workshop teilnehmen
       link: /de/workshops
 ---
 

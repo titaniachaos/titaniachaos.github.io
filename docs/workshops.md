@@ -1,6 +1,7 @@
 ---
 title: Clown workshops in Vienna for adults
 description: Clown workshops and clowning courses in Vienna for adults, with or without stage experience — play, presence, improvisation and physical work with Titania Chaos.
+pageClass: workshops-page
 ---
 
 # Clown workshops in Vienna
@@ -10,7 +11,6 @@ description: Clown workshops and clowning courses in Vienna for adults, with or 
 See the work in motion and hear what participants discovered through play, improvisation and physical comedy.
 
 <MediaFigure id="showreel" />
-<MediaFigure id="a-8b30b47754adaae4" />
 
 > “Everything was fluid, subtle and fun. Her great finesse and kindness enabled her to accompany each person personally.” — Juliette, philosophy teacher
 

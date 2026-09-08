@@ -110,6 +110,16 @@ for (const [name, byLocale] of pages) {
       if (unknown.length) problems.push(`${where}: MediaFigure asks for ${unknown.join(', ')}, which no frame can carry`)
     }
 
+    // An explicit frame twice on one page is always a duplicate. Tag queries
+    // deliberately take the next-best unused frame, but fixed ids have no such
+    // escape hatch and previously repeated one workshop photograph in two
+    // different sections.
+    const fixed = page.figures.filter((asked) => asked.startsWith('id:'))
+    const repeated = [...new Set(fixed.filter((asked, index) => fixed.indexOf(asked) !== index))]
+    if (repeated.length) {
+      problems.push(`${where}: repeats ${repeated.join(', ')} — one fixed frame may appear only once per page`)
+    }
+
     // The homepage may preview its selected media in a carousel. Internal
     // editorial pages place each figure beside the claim it supports, so a
     // second carousel would repeat the same material before the page begins.

@@ -1,6 +1,7 @@
 ---
 title: Clown-Workshops in Wien für Erwachsene
 description: Clown-Workshops und Clownerie-Kurse in Wien für Erwachsene — mit oder ohne Bühnenerfahrung. Spiel, Präsenz, Improvisation und Körperarbeit mit Titania Chaos.
+pageClass: workshops-page
 ---
 
 # Clown-Workshops in Wien
@@ -10,7 +11,6 @@ description: Clown-Workshops und Clownerie-Kurse in Wien für Erwachsene — mit
 Sehen Sie die Arbeit in Bewegung und lesen Sie, was Teilnehmende durch Spiel, Improvisation und physische Komik entdeckt haben.
 
 <MediaFigure id="showreel" />
-<MediaFigure id="a-8b30b47754adaae4" />
 
 > „Alles war fließend, feinsinnig und lustig. Ihr großes Feingefühl und ihre Freundlichkeit haben es ihr ermöglicht, jede Person persönlich zu begleiten.“ — Juliette, Philosophielehrerin
 

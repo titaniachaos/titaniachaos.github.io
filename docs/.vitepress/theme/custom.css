@@ -242,6 +242,22 @@
    break, and a max-height there would shrink it away from the edges for no
    reason. */
 @media (min-width: 721px) {
+  /* The workshops introduction is led by one film. Give it the full reading
+     measure instead of leaving it at the floated-image width intended for
+     media with prose alongside it. */
+  .workshops-page .vp-doc h2:first-of-type + p + .figure.figure {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 1.6rem 0;
+  }
+  .workshops-page .vp-doc h2:first-of-type + p + .figure.figure :is(.figure__image, .figure__video) {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    margin-inline: 0;
+  }
+
   .vp-doc .figure:has(+ :is(h2, h3)),
   .vp-doc .figure:has(+ :is(p, ul, ol, blockquote) + :is(h2, h3)),
   .vp-doc .figure:has(+ :is(p, ul, ol, blockquote) + :is(p, ul, ol, blockquote) + :is(h2, h3)) {

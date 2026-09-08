@@ -100,7 +100,10 @@ pageClass: book-titania-page
 </section>
 
 <section class="book-experience" aria-labelledby="experience">
-  <h2 id="experience">Experience behind the work</h2>
+  <div class="book-experience__media">
+    <h2 id="experience">Experience behind the work</h2>
+    <MediaFigure id="a-img-2906" />
+  </div>
   <div>
     <p>I am a clown artist, psychologist, polyglot and language teacher with 25 years of teaching experience.</p>
     <p>My background in psychology, communication, interpreting and language education informs the way I work with groups: how people learn, communicate, take risks, make mistakes and find their own way into an exercise.</p>

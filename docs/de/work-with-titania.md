@@ -100,7 +100,10 @@ pageClass: book-titania-page
 </section>
 
 <section class="book-experience" aria-labelledby="experience">
-  <h2 id="experience">Erfahrung und Hintergrund</h2>
+  <div class="book-experience__media">
+    <h2 id="experience">Erfahrung und Hintergrund</h2>
+    <MediaFigure id="a-img-2906" />
+  </div>
   <div>
     <p>Ich bin Clown-Künstlerin, Psychologin, Polyglottin und Sprachlehrerin mit 25 Jahren Unterrichtserfahrung.</p>
     <p>Mein Hintergrund in Psychologie, Kommunikation, Dolmetschen und Sprachunterricht prägt meine Arbeit mit Gruppen: wie Menschen lernen, kommunizieren, Risiken eingehen, Fehler machen und ihren eigenen Zugang zu einer Übung finden.</p>

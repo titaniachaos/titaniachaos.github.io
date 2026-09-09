@@ -523,7 +523,7 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 
 .book-titania-page .book-facts {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 1.25rem 0 2.25rem;
   border-block: 1px solid var(--vp-c-divider);
 }
@@ -554,6 +554,27 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 
 .book-titania-page .book-facts + .book-service {
   border-top: 0;
+}
+
+.booking-glance {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 1.5rem 0 2.5rem;
+  border-block: 1px solid var(--vp-c-divider);
+}
+
+.booking-glance > div { padding: 0.9rem 1rem 0.95rem 0; }
+.booking-glance > div + div {
+  padding-left: 1rem;
+  border-left: 1px solid var(--vp-c-divider);
+}
+.booking-glance :is(strong, span) { display: block; }
+.booking-glance strong { color: var(--vp-c-text-1); font-size: 0.95rem; }
+.booking-glance span {
+  margin-top: 0.3rem;
+  color: var(--vp-c-text-2);
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
 
 .book-titania-page .book-service {
@@ -724,6 +745,14 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
   .book-titania-page .book-outcomes,
   .book-titania-page .book-experience {
     grid-template-columns: 1fr;
+  }
+
+  .booking-glance { grid-template-columns: 1fr; }
+  .booking-glance > div { padding: 0.7rem 0; }
+  .booking-glance > div + div {
+    padding-left: 0;
+    border-top: 1px solid var(--vp-c-divider);
+    border-left: 0;
   }
 
   .book-titania-page .book-hero {

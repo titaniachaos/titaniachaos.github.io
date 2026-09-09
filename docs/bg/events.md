@@ -12,6 +12,13 @@ description: Наемете клоун за детски рожден ден, д
 
 [Запитайте сега](mailto:agent@tatianapetkova.com?subject=Zapitvane%20za%20rozhden%20den){.contact-button}
 
+<section class="booking-glance" aria-label="Най-важното за резервацията">
+  <div><strong>Място</strong><span>Виена</span></div>
+  <div><strong>Продължителност</strong><span>Около 2–3 часа</span></div>
+  <div><strong>Подходящо за</strong><span>Деца от 5 до 12 години, до 10 деца</span></div>
+  <div><strong>След запитването</strong><span>Изпратете желаната дата, мястото, броя и възрастта на децата. Титания ще потвърди свободната дата и подробностите.</span></div>
+</section>
+
 ## Как протича празненството?
 
 <MediaFigure id="traveller-kit" />

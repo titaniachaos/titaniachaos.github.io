@@ -181,6 +181,19 @@ for (const file of files) {
       continue
     }
 
+    // On the main site `base` is `/`, so sibling paths also start with the
+    // base. Route those through the sibling build before the generic local
+    // check below treats them as pages owned by this build.
+    const [rootPath] = href.split('#')
+    if (
+      base === '/' &&
+      norm(SIBLING_BASE) !== '/' &&
+      (norm(rootPath) === norm(SIBLING_BASE) || norm(rootPath).startsWith(norm(SIBLING_BASE) + '/'))
+    ) {
+      if (!ASSET.test(rootPath)) checkOurs(file, href, rootPath)
+      continue
+    }
+
     // A root-relative link that does not carry the base is normally a link to
     // another site on this domain -- the clown workspace lives at /clown/. But
     // if prefixing the base makes it land on a page in this build, it is one

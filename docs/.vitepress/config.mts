@@ -101,7 +101,9 @@ export default defineConfig({
   // make a red build green. It covers links to pages; fragments are not
   // checked by VitePress at all, which is what scripts/check-build.mjs is
   // for -- this site navigates almost entirely by written section ids.
-  ignoreDeadLinks: false,
+  // These paths are supplied by sibling VitePress builds and are validated
+  // against their output by check:build rather than this source tree.
+  ignoreDeadLinks: [/^\/(?:aequator|clown)(?:\/|$)/],
 
   markdown: {
     // `markdown.externalLinks` is global, and the two sites share a host: a

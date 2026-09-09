@@ -11,7 +11,7 @@ outline: [1, 2]
 
 Äquatormaßband is a participatory textile art and peace project created by Bianca Trappl. Titania has accompanied it since 2025 as ambassador and performative cooperation partner.
 
-[Explore Äquatormaßband](https://titaniachaos.com/aequator/){.contact-button}
+[Explore Äquatormaßband](/aequator/){.contact-button}
 
 ## Solo Titania Chaos
 
@@ -19,6 +19,6 @@ outline: [1, 2]
 
 A wordless clown solo about being alone together, developed through contact between clown and audience.
 
-[Explore Solo Titania Chaos](https://titaniachaos.com/clown/){.contact-button}
+[Explore Solo Titania Chaos](/clown/){.contact-button}
 
 [Support the projects](https://revolut.me/titaniachaos){.contact-button .secondary}

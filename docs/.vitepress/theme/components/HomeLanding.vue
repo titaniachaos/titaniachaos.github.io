@@ -81,7 +81,7 @@ const COPY = {
 
 const t = computed(() => COPY[props.lang])
 const prefix = computed(() => (props.lang === 'en' ? '' : `/${props.lang}`))
-const soloLink = computed(() => `https://titaniachaos.com/clown/${props.lang === 'en' ? '' : `${props.lang}/`}`)
+const soloLink = computed(() => `/clown/${props.lang === 'en' ? '' : `${props.lang}/`}`)
 </script>
 
 <template>
@@ -117,7 +117,7 @@ const soloLink = computed(() => `https://titaniachaos.com/clown/${props.lang ===
             <h3>{{ t.aequatorTitle }}</h3>
             <p>{{ t.aequatorBody }}</p>
             <div class="home-project-card__actions">
-              <a class="home-text-link" href="https://titaniachaos.com/aequator/">{{ t.aequatorAction }} <span aria-hidden="true">→</span></a>
+              <a class="home-text-link" href="/aequator/">{{ t.aequatorAction }} <span aria-hidden="true">→</span></a>
               <a class="home-text-link home-text-link--support" href="https://revolut.me/titaniachaos" target="_blank" rel="noopener noreferrer">{{ t.support }}</a>
             </div>
           </div>

@@ -12,6 +12,13 @@ Birthday parties for children aged **5 to 12** — with play, imagination, costu
 
 [Enquire now](mailto:agent@tatianapetkova.com?subject=Birthday%20party%20enquiry){.contact-button}
 
+<section class="booking-glance" aria-label="Birthday booking at a glance">
+  <div><strong>Location</strong><span>Vienna</span></div>
+  <div><strong>Duration</strong><span>Approximately 2–3 hours</span></div>
+  <div><strong>Suitable for</strong><span>Ages 5–12, up to 10 children</span></div>
+  <div><strong>After your enquiry</strong><span>Send the preferred date, location and number and ages of the children. Titania will confirm availability and the details.</span></div>
+</section>
+
 ## How does a party work?
 
 <MediaFigure id="traveller-kit" />

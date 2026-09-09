@@ -12,6 +12,13 @@ Geburtstagsfeiern für Kinder von **5 bis 12 Jahren** – mit Spiel, Fantasie, K
 
 [Jetzt anfragen](mailto:agent@tatianapetkova.com?subject=Anfrage%20Kindergeburtstag){.contact-button}
 
+<section class="booking-glance" aria-label="Geburtstagsbuchung auf einen Blick">
+  <div><strong>Ort</strong><span>Wien</span></div>
+  <div><strong>Dauer</strong><span>Etwa 2–3 Stunden</span></div>
+  <div><strong>Geeignet für</strong><span>5–12 Jahre, bis zu 10 Kinder</span></div>
+  <div><strong>Nach Ihrer Anfrage</strong><span>Nennen Sie Wunschtermin, Ort sowie Anzahl und Alter der Kinder. Titania bestätigt die Verfügbarkeit und die Details.</span></div>
+</section>
+
 ## Wie läuft eine Feier ab?
 
 <MediaFigure id="traveller-kit" />

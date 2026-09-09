@@ -19,16 +19,20 @@ pageClass: book-titania-page
 
 <section class="book-facts" aria-label="Praktische Informationen">
   <div class="book-fact">
-    <h2>Maßgeschneidert</h2>
-    <p>Auf den Anlass, den Ort und die Teilnehmenden abgestimmt.</p>
+    <h2>Ort</h2>
+    <p>Mit Sitz in Wien.</p>
   </div>
   <div class="book-fact">
-    <h2>Individuell vereinbart</h2>
+    <h2>Geeignet für</h2>
+    <p>Veranstaltungen, Arbeitsplätze, Schulen und Gemeinschaften.</p>
+  </div>
+  <div class="book-fact">
+    <h2>Dauer & Preis</h2>
     <p>Umfang, Dauer und Preis werden für jedes Engagement vereinbart.</p>
   </div>
   <div class="book-fact">
-    <h2>Fünf Sprachen</h2>
-    <p>Deutsch, Englisch, Französisch, Russisch und Bulgarisch.</p>
+    <h2>Nach Ihrer Anfrage</h2>
+    <p>Nennen Sie Datum, Ort und Gruppendetails. Titania schlägt ein passendes Format vor und bestätigt Umfang und Preis.</p>
   </div>
 </section>
 

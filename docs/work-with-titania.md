@@ -19,16 +19,20 @@ pageClass: book-titania-page
 
 <section class="book-facts" aria-label="Practical information">
   <div class="book-fact">
-    <h2>Tailored</h2>
-    <p>Adapted to the occasion, venue and participants.</p>
+    <h2>Location</h2>
+    <p>Based in Vienna.</p>
   </div>
   <div class="book-fact">
-    <h2>Individually arranged</h2>
+    <h2>Suitable for</h2>
+    <p>Events, workplaces, schools and community settings.</p>
+  </div>
+  <div class="book-fact">
+    <h2>Duration & price</h2>
     <p>Scope, duration and price are agreed for each engagement.</p>
   </div>
   <div class="book-fact">
-    <h2>Five languages</h2>
-    <p>German, English, French, Russian and Bulgarian.</p>
+    <h2>After your enquiry</h2>
+    <p>Send the date, location and group details. Titania will suggest a suitable format and confirm the scope and price.</p>
   </div>
 </section>
 

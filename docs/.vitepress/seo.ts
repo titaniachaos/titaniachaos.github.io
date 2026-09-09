@@ -44,6 +44,7 @@ const IMAGES = {
   // them, so the sharing image is a real landscape crop rather than the
   // portrait, which arrived on X and LinkedIn as a band across the middle.
   'titania-chaos-card.jpg': { w: 1200, h: 630 },
+  'titania-chaos-home-card.jpg': { w: 1200, h: 630 },
   'titania-chaos-hero.webp': { w: 640, h: 840 },
   'titania-juggling.jpg': { w: 800, h: 1000 },
   'work-with-titania-card.jpg': { w: 768, h: 402 }
@@ -51,11 +52,11 @@ const IMAGES = {
 
 /** Per-page social image, keyed by the locale-stripped slug. */
 const PAGE_IMAGE: Record<string, keyof typeof IMAGES> = {
-  '/': 'titania-chaos-card.jpg',
-  '/about-titania': 'titania-chaos-card.jpg',
+  '/': 'titania-chaos-home-card.jpg',
+  '/about-titania': 'titania-chaos-home-card.jpg',
   '/work-with-titania': 'work-with-titania-card.jpg',
-  '/events': 'titania-chaos-card.jpg',
-  '/legal-data': 'titania-chaos-card.jpg'
+  '/events': 'titania-chaos-home-card.jpg',
+  '/legal-data': 'titania-chaos-home-card.jpg'
 }
 
 /** `index.md` -> `/`, `bg/events.md` -> `/bg/events` (cleanUrls is on). */
@@ -227,7 +228,7 @@ export function buildHead(ctx: TransformContext, siteConfig: SiteConfig): HeadCo
   const alternates = existingAlternates(slug, siteConfig.pages)
 
   const copy = COPY[locale.lang]
-  const imageKey: ImageKey = PAGE_IMAGE[slug] ?? 'titania-chaos-card.jpg'
+  const imageKey: ImageKey = PAGE_IMAGE[slug] ?? 'titania-chaos-home-card.jpg'
   const image = IMAGES[imageKey]
   const imageAlt = copy.imageAlt[imageKey]
   const imageUrl = `${HOSTNAME}/images/${imageKey}`

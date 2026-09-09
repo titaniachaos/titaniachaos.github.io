@@ -20,6 +20,7 @@ import type { Lang } from './locale.ts'
 /** The social images, and what each one shows. */
 export const IMAGE_KEYS = [
   'titania-chaos-card.jpg',
+  'titania-chaos-home-card.jpg',
   'titania-chaos-hero.webp',
   'titania-juggling.jpg',
   'work-with-titania-card.jpg'
@@ -60,6 +61,7 @@ export const COPY: Record<Lang, SiteCopy> = {
       'Titania Chaos is a professional clown, workshop facilitator and bookable performer based in Vienna.',
     imageAlt: {
       'titania-chaos-card.jpg': 'Titania Chaos',
+      'titania-chaos-home-card.jpg': 'Titania Chaos smiling outdoors in a red clown nose, propeller hat and colourful knitted scarf',
       'titania-chaos-hero.webp': 'Titania Chaos',
       'titania-juggling.jpg': 'Tatiana Petkova as Titania Chaos, catching a juggling club',
       'work-with-titania-card.jpg':
@@ -90,6 +92,7 @@ export const COPY: Record<Lang, SiteCopy> = {
       'Титания Хаос е професионален клоун, водещ на работилници и артист за събития, базирана във Виена.',
     imageAlt: {
       'titania-chaos-card.jpg': 'Титания Хаос',
+      'titania-chaos-home-card.jpg': 'Титания Хаос се усмихва навън с червен клоунски нос, шапка с перка и пъстър плетен шал',
       'titania-chaos-hero.webp': 'Титания Хаос',
       'titania-juggling.jpg': 'Татяна Петкова като Титания Хаос, улавяща жонгльорска бухалка',
       'work-with-titania-card.jpg': 'Титания Хаос с микрофон пред публика'
@@ -119,6 +122,7 @@ export const COPY: Record<Lang, SiteCopy> = {
       'Titania Chaos ist eine professionelle Clownin, Workshop-Leiterin und buchbare Performerin mit Sitz in Wien.',
     imageAlt: {
       'titania-chaos-card.jpg': 'Titania Chaos',
+      'titania-chaos-home-card.jpg': 'Titania Chaos lächelt draußen mit roter Clownsnase, Propellermütze und buntem Strickschal',
       'titania-chaos-hero.webp': 'Titania Chaos',
       'titania-juggling.jpg': 'Tatiana Petkova als Titania Chaos, fängt eine Jonglierkeule',
       'work-with-titania-card.jpg': 'Titania Chaos mit Mikrofon vor Publikum'

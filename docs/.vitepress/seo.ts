@@ -224,6 +224,19 @@ export function buildHead(ctx: TransformContext, siteConfig: SiteConfig): HeadCo
   }
 
   const { locale, slug } = splitLocale(urlPath)
+  const params = ctx.pageData.params as { w1?: string } | undefined
+
+  // Picture filters remain useful, shareable browsing views, but they are not
+  // separate search documents. Point their canonical signal at the real
+  // picture index instead of self-canonicalising every tag permutation.
+  if (params?.w1) {
+    const picturePath = `${locale.prefix}/pictures`
+    return [
+      ['meta', { name: 'robots', content: 'noindex, follow' }],
+      ['link', { rel: 'canonical', href: `${HOSTNAME}${picturePath}` }]
+    ]
+  }
+
   const canonical = `${HOSTNAME}${urlPath}`
   const alternates = existingAlternates(slug, siteConfig.pages)
 

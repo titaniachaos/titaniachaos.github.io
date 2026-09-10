@@ -1,6 +1,7 @@
-import { existsSync, readFileSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { writeFile } from 'node:fs/promises'
-import { join } from 'node:path'
+import { dirname, join, relative, sep } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import type { SiteConfig } from 'vitepress'
 import { HOSTNAME, LOCALES, splitLocale } from './seo.ts'
 import { COPY } from './site-copy.ts'
@@ -21,6 +22,43 @@ import { atom } from './feed.ts'
 
 /** The Clown project, served from a sub-path of this host. */
 const CLOWN = `${HOSTNAME}/clown/`
+
+/**
+ * VitePress includes dynamic-route output in its sitemap by default. That is
+ * useful for articles, but the `[w1]/...` routes are faceted views of one
+ * picture archive, not 300 independent documents. Keep the routes available
+ * to visitors while limiting discovery to hand-written, indexable sources.
+ */
+const DOCS_ROOT = dirname(dirname(fileURLToPath(import.meta.url)))
+
+function sourceFiles(dir: string): string[] {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const full = join(dir, entry.name)
+    return entry.isDirectory() ? sourceFiles(full) : entry.name.endsWith('.md') ? [full] : []
+  })
+}
+
+const INDEXABLE_URLS = new Set(
+  sourceFiles(DOCS_ROOT).flatMap((file) => {
+    const source = relative(DOCS_ROOT, file).split(sep).join('/')
+    if (source === '404.md' || source.split('/').some((part) => part.startsWith('['))) return []
+    const frontmatter = /^---\r?\n([\s\S]*?)\r?\n---/.exec(readFileSync(file, 'utf8'))?.[1] ?? ''
+    if (/^robots:\s*.*noindex/im.test(frontmatter)) return []
+    const url = '/' + source.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
+    return [url]
+  })
+)
+
+const indexablePages: Integration = {
+  name: 'indexable-pages',
+  hooks: {
+    'sitemap:transform': (items) =>
+      items.filter((item) => {
+        const path = item.url.startsWith('http') ? new URL(item.url).pathname : `/${item.url.replace(/^\//, '')}`
+        return INDEXABLE_URLS.has(path)
+      })
+  }
+}
 
 /**
  * Relative importance for sitemap consumers that still read the optional
@@ -236,7 +274,7 @@ const feeds: Integration = {
   }
 }
 
-export const INTEGRATIONS: Integration[] = [hreflang, robots, feeds]
+export const INTEGRATIONS: Integration[] = [indexablePages, hreflang, robots, feeds]
 
 /** Wire into `sitemap.transformItems`. Each integration refines in turn. */
 export function runSitemapHooks(items: SitemapItem[]): SitemapItem[] {

@@ -125,7 +125,7 @@ Signature ..................................  Date .........................
 
 ## For whoever administers this
 
-**Controller:** Tatiana Petkova, Diehlgasse 6/10, 1050 Vienna, Austria ·
+**Controller:** Tatiana Petkova ·
 `agent@tatianapetkova.com`
 
 **Legal basis:** consent, GDPR Art. 6(1)(a); for a child, Art. 8 with the

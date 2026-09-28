@@ -150,17 +150,6 @@ function personNode(slug: string, lang: Lang) {
     image: `${HOSTNAME}/images/titania-juggling.jpg`,
     knowsLanguage: ['en', 'de', 'fr', 'ru', 'bg'],
     ...(slug === '/about-titania' ? { subjectOf: PRESS } : {}),
-    ...(slug === '/legal-data'
-      ? {
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: 'Diehlgasse 6/10',
-            postalCode: '1050',
-            addressLocality: 'Vienna',
-            addressCountry: 'AT'
-          }
-        }
-      : {}),
     sameAs: [
       'https://www.instagram.com/titaniachaos',
       'https://www.facebook.com/titaniachaos'

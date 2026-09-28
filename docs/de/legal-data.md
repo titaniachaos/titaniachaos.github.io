@@ -6,7 +6,7 @@ description: Impressum und Datenschutzinformationen für die Website von Titania
 
 ## Impressum
 
-Verantwortlich gemäß § 5 ECG: **Tatiana Petkova**, Diehlgasse 6/10, 1050 Wien, Österreich. [agent@tatianapetkova.com](mailto:agent@tatianapetkova.com)
+Verantwortlich gemäß § 5 ECG: **Tatiana Petkova**. [agent@tatianapetkova.com](mailto:agent@tatianapetkova.com)
 
 Diese Website stellt die künstlerische Arbeit einer einzelnen Künstlerin dar: Clown-Workshops, Auftritte und verspielte Fotoerlebnisse. Die hier genannten Preise sind Richtwerte und werden individuell per E-Mail bestätigt.
 

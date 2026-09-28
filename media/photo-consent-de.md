@@ -128,7 +128,7 @@ Unterschrift ...............................  Datum ........................
 
 ## Für die Verwaltung
 
-**Verantwortliche:** Tatiana Petkova, Diehlgasse 6/10, 1050 Wien, Österreich ·
+**Verantwortliche:** Tatiana Petkova ·
 `agent@tatianapetkova.com`
 
 **Rechtsgrundlage:** Einwilligung, Art. 6 Abs. 1 lit. a DSGVO; bei Kindern

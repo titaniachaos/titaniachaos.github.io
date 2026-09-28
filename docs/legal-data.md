@@ -6,7 +6,7 @@ description: Legal notice and privacy information for the Titania Chaos website.
 
 ## Legal notice
 
-Responsible according to § 5 ECG: **Tatiana Petkova**, Diehlgasse 6/10, 1050 Vienna, Austria. [agent@tatianapetkova.com](mailto:agent@tatianapetkova.com)
+Responsible according to § 5 ECG: **Tatiana Petkova**. [agent@tatianapetkova.com](mailto:agent@tatianapetkova.com)
 
 This website presents the artistic work of an individual artist: clown workshops, performances and playful photo experiences. Prices shown here are indicative and are confirmed individually by email.
 

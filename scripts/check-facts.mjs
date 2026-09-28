@@ -45,8 +45,9 @@ const claim = (pattern, what) => {
 const price = claim(/price: (\d+)/, 'a price')
 const minAge = claim(/suggestedMinAge: (\d+)/, 'a minimum age')
 const maxAge = claim(/suggestedMaxAge: (\d+)/, 'a maximum age')
-const street = claim(/streetAddress: '([^']+)'/, 'a street address')
-const postcode = claim(/postalCode: '([^']+)'/, 'a postcode')
+// A private postal address may be omitted from the public site.
+const street = /streetAddress: '([^']+)'/.exec(seo)?.[1]
+const postcode = /postalCode: '([^']+)'/.exec(seo)?.[1]
 const email = claim(/email: '([^']+)'/, 'an email address')
 
 const press = [...seo.matchAll(/url: '(https?:\/\/[^']+)'/g)].map((m) => m[1])

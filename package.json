@@ -29,7 +29,7 @@
     "check:navigation": "node --test scripts/lib/site-navigation.test.mjs"
   },
   "devDependencies": {
-    "sharp": "^0.35.3",
+    "sharp": "^0.35.5",
     "vitepress": "2.0.0-alpha.19"
   }
 }

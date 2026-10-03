@@ -14,10 +14,14 @@ import UiBadge from './ui/UiBadge.vue'
 import UiButton from './ui/UiButton.vue'
 import UiLabel from './ui/UiLabel.vue'
 import './custom.css'
+import { installSiteNavigation } from './site-navigation.mjs'
 
 export default {
   extends: DefaultTheme,
-  enhanceApp({ app }) {
+  enhanceApp({ app, router, siteData }) {
+    if (typeof window !== 'undefined') {
+      installSiteNavigation(router, siteData.value.base, window.location)
+    }
     app.component('Arrangement', Arrangement)
     app.component('HomeLanding', HomeLanding)
     // Ported primitives, registered globally so a Markdown page can reach them

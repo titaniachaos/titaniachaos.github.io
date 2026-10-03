@@ -9,7 +9,7 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "check:sources": "node scripts/check-locales.mjs && node scripts/check-topics.mjs && node scripts/check-ecosystem.mjs && node scripts/check-media-words.mjs && node scripts/check-facts.mjs && node media/import-new.mjs --check",
+    "check:sources": "npm run check:navigation && node scripts/check-locales.mjs && node scripts/check-topics.mjs && node scripts/check-ecosystem.mjs && node scripts/check-media-words.mjs && node scripts/check-facts.mjs && node media/import-new.mjs --check",
     "check:build": "node scripts/check-build.mjs docs/.vitepress/dist --sibling ../clown/docs/.vitepress/dist && node scripts/check-sitemap.mjs && node scripts/check-browse.mjs && node scripts/check-images.mjs && node scripts/check-page-weight.mjs && node scripts/check-a11y.mjs",
     "check:sitemap": "node scripts/check-sitemap.mjs",
     "check:images": "node scripts/check-images.mjs",
@@ -25,7 +25,8 @@
     "queneau": "node scripts/queneau.mjs",
     "media:new": "node media/import-new.mjs",
     "media:import": "node media/import-new.mjs --write",
-    "check:origin": "node scripts/check-origin.mjs"
+    "check:origin": "node scripts/check-origin.mjs",
+    "check:navigation": "node --test scripts/lib/site-navigation.test.mjs"
   },
   "devDependencies": {
     "sharp": "^0.35.3",

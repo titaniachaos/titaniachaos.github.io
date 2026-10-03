@@ -393,3 +393,13 @@ survives anywhere in the HTML, and it passes today precisely because none does.
 A single GitHub Actions workflow builds the site from `main` on Node.js 26 and
 deploys only `docs/.vitepress/dist` to GitHub Pages. Hand-written HTML source
 files are rejected.
+
+## Navigation between project sites
+
+The main site, `/clown/` and `/aequator/` are independent builds on one host.
+The theme's `site-navigation.mjs` guards VitePress route changes: crossing a
+site root loads the destination document in the same tab; routes within a site
+keep VitePress navigation. Queries, language paths and anchors are preserved.
+Keep this module identical in all three repositories and add any future site
+root to `SITE_ROOTS` in each copy. `npm run check:navigation` verifies the rule
+and runs as part of the existing checks.

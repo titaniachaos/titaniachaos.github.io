@@ -30,6 +30,6 @@
   },
   "devDependencies": {
     "sharp": "^0.35.3",
-    "vitepress": "2.0.0-alpha.19"
+    "vitepress": "2.0.0-alpha.20"
   }
 }

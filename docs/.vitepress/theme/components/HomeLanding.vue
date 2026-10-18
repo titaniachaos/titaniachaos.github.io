@@ -117,7 +117,7 @@ const soloLink = computed(() => `/clown/${props.lang === 'en' ? '' : `${props.la
             <h3>{{ t.aequatorTitle }}</h3>
             <p>{{ t.aequatorBody }}</p>
             <div class="home-project-card__actions">
-              <a class="home-text-link" href="/aequator/">{{ t.aequatorAction }} <span aria-hidden="true">→</span></a>
+              <a class="home-text-link" :href="props.lang === 'en' ? '/aequator/' : `/aequator/${props.lang}/`">{{ t.aequatorAction }} <span aria-hidden="true">→</span></a>
               <a class="home-text-link home-text-link--support" href="https://revolut.me/titaniachaos" target="_blank" rel="noopener noreferrer">{{ t.support }}</a>
             </div>
           </div>

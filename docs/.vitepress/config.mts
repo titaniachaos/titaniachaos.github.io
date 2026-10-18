@@ -292,7 +292,7 @@ export default defineConfig({
             text: 'Проекти',
             link: '/bg/projects',
             items: [
-              { text: 'Äquatormaßband', link: `${HOSTNAME}/aequator/`, ...SAME_SITE },
+              { text: 'Äquatormaßband', link: `${HOSTNAME}/aequator/bg/`, ...SAME_SITE },
               { text: 'Solo Titania Chaos', link: CLOWN_SITE('/bg'), ...SAME_SITE }
             ]
           },
@@ -339,7 +339,7 @@ export default defineConfig({
             text: 'Projekte',
             link: '/de/projects',
             items: [
-              { text: 'Äquatormaßband', link: `${HOSTNAME}/aequator/`, ...SAME_SITE },
+              { text: 'Äquatormaßband', link: `${HOSTNAME}/aequator/de/`, ...SAME_SITE },
               { text: 'Solo Titania Chaos', link: CLOWN_SITE('/de'), ...SAME_SITE }
             ]
           },

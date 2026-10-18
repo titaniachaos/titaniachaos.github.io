@@ -150,6 +150,11 @@ for (const file of files) {
     const href = decode(raw)
     if (href === '') continue
 
+    // These entry pages are deployed by the separate aequator repository.
+    // Its localized roots are not pages in this site's build.
+    const projectPath = href.replace(/^https:\/\/(?:www\.)?titaniachaos\.com/, '').split(/[?#]/)[0]
+    if (['/aequator/', '/aequator/de/', '/aequator/bg/'].includes(projectPath)) continue
+
     // An absolute link to our own host is a link to a page we just built, so
     // it is checkable -- and it is where the canonical, the hreflang set and
     // every og:url live. A typo in one of those is invisible on the page and

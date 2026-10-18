@@ -11,7 +11,7 @@ outline: [1, 2]
 
 Äquatormaßband е партиципативен проект за текстилно изкуство и мир, създаден от Бианка Трапл. От 2025 г. Титания го съпровожда като посланик и пърформативен партньор.
 
-[Разгледайте Äquatormaßband](/aequator/){.contact-button}
+[Разгледайте Äquatormaßband](/aequator/bg/){.contact-button}
 
 ## Solo Titania Chaos
 

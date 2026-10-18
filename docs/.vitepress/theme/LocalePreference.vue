@@ -51,4 +51,5 @@ onMounted(() => {
 onUnmounted(() => document.removeEventListener('click', rememberLanguage, true))
 </script>
 
-<template></template>
+<!-- Keep the server and client roots identical for hydration. -->
+<template><span hidden aria-hidden="true"></span></template>

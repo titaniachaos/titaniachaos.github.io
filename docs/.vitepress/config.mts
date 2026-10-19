@@ -259,7 +259,7 @@ export default defineConfig({
             items: [
               { text: 'About Titania', link: '/about-titania' },
               { text: BROWSE_LABEL.en, link: '/pictures' },
-              { text: 'Blog', link: CLOWN_SITE('') + 'blog/', ...SAME_SITE }
+              { text: 'Blog', link: '/blog/' }
             ]
           }
         ],
@@ -301,7 +301,7 @@ export default defineConfig({
             items: [
               { text: 'За Титания', link: '/bg/about-titania' },
               { text: BROWSE_LABEL.bg, link: '/bg/pictures' },
-              { text: 'Блог', link: CLOWN_SITE('/bg') + 'blog/', ...SAME_SITE }
+              { text: 'Блог', link: '/bg/blog/' }
             ]
           }
         ],
@@ -348,7 +348,7 @@ export default defineConfig({
             items: [
               { text: 'Über Titania', link: '/de/about-titania' },
               { text: BROWSE_LABEL.de, link: '/de/pictures' },
-              { text: 'Blog', link: CLOWN_SITE('/de') + 'blog/', ...SAME_SITE }
+              { text: 'Blog', link: '/de/blog/' }
             ]
           }
         ],

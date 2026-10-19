@@ -1,4 +1,6 @@
 import { h } from 'vue'
+import BlogArticle from './BlogArticle.vue'
+import BlogIndex from './BlogIndex.vue'
 import DefaultTheme from 'vitepress/theme'
 import SupportCard from './SupportCard.vue'
 import WorkshopDates from './WorkshopDates.vue'
@@ -22,6 +24,8 @@ export default {
     if (typeof window !== 'undefined') {
       installSiteNavigation(router, siteData.value.base, window.location)
     }
+    app.component('BlogArticle', BlogArticle)
+    app.component('BlogIndex', BlogIndex)
     app.component('Arrangement', Arrangement)
     app.component('HomeLanding', HomeLanding)
     // Ported primitives, registered globally so a Markdown page can reach them

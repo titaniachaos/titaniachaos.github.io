@@ -1,8 +1,30 @@
 {
   "origin": "https://titaniachaos.com",
   "rights": "© Tatiana Petkova (Titania Chaos). Photographs by Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, Konstantin Oberlik, Tatiana Petkova, Marion Scholz and Laurent Ziegler.",
-  "count": 135,
+  "count": 136,
   "media": [
+    {
+      "id": "aequator-schule-naehen-herz",
+      "kind": "photo",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "alt": {
+        "en": "Hands sewing blue fabric with a heart-shaped cutout onto light-coloured cloth.",
+        "bg": "Ръце пришиват син плат със сърцевиден отвор към светъл плат.",
+        "de": "Hände nähen blauen Stoff mit einem herzförmigen Ausschnitt auf hellen Stoff."
+      },
+      "caption": {
+        "en": "Sewing the equator ribbon during a school visit.",
+        "bg": "Шиене на Екваторната лента при посещение в училище.",
+        "de": "Nähen am Äquatormaßband bei einem Schulbesuch."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-naehen-herz.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-naehen-herz-s.webp",
+      "othersInFrame": "Hands and forearms of a participant; no face visible. Selected for publication by the project owner."
+    },
     {
       "id": "aequator-schule-2026-10-21-klassenzimmer",
       "kind": "photo",

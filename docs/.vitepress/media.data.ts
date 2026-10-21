@@ -197,6 +197,26 @@ export { data }
 
 const FRAMES: Frame[] = [
   {
+    id: 'aequator-schule-naehen-herz',
+    kind: 'photo',
+    tags: [
+      'aequator',
+      'workshop'
+    ],
+    creator: 'Tatiana Petkova',
+    alt: {
+      en: 'Hands sewing blue fabric with a heart-shaped cutout onto light-coloured cloth.',
+      bg: 'Ръце пришиват син плат със сърцевиден отвор към светъл плат.',
+      de: 'Hände nähen blauen Stoff mit einem herzförmigen Ausschnitt auf hellen Stoff.'
+    },
+    caption: {
+      en: 'Sewing the equator ribbon during a school visit.',
+      bg: 'Шиене на Екваторната лента при посещение в училище.',
+      de: 'Nähen am Äquatormaßband bei einem Schulbesuch.'
+    },
+    othersInFrame: 'Hands and forearms of a participant; no face visible. Selected for publication by the project owner.'
+  },
+  {
     id: 'aequator-schule-2026-10-21-klassenzimmer',
     kind: 'photo',
     tags: [

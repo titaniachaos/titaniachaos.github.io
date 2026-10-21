@@ -13,7 +13,7 @@ import { frames, context, xmp } from '../scripts/lib/media-meta.mjs'
 
 const run = promisify(execFile)
 const sourceDir = process.argv[2]
-if (!sourceDir) throw new Error('Pass the private directory containing the two original HEIC files.')
+if (!sourceDir) throw new Error('Pass the private directory containing the approved original files.')
 const root = fileURLToPath(new URL('..', import.meta.url))
 const batch = JSON.parse(await readFile(new URL('./school-2026-10-21.json', import.meta.url), 'utf8'))
 const catalogue = new Map((await frames()).map(frame => [frame.id, frame]))
@@ -31,13 +31,24 @@ try {
   await mkdir(out, { recursive: true })
   for (const source of batch.sources) {
     // Quick Look decodes HEVC using macOS; Sharp's HEIF build may lack that codec.
-    await run('qlmanage', ['-t', '-s', '1200', '-o', temp, resolve(sourceDir, source.sourceFile)])
-    const decoded = join(temp, `${source.sourceFile}.png`)
+    let decoded = resolve(sourceDir, source.sourceFile)
+    if (/\.heic$/i.test(source.sourceFile)) {
+      await run('qlmanage', ['-t', '-s', '1200', '-o', temp, decoded])
+      decoded = join(temp, `${source.sourceFile}.png`)
+    }
     const packet = xmp(catalogue.get(source.id), meta)
-    await sharp(decoded).resize({ width: 960, height: 960, fit: 'inside', withoutEnlargement: true }).withXmp(packet)
+    await sharp(decoded).rotate().resize({ width: 960, height: 960, fit: 'inside', withoutEnlargement: true }).withXmp(packet)
       .webp({ quality: 78 }).toFile(join(out, `${source.id}.webp`))
-    await sharp(decoded).resize(160, 160, { fit: 'cover' }).withXmp(packet)
+    await sharp(decoded).rotate().resize(160, 160, { fit: 'cover' }).withXmp(packet)
       .webp({ quality: 65 }).toFile(join(out, `${source.id}-s.webp`))
+    if (source.socialCard) {
+      const upright = await sharp(decoded).rotate().png().toBuffer()
+      const { width, height } = await sharp(upright).metadata()
+      const cropHeight = Math.round(width * 2 / 3)
+      const top = Math.min(Math.round(height * 0.11), height - cropHeight)
+      await sharp(upright).extract({ left: 0, top, width, height: cropHeight }).resize(1200, 800)
+        .withXmp(packet).jpeg({ quality: 85 }).toFile(join(out, `${source.id}-social.jpg`))
+    }
     console.log(`Prepared ${source.id}`)
   }
 } finally {

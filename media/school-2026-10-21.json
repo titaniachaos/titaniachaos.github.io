@@ -10,6 +10,12 @@
       "id": "aequator-schule-2026-10-21-fingerknuepfen",
       "sourceFile": "IMG_0936.HEIC",
       "sha256": "ff8cdc30053b846e0290b02fe5bf636981b9239e12030a11031fb79744198c5f"
+    },
+    {
+      "id": "aequator-schule-naehen-herz",
+      "sourceFile": "IMG_8290.jpeg",
+      "sha256": "6e7b215827e2c267e545b9e203acd61aac65f0bafbc6578065806b7c88ae5e6b",
+      "socialCard": true
     }
   ]
 }

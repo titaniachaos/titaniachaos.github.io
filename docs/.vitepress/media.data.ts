@@ -197,6 +197,44 @@ export { data }
 
 const FRAMES: Frame[] = [
   {
+    id: 'aequator-schule-2026-10-21-klassenzimmer',
+    kind: 'photo',
+    tags: [
+      'workshop'
+    ],
+    creator: 'Tatiana Petkova',
+    alt: {
+      de: 'Schülerinnen und Schüler sitzen an Tischen; das bunte Stoffband verläuft durch den Mittelgang bis zur Tafel.',
+      en: 'Students sit at desks; the colourful fabric ribbon runs along the aisle towards the blackboard.',
+      bg: 'Ученици седят на чиновете; цветната платнена лента минава по пътеката към дъската.'
+    },
+    caption: {
+      de: 'Das Äquatormaßband an der Berufsschule für Handel und Reisen, 21. Oktober 2026.',
+      en: 'The equator ribbon at the Berufsschule für Handel und Reisen, 21 October 2026.',
+      bg: 'Екваторната лента в Berufsschule für Handel und Reisen, 21 октомври 2026 г.'
+    },
+    othersInFrame: 'Students participating in a school project. Website publication authorised by the project owner.'
+  },
+  {
+    id: 'aequator-schule-2026-10-21-fingerknuepfen',
+    kind: 'photo',
+    tags: [
+      'workshop'
+    ],
+    creator: 'Tatiana Petkova',
+    alt: {
+      de: 'Mehrere Hände knüpfen violette Wollfäden an einem Tisch.',
+      en: 'Several hands knot purple wool threads at a table.',
+      bg: 'Няколко ръце връзват възли с лилави вълнени конци на маса.'
+    },
+    caption: {
+      de: 'Knüpfen mit den Fingern beim Schulbesuch am 21. Oktober 2026.',
+      en: 'Knotting with fingers during the school visit on 21 October 2026.',
+      bg: 'Връзване на възли с пръсти при посещението в училището на 21 октомври 2026 г.'
+    },
+    othersInFrame: 'Students participating in a school project. Website publication authorised by the project owner.'
+  },
+  {
     id: 'workshop-mini-art',
     kind: 'video',
     seconds: 57,

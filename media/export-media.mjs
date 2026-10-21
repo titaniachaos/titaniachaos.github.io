@@ -32,7 +32,8 @@
 // Idempotent. media/make-media.mjs runs it after deriving, because sharp drops
 // metadata by default and a re-derive would otherwise strip every file bare.
 //
-// Usage:  node media/export-media.mjs [--dry]
+// Usage:  node media/export-media.mjs [--dry | --index-only]
+// --index-only refreshes the public catalogue without re-encoding existing assets.
 
 import { readFile, writeFile, rename, stat } from 'node:fs/promises'
 import { execFile } from 'node:child_process'
@@ -46,9 +47,14 @@ const run = promisify(execFile)
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const MEDIA = join(ROOT, 'docs/public/images/media')
 const DRY = process.argv.includes('--dry')
+const INDEX_ONLY = process.argv.includes('--index-only')
 
 const META = await context()
 const { origin: ORIGIN, rights: RIGHTS, credit: CREDIT } = META
+// A catalogue-only update must preserve the already published archive rights notice.
+const recordedRights = INDEX_ONLY
+  ? JSON.parse(await readFile(join(ROOT, 'docs/public/media.json'), 'utf8')).rights
+  : RIGHTS
 
 const kb = (n) => `${Math.round(n / 1024)} KB`
 let stamped = 0
@@ -69,7 +75,7 @@ for (const frame of await frames()) {
 
   // Both derivatives: the one prose and the hero use, and the square the
   // category listings use. A file saved from either should say what it is.
-  for (const suffix of ['', '-s']) {
+  for (const suffix of INDEX_ONLY ? [] : ['', '-s']) {
     const path = join(MEDIA, `${frame.id}${suffix}.webp`)
     let before
     try { before = (await stat(path)).size } catch { continue }
@@ -85,7 +91,7 @@ for (const frame of await frames()) {
     stamped++
   }
 
-  if (frame.seconds) {
+  if (frame.seconds && !INDEX_ONLY) {
     const path = join(MEDIA, `${frame.id}.mp4`)
     let before
     try { before = (await stat(path)).size } catch { before = null }
@@ -151,7 +157,7 @@ for (const frame of await frames()) {
 if (!DRY) {
   await writeFile(
     join(ROOT, 'docs/public/media.json'),
-    JSON.stringify({ origin: ORIGIN, rights: RIGHTS, count: index.length, media: index }, null, 2) + '\n'
+    JSON.stringify({ origin: ORIGIN, rights: recordedRights, count: index.length, media: index }, null, 2) + '\n'
   )
 }
 

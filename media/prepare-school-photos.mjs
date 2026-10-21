@@ -18,6 +18,7 @@ const root = fileURLToPath(new URL('..', import.meta.url))
 const batch = JSON.parse(await readFile(new URL('./school-2026-10-21.json', import.meta.url), 'utf8'))
 const catalogue = new Map((await frames()).map(frame => [frame.id, frame]))
 const meta = await context()
+meta.rights = JSON.parse(await readFile(join(root, 'docs/public/media.json'), 'utf8')).rights
 // Verify the entire batch before writing any public asset.
 for (const source of batch.sources) {
   const bytes = await readFile(resolve(sourceDir, source.sourceFile))
@@ -42,3 +43,7 @@ try {
 } finally {
   await rm(temp, { recursive: true, force: true })
 }
+
+// Keep the central public catalogue in sync without touching unrelated media.
+const exported = await run(process.execPath, [join(root, 'media/export-media.mjs'), '--index-only'])
+console.log(exported.stdout.trim())

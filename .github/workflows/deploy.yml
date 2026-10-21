@@ -47,6 +47,9 @@ jobs:
       # internal link. These add what it does not check -- section ids, locale
       # parity, ledger integrity -- and they gate the deploy, so a change that
       # breaks them is never published.
+      - name: Run tests
+        run: npm test
+
       - name: Check the sources
         run: npm run check:sources
 

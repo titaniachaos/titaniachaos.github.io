@@ -36,6 +36,9 @@ jobs:
           cache: npm
       - run: npm ci
 
+      - name: Run tests
+        run: npm test
+
       - name: Check the sources
         run: npm run check:sources
 

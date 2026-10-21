@@ -10,13 +10,15 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { board, space, fill, addressOf, weigh, positions, walk, servable } from './queneau.mjs'
 
-const state = await board()
+import { variableBoard } from './arrangement-fixture.mjs'
+const liveState = await board()
+const state = variableBoard(liveState.all)
 const size = space(state)
 
 /** A handful of addresses that really are arrangements, spread across the space. */
 const valid = [...walk(state, 12, true)].map((x) => x.address)
 
-test('the space is the size the archive says it is', () => {
+test('a board with many choices retains a large address space', () => {
   assert.ok(size > 10n ** 20n, `expected an enormous space, got ${size}`)
 })
 
@@ -101,8 +103,8 @@ test('an address outside the space is refused', () => {
 test('the positions come from the pages, not from a list in the code', async () => {
   const where = await positions()
   assert.ok(where.length > 0, 'no positions found')
-  assert.ok(where.every((p) => p.page && p.query && p.asked.length), 'a position is incomplete')
-  assert.ok(new Set(where.map((p) => p.page)).has('index'), 'the home page asks nothing?')
+  assert.ok(where.every((p) => p.page && p.query && (p.id || p.asked.length)), 'a position is incomplete')
+  assert.ok(where.some(p => p.page === 'events' && p.id), 'explicit event pictures were not discovered')
 })
 
 test('an arrangement can be weighed', () => {

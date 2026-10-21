@@ -7,19 +7,18 @@
 // rhyme and the metre of every other, so no substitution could produce
 // nonsense.
 //
-// This archive has the strips already. A page's sections each ask the archive
-// a question in a closed fourteen-word vocabulary, and every frame that
-// answers a question is, by construction, a legitimate answer to it. The
-// vocabulary is the rhyme scheme. Nineteen positions, and between 3 and 101
-// frames that can fill each: 1.4 x 10^29 arrangements, fifteen orders of
-// magnitude past Queneau.
+// Tag queries let a section choose among matching archive frames. Explicit
+// image ids are fixed editorial choices and contribute exactly one candidate.
+// Both are read from the current canonical pages, including nested posts.
+// The size of the address space follows these choices rather than an old
+// layout or a fixed count of images.
 //
 // ---- the law it borrows ---------------------------------------------------
 //
 // From uuidna's app store: *a pure function from states to verifiable output;
 // nothing is served that could not be recomputed.* So an arrangement is not
-// stored, it is addressed. 97 bits index every one of them, a UUID carries
-// 122, and the same address recomputes the same page on any machine forever.
+// stored, it is addressed. Given the same archive and source pages, the
+// same address recomputes the same arrangement on every machine.
 // Nothing here writes a file, chooses randomly, or reads a clock.
 //
 // The positions come from the pages themselves, never from a list kept here —
@@ -46,29 +45,45 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..')
 const DOCS = join(ROOT, 'docs')
 
 /**
- * Every question the site's own pages ask, in document order.
+ * Every explicit image choice or tag query in the canonical pages, in document order.
  *
  * Read off the Markdown rather than declared, so this cannot describe a site
  * that no longer exists. `feed` queries are skipped: they answer from synced
  * posts that only exist for whoever holds a token, so including them would
  * make the space a different size on every machine.
  */
-export async function positions() {
+export function positionsFromSource(source, page) {
+  const body = source.replace(/<!--[\s\S]*?-->/g, '').replace(/^```[^\n]*\n[\s\S]*?^```.*$/gm, '')
+  return [...body.matchAll(/<MediaFigure\b([^>]*?)\/?>/g)].flatMap((match) => {
+    const id = /\bid="([^"]+)"/.exec(match[1])?.[1]
+    if (id) return [{ page, id, query: `id:${id}`, asked: [] }]
+    const query = /\btags="([^"]+)"/.exec(match[1])?.[1]?.trim()
+    const asked = query?.split(/\s+/) ?? []
+    return !query || asked.includes('feed') ? [] : [{ page, query, asked }]
+  })
+}
+
+export async function positions(docs = DOCS) {
   const out = []
-  for (const name of (await readdir(DOCS)).filter((f) => f.endsWith('.md')).sort()) {
-    const source = await readFile(join(DOCS, name), 'utf8')
-    const page = name.replace(/\.md$/, '')
-    for (const m of source.matchAll(/<MediaFigure tags="([^"]+)"/g)) {
-      const asked = m[1].split(' ').filter(Boolean)
-      if (asked.includes('feed')) continue
-      out.push({ page, query: m[1], asked })
+  async function visit(dir, prefix = '') {
+    for (const entry of (await readdir(dir, { withFileTypes: true })).sort((a, b) => a.name.localeCompare(b.name))) {
+      if (entry.name.startsWith('.') || entry.name.startsWith('[')) continue
+      if (!prefix && ['de', 'bg', 'public', 'node_modules'].includes(entry.name)) continue
+      const path = join(dir, entry.name)
+      if (entry.isDirectory()) await visit(path, `${prefix}${entry.name}/`)
+      else if (entry.name.endsWith('.md')) {
+        const page = `${prefix}${entry.name.replace(/\.md$/, '')}`
+        out.push(...positionsFromSource(await readFile(path, 'utf8'), page))
+      }
     }
   }
+  await visit(docs)
   return out
 }
 
 /** Shared tags. Zero means the frame is not an answer to this question at all. */
-const answers = (frame, asked) => frame.tags.filter((t) => asked.includes(t)).length > 0
+export const candidatesFor = (all, position) => all.filter((frame) =>
+  position.id ? frame.id === position.id : frame.tags.some((tag) => position.asked.includes(tag)))
 
 /**
  * The candidates for each position, and how many there are.
@@ -78,22 +93,20 @@ const answers = (frame, asked) => frame.tags.filter((t) => asked.includes(t)).le
  * That is the difference between an address and an accident.
  */
 export async function board() {
-  const all = (await catalogue()).filter((f) => !f.draft).sort((a, b) => a.id.localeCompare(b.id))
+  const all = (await catalogue()).filter((f) => !f.draft && !f.heldBack).sort((a, b) => a.id.localeCompare(b.id))
   const where = await positions()
   return { all, positions: where }
 }
 
 /**
- * How many distinct arrangements exist.
- *
- * Computed against the same no-repeat rule the arrangement obeys, so it is the
- * true size rather than the product of the raw candidate counts — a page that
- * asks six questions has one fewer answer available at each.
+ * Size of the mixed-radix address space. Fixed image ids have one candidate.
+ * Numbers that repeat an image on the same page remain in this space but are
+ * rejected by fill; servable measures their share separately.
  */
 export function space({ all, positions }) {
   let total = 1n
   for (const p of positions) {
-    const n = all.filter((f) => answers(f, p.asked)).length
+    const n = candidatesFor(all, p).length
     if (n === 0) return 0n
     total *= BigInt(n)
   }
@@ -108,9 +121,8 @@ export function space({ all, positions }) {
  * sets, and it is a bijection — which is why `addressOf` can run it backwards
  * and get the number it started from.
  *
- * A frame already used on this page is removed from the candidates before the
- * index is taken, so no page shows one picture twice and the numbering stays
- * exact.
+ * Candidate lists remain fixed; a repeated frame on one page is rejected.
+ * This keeps addresses reversible without silently substituting another image.
  */
 export function fill(address, { all, positions }) {
   let rest = BigInt(address)
@@ -127,7 +139,7 @@ export function fill(address, { all, positions }) {
     // whole of why an address means one thing: if taking a frame could shrink
     // a later position's list, the radix would depend on the path and the
     // same number would name different arrangements on different pages.
-    const candidates = all.filter((f) => answers(f, p.asked))
+    const candidates = candidatesFor(all, p)
     if (candidates.length === 0) throw new Error(`${p.page}: nothing answers "${p.query}"`)
     const n = BigInt(candidates.length)
     const frame = candidates[Number(rest % n)]
@@ -157,7 +169,7 @@ export function addressOf(chosen, { all, positions }) {
   let address = 0n
   let place = 1n
   for (let i = 0; i < positions.length; i++) {
-    const candidates = all.filter((f) => answers(f, positions[i].asked))
+    const candidates = candidatesFor(all, positions[i])
     const at = candidates.findIndex((f) => f.id === chosen[i].id)
     if (at < 0) throw new Error(`${chosen[i].id} is not a candidate at position ${i}`)
     address += BigInt(at) * place
@@ -175,8 +187,12 @@ export function addressOf(chosen, { all, positions }) {
  */
 export function servable(state, sample = 400) {
   let ok = 0
-  for (const _ of walk(state, sample, true)) ok++
-  return ok / sample
+  let tried = 0
+  for (const step of walk(state, sample)) {
+    tried++
+    if (step.arrangement) ok++
+  }
+  return tried ? ok / tried : 0
 }
 
 /**
@@ -200,9 +216,12 @@ export function servable(state, sample = 400) {
  */
 export function* walk(state, count, onlyValid = false) {
   const total = space(state)
-  const stride = ((total * 618033988749894848204586n) / 1000000000000000000000000n) | 1n
+  if (total === 0n) return
+  const gcd = (a, b) => b === 0n ? a : gcd(b, a % b)
+  let stride = ((total * 618033988749894848204586n) / 1000000000000000000000000n) | 1n
+  while (gcd(stride, total) !== 1n) stride += 2n
   let given = 0
-  for (let i = 1; given < count && i < count * 20; i++) {
+  for (let i = 1; given < count && i <= count * 20 && BigInt(i) <= total; i++) {
     const address = (BigInt(i) * stride) % total
     try {
       const arrangement = fill(address, state)

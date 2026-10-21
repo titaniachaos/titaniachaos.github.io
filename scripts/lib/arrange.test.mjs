@@ -11,7 +11,9 @@ import assert from 'node:assert/strict'
 import { board, space, fill } from './queneau.mjs'
 import { fillFrom, addressFrom, spaceOf, turn, nearest, magnitude } from './arrange.mjs'
 
-const state = await board()
+import { variableBoard } from './arrangement-fixture.mjs'
+const liveState = await board()
+const state = variableBoard(liveState.all)
 const answers = (frame, asked) => frame.tags.filter((t) => asked.includes(t)).length > 0
 
 /** The board as the browser gets it: positions, and the ids that can fill them. */

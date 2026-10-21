@@ -18,7 +18,7 @@ const flag = (name, fallback) => {
 }
 const lang = flag('--lang', 'en')
 const many = Number(flag('--walk', 0))
-const given = args.find((a) => /^\d+$/.test(a))
+const given = args.find((a, i) => /^\d+$/.test(a) && !['--walk', '--lang'].includes(args[i - 1]))
 
 const state = await board()
 const total = space(state)

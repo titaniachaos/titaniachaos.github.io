@@ -265,8 +265,7 @@ export default defineConfig({
         ],
         outline: { level: [2, 3], label: 'On this page' },
         footer: {
-          message: `Photos by ${PHOTOGRAPHERS}. · <a href="/legal-data">Legal notice &amp; privacy</a>`,
-          copyright: '© 2022–2026 Titania Chaos'
+          message: `Photos by ${PHOTOGRAPHERS}. · <a href="/legal-data">Legal notice &amp; privacy</a><br>Original texts by Titania Chaos are licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>, unless otherwise noted.<br>Images, videos, and third-party works are excluded unless explicitly marked.`
         },
         notFound: {
           title: 'PAGE NOT FOUND',
@@ -307,8 +306,7 @@ export default defineConfig({
         ],
         outline: { level: [2, 3], label: 'На тази страница' },
         footer: {
-          message: `Снимки от ${PHOTOGRAPHERS_BG}. · <a href="/bg/legal-data">Правна информация и поверителност</a>`,
-          copyright: '© 2022–2026 Титания Хаос'
+          message: `Снимки от ${PHOTOGRAPHERS_BG}. · <a href="/bg/legal-data">Правна информация и поверителност</a><br>Авторските текстове на Титания Хаос са лицензирани под <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>, освен ако не е посочено друго.<br>Изображенията, видеоклиповете и произведенията на трети лица са изключени, освен ако не са изрично обозначени.`
         },
         darkModeSwitchLabel: 'Изглед',
         lightModeSwitchTitle: 'Към светлата тема',
@@ -354,8 +352,7 @@ export default defineConfig({
         ],
         outline: { level: [2, 3], label: 'Auf dieser Seite' },
         footer: {
-          message: `Fotos von ${PHOTOGRAPHERS}. · <a href="/de/legal-data">Impressum &amp; Datenschutz</a>`,
-          copyright: '© 2022–2026 Titania Chaos'
+          message: `Fotos von ${PHOTOGRAPHERS}. · <a href="/de/legal-data">Impressum &amp; Datenschutz</a><br>Eigene Texte von Titania Chaos stehen unter <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>, sofern nicht anders angegeben.<br>Bilder, Videos und Werke Dritter sind ausgenommen, sofern sie nicht ausdrücklich entsprechend gekennzeichnet sind.`
         },
         darkModeSwitchLabel: 'Darstellung',
         lightModeSwitchTitle: 'Zum hellen Design wechseln',

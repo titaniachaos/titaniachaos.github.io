@@ -176,7 +176,7 @@ export default defineConfig({
     socialLinks: [
       { icon: 'instagram', link: 'https://www.instagram.com/titaniachaos' },
       { icon: 'facebook', link: 'https://www.facebook.com/titaniachaos' },
-      { icon: 'youtube', link: 'https://www.youtube.com/@titaniachaosofficial346' }
+      { icon: 'youtube', link: 'https://www.youtube.com/@titaniachaos' }
     ],
     search: {
       provider: 'local',

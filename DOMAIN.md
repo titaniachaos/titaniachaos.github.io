@@ -1,47 +1,65 @@
-# Moving to titaniachaos.com
+# Domain and deployment: titaniachaos.com
 
-**Not set yet, and nothing depends on it.** Both sites build against
-`titaniachaos.github.io` today and will keep doing so until the day someone
-changes one variable. This is what that day looks like, written down now while
-it is calm.
+## Current configuration
 
-## The switch
+The main site is published at <https://titaniachaos.com>. Its VitePress
+configuration uses that origin by default in `docs/.vitepress/seo.ts`:
 
-Both repositories read their origin from the environment:
-
-```sh
-SITE_ORIGIN=https://www.titaniachaos.com npm run docs:build
+```ts
+export const HOSTNAME = (process.env.SITE_ORIGIN ?? 'https://titaniachaos.com').replace(/\/$/, '')
 ```
 
-Every canonical URL, `hreflang`, sitemap entry, `robots.txt` line, schema.org
-`@id`, Atom feed link and cross-site link follows it. Verified in both
-repositories: built against the production domain, **zero** `github.io`
-references remain in any HTML page.
+The `clown` repository is a separate VitePress project under `/clown/`.
+The main site's navigation treats `/clown/` and `/aequator/` as separate
+site roots on the same host.
 
-What deliberately does **not** follow it: the `tag:` URIs that identify entries
-in `citations.atom`. Atom identifiers are permanent. Changing them on a domain
-move would make every entry look new to every subscriber, so they stay pinned
-to `titaniachaos.github.io,2026` for good. That is correct, not an oversight.
+Both the main site and the Clown project deploy through GitHub Actions to
+GitHub Pages. The main repository deploy workflow builds on pushes to
+`main` after source and build checks.
 
-## Order matters
+**Scope of verification:** These statements reflect repository source as
+reviewed on 2026-11-05 and the publicly reachable domain. DNS records,
+Cloudflare proxy and redirect rules, GitHub Pages custom-domain settings,
+certificate configuration and the live Search Console property were **not**
+verified through their respective admin interfaces.
 
-Pointing `SITE_ORIGIN` at a domain that does not resolve yet publishes
-canonical URLs to a dead host. So:
+## Origin portability
 
-1. **DNS first.** Point the apex and `www` at GitHub Pages, per GitHub's own
-   documented A records and CNAME. Wait for it to resolve.
-2. **Pages settings** on `titaniachaos.github.io`: set the custom domain. Leave
-   the clown repository's custom domain **empty** — project pages are served at
-   `titaniachaos.com/clown/` automatically, which is why `base` stays `/clown/`.
-3. **Enforce HTTPS**, once the certificate is issued.
-4. **Then** set `SITE_ORIGIN` in both deploy workflows and push.
-5. **Retire the IONOS site.** Until it goes, two live sites compete for the same
-   searches. Redirect it rather than deleting it, so existing links survive.
-6. **Search Console**: add the new property and use Change of Address. The
-   verification token in `seo.ts` is per-property.
+The source of truth for generated absolute URLs is `SITE_ORIGIN`, with the
+production-domain default in `seo.ts`. This controls canonical URLs,
+language alternates, social metadata, structured data and sitemap generation.
+For a test build against another origin:
 
-## Why it is not urgent
+```sh
+SITE_ORIGIN=https://example.at npm run docs:build
+npm run check:origin
+```
 
-The sites are correct on the current domain: canonicals, `hreflang`, sitemaps
-and structured data all agree with where the pages actually are. The move
-improves the address, not the correctness.
+Do not hard-code the production host into newly authored pages or metadata.
+The normal locale structure is English at the root, German under `/de/`,
+and Bulgarian under `/bg/`.
+
+## If the domain configuration changes again
+
+Before changing DNS or deployment settings, check the **actual** values in
+Cloudflare, GitHub Pages and the deploy workflows; do not assume the old
+migration steps are still pending.
+
+1. Confirm the intended canonical hostname (`www` versus apex), DNS target,
+   TLS mode and redirects in Cloudflare.
+2. Confirm GitHub Pages custom-domain and HTTPS settings for the main
+   repository, and the separate project-site configuration for `/clown/`.
+3. Verify `SITE_ORIGIN` in both repositories and the resulting canonicals,
+   `hreflang`, sitemap entries, schema.org identifiers and cross-site links.
+4. Check redirect behaviour for any legacy hostnames, then verify relevant
+   Search Console properties and indexing.
+5. Run each repository's checks and verify the public sites after deployment.
+
+Keep the existing paths stable. A host change should be handled through
+configuration and redirects rather than hand-editing links across pages.
+
+## Permanent identifiers
+
+The `tag:` identifiers in the Clown project's `citations.atom` are
+intentionally permanent; they must not be rewritten just because a domain
+changes. Changing them could make existing entries appear new to subscribers.

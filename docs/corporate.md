@@ -1,8 +1,8 @@
 ---
 title: For Companies & Teams — Titania Chaos
 description: Play together and meet differently. Clowning, improvisation and intercultural workshops for companies and teams with Titania Chaos.
-aside: false
-outline: false
+aside: right
+outline: [2, 2]
 pageClass: book-titania-page corporate-page
 ---
 
@@ -20,9 +20,11 @@ pageClass: book-titania-page corporate-page
 </div>
 </section>
 
-<section class="section" id="angebote">
+<section class="section">
 <div class="ui-label">The formats</div>
-<h2>Three ways into shared play</h2>
+
+## Three ways into shared play {#angebote}
+
 <p class="intro">A short break, an in-depth team workshop or intercultural communication through playful experience. No stage or clowning experience is needed for any of the formats.</p>
 <article class="offer">
 <aside>
@@ -84,9 +86,11 @@ pageClass: book-titania-page corporate-page
 <p class="fine">All prices are starting prices for groups of up to 15 people, including regular preparation. Special requirements and larger groups on request. Travel and any venue costs by arrangement. Your offer will set out the binding total price and applicable tax details.</p>
 </section>
 
-<section class="section" id="weitere">
+<section class="section">
 <div class="ui-label">Tailored to your group</div>
-<h2>Further possibilities</h2>
+
+## Further possibilities {#weitere}
+
 <p class="intro">Some groups want to explore a particular aspect in more depth or try something of their own. These focuses can be arranged individually or in combination.</p>
 <div class="extra">
 <div>
@@ -116,11 +120,13 @@ pageClass: book-titania-page corporate-page
 </div>
 </section>
 
-<section class="section" id="titania">
+<section class="section">
 <div class="about">
 <div>
 <div class="ui-label">The artist</div>
-<h2>Who is Titania?</h2>
+
+## Who is Titania? {#titania}
+
 <p>I am interested in what happens between people: how we respond to one another, how we find understanding and what happens when we stop trying to control everything for a moment.</p>
 <p>As an interpreter, I work with language and understanding. As a clown artist, I also explore what happens without words.</p>
 <p>
@@ -128,7 +134,7 @@ pageClass: book-titania-page corporate-page
 </p>
 </div>
 <div class="book-hero__media">
-<MediaFigure id="a-img-2906" />
+<MediaFigure id="a-img-8528" />
 </div>
 </div>
 <blockquote>“A human being plays only when fully human, and is fully human only when playing.”<cite>Friedrich Schiller · On the Aesthetic Education of Man, Letter 15 · our translation</cite>
@@ -137,7 +143,9 @@ pageClass: book-titania-page corporate-page
 
 <section class="section">
 <div class="ui-label">Practical details</div>
-<h2>Good to know</h2>
+
+## Good to know {#practical-details}
+
 <dl class="faq">
 <div>
 <dt>Do we need any experience?</dt>
@@ -154,9 +162,11 @@ pageClass: book-titania-page corporate-page
 </dl>
 </section>
 
-<section class="contact" id="kontakt">
+<section class="contact">
 <div class="ui-label">Contact</div>
-<h2>Ready to play together?</h2>
+
+## Ready to play together? {#kontakt}
+
 <p>Whether it is a team day, a conference, a company celebration or a workshop with a particular focus, tell me about your group and occasion.</p>
 <p>For an initial enquiry, send the dates, location, approximate group size and a few words about what you have in mind.</p>
 <a class="contact-button" href="mailto:agent@tatianapetkova.com?subject=Team%20workshop%20enquiry">Contact Titania</a>

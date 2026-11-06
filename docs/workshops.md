@@ -57,12 +57,6 @@ Give someone the experience of taking part in an upcoming workshop. The gift is 
 
 Prefer a performance or a playful photo experience for your event? [Explore ways to work with Titania](/work-with-titania){.contact-button .secondary}
 
-## Bookings & enquiries
-
 <MediaFigure tags="feed" />
-
-Invite Titania to an event or ask about a workshop, performance or playful photo experience.
-
-[Contact Titania](mailto:agent@tatianapetkova.com){.contact-button}
 
 <SocialWall />

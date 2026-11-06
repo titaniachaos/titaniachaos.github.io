@@ -1078,8 +1078,8 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 
 /* Corporate page: shared across locales. */
 
-.corporate-page .VPDoc:not(.has-sidebar) .container,
-.corporate-page .VPDoc:not(.has-sidebar) .content { max-width: 1124px; }
+.corporate-page .VPDoc:not(.has-sidebar) > .container,
+.corporate-page .VPDoc:not(.has-sidebar) > .container > .content { max-width: 1124px; }
 .corporate-page .content-container { max-width: 1060px; }
 .corporate-page .book-hero__copy h1 { max-width: none; font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.15; }
 .corporate-page .vp-doc h2 { font-size: clamp(1.6rem, 2.4vw, 2rem); line-height: 1.25; }
@@ -1118,4 +1118,18 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 }
 
 .corporate-page .support-card { display: none; }
+.corporate-page .VPDocAsideOutline .outline-link { white-space: normal; line-height: 1.45; padding-block: 0.3rem; }
 .corporate-page .contact-button { white-space: normal; max-width: 100%; }
+
+/* Compact team-format overview; enquiry details live on the corporate page. */
+.performances-page .vp-doc ul.book-outcomes { list-style: none; padding: 0; gap: 0; }
+.performances-page .vp-doc li.book-outcome { margin: 0; padding: 1rem 0; border-top: 1px solid var(--vp-c-divider); }
+.performances-page .book-outcome__heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1rem; }
+.performances-page .format-duration { color: var(--vp-c-text-2); font-size: 0.875rem; white-space: nowrap; }
+.performances-page .team-workshop-cta { margin-top: 0.5rem; }
+@media (min-width: 1280px) {
+  .corporate-page .VPDoc.has-aside .content-container { max-width: 1060px; }
+  .corporate-page .VPDoc.has-aside > .container { max-width: 1380px; }
+  .corporate-page .VPDoc.has-aside > .container > .content { flex: 1; min-width: 0; max-width: calc(100% - 256px); }
+  .corporate-page .VPDoc.has-aside > .container > .aside { flex: 0 0 256px; }
+}

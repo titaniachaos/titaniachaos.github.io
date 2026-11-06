@@ -1,8 +1,8 @@
 ---
 title: Für Unternehmen & Teams — Titania Chaos
 description: Gemeinsam spielen und anders begegnen. Clownerie, Improvisation und interkulturelle Workshops für Unternehmen und Teams mit Titania Chaos.
-aside: false
-outline: false
+aside: right
+outline: [2, 2]
 pageClass: book-titania-page corporate-page
 ---
 
@@ -20,9 +20,11 @@ pageClass: book-titania-page corporate-page
 </div>
 </section>
 
-<section class="section" id="angebote">
+<section class="section">
 <div class="ui-label">Die Formate</div>
-<h2>Drei Wege ins gemeinsame Spiel</h2>
+
+## Drei Wege ins gemeinsame Spiel {#angebote}
+
 <p class="intro">Ein kurzer Impuls, ein vertiefender Teamworkshop oder interkulturelle Kommunikation durch spielerische Erfahrung. Alle Formate kommen ohne Bühnen- oder Clownvorkenntnisse aus.</p>
 <article class="offer">
 <aside>
@@ -84,9 +86,11 @@ pageClass: book-titania-page corporate-page
 <p class="fine">Alle Preise sind Einstiegspreise für Gruppen bis 15 Personen inklusive üblicher Vorbereitung. Besondere Anforderungen und größere Gruppen auf Anfrage. Reise- und gegebenenfalls Raumkosten nach Absprache. Den verbindlichen Gesamtpreis einschließlich der steuerlichen Angaben erhalten Sie mit Ihrem Angebot.</p>
 </section>
 
-<section class="section" id="weitere">
+<section class="section">
 <div class="ui-label">Individuell gestaltbar</div>
-<h2>Weitere Möglichkeiten</h2>
+
+## Weitere Möglichkeiten {#weitere}
+
 <p class="intro">Manche Gruppen möchten einen bestimmten Aspekt vertiefen oder etwas Eigenes ausprobieren. Die Schwerpunkte können einzeln oder in Kombination vereinbart werden.</p>
 <div class="extra">
 <div>
@@ -116,11 +120,13 @@ pageClass: book-titania-page corporate-page
 </div>
 </section>
 
-<section class="section" id="titania">
+<section class="section">
 <div class="about">
 <div>
 <div class="ui-label">Die Künstlerin</div>
-<h2>Wer ist Titania?</h2>
+
+## Wer ist Titania? {#titania}
+
 <p>Mich interessiert, was zwischen Menschen geschieht: Wie wir aufeinander reagieren, uns verständigen und was passiert, wenn wir für einen Moment aufhören, alles kontrollieren zu wollen.</p>
 <p>Als Dolmetscherin arbeite ich mit Sprache und Verständigung. Als Clownkünstlerin beschäftige ich mich auch mit dem, was ohne Worte geschieht.</p>
 <p>
@@ -128,7 +134,7 @@ pageClass: book-titania-page corporate-page
 </p>
 </div>
 <div class="book-hero__media">
-<MediaFigure id="a-img-2906" />
+<MediaFigure id="a-img-8528" />
 </div>
 </div>
 <blockquote>„Der Mensch spielt nur, wo er in voller Bedeutung des Worts Mensch ist, und er ist nur da ganz Mensch, wo er spielt.“<cite>Friedrich Schiller · Über die ästhetische Erziehung des Menschen, 15. Brief</cite>
@@ -137,7 +143,9 @@ pageClass: book-titania-page corporate-page
 
 <section class="section">
 <div class="ui-label">Praktisches</div>
-<h2>Gut zu wissen</h2>
+
+## Gut zu wissen {#practical-details}
+
 <dl class="faq">
 <div>
 <dt>Brauchen wir Vorkenntnisse?</dt>
@@ -154,9 +162,11 @@ pageClass: book-titania-page corporate-page
 </dl>
 </section>
 
-<section class="contact" id="kontakt">
+<section class="contact">
 <div class="ui-label">Kontakt</div>
-<h2>Lust auf ein gemeinsames Spiel?</h2>
+
+## Lust auf ein gemeinsames Spiel? {#kontakt}
+
 <p>Ob Teamtag, Konferenz, Firmenfeier oder ein Workshop mit besonderem Schwerpunkt: Erzählen Sie mir von Ihrer Gruppe und Ihrem Anlass.</p>
 <p>Für eine erste Anfrage genügen Zeitraum, Ort, ungefähre Teilnehmerzahl und einige Worte darüber, was Sie sich vorstellen.</p>
 <a class="contact-button" href="mailto:agent@tatianapetkova.com?subject=Corporate-Workshop%20Anfrage">Titania kontaktieren</a>

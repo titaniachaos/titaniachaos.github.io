@@ -243,7 +243,13 @@ export default defineConfig({
       lang: 'en',
       themeConfig: {
         nav: [
-          { text: 'Workshops', link: '/workshops' },
+          {
+            text: 'Workshops',
+            items: [
+              { text: 'Open clown workshops', link: '/workshops' },
+              { text: 'For Companies & Teams', link: '/corporate' }
+            ]
+          },
           { text: 'Performances & Events', link: '/work-with-titania' },
           { text: 'Children’s Birthdays', link: '/events' },
           {
@@ -284,7 +290,13 @@ export default defineConfig({
       description: 'Клоунски работилници, физическа комедия, събития и празненства във Виена.',
       themeConfig: {
         nav: [
-          { text: 'Работилници', link: '/bg/workshops' },
+          {
+            text: 'Работилници',
+            items: [
+              { text: 'Отворени клоунски работилници', link: '/bg/workshops' },
+              { text: 'За фирми и екипи', link: '/bg/corporate' }
+            ]
+          },
           { text: 'Представления и събития', link: '/bg/work-with-titania' },
           { text: 'Детски рождени дни', link: '/bg/events' },
           {
@@ -330,7 +342,13 @@ export default defineConfig({
       description: 'Clown-Workshops, physische Komik, Veranstaltungen und Feste in Wien.',
       themeConfig: {
         nav: [
-          { text: 'Workshops', link: '/de/workshops' },
+          {
+            text: 'Workshops',
+            items: [
+              { text: 'Offene Clown-Workshops', link: '/de/workshops' },
+              { text: 'Für Unternehmen & Teams', link: '/de/corporate' }
+            ]
+          },
           { text: 'Performances & Veranstaltungen', link: '/de/work-with-titania' },
           { text: 'Kindergeburtstage', link: '/de/events' },
           {

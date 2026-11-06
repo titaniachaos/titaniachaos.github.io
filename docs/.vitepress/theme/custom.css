@@ -1053,3 +1053,25 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
   white-space: nowrap;
   border: 0;
 }
+
+/* Performances overview: shared by all three locales. */
+.performances-page .support-card { display: none; }
+.performances-page .VPDocAsideOutline .outline-link { white-space: normal; line-height: 1.45; padding-block: 0.3rem; }
+.performances-page .book-outcomes { grid-template-columns: 1fr; }
+.performances-page .book-outcome + .book-outcome { border-left: 0; border-top: 1px solid var(--vp-c-divider); padding-left: 0; }
+.performances-page .book-hero,
+.performances-page .book-service,
+.performances-page .book-service--reverse,
+.performances-page .book-workshop__lead { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.performances-page .book-hero__copy h1 { max-width: none; overflow-wrap: anywhere; }
+.performances-page .book-outcome .contact-button { margin: 0.65rem 0 0; white-space: normal; max-width: 100%; }
+.performances-page .format-duration { font-size: 0.9rem; margin-top: 0.65rem; }
+.performances-page .open-workshops-link { margin-top: 1.5rem; }
+.performances-page .performance-personal { margin: 2rem 0; }
+@media (max-width: 960px) {
+  .performances-page .book-hero,
+  .performances-page .book-service,
+  .performances-page .book-service--reverse,
+  .performances-page .book-workshop__lead { grid-template-columns: minmax(0, 1fr); }
+  .performances-page .book-service--reverse .book-service__media { order: 0; }
+}

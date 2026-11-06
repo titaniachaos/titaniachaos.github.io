@@ -55,10 +55,7 @@ pageClass: book-titania-page corporate-page
 <p>Through clowning and improvisation, we turn our attention to ourselves and one another. We explore leading and following, pick up on ideas and discover how much fun it can be to let go of control. Give your mind a break: room to breathe and a sense of ease that can linger afterwards.</p>
 <div class="offer-meta">
 <span>
-<strong>4 hours</strong>
-</span>
-<span>
-<strong>from €1,090</strong>
+<strong>4 hours</strong> · <strong>from €1,090</strong>
 </span>
 <span>Up to 15 people</span>
 </div>
@@ -77,10 +74,7 @@ pageClass: book-titania-page corporate-page
 <p>How do we understand one another when words are missing or land differently than intended? Through gestures, gibberish and improvisation, we explore what makes understanding possible and where misunderstandings arise. Along the way, we discover our own communication habits and new ways of understanding one another.</p>
 <div class="offer-meta">
 <span>
-<strong>3 hours</strong>
-</span>
-<span>
-<strong>from €890</strong>
+<strong>3 hours</strong> · <strong>from €890</strong>
 </span>
 <span>Up to 15 people</span>
 </div>

@@ -50,7 +50,7 @@ pageClass: book-titania-page performances-page
 <div class="book-outcome">
 <h3><a href="/de/corporate#auszeit">Spielerische Auszeit</a></h3>
 <p>Durchatmen und gemeinsam ins Lachen kommen. Leichte Bewegung, Wahrnehmungsübungen und einfache Improvisationsspiele.</p>
-<p class="format-duration"><strong>Dauer:</strong> 45–60 oder 90 Minuten</p>
+<p class="format-duration"><strong>Dauer:</strong> 60 oder 90 Minuten</p>
 <a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=Anfrage%3A%20Spielerische%20Auszeit">Spielerische Auszeit anfragen</a>
 </div>
 <div class="book-outcome">

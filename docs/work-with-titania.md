@@ -48,24 +48,25 @@ pageClass: book-titania-page performances-page
 </div>
 <div class="book-outcomes" aria-label="Three formats for companies and teams">
 <div class="book-outcome">
-<h3>A Playful Break</h3>
+<h3><a href="/corporate#auszeit">A Playful Break</a></h3>
 <p>Take a breath and share a laugh. Gentle movement, awareness exercises and simple improvisation games.</p>
 <p class="format-duration"><strong>Duration:</strong> 45–60 or 90 minutes</p>
 <a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=Enquiry%3A%20A%20Playful%20Break">Ask about A Playful Break</a>
 </div>
 <div class="book-outcome">
-<h3>Play with Ease</h3>
+<h3><a href="/corporate#leichtigkeit">Play with Ease</a></h3>
 <p>Presence, playing together and the pleasure of getting things wrong. Discover how much fun it can be to let go of control.</p>
 <p class="format-duration"><strong>Duration:</strong> 4 hours</p>
 <a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=Enquiry%3A%20Play%20with%20Ease">Ask about Play with Ease</a>
 </div>
 <div class="book-outcome">
-<h3>Understanding through Play</h3>
+<h3><a href="/corporate#verstaendigung">Understanding through Play</a></h3>
 <p>Explore communication habits and new ways of understanding one another through gestures, gibberish and improvisation.</p>
 <p class="format-duration"><strong>Duration:</strong> 3 hours</p>
 <a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=Enquiry%3A%20Understanding%20through%20Play">Ask about Understanding through Play</a>
 </div>
 </div>
+<p><a href="/corporate">Explore all formats for companies and teams →</a></p>
 <p class="open-workshops-link">Looking for an open class? <a href="/workshops#practical-details">Explore open clown workshops →</a></p>
 </section>
 

@@ -1,6 +1,6 @@
 ---
 title: Book a clown for a children's birthday party in Vienna
-description: Book a clown for a children's birthday party, kindergarten or children's festival in Vienna — circus games, costumes, balloon animals and the time-travelling camera. Ages 5 to 12, about 2–3 hours.
+description: Book a clown for a children's birthday party, kindergarten or children's festival in Vienna — circus games, costumes and the time-travelling camera. Ages 5 to 12, about 2–3 hours.
 ---
 # A clown for your child's birthday in Vienna
 
@@ -38,10 +38,9 @@ My games come from social circus. We juggle, invent characters and play with bal
 - The time-travelling camera, costumes and accessories
 - Circus games with movement, improvisation and teamwork
 - Music and a cheerful atmosphere
-- Balloon animals and balloon figures
 
 ## Price & conditions
 
-Up to 10 children, approximately 2–3 hours: **€290 plus taxi** within Vienna. The same programme works for a kindergarten group, a children's festival or Fasching. Cancellation less than two days in advance incurs a €100 fee; rescheduling is always possible.
+Up to 10 children, approximately 2–3 hours: **€290 plus taxi** within Vienna. A similar programme is suitable for a kindergarten group, a children's festival or Fasching. Cancellation less than two days in advance incurs a €100 fee; rescheduling is always possible.
 
 [Ask about a date and availability](mailto:agent@tatianapetkova.com?subject=Birthday%20party%20enquiry){.contact-button}

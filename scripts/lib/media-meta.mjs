@@ -11,17 +11,15 @@
 import { readFile } from 'node:fs/promises'
 import { join, dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { PHOTOGRAPHERS } from '../../docs/.vitepress/site-copy.ts'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..')
 
 /** Origin, credit and licence, read from where the site already states them. */
 export async function context() {
   const seo = await readFile(join(ROOT, 'docs/.vitepress/seo.ts'), 'utf8')
-  const config = await readFile(join(ROOT, 'docs/.vitepress/config.mts'), 'utf8')
   const origin = (process.env.SITE_ORIGIN ?? seo.match(/SITE_ORIGIN \?\? '([^']+)'/)?.[1] ?? '').replace(/\/$/, '')
-  const credit =
-    config.match(/const PHOTOGRAPHERS =\s*\n?\s*'([^']+)'\s*\+\s*\n?\s*'([^']+)'/)?.slice(1).join('') ??
-    'Titania Chaos'
+  const credit = PHOTOGRAPHERS
   return { origin, credit, rights: `© Tatiana Petkova (Titania Chaos). Photographs by ${credit}.` }
 }
 

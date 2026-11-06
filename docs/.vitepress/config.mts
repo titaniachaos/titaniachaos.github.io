@@ -1,3 +1,5 @@
+import { PHOTOGRAPHERS } from './site-copy.ts'
+import { authoredSearchContent } from '../../scripts/lib/search-content.mjs'
 import { defineConfig } from 'vitepress'
 import {
   GOOGLE_SITE_VERIFICATION,
@@ -80,11 +82,6 @@ function browseSearchBody(relativePath: string): string | null {
     ...captions.map((c) => `<p>${c}</p>`)
   ].join('\n')
 }
-
-const PHOTOGRAPHERS =
-  'Veliko Balabanov, Ulrich Girolami, Mariane Hink, Heidi Holtl, Geo Kalev, ' +
-  'Tanya Matskevich, Konstantin Oberlik, Tatiana Petkova, Marion Scholz, ' +
-  'Krasimir Stoichkov and Laurent Ziegler'
 
 const PHOTOGRAPHERS_BG =
   'Велико Балабанов, Улрих Джиролами, Мариане Хинк, Хайди Холтл, Гео Калев, ' +
@@ -189,7 +186,9 @@ export default defineConfig({
           // itself. So the listing is recomputed from the path, the same way
           // the route computes it.
           const body = browseSearchBody(String(env.relativePath ?? ''))
-          return body ?? md.render(src, env)
+          if (body !== null) return body
+          const html = md.render(src, env)
+          return authoredSearchContent(html, env.frontmatter?.title)
         },
         locales: {
           bg: {

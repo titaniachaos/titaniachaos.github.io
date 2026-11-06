@@ -1,6 +1,6 @@
 ---
 title: Clown für Kindergeburtstag in Wien buchen
-description: Clown für Kindergeburtstag, Kindergarten oder Kinderfest in Wien buchen — Zirkusspiele, Kostüme, Ballontiere und die Zeitreisekamera. Für Kinder von 5 bis 12, etwa 2–3 Stunden.
+description: Clown für Kindergeburtstag, Kindergarten oder Kinderfest in Wien buchen — Zirkusspiele, Kostüme und die Zeitreisekamera. Für Kinder von 5 bis 12, etwa 2–3 Stunden.
 ---
 # Clown für den Kindergeburtstag in Wien
 
@@ -38,10 +38,9 @@ Meine Spiele stammen aus dem sozialen Zirkus. Wir jonglieren, erfinden Figuren u
 - Zeitreisekamera, Kostüme und Accessoires
 - Zirkusspiele mit Bewegung, Improvisation und Zusammenarbeit
 - Musik und eine fröhliche Atmosphäre
-- Ballontiere und Ballonfiguren
 
 ## Preis & Bedingungen
 
-Bis zu 10 Kinder, etwa 2–3 Stunden: **€290 plus Taxi** in Wien. Das gleiche Programm eignet sich für eine Kindergartengruppe, ein Kinderfest oder Fasching. Bei Absage weniger als zwei Tage vorher fällt eine Stornogebühr von €100 an; eine Verschiebung ist jederzeit möglich.
+Bis zu 10 Kinder, etwa 2–3 Stunden: **€290 plus Taxi** in Wien. Ein vergleichbares Programm eignet sich für eine Kindergartengruppe, ein Kinderfest oder Fasching. Bei Absage weniger als zwei Tage vorher fällt eine Stornogebühr von €100 an; eine Verschiebung ist jederzeit möglich.
 
 [Termin und Verfügbarkeit anfragen](mailto:agent@tatianapetkova.com?subject=Anfrage%20Kindergeburtstag){.contact-button}

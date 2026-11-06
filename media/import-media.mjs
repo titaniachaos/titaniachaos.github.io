@@ -36,7 +36,7 @@
 // Usage:
 //   node media/import-media.mjs <path-or-url> [--id my-frame] [--tags "street performance"] [--write]
 
-import { readFile, writeFile, unlink, stat, mkdir, copyFile } from 'node:fs/promises'
+import { readFile, writeFile, unlink, stat } from 'node:fs/promises'
 import { execFile } from 'node:child_process'
 import { promisify } from 'node:util'
 import { tmpdir } from 'node:os'
@@ -45,6 +45,7 @@ import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 import { readExif, exifDate } from '../scripts/lib/exif.mjs'
 import { dimensions } from '../scripts/lib/image-size.mjs'
+import { writeMediaRecords } from '../scripts/lib/media-import.mjs'
 
 const run = promisify(execFile)
 
@@ -147,11 +148,9 @@ const suggested = (flag('tags')?.split(/\s+/) ?? vocabulary.filter((t) => [...na
 const KEEP = join(ROOT, 'media', 'imported')
 let kept = null
 if (WRITE && file.temporary) {
-  await mkdir(KEEP, { recursive: true })
   kept = join(KEEP, basename(file.name))
-  await copyFile(file.path, kept)
 }
-if (file.temporary) await unlink(file.path).catch(() => {})
+if (file.temporary && !WRITE) await unlink(file.path).catch(() => {})
 
 // ---- the record ------------------------------------------------------------
 
@@ -197,36 +196,20 @@ if (WRITE) {
       ? `  '${found.id}': ['${sourceRef}', 1],\n`
       : `  '${found.id}': '${inArchive ? basename(sourceRef) : sourceRef}',\n`
 
-  const makePath = join(ROOT, 'media/make-media.mjs')
-  let make = await readFile(makePath, 'utf8')
-  if (make.includes(`'${found.id}':`)) {
-    console.error(`import: make-media.mjs already has '${found.id}'`)
-    process.exit(1)
+  try {
+    await writeMediaRecords({
+      makePath: join(ROOT, 'media/make-media.mjs'),
+      dataPath: join(ROOT, 'docs/.vitepress/media.data.ts'),
+      mapName, id: found.id, entry, record,
+      sourceCopy: kept ? { from: file.path, to: kept } : undefined
+    })
+  } catch (error) {
+    console.error(error.message)
+    process.exitCode = 1
+  } finally {
+    if (file.temporary) await unlink(file.path).catch(() => {})
   }
-  const at = make.indexOf(`const ${mapName} = {`)
-  if (at === -1) { console.error(`import: no ${mapName} map in make-media.mjs`); process.exit(1) }
-  // The insert goes after the opening brace, so the map has to be written
-  // across lines. A single-line `= {}` would put the entry past the closing
-  // brace, which is a syntax error rather than a wrong map -- but only after
-  // the file has been written, so check first.
-  const brace = make.indexOf('{', at) + 1
-  if (make[brace] !== '\n') {
-    console.error(`import: ${mapName} in make-media.mjs is written on one line; open it across lines first`)
-    process.exit(1)
-  }
-  make = make.slice(0, brace + 1) + entry + make.slice(brace + 1)
-  await writeFile(makePath, make)
-
-  const dataPath = join(ROOT, 'docs/.vitepress/media.data.ts')
-  let data = await readFile(dataPath, 'utf8')
-  if (data.includes(`id: '${found.id}'`)) {
-    console.error(`import: media.data.ts already has a frame '${found.id}'`)
-    process.exit(1)
-  }
-  const end = data.indexOf('\n]\n\n// ---- what a reader sees')
-  if (end === -1) { console.error('import: could not find the end of FRAMES'); process.exit(1) }
-  data = data.slice(0, end) + ',\n' + record + data.slice(end)
-  await writeFile(dataPath, data)
+  if (process.exitCode) process.exit(process.exitCode)
 
   console.log(`\nwrote  media/make-media.mjs        ${mapName}['${found.id}']`)
   console.log(`wrote  docs/.vitepress/media.data.ts  FRAMES '${found.id}'`)

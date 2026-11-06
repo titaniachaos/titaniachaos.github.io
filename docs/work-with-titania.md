@@ -50,7 +50,7 @@ pageClass: book-titania-page performances-page
 <div class="book-outcome">
 <h3><a href="/corporate#auszeit">A Playful Break</a></h3>
 <p>Take a breath and share a laugh. Gentle movement, awareness exercises and simple improvisation games.</p>
-<p class="format-duration"><strong>Duration:</strong> 45–60 or 90 minutes</p>
+<p class="format-duration"><strong>Duration:</strong> 60 or 90 minutes</p>
 <a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=Enquiry%3A%20A%20Playful%20Break">Ask about A Playful Break</a>
 </div>
 <div class="book-outcome">

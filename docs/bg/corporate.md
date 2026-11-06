@@ -35,9 +35,9 @@ pageClass: book-titania-page corporate-page
 <p>Леки движения, упражнения за внимание и лесни импровизационни игри внасят пауза в работния ден. Освобождаваме напрежението, изненадваме се взаимно и се впускаме в обща игра. Никой не е длъжен да изнася представление или да бъде особено смешен. Всеки може да се забавлява.</p>
 <div class="offer-meta">
 <span>
-<strong>45–60 мин.</strong> · от 450 €</span>
+<strong>60 мин.</strong> · от 450 €</span>
 <span>
-<strong>90 мин.</strong> · от 650 €</span>
+<strong>90 мин.</strong> · от 590 €</span>
 <span>До 15 души</span>
 </div>
 <a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%3A%20%D0%98%D0%B3%D1%80%D0%BE%D0%B2%D0%B0%20%D0%BF%D0%B0%D1%83%D0%B7%D0%B0">Попитайте за „Игрова пауза“</a>
@@ -58,7 +58,7 @@ pageClass: book-titania-page corporate-page
 <strong>4 часа</strong>
 </span>
 <span>
-<strong>от 1 190 €</strong>
+<strong>от 1 090 €</strong>
 </span>
 <span>До 15 души</span>
 </div>
@@ -80,7 +80,7 @@ pageClass: book-titania-page corporate-page
 <strong>3 часа</strong>
 </span>
 <span>
-<strong>от 990 €</strong>
+<strong>от 890 €</strong>
 </span>
 <span>До 15 души</span>
 </div>

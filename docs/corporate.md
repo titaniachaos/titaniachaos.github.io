@@ -35,9 +35,9 @@ pageClass: book-titania-page corporate-page
 <p>Gentle movement, awareness exercises and simple improvisation games offer a break from the working day. We let go of tension, surprise one another and find our way into shared play. Nobody has to perform or be particularly funny. Everyone is welcome to have fun.</p>
 <div class="offer-meta">
 <span>
-<strong>45–60 min.</strong> · from €450</span>
+<strong>60 min.</strong> · from €450</span>
 <span>
-<strong>90 min.</strong> · from €650</span>
+<strong>90 min.</strong> · from €590</span>
 <span>Up to 15 people</span>
 </div>
 <a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=Enquiry%3A%20A%20Playful%20Break">Ask about A Playful Break</a>
@@ -58,7 +58,7 @@ pageClass: book-titania-page corporate-page
 <strong>4 hours</strong>
 </span>
 <span>
-<strong>from €1,190</strong>
+<strong>from €1,090</strong>
 </span>
 <span>Up to 15 people</span>
 </div>
@@ -80,7 +80,7 @@ pageClass: book-titania-page corporate-page
 <strong>3 hours</strong>
 </span>
 <span>
-<strong>from €990</strong>
+<strong>from €890</strong>
 </span>
 <span>Up to 15 people</span>
 </div>

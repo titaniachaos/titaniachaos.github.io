@@ -35,9 +35,9 @@ pageClass: book-titania-page corporate-page
 <p>Leichte Bewegung, Wahrnehmungsübungen und einfache Improvisationsspiele bringen eine Pause in den Arbeitsalltag. Wir lassen Anspannung los, überraschen einander und kommen ins gemeinsame Spiel. Niemand muss etwas vorführen oder besonders lustig sein. Alle dürfen Spaß haben.</p>
 <div class="offer-meta">
 <span>
-<strong>45–60 Min.</strong> · ab 450 €</span>
+<strong>60 Min.</strong> · ab 450 €</span>
 <span>
-<strong>90 Min.</strong> · ab 650 €</span>
+<strong>90 Min.</strong> · ab 590 €</span>
 <span>Bis 15 Personen</span>
 </div>
 <a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=Anfrage%3A%20Spielerische%20Auszeit">Spielerische Auszeit anfragen</a>
@@ -58,7 +58,7 @@ pageClass: book-titania-page corporate-page
 <strong>4 Stunden</strong>
 </span>
 <span>
-<strong>ab 1.190 €</strong>
+<strong>ab 1.090 €</strong>
 </span>
 <span>Bis 15 Personen</span>
 </div>
@@ -80,7 +80,7 @@ pageClass: book-titania-page corporate-page
 <strong>3 Stunden</strong>
 </span>
 <span>
-<strong>ab 990 €</strong>
+<strong>ab 890 €</strong>
 </span>
 <span>Bis 15 Personen</span>
 </div>

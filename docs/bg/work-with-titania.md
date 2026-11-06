@@ -50,7 +50,7 @@ pageClass: book-titania-page performances-page
 <div class="book-outcome">
 <h3><a href="/bg/corporate#auszeit">Игрова пауза</a></h3>
 <p>Поемете си дъх и се посмейте заедно. Леки движения, упражнения за внимание и лесни импровизационни игри.</p>
-<p class="format-duration"><strong>Продължителност:</strong> 45–60 или 90 минути</p>
+<p class="format-duration"><strong>Продължителност:</strong> 60 или 90 минути</p>
 <a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%3A%20%D0%98%D0%B3%D1%80%D0%BE%D0%B2%D0%B0%20%D0%BF%D0%B0%D1%83%D0%B7%D0%B0">Попитайте за „Игрова пауза“</a>
 </div>
 <div class="book-outcome">

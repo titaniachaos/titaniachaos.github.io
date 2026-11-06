@@ -55,10 +55,7 @@ pageClass: book-titania-page corporate-page
 <p>Mit Clownerie und Improvisation richten wir die Aufmerksamkeit auf uns selbst und aufeinander. Wir erkunden Führen und Folgen, greifen Einfälle auf und entdecken, wie viel Spaß es machen kann, nicht alles im Griff zu haben. Der Kopf darf Pause machen – Raum zum Durchatmen und für eine Leichtigkeit, die nachklingen kann.</p>
 <div class="offer-meta">
 <span>
-<strong>4 Stunden</strong>
-</span>
-<span>
-<strong>ab 1.090 €</strong>
+<strong>4 Stunden</strong> · <strong>ab 1.090 €</strong>
 </span>
 <span>Bis 15 Personen</span>
 </div>
@@ -77,10 +74,7 @@ pageClass: book-titania-page corporate-page
 <p>Wie verständigen wir uns, wenn Worte fehlen oder anders ankommen als gedacht? Mit Gesten, Gibberisch und Improvisation erkunden wir, was Verständigung möglich macht und wo Missverständnisse entstehen. Dabei entdecken wir eigene Kommunikationsgewohnheiten und neue Wege, einander zu verstehen.</p>
 <div class="offer-meta">
 <span>
-<strong>3 Stunden</strong>
-</span>
-<span>
-<strong>ab 890 €</strong>
+<strong>3 Stunden</strong> · <strong>ab 890 €</strong>
 </span>
 <span>Bis 15 Personen</span>
 </div>

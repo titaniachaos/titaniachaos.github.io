@@ -1,8 +1,8 @@
 ---
 title: За фирми и екипи — Титания Хаос
 description: Обща игра и срещи по нов начин. Клоунада, импровизация и междукултурни работилници за фирми и екипи с Титания Хаос.
-aside: false
-outline: false
+aside: right
+outline: [2, 2]
 pageClass: book-titania-page corporate-page
 ---
 
@@ -20,9 +20,11 @@ pageClass: book-titania-page corporate-page
 </div>
 </section>
 
-<section class="section" id="angebote">
+<section class="section">
 <div class="ui-label">Форматите</div>
-<h2>Три пътя към общата игра</h2>
+
+## Три пътя към общата игра {#angebote}
+
 <p class="intro">Кратка пауза, задълбочена екипна работилница или междукултурно общуване чрез игрово преживяване. За нито един от форматите не е необходим сценичен или клоунски опит.</p>
 <article class="offer">
 <aside>
@@ -84,9 +86,11 @@ pageClass: book-titania-page corporate-page
 <p class="fine">Всички цени са начални за групи до 15 души и включват обичайната подготовка. Специални изисквания и по-големи групи — при запитване. Пътните разходи и евентуалният наем на помещение се уточняват допълнително. Офертата съдържа окончателната обща цена и приложимите данъчни условия.</p>
 </section>
 
-<section class="section" id="weitere">
+<section class="section">
 <div class="ui-label">Според вашата група</div>
-<h2>Други възможности</h2>
+
+## Други възможности {#weitere}
+
 <p class="intro">Някои групи искат да задълбочат определен аспект или да опитат нещо свое. Темите могат да се уговорят самостоятелно или в комбинация.</p>
 <div class="extra">
 <div>
@@ -116,11 +120,13 @@ pageClass: book-titania-page corporate-page
 </div>
 </section>
 
-<section class="section" id="titania">
+<section class="section">
 <div class="about">
 <div>
 <div class="ui-label">Артистката</div>
-<h2>Коя е Титания?</h2>
+
+## Коя е Титания? {#titania}
+
 <p>Интересува ме какво се случва между хората: как откликваме един на друг, как се разбираме и какво става, когато за миг престанем да се опитваме да контролираме всичко.</p>
 <p>Като устен преводач работя с езика и разбирателството. Като клоунска артистка изследвам и онова, което се случва без думи.</p>
 <p>
@@ -128,7 +134,7 @@ pageClass: book-titania-page corporate-page
 </p>
 </div>
 <div class="book-hero__media">
-<MediaFigure id="a-img-2906" />
+<MediaFigure id="a-img-8528" />
 </div>
 </div>
 <blockquote>„Човек играе само когато е човек в пълния смисъл на думата и е изцяло човек само когато играе.“<cite>Фридрих Шилер · За естетическото възпитание на човека, писмо 15 · наш превод</cite>
@@ -137,7 +143,9 @@ pageClass: book-titania-page corporate-page
 
 <section class="section">
 <div class="ui-label">Практически въпроси</div>
-<h2>Полезно е да знаете</h2>
+
+## Полезно е да знаете {#practical-details}
+
 <dl class="faq">
 <div>
 <dt>Необходим ли е предишен опит?</dt>
@@ -154,9 +162,11 @@ pageClass: book-titania-page corporate-page
 </dl>
 </section>
 
-<section class="contact" id="kontakt">
+<section class="contact">
 <div class="ui-label">Контакт</div>
-<h2>Да поиграем заедно?</h2>
+
+## Да поиграем заедно? {#kontakt}
+
 <p>Екипен ден, конференция, фирмен празник или работилница с конкретен фокус — разкажете ми за групата и повода си.</p>
 <p>За първо запитване са достатъчни периодът, мястото, приблизителният брой участници и няколко думи за това, което си представяте.</p>
 <a class="contact-button" href="mailto:agent@tatianapetkova.com?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%20%D0%B7%D0%B0%20%D0%B5%D0%BA%D0%B8%D0%BF%D0%BD%D0%B0%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B8%D0%BB%D0%BD%D0%B8%D1%86%D0%B0">Пишете на Титания</a>

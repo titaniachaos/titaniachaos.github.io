@@ -57,12 +57,6 @@ pageClass: workshops-page
 
 Предпочитате представление или игрово фотопреживяване за вашето събитие? [Вижте начините за работа с Титания](/bg/work-with-titania){.contact-button .secondary}
 
-## Резервации и запитвания
-
 <MediaFigure tags="feed" />
-
-Поканете Титания на събитие или попитайте за работилница, представление или забавно фотопреживяване.
-
-[Пишете на Титания](mailto:agent@tatianapetkova.com){.contact-button}
 
 <SocialWall />

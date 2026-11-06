@@ -46,27 +46,21 @@ pageClass: book-titania-page performances-page
 </div>
 <div class="book-service__media"><MediaFigure id="workshop-mini-art" /></div>
 </div>
-<div class="book-outcomes" aria-label="Drei Formate für Unternehmen und Teams">
-<div class="book-outcome">
-<h3><a href="/de/corporate#auszeit">Spielerische Auszeit</a></h3>
-<p>Durchatmen und gemeinsam ins Lachen kommen. Leichte Bewegung, Wahrnehmungsübungen und einfache Improvisationsspiele.</p>
-<p class="format-duration"><strong>Dauer:</strong> 60 oder 90 Minuten</p>
-<a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=Anfrage%3A%20Spielerische%20Auszeit">Spielerische Auszeit anfragen</a>
-</div>
-<div class="book-outcome">
-<h3><a href="/de/corporate#leichtigkeit">Mit Leichtigkeit ins Spiel</a></h3>
-<p>Präsenz, Zusammenspiel und lustvolles Scheitern. Entdecken, wie viel Spaß es machen kann, nicht alles im Griff zu haben.</p>
-<p class="format-duration"><strong>Dauer:</strong> 4 Stunden</p>
-<a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=Anfrage%3A%20Mit%20Leichtigkeit%20ins%20Spiel">Mit Leichtigkeit ins Spiel anfragen</a>
-</div>
-<div class="book-outcome">
-<h3><a href="/de/corporate#verstaendigung">Verständigung im Spiel</a></h3>
-<p>Mit Gesten, Gibberisch und Improvisation Kommunikationsgewohnheiten und neue Wege der Verständigung erkunden.</p>
-<p class="format-duration"><strong>Dauer:</strong> 3 Stunden</p>
-<a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=Anfrage%3A%20Verst%C3%A4ndigung%20im%20Spiel">Verständigung im Spiel anfragen</a>
-</div>
-</div>
-<p><a href="/de/corporate">Alle Angebote für Unternehmen & Teams →</a></p>
+<ul class="book-outcomes" aria-label="Drei Formate für Unternehmen und Teams">
+<li class="book-outcome">
+<div class="book-outcome__heading"><h3><a href="/de/corporate#auszeit">Spielerische Auszeit</a></h3><span class="format-duration">60 oder 90 Minuten</span></div>
+<p>Durchatmen und gemeinsam ins Lachen kommen.</p>
+</li>
+<li class="book-outcome">
+<div class="book-outcome__heading"><h3><a href="/de/corporate#leichtigkeit">Mit Leichtigkeit ins Spiel</a></h3><span class="format-duration">4 Stunden</span></div>
+<p>Präsenz, Zusammenspiel und lustvolles Scheitern.</p>
+</li>
+<li class="book-outcome">
+<div class="book-outcome__heading"><h3><a href="/de/corporate#verstaendigung">Verständigung im Spiel</a></h3><span class="format-duration">3 Stunden</span></div>
+<p>Mit Gesten, Gibberisch und Improvisation über Sprach- und Kulturgrenzen hinweg kommunizieren.</p>
+</li>
+</ul>
+<a class="contact-button team-workshop-cta" href="/de/corporate">Teamworkshop entdecken</a>
 <p class="open-workshops-link">Sie suchen einen offenen Kurs? <a href="/de/workshops#practical-details">Offene Clown-Workshops ansehen →</a></p>
 </section>
 

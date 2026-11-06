@@ -46,27 +46,21 @@ pageClass: book-titania-page performances-page
 </div>
 <div class="book-service__media"><MediaFigure id="workshop-mini-art" /></div>
 </div>
-<div class="book-outcomes" aria-label="Три формата за фирми и екипи">
-<div class="book-outcome">
-<h3><a href="/bg/corporate#auszeit">Игрова пауза</a></h3>
-<p>Поемете си дъх и се посмейте заедно. Леки движения, упражнения за внимание и лесни импровизационни игри.</p>
-<p class="format-duration"><strong>Продължителност:</strong> 60 или 90 минути</p>
-<a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%3A%20%D0%98%D0%B3%D1%80%D0%BE%D0%B2%D0%B0%20%D0%BF%D0%B0%D1%83%D0%B7%D0%B0">Попитайте за „Игрова пауза“</a>
-</div>
-<div class="book-outcome">
-<h3><a href="/bg/corporate#leichtigkeit">С лекота в играта</a></h3>
-<p>Присъствие, съвместна игра и удоволствието да грешим. Открийте колко забавно може да бъде да не контролираме всичко.</p>
-<p class="format-duration"><strong>Продължителност:</strong> 4 часа</p>
-<a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%3A%20%D0%A1%20%D0%BB%D0%B5%D0%BA%D0%BE%D1%82%D0%B0%20%D0%B2%20%D0%B8%D0%B3%D1%80%D0%B0%D1%82%D0%B0">Попитайте за „С лекота в играта“</a>
-</div>
-<div class="book-outcome">
-<h3><a href="/bg/corporate#verstaendigung">Разбирателство чрез игра</a></h3>
-<p>Чрез жестове, измислен език и импровизация изследваме навиците си на общуване и откриваме нови начини да се разбираме.</p>
-<p class="format-duration"><strong>Продължителност:</strong> 3 часа</p>
-<a class="contact-button secondary" href="mailto:agent@tatianapetkova.com?subject=%D0%97%D0%B0%D0%BF%D0%B8%D1%82%D0%B2%D0%B0%D0%BD%D0%B5%3A%20%D0%A0%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D1%82%D0%B5%D0%BB%D1%81%D1%82%D0%B2%D0%BE%20%D1%87%D1%80%D0%B5%D0%B7%20%D0%B8%D0%B3%D1%80%D0%B0">Попитайте за „Разбирателство чрез игра“</a>
-</div>
-</div>
-<p><a href="/bg/corporate">Всички формати за фирми и екипи →</a></p>
+<ul class="book-outcomes" aria-label="Три формата за фирми и екипи">
+<li class="book-outcome">
+<div class="book-outcome__heading"><h3><a href="/bg/corporate#auszeit">Игрова пауза</a></h3><span class="format-duration">60 или 90 минути</span></div>
+<p>Поемете си дъх и се посмейте заедно.</p>
+</li>
+<li class="book-outcome">
+<div class="book-outcome__heading"><h3><a href="/bg/corporate#leichtigkeit">С лекота в играта</a></h3><span class="format-duration">4 часа</span></div>
+<p>Присъствие, съвместна игра и удоволствието да грешим.</p>
+</li>
+<li class="book-outcome">
+<div class="book-outcome__heading"><h3><a href="/bg/corporate#verstaendigung">Разбирателство чрез игра</a></h3><span class="format-duration">3 часа</span></div>
+<p>Общуване отвъд езиковите и културните граници чрез жестове, измислен език и импровизация.</p>
+</li>
+</ul>
+<a class="contact-button team-workshop-cta" href="/bg/corporate">Разгледайте работилниците за екипи</a>
 <p class="open-workshops-link">Търсите отворен курс? <a href="/bg/workshops#practical-details">Разгледайте отворените клоунски работилници →</a></p>
 </section>
 

@@ -352,7 +352,7 @@ export default defineConfig({
         ],
         outline: { level: [2, 3], label: 'Auf dieser Seite' },
         footer: {
-          message: `Fotos von ${PHOTOGRAPHERS}. · <a href="/de/legal-data">Impressum &amp; Datenschutz</a><br>Eigene Texte von Titania Chaos stehen unter <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>, sofern nicht anders angegeben.<br>Bilder, Videos und Werke Dritter sind ausgenommen, sofern sie nicht ausdrücklich entsprechend gekennzeichnet sind.`
+          message: `Fotos von ${PHOTOGRAPHERS.replace(/ and /g, ' und ')}. · <a href="/de/legal-data">Impressum &amp; Datenschutz</a><br>Eigene Texte von Titania Chaos stehen unter <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>, sofern nicht anders angegeben.<br>Bilder, Videos und Werke Dritter sind ausgenommen, sofern sie nicht ausdrücklich entsprechend gekennzeichnet sind.`
         },
         darkModeSwitchLabel: 'Darstellung',
         lightModeSwitchTitle: 'Zum hellen Design wechseln',

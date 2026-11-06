@@ -10,7 +10,10 @@ import { useLang } from './useLang.ts'
  */
 const props = withDefaults(defineProps<{ place?: 'aside' | 'inline' }>(), { place: 'inline' })
 
-const { lang } = useLang()
+const { lang, slug } = useLang()
+
+// Booking pages keep the contact action without a separate donation request.
+const showSupport = computed(() => !['workshops', 'events', 'work-with-titania'].includes(slug.value))
 
 const COPY = {
   en: {
@@ -50,6 +53,7 @@ const t = computed(() => COPY[lang.value] ?? COPY.en)
         {{ t.contact }}
       </a>
       <a
+        v-if="showSupport"
         class="support-card__action support-card__action--secondary"
         href="https://revolut.me/titaniachaos"
         target="_blank"

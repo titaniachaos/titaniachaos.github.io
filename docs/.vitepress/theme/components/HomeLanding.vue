@@ -85,8 +85,7 @@ const soloLink = computed(() => `/clown/${props.lang === 'en' ? '' : `${props.la
 </script>
 
 <template>
-  <main class="home-landing">
-    <h1 class="home-sr-only">{{ t.pageTitle }}</h1>
+  <main class="home-landing" :aria-label="t.pageTitle">
     <section class="home-section home-paths" aria-labelledby="home-paths-title">
       <h2 id="home-paths-title">{{ t.pathsTitle }}</h2>
       <div class="home-outcome-grid">

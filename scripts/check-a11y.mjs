@@ -9,9 +9,8 @@
 // computed from the tokens themselves, on every build.
 //
 // Also checked, cheaply: every page declares a language, and carries exactly
-// one h1. Headings inside the sidebar are ignored -- VitePress renders group
-// titles as h2/h3 inside a nav landmark, which precedes the content h1 in
-// document order and is not a defect.
+// one h1 across the document. VitePress sidebar group titles are h2/h3,
+// so they do not affect the primary-heading count.
 //
 // WCAG 2.2 AA: 4.5:1 for normal text, 3:1 for large text and UI components.
 //
@@ -20,6 +19,7 @@
 import { readFile } from 'node:fs/promises'
 import { readdir } from 'node:fs/promises'
 import { join, relative } from 'node:path'
+import { primaryHeadingCount } from './lib/page-headings.mjs'
 
 const dist = process.argv[2] ?? 'docs/.vitepress/dist'
 const cssFile = process.argv[3] ?? 'docs/.vitepress/theme/custom.css'
@@ -85,10 +85,9 @@ for (const p of pages) {
   const html = await readFile(p, 'utf8')
   const rel = relative(dist, p)
   if (!/<html[^>]+lang="[^"]+"/.test(html)) problems.push(`${rel}: no lang on <html>`)
-  // Count only headings inside the document body, not the sidebar nav.
-  const doc = /<main[\s\S]*?<\/main>/.exec(html)?.[0] ?? html
-  const h1s = (doc.match(/<h1[\s>]/g) ?? []).length
-  if (h1s !== 1 && rel !== '404.html') problems.push(`${rel}: ${h1s} h1 in main`)
+  // The homepage hero can precede main; sidebar h2/h3 are not primary headings.
+  const h1s = primaryHeadingCount(html)
+  if (h1s !== 1 && rel !== '404.html') problems.push(`${rel}: ${h1s} h1 on page`)
 }
 
 console.log()

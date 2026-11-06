@@ -557,8 +557,9 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 }
 
 .booking-glance {
+  clear: both;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 1.5rem 0 2.5rem;
   border-block: 1px solid var(--vp-c-divider);
 }
@@ -567,6 +568,12 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
 .booking-glance > div + div {
   padding-left: 1rem;
   border-left: 1px solid var(--vp-c-divider);
+}
+.booking-glance > div:last-child {
+  grid-column: 1 / -1;
+  border-left: 0;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-left: 0;
 }
 .booking-glance :is(strong, span) { display: block; }
 .booking-glance strong { color: var(--vp-c-text-1); font-size: 0.95rem; }

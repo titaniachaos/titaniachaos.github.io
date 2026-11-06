@@ -17,6 +17,12 @@
 
 import type { Lang } from './locale.ts'
 
+/** Shared by the visible footer and media export metadata. */
+export const PHOTOGRAPHERS =
+  'Veliko Balabanov, Ulrich Girolami, Mariane Hink, Heidi Holtl, Geo Kalev, ' +
+  'Tanya Matskevich, Konstantin Oberlik, Tatiana Petkova, Marion Scholz, ' +
+  'Krasimir Stoichkov and Laurent Ziegler'
+
 /** The social images, and what each one shows. */
 export const IMAGE_KEYS = [
   'titania-chaos-card.jpg',

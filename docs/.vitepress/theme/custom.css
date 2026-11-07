@@ -1008,8 +1008,20 @@ a.ui-badge--muted:hover { border-color: transparent; background: var(--vp-c-bran
   object-position: center;
 }
 
+/* The tall portrait must reserve its own height in VitePress's stacked hero.
+   Its default absolute image and negative margins assume a square illustration. */
+@media (max-width: 959px) {
+  .VPHomeHero .container { gap: 2rem; }
+  .VPHomeHero .image { margin: 0; }
+  .VPHomeHero .image-container { width: 100%; height: auto; }
+  .VPHomeHero .image-src[src$="titania-chaos-home-portrait.webp"] {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 760px) {
-  .VPHomeHero .container { gap: 1.25rem; }
   .VPHomeHero .main { padding-top: 0; }
   .VPHomeHero .tagline { line-height: 1.55; }
   .VPHomeHero .image-src[src$="titania-chaos-home-portrait.webp"] { max-height: 420px; }

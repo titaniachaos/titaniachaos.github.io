@@ -1350,7 +1350,7 @@ const FRAMES: Frame[] = [
     id: 'a-cd563ea5-553b-422b-9723-bbc102345524',
     kind: 'photo',
     tags: ['birthday', 'balloons', 'street'],
-    alt: { en: 'Titania Chaos seated outdoors behind a hand-painted sign reading Geburtstagsamt, with balloon animals on the table', bg: 'Титания Хаос седи навън зад ръчно изписана табела „Geburtstagsamt“, а на масата — балонени фигури', de: 'Titania Chaos sitzt im Freien hinter einem handgemalten Schild „Geburtstagsamt“, auf dem Tisch Ballontiere' },
+    alt: { en: 'Titania Chaos seated outdoors behind a hand-painted sign reading Geburtstagsamt', bg: 'Титания Хаос седи навън зад ръчно изписана табела „Geburtstagsamt“', de: 'Titania Chaos sitzt im Freien hinter einem handgemalten Schild „Geburtstagsamt“' },
     caption: { en: 'An office for birthdays, open to anyone having one.', bg: 'Служба за рождени дни, отворена за всеки, който има такъв.', de: 'Ein Amt für Geburtstage, offen für alle, die einen haben.' }
   },
   {

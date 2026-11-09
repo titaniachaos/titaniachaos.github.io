@@ -1,6 +1,6 @@
 ---
 title: Да поиграем отново!
-description: Три часа клоунстване с Титания в София
+description: Три часа клоунстване с Титания в София на 4.12.26 от 17:00 ч.
 layout: false
 robots: noindex, nofollow
 search: false

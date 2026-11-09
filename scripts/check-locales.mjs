@@ -84,6 +84,9 @@ for (const name of rootPages) {
     }
   }
 
+  // The unlisted invitation carries its English translation on the same page.
+  if (name === 'clown-sofia.md') continue
+
   for (const locale of LOCALES) {
     const path = join(docs, locale, name)
     let source
@@ -142,6 +145,6 @@ if (problems.length) {
   process.exit(1)
 }
 console.log(
-  `check-locales: ${rootPages.length} pages x ${LOCALES.length + 1} languages -- ` +
+  `check-locales: ${rootPages.filter((name) => name !== 'clown-sofia.md').length} pages x ${LOCALES.length + 1} languages -- ` +
     `same structure, same section ids, comparable length`
 )

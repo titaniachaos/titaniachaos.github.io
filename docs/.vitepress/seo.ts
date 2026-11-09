@@ -205,6 +205,9 @@ function serviceNodes(slug: string, hreflang: string, lang: Lang) {
 }
 
 export function buildHead(ctx: TransformContext, siteConfig: SiteConfig): HeadConfig[] {
+  if (ctx.page === 'clown-sofia.md') {
+    return [['meta', { name: 'robots', content: 'noindex, nofollow' }]]
+  }
   const urlPath = toUrlPath(ctx.page)
 
   // The 404 page has no canonical URL of its own and must not be indexed.

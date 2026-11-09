@@ -191,7 +191,7 @@ function writtenPages(pages: string[], root: string) {
         description: field(body, 'description')
       }
     })
-    .filter((p) => p.title)
+    .filter((p) => p.title && p.urlPath !== '/clown-sofia')
 }
 
 /**

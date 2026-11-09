@@ -74,6 +74,13 @@ for (const file of (await walk(DIST)).filter((name) => name.endsWith('.html'))) 
   const path = urlFromOutput(file)
   if (path === '/404' || expected.has(`${ORIGIN}${path}`)) continue
   const html = await readFile(file, 'utf8')
+  if (path === '/clown-sofia') {
+    const robots = [...html.matchAll(/<meta[^>]+name=["']robots["'][^>]+content=["']([^"']*)/gi)]
+    if (robots.length !== 1 || robots[0][1] !== 'noindex, nofollow') {
+      problems.push(`${path}: expected exactly one noindex, nofollow directive`)
+    }
+    continue
+  }
   if (!/<meta[^>]+name=["']robots["'][^>]+content=["']noindex, follow["']/i.test(html)) {
     problems.push(`${path}: generated filter is not noindex, follow`)
   }

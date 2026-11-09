@@ -159,6 +159,7 @@ export default defineConfig({
   transformHead: (ctx) => buildHead(ctx, ctx.siteConfig),
 
   transformHtml: (code, _id, ctx) => {
+    if (ctx.page === 'clown-sofia.md') return code.replace('<html lang="en"', '<html lang="bg"')
     const tags = localeAlternateTags(ctx.page)
     return tags ? code.replace('</head>', `${tags}</head>`) : code
   },
@@ -188,7 +189,7 @@ export default defineConfig({
           const body = browseSearchBody(String(env.relativePath ?? ''))
           if (body !== null) return body
           const html = md.render(src, env)
-          return authoredSearchContent(html, env.frontmatter?.title)
+          return env.frontmatter?.search === false ? '' : authoredSearchContent(html, env.frontmatter?.title)
         },
         locales: {
           bg: {

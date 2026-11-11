@@ -1,8 +1,166 @@
 {
   "origin": "https://titaniachaos.com",
   "rights": "© Tatiana Petkova (Titania Chaos). Photographs by Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, Konstantin Oberlik, Tatiana Petkova, Marion Scholz and Laurent Ziegler.",
-  "count": 136,
+  "count": 143,
   "media": [
+    {
+      "id": "aequator-schule-2026-11-11-stuhlkreis",
+      "kind": "photo",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "alt": {
+        "en": "Bianca speaks by the blackboard while students sit in a circle around the open classroom floor.",
+        "bg": "Бианка говори до дъската, а учениците седят в кръг около свободното пространство в класната стая.",
+        "de": "Bianca spricht vor der Tafel; die Jugendlichen sitzen im Kreis um die freie Mitte des Klassenzimmers."
+      },
+      "caption": {
+        "en": "A circle of chairs prepared by the students for the second school visit, 11 November 2026.",
+        "bg": "Кръг от столове, подготвен от учениците за второто посещение в училището, 11 ноември 2026 г.",
+        "de": "Ein selbst vorbereiteter Stuhlkreis beim zweiten Schulbesuch, 11. November 2026."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-stuhlkreis.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-stuhlkreis-s.webp",
+      "othersInFrame": "Students and Bianca; several faces visible, some already obscured in the supplied original."
+    },
+    {
+      "id": "aequator-schule-2026-11-11-stoffband",
+      "kind": "photo",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "alt": {
+        "en": "Students hold a red fabric with white flowers and a turquoise and black patterned section of the equator ribbon.",
+        "bg": "Ученици държат червен плат с бели цветя и тюркоазено-черна шарена част от Екваторната лента.",
+        "de": "Jugendliche halten ein rotes Stoffstück mit weißen Blüten und ein türkis-schwarz gemustertes Stück des Äquatormaßbands."
+      },
+      "caption": {
+        "en": "New fabrics and their stories in the circle, 11 November 2026.",
+        "bg": "Нови платове и техните истории в кръга, 11 ноември 2026 г.",
+        "de": "Neue Stoffe und ihre Geschichten im Stuhlkreis, 11. November 2026."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-stoffband.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-stoffband-s.webp",
+      "othersInFrame": "Students holding fabric; hands and torsos visible, faces mostly outside the frame."
+    },
+    {
+      "id": "aequator-schule-2026-11-11-schulzeitung",
+      "kind": "photo",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "alt": {
+        "en": "A student holds an open issue of the Wiener Berufsschulzeitung in front of her face.",
+        "bg": "Ученичка държи отворен брой на Wiener Berufsschulzeitung пред лицето си.",
+        "de": "Eine Jugendliche hält eine aufgeschlagene Ausgabe der Wiener Berufsschulzeitung vor ihr Gesicht."
+      },
+      "caption": {
+        "en": "An article about the equator ribbon is planned for the school newspaper. The photograph shows an existing issue.",
+        "bg": "Планирана е и статия за Екваторната лента в училищния вестник. На снимката е предишен брой.",
+        "de": "Auch ein Beitrag über das Äquatormaßband ist für die Schulzeitung geplant. Hier eine vorhandene Ausgabe."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-schulzeitung.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-schulzeitung-s.webp",
+      "othersInFrame": "Student with face covered by the newspaper; hands visible."
+    },
+    {
+      "id": "aequator-schule-2026-11-11-stoffe-zeigen",
+      "kind": "photo",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "alt": {
+        "en": "Titania holds up a light fabric with red and black geometric patterns in front of the blackboard.",
+        "bg": "Титания разтваря светъл плат с червени и черни геометрични шарки пред дъската.",
+        "de": "Titania hält vor der Tafel einen hellen Stoff mit roten und schwarzen geometrischen Mustern auseinander."
+      },
+      "caption": {
+        "en": "Fabrics brought to the school visit on 11 November 2026.",
+        "bg": "Платове, донесени при посещението в училището на 11 ноември 2026 г.",
+        "de": "Mitgebrachte Stoffe beim Schulbesuch am 11. November 2026."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-stoffe-zeigen.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-stoffe-zeigen-s.webp",
+      "othersInFrame": "Titania Chaos."
+    },
+    {
+      "id": "aequator-schule-2026-11-11-zusammenarbeit",
+      "kind": "photo",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "alt": {
+        "en": "Bianca holds a notebook and pen while Titania looks at the rolled fabric ribbon.",
+        "bg": "Бианка държи тетрадка и химикал, докато Титания разглежда навитата платнена лента.",
+        "de": "Bianca hält ein Notizbuch und einen Stift, während Titania das aufgerollte Stoffband betrachtet."
+      },
+      "caption": {
+        "en": "Bianca and Titania at the second meeting of the school year, 11 November 2026.",
+        "bg": "Бианка и Титания на втората среща за учебната година, 11 ноември 2026 г.",
+        "de": "Bianca und Titania beim zweiten Treffen des Schuljahres, 11. November 2026."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-zusammenarbeit.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-zusammenarbeit-s.webp",
+      "othersInFrame": "Bianca Trappl and Titania Chaos."
+    },
+    {
+      "id": "aequator-schule-2026-11-11-stoffband-video",
+      "kind": "video",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "seconds": 4,
+      "alt": {
+        "en": "Hands hold and move several joined pieces of fabric in the circle.",
+        "bg": "Ръце държат и движат няколко съшити парчета плат в кръга.",
+        "de": "Hände halten und bewegen mehrere zusammengenähte Stoffstücke im Stuhlkreis."
+      },
+      "caption": {
+        "en": "The fabric ribbon passes through the students’ hands, 11 November 2026.",
+        "bg": "Платнената лента минава през ръцете на учениците, 11 ноември 2026 г.",
+        "de": "Das Stoffband geht durch die Hände der Jugendlichen, 11. November 2026."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-stoffband-video.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-stoffband-video-s.webp",
+      "film": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-stoffband-video.mp4",
+      "othersInFrame": "Students; hands and torsos visible in the supplied clip."
+    },
+    {
+      "id": "aequator-schule-2026-11-11-kreisrock-video",
+      "kind": "video",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "seconds": 5,
+      "alt": {
+        "en": "A student spins in front of the blackboard as the light circle skirt spreads out around her.",
+        "bg": "Ученичка се върти пред дъската, а светлата кръгла пола се разтваря около нея.",
+        "de": "Eine Schülerin dreht sich vor der Tafel; der helle Kreisrock breitet sich um sie aus."
+      },
+      "caption": {
+        "en": "Trying out the circle skirt, 11 November 2026.",
+        "bg": "Изпробване на кръглата пола, 11 ноември 2026 г.",
+        "de": "Den Kreisrock selbst ausprobieren, 11. November 2026."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-kreisrock-video.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-kreisrock-video-s.webp",
+      "film": "https://titaniachaos.com/images/media/aequator-schule-2026-11-11-kreisrock-video.mp4",
+      "othersInFrame": "Student trying the circle skirt; publication authorised through the project owner’s supplied-media agreement."
+    },
     {
       "id": "aequator-schule-naehen-herz",
       "kind": "photo",

@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-11",
+  "sources": [
+    {
+      "id": "aequator-schule-2026-11-11-stuhlkreis",
+      "sourceFile": "IMG_1327.jpeg",
+      "sha256": "6b90013efb165f18ae68f2f95316de7cc5f17b583f20e7cbad662d8244dcaf5e"
+    },
+    {
+      "id": "aequator-schule-2026-11-11-stoffband",
+      "sourceFile": "IMG_1337.jpeg",
+      "sha256": "e11201b7bda6df87bbbbf693e7a81ba62fe25172bfb2987b4777bdf8dc56b3e3"
+    },
+    {
+      "id": "aequator-schule-2026-11-11-schulzeitung",
+      "sourceFile": "IMG_1338.jpeg",
+      "sha256": "8b8bde3c8bc7d62970f9dd6858e26f51bcbed4cccfcf91b11f294f9c9017fcd1"
+    },
+    {
+      "id": "aequator-schule-2026-11-11-stoffe-zeigen",
+      "sourceFile": "IMG_1360.jpeg",
+      "sha256": "bc37a52bf739750c5638a51f079d0ce5a79d64ae87a5e8979959d52334b45db9"
+    },
+    {
+      "id": "aequator-schule-2026-11-11-zusammenarbeit",
+      "sourceFile": "IMG_1366.jpeg",
+      "sha256": "2ccb2fc5bc4edcae3a416760a95bf768bf913dd456610083af3ce074476e8028"
+    },
+    {
+      "id": "aequator-schule-2026-11-11-stoffband-video",
+      "sourceFile": "IMG_1334.MOV",
+      "sha256": "eacfb796f589903a31bc447446c1e457ab2c4d0e5798679de52cec291283a2b6"
+    },
+    {
+      "id": "aequator-schule-2026-11-11-kreisrock-video",
+      "sourceFile": "IMG_1370.MOV",
+      "sha256": "4bca3a4617a844c2258405e9b59a3ebb01e59ed9a20540ac1346739cdc0e5b39"
+    }
+  ]
+}

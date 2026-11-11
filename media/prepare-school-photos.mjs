@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Rebuild this approved batch from the private originals; never imports a folder wholesale.
-// Usage on macOS: node media/prepare-school-photos.mjs /path/to/originals
+// Usage: node media/prepare-school-photos.mjs /path/to/originals [school-YYYY-MM-DD.json]
 import { readFile, mkdir, mkdtemp, rm } from 'node:fs/promises'
 import { createHash } from 'node:crypto'
 import { execFile } from 'node:child_process'
@@ -15,7 +15,8 @@ const run = promisify(execFile)
 const sourceDir = process.argv[2]
 if (!sourceDir) throw new Error('Pass the private directory containing the approved original files.')
 const root = fileURLToPath(new URL('..', import.meta.url))
-const batch = JSON.parse(await readFile(new URL('./school-2026-10-21.json', import.meta.url), 'utf8'))
+const manifest = process.argv[3] ?? 'school-2026-10-21.json'
+const batch = JSON.parse(await readFile(resolve(root, 'media', manifest), 'utf8'))
 const catalogue = new Map((await frames()).map(frame => [frame.id, frame]))
 const meta = await context()
 meta.rights = JSON.parse(await readFile(join(root, 'docs/public/media.json'), 'utf8')).rights
@@ -32,6 +33,24 @@ try {
   for (const source of batch.sources) {
     // Quick Look decodes HEVC using macOS; Sharp's HEIF build may lack that codec.
     let decoded = resolve(sourceDir, source.sourceFile)
+    const frame = catalogue.get(source.id)
+    if (frame.seconds) {
+      // Only the selected video stream and optional audio: no location/data tracks.
+      await run('ffmpeg', ['-v', 'error', '-y', '-i', decoded,
+        '-map', '0:v:0', '-map', '0:a:0?', '-map_metadata', '-1', '-map_chapters', '-1',
+        '-vf', 'scale=720:1280:force_original_aspect_ratio=decrease:force_divisible_by=2,setsar=1',
+        '-c:v', 'libx264', '-preset', 'slow', '-crf', '25', '-pix_fmt', 'yuv420p',
+        '-c:a', 'aac', '-b:a', '96k', '-movflags', '+faststart',
+        '-metadata', `title=${frame.caption.en}`,
+        '-metadata', `description=${frame.alt.en}`,
+        '-metadata', `artist=${frame.creator ?? meta.credit}`,
+        '-metadata', `copyright=${meta.rights}`,
+        join(out, `${source.id}.mp4`)])
+      const poster = join(temp, `${source.id}.png`)
+      await run('ffmpeg', ['-v', 'error', '-y', '-ss', '1', '-i',
+        join(out, `${source.id}.mp4`), '-frames:v', '1', poster])
+      decoded = poster
+    }
     if (/\.heic$/i.test(source.sourceFile)) {
       await run('qlmanage', ['-t', '-s', '1200', '-o', temp, decoded])
       decoded = join(temp, `${source.sourceFile}.png`)

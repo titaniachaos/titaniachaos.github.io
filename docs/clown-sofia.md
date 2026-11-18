@@ -31,7 +31,9 @@ onUnmounted(() => { document.documentElement.lang = lang.value })
       <p class="sofia-subtitle">Три часа клоунстване с Титания в София</p>
       <p class="sofia-details">
         <strong>Петък, 4 декември 2026 г., 17:00–20:00 ч.</strong><br>
-        София · залата ще бъде уточнена<br>
+        <a class="sofia-venue-link" href="https://nexusspace.eu" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 6h14M5 18h14"/></svg><span>Nexus Space | Urban recovery hub</span></a><br>
+        <a class="sofia-venue-link" href="https://www.google.com/maps/search/?api=1&amp;query=%D1%83%D0%BB.+%D0%9A%D0%BD%D1%8F%D0%B7+%D0%91%D0%BE%D1%80%D0%B8%D1%81+I+121%2C+%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>ул. „Княз Борис I“ №121, София</span></a><br>
+        До метро „Сердика“, изход „Западна порта“<br>
         Продължителност: 3 часа · Група: 7–15 участници
       </p>
     </div>
@@ -53,7 +55,9 @@ onUnmounted(() => { document.documentElement.lang = lang.value })
     <p>We’ll see how a pause, a glance or a mistake can turn a whole scene around. And if something goes wrong, even better: that’s often where the act begins.</p>
     <p class="sofia-details">
       <strong>Friday, 4 December 2026, 17:00–20:00 (Sofia time)</strong><br>
-      Sofia · venue to be confirmed<br>
+      <a class="sofia-venue-link" href="https://nexusspace.eu" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 6h14M5 18h14"/></svg><span>Nexus Space | Urban recovery hub</span></a><br>
+        <a class="sofia-venue-link" href="https://www.google.com/maps/search/?api=1&amp;query=%D1%83%D0%BB.+%D0%9A%D0%BD%D1%8F%D0%B7+%D0%91%D0%BE%D1%80%D0%B8%D1%81+I+121%2C+%D0%A1%D0%BE%D1%84%D0%B8%D1%8F" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>121 Knyaz Boris I Street, Sofia</span></a><br>
+        Near Serdika metro station, “West Gate” exit<br>
       Duration: 3 hours · Group size: 7–15 participants
     </p>
     <p>If we haven’t played together before, <a class="sofia-info-link" href="/workshops">read more about my clown workshops</a>.</p>
@@ -93,6 +97,25 @@ onUnmounted(() => { document.documentElement.lang = lang.value })
   text-underline-offset: 0.18em;
 }
 .sofia-invitation .sofia-language { font-size: 0.875rem; }
+.sofia-invitation .sofia-venue-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4em;
+  max-width: 100%;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.sofia-venue-link svg {
+  flex: 0 0 1em;
+  width: 1em;
+  height: 1em;
+  align-self: flex-start;
+  margin-top: 0.3em;
+}
+.sofia-poster .sofia-venue-link:focus-visible {
+  outline-color: currentColor;
+}
 .sofia-poster {
   display: grid;
   grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);

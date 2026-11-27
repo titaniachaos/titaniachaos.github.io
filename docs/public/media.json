@@ -1,8 +1,146 @@
 {
   "origin": "https://titaniachaos.com",
   "rights": "© Tatiana Petkova (Titania Chaos). Photographs by Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, Konstantin Oberlik, Tatiana Petkova, Marion Scholz and Laurent Ziegler.",
-  "count": 143,
+  "count": 149,
   "media": [
+    {
+      "id": "aequator-schule-2026-11-25-gespraech",
+      "kind": "photo",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "alt": {
+        "en": "Titania with her arms spread behind a laughing student at the teacher’s desk.",
+        "bg": "Титания с разперени ръце зад смееща се ученичка на учителската маса.",
+        "de": "Titania mit ausgebreiteten Armen hinter einer lachenden Schülerin am Lehrertisch."
+      },
+      "caption": {
+        "en": "Titania and a student at the teacher’s desk.",
+        "bg": "Титания и ученичка до учителската маса.",
+        "de": "Titania und eine Schülerin am Lehrertisch."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-gespraech.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-gespraech-s.webp",
+      "othersInFrame": "school participants; supplied for this website under the existing permission agreement"
+    },
+    {
+      "id": "aequator-schule-2026-11-25-bianca-titania",
+      "kind": "photo",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "alt": {
+        "en": "Bianca and Titania in front of the blackboard, with a student seated in the foreground.",
+        "bg": "Бианка и Титания пред дъската, с ученичка на преден план.",
+        "de": "Bianca und Titania vor der Tafel, eine Schülerin sitzt im Vordergrund."
+      },
+      "caption": {
+        "en": "Bianca and Titania on their third school visit.",
+        "bg": "Бианка и Титания при третото посещение в училището.",
+        "de": "Bianca und Titania beim dritten Schulbesuch."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-bianca-titania.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-bianca-titania-s.webp",
+      "othersInFrame": "school participants; supplied for this website under the existing permission agreement"
+    },
+    {
+      "id": "aequator-schule-2026-11-25-stofflaengen",
+      "kind": "photo",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "alt": {
+        "en": "A student in front of the blackboard showing the fabric lengths added together, totalling 652 cm.",
+        "bg": "Ученичка пред дъската със събраните дължини на плата и общ резултат 652 см.",
+        "de": "Eine Schülerin vor der Tafel mit den addierten Stofflängen und der Summe 652 cm."
+      },
+      "caption": {
+        "en": "The lengths of the individual pieces of fabric add up to 652 centimetres.",
+        "bg": "Дължините на отделните парчета плат са общо 652 сантиметра.",
+        "de": "Die Längen der einzelnen Stoffstücke ergeben zusammen 652 Zentimeter."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-stofflaengen.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-stofflaengen-s.webp",
+      "othersInFrame": "school participants; supplied for this website under the existing permission agreement"
+    },
+    {
+      "id": "aequator-schule-2026-11-25-begegnung-video",
+      "kind": "video",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "seconds": 24,
+      "alt": {
+        "en": "Titania stands between the desks, addressing the students.",
+        "bg": "Титания стои между чиновете и се обръща към учениците.",
+        "de": "Titania steht zwischen den Tischen und wendet sich an die Jugendlichen."
+      },
+      "caption": {
+        "en": "Titania talks with the new class about the Äquatormaßband.",
+        "bg": "Титания разговаря с новия клас за Екваторната лента.",
+        "de": "Titania spricht mit der neu besuchten Klasse über das Äquatormaßband."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-begegnung-video.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-begegnung-video-s.webp",
+      "film": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-begegnung-video.mp4",
+      "othersInFrame": "school participants; supplied for this website under the existing permission agreement"
+    },
+    {
+      "id": "aequator-schule-2026-11-25-klassenzimmer-video",
+      "kind": "video",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "seconds": 10,
+      "alt": {
+        "en": "Titania moves through the classroom between the occupied desks.",
+        "bg": "Титания се движи из класната стая между заетите чинове.",
+        "de": "Titania bewegt sich durch das Klassenzimmer zwischen den besetzten Tischen."
+      },
+      "caption": {
+        "en": "Meeting the class of trainee drugstore assistants.",
+        "bg": "Първа среща с класа за дрогеристи.",
+        "de": "Die erste Begegnung mit der Drogistenklasse."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-klassenzimmer-video.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-klassenzimmer-video-s.webp",
+      "film": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-klassenzimmer-video.mp4",
+      "othersInFrame": "school participants; supplied for this website under the existing permission agreement"
+    },
+    {
+      "id": "aequator-schule-2026-11-25-laborkittel-video",
+      "kind": "video",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "seconds": 55,
+      "alt": {
+        "en": "A student cuts the white lab coat into strips while Bianca holds the fabric.",
+        "bg": "Ученичка реже бялата лабораторна престилка на ленти, докато Бианка държи плата.",
+        "de": "Eine Schülerin schneidet den weißen Laborkittel in Streifen, während Bianca den Stoff hält."
+      },
+      "caption": {
+        "en": "The lab coat was cut into a long strip of fabric.",
+        "bg": "Лабораторната престилка беше разрязана на дълга лента плат.",
+        "de": "Der Laborkittel wurde in einen langen Stoffstreifen zerlegt."
+      },
+      "creator": "Tatiana Petkova",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-laborkittel-video.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-laborkittel-video-s.webp",
+      "film": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-laborkittel-video.mp4",
+      "othersInFrame": "school participants; supplied for this website under the existing permission agreement"
+    },
     {
       "id": "aequator-schule-2026-11-11-stuhlkreis",
       "kind": "photo",

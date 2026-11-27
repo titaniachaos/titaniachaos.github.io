@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-25",
+  "sources": [
+    {
+      "id": "aequator-schule-2026-11-25-gespraech",
+      "sourceFile": "IMG_1606.jpeg",
+      "sha256": "26187a17d7a8a7dcb4a1347e3ed8b6e0a3d8841eab6cee1ab5f8e2022c802eee"
+    },
+    {
+      "id": "aequator-schule-2026-11-25-bianca-titania",
+      "sourceFile": "IMG_1616.jpeg",
+      "sha256": "c943434962d774d3b88393c47f43392307c7a766fda35633b880488a8fd27327"
+    },
+    {
+      "id": "aequator-schule-2026-11-25-stofflaengen",
+      "sourceFile": "IMG_1622.jpeg",
+      "sha256": "7e685cb9a8eb013e26e0d165cfb0695697e9c8cf722a37dab4981329b9fec2a0"
+    },
+    {
+      "id": "aequator-schule-2026-11-25-begegnung-video",
+      "sourceFile": "IMG_1602.mov",
+      "sha256": "1cbc05d27e820a762ccecb72fd4dee1e5448a7b5ced92ac9076289133733d902"
+    },
+    {
+      "id": "aequator-schule-2026-11-25-klassenzimmer-video",
+      "sourceFile": "IMG_1603.mov",
+      "sha256": "2a9232036fa166c3ce3dc567725f4bf5ab57c5e162bafc9985f4541162defd02"
+    },
+    {
+      "id": "aequator-schule-2026-11-25-laborkittel-video",
+      "sourceFile": "IMG_1623.MOV",
+      "sha256": "9feb645393aa391a268804a3be389b4ef74fcb672cce273eb3c4d3922d39ed7b"
+    }
+  ]
+}

@@ -197,6 +197,111 @@ export { data }
 
 const FRAMES: Frame[] = [
   {
+    id: 'aequator-schule-2026-11-25-gespraech',
+    kind: 'photo',
+    tags: ['aequator', 'workshop'],
+    creator: 'Tatiana Petkova',
+    alt: {
+      de: 'Titania mit ausgebreiteten Armen hinter einer lachenden Schülerin am Lehrertisch.',
+      en: 'Titania with her arms spread behind a laughing student at the teacher’s desk.',
+      bg: 'Титания с разперени ръце зад смееща се ученичка на учителската маса.'
+    },
+    caption: {
+      de: 'Titania und eine Schülerin am Lehrertisch.',
+      en: 'Titania and a student at the teacher’s desk.',
+      bg: 'Титания и ученичка до учителската маса.'
+    },
+    othersInFrame: 'school participants; supplied for this website under the existing permission agreement'
+  },
+  {
+    id: 'aequator-schule-2026-11-25-bianca-titania',
+    kind: 'photo',
+    tags: ['aequator', 'workshop'],
+    creator: 'Tatiana Petkova',
+    alt: {
+      de: 'Bianca und Titania vor der Tafel, eine Schülerin sitzt im Vordergrund.',
+      en: 'Bianca and Titania in front of the blackboard, with a student seated in the foreground.',
+      bg: 'Бианка и Титания пред дъската, с ученичка на преден план.'
+    },
+    caption: {
+      de: 'Bianca und Titania beim dritten Schulbesuch.',
+      en: 'Bianca and Titania on their third school visit.',
+      bg: 'Бианка и Титания при третото посещение в училището.'
+    },
+    othersInFrame: 'school participants; supplied for this website under the existing permission agreement'
+  },
+  {
+    id: 'aequator-schule-2026-11-25-stofflaengen',
+    kind: 'photo',
+    tags: ['aequator', 'workshop'],
+    creator: 'Tatiana Petkova',
+    alt: {
+      de: 'Eine Schülerin vor der Tafel mit den addierten Stofflängen und der Summe 652 cm.',
+      en: 'A student in front of the blackboard showing the fabric lengths added together, totalling 652 cm.',
+      bg: 'Ученичка пред дъската със събраните дължини на плата и общ резултат 652 см.'
+    },
+    caption: {
+      de: 'Die Längen der einzelnen Stoffstücke ergeben zusammen 652 Zentimeter.',
+      en: 'The lengths of the individual pieces of fabric add up to 652 centimetres.',
+      bg: 'Дължините на отделните парчета плат са общо 652 сантиметра.'
+    },
+    othersInFrame: 'school participants; supplied for this website under the existing permission agreement'
+  },
+  {
+    id: 'aequator-schule-2026-11-25-begegnung-video',
+    kind: 'video',
+    tags: ['aequator', 'workshop'],
+    creator: 'Tatiana Petkova',
+    seconds: 24,
+    alt: {
+      de: 'Titania steht zwischen den Tischen und wendet sich an die Jugendlichen.',
+      en: 'Titania stands between the desks, addressing the students.',
+      bg: 'Титания стои между чиновете и се обръща към учениците.'
+    },
+    caption: {
+      de: 'Titania spricht mit der neu besuchten Klasse über das Äquatormaßband.',
+      en: 'Titania talks with the new class about the Äquatormaßband.',
+      bg: 'Титания разговаря с новия клас за Екваторната лента.'
+    },
+    othersInFrame: 'school participants; supplied for this website under the existing permission agreement'
+  },
+  {
+    id: 'aequator-schule-2026-11-25-klassenzimmer-video',
+    kind: 'video',
+    tags: ['aequator', 'workshop'],
+    creator: 'Tatiana Petkova',
+    seconds: 10,
+    alt: {
+      de: 'Titania bewegt sich durch das Klassenzimmer zwischen den besetzten Tischen.',
+      en: 'Titania moves through the classroom between the occupied desks.',
+      bg: 'Титания се движи из класната стая между заетите чинове.'
+    },
+    caption: {
+      de: 'Die erste Begegnung mit der Drogistenklasse.',
+      en: 'Meeting the class of trainee drugstore assistants.',
+      bg: 'Първа среща с класа за дрогеристи.'
+    },
+    othersInFrame: 'school participants; supplied for this website under the existing permission agreement'
+  },
+  {
+    id: 'aequator-schule-2026-11-25-laborkittel-video',
+    kind: 'video',
+    tags: ['aequator', 'workshop'],
+    creator: 'Tatiana Petkova',
+    seconds: 55,
+    alt: {
+      de: 'Eine Schülerin schneidet den weißen Laborkittel in Streifen, während Bianca den Stoff hält.',
+      en: 'A student cuts the white lab coat into strips while Bianca holds the fabric.',
+      bg: 'Ученичка реже бялата лабораторна престилка на ленти, докато Бианка държи плата.'
+    },
+    caption: {
+      de: 'Der Laborkittel wurde in einen langen Stoffstreifen zerlegt.',
+      en: 'The lab coat was cut into a long strip of fabric.',
+      bg: 'Лабораторната престилка беше разрязана на дълга лента плат.'
+    },
+    othersInFrame: 'school participants; supplied for this website under the existing permission agreement'
+  },
+  {
     id: 'aequator-schule-2026-11-11-stuhlkreis',
     kind: 'photo',
     tags: ['aequator', 'workshop'],

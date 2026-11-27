@@ -225,9 +225,9 @@ const FRAMES: Frame[] = [
       bg: 'Титания с разперени ръце зад смееща се ученичка на учителската маса.'
     },
     caption: {
-      de: 'Titania und eine lachende Schülerin.',
-      en: 'Titania and a laughing student.',
-      bg: 'Титания и смееща се ученичка.'
+      de: 'Titania beim Spielen mit einer Schülerin.',
+      en: 'Titania playing with a student.',
+      bg: 'Титания играе с ученичка.'
     },
     othersInFrame: 'school participants; supplied for this website under the existing permission agreement'
   },

@@ -1,8 +1,32 @@
 {
   "origin": "https://titaniachaos.com",
   "rights": "© Tatiana Petkova (Titania Chaos). Photographs by Veliko Balabanov, Marine Hink, Heidi Holtl, Geo Kalev, Tanya Matskevich, Konstantin Oberlik, Tatiana Petkova, Marion Scholz and Laurent Ziegler.",
-  "count": 149,
+  "count": 150,
   "media": [
+    {
+      "id": "aequator-schule-2026-11-25-schuelerbeitrag",
+      "kind": "video",
+      "tags": [
+        "aequator",
+        "workshop"
+      ],
+      "seconds": 24,
+      "alt": {
+        "en": "An edited video showing the white lab coat being donated, cut up and sewn.",
+        "bg": "Монтирано видео с даряването, разкрояването и шиенето на бялата лабораторна престилка.",
+        "de": "Geschnittenes Video mit Szenen der Übergabe, des Zuschneidens und des Nähens am weißen Laborkittel."
+      },
+      "caption": {
+        "en": "A student documents how the lab coat becomes part of the Äquatormaßband.",
+        "bg": "Ученик документира как лабораторната престилка става част от Екваторната лента.",
+        "de": "Ein Schüler dokumentiert, wie aus dem Laborkittel ein Teil des Äquatormaßbands wird."
+      },
+      "creator": "@abdii.6k",
+      "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-schuelerbeitrag.webp",
+      "tile": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-schuelerbeitrag-s.webp",
+      "film": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-schuelerbeitrag.mp4",
+      "othersInFrame": "school participants; supplied for this website under the existing permission agreement"
+    },
     {
       "id": "aequator-schule-2026-11-25-gespraech",
       "kind": "photo",
@@ -16,9 +40,9 @@
         "de": "Titania mit ausgebreiteten Armen hinter einer lachenden Schülerin am Lehrertisch."
       },
       "caption": {
-        "en": "Titania and a student at the teacher’s desk.",
-        "bg": "Титания и ученичка до учителската маса.",
-        "de": "Titania und eine Schülerin am Lehrertisch."
+        "en": "Titania and a laughing student.",
+        "bg": "Титания и смееща се ученичка.",
+        "de": "Titania und eine lachende Schülerin."
       },
       "creator": "Tatiana Petkova",
       "url": "https://titaniachaos.com/images/media/aequator-schule-2026-11-25-gespraech.webp",

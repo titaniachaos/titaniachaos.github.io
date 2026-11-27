@@ -30,6 +30,11 @@
       "id": "aequator-schule-2026-11-25-laborkittel-video",
       "sourceFile": "IMG_1623.MOV",
       "sha256": "9feb645393aa391a268804a3be389b4ef74fcb672cce273eb3c4d3922d39ed7b"
+    },
+    {
+      "id": "aequator-schule-2026-11-25-schuelerbeitrag",
+      "sourceFile": "Video.mov",
+      "sha256": "9c70dea728b09d0eaf02eb32bf94ea6c0b11b1214c32fa4c641e3c408f08e507"
     }
   ]
 }

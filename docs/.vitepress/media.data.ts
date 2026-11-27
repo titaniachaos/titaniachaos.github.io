@@ -197,6 +197,24 @@ export { data }
 
 const FRAMES: Frame[] = [
   {
+    id: 'aequator-schule-2026-11-25-schuelerbeitrag',
+    kind: 'video',
+    tags: ['aequator', 'workshop'],
+    creator: '@abdii.6k',
+    seconds: 24,
+    alt: {
+      de: 'Geschnittenes Video mit Szenen der Übergabe, des Zuschneidens und des Nähens am weißen Laborkittel.',
+      en: 'An edited video showing the white lab coat being donated, cut up and sewn.',
+      bg: 'Монтирано видео с даряването, разкрояването и шиенето на бялата лабораторна престилка.'
+    },
+    caption: {
+      de: 'Ein Schüler dokumentiert, wie aus dem Laborkittel ein Teil des Äquatormaßbands wird.',
+      en: 'A student documents how the lab coat becomes part of the Äquatormaßband.',
+      bg: 'Ученик документира как лабораторната престилка става част от Екваторната лента.'
+    },
+    othersInFrame: 'school participants; supplied for this website under the existing permission agreement'
+  },
+  {
     id: 'aequator-schule-2026-11-25-gespraech',
     kind: 'photo',
     tags: ['aequator', 'workshop'],
@@ -207,9 +225,9 @@ const FRAMES: Frame[] = [
       bg: 'Титания с разперени ръце зад смееща се ученичка на учителската маса.'
     },
     caption: {
-      de: 'Titania und eine Schülerin am Lehrertisch.',
-      en: 'Titania and a student at the teacher’s desk.',
-      bg: 'Титания и ученичка до учителската маса.'
+      de: 'Titania und eine lachende Schülerin.',
+      en: 'Titania and a laughing student.',
+      bg: 'Титания и смееща се ученичка.'
     },
     othersInFrame: 'school participants; supplied for this website under the existing permission agreement'
   },
